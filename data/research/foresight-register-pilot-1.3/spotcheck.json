@@ -1,0 +1,1073 @@
+{
+ "checkedAt": "2026-10-16",
+ "checkers": "four fresh claude-sonnet-5-5 subagents (v1 ARE HTI NIC SGP VNM; v2 GBR NGA; v3 BRA; v4 CHE EST), each given codebook 1.3 and its share of the sheet only",
+ "seed": "ncb-foresight-spotcheck-1.3-2026-10-03",
+ "bodies": [
+  {
+   "id": "ARE.moca",
+   "result": "Confirmed",
+   "checklist": [
+    {
+     "item": "Meets section 1 conditions 1-4 on own mandate",
+     "holds": true,
+     "source": "https://www.moca.gov.ae/en/area-of-focus/future-foresight",
+     "note": "moca.gov.ae future foresight page: ministry oversees the UAE future portfolio and a strategy to prepare all sectors for future change; defines foresight (trends, alternatives) and embeds it in government planning across sectors. Federal ministry, standing, cross-sector."
+    },
+    {
+     "item": "record 1: official record dates creation or foresight mandate",
+     "holds": true,
+     "source": "https://u.ae/en/about-the-uae/strategies-initiatives-and-awards/strategies-plans-and-visions/innovation-and-future-shaping/future-foresight",
+     "note": "u.ae (official portal) dates the Future Foresight Strategy launch to 2016 and names the ministry; the cited uaecabinet.ae page returned 403 to curl/WebFetch and the Wayback fetch was blocked in my tools, so I did not read it directly. The Feb 2016 restructure (ministry renamed 'and the Future') is on official cabinet pages per search leads only. Best reading: record 1 holds."
+    },
+    {
+     "item": "product 0: no forward-looking product in own name 2023-10-02 to 2026-10-02",
+     "holds": true,
+     "source": "https://www.moca.gov.ae/en/publications",
+     "note": "MOCA publications page lists none (empty filters). Future Possibilities Report 2020 is outside the window and sits on the Centennial Lab page. 100 Global Trends and manuals are undated. Not exhaustively searched."
+    },
+    {
+     "item": "survived no_change",
+     "holds": true,
+     "source": "",
+     "note": "Effective chief executive (UAE prime minister) unchanged since before 2016; no_change holds."
+    },
+    {
+     "item": "closedNoSuccessor 0",
+     "holds": true,
+     "source": "",
+     "note": "Ministry operating; the 2020 rename is not a closure."
+    }
+   ],
+   "overturns": null,
+   "changesCountryItem": "none",
+   "note": "Mandate and 2016 date stand; product 0 not contradicted. Open point: ministry's own 2016 restructure announcement not read directly.",
+   "checkerLabel": "ARE: Ministry of Cabinet Affairs",
+   "set": "sample",
+   "checker": "v1",
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "id": "ARE.wgso",
+   "result": "Confirmed",
+   "checklist": [
+    {
+     "item": "Body fails section 1 as stated: no condition the ruling names is met by its own mandate.",
+     "holds": true,
+     "source": "https://www.worldgovernmentssummit.org/",
+     "note": "Own site: 'global, neutral, non-profit organization', established 2013 by the ruler, knowledge platform and events on future of governments. No founding act, no state body status shown (condition 1), no foresight function named (condition 3)."
+    }
+   ],
+   "overturns": null,
+   "changesCountryItem": "none",
+   "note": "Fails condition 3 (events and dialogue platform) and condition 1 is not shown.",
+   "checkerLabel": "ARE: World Governments Summit Organization",
+   "set": "sample",
+   "checker": "v1",
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "id": "HTI.ctpea",
+   "result": "Cannot verify",
+   "checklist": [
+    {
+     "item": "Body fails section 1 as stated: no condition the ruling names is met by its own mandate.",
+     "holds": null,
+     "source": "https://lenouvelliste.com/en/article/268806/mpce-and-ctpea-launch-training-for-uep-managers",
+     "note": "No primary page found: no founding act or mandate text. Only budget lines (sub-unit of planning ministry) and 2026 news on training with MPCE, which are leads. Nothing suggests a foresight term, but the mandate was not read."
+    }
+   ],
+   "overturns": null,
+   "changesCountryItem": "none",
+   "note": "Training role is consistent with the ruling but no primary mandate text could be found, so the failure of condition 3 is not shown.",
+   "checkerLabel": "HTI: Centre de Techniques de Planification et d'Économie Appliquée",
+   "set": "sample",
+   "checker": "v1",
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "id": "VNM.nief",
+   "result": "Confirmed",
+   "checklist": [
+    {
+     "item": "Body fails section 1 as stated: no condition the ruling names is met by its own mandate.",
+     "holds": true,
+     "source": "https://caselaw.vn/van-ban-phap-luat/507653-quyet-dinh-so-387-qd-btc-ngay-26-02-2025-cua-bo-truong-bo-tai-chinh-quy-dinh-chuc-nang-nhiem-vu-quyen-han-va-co-cau-to-chuc-cua-vien-chien-luoc-va-chinh-sach-kinh-te-tai-chinh",
+     "note": "Decision 387/QD-BTC (26 Feb 2025), read on a legal-database mirror: strategy research plus economic and financial analysis and forecasting (du bao), unit 'Macroeconomic and Forecasting'. No kich ban, tam nhin, foresight term. Forecast is not a named term, and scope is economic and financial only (also condition 4)."
+    }
+   ],
+   "overturns": null,
+   "changesCountryItem": "none",
+   "note": "Official name is Institute for Economic and Financial Strategy and Policy (NIEF). Mirror host is not the gazette itself.",
+   "checkerLabel": "VNM: National Institute for Economics and Finance, Ministry of Finance",
+   "set": "sample",
+   "checker": "v1",
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "id": "ARE.clab",
+   "result": "Confirmed",
+   "checklist": [
+    {
+     "item": "Body fails section 1 as stated: no condition the ruling names is met by its own mandate.",
+     "holds": true,
+     "source": "https://www.moca.gov.ae/en/area-of-focus/centennial-lab",
+     "note": "Page: platform for foundations, methodologies and projects to implement UAE Centennial 2071, prepares the country for the next half-century, publishes sector reports; one item is the Future Possibilities Report 2020 (25-year transformations). Implementation of a vision; no listed term as the unit's function. 'Future possibilities' is borderline but is an initiative on the page, not the unit's named function."
+    }
+   ],
+   "overturns": null,
+   "changesCountryItem": "none",
+   "note": "Ruling stands on best reading. Borderline: the 2020 report explores 25-year change, but it is outside the window and the mandate is vision implementation.",
+   "checkerLabel": "ARE: Centennial Lab, Ministry of Cabinet Affairs",
+   "set": "sample",
+   "checker": "v1",
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "id": "ARE.moiat",
+   "result": "Confirmed",
+   "checklist": [
+    {
+     "item": "Body fails section 1 as stated: no condition the ruling names is met by its own mandate.",
+     "holds": true,
+     "source": "https://www.moiat.gov.ae/en/about-us",
+     "note": "Own about page: industry sector, advanced technology, standards; established July 2020. 'Industries of the future' is a sector focus; no foresight unit or term. Fails condition 4 (and 3)."
+    }
+   ],
+   "overturns": null,
+   "changesCountryItem": "none",
+   "note": "",
+   "checkerLabel": "ARE: Ministry of Industry and Advanced Technology",
+   "set": "sample",
+   "checker": "v1",
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "id": "VNM.mpi",
+   "result": "Confirmed",
+   "checklist": [
+    {
+     "item": "Body fails section 1 as stated: no condition the ruling names is met by its own mandate.",
+     "holds": true,
+     "source": "https://caselaw.vn/van-ban-phap-luat/311371-nghi-dinh-86-2017-nd-cp-quy-dinh-chuc-nang-nhiem-vu-quyen-han-va-co-cau-to-chuc-cua-bo-ke-hoach-va-dau-tu",
+     "note": "Decree 86/2017 as summarised in search results (text not read: 403): planning ministry for strategy, planning, plans; separate subordinate forecast centre. Planning exclusion applies; no listed term seen. Merger into the Ministry of Finance from 2025 is from news only."
+    }
+   ],
+   "overturns": null,
+   "changesCountryItem": "none",
+   "note": "Low confidence: I did not read the decree text. Subordinate units (Development Strategy Institute, forecast centre) are separate candidates not coded here; 'forecast' is not a named term.",
+   "checkerLabel": "VNM: Ministry of Planning and Investment",
+   "set": "sample",
+   "checker": "v1",
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "id": "SGP.csf",
+   "result": "Confirmed",
+   "checklist": [
+    {
+     "item": "Meets section 1 conditions 1-4",
+     "holds": true,
+     "source": "https://www.csf.gov.sg/who-we-are/",
+     "note": "Read live page and Wayback 20260914055254. 'think tank and foresight unit in the Strategy Group'; mission: insights into future trends, discontinuities, surprises; whole of government; no end date."
+    },
+    {
+     "item": "record 1",
+     "holds": true,
+     "source": "https://web.archive.org/web/20260914055254/https://www.csf.gov.sg/who-we-are/",
+     "note": "'In 2009, the Centre for Strategic Futures (CSF) was established as a futures think tank within SPO'."
+    },
+    {
+     "item": "product 1: product in own name in window",
+     "holds": true,
+     "source": "https://www.csf.gov.sg/media-centre/foresight-series/",
+     "note": "Foresight 2024, 'the Centre for Strategic Futures' biennial publication' on megatrends and emerging issues, page dated 22 Aug 2024; no stated horizon, so counts as a megatrends report. Also Feb and Jun 2026 handbook and glossary on the media centre page. I could not open the PDF to check for a stated horizon (series page 403 to curl)."
+    },
+    {
+     "item": "survived 1",
+     "holds": true,
+     "source": "https://www.csf.gov.sg/who-we-are/",
+     "note": "Established 2009; PM changed Lee to Wong May 2024; CSF page 'Last updated 29 September 2026' and 2026 publications are more than six months later."
+    },
+    {
+     "item": "closedNoSuccessor 0",
+     "holds": true,
+     "source": "",
+     "note": "CSF operating."
+    }
+   ],
+   "overturns": null,
+   "changesCountryItem": "none",
+   "note": "All codes stand. Open point: horizon of Foresight 2024 not seen in the PDF.",
+   "checkerLabel": "SGP: Centre for Strategic Futures (CSF), Strategy Group, Prime Minister's Office",
+   "set": "sample",
+   "checker": "v1",
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "id": "NIC.bcn",
+   "result": "Confirmed",
+   "checklist": [
+    {
+     "item": "Body fails section 1 as stated: no condition the ruling names is met by its own mandate.",
+     "holds": true,
+     "source": "https://www.bcn.gob.ni",
+     "note": "Central bank; codebook section 1 excludes central banks. Site shows indicators and projections only."
+    }
+   ],
+   "overturns": null,
+   "changesCountryItem": "none",
+   "note": "",
+   "checkerLabel": "NIC: Banco Central de Nicaragua",
+   "set": "sample",
+   "checker": "v1",
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "id": "SGP.parl",
+   "result": "Confirmed",
+   "checklist": [
+    {
+     "item": "Body fails section 1 as stated: no condition the ruling names is met by its own mandate.",
+     "holds": true,
+     "source": "https://parliament.gov.sg/about-us/structure/parliament-secretariat",
+     "note": "Secretariat functions and ten departments (clerks, reports, language, library/research, etc.); no foresight, futures or technology assessment function."
+    }
+   ],
+   "overturns": null,
+   "changesCountryItem": "none",
+   "note": "",
+   "checkerLabel": "SGP: Parliament of Singapore and Parliament Secretariat",
+   "set": "sample",
+   "checker": "v1",
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "id": "NIC.an",
+   "result": "Cannot verify",
+   "checklist": [
+    {
+     "item": "Body fails section 1 as stated: no condition the ruling names is met by its own mandate.",
+     "holds": null,
+     "source": "https://www.asamblea.gob.ni",
+     "note": "Site returned 403; Wayback copy gave only a commission stub. No committee list or organic law read. Searches found no foresight or technology assessment office, but search results are leads."
+    }
+   ],
+   "overturns": null,
+   "changesCountryItem": "none",
+   "note": "Likely correct, but no primary page shown.",
+   "checkerLabel": "NIC: Asamblea Nacional",
+   "set": "sample",
+   "checker": "v1",
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "id": "NIC.spingc",
+   "result": "Confirmed",
+   "checklist": [
+    {
+     "item": "Body fails section 1 as stated: no condition the ruling names is met by its own mandate.",
+     "holds": true,
+     "source": "https://www.mem.gob.ni/wp-content/uploads/2022/03/PLAN-NACIONAL-DE-LUCHA-CONTRA-LA-POBREZA-2022-2026-19Jul21.pdf",
+     "note": "Read the PDF (p.164-165). 'planificación estratégica-prospectiva' attaches to the system. The Council's task list (studies, policy proposals, budget estimates, project portfolio, monitoring, territorial planning) names no listed term. Separately, 'contará con' is future tense, the source is a plan, not an act, and I found no constituting decree. Pg ~ the plan also sets a goal of 'capacidad institucional de análisis prospectivo' in public management, as a general objective, not a body's mandate."
+    }
+   ],
+   "overturns": null,
+   "changesCountryItem": "none",
+   "note": "Ruling stands. A reader could take the 'prospectiva' clause as the system's function; the codebook reads mandates body by body, and the plan is not a mandate source for a Council not shown to exist.",
+   "checkerLabel": "NIC: National Council of SPING",
+   "set": "split",
+   "checker": "v1",
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "id": "SGP.sg",
+   "result": "Confirmed",
+   "checklist": [
+    {
+     "item": "Body fails section 1 as stated: no condition the ruling names is met by its own mandate.",
+     "holds": true,
+     "source": "https://www.strategygroup.gov.sg/who-we-are",
+     "note": "Own page: whole-of-government strategic planning, 'key priorities and emerging issues over the medium to long-term'; no futures or foresight term, horizon 'medium to long' not ten years. Strategic planning body falls under the planning exclusion. Housing CSF does not make it a GFF (section 1 parent rule). 'Emerging change' is an open point in condition 3 text; best reading is that it is an object, not a named term."
+    }
+   ],
+   "overturns": null,
+   "changesCountryItem": "none",
+   "note": "Codebook open point on 'emerging change' noted; ruling follows the term list.",
+   "checkerLabel": "SGP: Strategy Group, Prime Minister's Office",
+   "set": "split",
+   "checker": "v1",
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "id": "SGP.fut",
+   "result": "Confirmed",
+   "checklist": [
+    {
+     "item": "Meets section 1 conditions 1-4",
+     "holds": true,
+     "source": "https://www.csf.gov.sg/who-we-are/",
+     "note": "Weak: only a leadership profile says 'Director of Futures ... The Futures team identifies longer-term trends and emerging issues ... builds capabilities for futures thinking in the Public Service'. 'Futures' is a listed term, Public Service-wide. The profile is on an official page but it is not a mandate statement, and the page does not show whether the team is distinct from CSF (Head CSF is a separate named person). Best reading: counts at low confidence."
+    },
+    {
+     "item": "record 0",
+     "holds": true,
+     "source": "https://www.csf.gov.sg/who-we-are/",
+     "note": "No dated record of the team's creation or mandate seen."
+    },
+    {
+     "item": "product 0",
+     "holds": true,
+     "source": "https://www.csf.gov.sg/media-centre/",
+     "note": "No product issued in the team's own name; CSF products are CSF's."
+    },
+    {
+     "item": "survived no_change",
+     "holds": true,
+     "source": "",
+     "note": "No dated establishment, so no_change."
+    },
+    {
+     "item": "closedNoSuccessor 0",
+     "holds": true,
+     "source": "",
+     "note": ""
+    }
+   ],
+   "overturns": null,
+   "changesCountryItem": "none",
+   "note": "Low-confidence inclusion stands. If it is the same body as CSF it is a double listing; either way SGP items stay I1 1, I2 1, I3 1, I4 0 because CSF carries them.",
+   "checkerLabel": "SGP: Futures team, Strategy Group",
+   "set": "split",
+   "checker": "v1",
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "id": "GBR.hss",
+   "result": "Confirmed",
+   "checklist": [
+    {
+     "item": "Meets section 1, conditions 1 to 4, on its own mandate",
+     "holds": true,
+     "source": "https://www.gov.uk/government/news/horizon-scanning-programme-a-new-approach-for-policy-making",
+     "note": "Official gov.uk news page of 12 July 2013: the programme is supported by 'a small Horizon Scanning Secretariat within the Cabinet Office's Government Innovation Group'. Programme aims: cross-government horizon scanning beyond the Parliamentary term, across all departments (condition 4 met). Term 'horizon scanning' is listed. The page states no numeric horizon, so condition 3 holds under 'no stated horizon' on the best reading; 'beyond the Parliamentary term' is a floor under ten years and the codebook leaves a vague floor open. The secretariat's own mandate text is thin; the unit rests on its name, its stated role and the programme page."
+    },
+    {
+     "item": "record 0: no official record dates its creation or foresight mandate",
+     "holds": true,
+     "source": "https://web.archive.org/web/20191208052150/https://www.gov.uk/government/groups/horizon-scanning-programme-team",
+     "note": "The 2014 merger page and the 2013 news page show the body existed in 2013 but state no creation date. Record 0 also has no effect on I1, which reads operating bodies only."
+    },
+    {
+     "item": "product 0: no forward-looking product in its own name dated 2023-10-02 to 2026-10-02",
+     "holds": true,
+     "source": "https://www.gov.uk/government/groups/horizon-scanning-programme-team",
+     "note": "Body ended March 2014. Nothing can be dated in the window."
+    },
+    {
+     "item": "survived no_change holds on the body's own dates",
+     "holds": true,
+     "source": "https://www.gov.uk/government/news/horizon-scanning-programme-a-new-approach-for-policy-making",
+     "note": "The 2013 page (Day review of Jan 2013 led to the secretariat) places creation under Cameron (PM from May 2010 to July 2016). The body ended March 2014, so no change of PM occurred. No record shows an earlier existence. Body-level only; I3 reads operating bodies."
+    },
+    {
+     "item": "closedNoSuccessor 0 holds",
+     "holds": true,
+     "source": "https://web.archive.org/web/20191208052150/https://www.gov.uk/government/groups/horizon-scanning-programme-team",
+     "note": "Merged March 2014 into the Horizon Scanning Programme team (same executive branch, foresight mandate on the same page). Also outside the I4 window (2016-10-02 to 2026-10-02)."
+    }
+   ],
+   "overturns": null,
+   "changesCountryItem": "none",
+   "note": "Unit and codes stand. Open point: the secretariat has no mandate text of its own; the unit rests on the 2013 programme page and the merger page. No country item depends on it.",
+   "checkerLabel": "1 GBR Cabinet Office Horizon Scanning Secretariat",
+   "set": "sample",
+   "checker": "v2",
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "id": "NGA.ospre",
+   "result": "Confirmed",
+   "checklist": [
+    {
+     "item": "Meets section 1, conditions 1 to 4, on its own mandate",
+     "holds": true,
+     "source": "https://www.osprenigeria.gov.ng/services",
+     "note": "Rendered in a browser (site builds text client-side). Services page: 'Short, medium, and long-term threat horizon scanning' and reports on 'topical, emergent, and over-the-horizon trends'. About page: eleven domains (health, food, energy, economy, governance, environment, crime, security), standing body under Executive Order 12. Condition 3 met by the listed term 'horizon scanning', no numeric horizon. Condition 4: the codebook names defence, not human security, as a sector; a multi-domain mandate is read as cross-sector. Low confidence stands; the mandate is mostly early warning."
+    },
+    {
+     "item": "record 1: an official record dates its creation",
+     "holds": true,
+     "source": "https://statehouse.gov.ng/president-sets-up-national-early-warning-centre-in-vps-office/",
+     "note": "State House release of 17 June 2022: 'The order signed on June 10, 2022 establishes the National Early Warning Centre'. The About page of osprenigeria.gov.ng says OSPRE was established by Executive Order 12, so it is the same body."
+    },
+    {
+     "item": "product 0: no forward-looking product in its own name dated in the window",
+     "holds": true,
+     "source": "https://www.osprenigeria.gov.ng/resources/publications",
+     "note": "The library lists 19 PDFs (for example 'The Future of West Africa & the Sahel', 'Flashpoints: Global Geopolitics Outlook 2026') with no dates on the page, and the downloads need an email-verified request. No date can be read, so product stays 0 under section 4. A reviewer who obtains the PDFs could move this to 1 and change country I2 from 0 to 1 (score 67 to 100)."
+    },
+    {
+     "item": "survived 1 holds on the body's own dates",
+     "holds": true,
+     "source": "https://www.radionigeriakaduna.gov.ng/2026/02/13/unicef-fg-launch-child-foresight-initiative/",
+     "note": "Established 10 June 2022 under Buhari; Tinubu took office 29 May 2023. A government-domain item of 13 Feb 2026 shows OSPRE running the AGFC programme, more than six months later. Open point: the foresight wording is undated on the OSPRE site (earliest Wayback capture is Jan 2026), so the foresight mandate is dated to the June 2022 order, whose release names research on 'trends' and 'emerging situations'. On a stricter reading survived would be no_change and country I3 would fall to 0."
+    },
+    {
+     "item": "closedNoSuccessor 0 holds",
+     "holds": true,
+     "source": "https://www.osprenigeria.gov.ng/about",
+     "note": "Operating."
+    }
+   ],
+   "overturns": null,
+   "changesCountryItem": "none",
+   "note": "Confirmed at low confidence. Two open points are flagged: the date of the foresight mandate (I3) and the undated, email-gated PDFs (I2).",
+   "checkerLabel": "2 NGA OSPRE",
+   "set": "sample",
+   "checker": "v2",
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "id": "GBR.jdac",
+   "result": "Overturned",
+   "checklist": [
+    {
+     "item": "Meets section 1, conditions 1 to 4, on its own mandate",
+     "holds": true,
+     "source": "https://www.gov.uk/government/groups/joint-data-analysis-centre-jdac",
+     "note": "The JDAC page (published 3 Sep 2024) lists 'Foresight analysis to enable the government to prepare for and act on foreseeable developments' as a remit, across government. The GO-Science futures page says the JDAC Foresight team 'works across government departments on major cross-cutting issues'. JDAC is a parent whose mandate names a foresight function among others; the team is the unit. Low confidence stands: the team has no page of its own."
+    },
+    {
+     "item": "record 0: no official record dates its creation or foresight mandate",
+     "holds": true,
+     "source": "https://www.gov.uk/government/groups/joint-data-analysis-centre-jdac",
+     "note": "The JDAC page gives only its own publication date. No page states when the team was created."
+    },
+    {
+     "item": "product 0: no forward-looking product in its own name dated in the window",
+     "holds": true,
+     "source": "https://www.gov.uk/government/groups/futures-and-foresight",
+     "note": "gov.uk search for the team found no product issued in its name."
+    },
+    {
+     "item": "survived no_change holds on the body's own dates",
+     "holds": false,
+     "source": "https://web.archive.org/web/20230501020809/https://www.gov.uk/government/groups/futures-and-foresight",
+     "note": "The official page names the JDAC Foresight team in Wayback captures of 2023-05-01, 2023-10-08, 2024-07-01, 2025-05-01, 2025-10-01 and 2026-01-01, and live on 2026-09-30. The team therefore existed in May 2023, before the 5 July 2024 change of prime minister, and the page still names it more than six months later. Survived is 1, not no_change. Dating the team from 2023-05-01 is the earliest date on a record read."
+    },
+    {
+     "item": "closedNoSuccessor 0 holds",
+     "holds": true,
+     "source": "https://www.gov.uk/government/groups/futures-and-foresight",
+     "note": "Operating."
+    }
+   ],
+   "overturns": "Body code survived: no_change to 1 (page naming the team in captures from 2023-05-01 and 2025-05-01 onward). Unit decision stands.",
+   "changesCountryItem": "none (country I3 is already 1 through GBR.gos, GBR.ffet, GBR.post)",
+   "note": "The GO-Science page names the team before and more than six months after the July 2024 change, so survived is 1. No country item moves.",
+   "checkerLabel": "3 GBR JDAC Foresight team, Cabinet Office",
+   "set": "sample",
+   "checker": "v2",
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "id": "NGA.nipss",
+   "result": "Confirmed",
+   "checklist": [
+    {
+     "item": "Body fails section 1 as stated: no condition the ruling names is met by its own mandate",
+     "holds": true,
+     "source": "https://nipsskuru.gov.ng/Source/3/NIPSS-Act",
+     "note": "The Act (Decree 20 of 1979, Cap. 51) gives: a centre for 'reflection, research, and dialogue' in 'a constantly changing world', courses for policymakers, and seminars to enhance 'appreciation for long range national plans and objectives'; also in-depth research into current national problems. The official Objective and Directorate of Research pages repeat this. None of the listed terms (foresight, futures, scenarios, megatrends, horizon scanning) appears. 'Long-term national goals' and 'long range plans' fall under the plan exclusion. Condition 3 fails."
+    }
+   ],
+   "overturns": null,
+   "changesCountryItem": "none",
+   "note": "The Act and the NIPSS site name no listed foresight term. A search of nipsskuru.gov.ng found no foresight unit. Fails condition 3.",
+   "checkerLabel": "4 NGA NIPSS",
+   "set": "sample",
+   "checker": "v2",
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "id": "GBR.ffet",
+   "result": "Confirmed",
+   "checklist": [
+    {
+     "item": "Meets section 1, conditions 1 to 4, on its own mandate",
+     "holds": true,
+     "source": "https://www.gov.uk/government/groups/futures-and-foresight",
+     "note": "Page (updated 2026-09-30): the team supports civil servants on futures, foresight and 'technology horizon scanning'. Cross-government. No stated horizon."
+    },
+    {
+     "item": "record 0: no official record dates its creation or foresight mandate",
+     "holds": true,
+     "source": "https://www.gov.uk/government/groups/futures-and-foresight",
+     "note": "The page and its captures state no creation date. The gov.uk first-published date (2018) is metadata and the 2018 page carried a different title ('Futures and Foresight')."
+    },
+    {
+     "item": "product 0: no forward-looking product in its own name dated in the window",
+     "holds": true,
+     "source": "https://www.gov.uk/api/search.json?filter_organisations=government-office-for-science",
+     "note": "GO-Science products in the window (AI Scenarios 2030, 15 Jun 2026; Global supply chains foresight report, 15 Jun 2026) name only Government Office for Science as issuing organisation, with no credit line for the team in the text read. Under 1.3 they count for the parent. 'A practical review of horizon scanning' is a Building Safety Regulator product."
+    },
+    {
+     "item": "survived 1 holds on the body's own dates",
+     "holds": true,
+     "source": "https://web.archive.org/web/20230501020809/https://www.gov.uk/government/groups/futures-and-foresight",
+     "note": "Capture of 2023-05-01 is titled 'Futures, Foresight and Emerging Technologies'; the Horizon Scanning Programme team page was updated 2023-05-15 to point to it. Captures of 2025-05-01 and 2025-10-01 and the live page are more than six months after the 5 July 2024 change. The cited 4 Sep 2025 blog names the parent's programme, but the page captures carry the item."
+    },
+    {
+     "item": "closedNoSuccessor 0 holds",
+     "holds": true,
+     "source": "https://www.gov.uk/government/groups/futures-and-foresight",
+     "note": "Operating."
+    }
+   ],
+   "overturns": null,
+   "changesCountryItem": "none",
+   "note": "All codes stand. The cited blog post is weak evidence, but the team's own page captures support survived 1.",
+   "checkerLabel": "5 GBR FFET, GO-Science",
+   "set": "split",
+   "checker": "v2",
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "id": "GBR.hsp",
+   "result": "Confirmed",
+   "checklist": [
+    {
+     "item": "Meets section 1, conditions 1 to 4, on its own mandate",
+     "holds": true,
+     "source": "https://web.archive.org/web/20191208052150/https://www.gov.uk/government/groups/horizon-scanning-programme-team",
+     "note": "Page: the team 'coordinates strategic horizon scanning work across departments' and builds networks to bring emerging issues to a senior audience. Listed term, cross-government, no horizon given."
+    },
+    {
+     "item": "record 1: an official record dates its creation",
+     "holds": true,
+     "source": "https://web.archive.org/web/20191208052150/https://www.gov.uk/government/groups/horizon-scanning-programme-team",
+     "note": "'In March 2014, the Cabinet Office's Horizon Scanning Secretariat and ... Horizon Scanning Centre were merged to form the Horizon Scanning Programme team.' Cabinet Office blog of 5 July 2014 repeats it."
+    },
+    {
+     "item": "product 0: no forward-looking product in its own name dated in the window",
+     "holds": true,
+     "source": "https://www.gov.uk/government/groups/horizon-scanning-programme-team",
+     "note": "The live page says the team no longer exists (updated 2023-05-15)."
+    },
+    {
+     "item": "survived 1 holds on the body's own dates",
+     "holds": true,
+     "source": "https://web.archive.org/web/20170719235537/https://www.gov.uk/government/groups/horizon-scanning-programme-team",
+     "note": "Created March 2014 under Cameron, who left 13 July 2016. Captures of the page run from 2014 through 2017-07-19 and 2019-12-08, more than six months after. The page's own modified date (6 Jan 2017) is a few days short, so the 2017-07 capture carries it."
+    },
+    {
+     "item": "closedNoSuccessor 0 holds",
+     "holds": true,
+     "source": "https://www.gov.uk/government/groups/futures-and-foresight",
+     "note": "Page says 'Go to Futures, Foresight and Emerging Technologies' (updated 2023-05-15). FFET is in the same branch, and its foresight mandate is on the official page in captures from 2023-05-01, inside 24 months."
+    }
+   ],
+   "overturns": null,
+   "changesCountryItem": "none",
+   "note": "All codes stand. The end date is taken as the 15 May 2023 page update; the successor test passes on any date to 2025.",
+   "checkerLabel": "6 GBR Horizon Scanning Programme team",
+   "set": "split",
+   "checker": "v2",
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "id": "GBR.hsc",
+   "result": "Confirmed",
+   "checklist": [
+    {
+     "item": "Meets section 1, conditions 1 to 4, on its own mandate",
+     "holds": true,
+     "source": "https://dera.ioe.ac.uk/id/eprint/14223/1/file31810.pdf",
+     "note": "I read the PDF text: para 7.22 'Launched in March 2005 the remit of OSI's Horizon Scanning Centre (HSC) is to look at least five to ten years ahead to identify and examine potential opportunities and threats'; para 7.23 cross-government projects. Two open points. (a) The stated horizon is a floor of 'five to ten' years; the codebook says 'at least ten years or no stated horizon'. I read 'at least' as open upward and keep the unit; on a strict reading condition 3 fails. (b) The file is an HM Treasury report hosted on a university archive, not on a government domain; section 4 does not say whether a mirrored government report is primary. I read it as the government's own document. A National Archives copy would settle it."
+    },
+    {
+     "item": "record 1: an official record dates its creation",
+     "holds": true,
+     "source": "https://dera.ioe.ac.uk/id/eprint/14223/1/file31810.pdf",
+     "note": "'Launched in March 2005' in a government annual report. Subject to open point (b)."
+    },
+    {
+     "item": "product 0: no forward-looking product in its own name dated in the window",
+     "holds": true,
+     "source": "https://www.gov.uk/government/groups/horizon-scanning-programme-team",
+     "note": "Body ended March 2014."
+    },
+    {
+     "item": "survived 1 holds on the body's own dates",
+     "holds": true,
+     "source": "https://www.gov.uk/government/news/horizon-scanning-programme-a-new-approach-for-policy-making",
+     "note": "Launched March 2005. The gov.uk page of 12 July 2013 shows the 'Foresight Horizon Scanning Centre' still working, more than six months after Cameron took office in May 2010 (and the centre also ran across Brown's change in June 2007). This is a better cite than the ruling's inference."
+    },
+    {
+     "item": "closedNoSuccessor 0 holds",
+     "holds": true,
+     "source": "https://web.archive.org/web/20191208052150/https://www.gov.uk/government/groups/horizon-scanning-programme-team",
+     "note": "Merged into the Horizon Scanning Programme team, March 2014. Outside the I4 window as well."
+    }
+   ],
+   "overturns": null,
+   "changesCountryItem": "none",
+   "note": "Confirmed. Two open points (the 5-to-10-year horizon and the mirrored host) are flagged; neither moves a country item, because HSC is merged and other bodies carry I1 to I3.",
+   "checkerLabel": "7 GBR Horizon Scanning Centre",
+   "set": "split",
+   "checker": "v2",
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "id": "GBR.post",
+   "result": "Confirmed",
+   "checklist": [
+    {
+     "item": "Meets section 1, conditions 1 to 4, on its own mandate",
+     "holds": true,
+     "source": "https://post.parliament.uk/about-us/",
+     "note": "Rendered in a browser (403 to scripts). Official page: POST is 'based in the UK Parliament', covers 'emerging or complex science and social science topics' for both Houses, and 'We organise horizon scanning activities to help parliament plan for the future'. Legislature organ, standing, cross-domain. Listed terms: horizon scanning, emerging."
+    },
+    {
+     "item": "record 1: an official record dates its creation or mandate",
+     "holds": true,
+     "source": "https://api.parliament.uk/historic-hansard/commons/2000/nov/21/parliamentary-office-of-science-and",
+     "note": "HC Deb 21 Nov 2000: 'Resolved, That this House approves the First Report from the Information Committee on the Future of the Parliamentary Office of Science and Technology (HC 659)'. The debate says the report recommends POST be made permanent from April 2001 and that POST was set up on a temporary basis. A House resolution meets I1."
+    },
+    {
+     "item": "product 1: a forward-looking product in its own name dated in the window exists",
+     "holds": true,
+     "source": "https://post.parliament.uk/research-briefings/post-pn-0773/",
+     "note": "POSTnote 773, 'Governance of solar radiation modification research', 13 July 2026, listed on post.parliament.uk/type/postnote. It is a note on an emerging technology issued by POST. Other candidates: the quantum computing POSTnote on the home page, and POSTnote 740 (cultivated meat, 11 Apr 2025). I read the listing and title, not the full text, so I did not check for a stated horizon. The 2024 Horizon Scan articles use a five-year horizon and would not count."
+    },
+    {
+     "item": "survived 1 holds on the body's own dates",
+     "holds": true,
+     "source": "https://post.parliament.uk/type/postnote/",
+     "note": "Permanent from 2001. POSTnotes dated 2025 and 2026 follow the July 2024 change of prime minister by more than six months."
+    },
+    {
+     "item": "closedNoSuccessor 0 holds",
+     "holds": true,
+     "source": "https://post.parliament.uk/about-us/",
+     "note": "Operating."
+    }
+   ],
+   "overturns": null,
+   "changesCountryItem": "none",
+   "note": "All codes stand. I did not open the full text of POSTnote 773, so its horizon is unchecked; the quantum and cultivated meat notes are further candidates.",
+   "checkerLabel": "8 GBR POST",
+   "set": "split",
+   "checker": "v2",
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "id": "BRA.cgee",
+   "result": "Confirmed",
+   "checklist": [
+    {
+     "item": "Body fails section 1 as stated (condition 1, private-law social organisation)",
+     "holds": true,
+     "source": "https://www.planalto.gov.br/ccivil_03/decreto/2002/D4078.htm",
+     "note": "Decree 4.078 of 9 Jan 2002 qualifies CGEE as Organizacao Social and calls it an 'associacao civil' under Lei 9.637/1998, under a management contract with the science ministry. CGEE's own site says 'Organizacao social supervisionada pelo MCTI'. A civil association is private-law and no act created it as a state body."
+    },
+    {
+     "item": "Alternative ground: condition 4 (one sector)",
+     "holds": true,
+     "source": "https://www.planalto.gov.br/ccivil_03/decreto/2002/D4078.htm",
+     "note": "The decree states its object as 'estudos e pesquisas prospectivas na area de ciencia e tecnologia' plus impact evaluation of S&T policy. That is a science-and-technology-only mandate, which condition 4 excludes."
+    },
+    {
+     "item": "Open point in codebook",
+     "holds": null,
+     "source": "",
+     "note": "Condition 1 lets a body 'set up by the state but run by a contractor' count (TAB example). CGEE was not set up by the state as a body; it is a private association the state later qualified. I read the TAB clause as not reaching it. Condition 4 fails it regardless."
+    }
+   ],
+   "overturns": null,
+   "changesCountryItem": "none",
+   "note": "Unit failure stands. Condition 1 is the stated ground and is arguable under the TAB clause, but condition 4 (S&T only, per Decree 4.078 art. 1) independently fails it.",
+   "checkerLabel": "BRA CGEE",
+   "set": "sample",
+   "checker": "v3",
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "id": "BRA.csf",
+   "result": "Confirmed",
+   "checklist": [
+    {
+     "item": "Art. 104-D text is as quoted",
+     "holds": true,
+     "source": "https://www2.camara.leg.br/legin/fed/ressen/2013/resolucao-14-8-maio-2013-775951-publicacaooriginal-139761-pl.html",
+     "note": "Rendered the page: 'Art. 104-D. A Comissao Senado do Futuro compete promover discussoes sobre grandes temas e o futuro do Pais, bem como aprimorar a atuacao do Senado nessas questoes.' Resolution 14 of 8 May 2013, DOU 9 May 2013. No listed term (foresight, futures studies, prospectiva, scenarios, megatrends, horizon scanning)."
+    },
+    {
+     "item": "Status closed",
+     "holds": true,
+     "source": "https://legis.senado.leg.br/norma/37139388/publicacao/37139674",
+     "note": "Senate Resolution 14 of 7 Jun 2023 transformed the Comissao Senado do Futuro into the Comissao de Defesa da Democracia. New art. 104-D is a democracy-defence remit with no future-oriented item."
+    },
+    {
+     "item": "Condition 3 fails on 'o futuro do Pais'",
+     "holds": true,
+     "source": "",
+     "note": "Ruling on best reading: 'the future of the country' names a topic of debate, not exploration of alternative futures. The codebook does not say if a bare 'future' is a direct equivalent of 'futures'. Strict reading holds. A looser reading would make this a GFF closed in 2023 with no legislative successor, so I4 would be 1 and BRA score 100 to 80."
+    }
+   ],
+   "overturns": null,
+   "changesCountryItem": "none under the strict reading. If a coder read 'futuro do Pais' as a futures function, I4 would go 0 to 1.",
+   "note": "Confirmed on the strict reading of the term list. The point is sensitive: it is the only body in the Brazil set that could move I4.",
+   "checkerLabel": "BRA Comissao Senado do Futuro",
+   "set": "sample",
+   "checker": "v3",
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "id": "BRA.congress",
+   "result": "Confirmed",
+   "checklist": [
+    {
+     "item": "No technology-assessment or foresight mandate (Senate)",
+     "holds": true,
+     "source": "https://legis.senado.leg.br/norma/37139388/publicacao/37139674",
+     "note": "Art. 104-C, as amended in 2023: committee 'compete opinar sobre proposicoes' on national S&T and innovation policy and on regulation, control and ethics of R&D. Items I and III to VI were not shown on the fetched page. No item shown names technology assessment, scenarios, prospective studies, emerging technology or the future."
+    },
+    {
+     "item": "Camara CCTI mandate read",
+     "holds": null,
+     "source": "",
+     "note": "I could not retrieve the RICD art. 32 text for the Comissao de Ciencia, Tecnologia e Inovacao from a primary page. Only a news description (lead) of its field: S&T development, national S&T policy, IT policy. Opinion-on-bills committees of this type do not meet condition 3 or 4 on that description."
+    },
+    {
+     "item": "Related body CAEAT (Camara Conselho de Altos Estudos e Avaliacao Tecnologica) is not a committee",
+     "holds": true,
+     "source": "https://www2.camara.leg.br/legin/int/atomes/1998/atodamesa-93-15-abril-1998-321088-publicacaooriginal-1-cd-mesa.html",
+     "note": "Ato da Mesa 93/1998 art. 2: studies of 'viabilidade e analise de impactos, riscos e beneficios' of technologies and policies. It names no emerging technology or long-term future, so under the impact-assessment rule it fails condition 3. Lead only; not in this sample."
+    }
+   ],
+   "overturns": null,
+   "changesCountryItem": "none",
+   "note": "Confirmed for the Senate committee on a primary text. The Camara committee rests on a secondary description, so that half is lower confidence.",
+   "checkerLabel": "BRA Congress S&T committees",
+   "set": "sample",
+   "checker": "v3",
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "id": "BRA.ipea",
+   "result": "Confirmed",
+   "checklist": [
+    {
+     "item": "Meets section 1 conditions 1 to 4",
+     "holds": true,
+     "source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/decreto/D11194.htm",
+     "note": "Art. 1: 'fundacao publica instituida nos termos do art. 190 do Decreto-Lei 200/1967', attached to a ministry (statute text still names Ministerio da Economia, now MPO). Art. 3 III: 'realizar estudos prospectivos de medio e longo prazo'. Head and directors appointed 'na forma prevista na legislacao' by the state. Remit covers economy, society and public management. 'Prospectivo' is a listed term; no horizon cap."
+    },
+    {
+     "item": "record 1",
+     "holds": true,
+     "source": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2010/Decreto/D7142.htm",
+     "note": "Decree 7.142 of 29 Mar 2010 (and Decree 11.194 of 8 Sep 2022) carry the same item III."
+    },
+    {
+     "item": "product 0",
+     "holds": true,
+     "source": "https://repositorio.ipea.gov.br/",
+     "note": "I searched the Ipea repository (discover API, issued 2023-10-02 to 2026-10-02) for cenarios, megatendencias, prospectivo, 2050, futuro. I found no Ipea-issued scenario, megatrend or horizon-scan product with a horizon of ten years or more. The Mar 2024 'Analise Situacional e Retrospectiva' for Estrategia Brasil 2050 is retrospective, and the MPO megatrends report (Mar 2025) is issued by MPO and only credits Ipea input. Search is by keyword, so absence is not proven."
+    },
+    {
+     "item": "survived 1",
+     "holds": true,
+     "source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/decreto/D11194.htm",
+     "note": "The prospective-studies mandate is on the record in 2010 (Lula) and in force in 2022 (Bolsonaro), and Ipea continues in 2026. Chief executive changed in 2011, 2016, 2019, 2023."
+    },
+    {
+     "item": "closedNoSuccessor 0",
+     "holds": true,
+     "source": "",
+     "note": "Ipea is operating."
+    }
+   ],
+   "overturns": null,
+   "changesCountryItem": "none",
+   "note": "Unit and codes stand. product 0 rests on a keyword search of the repository.",
+   "checkerLabel": "BRA Ipea",
+   "set": "split",
+   "checker": "v3",
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "id": "BRA.splp",
+   "result": "Confirmed",
+   "checklist": [
+    {
+     "item": "Meets section 1 conditions 1 to 4 as a unit",
+     "holds": true,
+     "source": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/decreto/D11353.htm",
+     "note": "Art. 16 II: 'elaborar estudos prospectivos e analises de cenarios'; I: coordinate national long-term planning. Prospectivo is a listed term, remit is national and cross-domain. Unit of the ministry (condition 1). Standing."
+    },
+    {
+     "item": "record 1",
+     "holds": true,
+     "source": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/decreto/D11353.htm",
+     "note": "Decree 11.353 of 1 Jan 2023. The 2023 Wayback copy (web.archive.org/web/20231229025738/...) shows art. 16 II in the same words under the earlier name 'Diretoria de Planejamento de Longo Prazo'; the name became Subsecretaria by Decree 11.869 of 2023."
+    },
+    {
+     "item": "product 0",
+     "holds": true,
+     "source": "https://www.gov.br/planejamento/pt-br/assuntos/planejamento/estrategia-2050-conteudo/Arquivos/eb2050-megatendencias-mundiais-e-incertezas-para-o-brasil-2050-v-abr.pdf",
+     "note": "Opened the PDF (/@@download/file). Cover and credits name the Ministerio do Planejamento e Orcamento, dated Brasilia, March 2025, horizon 2050. The Subsecretario de Planejamento de Longo Prazo appears only as a post in the ministry staff list. The text never names the subsecretaria as author. Affiliation is not authorship, so no product for this unit."
+    },
+    {
+     "item": "survived no_change",
+     "holds": true,
+     "source": "",
+     "note": "Established 1 Jan 2023 under Lula; no change of president since."
+    },
+    {
+     "item": "closedNoSuccessor 0",
+     "holds": true,
+     "source": "",
+     "note": "Operating."
+    }
+   ],
+   "overturns": null,
+   "changesCountryItem": "none (BRA.seplan carries I2)",
+   "note": "Confirmed. product 0 is the stricter reading and matches 1.3 change 1 and 2; even if it were 1, the country item is already 1.",
+   "checkerLabel": "BRA Subsecretaria de Planejamento de Longo Prazo",
+   "set": "split",
+   "checker": "v3",
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "id": "BRA.saedes",
+   "result": "Confirmed",
+   "checklist": [
+    {
+     "item": "Meets section 1 conditions 1 to 4 as a unit",
+     "holds": true,
+     "source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/decreto/D11285.htm",
+     "note": "Decree 11.285 of 13 Dec 2022, Anexo I art. 23 III: 'realizar estudos e analises de cenarios que contribuam para a formulacao do planejamento nacional de longo prazo' across economic, commercial, industrial, infrastructure and social options. Judgement call: the word is 'cenarios' tied to long-term planning, which I read as 'long-term scenarios'. Remit is not one sector."
+    },
+    {
+     "item": "survived did_not_survive",
+     "holds": true,
+     "source": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/decreto/D11365.htm",
+     "note": "Decree 11.365 of 1 Jan 2023 art. 5 I revokes arts. 15 to 25 of Anexo I of Decree 11.285 (includes art. 23). Same day as the Bolsonaro to Lula change."
+    },
+    {
+     "item": "closedNoSuccessor 0",
+     "holds": true,
+     "source": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/decreto/D11353.htm",
+     "note": "Same-day Decree 11.353 art. 16 II gives MPO's Diretoria de Planejamento de Longo Prazo 'estudos prospectivos e analises de cenarios' (archived copy confirms original wording). Same branch, within 24 months, so a successor under I4."
+    },
+    {
+     "item": "record 1 and product 0",
+     "holds": true,
+     "source": "",
+     "note": "Dated decree; no product found for a closed body in window."
+    }
+   ],
+   "overturns": null,
+   "changesCountryItem": "none",
+   "note": "Confirmed. The successor test depends on the MPO unit meeting section 1, which I also confirm.",
+   "checkerLabel": "BRA SAE/PR Diretoria de Desenvolvimento Economico e Social",
+   "set": "split",
+   "checker": "v3",
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "id": "BRA.nae",
+   "result": "Confirmed",
+   "checklist": [
+    {
+     "item": "Meets section 1 conditions 1 to 4",
+     "holds": true,
+     "source": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2007/decreto/d6217.htm",
+     "note": "Decree 6.217 of 4 Oct 2007: minister's remit includes 'discutir as opcoes estrategicas do Pais, considerando ... as possibilidades do futuro'; unit remit IX 'elaboracao de cenarios exploratorios na area de assuntos de natureza estrategica de longo prazo' and 'alternativas de desenvolvimento de longo prazo' (II). Long-term scenarios is a listed term. National, cross-domain, in the Presidency."
+    },
+    {
+     "item": "Status closed, ended 2008, outside I4 window",
+     "holds": true,
+     "source": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2007/decreto/d6217.htm",
+     "note": "Page header: 'Revogado pelo Decreto 6.517, de 2008'. Decree 6.517/2008 re-creates it as the Secretaria de Assuntos Estrategicos; I did not find a listed term in its opening remit text. 2008 is before 2016-10-02."
+    },
+    {
+     "item": "survived no_change",
+     "holds": true,
+     "source": "",
+     "note": "Created Oct 2007 and ended in 2008, both under Lula."
+    }
+   ],
+   "overturns": null,
+   "changesCountryItem": "none",
+   "note": "Confirmed. The SAE successor question does not matter for I4 because the 2008 end is outside the window.",
+   "checkerLabel": "BRA Nucleo de Assuntos Estrategicos da Presidencia",
+   "set": "split",
+   "checker": "v3",
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "id": "CHE.pstab",
+   "result": "Confirmed",
+   "checklist": [
+    {
+     "item": "Meets section 1, conditions 1 to 4, on its own mandate",
+     "holds": true,
+     "source": "https://web.archive.org/web/2024/https://www.bk.admin.ch/dam/bk/de/dokumente/strategische-fuehrungsunterstuetzung/lageumfeldanalyse/bericht_herausforderungendeutsch.pdf.download.pdf/bericht_herausforderungendeutsch.pdf",
+     "note": "Federal Council declaration in the 2007 report: the Perspektivstab prepares on the Council's mandate, every four years, an overview of the main future questions. The 2010 business report adds early detection of developments and trends and four future scenarios. Terms: Zukunftsszenarien, Früherkennung (scenarios, emerging change). Cross-policy. Standing: no end date seen. No written organisational regulation found; the mandate rests on Federal Council statements. Low confidence stands."
+    },
+    {
+     "item": "record 1",
+     "holds": true,
+     "source": "https://web.archive.org/web/2024/https://www.bk.admin.ch/dam/bk/de/dokumente/strategische-fuehrungsunterstuetzung/Gesch%C3%A4ftsbericht/geschaeftsberichtdesbundesrates2010-bandii.pdf.download.pdf/geschaeftsberichtdesbundesrates2010-bandii.pdf",
+     "note": "2010 report dates the constitutive meeting of the re-formed staff (12 Nov 2009). The 2007 report (Federal Council took note 18 Apr 2007) shows the staff existed earlier, so 2009 is a reconstitution, not the earliest date. A dated official record exists either way."
+    },
+    {
+     "item": "product 0",
+     "holds": true,
+     "source": "https://www.bk.admin.ch/de/lage-und-umfeldanalyse",
+     "note": "Perspektiven Schweiz 2040 (Federal Council took note 19 Jun 2026, per search lead) is credited to the Bundeskanzlei with administration and science input, not to the Perspektivstab. Earlier reports 2007, 2011, 2014 are outside the window."
+    },
+    {
+     "item": "survived 1 holds on the body's own dates",
+     "holds": true,
+     "source": "https://www.bk.admin.ch/de/lage-und-umfeldanalyse",
+     "note": "The ruling says a council-majority change occurred in 2010. That holds only on an establishment date of 2007 (Blocher, Schmid, Couchepin, Leuenberger gone by Oct 2010). On the 2009 date used in the ruling, a majority of the Nov 2009 council had left only by Dec 2015 (Leuenberger, Merz, Calmy-Rey, Widmer-Schlumpf). The 2007 record is earlier and codebook 1.3 uses the earliest record, so 2007 applies. Perspektiven 2025 (2011) and Perspektiven 2030 (noted 17 Dec 2014) post-date Oct 2010 by more than six months. The 2015 business report still cites 'Vorgaben des Perspektivstabs'. Holds. The ruling's date basis is wrong; the code is right."
+    },
+    {
+     "item": "closedNoSuccessor 0 holds",
+     "holds": true,
+     "source": "https://www.bk.admin.ch/de/lage-und-umfeldanalyse",
+     "note": "No dated end found. The Chancellery runs continuous situation analysis, same branch. If an end falls in the window, the Chancellery and its section carry the mandate."
+    }
+   ],
+   "overturns": null,
+   "changesCountryItem": "none",
+   "note": "Unit decision and codes stand. The survival basis should cite the 2007 record (Council majority gone Oct 2010), not the 2009 reconstitution; the status 'closed' has no dated source.",
+   "checkerLabel": "CHE: Perspektivstab der Bundesverwaltung",
+   "set": "sample",
+   "checker": "v4",
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "id": "EST.riigikogu",
+   "result": "Confirmed",
+   "checklist": [
+    {
+     "item": "Fails section 1 as parent: no condition met by its own mandate",
+     "holds": true,
+     "source": "https://www.riigikogu.ee/wpcms/wp-content/uploads/2014/11/Riigikogu-Kantselei-p%C3%B5him%C3%A4%C3%A4rus-3.pdf",
+     "note": "Chancellery statute (consolidated to 2018), section II tasks (point 5) serve the Riigikogu and name no foresight function. Foresight sits in a separate chapter VII-1 for the Arenguseire Keskus, a structural unit independent in its statutory tasks. Parent is not a GFF under codebook 1.2 and 1.3. Current statute version not re-read."
+    }
+   ],
+   "overturns": null,
+   "changesCountryItem": "none",
+   "note": "Parent mandate names no foresight function; the Foresight Centre carries it.",
+   "checkerLabel": "EST: Riigikogu and Chancellery of the Riigikogu",
+   "set": "sample",
+   "checker": "v4",
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "id": "EST.mkm",
+   "result": "Confirmed",
+   "checklist": [
+    {
+     "item": "Fails section 1 as stated: no own cross-policy foresight mandate",
+     "holds": true,
+     "source": "https://www.riigiteataja.ee/akt/109022024004",
+     "note": "Ministry statute (version in force 01.03.2024, rendered in browser). Search for arenguseire, tulevik, stsenaar, prognoos finds none; only 'strateegiline juhtimine' (strategic management), strategy department and development plans. Those are not named foresight terms. Version expired 30.12.2024 and the ministry has since been renamed; the current text was not read."
+    }
+   ],
+   "overturns": null,
+   "changesCountryItem": "none",
+   "note": "Strategic management and development plans only, no foresight term.",
+   "checkerLabel": "EST: Ministry of Economic Affairs and Communications",
+   "set": "sample",
+   "checker": "v4",
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "id": "CHE.stf",
+   "result": "Confirmed",
+   "checklist": [
+    {
+     "item": "Meets section 1, conditions 1 to 4, on its own mandate",
+     "holds": true,
+     "source": "https://www.bk.admin.ch/en/strategic-management-support-section",
+     "note": "Page read live: continuous long-term situation and context analysis, 10 to 15 years, to identify and anticipate key developments; with departments, cross-policy. The term is Lage- und Umfeldanalyse, not a listed term, but 'identify and anticipate key developments of the next 10 to 15 years' is an exploration of emerging change. Open point: the legal basis of the analysis is RVOG Art. 32, which gives it to the Chancellery. The section page assigns it to the section."
+    },
+    {
+     "item": "record 0",
+     "holds": true,
+     "source": "https://www.bk.admin.ch/en/strategic-management-support-section",
+     "note": "The section page has no date. A 2015 business report states that staff for the analysis were provided on 1 Jan 2015 under a Federal Council decision. That dates a resource grant to the Chancellery, not the section's creation or mandate. Open point under 'dates stay with the body'; ruled 0."
+    },
+    {
+     "item": "product 0",
+     "holds": true,
+     "source": "https://www.bk.admin.ch/de/lage-und-umfeldanalyse",
+     "note": "Perspektiven Schweiz 2040 is credited to the Bundeskanzlei, not the section."
+    },
+    {
+     "item": "survived no_change",
+     "holds": true,
+     "source": "https://www.bk.admin.ch/en/strategic-management-support-section",
+     "note": "No date, so section 4 gives 0 (reason no_change as ruled). If 1 Jan 2015 were the date, survival would likely be 1; the country item I3 is 1 already."
+    },
+    {
+     "item": "closedNoSuccessor 0",
+     "holds": true,
+     "source": "https://www.bk.admin.ch/en/strategic-management-support-section",
+     "note": "Operating."
+    }
+   ],
+   "overturns": null,
+   "changesCountryItem": "none",
+   "note": "Stands as ruled. The 1 Jan 2015 resource date is a possible dating lead for the section; codebook 1.3 does not decide whether it counts.",
+   "checkerLabel": "CHE: Sektion Strategische Führungsunterstützung",
+   "set": "split",
+   "checker": "v4",
+   "model": "claude-sonnet-5-5"
+  },
+  {
+   "id": "EST.edfunit",
+   "result": "Overturned",
+   "checklist": [
+    {
+     "item": "Fails section 1 as stated: no condition met by its own mandate",
+     "holds": false,
+     "source": "https://www.riigiteataja.ee/akt/13238017",
+     "note": "Eesti Arengufondi seadus (RT I 2006, 52, 385; adopted 15.11.2006, in force 01.12.2006), rendered in browser. Section 40 'Arenguseire üksus': the board forms a foresight unit as a structural unit of the Fund to organise its foresight. Section 39 defines arenguseire as systematic assessment of long-term developments in science, technology, economy, environment and society. Section 41 sets the annual plan; section 42 publicity. Section 40 shows no amendment mark, so it is the original text."
+    },
+    {
+     "item": "Condition 1",
+     "holds": true,
+     "source": "https://www.riigiteataja.ee/akt/13238017",
+     "note": "Section 3: the Fund is a public-law legal person created by the Act, reporting to the Riigikogu (section 4). The unit is part of it. Head appointment not checked."
+    },
+    {
+     "item": "Conditions 2 to 4",
+     "holds": true,
+     "source": "https://www.riigiteataja.ee/akt/13238017",
+     "note": "No end date. Named term arenguseire (foresight, development monitoring). Long-term, no stated horizon. Cross-domain."
+    },
+    {
+     "item": "Codes (B): record 1, product 0, survived 1, closedNoSuccessor 0",
+     "holds": null,
+     "source": "https://www.riigiteataja.ee/akt/128062016004",
+     "note": "Record 1: the Act of 2006 names the unit. Product 0: the Fund and unit closed in 2016-2017. Survived 1 and successor (Arenguseire Keskus at the Riigikogu Chancellery, same legislative branch, Arenguseire Act 2016) are consistent with B but not re-sourced here."
+    }
+   ],
+   "overturns": "Unit decision: from fails the unit to meets the unit, on section 40 of the Development Fund Act (B's reading). Body codes as B: record 1, product 0, survived 1, closedNoSuccessor 0.",
+   "changesCountryItem": "none; EST.edf (closed) and EST.fc already give I1 1, I2 1, I3 1, I4 0",
+   "note": "The Act that the adjudicator could not render names the unit in section 40. The unit is a GFF in its own right; the country items do not move.",
+   "checkerLabel": "EST: Estonian Development Fund foresight unit",
+   "set": "split",
+   "checker": "v4",
+   "model": "claude-sonnet-5-5"
+  }
+ ]
+}

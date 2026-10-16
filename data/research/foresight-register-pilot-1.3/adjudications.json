@@ -1,0 +1,306 @@
+[
+ {
+  "body": "ARE I2",
+  "split": "Low confidence (A); A 0, B 0",
+  "ruling": "0 stands",
+  "reason": "The moca.gov.ae Centennial Lab page lists only the Future Possibilities Report 2020. The Future Foresight page answered a Cloudflare challenge, which I did not bypass. A search found no in-window futures product issued by the ministry. The Government Development and the Future Office white paper exists only in news, and that office fails the unit.",
+  "traceToRule": false,
+  "changesCountryItem": "none"
+ },
+ {
+  "body": "ARE I4 / ARE.fncfut",
+  "split": "Low confidence and unrendered (A): FNC Future Committee; A rejected, B did not list it",
+  "ruling": "Fails the unit on the record; I4 0 stands",
+  "reason": "almajles.gov.ae refused connection to curl and to a browser on 2026-10-16. The Wayback availability API returns no snapshot. The only description is news ('to help achieve the UAE Centennial goals'), which names a vision and no listed term. The reviewer should request an archive copy of the committee mandate before promotion.",
+  "traceToRule": false,
+  "changesCountryItem": "none"
+ },
+ {
+  "body": "ARE.gdfo",
+  "split": "Unrendered (A): uaecabinet.ae minister page 403; A rejected, B did not list it",
+  "ruling": "Fails condition 3 on the record",
+  "reason": "Rendered in a browser, the URL redirects to /en/cabinet-members, which shows no office mandate. Leads describe 'future readiness', which is not a listed term.",
+  "traceToRule": false,
+  "changesCountryItem": "none"
+ },
+ {
+  "body": "ARE.clab",
+  "split": "Low confidence on the unit (A); A rejected",
+  "ruling": "Fails condition 3",
+  "reason": "moca.gov.ae page read in a browser: 'a platform to develop ... projects related to the implementation of the UAE Centennial 2071; promote readiness'. A vision implementation, no listed term.",
+  "traceToRule": false,
+  "changesCountryItem": "none"
+ },
+ {
+  "body": "BRA.ipea",
+  "split": "A meets unit; B rejects (no standing mandate naming foresight)",
+  "ruling": "Meets unit (A)",
+  "reason": "Decree 7.142 of 29 Mar 2010, Annex I art. 3 III, and Decree 11.194 of 8 Sep 2022: 'realizar estudos prospectivos de médio e longo prazo'. 'Prospectivo' is a listed term, no numeric horizon is stated, the remit crosses domains, and Ipea is a public foundation under the planning ministry. B missed the statute. Body codes: record 1, product 0 (repository search found no in-window Ipea futures product; TD 3139 is a crop-model projection), survived 1.",
+  "traceToRule": false,
+  "changesCountryItem": "BRA I3: B 0 no_change becomes 1 (A's code)"
+ },
+ {
+  "body": "BRA I3",
+  "split": "A 1 (Ipea); B 0 no_change (Seplan only)",
+  "ruling": "1",
+  "reason": "Ipea held the mandate on 29 Mar 2010 under Lula. Rousseff took office on 1 Jan 2011, and the statute was reissued with the same competence on 8 Sep 2022, signed by Bolsonaro. That is an act more than six months after the change.",
+  "traceToRule": false,
+  "changesCountryItem": "BRA I3 1 (A); score 100 (A)"
+ },
+ {
+  "body": "BRA.splp",
+  "split": "Code split on product: A 1, B 0",
+  "ruling": "0 (B)",
+  "reason": "The Megatendências 2050 credit page lists 'Subsecretário de Planejamento de Longo Prazo' and a name, which is a person's post (1.3: affiliation is not authorship). The issuing body on the cover is MPO. The ministry's Relatório de Gestão 2025 credits the Estratégia Brasil 2050 series to 'SEPLAN'. The product counts for Seplan, not for its subsecretariat.",
+  "traceToRule": false,
+  "changesCountryItem": "none (Seplan carries I2)"
+ },
+ {
+  "body": "BRA I2",
+  "split": "Low confidence (A and B); both 1",
+  "ruling": "1 stands, carried by Seplan",
+  "reason": "gov.br/planejamento Brasil 2050 page: 'a Secretaria Nacional de Planejamento está liderando a construção' of the Estratégia Brasil 2050. The MPO 2025 management report labels 'Megatendências mundiais e incertezas em 2050' and 'Cenários: o Brasil que queremos em 2050' as SEPLAN. The megatrends report is dated 'Brasília, março de 2025' with a horizon of 2050.",
+  "traceToRule": false,
+  "changesCountryItem": "none"
+ },
+ {
+  "body": "BRA.saedes",
+  "split": "A meets unit; B did not list it (listed only the parent SAE)",
+  "ruling": "Meets unit (A); survived did_not_survive (overturns A's no_change)",
+  "reason": "Decree 11.285/2022 art. 23 III: 'realizar estudos e análises de cenários que contribuam para ... a formulação do planejamento nacional de longo prazo', across economic and social development. Decree 11.365 of 1 Jan 2023, issued on the day the presidency changed, revoked it. It ended at a change, which I3 codes did_not_survive. The same-day MPO successor (art. 16 II) keeps closedNoSuccessor at 0.",
+  "traceToRule": false,
+  "changesCountryItem": "none"
+ },
+ {
+  "body": "BRA.nae",
+  "split": "A rejects (one entry with SAE 2008-2015, mandate not read); B meets unit",
+  "ruling": "Meets unit (B); A's entry is split into BRA.nae and BRA.sae2008",
+  "reason": "Decree 6.217 of 4 Oct 2007: 'elaboração de cenários exploratórios ... de longo prazo' and 'alternativas de desenvolvimento de longo prazo'. Long-term scenarios and alternative futures are listed terms. Decree 6.517/2008 for the SAE names no listed term, so SAE fails. NAE ended in 2008, outside the I4 window.",
+  "traceToRule": false,
+  "changesCountryItem": "none"
+ },
+ {
+  "body": "BRA.csf / BRA I4",
+  "split": "Low confidence (A): A rejects; B did not list it",
+  "ruling": "Fails condition 3; I4 0 stands",
+  "reason": "Senate Resolution 14 of 8 May 2013, art. 104-D: 'promover discussões sobre grandes temas e o futuro do País'. 'O futuro do País' (the future of the country) is not one of the listed terms or a direct equivalent of 'futures studies'. The codebook does not say whether a bare 'future' counts as a direct equivalent of 'futures'. Read strictly, it does not.",
+  "traceToRule": true,
+  "changesCountryItem": "none (the other reading would make BRA I4 1, score 80)"
+ },
+ {
+  "body": "BRA.cedes",
+  "split": "Low confidence (A); A rejects",
+  "ruling": "Fails condition 3",
+  "reason": "Chamber Resolution 26 of 26 Mar 2013, art. 2 II, gives general feasibility and impact analysis of technologies, plans and policies. Under the impact-assessment rule it names neither emerging technologies nor the long-term future.",
+  "traceToRule": false,
+  "changesCountryItem": "none"
+ },
+ {
+  "body": "CHE.stf",
+  "split": "Code split on survived: A no_change, B 1",
+  "ruling": "no_change (A)",
+  "reason": "No record dates the section or its own foresight mandate (bk.admin.ch section page, read). B's 2006 record shows a predecessor planning section, and dates stay with the body. I3 has no reason code for a body whose date cannot be seen. Section 4 (dates read from the source) gives 0, recorded here as no_change.",
+  "traceToRule": true,
+  "changesCountryItem": "none (BK carries I3)"
+ },
+ {
+  "body": "CHE.pstab",
+  "split": "A rejects (no founding act or mandate found); B meets unit",
+  "ruling": "Meets unit (B), low confidence",
+  "reason": "The Federal Council's 2010 business report (BK) records the constitutive meeting of the newly formed Perspektivstab on 12 Nov 2009 under the goal 'Früherkennung wichtiger Entwicklungen und Trends', with four alternative future scenarios. The BK page credits it with the 2007, 2011 and 2014 futures reports. B's Federal Council decision of 18 Sep 2009 was not found in the 2009 report. It is an interdepartmental staff, and section 1 does not say outright that such a staff is an organisational unit. It was operating after the 2010 council-majority change, so survived is 1. Its end is undated, and the BK carries the mandate in the same branch.",
+  "traceToRule": true,
+  "changesCountryItem": "none"
+ },
+ {
+  "body": "CHE I1",
+  "split": "Low confidence (A): whether 'Lage- und Umfeldanalyse' names a foresight function",
+  "ruling": "1 stands",
+  "reason": "bk.admin.ch: the analysis aims to identify and anticipate developments of the coming 10 to 15 years, using future scenarios. The 2026 report calls this work strategische Vorausschau. Read as a direct equivalent of horizon scanning. Section 1 condition 3 leaves 'direct equivalents' to the coder.",
+  "traceToRule": true,
+  "changesCountryItem": "none"
+ },
+ {
+  "body": "CHE I4",
+  "split": "Low confidence (B)",
+  "ruling": "0 stands",
+  "reason": "No dated end record for the Perspektivstab exists. The BK has held the same mandate in the executive branch since 2015, so the closure has a successor.",
+  "traceToRule": false,
+  "changesCountryItem": "none"
+ },
+ {
+  "body": "EST.edfunit",
+  "split": "B meets unit (Development Fund Act s. 40 foresight unit); A did not list it",
+  "ruling": "Fails: not shown as a separately mandated unit, low confidence",
+  "reason": "Riigi Teataja builds its text in the browser. I rendered the 2011 amendment (RT I, 30.12.2011, 2) and the Foresight Act, but could not reach the Development Fund Act text with s. 40. The foresight duty I read (s. 2(2)2, 'korraldab arenguseiret') belongs to the Fund. No item depends on it: the Fund's foresight duties ended on 29 Jun 2016.",
+  "traceToRule": false,
+  "changesCountryItem": "none"
+ },
+ {
+  "body": "EST.edf (end date)",
+  "split": "Both meet unit with the same codes; end date A 2016-06-29, B 2017-07-01",
+  "ruling": "2016-06-29 (A)",
+  "reason": "Foresight Act s. 23(1) puts the Act in force on the day after publication (RT I, 28.06.2016). Under s. 8(1)-(3) the Fund then stops all its duties except investment (s. 2(2)1). Only the repeal of the Fund Act (s. 22) waits until 1 Jul 2017. The foresight closure is outside the I4 window, so the branch rule does not apply.",
+  "traceToRule": false,
+  "changesCountryItem": "none"
+ },
+ {
+  "body": "GBR.ffet",
+  "split": "Code split: A record 1, product 1, survived 1; B 0, 0, no_change",
+  "ruling": "record 0 (B), product 0 (B), survived 1 (A)",
+  "reason": "The 2011 review dates the Foresight Programme to 1994. That is a programme, not a record dating this team. The products are issued 'From: Government Office for Science' and count for the parent. The team existed by 15 May 2023, when the Horizon Scanning Programme team page pointed to it, before the July 2024 change of prime minister. The GO-Science futures blog post of 4 Sep 2025 shows it operating more than six months after that change.",
+  "traceToRule": false,
+  "changesCountryItem": "none (GBR I1 carried by POST, I2 and I3 by GO-Science)"
+ },
+ {
+  "body": "GBR.post",
+  "split": "Code split on record: A 0, B 1",
+  "ruling": "1 (B)",
+  "reason": "Hansard, HC Deb 21 Nov 2000: 'Resolved, That this House approves the First Report from the Information Committee on the Future of the Parliamentary Office of Science and Technology', on the recommendation that POST become permanent from April 2001. I1 accepts a resolution of a House.",
+  "traceToRule": false,
+  "changesCountryItem": "GBR I1 value unchanged; its carrier moves from A's Foresight programme to POST"
+ },
+ {
+  "body": "GBR.hsc",
+  "split": "Code split: A record 0, survived did_not_survive; B record 1, survived 1",
+  "ruling": "record 1, survived 1 (B)",
+  "reason": "The Science and Innovation Investment Framework annual report 2006, para 7.22: 'Launched in March 2005 ... OSI's Horizon Scanning Centre'. Blair handed over to Brown in June 2007, the centre kept operating, and it merged in March 2014, more than two years after any change. Its stated look-ahead of 'at least five to ten years' is at the edge of condition 3. Both coders accepted the unit, so it stands.",
+  "traceToRule": false,
+  "changesCountryItem": "none"
+ },
+ {
+  "body": "GBR.hss",
+  "split": "A meets unit (one entry with the HSC); B rejects (proposal not shown to exist)",
+  "ruling": "Meets unit (A); A's entry is split into GBR.hss and GBR.hsc",
+  "reason": "The archived gov.uk group page (Wayback 2019-12-08) records that the Cabinet Office's Horizon Scanning Secretariat merged in March 2014. That establishes a standing cross-government horizon-scanning secretariat. No record dates its creation. It ended before the I4 window with a successor.",
+  "traceToRule": false,
+  "changesCountryItem": "none"
+ },
+ {
+  "body": "GBR.hsp",
+  "split": "A meets unit; B did not list it",
+  "ruling": "Meets unit (A)",
+  "reason": "Archived gov.uk page: the team 'coordinates strategic horizon scanning work across departments', formed March 2014. The current page says 'This team no longer exists. Go to Futures, Foresight and Emerging Technologies', which names a same-branch successor, so closedNoSuccessor is 0.",
+  "traceToRule": false,
+  "changesCountryItem": "none"
+ },
+ {
+  "body": "GBR.jdac",
+  "split": "B meets unit; A did not list it",
+  "ruling": "Meets unit (B), low confidence",
+  "reason": "The gov.uk futures page states that GO-Science works with the Cabinet Office 'through the Foresight team in the Joint Data and Analysis Centre', which works across government. No dated record or own product was found.",
+  "traceToRule": false,
+  "changesCountryItem": "none"
+ },
+ {
+  "body": "GBR I1",
+  "split": "Low confidence (A)",
+  "ruling": "1 stands, carried by POST",
+  "reason": "See GBR.post and GBR.ffet.",
+  "traceToRule": false,
+  "changesCountryItem": "none"
+ },
+ {
+  "body": "GBR I4",
+  "split": "Low confidence (B)",
+  "ruling": "0 stands",
+  "reason": "The Horizon Scanning Centre and Secretariat merged in March 2014, before the window. The Horizon Scanning Programme team closed with FFET named as successor.",
+  "traceToRule": false,
+  "changesCountryItem": "none"
+ },
+ {
+  "body": "NGA.ospre",
+  "split": "A rejects (early warning not a listed term; security sector); B meets unit",
+  "ruling": "Meets unit (B), low confidence",
+  "reason": "osprenigeria.gov.ng/services lists 'Short, medium, and long-term threat horizon scanning', and the about page lists 'over-the-horizon trends' across eleven domains (health, food, energy, economy, governance, environment, crime, security). A missed the listed term. The founding release calls it 'the human security sector cutting across the environment, public health and governance'. Section 1 condition 4 names defence, not human security, so whether a multi-domain human-security mandate is one sector is open.",
+  "traceToRule": true,
+  "changesCountryItem": "NGA I1 0 becomes 1 and I3 0 becomes 1 (B's codes); score 67 (B)"
+ },
+ {
+  "body": "NGA I1",
+  "split": "A 0; B 1",
+  "ruling": "1 (B)",
+  "reason": "statehouse.gov.ng release of 17 Jun 2022: 'The order signed on June 10, 2022 establishes the National Early Warning Centre' (Executive Order 12). It replaces B's source, a World Bank project site on a gov.ng subdomain.",
+  "traceToRule": false,
+  "changesCountryItem": "NGA I1 1 (B)"
+ },
+ {
+  "body": "NGA I3",
+  "split": "A 0 (no GFF); B 1",
+  "ruling": "1 (B)",
+  "reason": "Buhari, who created OSPRE, was succeeded by Tinubu on 29 May 2023. radionigeriakaduna.gov.ng, the federal broadcaster, dated 13 Feb 2026, reports the AGFC foresight programme 'implemented by' OSPRE, so OSPRE was operating more than six months after the change. That page is on a gov.ng domain but is a news item. Section 2 defines an official URL by domain, and I1 excludes news, so whether such a page carries I3 is open.",
+  "traceToRule": true,
+  "changesCountryItem": "NGA I3 1 (B)"
+ },
+ {
+  "body": "NGA I2",
+  "split": "Low confidence (A and B); both 0",
+  "ruling": "0 stands",
+  "reason": "The OSPRE resource library lists futures-titled reports ('The Age of Disruption', 'The Future of West Africa & the Sahel', 'Flashpoints: Global Geopolitics Outlook 2026'). The listing shows no dates, and downloads need email verification, which I did not enter. Date and horizon cannot be read, so the item is 0. The reviewer should obtain the files before promotion.",
+  "traceToRule": false,
+  "changesCountryItem": "none"
+ },
+ {
+  "body": "NIC.spingc",
+  "split": "B meets unit (low); A did not list it",
+  "ruling": "Fails condition 3 (A's country reading)",
+  "reason": "Plan Nacional 2022-2026 (mem.gob.ni, p. 164-165): SPING 'fortalecerá los procesos de planificación estratégica-prospectiva'. That clause attaches to the system, which B itself rejects as not a body. The Council's own task list (analysis, policy proposals, budget estimates, project portfolio, monitoring, territorial planning) names no listed term. Section 1 judges each body on its own mandate. The text also says the Council 'contará con' (will have), and no record shows it was constituted.",
+  "traceToRule": false,
+  "changesCountryItem": "NIC I1: B 1 becomes 0 (A); score 0 (A)"
+ },
+ {
+  "body": "NIC I1",
+  "split": "A 0 (low); B 1 (low)",
+  "ruling": "0 (A)",
+  "reason": "See NIC.spingc. A's low-confidence note (no gob.ni page rendered) is answered by reading the plan PDF on mem.gob.ni.",
+  "traceToRule": false,
+  "changesCountryItem": "NIC I1 0 (A)"
+ },
+ {
+  "body": "NIC I3",
+  "split": "A 0 with no reason; B 0 no_change (low, co-presidency)",
+  "ruling": "0 with no reason (A)",
+  "reason": "No operating GFF exists, so I3 is 0 with no reason. The co-presidency question does not arise.",
+  "traceToRule": false,
+  "changesCountryItem": "NIC I3 reason: B no_change becomes null (A)"
+ },
+ {
+  "body": "NIC I2",
+  "split": "Low confidence (B); both 0",
+  "ruling": "0 stands",
+  "reason": "No operating GFF.",
+  "traceToRule": false,
+  "changesCountryItem": "none"
+ },
+ {
+  "body": "SGP.sg",
+  "split": "A rejects (no listed term); B meets unit (emerging issues, medium to long term)",
+  "ruling": "Fails condition 3 (A)",
+  "reason": "strategygroup.gov.sg: set up July 2015 'to drive whole-of-government strategic planning by identifying key priorities and emerging issues over the medium to long-term'. No listed term names a function, and housing CSF does not make it a GFF. Section 1 condition 3 lists 'emerging change' among the objects of exploration but not among the terms that name a function, which is an ambiguity.",
+  "traceToRule": true,
+  "changesCountryItem": "none"
+ },
+ {
+  "body": "SGP.fut",
+  "split": "B meets unit; A did not list it",
+  "ruling": "Meets unit (B), low confidence",
+  "reason": "csf.gov.sg names a Director of Futures in PMO-SG: 'The Futures team identifies longer-term trends and emerging issues ... and builds capabilities for futures thinking'. 'Futures' is a listed term and the remit is the Public Service. No dated record exists.",
+  "traceToRule": false,
+  "changesCountryItem": "none"
+ },
+ {
+  "body": "SGP.spo",
+  "split": "Matching: A one body (Scenario Planning Office renamed Strategic Policy Office); B two bodies, Scenario Planning Office survived no_change",
+  "ruling": "One body; survived 1",
+  "reason": "csf.gov.sg: set up 1995, 'renamed the Strategic Policy Office (SPO) in 2003'. A rename is the same body under a successor name (section 7). It operated under Goh and, after Lee took office in Aug 2004, it housed CSF from 2009. Survived is 1.",
+  "traceToRule": false,
+  "changesCountryItem": "none"
+ },
+ {
+  "body": "SGP I4",
+  "split": "Low confidence (A)",
+  "ruling": "0 stands",
+  "reason": "SPO's end is not dated. It ended no later than 1 Jul 2015, when CSF moved to the Strategy Group, which is before the window. CSF is a same-branch successor.",
+  "traceToRule": false,
+  "changesCountryItem": "none"
+ }
+]

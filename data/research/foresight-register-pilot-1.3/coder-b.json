@@ -1,0 +1,2023 @@
+{
+ "coder": "b",
+ "codebookVersion": "1.3",
+ "referenceDate": "2026-10-02",
+ "models": [
+  "GPT-5",
+  "gpt-5"
+ ],
+ "countries": [
+  {
+   "iso3": "ARE",
+   "functions": [
+    {
+     "name": "وزارة شؤون مجلس الوزراء (Ministry of Cabinet Affairs)",
+     "level": "executive",
+     "legalForm": "Federal ministry; the Prime Minister's Office and General Secretariat of the Cabinet sit under it.",
+     "status": "operating",
+     "established": {
+      "act": "Federal Decree No. 14 of 2016 (foresight portfolio/name); ministry originally established in 2006",
+      "date": "2016"
+     },
+     "ended": null,
+     "meetsUnit": true,
+     "unitNote": "Meets conditions 1-4. The ministry's own official mandate names employing future-shaping tools, forecasting trends and implications, alternatives, capacity building, and long-term planning across all sectors. Arabic term: استشراف المستقبل (future foresight). Earliest located official record of this foresight mandate is the 2016 future portfolio; the 2006 date is the ministry's creation, not the foresight start.",
+     "body": {
+      "record": 1,
+      "product": 0,
+      "survived": "no_change",
+      "closedNoSuccessor": 0
+     }
+    },
+    {
+     "name": "منصة الإمارات لاستشراف المستقبل (UAE Future Foresight Platform)",
+     "level": "executive",
+     "legalForm": "Government electronic knowledge platform launched by the UAE Government.",
+     "status": "operating",
+     "established": {
+      "act": "Official UAE Government platform page",
+      "date": "2017"
+     },
+     "ended": null,
+     "meetsUnit": false,
+     "unitNote": "Fails section 1 organisational-body requirement: it is an electronic reference/resource platform, not an organisational ministry, agency, directorate, office, committee, or unit."
+    },
+    {
+     "name": "وزارة المالية (Ministry of Finance)",
+     "level": "executive",
+     "legalForm": "Federal ministry.",
+     "status": "operating",
+     "established": null,
+     "ended": null,
+     "meetsUnit": false,
+     "unitNote": "Fails condition 4: its 2023-2026 plan names conducting future foresight only within the finance ministry's institutional/fiscal remit, not across policy domains."
+    },
+    {
+     "name": "المركز الاتحادي للتنافسية والإحصاء (Federal Competitiveness and Statistics Centre)",
+     "level": "executive",
+     "legalForm": "Federal government centre.",
+     "status": "operating",
+     "established": null,
+     "ended": null,
+     "meetsUnit": false,
+     "unitNote": "Fails condition 3 and the express statistics-office exclusion: official functions concern statistics, competitiveness, data and SDG coordination, not a standing alternative-futures mandate."
+    },
+    {
+     "name": "وزارة الصناعة والتكنولوجيا المتقدمة (Ministry of Industry and Advanced Technology)",
+     "level": "executive",
+     "legalForm": "Federal ministry.",
+     "status": "operating",
+     "established": null,
+     "ended": null,
+     "meetsUnit": false,
+     "unitNote": "Fails condition 4: advanced-technology and industrial-policy work is sector-confined; no cross-government foresight mandate was located."
+    },
+    {
+     "name": "المجلس الوطني الاتحادي (Federal National Council)",
+     "level": "legislature",
+     "legalForm": "Federal legislature.",
+     "status": "operating",
+     "established": null,
+     "ended": null,
+     "meetsUnit": false,
+     "unitNote": "Fails condition 3: searches of the Council and its committees found no standing foresight or technology-assessment office with a qualifying mandate."
+    },
+    {
+     "name": "مؤسسة دبي للمستقبل (Dubai Future Foundation)",
+     "level": "statutory_body",
+     "legalForm": "Dubai emirate foundation.",
+     "status": "operating",
+     "established": null,
+     "ended": null,
+     "meetsUnit": false,
+     "unitNote": "Fails condition 1 for this national register: it is a sub-national Dubai body, regardless of its extensive foresight work."
+    }
+   ],
+   "items": {
+    "I1": {
+     "value": 1,
+     "function": "Ministry of Cabinet Affairs",
+     "confidence": "high",
+     "note": "Federal Decree No. 14 of 2016 officially renamed the ministry to include 'the Future'; the official 29 November 2016 notice supplies the date. The current official mandate independently confirms the cross-sector foresight function.",
+     "sources": [
+      {
+       "url": "https://uaecabinet.ae/en/news/khalifa-issues-several-decrees",
+       "archived": null,
+       "archivedNote": "save_failed",
+       "retrievedAt": "2026-10-16",
+       "quote": "Federal Decree No. 14 for 2016 ... the name ... will ... be replaced by the Ministry of Cabinet Affairs and the Future"
+      }
+     ]
+    },
+    "I2": {
+     "value": 0,
+     "function": null,
+     "product": null,
+     "confidence": "high",
+     "note": "Searched ministry/UAE Cabinet publications for 2023-10-02 through 2026-10-02. The 2024 Future Possibilities Index credits Horizon Group and Newsweek Vantage as creators and thanks the UAE Government only for initiating/supporting it, so section 2 authorship excludes it; strategies, visions, news and toolkits were also excluded.",
+     "sources": []
+    },
+    "I3": {
+     "value": 0,
+     "reason": "no_change",
+     "change": {
+      "from": "Mohammed bin Rashid Al Maktoum",
+      "to": "Mohammed bin Rashid Al Maktoum",
+      "date": null
+     },
+     "confidence": "high",
+     "note": "The effective chief executive for ARE is the prime minister. The ministry's foresight mandate dates from 2016, and the same prime minister remained in office through 2026-10-02.",
+     "sources": []
+    },
+    "I4": {
+     "value": 0,
+     "confidence": "high",
+     "note": "No qualifying federal GFF was found to have ended in the 2016-10-02 to 2026-10-02 window without a same-branch successor.",
+     "sources": []
+    }
+   },
+   "score": 33,
+   "searched": [
+    "Centre of government: site:uaecabinet.ae and site:u.ae future foresight, strategic foresight, futures, horizon scanning, megatrends, scenarios, long term; Arabic استشراف المستقبل، سيناريوهات، المستقبل، المدى الطويل",
+    "Planning/cabinet: Ministry of Cabinet Affairs and Prime Minister's Office official pages in English and Arabic",
+    "Science/technology: Ministry of Industry and Advanced Technology official pages; advanced technology and future searches",
+    "Legislature: Federal National Council official domain searches for foresight, future, horizon scanning and technology assessment",
+    "Statistics/other candidates: Federal Competitiveness and Statistics Centre, Ministry of Finance, UAE Future Foresight Platform and Dubai Future Foundation"
+   ],
+   "rejected": [],
+   "batch": "B1",
+   "model": "GPT-5"
+  },
+  {
+   "iso3": "BRA",
+   "functions": [
+    {
+     "name": "Secretaria Nacional de Planejamento (National Planning Secretariat, Seplan)",
+     "level": "executive",
+     "legalForm": "Secretariat within the Ministry of Planning and Budget (MPO).",
+     "status": "operating",
+     "established": {
+      "act": "Decree No. 11,398/2023",
+      "date": "2023-01-21"
+     },
+     "ended": null,
+     "meetsUnit": true,
+     "unitNote": "Meets conditions 1-4. Its own regulation mandates coordinating long-term government planning and 'estudos prospectivos' (prospective/foresight studies), and its remit is transversal and multisectoral. It is distinct from its parent MPO.",
+     "body": {
+      "record": 1,
+      "product": 1,
+      "survived": "no_change",
+      "closedNoSuccessor": 0
+     }
+    },
+    {
+     "name": "Subsecretaria de Planejamento de Longo Prazo (Subsecretariat for Long-Term Planning)",
+     "level": "executive",
+     "legalForm": "Subsecretariat within Seplan/MPO; initially a directorate, renamed a subsecretariat.",
+     "status": "operating",
+     "established": {
+      "act": "Decree No. 11,869/2023 (subsecretariat name; predecessor directorate in Decree No. 11,353/2023)",
+      "date": "2023-12-29"
+     },
+     "ended": null,
+     "meetsUnit": true,
+     "unitNote": "Meets conditions 1-4 on its own mandate: Article 16 requires it to prepare 'estudos prospectivos e análises de cenários' (foresight studies and scenario analyses) for national long-term planning across sectors.",
+     "body": {
+      "record": 1,
+      "product": 0,
+      "survived": "no_change",
+      "closedNoSuccessor": 0
+     }
+    },
+    {
+     "name": "Ministério do Planejamento e Orçamento (Ministry of Planning and Budget, MPO)",
+     "level": "executive",
+     "legalForm": "Federal ministry.",
+     "status": "operating",
+     "established": {
+      "act": "Decree No. 11,353/2023",
+      "date": "2023-01-01"
+     },
+     "ended": null,
+     "meetsUnit": false,
+     "unitNote": "Fails condition 3 on the parent's own mandate. Its long-term planning and policy-support competence does not itself name foresight, prospective studies, alternative futures or scenarios; Seplan and its subsecretariat are judged separately."
+    },
+    {
+     "name": "Núcleo de Assuntos Estratégicos da Presidência da República (Strategic Affairs Unit of the Presidency, NAE)",
+     "level": "executive",
+     "legalForm": "Unit of the Presidency of the Republic.",
+     "status": "closed",
+     "established": {
+      "act": "Decree No. 6,217/2007 (located official organisational record)",
+      "date": "2007-10-04"
+     },
+     "ended": {
+      "act": "Decree No. 6,517/2008 reorganising strategic affairs as SAE",
+      "date": "2008-07-24",
+      "successor": null
+     },
+     "meetsUnit": true,
+     "unitNote": "Met conditions 1-4. Its own regulation expressly required discussion of long-term development alternatives and preparation of exploratory long-term scenarios ('cenários exploratórios'). The 2008 SAE regulation located for the nominal successor did not preserve that named foresight/scenario mandate, so it is not an I4 successor under the codebook.",
+     "body": {
+      "record": 1,
+      "product": 0,
+      "survived": "no_change",
+      "closedNoSuccessor": 0
+     }
+    },
+    {
+     "name": "Secretaria de Assuntos Estratégicos da Presidência da República (Secretariat of Strategic Affairs, SAE; 2008-2015)",
+     "level": "executive",
+     "legalForm": "Secretariat/ministry-level organ of the Presidency.",
+     "status": "closed",
+     "established": {
+      "act": "Decree No. 6,517/2008",
+      "date": "2008-07-24"
+     },
+     "ended": {
+      "act": "Provisional Measure No. 696/2015 and subsequent reorganisation",
+      "date": "2015",
+      "successor": null
+     },
+     "meetsUnit": false,
+     "unitNote": "Fails condition 3 under version 1.3. Its own regulation names long-term policies, research and planning but not prospective/foresight, alternative futures or long-term scenarios; the NAE mandate is not inherited."
+    },
+    {
+     "name": "Secretaria Especial de Assuntos Estratégicos da Presidência da República (Special Secretariat for Strategic Affairs; 2017-2022)",
+     "level": "executive",
+     "legalForm": "Special secretariat of the Presidency.",
+     "status": "closed",
+     "established": {
+      "act": "Decree No. 9,038/2017",
+      "date": "2017-04-26"
+     },
+     "ended": {
+      "act": "2023 reorganisation of the Presidency",
+      "date": "2023-01-01",
+      "successor": "Secretaria Nacional de Planejamento"
+     },
+     "meetsUnit": false,
+     "unitNote": "Fails condition 3: the regulation refers to long-term policies, strategic options and future possibilities, but does not name foresight/prospectiva, alternative futures or long-term scenarios as a function. Seplan is listed as a later same-branch body, but this rejected body is not itself coded under I4."
+    },
+    {
+     "name": "Instituto de Pesquisa Econômica Aplicada (Institute for Applied Economic Research, Ipea)",
+     "level": "statutory_body",
+     "legalForm": "Federal public foundation linked to MPO.",
+     "status": "operating",
+     "established": null,
+     "ended": null,
+     "meetsUnit": false,
+     "unitNote": "Fails condition 3: official mission and statutory searches located research and policy-support functions, and some prospective projects, but no standing organisational mandate naming foresight/prospectiva or alternative long-term futures. Individual strategic-plan objectives do not establish a standing GFF mandate."
+    },
+    {
+     "name": "Centro de Gestão e Estudos Estratégicos (Center for Strategic Studies and Management, CGEE)",
+     "level": "statutory_body",
+     "legalForm": "Private non-profit social organisation under a management contract with the science ministry.",
+     "status": "operating",
+     "established": null,
+     "ended": null,
+     "meetsUnit": false,
+     "unitNote": "Fails condition 1: it is a private-law social organisation, not a public-law body created and headed under all three state-control tests, despite federal funding and extensive foresight work."
+    },
+    {
+     "name": "Congresso Nacional science and technology committees (National Congress committees)",
+     "level": "legislature",
+     "legalForm": "Standing committees of the Chamber of Deputies and Federal Senate.",
+     "status": "operating",
+     "established": null,
+     "ended": null,
+     "meetsUnit": false,
+     "unitNote": "Fails condition 3: searches found legislative scrutiny of science and technology but no parliamentary technology-assessment office or committee mandate to assess emerging technologies or long-term alternative futures across domains."
+    }
+   ],
+   "items": {
+    "I1": {
+     "value": 1,
+     "function": "Secretaria Nacional de Planejamento",
+     "confidence": "high",
+     "note": "The official Seplan page was published in January 2023 and states that Decree 11,398/2023 assigns Seplan long-term planning and prospective studies.",
+     "sources": [
+      {
+       "url": "https://www.gov.br/planejamento/pt-br/composicao/orgaos/secretaria-nacional-de-planejamento",
+       "archived": "https://web.archive.org/web/20261016120107/https://www.gov.br/planejamento/pt-br/composicao/orgaos/secretaria-nacional-de-planejamento",
+       "retrievedAt": "2026-10-16",
+       "quote": "De acordo com o decreto 11.398/2023, a Secretaria Nacional de Planejamento tem as seguintes competências"
+      }
+     ]
+    },
+    "I2": {
+     "value": 1,
+     "function": "Secretaria Nacional de Planejamento",
+     "product": {
+      "title": "Cenários: o Brasil que queremos em 2050",
+      "date": "2025-09-30"
+     },
+     "confidence": "low",
+     "note": "The official product page supplies the 30 September 2025 creation date and the report develops multiple scenarios to 2050. The report imprint names MPO, lists Seplan leadership/technical staff and a contractor; an official MPO 2025 management report labels the publication's institutional source 'SEPLAN'. Coded 1 under the institutional source label, but low because the product cover does not separately print 'Seplan' as author/issuer.",
+     "sources": [
+      {
+       "url": "https://www.gov.br/planejamento/pt-br/assuntos/planejamento/estrategia-2050-conteudo/Arquivos/cenarios.pdf",
+       "archived": "https://web.archive.org/web/20261016120101/https://www.gov.br/planejamento/pt-br/assuntos/planejamento/estrategia-2050-conteudo/Arquivos/cenarios.pdf",
+       "retrievedAt": "2026-10-16",
+       "quote": "Cenários: o Brasil que queremos em 2050"
+      },
+      {
+       "url": "https://www.gov.br/planejamento/pt-br/acesso-a-informacao/transparencia-e-prestacao-de-contas/documentos/rgi_2025-1.pdf",
+       "archived": "https://web.archive.org/web/20261016120101/https://www.gov.br/planejamento/pt-br/acesso-a-informacao/transparencia-e-prestacao-de-contas/documentos/rgi_2025-1.pdf",
+       "retrievedAt": "2026-10-16",
+       "quote": "Cenários: o Brasil que queremos em 2050 ... SEPLAN"
+      }
+     ]
+    },
+    "I3": {
+     "value": 0,
+     "reason": "no_change",
+     "change": {
+      "from": "Luiz Inácio Lula da Silva",
+      "to": "Luiz Inácio Lula da Silva",
+      "date": null
+     },
+     "confidence": "high",
+     "note": "Seplan and its long-term-planning subunit acquired their qualifying mandates in 2023 under President Lula; no change of president occurred by 2026-10-02. Closed NAE does not affect the country maximum for I3.",
+     "sources": []
+    },
+    "I4": {
+     "value": 0,
+     "confidence": "high",
+     "note": "The qualifying NAE ended in 2008, outside the ten-year window. No qualifying GFF was found to end without successor between 2016-10-02 and 2026-10-02.",
+     "sources": []
+    }
+   },
+   "score": 67,
+   "searched": [
+    "Centre of government: site:planalto.gov.br and site:gov.br Presidência prospectiva, estudos prospectivos, cenários, futuros, longo prazo, assuntos estratégicos",
+    "Planning: Ministry of Planning and Budget, Seplan and long-term-planning subunit regulations and publications on gov.br and Planalto",
+    "Science/technology: Ministry of Science, Technology and Innovation, CGEE and Ipea official domains for prospectiva, avaliação tecnológica and cenários",
+    "Legislature: camara.leg.br and senado.leg.br for prospectiva, futuro, cenários, horizonte and avaliação tecnológica",
+    "Closed lineage: NAE, SAE 2008-2015 and Special SAE 2017-2022 official decrees"
+   ],
+   "rejected": [],
+   "batch": "B1",
+   "model": "GPT-5"
+  },
+  {
+   "iso3": "CHE",
+   "functions": [
+    {
+     "name": "Schweizerische Bundeskanzlei (Swiss Federal Chancellery)",
+     "level": "executive",
+     "legalForm": "Permanent staff office of the collegial Federal Council.",
+     "status": "operating",
+     "established": {
+      "act": "Act of Mediation, Article 38",
+      "date": "1803-02-19"
+     },
+     "ended": null,
+     "meetsUnit": true,
+     "unitNote": "Meets conditions 1-4 on its own official page and legal role. It must conduct continuous long-term situation/context analysis, identifying and anticipating developments, opportunities and challenges 10-15 years ahead across federal policy. German terms include langfristige Lage- und Umfeldanalyse and strategische Vorausschau.",
+     "body": {
+      "record": 1,
+      "product": 1,
+      "survived": "1",
+      "closedNoSuccessor": 0
+     }
+    },
+    {
+     "name": "Sektion Strategische Führungsunterstützung (Strategic Management Support Section)",
+     "level": "executive",
+     "legalForm": "Section within the Federal Chancellery.",
+     "status": "operating",
+     "established": {
+      "act": "No creation instrument located; official federal publication shows the predecessor planning/strategy section operating",
+      "date": "2006"
+     },
+     "ended": null,
+     "meetsUnit": true,
+     "unitNote": "Meets conditions 1-4: its own official page assigns the cross-departmental situation/context analysis and strategic planning support. Body record is 0 because the located official record demonstrates operation in 2006 but does not state when this section was created or formally received the mandate. Parent products are not credited to the section.",
+     "body": {
+      "record": 0,
+      "product": 0,
+      "survived": "1",
+      "closedNoSuccessor": 0
+     }
+    },
+    {
+     "name": "Perspektivstab der Bundesverwaltung (Federal Administration Prospective Staff)",
+     "level": "executive",
+     "legalForm": "Cross-departmental staff led by the Federal Chancellery.",
+     "status": "closed",
+     "established": {
+      "act": "Official Federal Chancellery records; re-mandated by Federal Council decision of 18 September 2009",
+      "date": "2009-09-18"
+     },
+     "ended": {
+      "act": "No dated closure record located; current Chancellery page refers to it only for historical reports",
+      "date": null,
+      "successor": "Sektion Strategische Führungsunterstützung"
+     },
+     "meetsUnit": true,
+     "unitNote": "Met conditions 1-4: the Federal Council's re-mandate made preparation of the cross-policy situation/context analysis its core task. Current official pages describe its role only for past reports and assign continuous analysis to the Chancellery/section. Closure date remains uncertain and drives low confidence on I4, but the operating same-branch section carries the mandate.",
+     "body": {
+      "record": 1,
+      "product": 0,
+      "survived": "1",
+      "closedNoSuccessor": 0
+     }
+    },
+    {
+     "name": "TA-SWISS, Stiftung für Technologiefolgen-Abschätzung (TA-SWISS Foundation for Technology Assessment)",
+     "level": "statutory_body",
+     "legalForm": "Foundation/centre within the Swiss Academies of Arts and Sciences.",
+     "status": "operating",
+     "established": null,
+     "ended": null,
+     "meetsUnit": false,
+     "unitNote": "Fails condition 1's public-law three-part test. It has a statutory federal technology-assessment task, but the examined official governance material places the foundation within the Swiss Academies and did not show a ministry, centre of government or legislature appointing its head and supervising it as a public-law body."
+    },
+    {
+     "name": "Staatssekretariat für Bildung, Forschung und Innovation (State Secretariat for Education, Research and Innovation, SERI)",
+     "level": "executive",
+     "legalForm": "Federal state secretariat.",
+     "status": "operating",
+     "established": null,
+     "ended": null,
+     "meetsUnit": false,
+     "unitNote": "Fails conditions 3-4: no own cross-policy alternative-futures mandate was found; its remit is education, research and innovation policy."
+    },
+    {
+     "name": "Bundesversammlung (Federal Assembly) and Parliamentary Services",
+     "level": "legislature",
+     "legalForm": "National legislature and its services.",
+     "status": "operating",
+     "established": null,
+     "ended": null,
+     "meetsUnit": false,
+     "unitNote": "Fails condition 3 as a parent: no legislature-wide foresight or emerging-technology assessment mandate was located, and TA-SWISS's mandate is not inherited by Parliament."
+    }
+   ],
+   "items": {
+    "I1": {
+     "value": 1,
+     "function": "Swiss Federal Chancellery",
+     "confidence": "high",
+     "note": "The Chancellery's official history dates its creation as a permanent federal body to the Act of Mediation of 19 February 1803.",
+     "sources": [
+      {
+       "url": "https://www.bk.admin.ch/en/history-of-the-federal-chancellery",
+       "archived": "https://web.archive.org/web/20261016120105/https://www.bk.admin.ch/en/history-of-the-federal-chancellery",
+       "retrievedAt": "2026-10-16",
+       "quote": "The Federal Chancellery has existed since 1803"
+      }
+     ]
+    },
+    "I2": {
+     "value": 1,
+     "function": "Swiss Federal Chancellery",
+     "product": {
+      "title": "Perspektiven Schweiz 2040: Zukunftsszenarien und Handlungsfelder",
+      "date": "2026-06-19"
+     },
+     "confidence": "high",
+     "note": "The official release states that the Chancellery prepared the report; it contains three alternative scenarios for 2040 across social, technological, economic, ecological and political conditions.",
+     "sources": [
+      {
+       "url": "https://www.bk.admin.ch/de/newnsb/BT5GtKA_-2zhrcGkzYm2l",
+       "archived": "https://web.archive.org/web/20261016120105/https://www.bk.admin.ch/de/newnsb/BT5GtKA_-2zhrcGkzYm2l",
+       "retrievedAt": "2026-10-16",
+       "quote": "Der Bericht wurde von der Bundeskanzlei unter Einbezug von Expertinnen und Experten erarbeitet."
+      }
+     ]
+    },
+    "I3": {
+     "value": 1,
+     "reason": null,
+     "change": {
+      "from": "Federal Council majority including Schmid, Couchepin, Merz and Leuenberger",
+      "to": "Successors Maurer, Burkhalter, Schneider-Ammann and Sommaruga",
+      "date": "2010-11-01"
+     },
+     "confidence": "high",
+     "note": "Switzerland has a collegial executive. By 1 November 2010, four of the seven councillors pictured in the 2008 Council had left, crossing the codebook majority threshold. The Chancellery subsequently issued Outlook 2030 in 2015, more than six months later.",
+     "sources": [
+      {
+       "url": "https://www.admin.ch/dam/gov/en/Bundesrat/Bundesratskarten/bundesratskarte_2008.pdf.download.pdf/federal_council_card2008withcrowd.pdf",
+       "archived": null,
+       "archivedNote": "rate_limited",
+       "retrievedAt": "2026-10-16",
+       "quote": "The Swiss government consists of the seven members of the Federal Council"
+      },
+      {
+       "url": "https://www.bk.admin.ch/dam/bk/fr/dokumente/sprachdienste/Sprachdienst_fr/objekt_55513.pdf.download.pdf/election_du_presidentdelaconfederationlaloietlesusages.pdf",
+       "archived": null,
+       "archivedNote": "rate_limited",
+       "retrievedAt": "2026-10-16",
+       "quote": "Samuel Schmid ... en 2008 ... Pascal Couchepin en 2009 ... Moritz Leuenberger ... et Hans-Rudolf Merz ... en 2010"
+      },
+      {
+       "url": "https://www.bk.admin.ch/dam/bk/en/dokumente/strategische-fuehrungsunterstuetzung/lageumfeldanalyse/perspektiven_2030.pdf.download.pdf/outlook_2030.pdf",
+       "archived": null,
+       "archivedNote": "rate_limited",
+       "retrievedAt": "2026-10-16",
+       "quote": "Published by: Swiss Federal Chancellery"
+      }
+     ]
+    },
+    "I4": {
+     "value": 0,
+     "confidence": "low",
+     "note": "No dated official closure record was located for the Perspektivstab. Current official pages assign continuous situation/context analysis to the Chancellery and its operating strategic-support section, which is a same-branch successor. Low confidence because the predecessor's exact end date could not be read.",
+     "sources": []
+    }
+   },
+   "score": 100,
+   "searched": [
+    "Centre of government: bk.admin.ch and admin.ch in German, French, Italian and English for Vorausschau, Zukunft, prospective, prospettiva, scenarios, horizon scanning, long-term analysis",
+    "Planning: Federal Chancellery political planning, Strategic Management Support Section, situation/context analysis and Perspektivstab records",
+    "Science/technology: SERI and TA-SWISS official sites and Fedlex for Technologiefolgen-Abschätzung/évaluation des choix technologiques",
+    "Legislature: parlament.ch and Parliamentary Services for foresight and technology assessment",
+    "Closed/predecessor search: Perspektivstab re-mandate and historical report documentation"
+   ],
+   "rejected": [],
+   "batch": "B1",
+   "model": "GPT-5"
+  },
+  {
+   "iso3": "EST",
+   "functions": [
+    {
+     "name": "Arenguseire Keskus (Foresight Centre)",
+     "level": "legislature",
+     "legalForm": "Independent centre under the Chancellery of the Riigikogu.",
+     "status": "operating",
+     "established": {
+      "act": "Foresight Act, passed 14 June 2016",
+      "date": "2016-06-29"
+     },
+     "ended": null,
+     "meetsUnit": true,
+     "unitNote": "Meets conditions 1-4. The Act establishes it under Parliament and defines arenguseire (foresight) as identifying and analysing long-term societal developments and preparing development scenarios across Estonian society.",
+     "body": {
+      "record": 1,
+      "product": 1,
+      "survived": "1",
+      "closedNoSuccessor": 0
+     }
+    },
+    {
+     "name": "Eesti Arengufond (Estonian Development Fund)",
+     "level": "statutory_body",
+     "legalForm": "Statutory public-law body created by the Estonian Development Fund Act.",
+     "status": "closed",
+     "established": {
+      "act": "Estonian Development Fund Act",
+      "date": "2006-12-01"
+     },
+     "ended": {
+      "act": "Foresight Act §22 repealing the Estonian Development Fund Act",
+      "date": "2017-07-01",
+      "successor": "Arenguseire Keskus"
+     },
+     "meetsUnit": true,
+     "unitNote": "Met conditions 1-4. The Act assigned organisation of foresight activities and defined systematic assessment of long-term developments across research, technology, economy, environment and society. The 2016 Foresight Act transferred foresight assets to the Riigikogu Chancellery and established the same-branch Foresight Centre before repeal.",
+     "body": {
+      "record": 1,
+      "product": 0,
+      "survived": "1",
+      "closedNoSuccessor": 0
+     }
+    },
+    {
+     "name": "Eesti Arengufondi arenguseire üksus (Estonian Development Fund Foresight Unit)",
+     "level": "statutory_body",
+     "legalForm": "Structural unit required by §40 of the Estonian Development Fund Act.",
+     "status": "merged",
+     "established": {
+      "act": "Estonian Development Fund Act §40",
+      "date": "2006-12-01"
+     },
+     "ended": {
+      "act": "Foresight Act transfer and repeal provisions",
+      "date": "2017-07-01",
+      "successor": "Arenguseire Keskus"
+     },
+     "meetsUnit": true,
+     "unitNote": "Met conditions 1-4 as a separately mandated structural unit. Its statutory task was the Fund's cross-domain foresight activity. Its mandate/assets moved to the parliamentary Foresight Centre, so I4 is 0.",
+     "body": {
+      "record": 1,
+      "product": 0,
+      "survived": "1",
+      "closedNoSuccessor": 0
+     }
+    },
+    {
+     "name": "Riigikantselei strateegiabüroo (Government Office Strategy Unit)",
+     "level": "executive",
+     "legalForm": "Unit within the Government Office.",
+     "status": "operating",
+     "established": null,
+     "ended": null,
+     "meetsUnit": false,
+     "unitNote": "Fails condition 3 on the evidence located. It leads an official strategic-foresight explainer and supports Estonia 2035/strategic planning, but the examined official organisation pages do not give the unit itself a standing mandate to explore alternative long-term futures."
+    },
+    {
+     "name": "Riigikantselei (Government Office)",
+     "level": "executive",
+     "legalForm": "Centre-of-government office supporting the Government and Prime Minister.",
+     "status": "operating",
+     "established": null,
+     "ended": null,
+     "meetsUnit": false,
+     "unitNote": "Fails condition 3 as a parent. Its official strategy names long-term strategy and future-proof policymaking but not an own alternative-futures/scenario mandate; the Strategy Unit's materials are not inherited."
+    },
+    {
+     "name": "Majandus- ja Kommunikatsiooniministeerium (Ministry of Economic Affairs and Communications)",
+     "level": "executive",
+     "legalForm": "National ministry.",
+     "status": "operating",
+     "established": null,
+     "ended": null,
+     "meetsUnit": false,
+     "unitNote": "Fails condition 3: it managed Development Fund assets and science/innovation policy, but no own standing cross-policy foresight mandate was located."
+    },
+    {
+     "name": "Riigikogu and Chancellery of the Riigikogu",
+     "level": "legislature",
+     "legalForm": "National parliament and parliamentary administration.",
+     "status": "operating",
+     "established": null,
+     "ended": null,
+     "meetsUnit": false,
+     "unitNote": "Fails condition 3 as parent bodies: the Foresight Centre's statutory mandate is not inherited by the Riigikogu or its Chancellery."
+    }
+   ],
+   "items": {
+    "I1": {
+     "value": 1,
+     "function": "Arenguseire Keskus",
+     "confidence": "high",
+     "note": "The official Foresight Act was passed 14 June 2016 and entered into force 29 June 2016, forming the Centre under the Chancellery of the Riigikogu.",
+     "sources": [
+      {
+       "url": "https://www.riigiteataja.ee/en/tolge/pdf/514072016002",
+       "archived": null,
+       "archivedNote": "rate_limited",
+       "retrievedAt": "2026-10-16",
+       "quote": "Foresight is organised by the Foresight Centre ... formed under the Chancellery of the Riigikogu."
+      }
+     ]
+    },
+    "I2": {
+     "value": 1,
+     "function": "Arenguseire Keskus",
+     "product": {
+      "title": "The future of accessibility of local public services: Trends and scenarios up to 2050",
+      "date": "2025-06-04"
+     },
+     "confidence": "high",
+     "note": "The Centre's official site publishes the dated report in its own report series, with trends and scenarios extending to 2050.",
+     "sources": [
+      {
+       "url": "https://arenguseire.ee/en/reports/the-future-of-accessibility-of-local-public-services-trends-and-scenarios-up-to-2050/",
+       "archived": null,
+       "archivedNote": "rate_limited",
+       "retrievedAt": "2026-10-16",
+       "quote": "The future of accessibility of local public services. Trends and scenarios up to 2050"
+      }
+     ]
+    },
+    "I3": {
+     "value": 1,
+     "reason": null,
+     "change": {
+      "from": "Taavi Rõivas",
+      "to": "Jüri Ratas",
+      "date": "2016-11-23"
+     },
+     "confidence": "high",
+     "note": "The Centre's statutory mandate began on 29 June 2016. The official Government page dates the prime-ministerial handover to 23 November 2016; the Centre's 2018 Governance 2030 scenarios provide operation well over six months later.",
+     "sources": [
+      {
+       "url": "https://valitsus.ee/en/news/taavi-roivas-gives-post-prime-minister-over-juri-ratas",
+       "archived": null,
+       "archivedNote": "rate_limited",
+       "retrievedAt": "2026-10-16",
+       "quote": "Taavi Rõivas ... passed the post on to the new Prime Minister Jüri Ratas today."
+      },
+      {
+       "url": "https://arenguseire.ee/wp-content/uploads/2021/06/ask_valitsemine-2030_aruanne2018__eng-1.pdf",
+       "archived": null,
+       "archivedNote": "rate_limited",
+       "retrievedAt": "2026-10-16",
+       "quote": "(E-)Governance Scenarios Research Summary ... 2018"
+      }
+     ]
+    },
+    "I4": {
+     "value": 0,
+     "confidence": "high",
+     "note": "The Development Fund and its foresight unit ended on 1 July 2017, but the Foresight Act formed the parliamentary Foresight Centre and transferred foresight assets within 24 months; this is a qualifying same-branch successor.",
+     "sources": []
+    }
+   },
+   "score": 100,
+   "searched": [
+    "Centre of government: riigikantselei.ee in Estonian and English for arenguseire, tulevikeseire, strateegiline tulevikeseire, stsenaariumid, megatrendid and long term",
+    "Planning: Government Office Strategy Unit, Estonia 2035 and official organisation/strategy pages",
+    "Science/technology: Ministry of Economic Affairs and Communications and official R&D legislation for foresight and technology assessment",
+    "Legislature: riigikogu.ee, arenguseire.ee and riigiteataja.ee for the Foresight Centre, Foresight Act and reports",
+    "Closed lineage: Estonian Development Fund and its statutory foresight unit, transfer and repeal provisions"
+   ],
+   "rejected": [],
+   "batch": "B1",
+   "model": "GPT-5"
+  },
+  {
+   "iso3": "GBR",
+   "functions": [
+    {
+     "name": "Government Office for Science (GO-Science)",
+     "level": "executive",
+     "legalForm": "Office within the Department for Science, Innovation and Technology, led by the Government Chief Scientific Adviser.",
+     "status": "operating",
+     "established": {
+      "act": "No located official record dates GO-Science itself; official annual review dates its Foresight Programme to 1994",
+      "date": null
+     },
+     "ended": null,
+     "meetsUnit": true,
+     "unitNote": "Meets conditions 1-4 on its own official research page: GO-Science conducts Foresight projects 20-80 years ahead and research for strategic long-term thinking across government. The 1994 date belongs to its Foresight Programme, not necessarily the present parent office, so body record is 0.",
+     "body": {
+      "record": 0,
+      "product": 1,
+      "survived": "1",
+      "closedNoSuccessor": 0
+     }
+    },
+    {
+     "name": "Futures, Foresight and Emerging Technologies team",
+     "level": "executive",
+     "legalForm": "Team within Government Office for Science.",
+     "status": "operating",
+     "established": {
+      "act": "No official creation date located",
+      "date": null
+     },
+     "ended": null,
+     "meetsUnit": true,
+     "unitNote": "Meets conditions 1-4. Its own official page says the team supports civil servants through futures resources, advice, reports and technology horizon scanning, explicitly explores multiple futures, and works across government. Parent-issued GO-Science reports do not count as this team's products; without a dated establishment record, survival is conservatively no_change.",
+     "body": {
+      "record": 0,
+      "product": 0,
+      "survived": "no_change",
+      "closedNoSuccessor": 0
+     }
+    },
+    {
+     "name": "Joint Data and Analysis Centre Foresight team (JDAC Foresight)",
+     "level": "executive",
+     "legalForm": "Team within the Cabinet Office Joint Data and Analysis Centre.",
+     "status": "operating",
+     "established": {
+      "act": "No official creation date located",
+      "date": null
+     },
+     "ended": null,
+     "meetsUnit": true,
+     "unitNote": "Meets conditions 1-4 on the GO-Science official page: it works across departments on major cross-cutting issues, provides Cabinet Office Foresight expertise and incubates analysis. No separately issued qualifying product or dated creation record was located.",
+     "body": {
+      "record": 0,
+      "product": 0,
+      "survived": "no_change",
+      "closedNoSuccessor": 0
+     }
+    },
+    {
+     "name": "Parliamentary Office of Science and Technology (POST)",
+     "level": "legislature",
+     "legalForm": "Bicameral in-house office of the UK Parliament.",
+     "status": "operating",
+     "established": {
+      "act": "House approval following the Information Committee report; permanent from April 2001 (original temporary office created in 1989)",
+      "date": "2001-04"
+     },
+     "ended": null,
+     "meetsUnit": true,
+     "unitNote": "Meets conditions 1-4. POST is Parliament's own office, performs parliamentary technology assessment across policy domains, covers emerging science and social-science topics, and organises horizon scanning to help Parliament plan for the future.",
+     "body": {
+      "record": 1,
+      "product": 1,
+      "survived": "1",
+      "closedNoSuccessor": 0
+     }
+    },
+    {
+     "name": "Foresight Horizon Scanning Centre (HSC)",
+     "level": "executive",
+     "legalForm": "Centre within the Foresight directorate of the Office of Science and Innovation/GO-Science.",
+     "status": "merged",
+     "established": {
+      "act": "Science and Innovation Investment Framework 2004-2014 commitment",
+      "date": "2004"
+     },
+     "ended": {
+      "act": "Later GO-Science reorganisation; exact dated closure record not located",
+      "date": null,
+      "successor": "Futures, Foresight and Emerging Technologies team"
+     },
+     "meetsUnit": true,
+     "unitNote": "Met conditions 1-4: its official history states it was established as a centre of excellence feeding cross-government priority-setting and strategy, and official annual reviews describe 10-15-year horizon scans. Current GO-Science teams carry the mandate; exact merger date was not found, making GBR I4 low confidence.",
+     "body": {
+      "record": 1,
+      "product": 0,
+      "survived": "1",
+      "closedNoSuccessor": 0
+     }
+    },
+    {
+     "name": "Horizon Scanning Secretariat (Cabinet Office proposal)",
+     "level": "executive",
+     "legalForm": "Proposed secretariat in the Cabinet Office in the 2012 Horizon Scanning Review.",
+     "status": "closed",
+     "established": null,
+     "ended": null,
+     "meetsUnit": false,
+     "unitNote": "Fails condition 2/evidence of existence: the examined primary review recommends that it support the system, but no official record located confirms a standing secretariat was actually established."
+    },
+    {
+     "name": "Cabinet Office",
+     "level": "executive",
+     "legalForm": "Ministerial department and centre-of-government office.",
+     "status": "operating",
+     "established": null,
+     "ended": null,
+     "meetsUnit": false,
+     "unitNote": "Fails condition 3 as a parent. Housing JDAC Foresight does not give the Cabinet Office itself a foresight mandate under the parent/unit rule."
+    },
+    {
+     "name": "Department for Science, Innovation and Technology (DSIT)",
+     "level": "executive",
+     "legalForm": "Ministerial department.",
+     "status": "operating",
+     "established": null,
+     "ended": null,
+     "meetsUnit": false,
+     "unitNote": "Fails conditions 3-4 as a parent: its own remit is science, innovation and technology policy, and GO-Science's cross-government foresight mandate is not inherited."
+    },
+    {
+     "name": "UK Parliament",
+     "level": "legislature",
+     "legalForm": "Bicameral national legislature.",
+     "status": "operating",
+     "established": null,
+     "ended": null,
+     "meetsUnit": false,
+     "unitNote": "Fails condition 3 as a parent. POST is separately mandated and its technology-assessment/horizon-scanning functions are not attributed to Parliament as a whole."
+    }
+   ],
+   "items": {
+    "I1": {
+     "value": 1,
+     "function": "Parliamentary Office of Science and Technology",
+     "confidence": "high",
+     "note": "The official parliamentary debate records that the House approved POST becoming permanent from April 2001, dating the standing parliamentary office (after its temporary existence from 1989).",
+     "sources": [
+      {
+       "url": "https://api.parliament.uk/historic-hansard/commons/2000/nov/21/parliamentary-office-of-science-and",
+       "archived": null,
+       "archivedNote": "rate_limited",
+       "retrievedAt": "2026-10-16",
+       "quote": "POST should be made permanent from April 2001"
+      }
+     ]
+    },
+    "I2": {
+     "value": 1,
+     "function": "Government Office for Science",
+     "product": {
+      "title": "Future of the subsurface",
+      "date": "2024-06"
+     },
+     "confidence": "high",
+     "note": "The official report is expressly part of GO-Science's Foresight programme, considers future trends and scenarios across interconnected subsurface uses, and discusses needs over the coming decades.",
+     "sources": [
+      {
+       "url": "https://www.gov.uk/government/publications/future-of-the-subsurface-report/future-of-the-subsurface",
+       "archived": "https://web.archive.org/web/20261016120021/https://www.gov.uk/government/publications/future-of-the-subsurface-report/future-of-the-subsurface",
+       "retrievedAt": "2026-10-16",
+       "quote": "This report is part of the Government Office for Science's long-standing Foresight programme."
+      }
+     ]
+    },
+    "I3": {
+     "value": 1,
+     "reason": null,
+     "change": {
+      "from": "David Cameron",
+      "to": "Theresa May",
+      "date": "2016-07-13"
+     },
+     "confidence": "high",
+     "note": "GO-Science's Foresight function predates the 13 July 2016 prime-ministerial change. Its official 2017-18 annual report, more than six months later, states that it continued supporting strategic long-term thinking through Futures and Foresight.",
+     "sources": [
+      {
+       "url": "https://www.gov.uk/government/speeches/david-camerons-departing-words-as-prime-minister",
+       "archived": null,
+       "archivedNote": "rate_limited",
+       "retrievedAt": "2026-10-16",
+       "quote": "I will tender my resignation ... and ... invite Theresa May to form a new administration."
+      },
+      {
+       "url": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/736055/GO-Science_Annual_Report_201718.pdf",
+       "archived": null,
+       "archivedNote": "rate_limited",
+       "retrievedAt": "2026-10-16",
+       "quote": "supporting strategic long term thinking in government policymaking through Futures and Foresight"
+      }
+     ]
+    },
+    "I4": {
+     "value": 0,
+     "confidence": "low",
+     "note": "No official dated closure was located for the Horizon Scanning Centre. Current GO-Science and Cabinet Office teams carry the same executive-branch cross-government foresight mandate, so the located evidence supports merger/succession, not reversal. Low confidence because the exact end/transfer date is absent.",
+     "sources": []
+    }
+   },
+   "score": 100,
+   "searched": [
+    "Centre of government: gov.uk Cabinet Office, Prime Minister's Office, JDAC and horizon-scanning review/history searches",
+    "Planning/central analysis: Cabinet Office futures, foresight, horizon scanning, megatrends, scenarios and long-term searches",
+    "Science/technology: Government Office for Science and DSIT official organisation, research and publications pages",
+    "Legislature: parliament.uk, post.parliament.uk and Historic Hansard for POST, technology assessment, emerging technology and horizon scanning",
+    "Closed/predecessor search: Foresight Horizon Scanning Centre, Horizon Scanning Programme/Secretariat and current successor teams"
+   ],
+   "rejected": [],
+   "batch": "B1",
+   "model": "GPT-5"
+  },
+  {
+   "iso3": "HTI",
+   "functions": [
+    {
+     "name": "Ministère de la Planification et de la Coopération Externe (MPCE; Ministry of Planning and External Cooperation)",
+     "level": "executive",
+     "legalForm": "national ministry",
+     "status": "operating",
+     "established": {
+      "act": "Organic decree recorded on the ministry organisation page",
+      "date": "2016-02-02"
+     },
+     "ended": null,
+     "meetsUnit": false,
+     "unitNote": "Fails section 1 condition 3: the official mandate is development planning, investment programming and cooperation; no foresight, scenarios, horizon scanning or equivalent exploratory function was found."
+    },
+    {
+     "name": "Primature de la République d'Haïti (Office of the Prime Minister)",
+     "level": "executive",
+     "legalForm": "office of the head of government",
+     "status": "operating",
+     "established": {
+      "act": "constitutional office; no separate candidate-body founding record located",
+      "date": null
+     },
+     "ended": null,
+     "meetsUnit": false,
+     "unitNote": "Fails section 1 condition 3: searches of the official Primature record found policy coordination and planning but no standing exploratory-foresight mandate."
+    },
+    {
+     "name": "Conseil National des Télécommunications (CONATEL; National Telecommunications Council)",
+     "level": "statutory_body",
+     "legalForm": "national telecommunications regulator",
+     "status": "operating",
+     "established": {
+      "act": "official institutional history",
+      "date": null
+     },
+     "ended": null,
+     "meetsUnit": false,
+     "unitNote": "Fails section 1 conditions 3 and 4: its official role is telecommunications regulation and any technology-looking work is sector-specific."
+    },
+    {
+     "name": "Parlement haïtien (Haitian Parliament) and its commissions",
+     "level": "legislature",
+     "legalForm": "national legislature",
+     "status": "operating",
+     "established": {
+      "act": "constitutional legislature",
+      "date": null
+     },
+     "ended": null,
+     "meetsUnit": false,
+     "unitNote": "Fails section 1 condition 3: no standing parliamentary foresight or technology-assessment organ with an exploratory long-term mandate was found."
+    },
+    {
+     "name": "Centre de Techniques de Planification et d'Économie Appliquée (CTPEA; Centre for Planning Techniques and Applied Economics)",
+     "level": "statutory_body",
+     "legalForm": "public training and applied-economics institution linked to MPCE",
+     "status": "operating",
+     "established": {
+      "act": "official MPCE institutional references; founding instrument not located",
+      "date": null
+     },
+     "ended": null,
+     "meetsUnit": false,
+     "unitNote": "Fails section 1 condition 3: the official record describes training and applied planning/economics, not a standing national foresight function."
+    }
+   ],
+   "items": {
+    "I1": {
+     "value": 0,
+     "function": null,
+     "confidence": "high",
+     "note": "The executive, planning, science/technology-regulation and legislature searches found no body meeting all four section 1 conditions.",
+     "sources": [
+      {
+       "url": "https://mpce.gouv.ht/organisation/",
+       "archived": null,
+       "archivedNote": "not requested: source supports a 0 only",
+       "retrievedAt": "2026-10-16",
+       "quote": "Le MPCE a pour mission de conduire, piloter et coordonner le processus de planification du développement."
+      }
+     ]
+    },
+    "I2": {
+     "value": 0,
+     "function": null,
+     "product": null,
+     "confidence": "high",
+     "note": "No operating GFF exists to issue a qualifying product; official-domain searches for prospectives, scenarios, megatrends and horizon scanning found none.",
+     "sources": []
+    },
+    "I3": {
+     "value": 0,
+     "reason": null,
+     "change": null,
+     "confidence": "high",
+     "note": "No operating GFF exists.",
+     "sources": []
+    },
+    "I4": {
+     "value": 0,
+     "confidence": "high",
+     "note": "No body meeting the GFF unit was found, including no qualifying body closed in the ten-year window.",
+     "sources": []
+    }
+   },
+   "score": 0,
+   "searched": [
+    "site:gouv.ht prospective OR veille stratégique OR scénarios OR mégatendances OR horizon scanning OR long terme",
+    "site:mpce.gouv.ht mission organisation prospective scénarios long terme",
+    "site:primature.gouv.ht prospective avenir scénarios planification stratégique",
+    "site:parlementhaitien.ht prospective technologie évaluation avenir",
+    "site:conatel.gouv.ht mission prospective technologie",
+    "official-domain Creole searches: lavni, senaryo, siveyans estratejik, planifikasyon"
+   ],
+   "rejected": [],
+   "batch": "B2",
+   "model": "gpt-5"
+  },
+  {
+   "iso3": "NGA",
+   "functions": [
+    {
+     "name": "Office for Strategic Preparedness and Resilience (OSPRE) / National Centre for the Coordination of Early Warning and Response Mechanisms",
+     "level": "executive",
+     "legalForm": "national office and centre in the Office of the Vice President",
+     "status": "operating",
+     "established": {
+      "act": "Presidential Executive Order 12",
+      "date": "2022-06-10"
+     },
+     "ended": null,
+     "meetsUnit": true,
+     "unitNote": "Meets all conditions: a national executive office, standing under Executive Order 12, mandated for anticipatory intelligence and over-the-horizon trends across security, health, environment, governance, economy and food.",
+     "body": {
+      "record": 1,
+      "product": 0,
+      "survived": "1",
+      "closedNoSuccessor": 0
+     }
+    },
+    {
+     "name": "Anticipatory Governance and Foresight Capacity (AGFC) Programme",
+     "level": "executive",
+     "legalForm": "programme of the Office of the Vice President implemented by OSPRE",
+     "status": "operating",
+     "established": {
+      "act": "official federal-government activity record",
+      "date": "2025"
+     },
+     "ended": null,
+     "meetsUnit": false,
+     "unitNote": "Fails section 1 condition 1: it is a programme and capacity initiative, not an organisational body."
+    },
+    {
+     "name": "National Institute for Policy and Strategic Studies (NIPSS)",
+     "level": "statutory_body",
+     "legalForm": "federal policy institute established by statute",
+     "status": "operating",
+     "established": {
+      "act": "National Institute for Policy and Strategic Studies Act No. 20",
+      "date": "1979"
+     },
+     "ended": null,
+     "meetsUnit": false,
+     "unitNote": "Fails section 1 condition 3: the Act names long-term goals and long-range national plans, but not scenarios, alternative futures, foresight, horizon scanning or another qualifying exploratory function; planning alone is excluded."
+    },
+    {
+     "name": "National Centre for Technology Management (NACETEM)",
+     "level": "statutory_body",
+     "legalForm": "federal science, technology and innovation policy centre",
+     "status": "operating",
+     "established": {
+      "act": "Federal Government establishment record",
+      "date": "1992"
+     },
+     "ended": null,
+     "meetsUnit": false,
+     "unitNote": "Fails section 1 conditions 3 and 4: its mandate is STI management research and training, without a qualifying exploratory mandate, and is sector-specific."
+    },
+    {
+     "name": "Federal Ministry of Budget and Economic Planning",
+     "level": "executive",
+     "legalForm": "national ministry",
+     "status": "operating",
+     "established": {
+      "act": "federal executive organisation",
+      "date": null
+     },
+     "ended": null,
+     "meetsUnit": false,
+     "unitNote": "Fails section 1 condition 3: national development planning and projections are not themselves exploratory foresight."
+    },
+    {
+     "name": "Office of the Vice President of Nigeria",
+     "level": "executive",
+     "legalForm": "constitutional executive office and parent of OSPRE",
+     "status": "operating",
+     "established": {
+      "act": "Constitution of the Federal Republic of Nigeria",
+      "date": null
+     },
+     "ended": null,
+     "meetsUnit": false,
+     "unitNote": "Fails section 1 condition 3 on its own mandate. OSPRE's foresight mandate is not attributed upward to its parent."
+    },
+    {
+     "name": "National Assembly of Nigeria and its committees",
+     "level": "legislature",
+     "legalForm": "bicameral national legislature",
+     "status": "operating",
+     "established": {
+      "act": "Constitution of the Federal Republic of Nigeria",
+      "date": null
+     },
+     "ended": null,
+     "meetsUnit": false,
+     "unitNote": "Fails section 1 condition 3: no standing parliamentary foresight or technology-assessment body with a qualifying mandate was found."
+    },
+    {
+     "name": "Nigeria 2050 Child Foresight Analysis Technical Working Group",
+     "level": "executive",
+     "legalForm": "initiative-specific working group",
+     "status": "operating",
+     "established": {
+      "act": "official federal-government workshop record",
+      "date": "2026-02-13"
+     },
+     "ended": null,
+     "meetsUnit": false,
+     "unitNote": "Fails section 1 condition 2: an initiative-specific working group is temporary rather than a standing body."
+    },
+    {
+     "name": "Bureau of Public Enterprises (BPE)",
+     "level": "statutory_body",
+     "legalForm": "federal public-enterprise reform bureau",
+     "status": "operating",
+     "established": {
+      "act": "Public Enterprises (Privatisation and Commercialisation) Act",
+      "date": "1999"
+     },
+     "ended": null,
+     "meetsUnit": false,
+     "unitNote": "Fails section 1 condition 3: strategic-foresight language appeared in an event or retreat, not in the bureau's standing mandate."
+    }
+   ],
+   "items": {
+    "I1": {
+     "value": 1,
+     "function": "Office for Strategic Preparedness and Resilience (OSPRE)",
+     "confidence": "high",
+     "note": "A dated federal record states that Executive Order 12 established the centre in the Office of the Vice President and describes its cross-domain trend-analysis role.",
+     "sources": [
+      {
+       "url": "https://demo2.acresal.gov.ng/news/president-sets-up-national-early-warning-centre-in-vps-office/",
+       "archived": "https://web.archive.org/web/20261016120618/https://demo2.acresal.gov.ng/news/president-sets-up-national-early-warning-centre-in-vps-office/",
+       "retrievedAt": "2026-10-16",
+       "quote": "President Muhammadu Buhari has signed Executive Order 12, establishing a National Centre for the Coordination of Early Warning and Response Mechanism."
+      }
+     ]
+    },
+    "I2": {
+     "value": 0,
+     "function": "Office for Strategic Preparedness and Resilience (OSPRE)",
+     "product": null,
+     "confidence": "low",
+     "note": "OSPRE's official resource library lists futures-titled reports, but provides no visible publication dates and gates the files behind email verification. The Nigeria 2050 material names UNICEF rather than OSPRE as report author, so section 2 authorship and window evidence are insufficient.",
+     "sources": [
+      {
+       "url": "https://www.osprenigeria.gov.ng/resources",
+       "archived": null,
+       "archivedNote": "not requested: source supports a 0 only",
+       "retrievedAt": "2026-10-16",
+       "quote": "Preview the cover of every document, then download the full PDF."
+      }
+     ]
+    },
+    "I3": {
+     "value": 1,
+     "reason": null,
+     "change": {
+      "from": "Muhammadu Buhari",
+      "to": "Bola Ahmed Tinubu",
+      "date": "2023-05-29"
+     },
+     "confidence": "high",
+     "note": "OSPRE was established under Buhari in 2022 and is explicitly recorded implementing a foresight programme in February 2026, more than six months after Tinubu assumed office.",
+     "sources": [
+      {
+       "url": "https://statehouse.gov.ng/first-inaugural-address-by-president-bola-ahmed-tinubu-delivered-on-may-29-2023-at-the-eagle-square-abuja/",
+       "archived": null,
+       "archivedNote": "save_failed",
+       "retrievedAt": "2026-10-16",
+       "quote": "I stand before you honoured to assume the sacred mandate you have given me."
+      },
+      {
+       "url": "https://www.radionigeriakaduna.gov.ng/2026/02/13/unicef-fg-launch-child-foresight-initiative/",
+       "archived": null,
+       "archivedNote": "rate_limited",
+       "retrievedAt": "2026-10-16",
+       "quote": "the AGFC programme implemented by the Office for Strategic Preparedness and Resilience (OSPRE)"
+      }
+     ]
+    },
+    "I4": {
+     "value": 0,
+     "confidence": "high",
+     "note": "No qualifying GFF that ended without a successor in the ten-year window was found.",
+     "sources": []
+    }
+   },
+   "score": 67,
+   "searched": [
+    "site:gov.ng strategic foresight OR horizon scanning OR alternative futures OR megatrends Nigeria",
+    "site:statehouse.gov.ng early warning centre Executive Order 12 OSPRE",
+    "site:osprenigeria.gov.ng mandate services resources publications",
+    "site:nipsskuru.gov.ng Act long-term goals scenarios foresight",
+    "site:nacetem.gov.ng mandate foresight technology assessment",
+    "site:nass.gov.ng foresight technology assessment future studies",
+    "site:nationalplanning.gov.ng long-term scenarios foresight",
+    "official-domain searches for predecessor, closure, merger and successor"
+   ],
+   "rejected": [],
+   "batch": "B2",
+   "model": "gpt-5"
+  },
+  {
+   "iso3": "NIC",
+   "functions": [
+    {
+     "name": "Consejo Nacional del Sistema Nacional de Planificación, Inversión y Gestión (SPING; National Council of the National Planning, Investment and Management System)",
+     "level": "executive",
+     "legalForm": "standing inter-institutional national council coordinated by the finance minister",
+     "status": "operating",
+     "established": {
+      "act": "Plan Nacional de Lucha contra la Pobreza y para el Desarrollo Humano 2022-2026, version 19Jul21",
+      "date": "2021-07-19"
+     },
+     "ended": null,
+     "meetsUnit": true,
+     "unitNote": "Meets all conditions at low confidence: the official plan creates SPING for strategic-prospective planning and cross-sector national policy and specifies its standing National Council. The prospective function is stated for the system rather than repeated in the Council clause.",
+     "body": {
+      "record": 1,
+      "product": 0,
+      "survived": "no_change",
+      "closedNoSuccessor": 0
+     }
+    },
+    {
+     "name": "Sistema Nacional de Planificación, Inversión y Gestión (SPING; National Planning, Investment and Management System)",
+     "level": "executive",
+     "legalForm": "government-wide planning system and framework",
+     "status": "operating",
+     "established": {
+      "act": "Plan Nacional de Lucha contra la Pobreza y para el Desarrollo Humano 2022-2026",
+      "date": "2021-07-19"
+     },
+     "ended": null,
+     "meetsUnit": false,
+     "unitNote": "Fails section 1 condition 1: the system is a framework of norms, subsystems, processes and procedures, not an organisational body; its National Council is assessed separately."
+    },
+    {
+     "name": "Secretaría Técnica del SPING (SPING Technical Secretariat)",
+     "level": "executive",
+     "legalForm": "technical secretariat attached to the Ministry of Finance and Public Credit",
+     "status": "operating",
+     "established": {
+      "act": "Plan Nacional de Lucha contra la Pobreza y para el Desarrollo Humano 2022-2026",
+      "date": "2021-07-19"
+     },
+     "ended": null,
+     "meetsUnit": false,
+     "unitNote": "Fails section 1 condition 3: the plan establishes the secretariat but does not give it its own named exploratory-foresight mandate."
+    },
+    {
+     "name": "Ministerio de Hacienda y Crédito Público (MHCP; Ministry of Finance and Public Credit)",
+     "level": "executive",
+     "legalForm": "national ministry and parent/coordinator of SPING bodies",
+     "status": "operating",
+     "established": {
+      "act": "national executive organisation",
+      "date": null
+     },
+     "ended": null,
+     "meetsUnit": false,
+     "unitNote": "Fails section 1 condition 3 on its own mandate. The Council's mandate is not attributed upward to the coordinating ministry."
+    },
+    {
+     "name": "Banco Central de Nicaragua (BCN; Central Bank of Nicaragua)",
+     "level": "statutory_body",
+     "legalForm": "central bank and permanent invitee to the SPING Council",
+     "status": "operating",
+     "established": {
+      "act": "central-bank organic law",
+      "date": null
+     },
+     "ended": null,
+     "meetsUnit": false,
+     "unitNote": "Fails section 1 condition 3: macroeconomic perspectives and projections are forecasts, explicitly excluded from foresight."
+    },
+    {
+     "name": "Consejo Nicaragüense de Ciencia y Tecnología (CONICYT; Nicaraguan Council for Science and Technology)",
+     "level": "executive",
+     "legalForm": "national science and technology council",
+     "status": "operating",
+     "established": {
+      "act": "official institutional record",
+      "date": null
+     },
+     "ended": null,
+     "meetsUnit": false,
+     "unitNote": "Fails section 1 conditions 3 and 4: no standing exploratory mandate was found, and the remit is science and technology rather than cross-policy."
+    },
+    {
+     "name": "Asamblea Nacional de Nicaragua (National Assembly of Nicaragua)",
+     "level": "legislature",
+     "legalForm": "unicameral national legislature",
+     "status": "operating",
+     "established": {
+      "act": "Constitution of Nicaragua",
+      "date": null
+     },
+     "ended": null,
+     "meetsUnit": false,
+     "unitNote": "Fails section 1 condition 3: its official strategic material concerns institutional planning; no standing foresight or technology-assessment organ was found."
+    },
+    {
+     "name": "Presidencia de la República de Nicaragua (Presidency of Nicaragua)",
+     "level": "executive",
+     "legalForm": "office of the national executive",
+     "status": "operating",
+     "established": {
+      "act": "constitutional office",
+      "date": null
+     },
+     "ended": null,
+     "meetsUnit": false,
+     "unitNote": "Fails section 1 condition 3 on its own mandate; foresight assigned to SPING is not attributed to the Presidency."
+    },
+    {
+     "name": "Sistema Nicaragüense de Educación Superior (SNPES; Nicaraguan Higher-Education System)",
+     "level": "statutory_body",
+     "legalForm": "public higher-education coordination system",
+     "status": "operating",
+     "established": {
+      "act": "higher-education legislation and official gazette record",
+      "date": "2023"
+     },
+     "ended": null,
+     "meetsUnit": false,
+     "unitNote": "Fails section 1 conditions 1 and 4: it is a sectoral higher-education system, not a cross-policy foresight body."
+    }
+   ],
+   "items": {
+    "I1": {
+     "value": 1,
+     "function": "Consejo Nacional del SPING",
+     "confidence": "low",
+     "note": "The dated official national plan creates SPING, names strategic-prospective planning and national/sectoral policy, and specifies a standing National Council. Confidence is low because the functional clause grammatically attaches to the system, not expressly to the Council alone.",
+     "sources": [
+      {
+       "url": "https://www.mem.gob.ni/wp-content/uploads/2022/03/PLAN-NACIONAL-DE-LUCHA-CONTRA-LA-POBREZA-2022-2026-19Jul21.pdf",
+       "archived": null,
+       "archivedNote": "rate_limited",
+       "retrievedAt": "2026-10-16",
+       "quote": "fortalecerá los procesos de planificación estratégica-prospectiva y táctica, la formulación de políticas nacionales y sectoriales"
+      }
+     ]
+    },
+    "I2": {
+     "value": 0,
+     "function": "Consejo Nacional del SPING",
+     "product": null,
+     "confidence": "low",
+     "note": "Official MHCP, Presidency and gazette searches did not identify a Council-authored qualifying product in the window; public records usually attribute planning documents to the government or ministry rather than the Council.",
+     "sources": []
+    },
+    "I3": {
+     "value": 0,
+     "reason": "no_change",
+     "change": null,
+     "confidence": "low",
+     "note": "Daniel Ortega remained an effective presidential chief executive from the Council's 2021 establishment through the reference date. The later co-presidency arrangement did not remove him; confidence is low because it altered the formal executive structure.",
+     "sources": []
+    },
+    "I4": {
+     "value": 0,
+     "confidence": "high",
+     "note": "No qualifying GFF was found to have closed without a successor in the ten-year window.",
+     "sources": []
+    }
+   },
+   "score": 33,
+   "searched": [
+    "site:gob.ni prospectiva OR planificación prospectiva OR escenarios OR vigilancia estratégica",
+    "site:hacienda.gob.ni SPING Consejo Nacional prospectiva",
+    "site:mem.gob.ni Plan Nacional SPING planificación estratégica-prospectiva",
+    "site:pgr.gob.ni Gaceta SPING reglamento Consejo Nacional",
+    "site:bcn.gob.ni perspectivas proyecciones escenarios",
+    "site:asamblea.gob.ni prospectiva futuro tecnología evaluación",
+    "site:presidencia.gob.ni SPING prospectiva",
+    "official-domain searches for cierre, fusión, sucesor and predecessor bodies"
+   ],
+   "rejected": [],
+   "batch": "B2",
+   "model": "gpt-5"
+  },
+  {
+   "iso3": "SGP",
+   "functions": [
+    {
+     "name": "Centre for Strategic Futures (CSF)",
+     "level": "executive",
+     "legalForm": "foresight unit and government think tank in the Prime Minister's Office Strategy Group",
+     "status": "operating",
+     "established": {
+      "act": "official CSF institutional history",
+      "date": "2009"
+     },
+     "ended": null,
+     "meetsUnit": true,
+     "unitNote": "Meets all conditions: an executive standing unit established for open-ended long-term futures research and new foresight methods, serving whole-of-government policy planning.",
+     "body": {
+      "record": 1,
+      "product": 1,
+      "survived": "1",
+      "closedNoSuccessor": 0
+     }
+    },
+    {
+     "name": "Strategy Group, Prime Minister's Office",
+     "level": "executive",
+     "legalForm": "central whole-of-government strategy body",
+     "status": "operating",
+     "established": {
+      "act": "official Strategy Group and CSF institutional histories",
+      "date": "2015-07-01"
+     },
+     "ended": null,
+     "meetsUnit": true,
+     "unitNote": "Meets all conditions on its own mandate: it identifies emerging issues over the medium to long term and drives whole-of-government strategic planning and prioritisation.",
+     "body": {
+      "record": 1,
+      "product": 0,
+      "survived": "1",
+      "closedNoSuccessor": 0
+     }
+    },
+    {
+     "name": "Scenario Planning Office (SPO), Prime Minister's Office",
+     "level": "executive",
+     "legalForm": "whole-of-government scenario unit",
+     "status": "merged",
+     "established": {
+      "act": "official CSF institutional history",
+      "date": "1995"
+     },
+     "ended": {
+      "act": "renamed Strategic Policy Office",
+      "date": "2003",
+      "successor": "Strategic Policy Office"
+     },
+     "meetsUnit": true,
+     "unitNote": "Meets all conditions: it was a standing PMO office set up to develop scenarios from a whole-of-government perspective.",
+     "body": {
+      "record": 1,
+      "product": 0,
+      "survived": "no_change",
+      "closedNoSuccessor": 0
+     }
+    },
+    {
+     "name": "Strategic Policy Office (SPO), Prime Minister's Office",
+     "level": "executive",
+     "legalForm": "whole-of-government foresight and strategy office",
+     "status": "merged",
+     "established": {
+      "act": "renaming of the Scenario Planning Office in official CSF history",
+      "date": "2003"
+     },
+     "ended": {
+      "act": "PMO reorganisation into Strategy Group",
+      "date": "2015-07-01",
+      "successor": "Strategy Group, Prime Minister's Office"
+     },
+     "meetsUnit": true,
+     "unitNote": "Meets all conditions: its official history expressly links its role to foresight work and strategy formulation across government.",
+     "body": {
+      "record": 1,
+      "product": 0,
+      "survived": "1",
+      "closedNoSuccessor": 0
+     }
+    },
+    {
+     "name": "Futures team / Futures Directorate, Strategy Group",
+     "level": "executive",
+     "legalForm": "foresight team in the Prime Minister's Office Strategy Group",
+     "status": "operating",
+     "established": {
+      "act": "current official CSF organisation page; exact separate-team start not stated",
+      "date": null
+     },
+     "ended": null,
+     "meetsUnit": true,
+     "unitNote": "Meets all conditions at low confidence: the current official page names a Futures team that identifies longer-term trends and emerging issues of strategic impact across the public service; its separate establishment date is not stated.",
+     "body": {
+      "record": 0,
+      "product": 0,
+      "survived": "no_change",
+      "closedNoSuccessor": 0
+     }
+    },
+    {
+     "name": "Strategic Planning and Futures (SPF), Strategy Group",
+     "level": "executive",
+     "legalForm": "historical administrative label within Strategy Group",
+     "status": "merged",
+     "established": {
+      "act": "Public Service Division account of the 2015 PMO reorganisation",
+      "date": "2015-07-01"
+     },
+     "ended": {
+      "act": "later public organisation pages separate Strategic Planning and Futures teams; exact date not located",
+      "date": null,
+      "successor": "Strategic Planning team and Futures team, Strategy Group"
+     },
+     "meetsUnit": false,
+     "unitNote": "Fails section 1 condition 1: the record examined does not establish SPF as an organisational body distinct from Strategy Group, rather than an administrative grouping of functions."
+    },
+    {
+     "name": "Strategic Futures Network",
+     "level": "executive",
+     "legalForm": "cross-government practitioner network convened by CSF",
+     "status": "operating",
+     "established": {
+      "act": "official CSF programme record",
+      "date": null
+     },
+     "ended": null,
+     "meetsUnit": false,
+     "unitNote": "Fails section 1 condition 1: it is a practitioner network, not an organisational body."
+    },
+    {
+     "name": "Risk Assessment and Horizon Scanning (RAHS) Programme",
+     "level": "executive",
+     "legalForm": "whole-of-government programme and technology platform",
+     "status": "merged",
+     "established": {
+      "act": "official Civil Service College history",
+      "date": "2004"
+     },
+     "ended": {
+      "act": "later capability absorbed into the government foresight system; exact closure not located",
+      "date": null,
+      "successor": "Centre for Strategic Futures and wider government foresight system"
+     },
+     "meetsUnit": false,
+     "unitNote": "Fails section 1 condition 1: RAHS is described as a programme/platform, not a standing organisational body."
+    },
+    {
+     "name": "Futures Group, Ministry of Trade and Industry",
+     "level": "executive",
+     "legalForm": "ministry futures unit",
+     "status": "operating",
+     "established": {
+      "act": "official Singapore government foresight-history references",
+      "date": null
+     },
+     "ended": null,
+     "meetsUnit": false,
+     "unitNote": "Fails section 1 condition 4: the remit is trade and industry rather than cross-policy national government."
+    },
+    {
+     "name": "Future Systems Directorate / Futures Group, Ministry of Defence",
+     "level": "executive",
+     "legalForm": "defence ministry futures unit",
+     "status": "operating",
+     "established": {
+      "act": "official government foresight-history references",
+      "date": null
+     },
+     "ended": null,
+     "meetsUnit": false,
+     "unitNote": "Fails section 1 condition 4: the remit is defence-specific."
+    },
+    {
+     "name": "Futures Team, Ministry of Community Development, Youth and Sports",
+     "level": "executive",
+     "legalForm": "ministry team formed for project-based futures work",
+     "status": "closed",
+     "established": {
+      "act": "official Civil Service College account",
+      "date": null
+     },
+     "ended": {
+      "act": "project-based team no longer identified; exact date and successor not located",
+      "date": null,
+      "successor": null
+     },
+     "meetsUnit": false,
+     "unitNote": "Fails section 1 conditions 2 and 4: it was described as project-based and confined to a social-policy ministry."
+    },
+    {
+     "name": "Parliament of Singapore and Parliament Secretariat",
+     "level": "legislature",
+     "legalForm": "national legislature and its secretariat",
+     "status": "operating",
+     "established": {
+      "act": "constitutional legislature",
+      "date": null
+     },
+     "ended": null,
+     "meetsUnit": false,
+     "unitNote": "Fails section 1 condition 3: no standing parliamentary foresight or technology-assessment function was found."
+    }
+   ],
+   "items": {
+    "I1": {
+     "value": 1,
+     "function": "Centre for Strategic Futures (CSF)",
+     "confidence": "high",
+     "note": "The official institutional history dates CSF to 2009 and states its open-ended long-term futures and foresight-method mandate.",
+     "sources": [
+      {
+       "url": "https://www.csf.gov.sg/who-we-are/",
+       "archived": null,
+       "archivedNote": "save_failed",
+       "retrievedAt": "2026-10-16",
+       "quote": "In 2009, the Centre for Strategic Futures (CSF) was established as a futures think tank within SPO"
+      }
+     ]
+    },
+    "I2": {
+     "value": 1,
+     "function": "Centre for Strategic Futures (CSF)",
+     "product": {
+      "title": "Foresight 2024",
+      "date": "2024-08-22"
+     },
+     "confidence": "high",
+     "note": "The official CSF publication page dates and identifies its biennial Foresight publication, whose main subject is global megatrends, emerging issues and strategic-futures research; the recognized foresight form permits an unstated horizon.",
+     "sources": [
+      {
+       "url": "https://www.csf.gov.sg/media-centre/foresight-series/",
+       "archived": null,
+       "archivedNote": "rate_limited",
+       "retrievedAt": "2026-10-16",
+       "quote": "CSF's publication on global megatrends, emerging issues, and strategic futures research."
+      }
+     ]
+    },
+    "I3": {
+     "value": 1,
+     "reason": null,
+     "change": {
+      "from": "Lee Hsien Loong",
+      "to": "Lawrence Wong",
+      "date": "2024-05-15"
+     },
+     "confidence": "high",
+     "note": "CSF predates the May 2024 change of prime minister and issued an official strategic-foresight handbook in February 2026, more than six months later.",
+     "sources": [
+      {
+       "url": "https://www.pmo.gov.sg/newsroom/pm-lawrence-wong-at-the-swearing-in-ceremony-may-2024/",
+       "archived": null,
+       "archivedNote": "rate_limited",
+       "retrievedAt": "2026-10-16",
+       "quote": "I am deeply honoured to be sworn in as the Prime Minister of Singapore."
+      },
+      {
+       "url": "https://www.csf.gov.sg/media-centre/thinking-about-tomorrow/",
+       "archived": null,
+       "archivedNote": "rate_limited",
+       "retrievedAt": "2026-10-16",
+       "quote": "Thinking About Tomorrow articulates the CSF’s updated understanding of foresight"
+      }
+     ]
+    },
+    "I4": {
+     "value": 0,
+     "confidence": "high",
+     "note": "The qualifying Scenario Planning Office and Strategic Policy Office ended through recorded renaming or reorganisation with same-branch successors; no qualifying closure without successor was found in the window.",
+     "sources": []
+    }
+   },
+   "score": 100,
+   "searched": [
+    "site:gov.sg strategic foresight OR horizon scanning OR scenario planning Singapore government",
+    "site:csf.gov.sg who we are history publications foresight",
+    "site:strategygroup.gov.sg who we are medium long term emerging issues",
+    "site:pmo.gov.sg Strategy Group Strategic Policy Office reorganisation",
+    "site:psdchallenge.psd.gov.sg Scenario Planning Office Strategic Planning and Futures",
+    "site:knowledge.csc.gov.sg RAHS foresight history",
+    "site:parliament.gov.sg foresight technology assessment futures",
+    "official-domain searches for predecessor, rename, merge, closure and successor"
+   ],
+   "rejected": [],
+   "batch": "B2",
+   "model": "gpt-5"
+  },
+  {
+   "iso3": "VNM",
+   "functions": [
+    {
+     "name": "Viện Chiến lược và Chính sách kinh tế - tài chính (National Institute for Economics and Finance, NIEF)",
+     "level": "statutory_body",
+     "legalForm": "public research institute under the Ministry of Finance",
+     "status": "operating",
+     "established": {
+      "act": "Decision 387/QĐ-BTC",
+      "date": "2025-02-26"
+     },
+     "ended": null,
+     "meetsUnit": false,
+     "unitNote": "Fails section 1 condition 3: its official mandate names strategy, plans, analysis and forecasting (dự báo), but not exploratory foresight, scenarios, alternative futures, horizon scanning or an equivalent function."
+    },
+    {
+     "name": "Viện Chiến lược phát triển (Development Strategy Institute)",
+     "level": "statutory_body",
+     "legalForm": "former public research institute under the Ministry of Planning and Investment",
+     "status": "merged",
+     "established": {
+      "act": "official institutional history",
+      "date": null
+     },
+     "ended": {
+      "act": "Decision 387/QĐ-BTC merger into NIEF",
+      "date": "2025-02-26",
+      "successor": "National Institute for Economics and Finance"
+     },
+     "meetsUnit": false,
+     "unitNote": "Fails section 1 condition 3: development strategy, planning and forecasting are not a named exploratory-foresight mandate."
+    },
+    {
+     "name": "Trung tâm Thông tin và Dự báo kinh tế - xã hội quốc gia (National Centre for Socio-Economic Information and Forecast, NCIF)",
+     "level": "statutory_body",
+     "legalForm": "former public forecasting centre under the Ministry of Planning and Investment",
+     "status": "merged",
+     "established": {
+      "act": "official Ministry of Planning and Investment organisation record",
+      "date": null
+     },
+     "ended": {
+      "act": "2025 central-government research reorganisation",
+      "date": "2025",
+      "successor": "National Institute for Economics and Finance"
+     },
+     "meetsUnit": false,
+     "unitNote": "Fails section 1 condition 3: its mandate is information and socio-economic forecasting; forecasts and projections are excluded."
+    },
+    {
+     "name": "Học viện Khoa học, Công nghệ và Đổi mới sáng tạo (Academy of Science, Technology and Innovation)",
+     "level": "statutory_body",
+     "legalForm": "public academy under the Ministry of Science and Technology",
+     "status": "operating",
+     "established": {
+      "act": "Decision 08/2018/QĐ-TTg",
+      "date": "2018"
+     },
+     "ended": null,
+     "meetsUnit": false,
+     "unitNote": "Fails section 1 conditions 3 and 4: the mandate concerns science, technology and innovation policy, research and training, without a qualifying cross-policy exploratory function."
+    },
+    {
+     "name": "Viện Chiến lược và Chính sách khoa học và công nghệ (Institute of Strategy and Policy on Science and Technology)",
+     "level": "statutory_body",
+     "legalForm": "public policy institute incorporated into the Academy of Science, Technology and Innovation",
+     "status": "merged",
+     "established": {
+      "act": "official Ministry of Science and Technology institutional history",
+      "date": null
+     },
+     "ended": {
+      "act": "Decision 08/2018/QĐ-TTg reorganisation",
+      "date": "2018",
+      "successor": "Academy of Science, Technology and Innovation"
+     },
+     "meetsUnit": false,
+     "unitNote": "Fails section 1 condition 4 and independently condition 3: its remit is science and technology policy and no qualifying exploratory mandate was found."
+    },
+    {
+     "name": "Cục Thông tin, Thống kê (Department of Information and Statistics), Ministry of Science and Technology",
+     "level": "executive",
+     "legalForm": "national ministry department",
+     "status": "operating",
+     "established": {
+      "act": "official ministry organisation record",
+      "date": null
+     },
+     "ended": null,
+     "meetsUnit": false,
+     "unitNote": "Fails section 1 conditions 3 and 4: technology-trend information and statistics do not establish a national cross-policy exploratory-foresight mandate."
+    },
+    {
+     "name": "Trung tâm Thông tin, phân tích, dự báo chiến lược và dịch vụ công (Centre for Information, Analysis, Strategic Forecasting and Public Services)",
+     "level": "statutory_body",
+     "legalForm": "centre under the Institute of State Organization Science and Labour",
+     "status": "operating",
+     "established": {
+      "act": "official operating regulations",
+      "date": "2025"
+     },
+     "ended": null,
+     "meetsUnit": false,
+     "unitNote": "Fails section 1 condition 3: the named function is strategic forecasting (dự báo), not exploratory foresight; its administrative/labour remit is also not clearly cross-policy."
+    },
+    {
+     "name": "Viện Nghiên cứu lập pháp (Institute for Legislative Studies)",
+     "level": "legislature",
+     "legalForm": "former research organ of the National Assembly Standing Committee",
+     "status": "closed",
+     "established": {
+      "act": "Resolution 614/2008/UBTVQH12",
+      "date": "2008"
+     },
+     "ended": {
+      "act": "National Assembly Standing Committee resolution ending operations and transferring functions",
+      "date": "2025",
+      "successor": "National Assembly organs and National Assembly Office for transferred legislative-research functions"
+     },
+     "meetsUnit": false,
+     "unitNote": "Fails section 1 condition 3: its official mandate is legislative science, information and advice, without foresight, scenarios, horizon scanning or equivalent exploratory work."
+    },
+    {
+     "name": "Quốc hội Việt Nam (National Assembly of Vietnam)",
+     "level": "legislature",
+     "legalForm": "unicameral national legislature",
+     "status": "operating",
+     "established": {
+      "act": "constitutional legislature",
+      "date": null
+     },
+     "ended": null,
+     "meetsUnit": false,
+     "unitNote": "Fails section 1 condition 3: no standing parliamentary foresight or technology-assessment body with a qualifying mandate was found."
+    },
+    {
+     "name": "Văn phòng Chính phủ (Government Office)",
+     "level": "executive",
+     "legalForm": "central executive office supporting the Government and Prime Minister",
+     "status": "operating",
+     "established": {
+      "act": "government organisation law and regulations",
+      "date": null
+     },
+     "ended": null,
+     "meetsUnit": false,
+     "unitNote": "Fails section 1 condition 3: coordination, information and advisory functions do not include a named exploratory-foresight mandate."
+    },
+    {
+     "name": "Bộ Kế hoạch và Đầu tư (Ministry of Planning and Investment)",
+     "level": "executive",
+     "legalForm": "former national ministry and parent of strategy/forecasting institutes",
+     "status": "merged",
+     "established": {
+      "act": "national government organisation",
+      "date": null
+     },
+     "ended": {
+      "act": "2025 national-government reorganisation",
+      "date": "2025",
+      "successor": "Ministry of Finance"
+     },
+     "meetsUnit": false,
+     "unitNote": "Fails section 1 condition 3 on its own mandate: development strategy, planning and forecasting are excluded absent a named exploratory function."
+    },
+    {
+     "name": "Bộ Khoa học và Công nghệ (Ministry of Science and Technology)",
+     "level": "executive",
+     "legalForm": "national ministry and parent of STI bodies",
+     "status": "operating",
+     "established": {
+      "act": "national government organisation",
+      "date": null
+     },
+     "ended": null,
+     "meetsUnit": false,
+     "unitNote": "Fails section 1 conditions 3 and 4: no own exploratory mandate was found and relevant future-oriented work is science/technology-sector specific."
+    },
+    {
+     "name": "Viện Khoa học Khí tượng Thủy văn và Biến đổi khí hậu (Institute of Meteorology, Hydrology and Climate Change)",
+     "level": "statutory_body",
+     "legalForm": "public environmental research institute",
+     "status": "operating",
+     "established": {
+      "act": "official institutional record",
+      "date": null
+     },
+     "ended": null,
+     "meetsUnit": false,
+     "unitNote": "Fails section 1 condition 4: long-term climate scenarios are confined to the climate/environment domain, not cross-policy foresight."
+    }
+   ],
+   "items": {
+    "I1": {
+     "value": 0,
+     "function": null,
+     "confidence": "high",
+     "note": "Official executive, planning, science/technology and legislature sources identified strategy and forecast bodies but no organisational body meeting the exploratory-foresight and cross-policy conditions.",
+     "sources": [
+      {
+       "url": "https://www.mof.gov.vn/btcvn/co-cau-to-chuc/vien-chien-luoc-va-chinh-sach-kinh-te-tai-chinh",
+       "archived": null,
+       "archivedNote": "not requested: source supports a 0 only",
+       "retrievedAt": "2026-10-16",
+       "quote": "nghiên cứu, tham mưu về chiến lược, chính sách kinh tế - tài chính"
+      },
+      {
+       "url": "https://quochoi.vn/viennghiencuulapphap/gioithieu/Pages/nhiem-vu.aspx?ItemID=277",
+       "archived": null,
+       "archivedNote": "not requested: source supports a 0 only",
+       "retrievedAt": "2026-10-16",
+       "quote": "Nhiệm vụ, quyền hạn của Viện Nghiên cứu lập pháp"
+      }
+     ]
+    },
+    "I2": {
+     "value": 0,
+     "function": null,
+     "product": null,
+     "confidence": "high",
+     "note": "No operating GFF exists to issue a qualifying product.",
+     "sources": []
+    },
+    "I3": {
+     "value": 0,
+     "reason": null,
+     "change": null,
+     "confidence": "high",
+     "note": "No operating GFF exists.",
+     "sources": []
+    },
+    "I4": {
+     "value": 0,
+     "confidence": "high",
+     "note": "Several candidate planning, research and legislative bodies were merged or closed, including the Institute for Legislative Studies, but none met the GFF unit before closure.",
+     "sources": [
+      {
+       "url": "https://quochoi.vn/pages/tim-kiem.aspx?ItemID=92095",
+       "archived": null,
+       "archivedNote": "not requested: source supports a 0 only",
+       "retrievedAt": "2026-10-16",
+       "quote": "Kết thúc hoạt động của Viện Nghiên cứu lập pháp, chuyển chức năng, nhiệm vụ"
+      }
+     ]
+    }
+   },
+   "score": 0,
+   "searched": [
+    "site:chinhphu.vn strategic foresight OR horizon scanning OR nghiên cứu tương lai OR kịch bản dài hạn",
+    "site:vanban.chinhphu.vn dự báo chiến lược OR nghiên cứu tương lai OR hoạch định tương lai",
+    "site:mpi.gov.vn chức năng nhiệm vụ Viện Chiến lược phát triển NCIF dự báo",
+    "site:mof.gov.vn Viện Chiến lược Chính sách kinh tế tài chính chức năng",
+    "site:most.gov.vn chức năng cơ cấu chiến lược chính sách khoa học công nghệ",
+    "site:quochoi.vn dự báo chiến lược OR nghiên cứu tương lai OR Viện Nghiên cứu lập pháp chức năng",
+    "site:isos.gov.vn dự báo chiến lược chức năng trung tâm",
+    "official-domain searches for giải thể, kết thúc hoạt động, sáp nhập and chuyển chức năng"
+   ],
+   "rejected": [],
+   "batch": "B2",
+   "model": "gpt-5"
+  }
+ ]
+}
