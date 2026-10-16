@@ -9,6 +9,18 @@ The entries before App 1.0.0 are retrospective, high-level summaries
 reconstructed from the repository history. They document explicit version bumps
 and may skip versions that were never committed.
 
+## App 1.31.4 — 2026-10-16
+
+- **Every country is now checked for regulatory sandbox activity.** Seven
+  new records and 25 no-case notes close the column. Georgia's central bank
+  took 19 firms through real-environment testing from 2021, Uzbekistan's
+  capital market sandbox registered 24 firms from 2024, and New Zealand's
+  financial markets regulator admitted six of 24 applicants to its 2025
+  pilot. The records for Egypt, Iran, Belgium and Moldova count projects or
+  applications, because those regulators publish no firm count. None of the
+  seven is a reversal. The 25 notes name the sources searched and the first
+  test each candidate failed.
+
 ## App 1.31.3 — 2026-10-16
 
 - **The list of known limits matches the current dataset.** Every figure on

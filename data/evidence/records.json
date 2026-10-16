@@ -27921,6 +27921,250 @@
           "Import capacity, public or private, when the domestic harvest fails"
         ]
       }
+    },
+    {
+      "id": "egy-fra-sandbox",
+      "indicatorId": "regulatory_sandbox_activity",
+      "iso3": "EGY",
+      "title": "FRA Sandbox of the Financial Regulatory Authority",
+      "claim": "Egypt's Financial Regulatory Authority launched its regulatory sandbox for non-banking financial services in July 2025 under Law No. 5 of 2022 and Board Decree No. 163 of 2024, and by its first annual report (September 2026) had received 49 applicants, held seven projects at initial approval and moved two, GIG Egypt and Lumin Soft with Azimut, into live testing.",
+      "metric": {
+        "name": "Sandbox projects initially approved, not yet in live testing",
+        "value": 7,
+        "unit": "projects",
+        "asOf": "2026-09"
+      },
+      "secondMetric": {
+        "name": "Sandbox projects in live testing",
+        "value": 2,
+        "unit": "projects",
+        "asOf": "2026-09"
+      },
+      "started": 2025,
+      "status": "operating",
+      "source": {
+        "publisher": "Financial Regulatory Authority (FRA), FRA Sandbox Annual Report",
+        "url": "https://api.frasandbox.com/assets/annual_report-1788702864237-Final-Annual-6-Sep-2.pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-16"
+      },
+      "limits": "The regulator reports on its own programme, in a promotional annual report with no reference period stated beyond the July 2025 launch, and the figures are a PDF read (printed pages 10 and 12) with no machine-readable series. The two figures are counted separately: the report names nine projects, two of them in live testing and seven others at initial approval, so the seven appear to exclude the two live tests, but the report does not state a total. Several projects are pairs of a technology firm and a licensed insurer, broker or asset manager, so the count is of projects and not of distinct firms; EG Insurtech appears in two projects. No project has yet exited: the first live test began in July 2026 and the second was expected in September 2026, so firms completing the regime, half of what the indicator asks for, cannot be counted. Initial approval is admission to evaluation, not permission to serve customers. Only the non-banking regulator is covered. The Central Bank of Egypt has run a separate banking sandbox since 2019, with an e-KYC first cohort, and publishes no participant count, so Egypt's banking-side activity is absent from this record. Press reports in 2026 gave other application counts (38, then more than 50), so the 49 applicants figure moves with the date of the statement.",
+      "pattern": {
+        "mechanism": "The Financial Regulatory Authority used the sandbox clause in the 2022 FinTech law to set up a staged regime, application, initial approval, live testing and an exit decision for market entry, extension or rejection, and admitted competing firms to test the same use case, such as two remote motor inspection tools and two ePassport eKYC tools, side by side.",
+        "preconditions": [
+          "A statute that lets the non-bank regulator run a sandbox itself or through a delegated body",
+          "Licensed insurers, brokers and asset managers willing to partner with technology firms, since most projects are such pairs",
+          "Rules the tests can point to, such as the regulator's digital identity and eKYC decree, so a completed test has a rule to change or confirm"
+        ]
+      }
+    },
+    {
+      "id": "irn-cbi-sandbox",
+      "indicatorId": "regulatory_sandbox_activity",
+      "iso3": "IRN",
+      "title": "Mohit-e azmoon-e tanzimgari (regulatory sandbox) of the Central Bank of the Islamic Republic of Iran",
+      "claim": "The Central Bank of Iran's regulatory sandbox, run by its subsidiary the National Informatics Corporation as secretariat, received 10 applications in its first call (July to August 2022) and admitted two to testing, rejected seven and saw one withdrawn, and a second call drew five applications, all of which were under review when the secretariat published its one-year report in August 2023.",
+      "metric": {
+        "name": "Applications admitted to testing in the first call",
+        "value": 2,
+        "unit": "applications admitted",
+        "asOf": "2022 (first call, July to September 2022)"
+      },
+      "secondMetric": {
+        "name": "Applications received in the first call",
+        "value": 10,
+        "unit": "applications",
+        "asOf": "2022 (first call, July to September 2022)"
+      },
+      "started": 2022,
+      "status": "operating",
+      "source": {
+        "publisher": "National Informatics Corporation (sandbox secretariat of the Central Bank of the Islamic Republic of Iran), one-year performance report of the CBI regulatory sandbox",
+        "url": "https://www.nicholding.ir/wp-content/uploads/2023/08/C.B.I-sandbox-performance-report.pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-16"
+      },
+      "limits": "The figures are read from a slide deck in Persian (page 15 of an 18-page PDF, a table of calls held), not from a statistical series, and the publisher is the central bank's own subsidiary reporting on a programme it runs. The National Informatics Corporation is the secretariat and executor named by the central bank, not the central bank itself; the central bank's own site (cbi.ir) refused the request and the sandbox portal (cbisandbox.nicholding.ir) did not resolve on 2026-10-16. The counts are of applications (plans), not of distinct firms, and the report does not name the admitted firms. Two admissions in a country of about 90 million people is a very thin flow. The report gives no admission figure for the second call; a press account of the same report says one of the five was later accepted, and another press account says seven plans were admitted in the first year, which the report's own table does not support. The secretariat's press accounts describe the second admitted plan as a cryptocurrency or e-wallet test while the report labels it PayTech, so the plan's subject is not settled. The lending-technology test led to a draft decision document sent to the steering council in mid-2023; whether a rule changed is not shown. No later count was found: the secretariat handed day-to-day operation to its innovation unit Faranik in December 2024, and nothing published since gives admissions or exits. The capital market sandbox of the Securities and Exchange Organization is not counted here.",
+      "pattern": {
+        "mechanism": "The central bank delegated a sandbox to its own technology holding company, which ran time-boxed open calls on named themes (lending, payments, regtech, suptech), screened plans through a technical committee and a steering council, and monitored admitted plans in six-month phases ending in a decision document meant to update rules.",
+        "preconditions": [
+          "A legal basis in the Monetary and Banking Law and a resolution of the Supreme Council of Cyberspace's regulation commission authorising the sandbox",
+          "A central bank subsidiary with staff to run calls, assess applications and monitor tests",
+          "Fintech firms whose products, such as peer lending, sat outside existing banking rules"
+        ],
+        "travelled": "Iran ran parallel sector sandboxes: the Securities and Exchange Organization opened a capital market sandbox, and the Ministry of Economy kept a coordinating meta-sandbox above the two."
+      }
+    },
+    {
+      "id": "uzb-napp-capital-market-sandbox",
+      "indicatorId": "regulatory_sandbox_activity",
+      "iso3": "UZB",
+      "title": "Regulatory sandbox (special legal regime) in the capital market of the National Agency of Perspective Projects",
+      "claim": "The National Agency of Perspective Projects of Uzbekistan registered 24 firms in its capital market regulatory sandbox between 26 February 2024 and 12 October 2026: two in 2024 and four in 2025, all six foreign banks, brokers or depositories, then 18 in 2026, mostly Uzbek banks and investment intermediaries, and the register showed no participant stripped of its status.",
+      "metric": {
+        "name": "Firms registered as participants of the capital market special regime, counted from the register",
+        "value": 24,
+        "unit": "firms (cumulative)",
+        "asOf": "2026-10-12"
+      },
+      "secondMetric": {
+        "name": "Firms registered in 2026, counted from registration dates in the register",
+        "value": 18,
+        "unit": "firms",
+        "asOf": "2026-10-12"
+      },
+      "started": 2024,
+      "status": "operating",
+      "source": {
+        "publisher": "National Agency of Perspective Projects of the Republic of Uzbekistan (NAPP), Register of participants of the special regime in the capital market (Reestr uchastnikov spetsialnogo rezhima v sfere rynka kapitala)",
+        "url": "https://napp.uz/ru/pages/kapital-bozori-sohasidagi-maxsus-rejim-ishtirokchilari-reyestri",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-16"
+      },
+      "limits": "Both counts are ours, made by reading the rows of the register page: it numbers 24 participants (#0001 to #0024) with decision numbers and dates, and states no total or annual figure. The register counts admissions only. Its column for the date and ground of loss of participant status is empty for every row, so no firm is shown completing or leaving the regime, and the half of the construct that asks for exits cannot be counted. The regime grants access more than it tests products: the agency describes it as letting foreign nominee holders operate in Uzbekistan without a separate licence, branch or local entity, and later rows admit domestic banks as agent banks, issuers or custodians, so a reviewer could read it as a licensing shortcut rather than a controlled trial. The 2026 surge of 18 firms in four months may reflect one product rollout reaching many banks at once rather than 18 separate experiments; the register does not describe what each firm tests. The agency reports on its own regime. Other Uzbek regimes were counted separately and are not in this number: the same agency's crypto-asset special regime register lists five pilot projects by four firms since April 2023, three ended on expiry of their term, and its mortgage bond, investment platform and stablecoin regimes list one, two and one participants; the Central Bank of Uzbekistan's sandbox, set up in October 2022, publishes no participant count.",
+      "pattern": {
+        "mechanism": "A presidential decree (PP-291, September 2023) ordered a special legal regime for the capital market, the agency registered its rules with the Ministry of Justice in January 2024, and it admits firms one by one by numbered decision into a public register, first foreign intermediaries entering without a local licence and then domestic banks and brokers.",
+        "preconditions": [
+          "A capital market regulator with authority to grant time-limited exemptions from licensing by its own decision",
+          "A presidential push to open the domestic securities market to foreign intermediaries and investors",
+          "A public register kept row by row, with a column for loss of status"
+        ],
+        "travelled": "The agency reuses the same register format for its crypto-asset, stablecoin, mortgage bond and investment platform special regimes, so one model of special regime now covers five separate markets under one regulator."
+      }
+    },
+    {
+      "id": "bel-brugel-projets-innovants",
+      "indicatorId": "regulatory_sandbox_activity",
+      "iso3": "BEL",
+      "title": "BRUGEL derogation framework for innovative energy projects (projets innovants)",
+      "claim": "BRUGEL, the Brussels-Capital energy regulator, granted derogations from market and tariff rules to energy-sharing pilot projects under article 90 of the Brussels electricity ordinance as amended on 23 July 2018, and states that six such pilot projects started from 2020 until the derogation framework ended when the ordinance of 17 March 2022 entered into force.",
+      "metric": {
+        "name": "Energy-sharing pilot projects that started under the derogation framework",
+        "value": 6,
+        "unit": "pilot projects",
+        "asOf": "2020-2022"
+      },
+      "started": 2020,
+      "status": "concluded",
+      "source": {
+        "publisher": "BRUGEL (Commission de régulation de l'énergie en Région de Bruxelles-Capitale), Projet d'étude BRUGEL-Etude-20230425-45, Coûts-avantages relative aux communautés d'énergie et au partage d'électricité",
+        "url": "https://brugel.brussels/publication/document/etudes/2023/fr/ETUDE-45-COUT-AVANTAGE-PARTAGE-CONSULTATION.pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-16"
+      },
+      "limits": "The count is of pilot projects, not of firms: the participants are energy communities, a business incubator, a social housing building and co-ownership associations, with the distribution system operator Sibelga metering each one. The regulator reports on its own programme. The number is read from a PDF: the regulator's cover note (page 4) says six projects started, while the consultant's annex in the same file (page 21) describes five, so the figure is uncertain by one. The study is a consultation draft dated 25 April 2023. Six projects in about two years in a region of about 1.2 million people is a small flow, and the framework covered energy sharing and the connection of decentralised production only. The derogations ran for two years, some with an extension, and the source does not say how each project exited. The framework ended because the 2022 ordinance transposed the EU directives and put energy sharing into ordinary rules, so its end is a rule change and not a documented failure. It covers one region: the Flemish regulatory-free zone for energy (Thor Park, recognised 2020) and the Walloon pilot projects under article 27 of the electricity decree are separate regimes that this number does not include.",
+      "pattern": {
+        "mechanism": "The regional energy regulator used a statutory derogation clause to let named energy-sharing projects operate outside market and tariff rules for a limited time and area, studied the results with the grid operator, and the regional parliament then wrote energy sharing into ordinary law.",
+        "preconditions": [
+          "A statute that lets the regulator set specific market and tariff rules for delimited pilot zones",
+          "A distribution system operator able to install smart meters and bill local volumes separately",
+          "An EU directive that was going to require a permanent energy-sharing regime, which gave the pilots a rule to inform"
+        ],
+        "travelled": "Flanders recognised Thor Park in Genk as a regulatory-free zone for energy in 2020, and Wallonia's regulator authorises pilot projects under its own decree; the three Belgian regions run separate regimes for the same purpose."
+      }
+    },
+    {
+      "id": "nzl-fma-sandbox",
+      "indicatorId": "regulatory_sandbox_activity",
+      "iso3": "NZL",
+      "title": "FMA regulatory sandbox pilot",
+      "claim": "New Zealand's Financial Markets Authority announced a pilot fintech regulatory sandbox in December 2024 and on 29 April 2025 admitted six firms, chosen from 24 applications, to test products, services or business models with FMA guidance; in December 2025 the FMA said the pilot was still running and closed to new participants.",
+      "metric": {
+        "name": "Firms admitted to the pilot regulatory sandbox",
+        "value": 6,
+        "unit": "firms",
+        "asOf": "2025-04-29"
+      },
+      "secondMetric": {
+        "name": "Applications received for the pilot regulatory sandbox",
+        "value": 24,
+        "unit": "applications",
+        "asOf": "2025-04-29"
+      },
+      "started": 2025,
+      "status": "operating",
+      "source": {
+        "publisher": "Financial Markets Authority (Te Mana Tātai Hokohoko), media release MR No. 2025-12, FMA confirms fintech sandbox participants",
+        "url": "https://www.fma.govt.nz/news/all-releases/media-releases/fintech-sandbox-participants/",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-16"
+      },
+      "limits": "Six admissions in one cohort is a pilot, and the FMA reports on its own programme. The FMA describes the sandbox as regulatory guidance and support for firms testing in the market, and neither the release nor the sandbox page names any rule that was relaxed, so it reads closer to supervised testing than to a waiver regime. The FMA publishes no count of firms that completed, exited or withdrew: its sandbox page (last updated 23 December 2025) lists the same six as past and current participants without saying which have finished. A later FMA report on the pilot, Supporting innovation in New Zealand financial markets, may carry outcomes but could not be read. One of the six, Invest in Farming Co-op, is Australian-based. The count covers the FMA only: MBIE's Airspace Integration Trials programme and the Electricity Authority's Code exemptions for trials admit firms on their own terms and are not summed here. The FMA website answers automated requests with a bot check, so both pages were read in Internet Archive captures (release captured 22 April 2026, sandbox page captured 9 June 2026); a reviewer with a browser can open the live pages.",
+      "pattern": {
+        "mechanism": "The securities and conduct regulator ran an open call, selected a small cohort of firms with products ready for customers against published criteria, and gave each regulatory guidance while it tested in the New Zealand market, with the stated aim of learning where its rules block innovation.",
+        "preconditions": [
+          "A conduct regulator with a fintech team able to supervise each firm's test plan",
+          "An industry body (FintechNZ) to help design the call and reach applicants",
+          "Firms with a product ready to test on real customers whose regulatory treatment was unclear"
+        ]
+      }
+    },
+    {
+      "id": "geo-nbg-regulatory-laboratory",
+      "indicatorId": "regulatory_sandbox_activity",
+      "iso3": "GEO",
+      "title": "Regulatory Laboratory (regulatory sandbox) of the National Bank of Georgia",
+      "claim": "The National Bank of Georgia, under a sandbox framework it approved in May 2020, took 19 supervised firms through the final real-environment stage of its Regulatory Laboratory between June 2021 and June 2026, 14 of them banks, microfinance organisations and payment firms testing remote identification in 2021, and listed one further project, the Ranko credit-offer platform, in real-environment testing in October 2026.",
+      "metric": {
+        "name": "Firms listed as having completed real-environment testing, counted from the Completed Projects page",
+        "value": 19,
+        "unit": "firms (cumulative)",
+        "asOf": "2026-06-19"
+      },
+      "secondMetric": {
+        "name": "Projects listed as currently in real-environment testing",
+        "value": 1,
+        "unit": "projects",
+        "asOf": "2026-10-16"
+      },
+      "started": 2021,
+      "status": "operating",
+      "source": {
+        "publisher": "National Bank of Georgia, Regulatory Laboratory: Completed Projects",
+        "url": "https://nbg.gov.ge/en/page/completed-projects",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-16"
+      },
+      "limits": "Both counts are ours, made by reading the rows of two central bank pages; neither page states a total. The Completed Projects page lists 20 rows, but Microfinance Organization Micro Business Capital appears twice with the same project and date, so the count is 19 firms. The page lists completions only: it does not say how many firms applied, how many entered the first two stages (idea and concept testing) and were stopped there, or whether any test failed, so firms that exited without success, half of what the indicator asks for, cannot be counted and the list may show only successes. The flow is lumpy: 15 of the 20 rows are remote identification tests closed between June and November 2021, a COVID-era wave in which most banks tested the same face-recognition onboarding service, so the 2021 peak counts near-identical tests rather than distinct innovations. After 2021 the list shows one completion in March 2025, three online currency conversion services in August and September 2025 and a virtual-asset-secured loan in June 2026. The central bank opened later thematic calls (escrow services, tokenized deposits, equity crowdfunding, an AI sandbox, tokenized bonds), and none of these appears among completed or live tests. The page does not say whether any completion led to a rule change. Only the central bank, which supervises banking, non-bank, payment and capital market firms, is covered; no other Georgian regulator was found running a trial regime.",
+      "pattern": {
+        "mechanism": "The central bank wrote a three-stage sandbox framework (idea, concept, then live testing on a limited number of users) open to firms it already supervises, and publishes each firm's project and the date its live test ended.",
+        "preconditions": [
+          "An integrated supervisor whose remit covers banks, microfinance, payment and capital market firms, so one framework reaches the whole financial sector",
+          "A specific rule blocking demand at a given moment, here in-person identification during the COVID-19 pandemic",
+          "A public page kept current row by row with completion dates"
+        ],
+        "travelled": "The central bank reframed the sandbox in 2025 under Order No. 125/04 and moved from open intake to thematic calls, but the published list shows the remote identification wave of 2021 remains most of its throughput."
+      }
+    },
+    {
+      "id": "mda-energy-sandbox",
+      "indicatorId": "regulatory_sandbox_activity",
+      "iso3": "MDA",
+      "title": "Energy Sandbox (spatii de testare inovativa in domeniul energiei)",
+      "claim": "Moldova's Commission for Innovative Testing Spaces, established under Government Decision No. 66/2025 and run from the Ministry of Energy, completed its second round of evaluation in January 2026 and selected three projects for testing, from the consortium led by Wise Agile SRL, from Sandrologic Grup S.R.L. and from the Romanian company SC Bluenote Communications SA.",
+      "metric": {
+        "name": "Projects selected for testing in the second evaluation round",
+        "value": 3,
+        "unit": "projects",
+        "asOf": "2026-01"
+      },
+      "started": 2025,
+      "status": "operating",
+      "source": {
+        "publisher": "Ministry of Energy of the Republic of Moldova, release 'Three more projects selected for the Energy Sandbox in the second round of project evaluation' (27 January 2026)",
+        "url": "https://energie.gov.md/en/node/46589",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-16"
+      },
+      "limits": "Selection is not testing. A Ministry release of 3 February 2026 (https://energie.gov.md/en/node/46601) says the Ministry had only begun drafting the Government Decision that sets the exemptions for the Wise Agile project, and no later page on the Ministry site shows decisions adopted or tests started for any of the three. Only one project has its exemptions in force: the Government approved a vehicle-to-grid test by the NGO Green City Lab Moldova on 23 December 2025 for three years (https://energie.gov.md/en/node/46515), and the Ministry calls it 'purely experimental and educational'. That makes four projects selected in all, one of them by a non-profit, and none has completed, so the exit half of the construct cannot be counted. The count is of projects, and one project is a consortium of three firms. A Ministry release of 16 January 2026 (https://energie.gov.md/en/node/46554) says six applications were registered for the second round, three from Romanian companies. The Ministry reports on its own mechanism, which UNDP Moldova built with funding from Denmark, Luxembourg, South Korea and Sweden, and every figure comes from press releases: the sandbox site (sandbox.energie.gov.md) publishes no project register and shows no open call. Only the energy sector is covered. The National Bank of Moldova and the National Commission for Financial Markets run no financial sandbox, so this is Moldova's whole sandbox flow, not one regulator among several.",
+      "pattern": {
+        "mechanism": "Parliament passed a sandbox law for energy in 2024, the Government set up an interministerial commission in 2025 to select projects, and each selected project then receives its own Government Decision naming the holder, the exemptions from electricity law and their duration of up to seven years.",
+        "preconditions": [
+          "A statute that lets the Government grant time-limited exemptions from primary energy legislation",
+          "Donor funding and technical help to build the mechanism, its portal and its commission",
+          "A Government willing to pass one decision per project, which makes each admission slow"
+        ]
+      }
     }
   ]
 }
