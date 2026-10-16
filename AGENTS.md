@@ -434,7 +434,10 @@ port 3888. That entry starts Next directly and does not use the proxy.
   folder `/brasil`, named for its registry slug. The 17 Latin American
   countries scored on all nine dimensions read in Spanish (es-419), and Spain
   reads through `es-ES`, a thin override of that base (`withOverride` in
-  `packages/core/src/i18n/override.ts`), all through one dynamic `[layer]` route that serves
+  `packages/core/src/i18n/override.ts`). Portugal, Angola, Mozambique and
+  Guinea-Bissau read through `pt-PT`, an override of the Brazilian base, and
+  ship together: Portugal never ships without the other three (D165). All of
+  them go through one dynamic `[layer]` route that serves
   every registry entry without a folder: an overview computed from the
   published files, the agenda and the map, and nothing hand-written about the
   country. Add a layer as a registry entry, never as a copied folder. A
@@ -442,7 +445,7 @@ port 3888. That entry starts Next directly and does not use the proxy.
   command renders only those, and `layers.ts` checks the two lists agree at
   load. The map pages of every layer, and the ground layer's English map,
   render the shared components in `apps/web/src/components/layer/` through
-  `mapWords` in `words.ts`. See D134, D136 and D162. Never add a
+  `mapWords` in `words.ts`. See D134, D136, D162 and D165. Never add a
   language switch, never branch on `Accept-Language`, never honour a `?lang=`
   on a ground-layer page, and never put a layer in the primary nav: a layer
   serves one country's audience and is reached from that country's pages. A

@@ -9013,3 +9013,69 @@ A funder who wants to back one has no page that names it.
 
 **Overturned by.** The owner deciding to take outside money, which would
 bring back a funding section with a scope and an effect on each piece.
+
+## D165 — Portugal, Angola, Mozambique and Guinea-Bissau get layers together, read through the Brazilian base
+
+*Recorded 2026-10-16. Extends D134 and D162 and answers the Portuguese half
+of issue #85, under the rules the owner set there on 2026-10-03.*
+
+**Decision.** Portugal, Angola, Mozambique and Guinea-Bissau each get the
+layer D134 set: an overview, the agenda and the capability map, served by the
+`[layer]` route at `/portugal`, `/angola`, `/mocambique` and
+`/guine-bissau`. The four ship in one release. Portugal never ships alone or
+ahead of the other three.
+
+The rules of D162 apply, with Portuguese in place of Spanish:
+
+1. **The larger speaker community sets the base.** `pt-br.ts` is the base
+   Portuguese. The four countries read through `pt-pt.ts`, a thin override
+   built with `withOverride`. It holds the number formatting (a point
+   between thousands), `layerCountries` and only the strings a reader there
+   writes differently: the European spelling of the 1990 agreement
+   ("registo", "secção", "artefacto", "controlo"), the enclitic pronoun
+   ("preparar-se", "assenta em"), "rendimento" for income because "renda" is
+   the rent, "investigação" and "I&D" for research, "inquérito" for a
+   survey, "população ativa", "valor acrescentado", the European names of
+   countries, and "Propósito partilhado" for shared purpose. The map
+   addresses follow the lexicon, so the last one is
+   `/<layer>/mapa/proposito-partilhado`. "Pontuação" and "solidez" are the
+   base's and do not change.
+2. **Lusophone Africa ships with the former metropole or before it.**
+3. **Peers stay rule-based.** No page sets a former colony beside Portugal
+   unless the income rule does, and no sentence reads a country as behind
+   Portugal.
+
+Mechanism. `Lang` regains `pt-PT`, which D162 removed while no lexicon
+existed. `LEXICONS` holds the override, the agenda command renders
+`{ISO3}.pt-PT.md` for the four countries only, and the load-time check in
+`layers.ts` holds the lexicon and the layer registry to the same four codes.
+`LAYER_WORDS['pt-PT']` adds the overview and agenda page words the Brazilian
+entry lacks, because Brazil's overview is a page of its own. The chrome reads
+`CHROME_WORDS_PT_PT`, the Brazilian chrome with only its differences laid
+over it ("Pesquisar", "Secções", "Contacto"). `evidence-pt-pt.ts` gives the
+29 evidence records filed against the four countries in European Portuguese,
+and `pt-pt.test.ts` holds each one to the record's figures. Every page
+template that names the country puts it at the start of a sentence or after
+"para" or "sobre", so no article has to contract ("de a Guiné-Bissau"), and
+the lexicon declares no contractions.
+
+**Why.** Rule 2 of #85: a Portuguese reading for the metropole alone would
+make Portugal the Portuguese-speaking country the benchmark speaks to. The
+four countries are the lusophone countries in the frame apart from Brazil,
+all scored on the nine dimensions in this release.
+
+**Cost.** Four more layers to keep in step with the lexicon. Angola has not
+ratified the 1990 orthographic agreement and Mozambique applies it unevenly,
+so one spelling serves four countries whose own usage differs. The pages
+name country, survey and institution in the European form even where an
+Angolan or Mozambican reader would write it otherwise. The overview counts
+scored capabilities with the base's masculine count words, which read
+correctly from three upward; a country with one or two scored capabilities
+would print "um" or "dois" where the noun is feminine. The copy, the 29
+evidence records included, was written by Claude and not reviewed by a
+native speaker of any of the four varieties.
+
+**Overturned by.** A native reviewer showing that one spelling misreads
+Angolan or Mozambican usage in a way a reader notices, which would call for a
+per-country override on top of pt-PT; or a layer that its country's readers
+do not use, which would argue for withdrawing the computed layers.

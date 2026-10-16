@@ -9,6 +9,18 @@ The entries before App 1.0.0 are retrospective, high-level summaries
 reconstructed from the repository history. They document explicit version bumps
 and may skip versions that were never committed.
 
+## App 1.31.0 — 2026-10-16
+
+- **Portugal, Angola, Mozambique and Guinea-Bissau now have readings in
+  European Portuguese.** Each country has an overview, a capability map and
+  an agenda at /portugal, /angola, /mocambique and /guine-bissau. All four
+  ship together in this release, and Portugal's reading came no earlier than
+  the others. The text starts from the Brazilian Portuguese of /brasil and
+  changes the words a reader in these countries uses differently, such as
+  "rendimento" for income and "investigação" for research. On these pages the
+  header, footer and search are in Portuguese, and the agendas give the 29
+  evidence records about the four countries in Portuguese. Decision D165.
+
 ## App 1.30.1 — 2026-10-16
 
 - **The ways to help ask for no money.** Envisioning pays for the work. The

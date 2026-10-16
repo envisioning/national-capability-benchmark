@@ -21,7 +21,7 @@ import type { ConfidenceBandId } from '../pipeline/confidence.js'
  * lookup falls back to the registry's English name when a translation is
  * missing, so a partial lexicon renders complete pages from day one.
  */
-export type Lang = 'en' | 'pt-BR' | 'es' | 'es-ES'
+export type Lang = 'en' | 'pt-BR' | 'pt-PT' | 'es' | 'es-ES'
 
 export type AgendaStrings = {
   /** {country} */
@@ -142,7 +142,7 @@ export type Lexicon = {
   htmlLang: string
   /**
    * The lexicon this one is a regional override of, when it is one: es-ES
-   * reads through es (es-419). The override holds
+   * reads through es (es-419) and pt-PT through pt-BR. The override holds
    * number formatting and only the strings that differ; everything else is
    * the base's. The larger speaker community sets the base. See
    * `withOverride` and the Spanish layers decision.

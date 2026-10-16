@@ -1,4 +1,4 @@
-import { LEXICONS, countryName } from '@ncb/core'
+import { LEXICONS, countryName, mergeOverride } from '@ncb/core'
 import type { Lang, Lexicon } from '@ncb/core'
 import { layerBySlug } from '@/lib/layers'
 import type { NavNode } from '@/lib/nav'
@@ -249,6 +249,38 @@ const CHROME_WORDS_PT_BR: ChromeWords = {
 }
 
 /**
+ * The chrome in European Portuguese, for Portugal, Angola, Mozambique and
+ * Guinea-Bissau: the Brazilian chrome with only the words that differ laid
+ * over it. See D165.
+ */
+const CHROME_WORDS_PT_PT: ChromeWords = mergeOverride(CHROME_WORDS_PT_BR, {
+  sectionsAria: 'Secções',
+  breadcrumbAria: 'Percurso de navegação',
+  mobileSectionsAria: 'Secções',
+  nav: {
+    Contact: 'Contacto',
+  },
+  search: {
+    button: 'Pesquisar',
+    aria: 'Pesquisar no NCB',
+    placeholder: 'Pesquisar páginas, países, capacidades, indicadores…',
+    inputAria: 'Pesquisar páginas, países, capacidades e indicadores',
+    resultsAria: 'Resultados da pesquisa',
+  },
+  challenge: {
+    argument: 'O seu argumento',
+    sourceUrl: 'Ligação para a fonte',
+    publicNote:
+      'As contestações são públicas, ficam na página de contestações, em inglês, e começam a aguardar revisão. Um responsável pela manutenção pode acrescentar uma resposta assinada depois de as examinar.',
+    submitting: 'A enviar…',
+  },
+  footer: {
+    tagline:
+      'O NCB mede se um país consegue antecipar mudanças, coordenar-se perante elas e construir o que decide construir.',
+  },
+})
+
+/**
  * The chrome in Spanish, for every Spanish layer: the Latin American base
  * and Spain's es-ES reading share it, because none of these words differ
  * between the two. The pages these links reach are English, as the ground
@@ -351,6 +383,7 @@ const CHROME_WORDS_ES: ChromeWords = {
 const CHROME_WORDS: Partial<Record<Lang, ChromeWords>> = {
   en: CHROME_WORDS_EN,
   'pt-BR': CHROME_WORDS_PT_BR,
+  'pt-PT': CHROME_WORDS_PT_PT,
   es: CHROME_WORDS_ES,
   'es-ES': CHROME_WORDS_ES,
 }

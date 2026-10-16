@@ -2,12 +2,14 @@ import { EN } from './en.js'
 import { ES } from './es.js'
 import { ES_ES } from './es-es.js'
 import { PT_BR } from './pt-br.js'
+import { PT_PT } from './pt-pt.js'
 import type { Lang, Lexicon } from './types.js'
 
 export * from './types.js'
 export * from './institutions-pt-br.js'
 export { EN } from './en.js'
 export { PT_BR } from './pt-br.js'
+export { PT_PT } from './pt-pt.js'
 export { ES } from './es.js'
 export { ES_ES } from './es-es.js'
 export { mergeOverride, withOverride } from './override.js'
@@ -17,6 +19,7 @@ export type { DeepPartial, LexiconOverride } from './override.js'
 export const LEXICONS: Record<Lang, Lexicon> = {
   en: EN,
   'pt-BR': PT_BR,
+  'pt-PT': PT_PT,
   es: ES,
   'es-ES': ES_ES,
 }

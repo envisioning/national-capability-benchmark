@@ -1,4 +1,4 @@
-import { LEXICONS, countWord, ptCountWord } from '@ncb/core'
+import { LEXICONS, countWord, mergeOverride, ptCountWord } from '@ncb/core'
 import type { Lang } from '@ncb/core'
 import type { FlagFieldWords } from '@/components/FlagField'
 import type { ConditionListWords } from '@/components/views/ConditionList'
@@ -188,6 +188,46 @@ const ES_LAYER_WORDS: LayerWords = {
   },
 }
 
+/**
+ * The words of the European Portuguese layers: the Brazilian field and
+ * conditions words with only what differs laid over them, and page words of
+ * their own, because Brazil's overview is a page of its own and has none.
+ * Every overview sentence names the country after "para" or "sobre" or at
+ * the start, never after "de" or "em", so no article has to contract. The
+ * count words are the base's masculine ones; the only count they print is
+ * the number of scored capabilities, which reads alike in both genders from
+ * three upward. See D165.
+ */
+const PT_PT_LAYER_WORDS: LayerWords = {
+  countWord: ptCountWord,
+  field: mergeOverride(PT_FIELD_WORDS, {
+    clamped: 'Cortado na extremidade da escala; a posição real fica para lá dela.',
+    locale: LEXICONS['pt-PT'].numberLocale,
+  }),
+  conditions: mergeOverride(PT_CONDITION_WORDS, { rank: '{rank}.º de {n}' }),
+  noData: 'Ainda não há dados gerados. Execute pnpm bench all na raiz do repositório e recarregue.',
+  pages: {
+    overviewMetaTitle: '{country}, nove capacidades, NCB',
+    overviewMetaDescription:
+      'A leitura em português do NCB para {countryTopic}: a pontuação e a solidez da evidência de cada capacidade, o mapa entre os países de rendimento mais próximo e a agenda calculada.',
+    overviewTitle: 'Que pontuação obtém {countryTopic} em cada capacidade?',
+    overviewIntro:
+      'Esta leitura sobre {countryTopic} parte dos dados publicados e é recalculada em cada versão. Cada capacidade recebe uma pontuação de 0 a 100 numa escala que os {countries} países fixam em conjunto, e traz ao lado a solidez da evidência, um segundo número de 0 a 1. As capacidades não se somam e não há pontuação geral.',
+    scoresHeading: 'As nove capacidades seguem a ordem do modelo',
+    scoresIntro: '{n} das nove têm pontuação nesta versão. Cada nome abre o mapa dessa capacidade.',
+    readingsHeading: 'Onde continuar a ler?',
+    mapLink: 'O mapa de capacidades, face à mediana dos países de rendimento mais próximo',
+    agendaLink: 'A agenda de capacidades, com fontes, lacunas e casos documentados',
+    artefactsHeading: 'Que artefactos conhecidos afetam estas pontuações?',
+    artefactsIntro:
+      'Um artefacto conhecido é um ponto em que o modelo produz um número errado sobre o mundo. Estes são os que afetam as pontuações deste país, descritos em inglês na página de limites.',
+    artefactsStructural: 'Valem para todas as pontuações do NCB',
+    agendaMetaTitle: 'Agenda de capacidades: {country}, NCB',
+    agendaMetaDescription:
+      'A agenda de capacidades para {countryTopic}, calculada a partir dos dados publicados: as pontuações, a solidez da evidência e as lacunas de medição.',
+  },
+}
+
 export const LAYER_WORDS: Partial<Record<Lang, LayerWords>> = {
   'pt-BR': {
     countWord: ptCountWord,
@@ -195,6 +235,7 @@ export const LAYER_WORDS: Partial<Record<Lang, LayerWords>> = {
     conditions: PT_CONDITION_WORDS,
     noData: 'Ainda não há dados gerados. Rode pnpm bench all na raiz do repositório e recarregue.',
   },
+  'pt-PT': PT_PT_LAYER_WORDS,
   es: ES_LAYER_WORDS,
   /* Spain's reading uses the Spanish page words: none of them is a term the
    * es-ES override changes. Only the decimal comma differs. */

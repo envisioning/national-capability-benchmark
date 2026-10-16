@@ -5,8 +5,10 @@ import { layerBySlug } from '@/lib/layers'
 export const dynamic = 'force-dynamic'
 
 /**
- * Every country layer that has no folder of its own: the Spanish layers
- * today, 17 in Latin America and Spain (D134, D162). The segment is the layer's slug in `COUNTRY_LAYERS`,
+ * Every country layer that has no folder of its own: the Spanish layers, 17
+ * in Latin America and Spain (D134, D162), and the European Portuguese
+ * layers of Portugal, Angola, Mozambique and Guinea-Bissau (D165). The
+ * segment is the layer's slug in `COUNTRY_LAYERS`,
  * so a layer is added in the registry and never by copying a folder. Brazil
  * keeps `/brasil`, a static folder that wins over this segment, because its
  * overview, institutions and support pages are its own. Any other first

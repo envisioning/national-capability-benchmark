@@ -1,4 +1,4 @@
-import { ES, LEXICONS, MAP_DIMENSIONS, PT_BR, mapSlug } from '@ncb/core'
+import { ES, LEXICONS, MAP_DIMENSIONS, PT_BR, PT_PT, mapSlug } from '@ncb/core'
 import type { Dimension, Lang } from '@ncb/core'
 
 /**
@@ -14,9 +14,11 @@ import type { Dimension, Lang } from '@ncb/core'
  *
  * A layer exists only where that country-specific work is done, which is why
  * this registry is short. Brazil is the first, with its own pages under
- * `/brasil`. The Spanish layers, 17 in Latin America and Spain, hold the
- * computed sections only: an overview, the agenda and the capability map,
- * served by one `[layer]` route from this registry. See D69, D134 and D162.
+ * `/brasil`. The Spanish layers, 17 in Latin America and Spain, and the
+ * European Portuguese layers, Portugal, Angola, Mozambique and
+ * Guinea-Bissau, hold the computed sections only: an overview, the agenda
+ * and the capability map, served by one `[layer]` route from this registry.
+ * See D69, D134, D162 and D165.
  */
 
 /**
@@ -88,6 +90,19 @@ const SPANISH_LAYERS: readonly (readonly [string, string, 'es' | 'es-ES'])[] = [
   ['ESP', 'espana', 'es-ES'],
 ]
 
+/**
+ * The European Portuguese layers, read through pt-PT, a thin override of the
+ * Brazilian base. They ship together and never one without the others: the
+ * metropole does not read alone. The slug is the country's own name for
+ * itself without accents. See D165.
+ */
+const PT_PT_LAYERS: readonly (readonly [string, string])[] = [
+  ['PRT', 'portugal'],
+  ['AGO', 'angola'],
+  ['MOZ', 'mocambique'],
+  ['GNB', 'guine-bissau'],
+]
+
 export const COUNTRY_LAYERS: readonly CountryLayer[] = [
   {
     iso3: 'BRA',
@@ -125,6 +140,21 @@ export const COUNTRY_LAYERS: readonly CountryLayer[] = [
       sections: [
         { id: 'agenda', label: 'Agenda', slug: 'agenda' },
         { id: 'map', label: ES.capabilityMap.index.navLabel, slug: 'mapa' },
+      ],
+    }),
+  ),
+  ...PT_PT_LAYERS.map(
+    ([iso3, slug]): CountryLayer => ({
+      iso3,
+      slug,
+      label: PT_PT.countries[iso3] ?? iso3,
+      readingLabel: 'Em português',
+      lang: 'pt-PT',
+      overviewLabel: 'Visão geral',
+      /* The computed sections only, as for the Spanish layers. */
+      sections: [
+        { id: 'agenda', label: 'Agenda', slug: 'agenda' },
+        { id: 'map', label: PT_PT.capabilityMap.index.navLabel, slug: 'mapa' },
       ],
     }),
   ),

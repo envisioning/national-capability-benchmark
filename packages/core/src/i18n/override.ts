@@ -5,9 +5,10 @@ import type { Lang, Lexicon } from './types.js'
  *
  * The larger speaker community sets the base: Latin American Spanish (es,
  * written for es-419) is the base Spanish and Brazilian Portuguese (pt-BR)
- * the base Portuguese. Spain reads through es-ES, an override that holds
- * number formatting, its own layer countries and only the strings that
- * actually differ. An override is never the default the others are measured
+ * the base Portuguese. Spain reads through es-ES, and Portugal, Angola,
+ * Mozambique and Guinea-Bissau through pt-PT: overrides that hold number
+ * formatting, their own layer countries and only the strings that actually
+ * differ. An override is never the default the others are measured
  * against, and it is an orthography and a set of word choices, not a
  * standard of correct Spanish or Portuguese.
  *
