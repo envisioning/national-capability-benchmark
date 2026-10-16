@@ -9,6 +9,21 @@ The entries before App 1.0.0 are retrospective, high-level summaries
 reconstructed from the repository history. They document explicit version bumps
 and may skip versions that were never committed.
 
+## App 1.31.3 — 2026-10-16
+
+- **The list of known limits matches the current dataset.** Every figure on
+  the limits page now comes from dataset 9.3.0. Shared Purpose scores 118
+  countries and Experimentation 122, because values older than 15 years no
+  longer count. The page also says which panel estimates apply to this
+  release.
+- **Business registry data now covers more than half the countries.** The
+  World Bank's B-READY scores reach 74 of the 125 countries, above the 63
+  needed to replace the frozen 2019 Doing Business rows. The replacement
+  itself still needs a decision.
+- **Three source links work again.** The audit reports on the Commonwealth
+  Games, the UDAN regional air scheme and the Dedicated Freight Corridors
+  moved to a new address.
+
 ## App 1.31.2 — 2026-10-16
 
 - **Every country is now checked for disaster preparedness.** Fourteen new
