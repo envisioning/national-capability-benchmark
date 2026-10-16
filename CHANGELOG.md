@@ -9,6 +9,16 @@ The entries before App 1.0.0 are retrospective, high-level summaries
 reconstructed from the repository history. They document explicit version bumps
 and may skip versions that were never committed.
 
+## App 1.31.2 — 2026-10-16
+
+- **Every country is now checked for disaster preparedness.** Fourteen new
+  records and seven no-case notes close the column. Czechia's permanent
+  civil-protection shelters are the reversal: they held places for about 10
+  percent of the population in 1995 and hold about 310,000 people now.
+  Burkina Faso, the Republic of the Congo, Guinea-Bissau, Lesotho,
+  Lithuania, Papua New Guinea and Trinidad and Tobago close with a note
+  that names the sources searched.
+
 ## App 1.31.1 — 2026-10-16
 
 - **Every country is now checked for institutional responsiveness.**

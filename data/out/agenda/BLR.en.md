@@ -142,6 +142,7 @@ Documented deliveries linked to missing indicators. They do not affect scores or
 
 - **M6 Minsk to Grodno transit corridor upgrade** (Building). Belarus's Ministry of Transport and Communications widened 154 km of the M6 Minsk to Grodno highway to dual carriageway under a loan approved in December 2014, against 86 km planned, after civil works for the planned sections were awarded for less than half the estimate; the corridor component cost US$242.15 million against US$259.28 million at entry, and the loan closed in June 2022 against an original June 2020.
 - **Belarusian nuclear power plant (BelAES), delivered behind schedule** (Building). Belarus started building its first nuclear power plant at Ostrovets in November 2013, a two-unit WWER-1200 plant totalling 2,400 MW. Its regulator's 2019 report scheduled unit 1 for 2019 and unit 2 for 2020. Unit 1 was commissioned in 2021 and unit 2 in October 2023, three years after the 2019 schedule.
+- **State programmes to overcome the consequences of the Chernobyl disaster** (Adaptability). Belarus ran six state programmes on the consequences of the Chernobyl disaster from 1990 to 2025, on which the government reports spending more than 20 billion US dollars equivalent; 138,000 residents were evacuated and resettled from 450 settlements, and by 2025 about 1.3 million people a year, including more than 211,700 children and adolescents, received special medical screening.
 
 ## Contribute
 

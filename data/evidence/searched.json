@@ -3642,6 +3642,311 @@
         }
       ],
       "note": "Belarus's documented responses to the 2020 pandemic shock and the 2022 sanctions shock rest either on donor project documents for reforms that were dropped or on rule changes with no published delivery figure. The newest independent IMF review found predates both shocks, which leaves few open numbers for any rule change since."
+    },
+    {
+      "iso3": "BFA",
+      "indicatorId": "disaster_preparedness",
+      "checkedAt": "2026-10-16",
+      "searched": [
+        "National civil-protection or disaster-management agency reports on a delivered warning, shelter, reserve, protection or recovery programme (SP/CONASUR, SONAGESS, DGPC)",
+        "Supreme audit institution reports on disaster-preparedness programmes (Cour des comptes du Burkina Faso)",
+        "World Bank/ADB/AfDB/EU implementation completion reports and evaluations of disaster-risk programmes, and IFRC/UN post-disaster reports",
+        "World Bank Documents API, all documents for P164078 Strengthening Climate Resilience in Burkina Faso, and Implementation Completion Reports for Burkina Faso matching flood, disaster or drought",
+        "World Bank ISR for P164078, November 2024",
+        "SONAGESS website (sonagess.bf), front page and the March 2024 Tanzania study-visit article",
+        "Grain de sel no. 54-56 interview with SONAGESS (inter-reseaux.org)",
+        "Courrier confidentiel, 15 July 2022, on the level of the stock national de sécurité",
+        "Sidwaya, 31 August 2023, on the final report of the Unité de gestion des secours d'urgence for the 1 September 2009 floods",
+        "SP/CONASUR and OCHA situation report no. 1 on the 2020 floods (burkinafaso.un.org)"
+      ],
+      "candidates": [
+        {
+          "name": "Stock national de sécurité alimentaire managed by SONAGESS, and its reported decline (reversal search)",
+          "failed": "publisher_metric",
+          "why": "No official series of the stock level is published openly. SONAGESS's website reports purchase operations but no stock level, and the Grain de sel interview PDF does not render its tonnage figures. The only recent level, about 13,000 tonnes in July 2022 with more than 10,000 tonnes described as heavily degraded by an audit, appears in a press article whose full text is behind a 'lire la suite' wall and which cites an audit that is not published. No documented peak from the same publisher exists, so the reversal cannot be carried."
+        },
+        {
+          "name": "Recovery from the 1 September 2009 Ouagadougou floods, Unité de gestion des secours d'urgence and the Yagma and Bassinko resettlement sites",
+          "failed": "publisher_metric",
+          "why": "The unit's final report of December 2015 is not online. Its spending figures (17,144,975,670 FCFA in total, 5,554,723,967 FCFA for rehousing) are available only as quoted by the state daily Sidwaya, and household counts for the Yagma plots come from a student thesis. The GFDRR 2009 PDNA is a needs assessment, not a delivery record."
+        },
+        {
+          "name": "Strengthening Climate Resilience in Burkina Faso (World Bank P164078, hydromet and flood early warning, ANAM and DGPC)",
+          "failed": "delivered",
+          "why": "No Implementation Completion Report is published. The November 2024 ISR records the flood early warning indicator at 1 of 2 target areas, the local flood warning system (SAPCI) still in preparation, and 16,615 direct beneficiaries of food-security warnings, which is not a national-scale delivery."
+        },
+        {
+          "name": "SP/CONASUR flood response, 2020",
+          "failed": "delivered",
+          "why": "The SP/CONASUR and OCHA situation report counts damage and people affected (71,341 people affected, 563 in reception centres); it reports a response to one season, not a delivered warning, shelter, reserve or protection programme with an output figure."
+        },
+        {
+          "name": "Sendai Framework monitor and INFORM risk scores for Burkina Faso",
+          "failed": "publisher_metric",
+          "why": "Self-assessments and composite indices are excluded as the metric for this indicator."
+        }
+      ],
+      "note": "No documented national delivery in disaster preparedness for Burkina Faso can be carried by this protocol on 2026-10-16. The strongest candidates, the SONAGESS food security stock and the 2009 Ouagadougou flood recovery, have no openly published official figure; a published SONAGESS stock series or the 2015 final report of the Unité de gestion des secours d'urgence would reopen the cell."
+    },
+    {
+      "iso3": "COG",
+      "indicatorId": "disaster_preparedness",
+      "checkedAt": "2026-10-16",
+      "searched": [
+        "(1) national civil-protection or disaster-management agency reports on a delivered warning, shelter, reserve, protection or recovery programme",
+        "(2) supreme audit institution reports on disaster-preparedness programmes",
+        "(3) World Bank/ADB/AfDB/EU implementation completion reports and evaluations of disaster-risk programmes, and IFRC/UN post-disaster reports",
+        "World Bank, Republic of Congo Contingent Emergency Response Project (P516628) project paper, May 2026, section on crisis preparedness and readiness gaps",
+        "World Bank, Urban Development and Poor Neighborhood Upgrading Project (DURQuaP, P146933) Implementation Completion and Results Report, September 2023",
+        "World Bank projects API for the Republic of Congo (all projects, to identify disaster-risk operations and CERC activations)",
+        "IFRC DREF final report MDRCG022, Republic of Congo floods, operation 8 January to 31 May 2024",
+        "Web search for reports of the Cour des comptes et de discipline budgétaire on floods, disasters or civil security (none found)",
+        "Web search for the Mpila 2012 munitions-depot explosion reconstruction and rehousing programme"
+      ],
+      "candidates": [
+        {
+          "name": "Government response to the 2023/2024 floods (humanitarian emergency declared December 2023)",
+          "failed": "publisher_metric",
+          "why": "The World Bank CERP project paper (May 2026, PDF pages 9 and 10) states the 2023/2024 floods affected more than 525,456 people, that the government released CFAF 2.419 billion for initial aid against recovery needs exceeding CFAF 75 billion, and that the country has no secured multi-hazard contingency fund. The only government number is a budget release, with no published count of households reached or works rebuilt. The IFRC DREF final report MDRCG022 says the Ministry of Social Affairs, Solidarity and Humanitarian Action distributed non-food items in all affected departments, but gives no figure for that distribution; its 18,769 people assisted are the Congolese Red Cross operation, not the state's."
+        },
+        {
+          "name": "Anti-erosion and drainage works under DURQuaP (Brazzaville and Pointe-Noire)",
+          "failed": "delivered",
+          "why": "The ICR (PDF page 15) records that the government's US$40 million counterpart funding was cancelled and that, for lack of time and resources, the project financed the studies for the anti-erosion works but not the works themselves. What was delivered was 29.1 km of urban roads with drainage, an urban-upgrading output rather than a disaster-risk programme, and it was financed entirely by an IBRD loan."
+        },
+        {
+          "name": "National hydro-meteorological early warning (National Directorate for Meteorology and National Directorate for Hydrology)",
+          "failed": "delivered",
+          "why": "The CERP project paper describes data collection as fragmented and largely manual, too few automated stations on major rivers for real-time flood warning, and no unified national architecture for alert aggregation or public communication. No national warning system is described as operating, and no coverage figure is published."
+        },
+        {
+          "name": "ProClimat contingent emergency response component for the 2023/2024 floods",
+          "failed": "institutional",
+          "why": "The CERP project paper says the US$2.7 million CERC under the World Bank-financed ProClimat project (P177786) was requested for urgent health, WASH, education and fisheries needs. It is a reallocation of a World Bank loan, and the paper gives no delivery figure for it."
+        },
+        {
+          "name": "Rehousing and reconstruction after the 4 March 2012 Mpila munitions-depot explosion",
+          "failed": "publisher_metric",
+          "why": "No government or international-organisation source with a count of houses delivered and a reference period was located. The 2013 IRIN report archived on Refworld would not open (bot protection), and the other sources returned were press and wiki pages."
+        },
+        {
+          "name": "Reversal search: a delivered disaster-risk programme that was later cut or decayed",
+          "failed": "delivered",
+          "why": "None of the sources opened document a delivered warning, shelter, reserve or protection programme with a peak and a later loss. The CERP project paper records that a national DRM platform drafted in 2015 was never adopted and that the ORSEC plan of 2001 is outdated and poorly disseminated; both are instruments that were never delivered at scale, not losses."
+        }
+      ],
+      "note": "The Republic of Congo has no documented national delivery in disaster preparedness that this protocol can carry. The most detailed open source, the World Bank's 2026 CERP project paper, describes the disaster-risk system as nascent: response financed by ad hoc budget reallocation and external aid, siloed and largely manual hydro-meteorological monitoring, and no contingency fund. The audit institution's reports on disasters were not found online."
+    },
+    {
+      "iso3": "GNB",
+      "indicatorId": "disaster_preparedness",
+      "checkedAt": "2026-10-16",
+      "searched": [
+        "National civil-protection or disaster-management agency reports on a delivered warning, shelter, reserve, protection or recovery programme (Servico Nacional de Protecao Civil)",
+        "Supreme audit institution reports on disaster-preparedness programmes",
+        "World Bank, AfDB and EU implementation completion reports and evaluations of disaster-risk programmes, and IFRC/UN post-disaster reports",
+        "World Bank projects API, every Guinea-Bissau project (search.worldbank.org/api/v2/projects?countrycode_exact=GW)",
+        "ECOWAS news item on assistance to victims of the 2022 floods (ecowas.int/?p=96969)",
+        "IFRC network annual report 2024, Guinea-Bissau (go-api.ifrc.org/api/downloadfile/92270)",
+        "UNDP climate information and early warning project page for Guinea-Bissau (adaptation-undp.org/node/839)"
+      ],
+      "candidates": [
+        {
+          "name": "Assistance to victims of the 2022 floods (ECOWAS-financed)",
+          "failed": "institutional",
+          "why": "ECOWAS financed the response with 670,000 dollars and reports about 25,000 beneficiaries, 9,390 m of protective sea walls and 550 hectares of land reclaimed in four regions (Bissau, Biombo, Quinara, Tombali). The IFRC 2024 annual report attributes the dike, regulator and drainage works to the Red Cross Society of Guinea-Bissau in collaboration with the National Civil Protection Service and ECOWAS. The delivery is a regional-body grant implemented largely by the national Red Cross society, and the government's own role is not separable in any published number."
+        },
+        {
+          "name": "Red Cross Society of Guinea-Bissau flood resilience project, Bissau 2024",
+          "failed": "institutional",
+          "why": "The IFRC 2024 annual report describes household assistance in Bissau delivered by the national Red Cross society with IFRC support, not by a state institution, and it covers one region."
+        },
+        {
+          "name": "World Bank disaster-risk operations in Guinea-Bissau",
+          "failed": "delivered",
+          "why": "The World Bank projects API lists no closed disaster-risk management, flood protection or early warning operation for Guinea-Bissau, so no implementation completion report exists to carry a delivery number. The closed Coastal and Biodiversity Management Project (P049513/P083453) is a conservation operation."
+        },
+        {
+          "name": "Climate information and early warning system project with the Instituto Nacional de Meteorologia (GEF LDCF, UNDP)",
+          "failed": "delivered",
+          "why": "UNDP's project page lists the project at pipeline stage; no terminal evaluation or delivered warning coverage figure is published, and the implementer is UNDP."
+        },
+        {
+          "name": "Reversal search: a delivered warning, protection or reserve programme later cut or lapsed",
+          "failed": "delivered",
+          "why": "No Guinea-Bissau national disaster programme with a published peak was found in the lists searched, so no documented loss from a peak can be measured."
+        }
+      ],
+      "note": "The sources searched document donor-financed, Red Cross-implemented flood response and protection works, with the National Civil Protection Service as a collaborator. None publishes a number for a warning, shelter, reserve, protection or recovery programme run by Guinea-Bissau's own institutions at national scale."
+    },
+    {
+      "iso3": "LSO",
+      "indicatorId": "disaster_preparedness",
+      "checkedAt": "2026-10-16",
+      "searched": [
+        "National civil-protection or disaster-management agency reports on a delivered warning, shelter, reserve, protection or recovery programme (Disaster Management Authority, Lesotho Meteorological Services, Lesotho Vulnerability Assessment Committee)",
+        "Supreme audit institution reports on disaster-preparedness programmes (Office of the Auditor-General of Lesotho)",
+        "World Bank/ADB/AfDB/EU implementation completion reports and evaluations of disaster-risk programmes, and IFRC/UN post-disaster reports (World Bank projects API for Lesotho, GEF project 6926, GFDRR Lesotho grants, IFRC appeal MDRLS008, CTCN EWS4All Lesotho)",
+        "https://search.worldbank.org/api/v2/projects?format=json&countrycode_exact=LS&rows=200",
+        "https://search.worldbank.org/api/v2/projects?format=json&id=P171799",
+        "https://www.thegef.org/projects-operations/projects/6926",
+        "https://www.ctc-n.org/technical-assistance/projects/accessing-ews4all-lesotho",
+        "https://www.gfdrr.org/en/lesotho-strengthening-institutional-capacity-planning-and-preparedness-improve-climate-and-disaster"
+      ],
+      "candidates": [
+        {
+          "name": "2015 to 2016 and 2024 El Nino drought responses coordinated by the Disaster Management Authority",
+          "failed": "publisher_metric",
+          "why": "The government declared drought emergencies and issued national response plans, but no government source found reports households actually reached. The delivered numbers that exist belong to WFP, FAO and the Lesotho Red Cross for their own operations. The Child Grants Programme drought top-up of 2020 is already filed as lso-cgp-drought-topup under institutional_responsiveness, so it cannot be filed again here."
+        },
+        {
+          "name": "World Bank Disaster Risk Management Development Policy Financing with a Cat DDO (P171799)",
+          "failed": "delivered",
+          "why": "The World Bank projects API returns no record for P171799 and lists no disaster-risk operation for Lesotho; the operation was not delivered."
+        },
+        {
+          "name": "Strengthening climate services and early warning (GEF project 6926, Lesotho Meteorological Services and Disaster Management Authority)",
+          "failed": "publisher_metric",
+          "why": "The GEF page lists the project as approved in March 2019 with a USD 5 million grant and links progress reports, but posts no terminal evaluation and no delivered warning-coverage figure. CTCN describes early warning as fragmented and reliant on public gatherings, radio and SMS."
+        },
+        {
+          "name": "Reversal search: decay of the Lesotho Meteorological Services station network",
+          "failed": "publisher_metric",
+          "why": "CTCN states that many of the more than 90 stations are in disrepair, but gives no count of stations lost and no peak, so no loss can be measured."
+        }
+      ],
+      "note": "Lesotho's disaster response runs through the Disaster Management Authority, but on 2026-10-16 no government, audit or lender source found publishes a delivered warning, reserve, protection or recovery programme with its own number. Delivered drought relief figures belong to WFP, FAO and the Red Cross, and the one government delivery with a number, the 2020 Child Grants top-up, is already filed under institutional_responsiveness."
+    },
+    {
+      "iso3": "LTU",
+      "indicatorId": "disaster_preparedness",
+      "checkedAt": "2026-10-16",
+      "searched": [
+        "National civil-protection or disaster-management agency reports on a delivered warning, shelter, reserve, protection or recovery programme (Fire and Rescue Department under the Ministry of the Interior, PAGD; Ministry of the Interior; lt72.lt preparedness portal)",
+        "Supreme audit institution reports on disaster-preparedness programmes (National Audit Office of Lithuania, preliminary study on population warning and shelters, June 2025)",
+        "World Bank/ADB/AfDB/EU implementation completion reports and evaluations of disaster-risk programmes, and IFRC/UN post-disaster reports (EU Kohesio project Q3777727, flood-zone sirens)",
+        "https://www.valstybeskontrole.lt/EN/Product/Download/4855",
+        "https://www.valstybeskontrole.lt/EN/Post/18343/we-are-not-enough-prepared-to-warn-and-protect-the-population-in-the-event-of-eme",
+        "https://vrm.lrv.lt/public/canonical/1777462156/10674/Pagrindimo%20apra%C5%A1as%20P%C5%BEP%20Stiprinti%20gyventoj%C5%B3%20persp%C4%97jim%C4%85%20ir%20informavim%C4%85.pdf",
+        "https://lt72.lt/",
+        "https://pagd.lrv.lt/lt/",
+        "https://kohesio.ec.europa.eu/en/projects/Q3777727",
+        "https://www.lrt.lt/en/news-in-english/19/2779177/lithuania-tests-nationwide-emergency-alert-system-thursday",
+        "https://www.lrt.lt/en/news-in-english/19/2585692/lithuania-s-emergency-alert-system-upgrades-2-years-behind-funds-redirected-audit",
+        "https://www.lrt.lt/naujienos/lietuvoje/2/2914115/ketvirtadieni-bus-tikrinama-perspejimo-sistema-naujos-teks-palaukti-bent-1-5-metu"
+      ],
+      "candidates": [
+        {
+          "name": "National population warning system: PAGD siren network and cell-broadcast alerts",
+          "failed": "publisher_metric",
+          "why": "The network operates and is tested nationally twice a year. The siren count and population coverage (1,163 sirens, about 69 percent of the population, December 2025) appear only in BNS wire copy on LRT, which does not attribute them to a publisher. The publisher pages that would carry them (PAGD, the Ministry of the Interior project justification, lt72.lt) answer automated requests with HTTP 403 or a bot-verification page, so the number could not be read at a publisher URL on the check date."
+        },
+        {
+          "name": "Shelters and collective protection structures designated by municipalities",
+          "failed": "publisher_metric",
+          "why": "The National Audit Office preliminary study (June 2025) reports shelter capacity and the shortfall (about 361,000 residents without shelter space, 200,000 without space in collective protection structures, as relayed by LRT). The audit office pages and its PDF return a bot-verification page to automated requests, so the capacity figure could not be read at the publisher URL. The programme is also mostly designation of existing buildings, with new construction funded to 2030, which leaves test 4 open."
+        },
+        {
+          "name": "Flood-zone siren replacement co-funded by the EU (Kohesio project Q3777727)",
+          "failed": "delivered",
+          "why": "The project buys 26 fixed and 20 mobile sirens for 14 municipalities. It is a component purchase, not a national-scale delivery, and the Kohesio page renders no text to an automated request."
+        },
+        {
+          "name": "Reversal search: decay of the inherited siren network and the delayed upgrade",
+          "failed": "delivered",
+          "why": "LRT reports the audit finding that 78 percent of sirens are not connected to a centralised control system and that the upgrade started two years late, with 95 percent of 2023 to 2024 funds reallocated. That is a shortfall on an upgrade, not a documented loss from a delivered peak, and no source gives a peak siren count or coverage from which a loss could be measured."
+        }
+      ],
+      "note": "Lithuania runs a national warning system with sirens and cell broadcast, and its numbers are published by PAGD, the Ministry of the Interior and the National Audit Office. On 2026-10-16 every one of those publisher URLs refused automated access (HTTP 403 or a bot-verification page), and the figures were readable only in LRT and BNS news copy. The cell can close with a record for the PAGD warning system once a person opens the audit office study (valstybeskontrole.lt, Product 4855) or the Ministry of the Interior project justification in a browser and confirms the siren count and coverage there."
+    },
+    {
+      "iso3": "PNG",
+      "indicatorId": "disaster_preparedness",
+      "checkedAt": "2026-10-16",
+      "searched": [
+        "National civil-protection or disaster-management agency reports on a delivered warning, shelter, reserve, protection or recovery programme (National Disaster Centre)",
+        "Supreme audit institution reports on disaster-preparedness programmes (Auditor-General's Office performance audit and special review listing, ago.gov.pg/audit-reports/performance-audit-and-special-review-report/)",
+        "World Bank/ADB/AfDB/EU implementation completion reports and evaluations of disaster-risk programmes, and IFRC/UN post-disaster reports",
+        "ADB project 46495-002 Building Resilience to Climate Change, semi-annual environmental and social monitoring report July to December 2025 (adb.org/sites/default/files/project-documents/46495/46495-002-esmr-en_12.pdf)",
+        "USGS Volcano Watch, Papua New Guinea eruption destroys a town (usgs.gov), on the 1994 Rabaul evacuation"
+      ],
+      "candidates": [
+        {
+          "name": "Building Resilience to Climate Change (ADB 46495-002), early warning communication system in five provinces",
+          "failed": "delivered",
+          "why": "The Climate Change and Development Authority's monitoring report for July to December 2025 states that early warning facilities in Manus, East New Britain and Morobe were installed but not commissioned, with training outstanding, and that the Milne Bay and Bougainville contract was terminated for non-performance. The closing date had moved from April 2022 to April 2026 and no completion report is published."
+        },
+        {
+          "name": "Rabaul Volcanological Observatory warning and the 1994 Rabaul evacuation",
+          "failed": "delivered",
+          "why": "USGS reports that about 30,000 people were evacuated from Rabaul before the September 1994 eruption under a volcanic disaster response plan. It is one local evacuation in 1994, published by a foreign agency, other accounts give about 50,000, and no PNG publisher carries a figure for a national warning programme."
+        },
+        {
+          "name": "Auditor-General's Office audit of National Disaster Centre funds",
+          "failed": "publisher_metric",
+          "why": "The Auditor-General's performance audit and special review listing names 11 reports (solid waste, drinking water, district services, trust accounts, IFMS, appropriations, log export levy, provincial service delivery, land GIS, church health services, service improvement programmes); none covers the National Disaster Centre or a disaster-preparedness programme."
+        },
+        {
+          "name": "Reversal search: decay of a delivered national warning or disaster-relief capability",
+          "failed": "publisher_metric",
+          "why": "No open source publishes a peak and a later loss for a PNG warning, shelter, reserve or protection programme. The early warning facilities above were never commissioned, so their state is a non-delivery rather than a reversal."
+        }
+      ],
+      "note": "No open source carries a published number for a national-scale preparedness or recovery delivery by Papua New Guinea's own institutions. Donor-financed early warning works under ADB 46495-002 remained uncommissioned at the end of 2025."
+    },
+    {
+      "iso3": "TTO",
+      "indicatorId": "disaster_preparedness",
+      "checkedAt": "2026-10-16",
+      "searched": [
+        "National civil-protection or disaster-management agency reports on a delivered warning, shelter, reserve, protection or recovery programme (Office of Disaster Preparedness and Management, odpm.gov.tt; Trinidad and Tobago Meteorological Service)",
+        "Supreme audit institution reports on disaster-preparedness programmes (Auditor General of Trinidad and Tobago; Parliament of Trinidad and Tobago committee reports)",
+        "World Bank, IDB, CDB and EU implementation completion reports and evaluations of disaster-risk programmes, and IFRC/UN post-disaster reports",
+        "ODPM, 'The development of national multi-hazard early warning system' (odpm.gov.tt, 25 July 2025)",
+        "Parliament of Trinidad and Tobago, Public Administration and Appropriations Committee, Twelfth Report: examination into the administration of disaster relief (laid 17 December 2018, ttparliament.org PDF)",
+        "Ministry of Works and Transport, Drainage Division, '2019 National Desilting Programme' and 'MOWT increases desilting projects by 20 percent' (mowt.gov.tt PDFs)",
+        "IDB project TT-L1036, Flood Alleviation and Drainage Program (iadb.org project page)",
+        "UNDP Trinidad and Tobago, Community Flood Early Warning System project page",
+        "Ministry of the People, Social Development and Family Services disaster relief grant figures as reported by TTT (ttt.live, 30 December 2025)"
+      ],
+      "candidates": [
+        {
+          "name": "Trinidad and Tobago Meteorological Service national Doppler weather radar outage (reversal search)",
+          "failed": "publisher_metric",
+          "why": "A multi-year outage of the national weather radar, ended in 2024, is reported by a private weather blog (ttweathercenter.com, which blocks unauthenticated fetches) and in press accounts of ministers trading blame; no TTMS, ministry or parliamentary page carrying the outage dates or length was found, so the loss has no official peak and loss figure."
+        },
+        {
+          "name": "Disaster relief grants, Ministry of the People, Social Development and Family Services",
+          "failed": "publisher_metric",
+          "why": "The figure of 789 disaster relief grants to 2,573 people (TT$4,954,988.36) since 1 May 2025 is published by the state broadcaster TTT, not on a ministry statistics page, and no social.gov.tt release carrying it was found. The grants are a standing welfare entitlement paid in small batches, with no published series by disaster event."
+        },
+        {
+          "name": "Ministry of Works and Transport National Desilting Programme, 2019",
+          "failed": "honest_limits",
+          "why": "The ministry brochure states a target of 369 desilting projects, 114 Phase 1 projects completed and 150 active in Phase 3, but describes the programme itself as recurrent maintenance; a project count of unequal river-cleaning jobs shows no flood-protection outcome, and no later completion total was published."
+        },
+        {
+          "name": "IDB Flood Alleviation and Drainage Program (TT-L1036, US$120 million, approved 2013)",
+          "failed": "publisher_metric",
+          "why": "The IDB project page and its documents return HTTP 403 to an unauthenticated fetch, so no completion report or output figure could be opened; the ministry brochure says only that 'considerable works' were completed on the Port of Spain flood alleviation project in 2018/2019, with no number."
+        },
+        {
+          "name": "ODPM Public Alert Notification System (PANS, launched 2023) and national multi-hazard early warning system",
+          "failed": "publisher_metric",
+          "why": "ODPM pages link the PANS app but publish no subscriber, coverage or alert count; the national multi-hazard early warning policy was still in consultation in July 2025."
+        },
+        {
+          "name": "Community Flood Early Warning System project (ODPM with UNDP)",
+          "failed": "delivered",
+          "why": "An externally funded, time-limited community-level project run with UNDP, a pilot rather than a national delivery; the UNDP project page blocks unauthenticated fetches, so no funding, coverage or output figure could be read at source."
+        },
+        {
+          "name": "Parliament PAAC examination of disaster relief administration (2018)",
+          "failed": "publisher_metric",
+          "why": "The report records hearings with ODPM and ministries but carries no programme total, coverage or timing figure for a delivered relief or preparedness programme."
+        }
+      ],
+      "note": "No open official source carries a numbered, national-scale delivery of a warning, shelter, protection or recovery programme by Trinidad and Tobago's own institutions. The one loss found, a multi-year outage of the national weather radar, is recorded only by a private weather blog and the press."
     }
   ]
 }

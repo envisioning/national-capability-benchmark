@@ -27414,6 +27414,513 @@
         ],
         "travelled": "Ecuador dollarised in 2000 and kept it. Zimbabwe's reversal shows that a dollarisation without the fiscal rule behind it can be undone by decision, and the same rise in inflation followed."
       }
+    },
+    {
+      "id": "aut-katastrophenfonds",
+      "indicatorId": "disaster_preparedness",
+      "iso3": "AUT",
+      "title": "Katastrophenfonds, the federal disaster prevention and recovery fund",
+      "claim": "Austria's federal Katastrophenfonds, a standing fund set up by law in 1966 and financed from a fixed share of income and corporate tax, paid out 667.5 million euros in 2024, including 219.5 million euros for flood and avalanche prevention through the agriculture ministry and 211.7 million euros towards private damage after the September 2024 floods, 180.75 million euros of it in Lower Austria.",
+      "metric": {
+        "name": "Katastrophenfonds payouts, all purposes",
+        "value": 667.5,
+        "unit": "million euros",
+        "asOf": "2024"
+      },
+      "secondMetric": {
+        "name": "Katastrophenfonds payouts for damage to private property",
+        "value": 211.7,
+        "unit": "million euros",
+        "asOf": "2024"
+      },
+      "started": 1966,
+      "status": "operating",
+      "source": {
+        "publisher": "Federal Ministry of Finance (BMF), Katastrophenfondsbericht 2024-2025, 16th report to the Nationalrat",
+        "url": "https://www.bmf.gv.at/dam/jcr:b19094ff-c970-4f40-b5ec-2856b004e830/KatF-Bericht_2024_2025.pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-16"
+      },
+      "limits": "The finance ministry reports on a fund it administers, so this is a programme reporting on itself, and the numbers sit in a PDF (total on page 3, payout table on page 11, the Land breakdown on page 14). Payouts measure money moved, not flood risk reduced, damage avoided or the speed at which households were paid. The fund refinances work that the Länder, municipalities and two federal ministries carry out, so the delivery is shared and the report does not test it. The private damage payout reimburses Länder for 60 percent of their own aid, and households typically recover 20 to 30 percent of a loss, so the figure is not the full recovery bill. The 2024 total is inflated by one event: private damage payouts were 16.3 million euros in 2023. Unused money above a 30 million euro reserve cap goes back to the general budget, 73.2 million euros at the end of 2025, so the fund's size does not track need.",
+      "pattern": {
+        "mechanism": "The federal parliament earmarked a fixed percentage of income and corporate tax for one fund and wrote its uses into law, so that prevention by the torrent and avalanche control service, warning sirens, fire brigade equipment and post-disaster compensation draw on a predictable annual stream instead of a vote after each disaster.",
+        "preconditions": [
+          "A tax base large and stable enough that about 1 percent of income and corporate tax yields several hundred million euros a year",
+          "Länder administrations able to assess damage, pay claimants and then claim reimbursement from the federal fund",
+          "A federal technical service with a priority list of protection works ready to absorb the prevention share"
+        ]
+      }
+    },
+    {
+      "id": "bdi-infrastructure-resilience-emergency",
+      "indicatorId": "disaster_preparedness",
+      "iso3": "BDI",
+      "title": "Infrastructure Resilience Emergency Project, flood protection in Greater Bujumbura after the 2014 floods",
+      "claim": "After the February 2014 floods and landslides in Greater Bujumbura, Burundi's government ran the Infrastructure Resilience Emergency Project to its June 2019 close, constructing or rehabilitating 10.37 kilometres of drainage network, giving 66,151 people access to improved drainage and supporting 38,385 people with disaster-risk evaluation and early warning.",
+      "metric": {
+        "name": "People with access to improved drainage in the project area",
+        "value": 66151,
+        "unit": "people",
+        "asOf": "2019-06"
+      },
+      "secondMetric": {
+        "name": "Drainage network newly constructed or rehabilitated",
+        "value": 10.37,
+        "unit": "km",
+        "asOf": "2019-06"
+      },
+      "started": 2016,
+      "status": "concluded",
+      "source": {
+        "publisher": "World Bank Independent Evaluation Group, Implementation Completion Report Review ICRR0022023 (P150929)",
+        "url": "https://documents.worldbank.org/curated/en/865261586789315844/pdf/Burundi-BI-Infrastructure-Resilience-Emergency.pdf",
+        "tier": "international_organization",
+        "retrievedAt": "2026-10-16"
+      },
+      "limits": "The implementing agencies (the National Road Agency and the Burundian Agency for Public Works, with the civil protection directorate for disaster-risk work) are named in the project's own completion report, not in the review. The numbers sit in a 14-page PDF (pages 4 to 6) and repeat the project's own completion report, which the review says lacked a quality indicator for climate resilience, a beneficiary survey and a unit cost analysis. Both figures missed their targets (77,000 people and 12.6 kilometres). The project was financed by a USD 25 million IDA grant and covered Greater Bujumbura and the RN1 corridor, not the country. The disaster-management objective was rated modest: the national emergency response plan revision and the national early warning equipment were not delivered before closing. New floods in April 2018 damaged newly built channels, and the review names the lack of maintenance financing as the main risk to the works lasting. The drainage counts show what was built, not a measured reduction in flood losses.",
+      "pattern": {
+        "mechanism": "After a flood disaster, the government routed an emergency grant through agencies already running two Bank-financed works projects, so designs and contracts moved within a month of effectiveness, and a contingency fund absorbed new flood damage without restructuring.",
+        "preconditions": [
+          "Implementing agencies with a working project management unit and a track record on earlier works projects",
+          "External grant financing, because the national budget could not fund the works",
+          "A maintenance budget for drainage after handover, which the review found was largely missing"
+        ]
+      }
+    },
+    {
+      "id": "bgr-opos-risk-prevention",
+      "indicatorId": "disaster_preparedness",
+      "iso3": "BGR",
+      "title": "Operational Programme Environment 2014-2020, flood and landslide risk axis",
+      "claim": "The Ministry of Environment and Water, through Operational Programme Environment 2014-2020, funded 18 flood and landslide risk contracts, which by 18 October 2024 reported flood-protection measures benefiting more than 2,130,000 residents, 103 areas with prevented flood risk, six flood-preparedness centres, the BG-ALERT cell-broadcast warning system and a population early-warning system in 11 administrative regions.",
+      "metric": {
+        "name": "Residents benefiting from flood-protection measures",
+        "value": 2130000,
+        "unit": "people (more than)",
+        "asOf": "2024-10-18"
+      },
+      "secondMetric": {
+        "name": "Areas with prevented flood risk",
+        "value": 103,
+        "unit": "areas",
+        "asOf": "2024-10-18"
+      },
+      "started": 2014,
+      "status": "concluded",
+      "source": {
+        "publisher": "Managing Authority of Operational Programme Environment 2014-2020, progress report to the seventh Monitoring Committee meeting (5 to 7 November 2024)",
+        "url": "https://eufunds.bg/sites/default/files/uploads/opos/docs/2024-11/OPOS_Implementation%202014_2020_MC%20Nov.%202024.pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-16"
+      },
+      "limits": "The managing authority reports on its own programme, and the figures sit on one slide of a monitoring-committee presentation (PDF page 7), with no list of projects, no method and no breakdown by area. The same presentation marks its water results as not final, with final reporting due by 15 February 2027, and nothing on the risk slide says those values are final either. 'Residents benefiting' counts people living in areas where measures were built, not avoided losses or reduced flood damage, and the 103 areas are not defined on the slide. The money is mainly EU Cohesion Fund: the Ministry of Environment and Water's 2015 programming presentation gives EUR 50 million of Union support against about EUR 8.8 million of national co-financing for the flood axis, so the delivery is Bulgarian institutions spending a mostly external budget. The slide does not show how the warning systems perform in a real event: in April 2025, as reported by The Sofia Globe (https://sofiaglobe.com/2025/04/30/bulgarias-pm-orders-get-bg-alert-system-working/), the Prime Minister cited the lack of a warning during recent floods and ordered ministries to present a plan for BG-ALERT within 10 days. The early-warning system covers 11 administrative regions, not the whole country.",
+      "pattern": {
+        "mechanism": "The Ministry of Environment and Water, as managing authority, ring-fenced a priority axis of an EU-funded programme for flood and landslide risk and channelled it through direct grants to the civil-protection directorate of the Ministry of Interior and competitive grants to municipalities, so warning systems and local protection works were built under one monitored budget.",
+        "preconditions": [
+          "Access to EU cohesion funding with a dedicated risk-prevention priority and a national co-financing share",
+          "A civil-protection directorate and municipalities able to prepare, procure and run projects to EU audit rules",
+          "Flood-risk maps and plans under the EU Floods Directive to select where measures go"
+        ]
+      }
+    },
+    {
+      "id": "blr-chernobyl-programmes",
+      "indicatorId": "disaster_preparedness",
+      "iso3": "BLR",
+      "title": "State programmes to overcome the consequences of the Chernobyl disaster",
+      "claim": "Belarus ran six state programmes on the consequences of the Chernobyl disaster from 1990 to 2025, on which the government reports spending more than 20 billion US dollars equivalent; 138,000 residents were evacuated and resettled from 450 settlements, and by 2025 about 1.3 million people a year, including more than 211,700 children and adolescents, received special medical screening.",
+      "metric": {
+        "name": "People receiving special medical screening each year",
+        "value": 1300000,
+        "unit": "people per year",
+        "asOf": "2025"
+      },
+      "secondMetric": {
+        "name": "Residents evacuated and resettled from contaminated territory",
+        "value": 138000,
+        "unit": "people",
+        "asOf": "cumulative since 1986, reported 2025"
+      },
+      "started": 1990,
+      "status": "concluded",
+      "source": {
+        "publisher": "Permanent Mission of Belarus to the United Nations, memorandum circulated as UN General Assembly document A/79/910",
+        "url": "https://documents.un.org/doc/undoc/gen/n25/129/57/pdf/n2512957.pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-16"
+      },
+      "limits": "The source is the Belarusian government describing its own programme in a diplomatic memorandum; the UN circulated it and did not verify it, and no independent audit or evaluation stands behind it. The numbers sit in a four-page PDF (pages 2 and 3). The first evacuations in 1986 were carried out under Soviet authority, so the 138,000 figure predates the Belarusian state programmes, and 200,000 more people left on their own. Screening counts are activity, not health outcomes. The spending figure is a cumulative dollar equivalent with no year-by-year series. The fall in people living in contaminated zones, from more than 2 million in 3,678 settlements to 930,500 in 2,022, reflects radioactive decay and rezoning as well as policy, so it is not used as the metric. The budget share fell from up to 22 percent in the early 1990s to just over 1 percent by 2025 according to Gosatomnadzor. The dedicated programme ended in 2025, and its measures were split across thematic state programmes for 2026 to 2030, so the separate programme no longer exists as a budget line.",
+      "pattern": {
+        "mechanism": "The Belarusian government organised recovery from a long-lived radiological disaster as a sequence of five-year state programmes, moving from resettlement and dose reduction in the 1990s to medical screening, radiation control of food and the economic redevelopment of affected districts.",
+        "preconditions": [
+          "A central budget able to carry a large share of spending for years after the shock",
+          "A national radiation-monitoring and food-control service that reaches farms and processors",
+          "A health system able to run annual screening of a fixed cohort of affected people"
+        ],
+        "travelled": "Ukraine and Russia ran parallel Chernobyl programmes, and Belarus and Russia also run joint Union State programmes; the Belarusian case differs in that the national programme lasted 35 years under one programme-and-target method."
+      }
+    },
+    {
+      "id": "cyp-limassol-fire-recovery",
+      "indicatorId": "disaster_preparedness",
+      "iso3": "CYP",
+      "title": "Limassol wildfire recovery support scheme",
+      "claim": "After the July 2025 wildfire in Limassol district, which the Limassol District Administration recorded as damaging 440 homes, 211 of them destroyed, the Council of Ministers adopted a recovery scheme on 30 July 2025 and the Ministry of the Interior had paid its one-off basic-needs grant to 286 beneficiaries, about EUR 2 million in total, by 13 August 2025.",
+      "metric": {
+        "name": "Beneficiaries paid the one-off basic-needs grant",
+        "value": 286,
+        "unit": "beneficiaries",
+        "asOf": "2025-08-13"
+      },
+      "secondMetric": {
+        "name": "Homes recorded as damaged by the fire (211 totally destroyed)",
+        "value": 440,
+        "unit": "homes",
+        "asOf": "2025-07-30"
+      },
+      "started": 2025,
+      "status": "operating",
+      "source": {
+        "publisher": "Republic of Cyprus, Ministry of the Interior, announcement of 13 August 2025 on gov.cy",
+        "url": "https://www.gov.cy/esoterika-themata/xekina-i-katavoli-apozimioseon-gia-apokatastasi-ton-zimion-stous-protous-pyropliktous/",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-16"
+      },
+      "limits": "The ministry reports on its own scheme, and both numbers are announcements, not audited accounts. The 286 beneficiaries and EUR 2 million cover only the one-off grant for basic needs, the fastest and simplest part of the scheme: on 13 August 2025 the ministry had only begun assessing claims for repair and reconstruction, which pay licensed destroyed homes in three instalments tied to design and to half the building work. The record carries no later official total for reconstruction payments, rent subsidies or completed rebuilds, so the record does not show whether the homes were rebuilt or how long rebuilding took. The 440 and 211 figures come from a separate Ministry of the Interior statement of 30 July 2025 (gov.cy, 'Dilosi tou Ypourgou Esoterikon ... gia apozimiosi ton pyroplikton politon'), and that statement says the final counts could change as further claims arrive. The scheme is a response to one regional fire, not a standing national recovery programme, and the payments say nothing about whether the fire could have been prevented or contained. Both pages are in Greek.",
+      "pattern": {
+        "mechanism": "The Council of Ministers fixed flat one-off grants per household on 30 July 2025, waived supporting documents to speed payment, routed the money through the Treasury payment system with community councils collecting bank details, and tied reconstruction money to damage estimates by members of the Cyprus Scientific and Technical Chamber (ETEK).",
+        "preconditions": [
+          "A district administration able to count damaged homes household by household within days",
+          "A central payment system that can reach households directly once bank details are collected",
+          "A professional body trusted to estimate repair costs at market prices"
+        ]
+      }
+    },
+    {
+      "id": "cze-prevence-povodnim-iii",
+      "indicatorId": "disaster_preparedness",
+      "iso3": "CZE",
+      "title": "Podpora prevence před povodněmi III (flood prevention programme 129 260)",
+      "claim": "The Ministry of Agriculture ran flood prevention programme 129 260 from 2014, funding polders, dike works and protective walls through the state river basin enterprises and municipalities, and its final evaluation reported 27 million cubic metres of new retention volume and about 17,491 metres of protective dikes and walls, against an original retention target of 123 million cubic metres.",
+      "metric": {
+        "name": "Retention volume delivered, subprogramme 129 264 (final evaluation)",
+        "value": 27,
+        "unit": "million m3",
+        "asOf": "final evaluation of programme 129 260, reported by the NKÚ in audit 25/06 (approved 26 January 2026)"
+      },
+      "secondMetric": {
+        "name": "Retention volume originally targeted before the fourth programme change of 23 August 2019",
+        "value": 123,
+        "unit": "million m3",
+        "asOf": "original programme documentation, as reported in NKÚ audit 25/06"
+      },
+      "started": 2014,
+      "status": "concluded",
+      "source": {
+        "publisher": "Nejvyšší kontrolní úřad (Supreme Audit Office), audit conclusion 25/06 on Ministry of Agriculture flood protection and water retention funding",
+        "url": "https://www.nku.cz/assets/kon-zavery/k25006.pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-16"
+      },
+      "limits": "Both numbers sit in table 4 on page 11 of the audit PDF, and the NKÚ took them from the ministry's own final evaluation, so the delivered values are the programme reporting on itself. The audit found that the ministry lowered its targets during delivery (the retention target fell from 123 to 26 million cubic metres) so that the programme could formally report fulfilment; against the original targets only 22 percent of the retention volume and 14.3 percent of the new dike length were delivered. The audit also found that the ministry had no common method for how recipients report indicators, which weakens every delivered figure. Retention volume and dike length are outputs; nothing here measures avoided flood damage, and the 2024 floods still caused 69.9 billion CZK of damage according to the same report. The start year comes from NKÚ audit 19/04 (page 15), which records the 4.65 billion CZK financial frame approved in 2014; that audit expected actual spending of about 2.8 billion CZK.",
+      "pattern": {
+        "mechanism": "After the 1997 flood, the Ministry of Agriculture set up rolling subsidy programmes, the first stage starting in 2002, that pay the state river basin enterprises, municipalities and regions to build polders, dikes and walls along watercourses.",
+        "preconditions": [
+          "State-owned river basin enterprises that own and maintain the watercourses and can act as builders",
+          "A national budget line that renews across programme stages",
+          "A ministry willing to keep funding works when targets slip, which here meant lowering the targets rather than ending the programme"
+        ],
+        "travelled": "The programme continues as stages IV (129 360) and V (129 500); the NKÚ found the same lowering of retention targets in stage IV, where the target fell from 68.83 to 5.41 million cubic metres."
+      }
+    },
+    {
+      "id": "cze-stale-ukryty",
+      "indicatorId": "disaster_preparedness",
+      "iso3": "CZE",
+      "title": "Permanent civil-protection shelters (stálé úkryty), and their erosion",
+      "claim": "Czech civil protection built permanent shelters from about the 1950s, reached its largest shelter stock in 1995 with places for about 10 percent of the population, and by 2026 the Fire Rescue Service counted just under 1,600 permanent shelters with capacity for about 310,000 people.",
+      "metric": {
+        "name": "Capacity of permanent shelters (stálé úkryty), current",
+        "value": 310000,
+        "unit": "people",
+        "asOf": "2026"
+      },
+      "secondMetric": {
+        "name": "Share of the population with a permanent shelter place at the 1995 peak",
+        "value": 10,
+        "unit": "percent of population",
+        "asOf": "1995"
+      },
+      "started": 1950,
+      "status": "eroded",
+      "source": {
+        "publisher": "Ministry of the Interior, General Directorate of the Fire Rescue Service of the Czech Republic (MV-GŘ HZS ČR), frequently asked questions on sheltering the population, republished by HZS Karlovarského kraje on 3 March 2026",
+        "url": "https://archiv.hzscr.gov.cz/clanek/hzs-karlovarskeho-kraje-menu-informacni-servis-zpravodajstvi-2026-leden-nejcastejsi-dotazy-k-ukryti-obyvatelstva.aspx",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-16"
+      },
+      "limits": "The two numbers are in different units. The Fire Rescue Service gives the 1995 peak only as an approximate share of the population (about 10 percent) and gives no shelter count or capacity for 1995, and it gives the current stock as a count and a capacity but no share. Against the Czech Statistical Office population of 10,915,839 on 31 December 2025, 310,000 places is about 2.8 percent; that share is computed here and is not published by the service. Both figures are rounded ('about', 'just under'). The Prague metro protection system (theoretical capacity 332,000) and the Strahov tunnel (15,000) are counted separately on the same page and are not in the 310,000. The service states that permanent shelters are planned for use only in a declared state of war and that in peacetime it relies on the protective properties of ordinary buildings, so the decline measures a Cold War capability the state chose not to maintain, not the whole of its sheltering doctrine. The shelters were built only in designated places where weapons of mass destruction were expected, never evenly across the country. The source is the service describing its own field in a press FAQ, not an audit; the original hzscr.gov.cz URL redirects to the archiv.hzscr.gov.cz copy cited here.",
+      "pattern": {
+        "mechanism": "The Czechoslovak and then Czech state built a stock of permanent shelters in designated target areas, then after 1995 stopped building them and left upkeep to owners; the source names privatisation of the buildings that housed the shelters and the high cost of keeping them functional as reasons the count fell.",
+        "preconditions": [
+          "A state construction programme able to require and fund shelters inside public and enterprise buildings",
+          "Continued public ownership, or an enforced upkeep duty, for the buildings that hold the shelters",
+          "A budget line for maintenance and inspection once new construction stops"
+        ],
+        "travelled": "Germany abandoned its public shelters after a 2007 decision and Denmark let its stock decay; the same post-Cold War drawdown left all three countries reassessing sheltering after 2022."
+      }
+    },
+    {
+      "id": "geo-mhews",
+      "indicatorId": "disaster_preparedness",
+      "iso3": "GEO",
+      "title": "Multi-hazard early warning system and hydrometeorological network",
+      "claim": "Georgia's Ministry of Environmental Protection and Agriculture, as executing entity of a UNDP-implemented programme financed by the Green Climate Fund and the Government of Georgia, installed 150 of 154 planned hydro- and agro-meteorological monitoring stations between 2018 and 2025, produced hazard and risk maps for all 11 river basins and completed flood-protection works at 12 of 13 sites, with the government disbursing USD 37.5 million of its own grant co-finance.",
+      "metric": {
+        "name": "Hydro- and agro-meteorological monitoring stations installed",
+        "value": 150,
+        "unit": "stations (of 154 planned)",
+        "asOf": "2025"
+      },
+      "secondMetric": {
+        "name": "Government of Georgia grant co-finance disbursed, cumulative",
+        "value": 37475923.41,
+        "unit": "USD",
+        "asOf": "2025"
+      },
+      "started": 2018,
+      "status": "operating",
+      "source": {
+        "publisher": "Green Climate Fund, FP068 annual performance report 2025 (submitted by UNDP, 30 July 2026)",
+        "url": "https://www.greenclimate.fund/sites/default/files/documents/2026-10/gcf-fp068-apr-2025-v2.pdf",
+        "tier": "international_organization",
+        "retrievedAt": "2026-10-16"
+      },
+      "limits": "The numbers sit in a PDF (station count on page 7, co-finance table on page 22) written by UNDP, the accredited entity, so the programme reports on itself. Installed stations are not yet a working warning chain: the report says all 150 are still being tested for integration into the ICT system, forecasting platforms for floods, mudflows, avalanches and landslides run in testing mode, and the last-mile channel (a cell broadcast system replacing 200 planned sirens) is not yet built. The programme has requested a 12-month no-cost extension; its approved period ends in April 2027. The interim evaluation dated January 2025 recorded delays in the first output that pushed back the other two, and local mistrust of the equipment. UNDP implements the programme, so the delivery is Georgian in ownership and money but not in day-to-day management. Nothing here shows warnings issued or losses avoided.",
+      "pattern": {
+        "mechanism": "The environment ministry paired a Green Climate Fund grant with a larger government grant to rebuild the national observation network, map hazards basin by basin and build flood defences, routing procurement and management through UNDP while the National Environmental Agency and the Emergency Management Service take over the systems.",
+        "preconditions": [
+          "A national hydrometeorological agency able to staff, maintain and integrate new stations",
+          "Government willingness to put more of its own budget into the programme than the external grant",
+          "Mobile operators and an emergency service able to carry warnings to the last mile"
+        ]
+      }
+    },
+    {
+      "id": "mkd-flood-compensation-2015",
+      "indicatorId": "disaster_preparedness",
+      "iso3": "MKD",
+      "title": "Compensation for the early 2015 flood damage",
+      "claim": "The Government of North Macedonia, through the Ministry of Finance, paid 144.24 million denars in flood-damage compensation to 2,218 persons in nine flood-hit municipalities, among them Mogila, Novaci, Bitola and Stip, by 15 September 2015, after the storms and floods of early 2015.",
+      "metric": {
+        "name": "Flood-damage compensation paid so far",
+        "value": 144.24,
+        "unit": "million denars",
+        "asOf": "2015-09-15"
+      },
+      "secondMetric": {
+        "name": "Persons compensated so far",
+        "value": 2218,
+        "unit": "persons",
+        "asOf": "2015-09-15"
+      },
+      "started": 2015,
+      "status": "concluded",
+      "source": {
+        "publisher": "Government of North Macedonia, Ministry of Finance press release, republished by ReliefWeb (UN OCHA)",
+        "url": "https://reliefweb.int/report/former-yugoslav-republic-macedonia/government-pays-compensations-flood-damaged-households",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-16"
+      },
+      "limits": "The source is a government press release about its own payments, republished by ReliefWeb, not an audited account. The same release reports a further 29.9 million denars paid that day to 394 persons and does not say whether the 144.24 million total includes it. It gives no estimate of total damage, so the share of losses covered is unknown, and no dates for the damage, the claims or the payments, so the speed of recovery cannot be read from it. Compensation after the event shows recovery financing, not preparedness: a State Audit Office performance audit published on 22 September 2026 found that the national protection and rescue strategy expired in 2018 without replacement, that the national vulnerability assessment dates from 2007, and that the Skopje City Fire Brigade had 172 of 384 approved firefighter positions filled.",
+      "pattern": {
+        "mechanism": "After the floods, the central government paid compensation for household damage out of the state budget through the Ministry of Finance, municipality by municipality, as local damage assessments were completed.",
+        "preconditions": [
+          "Municipal commissions able to assess and certify damage to individual households",
+          "Budget room for unplanned transfers in the year of the disaster",
+          "Recipients reachable through bank accounts or an alternative payment channel"
+        ]
+      }
+    },
+    {
+      "id": "mng-ibli",
+      "indicatorId": "disaster_preparedness",
+      "iso3": "MNG",
+      "title": "Index-Based Livestock Insurance against dzud losses",
+      "claim": "Mongolia's government ran index-based livestock insurance against dzud mortality from a 2006 pilot in four aimags to all 330 soums in 21 aimags by March 2016, with 16,545 herders compensated over ten insurance cycles, a government-financed disaster layer, an IBLI Law passed in June 2014 and a state reinsurance company capitalised with MNT20.0 billion to run it after the project.",
+      "metric": {
+        "name": "Soums offering index-based livestock insurance",
+        "value": 330,
+        "unit": "soums (all 21 aimags)",
+        "asOf": "March 2016"
+      },
+      "secondMetric": {
+        "name": "Herders who received indemnity payments, cumulative over ten insurance cycles",
+        "value": 16545,
+        "unit": "herders",
+        "asOf": "2006 to 2016"
+      },
+      "started": 2006,
+      "status": "concluded",
+      "source": {
+        "publisher": "World Bank Independent Evaluation Group, ICR Review of MN-Index-Based Livestock Insurance (P088816), report ICRR0020455",
+        "url": "https://documents1.worldbank.org/curated/en/571231485212883943/pdf/ICRR-Disclosable-P088816-01-23-2017-1485212866628.pdf",
+        "tier": "international_organization",
+        "retrievedAt": "2026-10-16"
+      },
+      "limits": "The numbers sit in a 17-page PDF (outcome and sustainability sections, pages 8 to 10) and rest on the government's own project monitoring as reviewed by the World Bank's evaluation unit, which financed the project with IDA credits and trust-fund grants. Soums offering the product measure availability, not uptake: the same review says only 8.5 to 15.5 percent of herders buy the product each year and 46 percent were in contact with insurance agents, short of the 60 percent target. The review's cumulative figures are internally inconsistent: it states US$405 million in premiums and US$160 million in indemnities beside pilot-year premiums of US$120,000 to US$275,000 and MNT278.8 million paid out over the life of the project, so the dollar totals are not quoted here. Payouts follow soum-level mortality, not each herder's loss, and the review rates the risk to sustainability as substantial because of governance risks at the state reinsurance company. The record does not show the programme's coverage or claims after 2016.",
+      "pattern": {
+        "mechanism": "The Ministry of Finance's project unit layered dzud risk: herders kept small losses, private insurers sold a base product backed by a pooled indemnity fund and international reinsurance, and the government financed the catastrophic layer, then Parliament legislated the scheme and the government moved its management into a state reinsurance company.",
+        "preconditions": [
+          "A national livestock mortality series by soum, collected by the National Statistics Office, that insurers and herders trust as the index",
+          "Private insurers and banks with a presence in rural soums to sell policies and pay indemnities",
+          "A government able to hold the catastrophic loss layer, backed by a contingent credit line during the pilot"
+        ]
+      }
+    },
+    {
+      "id": "nam-drought-relief-2019",
+      "indicatorId": "disaster_preparedness",
+      "iso3": "NAM",
+      "title": "Drought relief programme 2019/20",
+      "claim": "Namibia's Office of the Prime Minister coordinated a N$595.2 million drought relief programme in 2019/20, after the President declared a State of Emergency: National Disaster (Drought) with effect from 6 May 2019, providing monthly food to 172,000 households and funding boreholes through the regional councils, livestock fodder and seed.",
+      "metric": {
+        "name": "Households receiving monthly food provision",
+        "value": 172000,
+        "unit": "households",
+        "asOf": "FY2019/20"
+      },
+      "secondMetric": {
+        "name": "Funding of the drought relief programme",
+        "value": 595.2,
+        "unit": "million Namibia dollars",
+        "asOf": "FY2019/20"
+      },
+      "started": 2019,
+      "status": "concluded",
+      "source": {
+        "publisher": "Office of the Prime Minister, Motivation for Vote 02 on the Appropriation Bill 2020, National Assembly of Namibia",
+        "url": "https://parliament.na/wp-content/uploads/2021/08/Vote-02-Office-of-the-Prime-Minister.pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-16"
+      },
+      "limits": "The figures come from the Prime Minister's budget motivation to the National Assembly, which is the programme's own account and not an audit; they sit in a scanned PDF on pages 2 to 4. The household count is a target served monthly, not a verified count of distributions, and food provision accounted for N$124.8 million of the spending while water infrastructure took N$249.8 million. The document gives no measure of outcomes such as food insecurity or livestock losses avoided, and it shows a response after the drought arrived, not preparation before it. Funding mixed government transfers with donations, a Ministry of Finance contingency provision and African Development Bank financing of agriculture ministry programmes, so not every dollar was the government's own. The emergency date comes from the Prime Minister's motivation of the President's declaration to the National Assembly on 7 May 2019.",
+      "pattern": {
+        "mechanism": "After the President declared a drought emergency, the Office of the Prime Minister pooled budget transfers, a Ministry of Finance contingency provision and donations in the National Emergency Disaster Fund, bought food for registered households and transferred water money to the regional councils for borehole work.",
+        "preconditions": [
+          "A disaster law under which a national emergency can be declared and emergency funds released",
+          "A crop and household vulnerability assessment that sizes the response",
+          "Regional councils able to contract borehole drilling and installation quickly"
+        ]
+      }
+    },
+    {
+      "id": "svk-dhz-intervention-equipment",
+      "indicatorId": "disaster_preparedness",
+      "iso3": "SVK",
+      "title": "Intervention equipment for municipal volunteer fire brigades, Operational Programme Quality of Environment",
+      "claim": "Slovakia's Ministry of Interior, as intermediate body for the Operational Programme Quality of Environment, improved the intervention equipment of 371 bodies for climate-related emergencies by 2022, mainly municipal volunteer fire brigades, against an original target of 20.",
+      "metric": {
+        "name": "Bodies with improved intervention equipment (implemented value)",
+        "value": 371,
+        "unit": "bodies",
+        "asOf": "2022"
+      },
+      "secondMetric": {
+        "name": "Original target for the same output indicator",
+        "value": 20,
+        "unit": "bodies",
+        "asOf": "2016 to 2020 programme target"
+      },
+      "started": 2019,
+      "status": "concluded",
+      "source": {
+        "publisher": "European Commission, ESIF 2014-2020 programme-specific achievements (Cohesion Open Data), indicator O0026 of Slovakia's Operational Programme Quality of Environment",
+        "url": "https://cohesiondata.ec.europa.eu/resource/3de9-gnka.json?ms=SK&ind_code=O0026&year=2022",
+        "tier": "international_organization",
+        "retrievedAt": "2026-10-16"
+      },
+      "limits": "The figure is the managing authority's own report to the European Commission, republished as open data, so the programme reports on itself. It counts bodies that received equipment, not the equipment's quantity, condition, use in real incidents or any change in response times; the same programme's result indicator for intervention duration reports 108 minutes in every year from 2016 to 2022 against an 87 minute target. The managing authority's note says 370 of the 371 operations were only partially realised at the 2022 report, and that the ITMS2014+ monitoring system had reported 410 in error. The scale grew because a local project was added after the original target of 20 national and regional bodies, so the overshoot reflects a change of design rather than outperformance. The programme was EU co-financed; the record does not show what national funding sustains the equipment after 2023. A Supreme Audit Office report on crisis management for 2020 to 2022 found no functioning shelter system and civil-protection stocks that were run down, so this record is evidence for local response equipment and not for civil protection as a whole.",
+      "pattern": {
+        "mechanism": "The Ministry of Interior, acting as intermediate body for an EU environmental programme, used the programme's climate-adaptation axis to equip municipal volunteer fire brigades directly, turning a target sized for national and regional services into a nationwide local roll-out.",
+        "preconditions": [
+          "A dense network of municipal volunteer fire brigades already registered with the state fire service",
+          "An EU cohesion programme with a risk-prevention axis that allowed equipment for emergency response",
+          "A ministry able to run one national project on behalf of hundreds of municipalities"
+        ]
+      }
+    },
+    {
+      "id": "tza-nfra",
+      "indicatorId": "disaster_preparedness",
+      "iso3": "TZA",
+      "title": "National Food Reserve Agency grain reserve",
+      "claim": "Tanzania's National Food Reserve Agency, which took over the former Strategic Grain Reserve in 2008, rebuilt its maize and paddy reserve from 46,665 tonnes in June 2023 to 702,502 tonnes in November 2024, according to the Bank of Tanzania's monthly series of NFRA stocks.",
+      "metric": {
+        "name": "Food stocks held by the National Food Reserve Agency",
+        "value": 702502,
+        "unit": "tonnes",
+        "asOf": "November 2024"
+      },
+      "secondMetric": {
+        "name": "Food stocks held by the National Food Reserve Agency at the 2023 low",
+        "value": 46665,
+        "unit": "tonnes",
+        "asOf": "June 2023"
+      },
+      "started": 2008,
+      "status": "operating",
+      "source": {
+        "publisher": "Bank of Tanzania, Monthly Economic Review, December 2024, Table 2.1.3 (source: National Food Reserve Agency)",
+        "url": "https://bot.go.tz/Publications/Regular/Monthly%20Economic%20Review/en/2025012710064637.pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-16"
+      },
+      "limits": "The figures are the agency's own stock data republished by the central bank, so the programme reports on itself, and they sit in a PDF table on page 3 of the review. A stock in tonnes shows what the reserve holds, not how quickly or to whom it was released in a shortage: the same review records that NFRA sold 35,034.5 tonnes to domestic traders and neighbouring countries in November 2024, so part of the reserve works as a market and export instrument rather than a disaster buffer. The series also shows the reserve can run very low: it fell from 214,968 tonnes in December 2021 to 46,665 tonnes in June 2023 before purchases rebuilt it. Nothing here measures storage losses, procurement cost, or effects on farmers and consumer prices, and the agency's stated storage capacity of 776,000 tonnes on its own website is a capacity, not a delivered stock.",
+      "pattern": {
+        "mechanism": "The government runs a standing executive agency that buys maize and paddy from surplus regions after harvest, holds it in its own warehouses and silos, and releases it in shortages or sells it to recycle stock, with the central bank publishing the stock level every month.",
+        "preconditions": [
+          "Surplus-producing regions from which the agency can buy domestic grain in good seasons",
+          "Warehouse and silo capacity owned by the agency, plus budget to purchase at harvest",
+          "A rule for drawing the stock down and rebuilding it, since the reserve fell to under 50,000 tonnes in 2023"
+        ]
+      }
+    },
+    {
+      "id": "zwe-food-deficit-mitigation",
+      "indicatorId": "disaster_preparedness",
+      "iso3": "ZWE",
+      "title": "Food Deficit Mitigation Programme, the 2024 El Niño drought response",
+      "claim": "After the El Niño-ravaged 2023/2024 summer season, Zimbabwe's government distributed 197,628.796 tonnes of grain to vulnerable and food-insecure households under the Food Deficit Mitigation Programme between February and 5 November 2024.",
+      "metric": {
+        "name": "Grain distributed by Government under the Food Deficit Mitigation Programme, cumulative since February 2024",
+        "value": 197628.796,
+        "unit": "tonnes",
+        "asOf": "2024-11-05"
+      },
+      "secondMetric": {
+        "name": "Strategic Grain Reserve stock at the same date",
+        "value": 244296,
+        "unit": "tonnes",
+        "asOf": "2024-11-05"
+      },
+      "started": 2024,
+      "status": "concluded",
+      "source": {
+        "publisher": "Government of Zimbabwe, Cabinet, 36th Post-Cabinet Press Briefing (5 November 2024), as distributed by Veritas",
+        "url": "https://www.veritaszim.net/sites/veritas_d/files/36TH%20POST%20CABINET%20BRIEFING%202024.pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-16"
+      },
+      "limits": "The government reports on its own programme, and the briefing text is read from a copy distributed by Veritas, a civil-society archive, not from a government-hosted copy; the figure is on page 1 of an 11-page PDF. Tonnes moved say nothing about how many people received a full ration, on time, or how targeting worked, and the 6.54 million figure in the 3 December 2024 briefing is a target, not a count of people reached. The briefings give no closing total for the 2024 to March 2025 response. The private sector imported 974,658 tonnes of maize, wheat and flour over the same period against 39,916 tonnes imported by government, so the relief rested on imports, not on reserve stock built before the drought. Development partners distributed about 10 percent of the grain in the third round. The programme recurs: its October 2025 to March 2026 round covered 77.53 percent of 1,293,657 targeted households.",
+      "pattern": {
+        "mechanism": "The Ministry of Public Service, Labour and Social Welfare drew grain from the Strategic Grain Reserve held by the Grain Marketing Board and moved it in timed distribution rounds to households identified as food insecure, with Cabinet tracking tonnes moved each week.",
+        "preconditions": [
+          "A state grain reserve and a marketing board with depots and collection points across rural provinces",
+          "A household vulnerability assessment able to set targets by province before the lean season",
+          "Import capacity, public or private, when the domestic harvest fails"
+        ]
+      }
     }
   ]
 }

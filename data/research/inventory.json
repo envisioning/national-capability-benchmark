@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-10-16T12:06:17.088Z",
+  "generatedAt": "2026-10-16T12:12:02.190Z",
   "datasetVersion": "9.3.0",
-  "recordCount": 763,
+  "recordCount": 777,
   "countriesRepresented": 125,
   "gapIndicatorsRepresented": 16,
   "dimensions": [
@@ -43,8 +43,8 @@
     },
     {
       "dimension": "adaptability",
-      "records": 258,
-      "countries": 122,
+      "records": 272,
+      "countries": 123,
       "indicators": 2
     },
     {
@@ -359,7 +359,7 @@
     {
       "iso3": "TZA",
       "country": "Tanzania",
-      "records": 4
+      "records": 5
     },
     {
       "iso3": "ITA",
@@ -469,7 +469,7 @@
     {
       "iso3": "ZWE",
       "country": "Zimbabwe",
-      "records": 4
+      "records": 5
     },
     {
       "iso3": "GIN",
@@ -479,7 +479,7 @@
     {
       "iso3": "BDI",
       "country": "Burundi",
-      "records": 3
+      "records": 4
     },
     {
       "iso3": "TUN",
@@ -499,7 +499,7 @@
     {
       "iso3": "CZE",
       "country": "Czechia",
-      "records": 5
+      "records": 7
     },
     {
       "iso3": "TJK",
@@ -529,12 +529,12 @@
     {
       "iso3": "AUT",
       "country": "Austria",
-      "records": 6
+      "records": 7
     },
     {
       "iso3": "BLR",
       "country": "Belarus",
-      "records": 2
+      "records": 3
     },
     {
       "iso3": "LAO",
@@ -559,7 +559,7 @@
     {
       "iso3": "BGR",
       "country": "Bulgaria",
-      "records": 4
+      "records": 5
     },
     {
       "iso3": "DNK",
@@ -579,7 +579,7 @@
     {
       "iso3": "SVK",
       "country": "Slovakia",
-      "records": 5
+      "records": 6
     },
     {
       "iso3": "NZL",
@@ -589,7 +589,7 @@
     {
       "iso3": "GEO",
       "country": "Georgia",
-      "records": 2
+      "records": 3
     },
     {
       "iso3": "HRV",
@@ -599,7 +599,7 @@
     {
       "iso3": "MNG",
       "country": "Mongolia",
-      "records": 3
+      "records": 4
     },
     {
       "iso3": "BIH",
@@ -609,7 +609,7 @@
     {
       "iso3": "NAM",
       "country": "Namibia",
-      "records": 4
+      "records": 5
     },
     {
       "iso3": "ARM",
@@ -669,12 +669,12 @@
     {
       "iso3": "MKD",
       "country": "North Macedonia",
-      "records": 2
+      "records": 3
     },
     {
       "iso3": "CYP",
       "country": "Cyprus",
-      "records": 3
+      "records": 4
     },
     {
       "iso3": "TTO",
@@ -769,8 +769,8 @@
       "indicatorId": "disaster_preparedness",
       "dimension": "adaptability",
       "name": "Disaster preparedness and recovery",
-      "records": 118,
-      "countries": 105
+      "records": 132,
+      "countries": 118
     },
     {
       "indicatorId": "institutional_responsiveness",
@@ -816,12 +816,12 @@
     }
   ],
   "guardrails": {
-    "reversalCount": 156,
-    "reversalMinimum": 152,
+    "reversalCount": 157,
+    "reversalMinimum": 155,
     "reversalDeficit": 0,
     "mostRepresentedCountry": "BRA",
     "mostRepresentedCountryRecords": 27,
-    "countryCeilingAtCurrentSize": 254
+    "countryCeilingAtCurrentSize": 259
   },
   "slots": [
     {
@@ -867,21 +867,7 @@
       "reason": "1 country record(s) already; 5 record(s) in trust; 3 record(s) for this gap"
     },
     {
-      "iso3": "BLR",
-      "indicatorId": "national_belonging",
-      "dimension": "shared_purpose",
-      "priority": 2400,
-      "reason": "2 country record(s) already; 4 record(s) in shared_purpose; 0 record(s) for this gap"
-    },
-    {
       "iso3": "COG",
-      "indicatorId": "national_belonging",
-      "dimension": "shared_purpose",
-      "priority": 2400,
-      "reason": "2 country record(s) already; 4 record(s) in shared_purpose; 0 record(s) for this gap"
-    },
-    {
-      "iso3": "GEO",
       "indicatorId": "national_belonging",
       "dimension": "shared_purpose",
       "priority": 2400,
@@ -895,13 +881,6 @@
       "reason": "2 country record(s) already; 4 record(s) in shared_purpose; 0 record(s) for this gap"
     },
     {
-      "iso3": "MKD",
-      "indicatorId": "national_belonging",
-      "dimension": "shared_purpose",
-      "priority": 2400,
-      "reason": "2 country record(s) already; 4 record(s) in shared_purpose; 0 record(s) for this gap"
-    },
-    {
       "iso3": "PNG",
       "indicatorId": "national_belonging",
       "dimension": "shared_purpose",
@@ -909,21 +888,7 @@
       "reason": "2 country record(s) already; 4 record(s) in shared_purpose; 0 record(s) for this gap"
     },
     {
-      "iso3": "BLR",
-      "indicatorId": "political_polarization",
-      "dimension": "shared_purpose",
-      "priority": 2410,
-      "reason": "2 country record(s) already; 4 record(s) in shared_purpose; 1 record(s) for this gap"
-    },
-    {
       "iso3": "COG",
-      "indicatorId": "political_polarization",
-      "dimension": "shared_purpose",
-      "priority": 2410,
-      "reason": "2 country record(s) already; 4 record(s) in shared_purpose; 1 record(s) for this gap"
-    },
-    {
-      "iso3": "GEO",
       "indicatorId": "political_polarization",
       "dimension": "shared_purpose",
       "priority": 2410,
@@ -937,13 +902,6 @@
       "reason": "2 country record(s) already; 4 record(s) in shared_purpose; 1 record(s) for this gap"
     },
     {
-      "iso3": "MKD",
-      "indicatorId": "political_polarization",
-      "dimension": "shared_purpose",
-      "priority": 2410,
-      "reason": "2 country record(s) already; 4 record(s) in shared_purpose; 1 record(s) for this gap"
-    },
-    {
       "iso3": "PNG",
       "indicatorId": "political_polarization",
       "dimension": "shared_purpose",
@@ -951,21 +909,7 @@
       "reason": "2 country record(s) already; 4 record(s) in shared_purpose; 1 record(s) for this gap"
     },
     {
-      "iso3": "BLR",
-      "indicatorId": "volunteering_rate",
-      "dimension": "shared_purpose",
-      "priority": 2430,
-      "reason": "2 country record(s) already; 4 record(s) in shared_purpose; 3 record(s) for this gap"
-    },
-    {
       "iso3": "COG",
-      "indicatorId": "volunteering_rate",
-      "dimension": "shared_purpose",
-      "priority": 2430,
-      "reason": "2 country record(s) already; 4 record(s) in shared_purpose; 3 record(s) for this gap"
-    },
-    {
-      "iso3": "GEO",
       "indicatorId": "volunteering_rate",
       "dimension": "shared_purpose",
       "priority": 2430,
@@ -979,13 +923,6 @@
       "reason": "2 country record(s) already; 4 record(s) in shared_purpose; 3 record(s) for this gap"
     },
     {
-      "iso3": "MKD",
-      "indicatorId": "volunteering_rate",
-      "dimension": "shared_purpose",
-      "priority": 2430,
-      "reason": "2 country record(s) already; 4 record(s) in shared_purpose; 3 record(s) for this gap"
-    },
-    {
       "iso3": "PNG",
       "indicatorId": "volunteering_rate",
       "dimension": "shared_purpose",
@@ -993,21 +930,7 @@
       "reason": "2 country record(s) already; 4 record(s) in shared_purpose; 3 record(s) for this gap"
     },
     {
-      "iso3": "BLR",
-      "indicatorId": "adult_digital_skills",
-      "dimension": "agency",
-      "priority": 2440,
-      "reason": "2 country record(s) already; 4 record(s) in agency; 4 record(s) for this gap"
-    },
-    {
       "iso3": "COG",
-      "indicatorId": "adult_digital_skills",
-      "dimension": "agency",
-      "priority": 2440,
-      "reason": "2 country record(s) already; 4 record(s) in agency; 4 record(s) for this gap"
-    },
-    {
-      "iso3": "GEO",
       "indicatorId": "adult_digital_skills",
       "dimension": "agency",
       "priority": 2440,
@@ -1021,13 +944,6 @@
       "reason": "2 country record(s) already; 4 record(s) in agency; 4 record(s) for this gap"
     },
     {
-      "iso3": "MKD",
-      "indicatorId": "adult_digital_skills",
-      "dimension": "agency",
-      "priority": 2440,
-      "reason": "2 country record(s) already; 4 record(s) in agency; 4 record(s) for this gap"
-    },
-    {
       "iso3": "PNG",
       "indicatorId": "adult_digital_skills",
       "dimension": "agency",
@@ -1035,21 +951,7 @@
       "reason": "2 country record(s) already; 4 record(s) in agency; 4 record(s) for this gap"
     },
     {
-      "iso3": "BLR",
-      "indicatorId": "court_case_clearance",
-      "dimension": "trust",
-      "priority": 2520,
-      "reason": "2 country record(s) already; 5 record(s) in trust; 2 record(s) for this gap"
-    },
-    {
       "iso3": "COG",
-      "indicatorId": "court_case_clearance",
-      "dimension": "trust",
-      "priority": 2520,
-      "reason": "2 country record(s) already; 5 record(s) in trust; 2 record(s) for this gap"
-    },
-    {
-      "iso3": "GEO",
       "indicatorId": "court_case_clearance",
       "dimension": "trust",
       "priority": 2520,
@@ -1063,25 +965,11 @@
       "reason": "2 country record(s) already; 5 record(s) in trust; 2 record(s) for this gap"
     },
     {
-      "iso3": "MKD",
-      "indicatorId": "court_case_clearance",
-      "dimension": "trust",
-      "priority": 2520,
-      "reason": "2 country record(s) already; 5 record(s) in trust; 2 record(s) for this gap"
-    },
-    {
       "iso3": "PNG",
       "indicatorId": "court_case_clearance",
       "dimension": "trust",
       "priority": 2520,
       "reason": "2 country record(s) already; 5 record(s) in trust; 2 record(s) for this gap"
-    },
-    {
-      "iso3": "BLR",
-      "indicatorId": "institutional_trust",
-      "dimension": "trust",
-      "priority": 2530,
-      "reason": "2 country record(s) already; 5 record(s) in trust; 3 record(s) for this gap"
     },
     {
       "iso3": "COG",
@@ -1091,21 +979,7 @@
       "reason": "2 country record(s) already; 5 record(s) in trust; 3 record(s) for this gap"
     },
     {
-      "iso3": "GEO",
-      "indicatorId": "institutional_trust",
-      "dimension": "trust",
-      "priority": 2530,
-      "reason": "2 country record(s) already; 5 record(s) in trust; 3 record(s) for this gap"
-    },
-    {
       "iso3": "LSO",
-      "indicatorId": "institutional_trust",
-      "dimension": "trust",
-      "priority": 2530,
-      "reason": "2 country record(s) already; 5 record(s) in trust; 3 record(s) for this gap"
-    },
-    {
-      "iso3": "MKD",
       "indicatorId": "institutional_trust",
       "dimension": "trust",
       "priority": 2530,
@@ -1126,13 +1000,6 @@
       "reason": "3 country record(s) already; 4 record(s) in shared_purpose; 0 record(s) for this gap"
     },
     {
-      "iso3": "BDI",
-      "indicatorId": "national_belonging",
-      "dimension": "shared_purpose",
-      "priority": 3400,
-      "reason": "3 country record(s) already; 4 record(s) in shared_purpose; 0 record(s) for this gap"
-    },
-    {
       "iso3": "BFA",
       "indicatorId": "national_belonging",
       "dimension": "shared_purpose",
@@ -1147,6 +1014,13 @@
       "reason": "3 country record(s) already; 4 record(s) in shared_purpose; 0 record(s) for this gap"
     },
     {
+      "iso3": "BLR",
+      "indicatorId": "national_belonging",
+      "dimension": "shared_purpose",
+      "priority": 3400,
+      "reason": "3 country record(s) already; 4 record(s) in shared_purpose; 0 record(s) for this gap"
+    },
+    {
       "iso3": "BWA",
       "indicatorId": "national_belonging",
       "dimension": "shared_purpose",
@@ -1154,7 +1028,7 @@
       "reason": "3 country record(s) already; 4 record(s) in shared_purpose; 0 record(s) for this gap"
     },
     {
-      "iso3": "CYP",
+      "iso3": "GEO",
       "indicatorId": "national_belonging",
       "dimension": "shared_purpose",
       "priority": 3400,
@@ -1217,14 +1091,14 @@
       "reason": "3 country record(s) already; 4 record(s) in shared_purpose; 0 record(s) for this gap"
     },
     {
-      "iso3": "MMR",
+      "iso3": "MKD",
       "indicatorId": "national_belonging",
       "dimension": "shared_purpose",
       "priority": 3400,
       "reason": "3 country record(s) already; 4 record(s) in shared_purpose; 0 record(s) for this gap"
     },
     {
-      "iso3": "MNG",
+      "iso3": "MMR",
       "indicatorId": "national_belonging",
       "dimension": "shared_purpose",
       "priority": 3400,
@@ -1273,13 +1147,6 @@
       "reason": "3 country record(s) already; 4 record(s) in shared_purpose; 1 record(s) for this gap"
     },
     {
-      "iso3": "BDI",
-      "indicatorId": "political_polarization",
-      "dimension": "shared_purpose",
-      "priority": 3410,
-      "reason": "3 country record(s) already; 4 record(s) in shared_purpose; 1 record(s) for this gap"
-    },
-    {
       "iso3": "BFA",
       "indicatorId": "political_polarization",
       "dimension": "shared_purpose",
@@ -1294,6 +1161,13 @@
       "reason": "3 country record(s) already; 4 record(s) in shared_purpose; 1 record(s) for this gap"
     },
     {
+      "iso3": "BLR",
+      "indicatorId": "political_polarization",
+      "dimension": "shared_purpose",
+      "priority": 3410,
+      "reason": "3 country record(s) already; 4 record(s) in shared_purpose; 1 record(s) for this gap"
+    },
+    {
       "iso3": "BWA",
       "indicatorId": "political_polarization",
       "dimension": "shared_purpose",
@@ -1301,7 +1175,7 @@
       "reason": "3 country record(s) already; 4 record(s) in shared_purpose; 1 record(s) for this gap"
     },
     {
-      "iso3": "CYP",
+      "iso3": "GEO",
       "indicatorId": "political_polarization",
       "dimension": "shared_purpose",
       "priority": 3410,
@@ -1364,14 +1238,14 @@
       "reason": "3 country record(s) already; 4 record(s) in shared_purpose; 1 record(s) for this gap"
     },
     {
-      "iso3": "MMR",
+      "iso3": "MKD",
       "indicatorId": "political_polarization",
       "dimension": "shared_purpose",
       "priority": 3410,
       "reason": "3 country record(s) already; 4 record(s) in shared_purpose; 1 record(s) for this gap"
     },
     {
-      "iso3": "MNG",
+      "iso3": "MMR",
       "indicatorId": "political_polarization",
       "dimension": "shared_purpose",
       "priority": 3410,
@@ -1420,13 +1294,6 @@
       "reason": "3 country record(s) already; 4 record(s) in shared_purpose; 3 record(s) for this gap"
     },
     {
-      "iso3": "BDI",
-      "indicatorId": "volunteering_rate",
-      "dimension": "shared_purpose",
-      "priority": 3430,
-      "reason": "3 country record(s) already; 4 record(s) in shared_purpose; 3 record(s) for this gap"
-    },
-    {
       "iso3": "BFA",
       "indicatorId": "volunteering_rate",
       "dimension": "shared_purpose",
@@ -1441,6 +1308,13 @@
       "reason": "3 country record(s) already; 4 record(s) in shared_purpose; 3 record(s) for this gap"
     },
     {
+      "iso3": "BLR",
+      "indicatorId": "volunteering_rate",
+      "dimension": "shared_purpose",
+      "priority": 3430,
+      "reason": "3 country record(s) already; 4 record(s) in shared_purpose; 3 record(s) for this gap"
+    },
+    {
       "iso3": "BWA",
       "indicatorId": "volunteering_rate",
       "dimension": "shared_purpose",
@@ -1448,7 +1322,7 @@
       "reason": "3 country record(s) already; 4 record(s) in shared_purpose; 3 record(s) for this gap"
     },
     {
-      "iso3": "CYP",
+      "iso3": "GEO",
       "indicatorId": "volunteering_rate",
       "dimension": "shared_purpose",
       "priority": 3430,
@@ -1511,14 +1385,14 @@
       "reason": "3 country record(s) already; 4 record(s) in shared_purpose; 3 record(s) for this gap"
     },
     {
-      "iso3": "MMR",
+      "iso3": "MKD",
       "indicatorId": "volunteering_rate",
       "dimension": "shared_purpose",
       "priority": 3430,
       "reason": "3 country record(s) already; 4 record(s) in shared_purpose; 3 record(s) for this gap"
     },
     {
-      "iso3": "MNG",
+      "iso3": "MMR",
       "indicatorId": "volunteering_rate",
       "dimension": "shared_purpose",
       "priority": 3430,
@@ -1567,13 +1441,6 @@
       "reason": "3 country record(s) already; 4 record(s) in agency; 4 record(s) for this gap"
     },
     {
-      "iso3": "BDI",
-      "indicatorId": "adult_digital_skills",
-      "dimension": "agency",
-      "priority": 3440,
-      "reason": "3 country record(s) already; 4 record(s) in agency; 4 record(s) for this gap"
-    },
-    {
       "iso3": "BFA",
       "indicatorId": "adult_digital_skills",
       "dimension": "agency",
@@ -1588,6 +1455,13 @@
       "reason": "3 country record(s) already; 4 record(s) in agency; 4 record(s) for this gap"
     },
     {
+      "iso3": "BLR",
+      "indicatorId": "adult_digital_skills",
+      "dimension": "agency",
+      "priority": 3440,
+      "reason": "3 country record(s) already; 4 record(s) in agency; 4 record(s) for this gap"
+    },
+    {
       "iso3": "BWA",
       "indicatorId": "adult_digital_skills",
       "dimension": "agency",
@@ -1595,7 +1469,7 @@
       "reason": "3 country record(s) already; 4 record(s) in agency; 4 record(s) for this gap"
     },
     {
-      "iso3": "CYP",
+      "iso3": "GEO",
       "indicatorId": "adult_digital_skills",
       "dimension": "agency",
       "priority": 3440,
@@ -1658,14 +1532,14 @@
       "reason": "3 country record(s) already; 4 record(s) in agency; 4 record(s) for this gap"
     },
     {
-      "iso3": "MMR",
+      "iso3": "MKD",
       "indicatorId": "adult_digital_skills",
       "dimension": "agency",
       "priority": 3440,
       "reason": "3 country record(s) already; 4 record(s) in agency; 4 record(s) for this gap"
     },
     {
-      "iso3": "MNG",
+      "iso3": "MMR",
       "indicatorId": "adult_digital_skills",
       "dimension": "agency",
       "priority": 3440,
@@ -1714,13 +1588,6 @@
       "reason": "3 country record(s) already; 5 record(s) in trust; 2 record(s) for this gap"
     },
     {
-      "iso3": "BDI",
-      "indicatorId": "court_case_clearance",
-      "dimension": "trust",
-      "priority": 3520,
-      "reason": "3 country record(s) already; 5 record(s) in trust; 2 record(s) for this gap"
-    },
-    {
       "iso3": "BFA",
       "indicatorId": "court_case_clearance",
       "dimension": "trust",
@@ -1735,6 +1602,13 @@
       "reason": "3 country record(s) already; 5 record(s) in trust; 2 record(s) for this gap"
     },
     {
+      "iso3": "BLR",
+      "indicatorId": "court_case_clearance",
+      "dimension": "trust",
+      "priority": 3520,
+      "reason": "3 country record(s) already; 5 record(s) in trust; 2 record(s) for this gap"
+    },
+    {
       "iso3": "BWA",
       "indicatorId": "court_case_clearance",
       "dimension": "trust",
@@ -1742,7 +1616,7 @@
       "reason": "3 country record(s) already; 5 record(s) in trust; 2 record(s) for this gap"
     },
     {
-      "iso3": "CYP",
+      "iso3": "GEO",
       "indicatorId": "court_case_clearance",
       "dimension": "trust",
       "priority": 3520,
@@ -1805,14 +1679,14 @@
       "reason": "3 country record(s) already; 5 record(s) in trust; 2 record(s) for this gap"
     },
     {
-      "iso3": "MMR",
+      "iso3": "MKD",
       "indicatorId": "court_case_clearance",
       "dimension": "trust",
       "priority": 3520,
       "reason": "3 country record(s) already; 5 record(s) in trust; 2 record(s) for this gap"
     },
     {
-      "iso3": "MNG",
+      "iso3": "MMR",
       "indicatorId": "court_case_clearance",
       "dimension": "trust",
       "priority": 3520,
@@ -1861,13 +1735,6 @@
       "reason": "3 country record(s) already; 5 record(s) in trust; 3 record(s) for this gap"
     },
     {
-      "iso3": "BDI",
-      "indicatorId": "institutional_trust",
-      "dimension": "trust",
-      "priority": 3530,
-      "reason": "3 country record(s) already; 5 record(s) in trust; 3 record(s) for this gap"
-    },
-    {
       "iso3": "BFA",
       "indicatorId": "institutional_trust",
       "dimension": "trust",
@@ -1882,6 +1749,13 @@
       "reason": "3 country record(s) already; 5 record(s) in trust; 3 record(s) for this gap"
     },
     {
+      "iso3": "BLR",
+      "indicatorId": "institutional_trust",
+      "dimension": "trust",
+      "priority": 3530,
+      "reason": "3 country record(s) already; 5 record(s) in trust; 3 record(s) for this gap"
+    },
+    {
       "iso3": "BWA",
       "indicatorId": "institutional_trust",
       "dimension": "trust",
@@ -1889,7 +1763,7 @@
       "reason": "3 country record(s) already; 5 record(s) in trust; 3 record(s) for this gap"
     },
     {
-      "iso3": "CYP",
+      "iso3": "GEO",
       "indicatorId": "institutional_trust",
       "dimension": "trust",
       "priority": 3530,
@@ -1952,14 +1826,14 @@
       "reason": "3 country record(s) already; 5 record(s) in trust; 3 record(s) for this gap"
     },
     {
-      "iso3": "MMR",
+      "iso3": "MKD",
       "indicatorId": "institutional_trust",
       "dimension": "trust",
       "priority": 3530,
       "reason": "3 country record(s) already; 5 record(s) in trust; 3 record(s) for this gap"
     },
     {
-      "iso3": "MNG",
+      "iso3": "MMR",
       "indicatorId": "institutional_trust",
       "dimension": "trust",
       "priority": 3530,
@@ -2029,7 +1903,7 @@
       "reason": "4 country record(s) already; 4 record(s) in shared_purpose; 0 record(s) for this gap"
     },
     {
-      "iso3": "BGR",
+      "iso3": "BDI",
       "indicatorId": "national_belonging",
       "dimension": "shared_purpose",
       "priority": 4400,
@@ -2037,6 +1911,13 @@
     },
     {
       "iso3": "COD",
+      "indicatorId": "national_belonging",
+      "dimension": "shared_purpose",
+      "priority": 4400,
+      "reason": "4 country record(s) already; 4 record(s) in shared_purpose; 0 record(s) for this gap"
+    },
+    {
+      "iso3": "CYP",
       "indicatorId": "national_belonging",
       "dimension": "shared_purpose",
       "priority": 4400,
@@ -2085,7 +1966,7 @@
       "reason": "4 country record(s) already; 4 record(s) in shared_purpose; 0 record(s) for this gap"
     },
     {
-      "iso3": "NAM",
+      "iso3": "MNG",
       "indicatorId": "national_belonging",
       "dimension": "shared_purpose",
       "priority": 4400,
@@ -2107,20 +1988,6 @@
     },
     {
       "iso3": "SVN",
-      "indicatorId": "national_belonging",
-      "dimension": "shared_purpose",
-      "priority": 4400,
-      "reason": "4 country record(s) already; 4 record(s) in shared_purpose; 0 record(s) for this gap"
-    },
-    {
-      "iso3": "TZA",
-      "indicatorId": "national_belonging",
-      "dimension": "shared_purpose",
-      "priority": 4400,
-      "reason": "4 country record(s) already; 4 record(s) in shared_purpose; 0 record(s) for this gap"
-    },
-    {
-      "iso3": "ZWE",
       "indicatorId": "national_belonging",
       "dimension": "shared_purpose",
       "priority": 4400,
@@ -2141,7 +2008,7 @@
       "reason": "4 country record(s) already; 4 record(s) in shared_purpose; 1 record(s) for this gap"
     },
     {
-      "iso3": "BGR",
+      "iso3": "BDI",
       "indicatorId": "political_polarization",
       "dimension": "shared_purpose",
       "priority": 4410,
@@ -2149,6 +2016,13 @@
     },
     {
       "iso3": "COD",
+      "indicatorId": "political_polarization",
+      "dimension": "shared_purpose",
+      "priority": 4410,
+      "reason": "4 country record(s) already; 4 record(s) in shared_purpose; 1 record(s) for this gap"
+    },
+    {
+      "iso3": "CYP",
       "indicatorId": "political_polarization",
       "dimension": "shared_purpose",
       "priority": 4410,
@@ -2197,7 +2071,7 @@
       "reason": "4 country record(s) already; 4 record(s) in shared_purpose; 1 record(s) for this gap"
     },
     {
-      "iso3": "NAM",
+      "iso3": "MNG",
       "indicatorId": "political_polarization",
       "dimension": "shared_purpose",
       "priority": 4410,
@@ -2219,20 +2093,6 @@
     },
     {
       "iso3": "SVN",
-      "indicatorId": "political_polarization",
-      "dimension": "shared_purpose",
-      "priority": 4410,
-      "reason": "4 country record(s) already; 4 record(s) in shared_purpose; 1 record(s) for this gap"
-    },
-    {
-      "iso3": "TZA",
-      "indicatorId": "political_polarization",
-      "dimension": "shared_purpose",
-      "priority": 4410,
-      "reason": "4 country record(s) already; 4 record(s) in shared_purpose; 1 record(s) for this gap"
-    },
-    {
-      "iso3": "ZWE",
       "indicatorId": "political_polarization",
       "dimension": "shared_purpose",
       "priority": 4410,
@@ -2253,7 +2113,7 @@
       "reason": "4 country record(s) already; 4 record(s) in shared_purpose; 3 record(s) for this gap"
     },
     {
-      "iso3": "BGR",
+      "iso3": "BDI",
       "indicatorId": "volunteering_rate",
       "dimension": "shared_purpose",
       "priority": 4430,
@@ -2261,6 +2121,13 @@
     },
     {
       "iso3": "COD",
+      "indicatorId": "volunteering_rate",
+      "dimension": "shared_purpose",
+      "priority": 4430,
+      "reason": "4 country record(s) already; 4 record(s) in shared_purpose; 3 record(s) for this gap"
+    },
+    {
+      "iso3": "CYP",
       "indicatorId": "volunteering_rate",
       "dimension": "shared_purpose",
       "priority": 4430,
@@ -2309,7 +2176,7 @@
       "reason": "4 country record(s) already; 4 record(s) in shared_purpose; 3 record(s) for this gap"
     },
     {
-      "iso3": "NAM",
+      "iso3": "MNG",
       "indicatorId": "volunteering_rate",
       "dimension": "shared_purpose",
       "priority": 4430,
@@ -2331,20 +2198,6 @@
     },
     {
       "iso3": "SVN",
-      "indicatorId": "volunteering_rate",
-      "dimension": "shared_purpose",
-      "priority": 4430,
-      "reason": "4 country record(s) already; 4 record(s) in shared_purpose; 3 record(s) for this gap"
-    },
-    {
-      "iso3": "TZA",
-      "indicatorId": "volunteering_rate",
-      "dimension": "shared_purpose",
-      "priority": 4430,
-      "reason": "4 country record(s) already; 4 record(s) in shared_purpose; 3 record(s) for this gap"
-    },
-    {
-      "iso3": "ZWE",
       "indicatorId": "volunteering_rate",
       "dimension": "shared_purpose",
       "priority": 4430,
@@ -2365,7 +2218,7 @@
       "reason": "4 country record(s) already; 4 record(s) in agency; 4 record(s) for this gap"
     },
     {
-      "iso3": "BGR",
+      "iso3": "BDI",
       "indicatorId": "adult_digital_skills",
       "dimension": "agency",
       "priority": 4440,
@@ -2373,6 +2226,13 @@
     },
     {
       "iso3": "COD",
+      "indicatorId": "adult_digital_skills",
+      "dimension": "agency",
+      "priority": 4440,
+      "reason": "4 country record(s) already; 4 record(s) in agency; 4 record(s) for this gap"
+    },
+    {
+      "iso3": "CYP",
       "indicatorId": "adult_digital_skills",
       "dimension": "agency",
       "priority": 4440,
@@ -2421,7 +2281,7 @@
       "reason": "4 country record(s) already; 4 record(s) in agency; 4 record(s) for this gap"
     },
     {
-      "iso3": "NAM",
+      "iso3": "MNG",
       "indicatorId": "adult_digital_skills",
       "dimension": "agency",
       "priority": 4440,
@@ -2443,20 +2303,6 @@
     },
     {
       "iso3": "SVN",
-      "indicatorId": "adult_digital_skills",
-      "dimension": "agency",
-      "priority": 4440,
-      "reason": "4 country record(s) already; 4 record(s) in agency; 4 record(s) for this gap"
-    },
-    {
-      "iso3": "TZA",
-      "indicatorId": "adult_digital_skills",
-      "dimension": "agency",
-      "priority": 4440,
-      "reason": "4 country record(s) already; 4 record(s) in agency; 4 record(s) for this gap"
-    },
-    {
-      "iso3": "ZWE",
       "indicatorId": "adult_digital_skills",
       "dimension": "agency",
       "priority": 4440,
@@ -2477,7 +2323,7 @@
       "reason": "4 country record(s) already; 5 record(s) in trust; 2 record(s) for this gap"
     },
     {
-      "iso3": "BGR",
+      "iso3": "BDI",
       "indicatorId": "court_case_clearance",
       "dimension": "trust",
       "priority": 4520,
@@ -2485,6 +2331,13 @@
     },
     {
       "iso3": "COD",
+      "indicatorId": "court_case_clearance",
+      "dimension": "trust",
+      "priority": 4520,
+      "reason": "4 country record(s) already; 5 record(s) in trust; 2 record(s) for this gap"
+    },
+    {
+      "iso3": "CYP",
       "indicatorId": "court_case_clearance",
       "dimension": "trust",
       "priority": 4520,
@@ -2533,7 +2386,7 @@
       "reason": "4 country record(s) already; 5 record(s) in trust; 2 record(s) for this gap"
     },
     {
-      "iso3": "NAM",
+      "iso3": "MNG",
       "indicatorId": "court_case_clearance",
       "dimension": "trust",
       "priority": 4520,
@@ -2555,20 +2408,6 @@
     },
     {
       "iso3": "SVN",
-      "indicatorId": "court_case_clearance",
-      "dimension": "trust",
-      "priority": 4520,
-      "reason": "4 country record(s) already; 5 record(s) in trust; 2 record(s) for this gap"
-    },
-    {
-      "iso3": "TZA",
-      "indicatorId": "court_case_clearance",
-      "dimension": "trust",
-      "priority": 4520,
-      "reason": "4 country record(s) already; 5 record(s) in trust; 2 record(s) for this gap"
-    },
-    {
-      "iso3": "ZWE",
       "indicatorId": "court_case_clearance",
       "dimension": "trust",
       "priority": 4520,
@@ -2589,7 +2428,7 @@
       "reason": "4 country record(s) already; 5 record(s) in trust; 3 record(s) for this gap"
     },
     {
-      "iso3": "BGR",
+      "iso3": "BDI",
       "indicatorId": "institutional_trust",
       "dimension": "trust",
       "priority": 4530,
@@ -2597,6 +2436,13 @@
     },
     {
       "iso3": "COD",
+      "indicatorId": "institutional_trust",
+      "dimension": "trust",
+      "priority": 4530,
+      "reason": "4 country record(s) already; 5 record(s) in trust; 3 record(s) for this gap"
+    },
+    {
+      "iso3": "CYP",
       "indicatorId": "institutional_trust",
       "dimension": "trust",
       "priority": 4530,
@@ -2645,7 +2491,7 @@
       "reason": "4 country record(s) already; 5 record(s) in trust; 3 record(s) for this gap"
     },
     {
-      "iso3": "NAM",
+      "iso3": "MNG",
       "indicatorId": "institutional_trust",
       "dimension": "trust",
       "priority": 4530,
@@ -2671,27 +2517,6 @@
       "dimension": "trust",
       "priority": 4530,
       "reason": "4 country record(s) already; 5 record(s) in trust; 3 record(s) for this gap"
-    },
-    {
-      "iso3": "TZA",
-      "indicatorId": "institutional_trust",
-      "dimension": "trust",
-      "priority": 4530,
-      "reason": "4 country record(s) already; 5 record(s) in trust; 3 record(s) for this gap"
-    },
-    {
-      "iso3": "ZWE",
-      "indicatorId": "institutional_trust",
-      "dimension": "trust",
-      "priority": 4530,
-      "reason": "4 country record(s) already; 5 record(s) in trust; 3 record(s) for this gap"
-    },
-    {
-      "iso3": "BLR",
-      "indicatorId": "basic_research_share",
-      "dimension": "anticipation",
-      "priority": 5020,
-      "reason": "2 country record(s) already; 30 record(s) in anticipation; 2 record(s) for this gap"
     },
     {
       "iso3": "COG",
@@ -2701,21 +2526,7 @@
       "reason": "2 country record(s) already; 30 record(s) in anticipation; 2 record(s) for this gap"
     },
     {
-      "iso3": "GEO",
-      "indicatorId": "basic_research_share",
-      "dimension": "anticipation",
-      "priority": 5020,
-      "reason": "2 country record(s) already; 30 record(s) in anticipation; 2 record(s) for this gap"
-    },
-    {
       "iso3": "LSO",
-      "indicatorId": "basic_research_share",
-      "dimension": "anticipation",
-      "priority": 5020,
-      "reason": "2 country record(s) already; 30 record(s) in anticipation; 2 record(s) for this gap"
-    },
-    {
-      "iso3": "MKD",
       "indicatorId": "basic_research_share",
       "dimension": "anticipation",
       "priority": 5020,
@@ -2729,13 +2540,6 @@
       "reason": "2 country record(s) already; 30 record(s) in anticipation; 2 record(s) for this gap"
     },
     {
-      "iso3": "BLR",
-      "indicatorId": "government_foresight_capacity",
-      "dimension": "anticipation",
-      "priority": 5280,
-      "reason": "2 country record(s) already; 30 record(s) in anticipation; 28 record(s) for this gap"
-    },
-    {
       "iso3": "COG",
       "indicatorId": "government_foresight_capacity",
       "dimension": "anticipation",
@@ -2743,21 +2547,7 @@
       "reason": "2 country record(s) already; 30 record(s) in anticipation; 28 record(s) for this gap"
     },
     {
-      "iso3": "GEO",
-      "indicatorId": "government_foresight_capacity",
-      "dimension": "anticipation",
-      "priority": 5280,
-      "reason": "2 country record(s) already; 30 record(s) in anticipation; 28 record(s) for this gap"
-    },
-    {
       "iso3": "LSO",
-      "indicatorId": "government_foresight_capacity",
-      "dimension": "anticipation",
-      "priority": 5280,
-      "reason": "2 country record(s) already; 30 record(s) in anticipation; 28 record(s) for this gap"
-    },
-    {
-      "iso3": "MKD",
       "indicatorId": "government_foresight_capacity",
       "dimension": "anticipation",
       "priority": 5280,
@@ -2785,14 +2575,14 @@
       "reason": "5 country record(s) already; 4 record(s) in shared_purpose; 0 record(s) for this gap"
     },
     {
-      "iso3": "CUB",
+      "iso3": "BGR",
       "indicatorId": "national_belonging",
       "dimension": "shared_purpose",
       "priority": 5400,
       "reason": "5 country record(s) already; 4 record(s) in shared_purpose; 0 record(s) for this gap"
     },
     {
-      "iso3": "CZE",
+      "iso3": "CUB",
       "indicatorId": "national_belonging",
       "dimension": "shared_purpose",
       "priority": 5400,
@@ -2855,6 +2645,13 @@
       "reason": "5 country record(s) already; 4 record(s) in shared_purpose; 0 record(s) for this gap"
     },
     {
+      "iso3": "NAM",
+      "indicatorId": "national_belonging",
+      "dimension": "shared_purpose",
+      "priority": 5400,
+      "reason": "5 country record(s) already; 4 record(s) in shared_purpose; 0 record(s) for this gap"
+    },
+    {
       "iso3": "RWA",
       "indicatorId": "national_belonging",
       "dimension": "shared_purpose",
@@ -2862,7 +2659,7 @@
       "reason": "5 country record(s) already; 4 record(s) in shared_purpose; 0 record(s) for this gap"
     },
     {
-      "iso3": "SVK",
+      "iso3": "TZA",
       "indicatorId": "national_belonging",
       "dimension": "shared_purpose",
       "priority": 5400,
@@ -2884,6 +2681,13 @@
     },
     {
       "iso3": "ZMB",
+      "indicatorId": "national_belonging",
+      "dimension": "shared_purpose",
+      "priority": 5400,
+      "reason": "5 country record(s) already; 4 record(s) in shared_purpose; 0 record(s) for this gap"
+    },
+    {
+      "iso3": "ZWE",
       "indicatorId": "national_belonging",
       "dimension": "shared_purpose",
       "priority": 5400,
@@ -2904,14 +2708,14 @@
       "reason": "5 country record(s) already; 4 record(s) in shared_purpose; 1 record(s) for this gap"
     },
     {
-      "iso3": "CUB",
+      "iso3": "BGR",
       "indicatorId": "political_polarization",
       "dimension": "shared_purpose",
       "priority": 5410,
       "reason": "5 country record(s) already; 4 record(s) in shared_purpose; 1 record(s) for this gap"
     },
     {
-      "iso3": "CZE",
+      "iso3": "CUB",
       "indicatorId": "political_polarization",
       "dimension": "shared_purpose",
       "priority": 5410,
@@ -2974,6 +2778,13 @@
       "reason": "5 country record(s) already; 4 record(s) in shared_purpose; 1 record(s) for this gap"
     },
     {
+      "iso3": "NAM",
+      "indicatorId": "political_polarization",
+      "dimension": "shared_purpose",
+      "priority": 5410,
+      "reason": "5 country record(s) already; 4 record(s) in shared_purpose; 1 record(s) for this gap"
+    },
+    {
       "iso3": "RWA",
       "indicatorId": "political_polarization",
       "dimension": "shared_purpose",
@@ -2981,7 +2792,7 @@
       "reason": "5 country record(s) already; 4 record(s) in shared_purpose; 1 record(s) for this gap"
     },
     {
-      "iso3": "SVK",
+      "iso3": "TZA",
       "indicatorId": "political_polarization",
       "dimension": "shared_purpose",
       "priority": 5410,
@@ -3003,6 +2814,13 @@
     },
     {
       "iso3": "ZMB",
+      "indicatorId": "political_polarization",
+      "dimension": "shared_purpose",
+      "priority": 5410,
+      "reason": "5 country record(s) already; 4 record(s) in shared_purpose; 1 record(s) for this gap"
+    },
+    {
+      "iso3": "ZWE",
       "indicatorId": "political_polarization",
       "dimension": "shared_purpose",
       "priority": 5410,
@@ -3023,14 +2841,14 @@
       "reason": "5 country record(s) already; 4 record(s) in shared_purpose; 3 record(s) for this gap"
     },
     {
-      "iso3": "CUB",
+      "iso3": "BGR",
       "indicatorId": "volunteering_rate",
       "dimension": "shared_purpose",
       "priority": 5430,
       "reason": "5 country record(s) already; 4 record(s) in shared_purpose; 3 record(s) for this gap"
     },
     {
-      "iso3": "CZE",
+      "iso3": "CUB",
       "indicatorId": "volunteering_rate",
       "dimension": "shared_purpose",
       "priority": 5430,
@@ -3093,7 +2911,14 @@
       "reason": "5 country record(s) already; 4 record(s) in shared_purpose; 3 record(s) for this gap"
     },
     {
-      "iso3": "SVK",
+      "iso3": "NAM",
+      "indicatorId": "volunteering_rate",
+      "dimension": "shared_purpose",
+      "priority": 5430,
+      "reason": "5 country record(s) already; 4 record(s) in shared_purpose; 3 record(s) for this gap"
+    },
+    {
+      "iso3": "TZA",
       "indicatorId": "volunteering_rate",
       "dimension": "shared_purpose",
       "priority": 5430,
@@ -3115,6 +2940,13 @@
     },
     {
       "iso3": "ZMB",
+      "indicatorId": "volunteering_rate",
+      "dimension": "shared_purpose",
+      "priority": 5430,
+      "reason": "5 country record(s) already; 4 record(s) in shared_purpose; 3 record(s) for this gap"
+    },
+    {
+      "iso3": "ZWE",
       "indicatorId": "volunteering_rate",
       "dimension": "shared_purpose",
       "priority": 5430,
@@ -3135,14 +2967,14 @@
       "reason": "5 country record(s) already; 4 record(s) in agency; 4 record(s) for this gap"
     },
     {
-      "iso3": "CUB",
+      "iso3": "BGR",
       "indicatorId": "adult_digital_skills",
       "dimension": "agency",
       "priority": 5440,
       "reason": "5 country record(s) already; 4 record(s) in agency; 4 record(s) for this gap"
     },
     {
-      "iso3": "CZE",
+      "iso3": "CUB",
       "indicatorId": "adult_digital_skills",
       "dimension": "agency",
       "priority": 5440,
@@ -3205,6 +3037,13 @@
       "reason": "5 country record(s) already; 4 record(s) in agency; 4 record(s) for this gap"
     },
     {
+      "iso3": "NAM",
+      "indicatorId": "adult_digital_skills",
+      "dimension": "agency",
+      "priority": 5440,
+      "reason": "5 country record(s) already; 4 record(s) in agency; 4 record(s) for this gap"
+    },
+    {
       "iso3": "RWA",
       "indicatorId": "adult_digital_skills",
       "dimension": "agency",
@@ -3212,7 +3051,7 @@
       "reason": "5 country record(s) already; 4 record(s) in agency; 4 record(s) for this gap"
     },
     {
-      "iso3": "SVK",
+      "iso3": "TZA",
       "indicatorId": "adult_digital_skills",
       "dimension": "agency",
       "priority": 5440,
@@ -3234,6 +3073,13 @@
     },
     {
       "iso3": "ZMB",
+      "indicatorId": "adult_digital_skills",
+      "dimension": "agency",
+      "priority": 5440,
+      "reason": "5 country record(s) already; 4 record(s) in agency; 4 record(s) for this gap"
+    },
+    {
+      "iso3": "ZWE",
       "indicatorId": "adult_digital_skills",
       "dimension": "agency",
       "priority": 5440,
@@ -3254,14 +3100,14 @@
       "reason": "5 country record(s) already; 5 record(s) in trust; 2 record(s) for this gap"
     },
     {
-      "iso3": "CUB",
+      "iso3": "BGR",
       "indicatorId": "court_case_clearance",
       "dimension": "trust",
       "priority": 5520,
       "reason": "5 country record(s) already; 5 record(s) in trust; 2 record(s) for this gap"
     },
     {
-      "iso3": "CZE",
+      "iso3": "CUB",
       "indicatorId": "court_case_clearance",
       "dimension": "trust",
       "priority": 5520,
@@ -3324,6 +3170,13 @@
       "reason": "5 country record(s) already; 5 record(s) in trust; 2 record(s) for this gap"
     },
     {
+      "iso3": "NAM",
+      "indicatorId": "court_case_clearance",
+      "dimension": "trust",
+      "priority": 5520,
+      "reason": "5 country record(s) already; 5 record(s) in trust; 2 record(s) for this gap"
+    },
+    {
       "iso3": "RWA",
       "indicatorId": "court_case_clearance",
       "dimension": "trust",
@@ -3331,7 +3184,7 @@
       "reason": "5 country record(s) already; 5 record(s) in trust; 2 record(s) for this gap"
     },
     {
-      "iso3": "SVK",
+      "iso3": "TZA",
       "indicatorId": "court_case_clearance",
       "dimension": "trust",
       "priority": 5520,
@@ -3353,6 +3206,13 @@
     },
     {
       "iso3": "ZMB",
+      "indicatorId": "court_case_clearance",
+      "dimension": "trust",
+      "priority": 5520,
+      "reason": "5 country record(s) already; 5 record(s) in trust; 2 record(s) for this gap"
+    },
+    {
+      "iso3": "ZWE",
       "indicatorId": "court_case_clearance",
       "dimension": "trust",
       "priority": 5520,
@@ -3373,14 +3233,14 @@
       "reason": "5 country record(s) already; 5 record(s) in trust; 3 record(s) for this gap"
     },
     {
-      "iso3": "CUB",
+      "iso3": "BGR",
       "indicatorId": "institutional_trust",
       "dimension": "trust",
       "priority": 5530,
       "reason": "5 country record(s) already; 5 record(s) in trust; 3 record(s) for this gap"
     },
     {
-      "iso3": "CZE",
+      "iso3": "CUB",
       "indicatorId": "institutional_trust",
       "dimension": "trust",
       "priority": 5530,
@@ -3443,6 +3303,13 @@
       "reason": "5 country record(s) already; 5 record(s) in trust; 3 record(s) for this gap"
     },
     {
+      "iso3": "NAM",
+      "indicatorId": "institutional_trust",
+      "dimension": "trust",
+      "priority": 5530,
+      "reason": "5 country record(s) already; 5 record(s) in trust; 3 record(s) for this gap"
+    },
+    {
       "iso3": "RWA",
       "indicatorId": "institutional_trust",
       "dimension": "trust",
@@ -3450,7 +3317,7 @@
       "reason": "5 country record(s) already; 5 record(s) in trust; 3 record(s) for this gap"
     },
     {
-      "iso3": "SVK",
+      "iso3": "TZA",
       "indicatorId": "institutional_trust",
       "dimension": "trust",
       "priority": 5530,
@@ -3472,6 +3339,13 @@
     },
     {
       "iso3": "ZMB",
+      "indicatorId": "institutional_trust",
+      "dimension": "trust",
+      "priority": 5530,
+      "reason": "5 country record(s) already; 5 record(s) in trust; 3 record(s) for this gap"
+    },
+    {
+      "iso3": "ZWE",
       "indicatorId": "institutional_trust",
       "dimension": "trust",
       "priority": 5530,
@@ -3499,13 +3373,6 @@
       "reason": "3 country record(s) already; 30 record(s) in anticipation; 2 record(s) for this gap"
     },
     {
-      "iso3": "BDI",
-      "indicatorId": "basic_research_share",
-      "dimension": "anticipation",
-      "priority": 6020,
-      "reason": "3 country record(s) already; 30 record(s) in anticipation; 2 record(s) for this gap"
-    },
-    {
       "iso3": "BFA",
       "indicatorId": "basic_research_share",
       "dimension": "anticipation",
@@ -3520,6 +3387,13 @@
       "reason": "3 country record(s) already; 30 record(s) in anticipation; 2 record(s) for this gap"
     },
     {
+      "iso3": "BLR",
+      "indicatorId": "basic_research_share",
+      "dimension": "anticipation",
+      "priority": 6020,
+      "reason": "3 country record(s) already; 30 record(s) in anticipation; 2 record(s) for this gap"
+    },
+    {
       "iso3": "BWA",
       "indicatorId": "basic_research_share",
       "dimension": "anticipation",
@@ -3527,7 +3401,7 @@
       "reason": "3 country record(s) already; 30 record(s) in anticipation; 2 record(s) for this gap"
     },
     {
-      "iso3": "CYP",
+      "iso3": "GEO",
       "indicatorId": "basic_research_share",
       "dimension": "anticipation",
       "priority": 6020,
@@ -3590,14 +3464,14 @@
       "reason": "3 country record(s) already; 30 record(s) in anticipation; 2 record(s) for this gap"
     },
     {
-      "iso3": "MMR",
+      "iso3": "MKD",
       "indicatorId": "basic_research_share",
       "dimension": "anticipation",
       "priority": 6020,
       "reason": "3 country record(s) already; 30 record(s) in anticipation; 2 record(s) for this gap"
     },
     {
-      "iso3": "MNG",
+      "iso3": "MMR",
       "indicatorId": "basic_research_share",
       "dimension": "anticipation",
       "priority": 6020,
@@ -3646,13 +3520,6 @@
       "reason": "3 country record(s) already; 30 record(s) in anticipation; 28 record(s) for this gap"
     },
     {
-      "iso3": "BDI",
-      "indicatorId": "government_foresight_capacity",
-      "dimension": "anticipation",
-      "priority": 6280,
-      "reason": "3 country record(s) already; 30 record(s) in anticipation; 28 record(s) for this gap"
-    },
-    {
       "iso3": "BFA",
       "indicatorId": "government_foresight_capacity",
       "dimension": "anticipation",
@@ -3667,6 +3534,13 @@
       "reason": "3 country record(s) already; 30 record(s) in anticipation; 28 record(s) for this gap"
     },
     {
+      "iso3": "BLR",
+      "indicatorId": "government_foresight_capacity",
+      "dimension": "anticipation",
+      "priority": 6280,
+      "reason": "3 country record(s) already; 30 record(s) in anticipation; 28 record(s) for this gap"
+    },
+    {
       "iso3": "BWA",
       "indicatorId": "government_foresight_capacity",
       "dimension": "anticipation",
@@ -3674,7 +3548,7 @@
       "reason": "3 country record(s) already; 30 record(s) in anticipation; 28 record(s) for this gap"
     },
     {
-      "iso3": "CYP",
+      "iso3": "GEO",
       "indicatorId": "government_foresight_capacity",
       "dimension": "anticipation",
       "priority": 6280,
@@ -3730,7 +3604,7 @@
       "reason": "3 country record(s) already; 30 record(s) in anticipation; 28 record(s) for this gap"
     },
     {
-      "iso3": "MNG",
+      "iso3": "MKD",
       "indicatorId": "government_foresight_capacity",
       "dimension": "anticipation",
       "priority": 6280,
@@ -3758,13 +3632,6 @@
       "reason": "1 country record(s) already; 49 record(s) in experimentation; 45 record(s) for this gap"
     },
     {
-      "iso3": "AUT",
-      "indicatorId": "national_belonging",
-      "dimension": "shared_purpose",
-      "priority": 6400,
-      "reason": "6 country record(s) already; 4 record(s) in shared_purpose; 0 record(s) for this gap"
-    },
-    {
       "iso3": "BEL",
       "indicatorId": "national_belonging",
       "dimension": "shared_purpose",
@@ -3891,6 +3758,13 @@
       "reason": "6 country record(s) already; 4 record(s) in shared_purpose; 0 record(s) for this gap"
     },
     {
+      "iso3": "SVK",
+      "indicatorId": "national_belonging",
+      "dimension": "shared_purpose",
+      "priority": 6400,
+      "reason": "6 country record(s) already; 4 record(s) in shared_purpose; 0 record(s) for this gap"
+    },
+    {
       "iso3": "TUN",
       "indicatorId": "national_belonging",
       "dimension": "shared_purpose",
@@ -3903,13 +3777,6 @@
       "dimension": "shared_purpose",
       "priority": 6400,
       "reason": "6 country record(s) already; 4 record(s) in shared_purpose; 0 record(s) for this gap"
-    },
-    {
-      "iso3": "AUT",
-      "indicatorId": "political_polarization",
-      "dimension": "shared_purpose",
-      "priority": 6410,
-      "reason": "6 country record(s) already; 4 record(s) in shared_purpose; 1 record(s) for this gap"
     },
     {
       "iso3": "BEL",
@@ -4038,6 +3905,13 @@
       "reason": "6 country record(s) already; 4 record(s) in shared_purpose; 1 record(s) for this gap"
     },
     {
+      "iso3": "SVK",
+      "indicatorId": "political_polarization",
+      "dimension": "shared_purpose",
+      "priority": 6410,
+      "reason": "6 country record(s) already; 4 record(s) in shared_purpose; 1 record(s) for this gap"
+    },
+    {
       "iso3": "TUN",
       "indicatorId": "political_polarization",
       "dimension": "shared_purpose",
@@ -4052,13 +3926,6 @@
       "reason": "6 country record(s) already; 4 record(s) in shared_purpose; 1 record(s) for this gap"
     },
     {
-      "iso3": "AUT",
-      "indicatorId": "volunteering_rate",
-      "dimension": "shared_purpose",
-      "priority": 6430,
-      "reason": "6 country record(s) already; 4 record(s) in shared_purpose; 3 record(s) for this gap"
-    },
-    {
       "iso3": "BEL",
       "indicatorId": "volunteering_rate",
       "dimension": "shared_purpose",
@@ -4185,6 +4052,13 @@
       "reason": "6 country record(s) already; 4 record(s) in shared_purpose; 3 record(s) for this gap"
     },
     {
+      "iso3": "SVK",
+      "indicatorId": "volunteering_rate",
+      "dimension": "shared_purpose",
+      "priority": 6430,
+      "reason": "6 country record(s) already; 4 record(s) in shared_purpose; 3 record(s) for this gap"
+    },
+    {
       "iso3": "TUN",
       "indicatorId": "volunteering_rate",
       "dimension": "shared_purpose",
@@ -4197,13 +4071,6 @@
       "dimension": "shared_purpose",
       "priority": 6430,
       "reason": "6 country record(s) already; 4 record(s) in shared_purpose; 3 record(s) for this gap"
-    },
-    {
-      "iso3": "AUT",
-      "indicatorId": "adult_digital_skills",
-      "dimension": "agency",
-      "priority": 6440,
-      "reason": "6 country record(s) already; 4 record(s) in agency; 4 record(s) for this gap"
     },
     {
       "iso3": "BEL",
@@ -4332,6 +4199,13 @@
       "reason": "6 country record(s) already; 4 record(s) in agency; 4 record(s) for this gap"
     },
     {
+      "iso3": "SVK",
+      "indicatorId": "adult_digital_skills",
+      "dimension": "agency",
+      "priority": 6440,
+      "reason": "6 country record(s) already; 4 record(s) in agency; 4 record(s) for this gap"
+    },
+    {
       "iso3": "TUN",
       "indicatorId": "adult_digital_skills",
       "dimension": "agency",
@@ -4344,13 +4218,6 @@
       "dimension": "agency",
       "priority": 6440,
       "reason": "6 country record(s) already; 4 record(s) in agency; 4 record(s) for this gap"
-    },
-    {
-      "iso3": "AUT",
-      "indicatorId": "court_case_clearance",
-      "dimension": "trust",
-      "priority": 6520,
-      "reason": "6 country record(s) already; 5 record(s) in trust; 2 record(s) for this gap"
     },
     {
       "iso3": "BEL",
@@ -4479,6 +4346,13 @@
       "reason": "6 country record(s) already; 5 record(s) in trust; 2 record(s) for this gap"
     },
     {
+      "iso3": "SVK",
+      "indicatorId": "court_case_clearance",
+      "dimension": "trust",
+      "priority": 6520,
+      "reason": "6 country record(s) already; 5 record(s) in trust; 2 record(s) for this gap"
+    },
+    {
       "iso3": "TUN",
       "indicatorId": "court_case_clearance",
       "dimension": "trust",
@@ -4491,13 +4365,6 @@
       "dimension": "trust",
       "priority": 6520,
       "reason": "6 country record(s) already; 5 record(s) in trust; 2 record(s) for this gap"
-    },
-    {
-      "iso3": "AUT",
-      "indicatorId": "institutional_trust",
-      "dimension": "trust",
-      "priority": 6530,
-      "reason": "6 country record(s) already; 5 record(s) in trust; 3 record(s) for this gap"
     },
     {
       "iso3": "BEL",
@@ -4626,6 +4493,13 @@
       "reason": "6 country record(s) already; 5 record(s) in trust; 3 record(s) for this gap"
     },
     {
+      "iso3": "SVK",
+      "indicatorId": "institutional_trust",
+      "dimension": "trust",
+      "priority": 6530,
+      "reason": "6 country record(s) already; 5 record(s) in trust; 3 record(s) for this gap"
+    },
+    {
       "iso3": "TUN",
       "indicatorId": "institutional_trust",
       "dimension": "trust",
@@ -4638,13 +4512,6 @@
       "dimension": "trust",
       "priority": 6530,
       "reason": "6 country record(s) already; 5 record(s) in trust; 3 record(s) for this gap"
-    },
-    {
-      "iso3": "BLR",
-      "indicatorId": "university_spinouts",
-      "dimension": "experimentation",
-      "priority": 6910,
-      "reason": "2 country record(s) already; 49 record(s) in experimentation; 1 record(s) for this gap"
     },
     {
       "iso3": "COG",
@@ -4654,21 +4521,7 @@
       "reason": "2 country record(s) already; 49 record(s) in experimentation; 1 record(s) for this gap"
     },
     {
-      "iso3": "GEO",
-      "indicatorId": "university_spinouts",
-      "dimension": "experimentation",
-      "priority": 6910,
-      "reason": "2 country record(s) already; 49 record(s) in experimentation; 1 record(s) for this gap"
-    },
-    {
       "iso3": "LSO",
-      "indicatorId": "university_spinouts",
-      "dimension": "experimentation",
-      "priority": 6910,
-      "reason": "2 country record(s) already; 49 record(s) in experimentation; 1 record(s) for this gap"
-    },
-    {
-      "iso3": "MKD",
       "indicatorId": "university_spinouts",
       "dimension": "experimentation",
       "priority": 6910,
@@ -4682,13 +4535,6 @@
       "reason": "2 country record(s) already; 49 record(s) in experimentation; 1 record(s) for this gap"
     },
     {
-      "iso3": "BLR",
-      "indicatorId": "venture_capital_gdp",
-      "dimension": "experimentation",
-      "priority": 6930,
-      "reason": "2 country record(s) already; 49 record(s) in experimentation; 3 record(s) for this gap"
-    },
-    {
       "iso3": "COG",
       "indicatorId": "venture_capital_gdp",
       "dimension": "experimentation",
@@ -4696,21 +4542,7 @@
       "reason": "2 country record(s) already; 49 record(s) in experimentation; 3 record(s) for this gap"
     },
     {
-      "iso3": "GEO",
-      "indicatorId": "venture_capital_gdp",
-      "dimension": "experimentation",
-      "priority": 6930,
-      "reason": "2 country record(s) already; 49 record(s) in experimentation; 3 record(s) for this gap"
-    },
-    {
       "iso3": "LSO",
-      "indicatorId": "venture_capital_gdp",
-      "dimension": "experimentation",
-      "priority": 6930,
-      "reason": "2 country record(s) already; 49 record(s) in experimentation; 3 record(s) for this gap"
-    },
-    {
-      "iso3": "MKD",
       "indicatorId": "venture_capital_gdp",
       "dimension": "experimentation",
       "priority": 6930,
@@ -4738,7 +4570,7 @@
       "reason": "4 country record(s) already; 30 record(s) in anticipation; 2 record(s) for this gap"
     },
     {
-      "iso3": "BGR",
+      "iso3": "BDI",
       "indicatorId": "basic_research_share",
       "dimension": "anticipation",
       "priority": 7020,
@@ -4746,6 +4578,13 @@
     },
     {
       "iso3": "COD",
+      "indicatorId": "basic_research_share",
+      "dimension": "anticipation",
+      "priority": 7020,
+      "reason": "4 country record(s) already; 30 record(s) in anticipation; 2 record(s) for this gap"
+    },
+    {
+      "iso3": "CYP",
       "indicatorId": "basic_research_share",
       "dimension": "anticipation",
       "priority": 7020,
@@ -4794,7 +4633,7 @@
       "reason": "4 country record(s) already; 30 record(s) in anticipation; 2 record(s) for this gap"
     },
     {
-      "iso3": "NAM",
+      "iso3": "MNG",
       "indicatorId": "basic_research_share",
       "dimension": "anticipation",
       "priority": 7020,
@@ -4822,20 +4661,6 @@
       "reason": "4 country record(s) already; 30 record(s) in anticipation; 2 record(s) for this gap"
     },
     {
-      "iso3": "TZA",
-      "indicatorId": "basic_research_share",
-      "dimension": "anticipation",
-      "priority": 7020,
-      "reason": "4 country record(s) already; 30 record(s) in anticipation; 2 record(s) for this gap"
-    },
-    {
-      "iso3": "ZWE",
-      "indicatorId": "basic_research_share",
-      "dimension": "anticipation",
-      "priority": 7020,
-      "reason": "4 country record(s) already; 30 record(s) in anticipation; 2 record(s) for this gap"
-    },
-    {
       "iso3": "AGO",
       "indicatorId": "government_foresight_capacity",
       "dimension": "anticipation",
@@ -4850,7 +4675,7 @@
       "reason": "4 country record(s) already; 30 record(s) in anticipation; 28 record(s) for this gap"
     },
     {
-      "iso3": "BGR",
+      "iso3": "BDI",
       "indicatorId": "government_foresight_capacity",
       "dimension": "anticipation",
       "priority": 7280,
@@ -4858,6 +4683,13 @@
     },
     {
       "iso3": "COD",
+      "indicatorId": "government_foresight_capacity",
+      "dimension": "anticipation",
+      "priority": 7280,
+      "reason": "4 country record(s) already; 30 record(s) in anticipation; 28 record(s) for this gap"
+    },
+    {
+      "iso3": "CYP",
       "indicatorId": "government_foresight_capacity",
       "dimension": "anticipation",
       "priority": 7280,
@@ -4885,6 +4717,13 @@
       "reason": "4 country record(s) already; 30 record(s) in anticipation; 28 record(s) for this gap"
     },
     {
+      "iso3": "MNG",
+      "indicatorId": "government_foresight_capacity",
+      "dimension": "anticipation",
+      "priority": 7280,
+      "reason": "4 country record(s) already; 30 record(s) in anticipation; 28 record(s) for this gap"
+    },
+    {
       "iso3": "SVN",
       "indicatorId": "government_foresight_capacity",
       "dimension": "anticipation",
@@ -4892,42 +4731,7 @@
       "reason": "4 country record(s) already; 30 record(s) in anticipation; 28 record(s) for this gap"
     },
     {
-      "iso3": "TZA",
-      "indicatorId": "government_foresight_capacity",
-      "dimension": "anticipation",
-      "priority": 7280,
-      "reason": "4 country record(s) already; 30 record(s) in anticipation; 28 record(s) for this gap"
-    },
-    {
-      "iso3": "ZWE",
-      "indicatorId": "government_foresight_capacity",
-      "dimension": "anticipation",
-      "priority": 7280,
-      "reason": "4 country record(s) already; 30 record(s) in anticipation; 28 record(s) for this gap"
-    },
-    {
-      "iso3": "BLR",
-      "indicatorId": "regulatory_sandbox_activity",
-      "dimension": "experimentation",
-      "priority": 7350,
-      "reason": "2 country record(s) already; 49 record(s) in experimentation; 45 record(s) for this gap"
-    },
-    {
       "iso3": "COG",
-      "indicatorId": "regulatory_sandbox_activity",
-      "dimension": "experimentation",
-      "priority": 7350,
-      "reason": "2 country record(s) already; 49 record(s) in experimentation; 45 record(s) for this gap"
-    },
-    {
-      "iso3": "GEO",
-      "indicatorId": "regulatory_sandbox_activity",
-      "dimension": "experimentation",
-      "priority": 7350,
-      "reason": "2 country record(s) already; 49 record(s) in experimentation; 45 record(s) for this gap"
-    },
-    {
-      "iso3": "MKD",
       "indicatorId": "regulatory_sandbox_activity",
       "dimension": "experimentation",
       "priority": 7350,
@@ -4955,6 +4759,13 @@
       "reason": "7 country record(s) already; 4 record(s) in shared_purpose; 0 record(s) for this gap"
     },
     {
+      "iso3": "AUT",
+      "indicatorId": "national_belonging",
+      "dimension": "shared_purpose",
+      "priority": 7400,
+      "reason": "7 country record(s) already; 4 record(s) in shared_purpose; 0 record(s) for this gap"
+    },
+    {
       "iso3": "AZE",
       "indicatorId": "national_belonging",
       "dimension": "shared_purpose",
@@ -4970,6 +4781,13 @@
     },
     {
       "iso3": "CRI",
+      "indicatorId": "national_belonging",
+      "dimension": "shared_purpose",
+      "priority": 7400,
+      "reason": "7 country record(s) already; 4 record(s) in shared_purpose; 0 record(s) for this gap"
+    },
+    {
+      "iso3": "CZE",
       "indicatorId": "national_belonging",
       "dimension": "shared_purpose",
       "priority": 7400,
@@ -5032,6 +4850,13 @@
       "reason": "7 country record(s) already; 4 record(s) in shared_purpose; 1 record(s) for this gap"
     },
     {
+      "iso3": "AUT",
+      "indicatorId": "political_polarization",
+      "dimension": "shared_purpose",
+      "priority": 7410,
+      "reason": "7 country record(s) already; 4 record(s) in shared_purpose; 1 record(s) for this gap"
+    },
+    {
       "iso3": "AZE",
       "indicatorId": "political_polarization",
       "dimension": "shared_purpose",
@@ -5047,6 +4872,13 @@
     },
     {
       "iso3": "CRI",
+      "indicatorId": "political_polarization",
+      "dimension": "shared_purpose",
+      "priority": 7410,
+      "reason": "7 country record(s) already; 4 record(s) in shared_purpose; 1 record(s) for this gap"
+    },
+    {
+      "iso3": "CZE",
       "indicatorId": "political_polarization",
       "dimension": "shared_purpose",
       "priority": 7410,
@@ -5109,6 +4941,13 @@
       "reason": "7 country record(s) already; 4 record(s) in shared_purpose; 3 record(s) for this gap"
     },
     {
+      "iso3": "AUT",
+      "indicatorId": "volunteering_rate",
+      "dimension": "shared_purpose",
+      "priority": 7430,
+      "reason": "7 country record(s) already; 4 record(s) in shared_purpose; 3 record(s) for this gap"
+    },
+    {
       "iso3": "AZE",
       "indicatorId": "volunteering_rate",
       "dimension": "shared_purpose",
@@ -5124,6 +4963,13 @@
     },
     {
       "iso3": "CRI",
+      "indicatorId": "volunteering_rate",
+      "dimension": "shared_purpose",
+      "priority": 7430,
+      "reason": "7 country record(s) already; 4 record(s) in shared_purpose; 3 record(s) for this gap"
+    },
+    {
+      "iso3": "CZE",
       "indicatorId": "volunteering_rate",
       "dimension": "shared_purpose",
       "priority": 7430,
@@ -5186,6 +5032,13 @@
       "reason": "7 country record(s) already; 4 record(s) in agency; 4 record(s) for this gap"
     },
     {
+      "iso3": "AUT",
+      "indicatorId": "adult_digital_skills",
+      "dimension": "agency",
+      "priority": 7440,
+      "reason": "7 country record(s) already; 4 record(s) in agency; 4 record(s) for this gap"
+    },
+    {
       "iso3": "AZE",
       "indicatorId": "adult_digital_skills",
       "dimension": "agency",
@@ -5201,6 +5054,13 @@
     },
     {
       "iso3": "CRI",
+      "indicatorId": "adult_digital_skills",
+      "dimension": "agency",
+      "priority": 7440,
+      "reason": "7 country record(s) already; 4 record(s) in agency; 4 record(s) for this gap"
+    },
+    {
+      "iso3": "CZE",
       "indicatorId": "adult_digital_skills",
       "dimension": "agency",
       "priority": 7440,
@@ -5263,6 +5123,13 @@
       "reason": "7 country record(s) already; 5 record(s) in trust; 2 record(s) for this gap"
     },
     {
+      "iso3": "AUT",
+      "indicatorId": "court_case_clearance",
+      "dimension": "trust",
+      "priority": 7520,
+      "reason": "7 country record(s) already; 5 record(s) in trust; 2 record(s) for this gap"
+    },
+    {
       "iso3": "AZE",
       "indicatorId": "court_case_clearance",
       "dimension": "trust",
@@ -5278,6 +5145,13 @@
     },
     {
       "iso3": "CRI",
+      "indicatorId": "court_case_clearance",
+      "dimension": "trust",
+      "priority": 7520,
+      "reason": "7 country record(s) already; 5 record(s) in trust; 2 record(s) for this gap"
+    },
+    {
+      "iso3": "CZE",
       "indicatorId": "court_case_clearance",
       "dimension": "trust",
       "priority": 7520,
@@ -5340,6 +5214,13 @@
       "reason": "7 country record(s) already; 5 record(s) in trust; 3 record(s) for this gap"
     },
     {
+      "iso3": "AUT",
+      "indicatorId": "institutional_trust",
+      "dimension": "trust",
+      "priority": 7530,
+      "reason": "7 country record(s) already; 5 record(s) in trust; 3 record(s) for this gap"
+    },
+    {
       "iso3": "AZE",
       "indicatorId": "institutional_trust",
       "dimension": "trust",
@@ -5355,6 +5236,13 @@
     },
     {
       "iso3": "CRI",
+      "indicatorId": "institutional_trust",
+      "dimension": "trust",
+      "priority": 7530,
+      "reason": "7 country record(s) already; 5 record(s) in trust; 3 record(s) for this gap"
+    },
+    {
+      "iso3": "CZE",
       "indicatorId": "institutional_trust",
       "dimension": "trust",
       "priority": 7530,
@@ -5410,13 +5298,6 @@
       "reason": "3 country record(s) already; 49 record(s) in experimentation; 1 record(s) for this gap"
     },
     {
-      "iso3": "BDI",
-      "indicatorId": "university_spinouts",
-      "dimension": "experimentation",
-      "priority": 7910,
-      "reason": "3 country record(s) already; 49 record(s) in experimentation; 1 record(s) for this gap"
-    },
-    {
       "iso3": "BFA",
       "indicatorId": "university_spinouts",
       "dimension": "experimentation",
@@ -5431,6 +5312,13 @@
       "reason": "3 country record(s) already; 49 record(s) in experimentation; 1 record(s) for this gap"
     },
     {
+      "iso3": "BLR",
+      "indicatorId": "university_spinouts",
+      "dimension": "experimentation",
+      "priority": 7910,
+      "reason": "3 country record(s) already; 49 record(s) in experimentation; 1 record(s) for this gap"
+    },
+    {
       "iso3": "BWA",
       "indicatorId": "university_spinouts",
       "dimension": "experimentation",
@@ -5438,7 +5326,7 @@
       "reason": "3 country record(s) already; 49 record(s) in experimentation; 1 record(s) for this gap"
     },
     {
-      "iso3": "CYP",
+      "iso3": "GEO",
       "indicatorId": "university_spinouts",
       "dimension": "experimentation",
       "priority": 7910,
@@ -5501,14 +5389,14 @@
       "reason": "3 country record(s) already; 49 record(s) in experimentation; 1 record(s) for this gap"
     },
     {
-      "iso3": "MMR",
+      "iso3": "MKD",
       "indicatorId": "university_spinouts",
       "dimension": "experimentation",
       "priority": 7910,
       "reason": "3 country record(s) already; 49 record(s) in experimentation; 1 record(s) for this gap"
     },
     {
-      "iso3": "MNG",
+      "iso3": "MMR",
       "indicatorId": "university_spinouts",
       "dimension": "experimentation",
       "priority": 7910,
@@ -5557,13 +5445,6 @@
       "reason": "3 country record(s) already; 49 record(s) in experimentation; 3 record(s) for this gap"
     },
     {
-      "iso3": "BDI",
-      "indicatorId": "venture_capital_gdp",
-      "dimension": "experimentation",
-      "priority": 7930,
-      "reason": "3 country record(s) already; 49 record(s) in experimentation; 3 record(s) for this gap"
-    },
-    {
       "iso3": "BFA",
       "indicatorId": "venture_capital_gdp",
       "dimension": "experimentation",
@@ -5578,6 +5459,13 @@
       "reason": "3 country record(s) already; 49 record(s) in experimentation; 3 record(s) for this gap"
     },
     {
+      "iso3": "BLR",
+      "indicatorId": "venture_capital_gdp",
+      "dimension": "experimentation",
+      "priority": 7930,
+      "reason": "3 country record(s) already; 49 record(s) in experimentation; 3 record(s) for this gap"
+    },
+    {
       "iso3": "BWA",
       "indicatorId": "venture_capital_gdp",
       "dimension": "experimentation",
@@ -5585,7 +5473,7 @@
       "reason": "3 country record(s) already; 49 record(s) in experimentation; 3 record(s) for this gap"
     },
     {
-      "iso3": "CYP",
+      "iso3": "GEO",
       "indicatorId": "venture_capital_gdp",
       "dimension": "experimentation",
       "priority": 7930,
@@ -5648,14 +5536,14 @@
       "reason": "3 country record(s) already; 49 record(s) in experimentation; 3 record(s) for this gap"
     },
     {
-      "iso3": "MMR",
+      "iso3": "MKD",
       "indicatorId": "venture_capital_gdp",
       "dimension": "experimentation",
       "priority": 7930,
       "reason": "3 country record(s) already; 49 record(s) in experimentation; 3 record(s) for this gap"
     },
     {
-      "iso3": "MNG",
+      "iso3": "MMR",
       "indicatorId": "venture_capital_gdp",
       "dimension": "experimentation",
       "priority": 7930,
@@ -5711,14 +5599,14 @@
       "reason": "5 country record(s) already; 30 record(s) in anticipation; 2 record(s) for this gap"
     },
     {
-      "iso3": "CUB",
+      "iso3": "BGR",
       "indicatorId": "basic_research_share",
       "dimension": "anticipation",
       "priority": 8020,
       "reason": "5 country record(s) already; 30 record(s) in anticipation; 2 record(s) for this gap"
     },
     {
-      "iso3": "CZE",
+      "iso3": "CUB",
       "indicatorId": "basic_research_share",
       "dimension": "anticipation",
       "priority": 8020,
@@ -5781,6 +5669,13 @@
       "reason": "5 country record(s) already; 30 record(s) in anticipation; 2 record(s) for this gap"
     },
     {
+      "iso3": "NAM",
+      "indicatorId": "basic_research_share",
+      "dimension": "anticipation",
+      "priority": 8020,
+      "reason": "5 country record(s) already; 30 record(s) in anticipation; 2 record(s) for this gap"
+    },
+    {
       "iso3": "RWA",
       "indicatorId": "basic_research_share",
       "dimension": "anticipation",
@@ -5788,7 +5683,7 @@
       "reason": "5 country record(s) already; 30 record(s) in anticipation; 2 record(s) for this gap"
     },
     {
-      "iso3": "SVK",
+      "iso3": "TZA",
       "indicatorId": "basic_research_share",
       "dimension": "anticipation",
       "priority": 8020,
@@ -5816,7 +5711,14 @@
       "reason": "5 country record(s) already; 30 record(s) in anticipation; 2 record(s) for this gap"
     },
     {
-      "iso3": "CZE",
+      "iso3": "ZWE",
+      "indicatorId": "basic_research_share",
+      "dimension": "anticipation",
+      "priority": 8020,
+      "reason": "5 country record(s) already; 30 record(s) in anticipation; 2 record(s) for this gap"
+    },
+    {
+      "iso3": "BGR",
       "indicatorId": "government_foresight_capacity",
       "dimension": "anticipation",
       "priority": 8280,
@@ -5830,7 +5732,7 @@
       "reason": "5 country record(s) already; 30 record(s) in anticipation; 28 record(s) for this gap"
     },
     {
-      "iso3": "SVK",
+      "iso3": "TZA",
       "indicatorId": "government_foresight_capacity",
       "dimension": "anticipation",
       "priority": 8280,
@@ -5852,6 +5754,13 @@
     },
     {
       "iso3": "ZMB",
+      "indicatorId": "government_foresight_capacity",
+      "dimension": "anticipation",
+      "priority": 8280,
+      "reason": "5 country record(s) already; 30 record(s) in anticipation; 28 record(s) for this gap"
+    },
+    {
+      "iso3": "ZWE",
       "indicatorId": "government_foresight_capacity",
       "dimension": "anticipation",
       "priority": 8280,
@@ -5866,6 +5775,20 @@
     },
     {
       "iso3": "BIH",
+      "indicatorId": "regulatory_sandbox_activity",
+      "dimension": "experimentation",
+      "priority": 8350,
+      "reason": "3 country record(s) already; 49 record(s) in experimentation; 45 record(s) for this gap"
+    },
+    {
+      "iso3": "BLR",
+      "indicatorId": "regulatory_sandbox_activity",
+      "dimension": "experimentation",
+      "priority": 8350,
+      "reason": "3 country record(s) already; 49 record(s) in experimentation; 45 record(s) for this gap"
+    },
+    {
+      "iso3": "GEO",
       "indicatorId": "regulatory_sandbox_activity",
       "dimension": "experimentation",
       "priority": 8350,
@@ -5908,6 +5831,13 @@
     },
     {
       "iso3": "MDG",
+      "indicatorId": "regulatory_sandbox_activity",
+      "dimension": "experimentation",
+      "priority": 8350,
+      "reason": "3 country record(s) already; 49 record(s) in experimentation; 45 record(s) for this gap"
+    },
+    {
+      "iso3": "MKD",
       "indicatorId": "regulatory_sandbox_activity",
       "dimension": "experimentation",
       "priority": 8350,
@@ -6446,7 +6376,7 @@
       "reason": "4 country record(s) already; 49 record(s) in experimentation; 1 record(s) for this gap"
     },
     {
-      "iso3": "BGR",
+      "iso3": "BDI",
       "indicatorId": "university_spinouts",
       "dimension": "experimentation",
       "priority": 8910,
@@ -6454,6 +6384,13 @@
     },
     {
       "iso3": "COD",
+      "indicatorId": "university_spinouts",
+      "dimension": "experimentation",
+      "priority": 8910,
+      "reason": "4 country record(s) already; 49 record(s) in experimentation; 1 record(s) for this gap"
+    },
+    {
+      "iso3": "CYP",
       "indicatorId": "university_spinouts",
       "dimension": "experimentation",
       "priority": 8910,
@@ -6502,7 +6439,7 @@
       "reason": "4 country record(s) already; 49 record(s) in experimentation; 1 record(s) for this gap"
     },
     {
-      "iso3": "NAM",
+      "iso3": "MNG",
       "indicatorId": "university_spinouts",
       "dimension": "experimentation",
       "priority": 8910,
@@ -6524,20 +6461,6 @@
     },
     {
       "iso3": "SVN",
-      "indicatorId": "university_spinouts",
-      "dimension": "experimentation",
-      "priority": 8910,
-      "reason": "4 country record(s) already; 49 record(s) in experimentation; 1 record(s) for this gap"
-    },
-    {
-      "iso3": "TZA",
-      "indicatorId": "university_spinouts",
-      "dimension": "experimentation",
-      "priority": 8910,
-      "reason": "4 country record(s) already; 49 record(s) in experimentation; 1 record(s) for this gap"
-    },
-    {
-      "iso3": "ZWE",
       "indicatorId": "university_spinouts",
       "dimension": "experimentation",
       "priority": 8910,
@@ -6558,7 +6481,7 @@
       "reason": "4 country record(s) already; 49 record(s) in experimentation; 3 record(s) for this gap"
     },
     {
-      "iso3": "BGR",
+      "iso3": "BDI",
       "indicatorId": "venture_capital_gdp",
       "dimension": "experimentation",
       "priority": 8930,
@@ -6566,6 +6489,13 @@
     },
     {
       "iso3": "COD",
+      "indicatorId": "venture_capital_gdp",
+      "dimension": "experimentation",
+      "priority": 8930,
+      "reason": "4 country record(s) already; 49 record(s) in experimentation; 3 record(s) for this gap"
+    },
+    {
+      "iso3": "CYP",
       "indicatorId": "venture_capital_gdp",
       "dimension": "experimentation",
       "priority": 8930,
@@ -6614,7 +6544,7 @@
       "reason": "4 country record(s) already; 49 record(s) in experimentation; 3 record(s) for this gap"
     },
     {
-      "iso3": "NAM",
+      "iso3": "MNG",
       "indicatorId": "venture_capital_gdp",
       "dimension": "experimentation",
       "priority": 8930,
@@ -6640,27 +6570,6 @@
       "dimension": "experimentation",
       "priority": 8930,
       "reason": "4 country record(s) already; 49 record(s) in experimentation; 3 record(s) for this gap"
-    },
-    {
-      "iso3": "TZA",
-      "indicatorId": "venture_capital_gdp",
-      "dimension": "experimentation",
-      "priority": 8930,
-      "reason": "4 country record(s) already; 49 record(s) in experimentation; 3 record(s) for this gap"
-    },
-    {
-      "iso3": "ZWE",
-      "indicatorId": "venture_capital_gdp",
-      "dimension": "experimentation",
-      "priority": 8930,
-      "reason": "4 country record(s) already; 49 record(s) in experimentation; 3 record(s) for this gap"
-    },
-    {
-      "iso3": "AUT",
-      "indicatorId": "basic_research_share",
-      "dimension": "anticipation",
-      "priority": 9020,
-      "reason": "6 country record(s) already; 30 record(s) in anticipation; 2 record(s) for this gap"
     },
     {
       "iso3": "BEL",
@@ -6782,6 +6691,13 @@
       "reason": "6 country record(s) already; 30 record(s) in anticipation; 2 record(s) for this gap"
     },
     {
+      "iso3": "SVK",
+      "indicatorId": "basic_research_share",
+      "dimension": "anticipation",
+      "priority": 9020,
+      "reason": "6 country record(s) already; 30 record(s) in anticipation; 2 record(s) for this gap"
+    },
+    {
       "iso3": "TUN",
       "indicatorId": "basic_research_share",
       "dimension": "anticipation",
@@ -6794,13 +6710,6 @@
       "dimension": "anticipation",
       "priority": 9020,
       "reason": "6 country record(s) already; 30 record(s) in anticipation; 2 record(s) for this gap"
-    },
-    {
-      "iso3": "AUT",
-      "indicatorId": "government_foresight_capacity",
-      "dimension": "anticipation",
-      "priority": 9280,
-      "reason": "6 country record(s) already; 30 record(s) in anticipation; 28 record(s) for this gap"
     },
     {
       "iso3": "JOR",
@@ -6845,6 +6754,13 @@
       "reason": "6 country record(s) already; 30 record(s) in anticipation; 28 record(s) for this gap"
     },
     {
+      "iso3": "SVK",
+      "indicatorId": "government_foresight_capacity",
+      "dimension": "anticipation",
+      "priority": 9280,
+      "reason": "6 country record(s) already; 30 record(s) in anticipation; 28 record(s) for this gap"
+    },
+    {
       "iso3": "TUN",
       "indicatorId": "government_foresight_capacity",
       "dimension": "anticipation",
@@ -6860,13 +6776,6 @@
     },
     {
       "iso3": "ARM",
-      "indicatorId": "regulatory_sandbox_activity",
-      "dimension": "experimentation",
-      "priority": 9350,
-      "reason": "4 country record(s) already; 49 record(s) in experimentation; 45 record(s) for this gap"
-    },
-    {
-      "iso3": "BGR",
       "indicatorId": "regulatory_sandbox_activity",
       "dimension": "experimentation",
       "priority": 9350,
@@ -6901,385 +6810,385 @@
       "reason": "4 country record(s) already; 49 record(s) in experimentation; 45 record(s) for this gap"
     },
     {
+      "iso3": "CHL",
+      "indicatorId": "national_belonging",
+      "dimension": "shared_purpose",
+      "priority": 9400,
+      "reason": "9 country record(s) already; 4 record(s) in shared_purpose; 0 record(s) for this gap"
+    },
+    {
+      "iso3": "DNK",
+      "indicatorId": "national_belonging",
+      "dimension": "shared_purpose",
+      "priority": 9400,
+      "reason": "9 country record(s) already; 4 record(s) in shared_purpose; 0 record(s) for this gap"
+    },
+    {
+      "iso3": "FRA",
+      "indicatorId": "national_belonging",
+      "dimension": "shared_purpose",
+      "priority": 9400,
+      "reason": "9 country record(s) already; 4 record(s) in shared_purpose; 0 record(s) for this gap"
+    },
+    {
+      "iso3": "MYS",
+      "indicatorId": "national_belonging",
+      "dimension": "shared_purpose",
+      "priority": 9400,
+      "reason": "9 country record(s) already; 4 record(s) in shared_purpose; 0 record(s) for this gap"
+    },
+    {
+      "iso3": "POL",
+      "indicatorId": "national_belonging",
+      "dimension": "shared_purpose",
+      "priority": 9400,
+      "reason": "9 country record(s) already; 4 record(s) in shared_purpose; 0 record(s) for this gap"
+    },
+    {
+      "iso3": "SGP",
+      "indicatorId": "national_belonging",
+      "dimension": "shared_purpose",
+      "priority": 9400,
+      "reason": "9 country record(s) already; 4 record(s) in shared_purpose; 0 record(s) for this gap"
+    },
+    {
+      "iso3": "URY",
+      "indicatorId": "national_belonging",
+      "dimension": "shared_purpose",
+      "priority": 9400,
+      "reason": "9 country record(s) already; 4 record(s) in shared_purpose; 0 record(s) for this gap"
+    },
+    {
+      "iso3": "CHL",
+      "indicatorId": "political_polarization",
+      "dimension": "shared_purpose",
+      "priority": 9410,
+      "reason": "9 country record(s) already; 4 record(s) in shared_purpose; 1 record(s) for this gap"
+    },
+    {
+      "iso3": "DNK",
+      "indicatorId": "political_polarization",
+      "dimension": "shared_purpose",
+      "priority": 9410,
+      "reason": "9 country record(s) already; 4 record(s) in shared_purpose; 1 record(s) for this gap"
+    },
+    {
+      "iso3": "FRA",
+      "indicatorId": "political_polarization",
+      "dimension": "shared_purpose",
+      "priority": 9410,
+      "reason": "9 country record(s) already; 4 record(s) in shared_purpose; 1 record(s) for this gap"
+    },
+    {
+      "iso3": "MYS",
+      "indicatorId": "political_polarization",
+      "dimension": "shared_purpose",
+      "priority": 9410,
+      "reason": "9 country record(s) already; 4 record(s) in shared_purpose; 1 record(s) for this gap"
+    },
+    {
+      "iso3": "POL",
+      "indicatorId": "political_polarization",
+      "dimension": "shared_purpose",
+      "priority": 9410,
+      "reason": "9 country record(s) already; 4 record(s) in shared_purpose; 1 record(s) for this gap"
+    },
+    {
+      "iso3": "SGP",
+      "indicatorId": "political_polarization",
+      "dimension": "shared_purpose",
+      "priority": 9410,
+      "reason": "9 country record(s) already; 4 record(s) in shared_purpose; 1 record(s) for this gap"
+    },
+    {
+      "iso3": "URY",
+      "indicatorId": "political_polarization",
+      "dimension": "shared_purpose",
+      "priority": 9410,
+      "reason": "9 country record(s) already; 4 record(s) in shared_purpose; 1 record(s) for this gap"
+    },
+    {
+      "iso3": "CHL",
+      "indicatorId": "volunteering_rate",
+      "dimension": "shared_purpose",
+      "priority": 9430,
+      "reason": "9 country record(s) already; 4 record(s) in shared_purpose; 3 record(s) for this gap"
+    },
+    {
+      "iso3": "DNK",
+      "indicatorId": "volunteering_rate",
+      "dimension": "shared_purpose",
+      "priority": 9430,
+      "reason": "9 country record(s) already; 4 record(s) in shared_purpose; 3 record(s) for this gap"
+    },
+    {
+      "iso3": "FRA",
+      "indicatorId": "volunteering_rate",
+      "dimension": "shared_purpose",
+      "priority": 9430,
+      "reason": "9 country record(s) already; 4 record(s) in shared_purpose; 3 record(s) for this gap"
+    },
+    {
+      "iso3": "MYS",
+      "indicatorId": "volunteering_rate",
+      "dimension": "shared_purpose",
+      "priority": 9430,
+      "reason": "9 country record(s) already; 4 record(s) in shared_purpose; 3 record(s) for this gap"
+    },
+    {
+      "iso3": "POL",
+      "indicatorId": "volunteering_rate",
+      "dimension": "shared_purpose",
+      "priority": 9430,
+      "reason": "9 country record(s) already; 4 record(s) in shared_purpose; 3 record(s) for this gap"
+    },
+    {
+      "iso3": "SGP",
+      "indicatorId": "volunteering_rate",
+      "dimension": "shared_purpose",
+      "priority": 9430,
+      "reason": "9 country record(s) already; 4 record(s) in shared_purpose; 3 record(s) for this gap"
+    },
+    {
+      "iso3": "URY",
+      "indicatorId": "volunteering_rate",
+      "dimension": "shared_purpose",
+      "priority": 9430,
+      "reason": "9 country record(s) already; 4 record(s) in shared_purpose; 3 record(s) for this gap"
+    },
+    {
+      "iso3": "CHL",
+      "indicatorId": "adult_digital_skills",
+      "dimension": "agency",
+      "priority": 9440,
+      "reason": "9 country record(s) already; 4 record(s) in agency; 4 record(s) for this gap"
+    },
+    {
+      "iso3": "DNK",
+      "indicatorId": "adult_digital_skills",
+      "dimension": "agency",
+      "priority": 9440,
+      "reason": "9 country record(s) already; 4 record(s) in agency; 4 record(s) for this gap"
+    },
+    {
+      "iso3": "FRA",
+      "indicatorId": "adult_digital_skills",
+      "dimension": "agency",
+      "priority": 9440,
+      "reason": "9 country record(s) already; 4 record(s) in agency; 4 record(s) for this gap"
+    },
+    {
+      "iso3": "MYS",
+      "indicatorId": "adult_digital_skills",
+      "dimension": "agency",
+      "priority": 9440,
+      "reason": "9 country record(s) already; 4 record(s) in agency; 4 record(s) for this gap"
+    },
+    {
+      "iso3": "POL",
+      "indicatorId": "adult_digital_skills",
+      "dimension": "agency",
+      "priority": 9440,
+      "reason": "9 country record(s) already; 4 record(s) in agency; 4 record(s) for this gap"
+    },
+    {
+      "iso3": "URY",
+      "indicatorId": "adult_digital_skills",
+      "dimension": "agency",
+      "priority": 9440,
+      "reason": "9 country record(s) already; 4 record(s) in agency; 4 record(s) for this gap"
+    },
+    {
+      "iso3": "CHL",
+      "indicatorId": "court_case_clearance",
+      "dimension": "trust",
+      "priority": 9520,
+      "reason": "9 country record(s) already; 5 record(s) in trust; 2 record(s) for this gap"
+    },
+    {
+      "iso3": "DNK",
+      "indicatorId": "court_case_clearance",
+      "dimension": "trust",
+      "priority": 9520,
+      "reason": "9 country record(s) already; 5 record(s) in trust; 2 record(s) for this gap"
+    },
+    {
+      "iso3": "FRA",
+      "indicatorId": "court_case_clearance",
+      "dimension": "trust",
+      "priority": 9520,
+      "reason": "9 country record(s) already; 5 record(s) in trust; 2 record(s) for this gap"
+    },
+    {
+      "iso3": "MYS",
+      "indicatorId": "court_case_clearance",
+      "dimension": "trust",
+      "priority": 9520,
+      "reason": "9 country record(s) already; 5 record(s) in trust; 2 record(s) for this gap"
+    },
+    {
+      "iso3": "POL",
+      "indicatorId": "court_case_clearance",
+      "dimension": "trust",
+      "priority": 9520,
+      "reason": "9 country record(s) already; 5 record(s) in trust; 2 record(s) for this gap"
+    },
+    {
+      "iso3": "URY",
+      "indicatorId": "court_case_clearance",
+      "dimension": "trust",
+      "priority": 9520,
+      "reason": "9 country record(s) already; 5 record(s) in trust; 2 record(s) for this gap"
+    },
+    {
+      "iso3": "CHL",
+      "indicatorId": "institutional_trust",
+      "dimension": "trust",
+      "priority": 9530,
+      "reason": "9 country record(s) already; 5 record(s) in trust; 3 record(s) for this gap"
+    },
+    {
+      "iso3": "DNK",
+      "indicatorId": "institutional_trust",
+      "dimension": "trust",
+      "priority": 9530,
+      "reason": "9 country record(s) already; 5 record(s) in trust; 3 record(s) for this gap"
+    },
+    {
+      "iso3": "FRA",
+      "indicatorId": "institutional_trust",
+      "dimension": "trust",
+      "priority": 9530,
+      "reason": "9 country record(s) already; 5 record(s) in trust; 3 record(s) for this gap"
+    },
+    {
+      "iso3": "MYS",
+      "indicatorId": "institutional_trust",
+      "dimension": "trust",
+      "priority": 9530,
+      "reason": "9 country record(s) already; 5 record(s) in trust; 3 record(s) for this gap"
+    },
+    {
+      "iso3": "POL",
+      "indicatorId": "institutional_trust",
+      "dimension": "trust",
+      "priority": 9530,
+      "reason": "9 country record(s) already; 5 record(s) in trust; 3 record(s) for this gap"
+    },
+    {
+      "iso3": "SGP",
+      "indicatorId": "institutional_trust",
+      "dimension": "trust",
+      "priority": 9530,
+      "reason": "9 country record(s) already; 5 record(s) in trust; 3 record(s) for this gap"
+    },
+    {
+      "iso3": "URY",
+      "indicatorId": "institutional_trust",
+      "dimension": "trust",
+      "priority": 9530,
+      "reason": "9 country record(s) already; 5 record(s) in trust; 3 record(s) for this gap"
+    },
+    {
+      "iso3": "ARE",
+      "indicatorId": "university_spinouts",
+      "dimension": "experimentation",
+      "priority": 9910,
+      "reason": "5 country record(s) already; 49 record(s) in experimentation; 1 record(s) for this gap"
+    },
+    {
+      "iso3": "BGD",
+      "indicatorId": "university_spinouts",
+      "dimension": "experimentation",
+      "priority": 9910,
+      "reason": "5 country record(s) already; 49 record(s) in experimentation; 1 record(s) for this gap"
+    },
+    {
+      "iso3": "BGR",
+      "indicatorId": "university_spinouts",
+      "dimension": "experimentation",
+      "priority": 9910,
+      "reason": "5 country record(s) already; 49 record(s) in experimentation; 1 record(s) for this gap"
+    },
+    {
+      "iso3": "CUB",
+      "indicatorId": "university_spinouts",
+      "dimension": "experimentation",
+      "priority": 9910,
+      "reason": "5 country record(s) already; 49 record(s) in experimentation; 1 record(s) for this gap"
+    },
+    {
+      "iso3": "DOM",
+      "indicatorId": "university_spinouts",
+      "dimension": "experimentation",
+      "priority": 9910,
+      "reason": "5 country record(s) already; 49 record(s) in experimentation; 1 record(s) for this gap"
+    },
+    {
+      "iso3": "GRC",
+      "indicatorId": "university_spinouts",
+      "dimension": "experimentation",
+      "priority": 9910,
+      "reason": "5 country record(s) already; 49 record(s) in experimentation; 1 record(s) for this gap"
+    },
+    {
+      "iso3": "GTM",
+      "indicatorId": "university_spinouts",
+      "dimension": "experimentation",
+      "priority": 9910,
+      "reason": "5 country record(s) already; 49 record(s) in experimentation; 1 record(s) for this gap"
+    },
+    {
+      "iso3": "HND",
+      "indicatorId": "university_spinouts",
+      "dimension": "experimentation",
+      "priority": 9910,
+      "reason": "5 country record(s) already; 49 record(s) in experimentation; 1 record(s) for this gap"
+    },
+    {
+      "iso3": "HRV",
+      "indicatorId": "university_spinouts",
+      "dimension": "experimentation",
+      "priority": 9910,
+      "reason": "5 country record(s) already; 49 record(s) in experimentation; 1 record(s) for this gap"
+    },
+    {
+      "iso3": "JAM",
+      "indicatorId": "university_spinouts",
+      "dimension": "experimentation",
+      "priority": 9910,
+      "reason": "5 country record(s) already; 49 record(s) in experimentation; 1 record(s) for this gap"
+    },
+    {
+      "iso3": "MAR",
+      "indicatorId": "university_spinouts",
+      "dimension": "experimentation",
+      "priority": 9910,
+      "reason": "5 country record(s) already; 49 record(s) in experimentation; 1 record(s) for this gap"
+    },
+    {
+      "iso3": "MWI",
+      "indicatorId": "university_spinouts",
+      "dimension": "experimentation",
+      "priority": 9910,
+      "reason": "5 country record(s) already; 49 record(s) in experimentation; 1 record(s) for this gap"
+    },
+    {
+      "iso3": "NAM",
+      "indicatorId": "university_spinouts",
+      "dimension": "experimentation",
+      "priority": 9910,
+      "reason": "5 country record(s) already; 49 record(s) in experimentation; 1 record(s) for this gap"
+    },
+    {
+      "iso3": "RWA",
+      "indicatorId": "university_spinouts",
+      "dimension": "experimentation",
+      "priority": 9910,
+      "reason": "5 country record(s) already; 49 record(s) in experimentation; 1 record(s) for this gap"
+    },
+    {
       "iso3": "TZA",
-      "indicatorId": "regulatory_sandbox_activity",
-      "dimension": "experimentation",
-      "priority": 9350,
-      "reason": "4 country record(s) already; 49 record(s) in experimentation; 45 record(s) for this gap"
-    },
-    {
-      "iso3": "CHL",
-      "indicatorId": "national_belonging",
-      "dimension": "shared_purpose",
-      "priority": 9400,
-      "reason": "9 country record(s) already; 4 record(s) in shared_purpose; 0 record(s) for this gap"
-    },
-    {
-      "iso3": "DNK",
-      "indicatorId": "national_belonging",
-      "dimension": "shared_purpose",
-      "priority": 9400,
-      "reason": "9 country record(s) already; 4 record(s) in shared_purpose; 0 record(s) for this gap"
-    },
-    {
-      "iso3": "FRA",
-      "indicatorId": "national_belonging",
-      "dimension": "shared_purpose",
-      "priority": 9400,
-      "reason": "9 country record(s) already; 4 record(s) in shared_purpose; 0 record(s) for this gap"
-    },
-    {
-      "iso3": "MYS",
-      "indicatorId": "national_belonging",
-      "dimension": "shared_purpose",
-      "priority": 9400,
-      "reason": "9 country record(s) already; 4 record(s) in shared_purpose; 0 record(s) for this gap"
-    },
-    {
-      "iso3": "POL",
-      "indicatorId": "national_belonging",
-      "dimension": "shared_purpose",
-      "priority": 9400,
-      "reason": "9 country record(s) already; 4 record(s) in shared_purpose; 0 record(s) for this gap"
-    },
-    {
-      "iso3": "SGP",
-      "indicatorId": "national_belonging",
-      "dimension": "shared_purpose",
-      "priority": 9400,
-      "reason": "9 country record(s) already; 4 record(s) in shared_purpose; 0 record(s) for this gap"
-    },
-    {
-      "iso3": "URY",
-      "indicatorId": "national_belonging",
-      "dimension": "shared_purpose",
-      "priority": 9400,
-      "reason": "9 country record(s) already; 4 record(s) in shared_purpose; 0 record(s) for this gap"
-    },
-    {
-      "iso3": "CHL",
-      "indicatorId": "political_polarization",
-      "dimension": "shared_purpose",
-      "priority": 9410,
-      "reason": "9 country record(s) already; 4 record(s) in shared_purpose; 1 record(s) for this gap"
-    },
-    {
-      "iso3": "DNK",
-      "indicatorId": "political_polarization",
-      "dimension": "shared_purpose",
-      "priority": 9410,
-      "reason": "9 country record(s) already; 4 record(s) in shared_purpose; 1 record(s) for this gap"
-    },
-    {
-      "iso3": "FRA",
-      "indicatorId": "political_polarization",
-      "dimension": "shared_purpose",
-      "priority": 9410,
-      "reason": "9 country record(s) already; 4 record(s) in shared_purpose; 1 record(s) for this gap"
-    },
-    {
-      "iso3": "MYS",
-      "indicatorId": "political_polarization",
-      "dimension": "shared_purpose",
-      "priority": 9410,
-      "reason": "9 country record(s) already; 4 record(s) in shared_purpose; 1 record(s) for this gap"
-    },
-    {
-      "iso3": "POL",
-      "indicatorId": "political_polarization",
-      "dimension": "shared_purpose",
-      "priority": 9410,
-      "reason": "9 country record(s) already; 4 record(s) in shared_purpose; 1 record(s) for this gap"
-    },
-    {
-      "iso3": "SGP",
-      "indicatorId": "political_polarization",
-      "dimension": "shared_purpose",
-      "priority": 9410,
-      "reason": "9 country record(s) already; 4 record(s) in shared_purpose; 1 record(s) for this gap"
-    },
-    {
-      "iso3": "URY",
-      "indicatorId": "political_polarization",
-      "dimension": "shared_purpose",
-      "priority": 9410,
-      "reason": "9 country record(s) already; 4 record(s) in shared_purpose; 1 record(s) for this gap"
-    },
-    {
-      "iso3": "CHL",
-      "indicatorId": "volunteering_rate",
-      "dimension": "shared_purpose",
-      "priority": 9430,
-      "reason": "9 country record(s) already; 4 record(s) in shared_purpose; 3 record(s) for this gap"
-    },
-    {
-      "iso3": "DNK",
-      "indicatorId": "volunteering_rate",
-      "dimension": "shared_purpose",
-      "priority": 9430,
-      "reason": "9 country record(s) already; 4 record(s) in shared_purpose; 3 record(s) for this gap"
-    },
-    {
-      "iso3": "FRA",
-      "indicatorId": "volunteering_rate",
-      "dimension": "shared_purpose",
-      "priority": 9430,
-      "reason": "9 country record(s) already; 4 record(s) in shared_purpose; 3 record(s) for this gap"
-    },
-    {
-      "iso3": "MYS",
-      "indicatorId": "volunteering_rate",
-      "dimension": "shared_purpose",
-      "priority": 9430,
-      "reason": "9 country record(s) already; 4 record(s) in shared_purpose; 3 record(s) for this gap"
-    },
-    {
-      "iso3": "POL",
-      "indicatorId": "volunteering_rate",
-      "dimension": "shared_purpose",
-      "priority": 9430,
-      "reason": "9 country record(s) already; 4 record(s) in shared_purpose; 3 record(s) for this gap"
-    },
-    {
-      "iso3": "SGP",
-      "indicatorId": "volunteering_rate",
-      "dimension": "shared_purpose",
-      "priority": 9430,
-      "reason": "9 country record(s) already; 4 record(s) in shared_purpose; 3 record(s) for this gap"
-    },
-    {
-      "iso3": "URY",
-      "indicatorId": "volunteering_rate",
-      "dimension": "shared_purpose",
-      "priority": 9430,
-      "reason": "9 country record(s) already; 4 record(s) in shared_purpose; 3 record(s) for this gap"
-    },
-    {
-      "iso3": "CHL",
-      "indicatorId": "adult_digital_skills",
-      "dimension": "agency",
-      "priority": 9440,
-      "reason": "9 country record(s) already; 4 record(s) in agency; 4 record(s) for this gap"
-    },
-    {
-      "iso3": "DNK",
-      "indicatorId": "adult_digital_skills",
-      "dimension": "agency",
-      "priority": 9440,
-      "reason": "9 country record(s) already; 4 record(s) in agency; 4 record(s) for this gap"
-    },
-    {
-      "iso3": "FRA",
-      "indicatorId": "adult_digital_skills",
-      "dimension": "agency",
-      "priority": 9440,
-      "reason": "9 country record(s) already; 4 record(s) in agency; 4 record(s) for this gap"
-    },
-    {
-      "iso3": "MYS",
-      "indicatorId": "adult_digital_skills",
-      "dimension": "agency",
-      "priority": 9440,
-      "reason": "9 country record(s) already; 4 record(s) in agency; 4 record(s) for this gap"
-    },
-    {
-      "iso3": "POL",
-      "indicatorId": "adult_digital_skills",
-      "dimension": "agency",
-      "priority": 9440,
-      "reason": "9 country record(s) already; 4 record(s) in agency; 4 record(s) for this gap"
-    },
-    {
-      "iso3": "URY",
-      "indicatorId": "adult_digital_skills",
-      "dimension": "agency",
-      "priority": 9440,
-      "reason": "9 country record(s) already; 4 record(s) in agency; 4 record(s) for this gap"
-    },
-    {
-      "iso3": "CHL",
-      "indicatorId": "court_case_clearance",
-      "dimension": "trust",
-      "priority": 9520,
-      "reason": "9 country record(s) already; 5 record(s) in trust; 2 record(s) for this gap"
-    },
-    {
-      "iso3": "DNK",
-      "indicatorId": "court_case_clearance",
-      "dimension": "trust",
-      "priority": 9520,
-      "reason": "9 country record(s) already; 5 record(s) in trust; 2 record(s) for this gap"
-    },
-    {
-      "iso3": "FRA",
-      "indicatorId": "court_case_clearance",
-      "dimension": "trust",
-      "priority": 9520,
-      "reason": "9 country record(s) already; 5 record(s) in trust; 2 record(s) for this gap"
-    },
-    {
-      "iso3": "MYS",
-      "indicatorId": "court_case_clearance",
-      "dimension": "trust",
-      "priority": 9520,
-      "reason": "9 country record(s) already; 5 record(s) in trust; 2 record(s) for this gap"
-    },
-    {
-      "iso3": "POL",
-      "indicatorId": "court_case_clearance",
-      "dimension": "trust",
-      "priority": 9520,
-      "reason": "9 country record(s) already; 5 record(s) in trust; 2 record(s) for this gap"
-    },
-    {
-      "iso3": "URY",
-      "indicatorId": "court_case_clearance",
-      "dimension": "trust",
-      "priority": 9520,
-      "reason": "9 country record(s) already; 5 record(s) in trust; 2 record(s) for this gap"
-    },
-    {
-      "iso3": "CHL",
-      "indicatorId": "institutional_trust",
-      "dimension": "trust",
-      "priority": 9530,
-      "reason": "9 country record(s) already; 5 record(s) in trust; 3 record(s) for this gap"
-    },
-    {
-      "iso3": "DNK",
-      "indicatorId": "institutional_trust",
-      "dimension": "trust",
-      "priority": 9530,
-      "reason": "9 country record(s) already; 5 record(s) in trust; 3 record(s) for this gap"
-    },
-    {
-      "iso3": "FRA",
-      "indicatorId": "institutional_trust",
-      "dimension": "trust",
-      "priority": 9530,
-      "reason": "9 country record(s) already; 5 record(s) in trust; 3 record(s) for this gap"
-    },
-    {
-      "iso3": "MYS",
-      "indicatorId": "institutional_trust",
-      "dimension": "trust",
-      "priority": 9530,
-      "reason": "9 country record(s) already; 5 record(s) in trust; 3 record(s) for this gap"
-    },
-    {
-      "iso3": "POL",
-      "indicatorId": "institutional_trust",
-      "dimension": "trust",
-      "priority": 9530,
-      "reason": "9 country record(s) already; 5 record(s) in trust; 3 record(s) for this gap"
-    },
-    {
-      "iso3": "SGP",
-      "indicatorId": "institutional_trust",
-      "dimension": "trust",
-      "priority": 9530,
-      "reason": "9 country record(s) already; 5 record(s) in trust; 3 record(s) for this gap"
-    },
-    {
-      "iso3": "URY",
-      "indicatorId": "institutional_trust",
-      "dimension": "trust",
-      "priority": 9530,
-      "reason": "9 country record(s) already; 5 record(s) in trust; 3 record(s) for this gap"
-    },
-    {
-      "iso3": "ARE",
-      "indicatorId": "university_spinouts",
-      "dimension": "experimentation",
-      "priority": 9910,
-      "reason": "5 country record(s) already; 49 record(s) in experimentation; 1 record(s) for this gap"
-    },
-    {
-      "iso3": "BGD",
-      "indicatorId": "university_spinouts",
-      "dimension": "experimentation",
-      "priority": 9910,
-      "reason": "5 country record(s) already; 49 record(s) in experimentation; 1 record(s) for this gap"
-    },
-    {
-      "iso3": "CUB",
-      "indicatorId": "university_spinouts",
-      "dimension": "experimentation",
-      "priority": 9910,
-      "reason": "5 country record(s) already; 49 record(s) in experimentation; 1 record(s) for this gap"
-    },
-    {
-      "iso3": "CZE",
-      "indicatorId": "university_spinouts",
-      "dimension": "experimentation",
-      "priority": 9910,
-      "reason": "5 country record(s) already; 49 record(s) in experimentation; 1 record(s) for this gap"
-    },
-    {
-      "iso3": "DOM",
-      "indicatorId": "university_spinouts",
-      "dimension": "experimentation",
-      "priority": 9910,
-      "reason": "5 country record(s) already; 49 record(s) in experimentation; 1 record(s) for this gap"
-    },
-    {
-      "iso3": "GRC",
-      "indicatorId": "university_spinouts",
-      "dimension": "experimentation",
-      "priority": 9910,
-      "reason": "5 country record(s) already; 49 record(s) in experimentation; 1 record(s) for this gap"
-    },
-    {
-      "iso3": "GTM",
-      "indicatorId": "university_spinouts",
-      "dimension": "experimentation",
-      "priority": 9910,
-      "reason": "5 country record(s) already; 49 record(s) in experimentation; 1 record(s) for this gap"
-    },
-    {
-      "iso3": "HND",
-      "indicatorId": "university_spinouts",
-      "dimension": "experimentation",
-      "priority": 9910,
-      "reason": "5 country record(s) already; 49 record(s) in experimentation; 1 record(s) for this gap"
-    },
-    {
-      "iso3": "HRV",
-      "indicatorId": "university_spinouts",
-      "dimension": "experimentation",
-      "priority": 9910,
-      "reason": "5 country record(s) already; 49 record(s) in experimentation; 1 record(s) for this gap"
-    },
-    {
-      "iso3": "JAM",
-      "indicatorId": "university_spinouts",
-      "dimension": "experimentation",
-      "priority": 9910,
-      "reason": "5 country record(s) already; 49 record(s) in experimentation; 1 record(s) for this gap"
-    },
-    {
-      "iso3": "MAR",
-      "indicatorId": "university_spinouts",
-      "dimension": "experimentation",
-      "priority": 9910,
-      "reason": "5 country record(s) already; 49 record(s) in experimentation; 1 record(s) for this gap"
-    },
-    {
-      "iso3": "MWI",
-      "indicatorId": "university_spinouts",
-      "dimension": "experimentation",
-      "priority": 9910,
-      "reason": "5 country record(s) already; 49 record(s) in experimentation; 1 record(s) for this gap"
-    },
-    {
-      "iso3": "RWA",
-      "indicatorId": "university_spinouts",
-      "dimension": "experimentation",
-      "priority": 9910,
-      "reason": "5 country record(s) already; 49 record(s) in experimentation; 1 record(s) for this gap"
-    },
-    {
-      "iso3": "SVK",
       "indicatorId": "university_spinouts",
       "dimension": "experimentation",
       "priority": 9910,
@@ -7307,6 +7216,13 @@
       "reason": "5 country record(s) already; 49 record(s) in experimentation; 1 record(s) for this gap"
     },
     {
+      "iso3": "ZWE",
+      "indicatorId": "university_spinouts",
+      "dimension": "experimentation",
+      "priority": 9910,
+      "reason": "5 country record(s) already; 49 record(s) in experimentation; 1 record(s) for this gap"
+    },
+    {
       "iso3": "ARE",
       "indicatorId": "venture_capital_gdp",
       "dimension": "experimentation",
@@ -7321,14 +7237,14 @@
       "reason": "5 country record(s) already; 49 record(s) in experimentation; 3 record(s) for this gap"
     },
     {
-      "iso3": "CUB",
+      "iso3": "BGR",
       "indicatorId": "venture_capital_gdp",
       "dimension": "experimentation",
       "priority": 9930,
       "reason": "5 country record(s) already; 49 record(s) in experimentation; 3 record(s) for this gap"
     },
     {
-      "iso3": "CZE",
+      "iso3": "CUB",
       "indicatorId": "venture_capital_gdp",
       "dimension": "experimentation",
       "priority": 9930,
@@ -7391,6 +7307,13 @@
       "reason": "5 country record(s) already; 49 record(s) in experimentation; 3 record(s) for this gap"
     },
     {
+      "iso3": "NAM",
+      "indicatorId": "venture_capital_gdp",
+      "dimension": "experimentation",
+      "priority": 9930,
+      "reason": "5 country record(s) already; 49 record(s) in experimentation; 3 record(s) for this gap"
+    },
+    {
       "iso3": "RWA",
       "indicatorId": "venture_capital_gdp",
       "dimension": "experimentation",
@@ -7398,7 +7321,7 @@
       "reason": "5 country record(s) already; 49 record(s) in experimentation; 3 record(s) for this gap"
     },
     {
-      "iso3": "SVK",
+      "iso3": "TZA",
       "indicatorId": "venture_capital_gdp",
       "dimension": "experimentation",
       "priority": 9930,
@@ -7420,6 +7343,13 @@
     },
     {
       "iso3": "ZMB",
+      "indicatorId": "venture_capital_gdp",
+      "dimension": "experimentation",
+      "priority": 9930,
+      "reason": "5 country record(s) already; 49 record(s) in experimentation; 3 record(s) for this gap"
+    },
+    {
+      "iso3": "ZWE",
       "indicatorId": "venture_capital_gdp",
       "dimension": "experimentation",
       "priority": 9930,
@@ -7434,6 +7364,13 @@
     },
     {
       "iso3": "AUS",
+      "indicatorId": "basic_research_share",
+      "dimension": "anticipation",
+      "priority": 10020,
+      "reason": "7 country record(s) already; 30 record(s) in anticipation; 2 record(s) for this gap"
+    },
+    {
+      "iso3": "AUT",
       "indicatorId": "basic_research_share",
       "dimension": "anticipation",
       "priority": 10020,
@@ -7455,6 +7392,13 @@
     },
     {
       "iso3": "CRI",
+      "indicatorId": "basic_research_share",
+      "dimension": "anticipation",
+      "priority": 10020,
+      "reason": "7 country record(s) already; 30 record(s) in anticipation; 2 record(s) for this gap"
+    },
+    {
+      "iso3": "CZE",
       "indicatorId": "basic_research_share",
       "dimension": "anticipation",
       "priority": 10020,
@@ -7503,7 +7447,21 @@
       "reason": "7 country record(s) already; 30 record(s) in anticipation; 2 record(s) for this gap"
     },
     {
+      "iso3": "AUT",
+      "indicatorId": "government_foresight_capacity",
+      "dimension": "anticipation",
+      "priority": 10280,
+      "reason": "7 country record(s) already; 30 record(s) in anticipation; 28 record(s) for this gap"
+    },
+    {
       "iso3": "AZE",
+      "indicatorId": "government_foresight_capacity",
+      "dimension": "anticipation",
+      "priority": 10280,
+      "reason": "7 country record(s) already; 30 record(s) in anticipation; 28 record(s) for this gap"
+    },
+    {
+      "iso3": "CZE",
       "indicatorId": "government_foresight_capacity",
       "dimension": "anticipation",
       "priority": 10280,
@@ -7545,7 +7503,21 @@
       "reason": "5 country record(s) already; 49 record(s) in experimentation; 45 record(s) for this gap"
     },
     {
+      "iso3": "BGR",
+      "indicatorId": "regulatory_sandbox_activity",
+      "dimension": "experimentation",
+      "priority": 10350,
+      "reason": "5 country record(s) already; 49 record(s) in experimentation; 45 record(s) for this gap"
+    },
+    {
       "iso3": "GRC",
+      "indicatorId": "regulatory_sandbox_activity",
+      "dimension": "experimentation",
+      "priority": 10350,
+      "reason": "5 country record(s) already; 49 record(s) in experimentation; 45 record(s) for this gap"
+    },
+    {
+      "iso3": "TZA",
       "indicatorId": "regulatory_sandbox_activity",
       "dimension": "experimentation",
       "priority": 10350,
@@ -7727,13 +7699,6 @@
       "reason": "1 country record(s) already; 88 record(s) in learning; 88 record(s) for this gap"
     },
     {
-      "iso3": "AUT",
-      "indicatorId": "university_spinouts",
-      "dimension": "experimentation",
-      "priority": 10910,
-      "reason": "6 country record(s) already; 49 record(s) in experimentation; 1 record(s) for this gap"
-    },
-    {
       "iso3": "BEL",
       "indicatorId": "university_spinouts",
       "dimension": "experimentation",
@@ -7854,6 +7819,13 @@
     },
     {
       "iso3": "SRB",
+      "indicatorId": "university_spinouts",
+      "dimension": "experimentation",
+      "priority": 10910,
+      "reason": "6 country record(s) already; 49 record(s) in experimentation; 1 record(s) for this gap"
+    },
+    {
+      "iso3": "SVK",
       "indicatorId": "university_spinouts",
       "dimension": "experimentation",
       "priority": 10910,
@@ -7874,13 +7846,6 @@
       "reason": "6 country record(s) already; 49 record(s) in experimentation; 1 record(s) for this gap"
     },
     {
-      "iso3": "AUT",
-      "indicatorId": "venture_capital_gdp",
-      "dimension": "experimentation",
-      "priority": 10930,
-      "reason": "6 country record(s) already; 49 record(s) in experimentation; 3 record(s) for this gap"
-    },
-    {
       "iso3": "BEL",
       "indicatorId": "venture_capital_gdp",
       "dimension": "experimentation",
@@ -8001,6 +7966,13 @@
     },
     {
       "iso3": "SRB",
+      "indicatorId": "venture_capital_gdp",
+      "dimension": "experimentation",
+      "priority": 10930,
+      "reason": "6 country record(s) already; 49 record(s) in experimentation; 3 record(s) for this gap"
+    },
+    {
+      "iso3": "SVK",
       "indicatorId": "venture_capital_gdp",
       "dimension": "experimentation",
       "priority": 10930,
@@ -8322,13 +8294,6 @@
       "reason": "11 country record(s) already; 5 record(s) in trust; 3 record(s) for this gap"
     },
     {
-      "iso3": "BLR",
-      "indicatorId": "adult_learning_participation",
-      "dimension": "learning",
-      "priority": 11680,
-      "reason": "2 country record(s) already; 88 record(s) in learning; 88 record(s) for this gap"
-    },
-    {
       "iso3": "COG",
       "indicatorId": "adult_learning_participation",
       "dimension": "learning",
@@ -8336,21 +8301,7 @@
       "reason": "2 country record(s) already; 88 record(s) in learning; 88 record(s) for this gap"
     },
     {
-      "iso3": "GEO",
-      "indicatorId": "adult_learning_participation",
-      "dimension": "learning",
-      "priority": 11680,
-      "reason": "2 country record(s) already; 88 record(s) in learning; 88 record(s) for this gap"
-    },
-    {
       "iso3": "LSO",
-      "indicatorId": "adult_learning_participation",
-      "dimension": "learning",
-      "priority": 11680,
-      "reason": "2 country record(s) already; 88 record(s) in learning; 88 record(s) for this gap"
-    },
-    {
-      "iso3": "MKD",
       "indicatorId": "adult_learning_participation",
       "dimension": "learning",
       "priority": 11680,
@@ -8378,6 +8329,13 @@
       "reason": "7 country record(s) already; 49 record(s) in experimentation; 1 record(s) for this gap"
     },
     {
+      "iso3": "AUT",
+      "indicatorId": "university_spinouts",
+      "dimension": "experimentation",
+      "priority": 11910,
+      "reason": "7 country record(s) already; 49 record(s) in experimentation; 1 record(s) for this gap"
+    },
+    {
       "iso3": "AZE",
       "indicatorId": "university_spinouts",
       "dimension": "experimentation",
@@ -8393,6 +8351,13 @@
     },
     {
       "iso3": "CRI",
+      "indicatorId": "university_spinouts",
+      "dimension": "experimentation",
+      "priority": 11910,
+      "reason": "7 country record(s) already; 49 record(s) in experimentation; 1 record(s) for this gap"
+    },
+    {
+      "iso3": "CZE",
       "indicatorId": "university_spinouts",
       "dimension": "experimentation",
       "priority": 11910,
@@ -8455,6 +8420,13 @@
       "reason": "7 country record(s) already; 49 record(s) in experimentation; 3 record(s) for this gap"
     },
     {
+      "iso3": "AUT",
+      "indicatorId": "venture_capital_gdp",
+      "dimension": "experimentation",
+      "priority": 11930,
+      "reason": "7 country record(s) already; 49 record(s) in experimentation; 3 record(s) for this gap"
+    },
+    {
       "iso3": "AZE",
       "indicatorId": "venture_capital_gdp",
       "dimension": "experimentation",
@@ -8470,6 +8442,13 @@
     },
     {
       "iso3": "CRI",
+      "indicatorId": "venture_capital_gdp",
+      "dimension": "experimentation",
+      "priority": 11930,
+      "reason": "7 country record(s) already; 49 record(s) in experimentation; 3 record(s) for this gap"
+    },
+    {
+      "iso3": "CZE",
       "indicatorId": "venture_capital_gdp",
       "dimension": "experimentation",
       "priority": 11930,
@@ -8602,13 +8581,6 @@
       "reason": "12 country record(s) already; 5 record(s) in trust; 3 record(s) for this gap"
     },
     {
-      "iso3": "BDI",
-      "indicatorId": "adult_learning_participation",
-      "dimension": "learning",
-      "priority": 12680,
-      "reason": "3 country record(s) already; 88 record(s) in learning; 88 record(s) for this gap"
-    },
-    {
       "iso3": "BIH",
       "indicatorId": "adult_learning_participation",
       "dimension": "learning",
@@ -8616,7 +8588,21 @@
       "reason": "3 country record(s) already; 88 record(s) in learning; 88 record(s) for this gap"
     },
     {
+      "iso3": "BLR",
+      "indicatorId": "adult_learning_participation",
+      "dimension": "learning",
+      "priority": 12680,
+      "reason": "3 country record(s) already; 88 record(s) in learning; 88 record(s) for this gap"
+    },
+    {
       "iso3": "BWA",
+      "indicatorId": "adult_learning_participation",
+      "dimension": "learning",
+      "priority": 12680,
+      "reason": "3 country record(s) already; 88 record(s) in learning; 88 record(s) for this gap"
+    },
+    {
+      "iso3": "GEO",
       "indicatorId": "adult_learning_participation",
       "dimension": "learning",
       "priority": 12680,
@@ -8672,14 +8658,14 @@
       "reason": "3 country record(s) already; 88 record(s) in learning; 88 record(s) for this gap"
     },
     {
-      "iso3": "MMR",
+      "iso3": "MKD",
       "indicatorId": "adult_learning_participation",
       "dimension": "learning",
       "priority": 12680,
       "reason": "3 country record(s) already; 88 record(s) in learning; 88 record(s) for this gap"
     },
     {
-      "iso3": "MNG",
+      "iso3": "MMR",
       "indicatorId": "adult_learning_participation",
       "dimension": "learning",
       "priority": 12680,
@@ -8903,6 +8889,13 @@
       "reason": "4 country record(s) already; 88 record(s) in learning; 88 record(s) for this gap"
     },
     {
+      "iso3": "BDI",
+      "indicatorId": "adult_learning_participation",
+      "dimension": "learning",
+      "priority": 13680,
+      "reason": "4 country record(s) already; 88 record(s) in learning; 88 record(s) for this gap"
+    },
+    {
       "iso3": "EGY",
       "indicatorId": "adult_learning_participation",
       "dimension": "learning",
@@ -8931,7 +8924,7 @@
       "reason": "4 country record(s) already; 88 record(s) in learning; 88 record(s) for this gap"
     },
     {
-      "iso3": "ZWE",
+      "iso3": "MNG",
       "indicatorId": "adult_learning_participation",
       "dimension": "learning",
       "priority": 13680,
@@ -9071,13 +9064,6 @@
       "reason": "11 country record(s) already; 30 record(s) in anticipation; 2 record(s) for this gap"
     },
     {
-      "iso3": "CZE",
-      "indicatorId": "adult_learning_participation",
-      "dimension": "learning",
-      "priority": 14680,
-      "reason": "5 country record(s) already; 88 record(s) in learning; 88 record(s) for this gap"
-    },
-    {
       "iso3": "GRC",
       "indicatorId": "adult_learning_participation",
       "dimension": "learning",
@@ -9093,6 +9079,13 @@
     },
     {
       "iso3": "ZMB",
+      "indicatorId": "adult_learning_participation",
+      "dimension": "learning",
+      "priority": 14680,
+      "reason": "5 country record(s) already; 88 record(s) in learning; 88 record(s) for this gap"
+    },
+    {
+      "iso3": "ZWE",
       "indicatorId": "adult_learning_participation",
       "dimension": "learning",
       "priority": 14680,
@@ -9204,13 +9197,6 @@
       "reason": "6 country record(s) already; 88 record(s) in learning; 88 record(s) for this gap"
     },
     {
-      "iso3": "BLR",
-      "indicatorId": "university_industry_collaboration",
-      "dimension": "coordination",
-      "priority": 15880,
-      "reason": "2 country record(s) already; 135 record(s) in coordination; 38 record(s) for this gap"
-    },
-    {
       "iso3": "COG",
       "indicatorId": "university_industry_collaboration",
       "dimension": "coordination",
@@ -9219,13 +9205,6 @@
     },
     {
       "iso3": "LSO",
-      "indicatorId": "university_industry_collaboration",
-      "dimension": "coordination",
-      "priority": 15880,
-      "reason": "2 country record(s) already; 135 record(s) in coordination; 38 record(s) for this gap"
-    },
-    {
-      "iso3": "MKD",
       "indicatorId": "university_industry_collaboration",
       "dimension": "coordination",
       "priority": 15880,
@@ -9309,21 +9288,7 @@
       "reason": "11 country record(s) already; 49 record(s) in experimentation; 3 record(s) for this gap"
     },
     {
-      "iso3": "BLR",
-      "indicatorId": "public_private_collaboration",
-      "dimension": "coordination",
-      "priority": 16470,
-      "reason": "2 country record(s) already; 135 record(s) in coordination; 97 record(s) for this gap"
-    },
-    {
       "iso3": "COG",
-      "indicatorId": "public_private_collaboration",
-      "dimension": "coordination",
-      "priority": 16470,
-      "reason": "2 country record(s) already; 135 record(s) in coordination; 97 record(s) for this gap"
-    },
-    {
-      "iso3": "GEO",
       "indicatorId": "public_private_collaboration",
       "dimension": "coordination",
       "priority": 16470,
@@ -9337,28 +9302,21 @@
       "reason": "2 country record(s) already; 135 record(s) in coordination; 97 record(s) for this gap"
     },
     {
-      "iso3": "MKD",
+      "iso3": "PNG",
       "indicatorId": "public_private_collaboration",
       "dimension": "coordination",
       "priority": 16470,
       "reason": "2 country record(s) already; 135 record(s) in coordination; 97 record(s) for this gap"
     },
     {
-      "iso3": "PNG",
-      "indicatorId": "public_private_collaboration",
-      "dimension": "coordination",
-      "priority": 16470,
-      "reason": "2 country record(s) already; 135 record(s) in coordination; 97 record(s) for this gap"
+      "iso3": "CZE",
+      "indicatorId": "adult_learning_participation",
+      "dimension": "learning",
+      "priority": 16680,
+      "reason": "7 country record(s) already; 88 record(s) in learning; 88 record(s) for this gap"
     },
     {
       "iso3": "ALB",
-      "indicatorId": "university_industry_collaboration",
-      "dimension": "coordination",
-      "priority": 16880,
-      "reason": "3 country record(s) already; 135 record(s) in coordination; 38 record(s) for this gap"
-    },
-    {
-      "iso3": "BDI",
       "indicatorId": "university_industry_collaboration",
       "dimension": "coordination",
       "priority": 16880,
@@ -9372,14 +9330,14 @@
       "reason": "3 country record(s) already; 135 record(s) in coordination; 38 record(s) for this gap"
     },
     {
-      "iso3": "BWA",
+      "iso3": "BLR",
       "indicatorId": "university_industry_collaboration",
       "dimension": "coordination",
       "priority": 16880,
       "reason": "3 country record(s) already; 135 record(s) in coordination; 38 record(s) for this gap"
     },
     {
-      "iso3": "CYP",
+      "iso3": "BWA",
       "indicatorId": "university_industry_collaboration",
       "dimension": "coordination",
       "priority": 16880,
@@ -9428,14 +9386,14 @@
       "reason": "3 country record(s) already; 135 record(s) in coordination; 38 record(s) for this gap"
     },
     {
-      "iso3": "MMR",
+      "iso3": "MKD",
       "indicatorId": "university_industry_collaboration",
       "dimension": "coordination",
       "priority": 16880,
       "reason": "3 country record(s) already; 135 record(s) in coordination; 38 record(s) for this gap"
     },
     {
-      "iso3": "MNG",
+      "iso3": "MMR",
       "indicatorId": "university_industry_collaboration",
       "dimension": "coordination",
       "priority": 16880,
@@ -9484,6 +9442,13 @@
       "reason": "3 country record(s) already; 135 record(s) in coordination; 97 record(s) for this gap"
     },
     {
+      "iso3": "BLR",
+      "indicatorId": "public_private_collaboration",
+      "dimension": "coordination",
+      "priority": 17470,
+      "reason": "3 country record(s) already; 135 record(s) in coordination; 97 record(s) for this gap"
+    },
+    {
       "iso3": "BWA",
       "indicatorId": "public_private_collaboration",
       "dimension": "coordination",
@@ -9491,7 +9456,7 @@
       "reason": "3 country record(s) already; 135 record(s) in coordination; 97 record(s) for this gap"
     },
     {
-      "iso3": "CYP",
+      "iso3": "GEO",
       "indicatorId": "public_private_collaboration",
       "dimension": "coordination",
       "priority": 17470,
@@ -9533,7 +9498,7 @@
       "reason": "3 country record(s) already; 135 record(s) in coordination; 97 record(s) for this gap"
     },
     {
-      "iso3": "MNG",
+      "iso3": "MKD",
       "indicatorId": "public_private_collaboration",
       "dimension": "coordination",
       "priority": 17470,
@@ -9568,7 +9533,7 @@
       "reason": "4 country record(s) already; 135 record(s) in coordination; 38 record(s) for this gap"
     },
     {
-      "iso3": "BGR",
+      "iso3": "BDI",
       "indicatorId": "university_industry_collaboration",
       "dimension": "coordination",
       "priority": 17880,
@@ -9576,6 +9541,13 @@
     },
     {
       "iso3": "COD",
+      "indicatorId": "university_industry_collaboration",
+      "dimension": "coordination",
+      "priority": 17880,
+      "reason": "4 country record(s) already; 135 record(s) in coordination; 38 record(s) for this gap"
+    },
+    {
+      "iso3": "CYP",
       "indicatorId": "university_industry_collaboration",
       "dimension": "coordination",
       "priority": 17880,
@@ -9603,7 +9575,7 @@
       "reason": "4 country record(s) already; 135 record(s) in coordination; 38 record(s) for this gap"
     },
     {
-      "iso3": "NAM",
+      "iso3": "MNG",
       "indicatorId": "university_industry_collaboration",
       "dimension": "coordination",
       "priority": 17880,
@@ -9611,20 +9583,6 @@
     },
     {
       "iso3": "SVN",
-      "indicatorId": "university_industry_collaboration",
-      "dimension": "coordination",
-      "priority": 17880,
-      "reason": "4 country record(s) already; 135 record(s) in coordination; 38 record(s) for this gap"
-    },
-    {
-      "iso3": "TZA",
-      "indicatorId": "university_industry_collaboration",
-      "dimension": "coordination",
-      "priority": 17880,
-      "reason": "4 country record(s) already; 135 record(s) in coordination; 38 record(s) for this gap"
-    },
-    {
-      "iso3": "ZWE",
       "indicatorId": "university_industry_collaboration",
       "dimension": "coordination",
       "priority": 17880,
@@ -9652,14 +9610,14 @@
       "reason": "18 country record(s) already; 4 record(s) in shared_purpose; 3 record(s) for this gap"
     },
     {
-      "iso3": "BGR",
+      "iso3": "COD",
       "indicatorId": "public_private_collaboration",
       "dimension": "coordination",
       "priority": 18470,
       "reason": "4 country record(s) already; 135 record(s) in coordination; 97 record(s) for this gap"
     },
     {
-      "iso3": "COD",
+      "iso3": "CYP",
       "indicatorId": "public_private_collaboration",
       "dimension": "coordination",
       "priority": 18470,
@@ -9673,7 +9631,7 @@
       "reason": "4 country record(s) already; 135 record(s) in coordination; 97 record(s) for this gap"
     },
     {
-      "iso3": "NAM",
+      "iso3": "MNG",
       "indicatorId": "public_private_collaboration",
       "dimension": "coordination",
       "priority": 18470,
@@ -9699,6 +9657,13 @@
       "dimension": "trust",
       "priority": 18530,
       "reason": "18 country record(s) already; 5 record(s) in trust; 3 record(s) for this gap"
+    },
+    {
+      "iso3": "BGR",
+      "indicatorId": "university_industry_collaboration",
+      "dimension": "coordination",
+      "priority": 18880,
+      "reason": "5 country record(s) already; 135 record(s) in coordination; 38 record(s) for this gap"
     },
     {
       "iso3": "GRC",
@@ -9729,7 +9694,14 @@
       "reason": "5 country record(s) already; 135 record(s) in coordination; 38 record(s) for this gap"
     },
     {
-      "iso3": "SVK",
+      "iso3": "NAM",
+      "indicatorId": "university_industry_collaboration",
+      "dimension": "coordination",
+      "priority": 18880,
+      "reason": "5 country record(s) already; 135 record(s) in coordination; 38 record(s) for this gap"
+    },
+    {
+      "iso3": "TZA",
       "indicatorId": "university_industry_collaboration",
       "dimension": "coordination",
       "priority": 18880,
@@ -9757,6 +9729,20 @@
       "reason": "5 country record(s) already; 135 record(s) in coordination; 38 record(s) for this gap"
     },
     {
+      "iso3": "ZWE",
+      "indicatorId": "university_industry_collaboration",
+      "dimension": "coordination",
+      "priority": 18880,
+      "reason": "5 country record(s) already; 135 record(s) in coordination; 38 record(s) for this gap"
+    },
+    {
+      "iso3": "BGR",
+      "indicatorId": "public_private_collaboration",
+      "dimension": "coordination",
+      "priority": 19470,
+      "reason": "5 country record(s) already; 135 record(s) in coordination; 97 record(s) for this gap"
+    },
+    {
       "iso3": "JAM",
       "indicatorId": "public_private_collaboration",
       "dimension": "coordination",
@@ -9772,6 +9758,13 @@
     },
     {
       "iso3": "MWI",
+      "indicatorId": "public_private_collaboration",
+      "dimension": "coordination",
+      "priority": 19470,
+      "reason": "5 country record(s) already; 135 record(s) in coordination; 97 record(s) for this gap"
+    },
+    {
+      "iso3": "NAM",
       "indicatorId": "public_private_collaboration",
       "dimension": "coordination",
       "priority": 19470,
@@ -9806,6 +9799,13 @@
       "reason": "6 country record(s) already; 135 record(s) in coordination; 38 record(s) for this gap"
     },
     {
+      "iso3": "SVK",
+      "indicatorId": "university_industry_collaboration",
+      "dimension": "coordination",
+      "priority": 19880,
+      "reason": "6 country record(s) already; 135 record(s) in coordination; 38 record(s) for this gap"
+    },
+    {
       "iso3": "UGA",
       "indicatorId": "university_industry_collaboration",
       "dimension": "coordination",
@@ -9818,13 +9818,6 @@
       "dimension": "building",
       "priority": 20000,
       "reason": "1 country record(s) already; 190 record(s) in building; 0 record(s) for this gap"
-    },
-    {
-      "iso3": "AUT",
-      "indicatorId": "public_private_collaboration",
-      "dimension": "coordination",
-      "priority": 20470,
-      "reason": "6 country record(s) already; 135 record(s) in coordination; 97 record(s) for this gap"
     },
     {
       "iso3": "PAK",
@@ -9848,13 +9841,6 @@
       "reason": "7 country record(s) already; 135 record(s) in coordination; 38 record(s) for this gap"
     },
     {
-      "iso3": "BLR",
-      "indicatorId": "firm_scale_up_rate",
-      "dimension": "building",
-      "priority": 21000,
-      "reason": "2 country record(s) already; 190 record(s) in building; 0 record(s) for this gap"
-    },
-    {
       "iso3": "COG",
       "indicatorId": "firm_scale_up_rate",
       "dimension": "building",
@@ -9862,21 +9848,7 @@
       "reason": "2 country record(s) already; 190 record(s) in building; 0 record(s) for this gap"
     },
     {
-      "iso3": "GEO",
-      "indicatorId": "firm_scale_up_rate",
-      "dimension": "building",
-      "priority": 21000,
-      "reason": "2 country record(s) already; 190 record(s) in building; 0 record(s) for this gap"
-    },
-    {
       "iso3": "LSO",
-      "indicatorId": "firm_scale_up_rate",
-      "dimension": "building",
-      "priority": 21000,
-      "reason": "2 country record(s) already; 190 record(s) in building; 0 record(s) for this gap"
-    },
-    {
-      "iso3": "MKD",
       "indicatorId": "firm_scale_up_rate",
       "dimension": "building",
       "priority": 21000,
@@ -9897,14 +9869,14 @@
       "reason": "18 country record(s) already; 30 record(s) in anticipation; 2 record(s) for this gap"
     },
     {
-      "iso3": "ALB",
-      "indicatorId": "firm_scale_up_rate",
-      "dimension": "building",
-      "priority": 22000,
-      "reason": "3 country record(s) already; 190 record(s) in building; 0 record(s) for this gap"
+      "iso3": "AUT",
+      "indicatorId": "public_private_collaboration",
+      "dimension": "coordination",
+      "priority": 21470,
+      "reason": "7 country record(s) already; 135 record(s) in coordination; 97 record(s) for this gap"
     },
     {
-      "iso3": "BDI",
+      "iso3": "ALB",
       "indicatorId": "firm_scale_up_rate",
       "dimension": "building",
       "priority": 22000,
@@ -9925,6 +9897,13 @@
       "reason": "3 country record(s) already; 190 record(s) in building; 0 record(s) for this gap"
     },
     {
+      "iso3": "BLR",
+      "indicatorId": "firm_scale_up_rate",
+      "dimension": "building",
+      "priority": 22000,
+      "reason": "3 country record(s) already; 190 record(s) in building; 0 record(s) for this gap"
+    },
+    {
       "iso3": "BWA",
       "indicatorId": "firm_scale_up_rate",
       "dimension": "building",
@@ -9932,7 +9911,7 @@
       "reason": "3 country record(s) already; 190 record(s) in building; 0 record(s) for this gap"
     },
     {
-      "iso3": "CYP",
+      "iso3": "GEO",
       "indicatorId": "firm_scale_up_rate",
       "dimension": "building",
       "priority": 22000,
@@ -9995,14 +9974,14 @@
       "reason": "3 country record(s) already; 190 record(s) in building; 0 record(s) for this gap"
     },
     {
-      "iso3": "MMR",
+      "iso3": "MKD",
       "indicatorId": "firm_scale_up_rate",
       "dimension": "building",
       "priority": 22000,
       "reason": "3 country record(s) already; 190 record(s) in building; 0 record(s) for this gap"
     },
     {
-      "iso3": "MNG",
+      "iso3": "MMR",
       "indicatorId": "firm_scale_up_rate",
       "dimension": "building",
       "priority": 22000,
@@ -10065,7 +10044,7 @@
       "reason": "4 country record(s) already; 190 record(s) in building; 0 record(s) for this gap"
     },
     {
-      "iso3": "BGR",
+      "iso3": "BDI",
       "indicatorId": "firm_scale_up_rate",
       "dimension": "building",
       "priority": 23000,
@@ -10073,6 +10052,13 @@
     },
     {
       "iso3": "COD",
+      "indicatorId": "firm_scale_up_rate",
+      "dimension": "building",
+      "priority": 23000,
+      "reason": "4 country record(s) already; 190 record(s) in building; 0 record(s) for this gap"
+    },
+    {
+      "iso3": "CYP",
       "indicatorId": "firm_scale_up_rate",
       "dimension": "building",
       "priority": 23000,
@@ -10121,7 +10107,7 @@
       "reason": "4 country record(s) already; 190 record(s) in building; 0 record(s) for this gap"
     },
     {
-      "iso3": "NAM",
+      "iso3": "MNG",
       "indicatorId": "firm_scale_up_rate",
       "dimension": "building",
       "priority": 23000,
@@ -10149,20 +10135,6 @@
       "reason": "4 country record(s) already; 190 record(s) in building; 0 record(s) for this gap"
     },
     {
-      "iso3": "TZA",
-      "indicatorId": "firm_scale_up_rate",
-      "dimension": "building",
-      "priority": 23000,
-      "reason": "4 country record(s) already; 190 record(s) in building; 0 record(s) for this gap"
-    },
-    {
-      "iso3": "ZWE",
-      "indicatorId": "firm_scale_up_rate",
-      "dimension": "building",
-      "priority": 23000,
-      "reason": "4 country record(s) already; 190 record(s) in building; 0 record(s) for this gap"
-    },
-    {
       "iso3": "ARE",
       "indicatorId": "firm_scale_up_rate",
       "dimension": "building",
@@ -10177,14 +10149,14 @@
       "reason": "5 country record(s) already; 190 record(s) in building; 0 record(s) for this gap"
     },
     {
-      "iso3": "CUB",
+      "iso3": "BGR",
       "indicatorId": "firm_scale_up_rate",
       "dimension": "building",
       "priority": 24000,
       "reason": "5 country record(s) already; 190 record(s) in building; 0 record(s) for this gap"
     },
     {
-      "iso3": "CZE",
+      "iso3": "CUB",
       "indicatorId": "firm_scale_up_rate",
       "dimension": "building",
       "priority": 24000,
@@ -10247,6 +10219,13 @@
       "reason": "5 country record(s) already; 190 record(s) in building; 0 record(s) for this gap"
     },
     {
+      "iso3": "NAM",
+      "indicatorId": "firm_scale_up_rate",
+      "dimension": "building",
+      "priority": 24000,
+      "reason": "5 country record(s) already; 190 record(s) in building; 0 record(s) for this gap"
+    },
+    {
       "iso3": "RWA",
       "indicatorId": "firm_scale_up_rate",
       "dimension": "building",
@@ -10254,7 +10233,7 @@
       "reason": "5 country record(s) already; 190 record(s) in building; 0 record(s) for this gap"
     },
     {
-      "iso3": "SVK",
+      "iso3": "TZA",
       "indicatorId": "firm_scale_up_rate",
       "dimension": "building",
       "priority": 24000,
@@ -10276,6 +10255,13 @@
     },
     {
       "iso3": "ZMB",
+      "indicatorId": "firm_scale_up_rate",
+      "dimension": "building",
+      "priority": 24000,
+      "reason": "5 country record(s) already; 190 record(s) in building; 0 record(s) for this gap"
+    },
+    {
+      "iso3": "ZWE",
       "indicatorId": "firm_scale_up_rate",
       "dimension": "building",
       "priority": 24000,
@@ -10322,13 +10308,6 @@
       "dimension": "trust",
       "priority": 24530,
       "reason": "24 country record(s) already; 5 record(s) in trust; 3 record(s) for this gap"
-    },
-    {
-      "iso3": "AUT",
-      "indicatorId": "firm_scale_up_rate",
-      "dimension": "building",
-      "priority": 25000,
-      "reason": "6 country record(s) already; 190 record(s) in building; 0 record(s) for this gap"
     },
     {
       "iso3": "BEL",
@@ -10457,6 +10436,13 @@
       "reason": "6 country record(s) already; 190 record(s) in building; 0 record(s) for this gap"
     },
     {
+      "iso3": "SVK",
+      "indicatorId": "firm_scale_up_rate",
+      "dimension": "building",
+      "priority": 25000,
+      "reason": "6 country record(s) already; 190 record(s) in building; 0 record(s) for this gap"
+    },
+    {
       "iso3": "TUN",
       "indicatorId": "firm_scale_up_rate",
       "dimension": "building",
@@ -10485,6 +10471,13 @@
       "reason": "7 country record(s) already; 190 record(s) in building; 0 record(s) for this gap"
     },
     {
+      "iso3": "AUT",
+      "indicatorId": "firm_scale_up_rate",
+      "dimension": "building",
+      "priority": 26000,
+      "reason": "7 country record(s) already; 190 record(s) in building; 0 record(s) for this gap"
+    },
+    {
       "iso3": "AZE",
       "indicatorId": "firm_scale_up_rate",
       "dimension": "building",
@@ -10500,6 +10493,13 @@
     },
     {
       "iso3": "CRI",
+      "indicatorId": "firm_scale_up_rate",
+      "dimension": "building",
+      "priority": 26000,
+      "reason": "7 country record(s) already; 190 record(s) in building; 0 record(s) for this gap"
+    },
+    {
+      "iso3": "CZE",
       "indicatorId": "firm_scale_up_rate",
       "dimension": "building",
       "priority": 26000,
@@ -10674,13 +10674,6 @@
       "reason": "27 country record(s) already; 5 record(s) in trust; 2 record(s) for this gap"
     },
     {
-      "iso3": "GNB",
-      "indicatorId": "disaster_preparedness",
-      "dimension": "adaptability",
-      "priority": 27980,
-      "reason": "1 country record(s) already; 258 record(s) in adaptability; 118 record(s) for this gap"
-    },
-    {
       "iso3": "CHL",
       "indicatorId": "firm_scale_up_rate",
       "dimension": "building",
@@ -10744,48 +10737,6 @@
       "reason": "24 country record(s) already; 49 record(s) in experimentation; 3 record(s) for this gap"
     },
     {
-      "iso3": "BLR",
-      "indicatorId": "disaster_preparedness",
-      "dimension": "adaptability",
-      "priority": 28980,
-      "reason": "2 country record(s) already; 258 record(s) in adaptability; 118 record(s) for this gap"
-    },
-    {
-      "iso3": "COG",
-      "indicatorId": "disaster_preparedness",
-      "dimension": "adaptability",
-      "priority": 28980,
-      "reason": "2 country record(s) already; 258 record(s) in adaptability; 118 record(s) for this gap"
-    },
-    {
-      "iso3": "GEO",
-      "indicatorId": "disaster_preparedness",
-      "dimension": "adaptability",
-      "priority": 28980,
-      "reason": "2 country record(s) already; 258 record(s) in adaptability; 118 record(s) for this gap"
-    },
-    {
-      "iso3": "LSO",
-      "indicatorId": "disaster_preparedness",
-      "dimension": "adaptability",
-      "priority": 28980,
-      "reason": "2 country record(s) already; 258 record(s) in adaptability; 118 record(s) for this gap"
-    },
-    {
-      "iso3": "MKD",
-      "indicatorId": "disaster_preparedness",
-      "dimension": "adaptability",
-      "priority": 28980,
-      "reason": "2 country record(s) already; 258 record(s) in adaptability; 118 record(s) for this gap"
-    },
-    {
-      "iso3": "PNG",
-      "indicatorId": "disaster_preparedness",
-      "dimension": "adaptability",
-      "priority": 28980,
-      "reason": "2 country record(s) already; 258 record(s) in adaptability; 118 record(s) for this gap"
-    },
-    {
       "iso3": "CAN",
       "indicatorId": "firm_scale_up_rate",
       "dimension": "building",
@@ -10812,41 +10763,6 @@
       "dimension": "building",
       "priority": 29000,
       "reason": "10 country record(s) already; 190 record(s) in building; 0 record(s) for this gap"
-    },
-    {
-      "iso3": "BDI",
-      "indicatorId": "disaster_preparedness",
-      "dimension": "adaptability",
-      "priority": 29980,
-      "reason": "3 country record(s) already; 258 record(s) in adaptability; 118 record(s) for this gap"
-    },
-    {
-      "iso3": "BFA",
-      "indicatorId": "disaster_preparedness",
-      "dimension": "adaptability",
-      "priority": 29980,
-      "reason": "3 country record(s) already; 258 record(s) in adaptability; 118 record(s) for this gap"
-    },
-    {
-      "iso3": "CYP",
-      "indicatorId": "disaster_preparedness",
-      "dimension": "adaptability",
-      "priority": 29980,
-      "reason": "3 country record(s) already; 258 record(s) in adaptability; 118 record(s) for this gap"
-    },
-    {
-      "iso3": "MNG",
-      "indicatorId": "disaster_preparedness",
-      "dimension": "adaptability",
-      "priority": 29980,
-      "reason": "3 country record(s) already; 258 record(s) in adaptability; 118 record(s) for this gap"
-    },
-    {
-      "iso3": "TTO",
-      "indicatorId": "disaster_preparedness",
-      "dimension": "adaptability",
-      "priority": 29980,
-      "reason": "3 country record(s) already; 258 record(s) in adaptability; 118 record(s) for this gap"
     },
     {
       "iso3": "DEU",
@@ -10884,34 +10800,6 @@
       "reason": "11 country record(s) already; 190 record(s) in building; 0 record(s) for this gap"
     },
     {
-      "iso3": "BGR",
-      "indicatorId": "disaster_preparedness",
-      "dimension": "adaptability",
-      "priority": 30980,
-      "reason": "4 country record(s) already; 258 record(s) in adaptability; 118 record(s) for this gap"
-    },
-    {
-      "iso3": "NAM",
-      "indicatorId": "disaster_preparedness",
-      "dimension": "adaptability",
-      "priority": 30980,
-      "reason": "4 country record(s) already; 258 record(s) in adaptability; 118 record(s) for this gap"
-    },
-    {
-      "iso3": "TZA",
-      "indicatorId": "disaster_preparedness",
-      "dimension": "adaptability",
-      "priority": 30980,
-      "reason": "4 country record(s) already; 258 record(s) in adaptability; 118 record(s) for this gap"
-    },
-    {
-      "iso3": "ZWE",
-      "indicatorId": "disaster_preparedness",
-      "dimension": "adaptability",
-      "priority": 30980,
-      "reason": "4 country record(s) already; 258 record(s) in adaptability; 118 record(s) for this gap"
-    },
-    {
       "iso3": "GBR",
       "indicatorId": "firm_scale_up_rate",
       "dimension": "building",
@@ -10931,34 +10819,6 @@
       "dimension": "experimentation",
       "priority": 31930,
       "reason": "27 country record(s) already; 49 record(s) in experimentation; 3 record(s) for this gap"
-    },
-    {
-      "iso3": "CZE",
-      "indicatorId": "disaster_preparedness",
-      "dimension": "adaptability",
-      "priority": 31980,
-      "reason": "5 country record(s) already; 258 record(s) in adaptability; 118 record(s) for this gap"
-    },
-    {
-      "iso3": "SVK",
-      "indicatorId": "disaster_preparedness",
-      "dimension": "adaptability",
-      "priority": 31980,
-      "reason": "5 country record(s) already; 258 record(s) in adaptability; 118 record(s) for this gap"
-    },
-    {
-      "iso3": "AUT",
-      "indicatorId": "disaster_preparedness",
-      "dimension": "adaptability",
-      "priority": 32980,
-      "reason": "6 country record(s) already; 258 record(s) in adaptability; 118 record(s) for this gap"
-    },
-    {
-      "iso3": "LTU",
-      "indicatorId": "disaster_preparedness",
-      "dimension": "adaptability",
-      "priority": 32980,
-      "reason": "6 country record(s) already; 258 record(s) in adaptability; 118 record(s) for this gap"
     },
     {
       "iso3": "PRT",
@@ -10984,9 +10844,9 @@
   ],
   "grid": {
     "total": 1000,
-    "closedByRecord": 617,
-    "closedByNote": 164,
-    "open": 219,
+    "closedByRecord": 630,
+    "closedByNote": 171,
+    "open": 199,
     "columns": [
       {
         "indicatorId": "large_project_delivery",
@@ -11002,9 +10862,9 @@
       },
       {
         "indicatorId": "disaster_preparedness",
-        "record": 105,
-        "noCase": 0,
-        "open": 20
+        "record": 118,
+        "noCase": 7,
+        "open": 0
       },
       {
         "indicatorId": "public_private_collaboration",
@@ -11394,9 +11254,9 @@
       },
       {
         "iso3": "TZA",
-        "record": 4,
+        "record": 5,
         "noCase": 0,
-        "open": 4
+        "open": 3
       },
       {
         "iso3": "ITA",
@@ -11491,8 +11351,8 @@
       {
         "iso3": "BFA",
         "record": 3,
-        "noCase": 2,
-        "open": 3
+        "noCase": 3,
+        "open": 2
       },
       {
         "iso3": "MWI",
@@ -11526,9 +11386,9 @@
       },
       {
         "iso3": "ZWE",
-        "record": 4,
+        "record": 5,
         "noCase": 0,
-        "open": 4
+        "open": 3
       },
       {
         "iso3": "GIN",
@@ -11538,9 +11398,9 @@
       },
       {
         "iso3": "BDI",
-        "record": 3,
+        "record": 4,
         "noCase": 1,
-        "open": 4
+        "open": 3
       },
       {
         "iso3": "TUN",
@@ -11562,9 +11422,9 @@
       },
       {
         "iso3": "CZE",
-        "record": 4,
+        "record": 5,
         "noCase": 1,
-        "open": 3
+        "open": 2
       },
       {
         "iso3": "TJK",
@@ -11575,8 +11435,8 @@
       {
         "iso3": "PNG",
         "record": 1,
-        "noCase": 1,
-        "open": 6
+        "noCase": 2,
+        "open": 5
       },
       {
         "iso3": "GRC",
@@ -11598,15 +11458,15 @@
       },
       {
         "iso3": "AUT",
-        "record": 5,
+        "record": 6,
         "noCase": 0,
-        "open": 3
+        "open": 2
       },
       {
         "iso3": "BLR",
-        "record": 1,
+        "record": 2,
         "noCase": 1,
-        "open": 6
+        "open": 5
       },
       {
         "iso3": "LAO",
@@ -11629,14 +11489,14 @@
       {
         "iso3": "COG",
         "record": 2,
-        "noCase": 0,
-        "open": 6
+        "noCase": 1,
+        "open": 5
       },
       {
         "iso3": "BGR",
-        "record": 3,
+        "record": 4,
         "noCase": 0,
-        "open": 5
+        "open": 4
       },
       {
         "iso3": "DNK",
@@ -11658,9 +11518,9 @@
       },
       {
         "iso3": "SVK",
-        "record": 5,
+        "record": 6,
         "noCase": 0,
-        "open": 3
+        "open": 2
       },
       {
         "iso3": "NZL",
@@ -11670,9 +11530,9 @@
       },
       {
         "iso3": "GEO",
-        "record": 2,
+        "record": 3,
         "noCase": 1,
-        "open": 5
+        "open": 4
       },
       {
         "iso3": "HRV",
@@ -11682,9 +11542,9 @@
       },
       {
         "iso3": "MNG",
-        "record": 3,
+        "record": 4,
         "noCase": 0,
-        "open": 5
+        "open": 4
       },
       {
         "iso3": "BIH",
@@ -11694,9 +11554,9 @@
       },
       {
         "iso3": "NAM",
-        "record": 4,
+        "record": 5,
         "noCase": 1,
-        "open": 3
+        "open": 2
       },
       {
         "iso3": "ARM",
@@ -11707,8 +11567,8 @@
       {
         "iso3": "LTU",
         "record": 6,
-        "noCase": 0,
-        "open": 2
+        "noCase": 1,
+        "open": 1
       },
       {
         "iso3": "JAM",
@@ -11731,8 +11591,8 @@
       {
         "iso3": "LSO",
         "record": 2,
-        "noCase": 1,
-        "open": 5
+        "noCase": 2,
+        "open": 4
       },
       {
         "iso3": "MDA",
@@ -11749,8 +11609,8 @@
       {
         "iso3": "GNB",
         "record": 1,
-        "noCase": 1,
-        "open": 6
+        "noCase": 2,
+        "open": 5
       },
       {
         "iso3": "SVN",
@@ -11766,21 +11626,21 @@
       },
       {
         "iso3": "MKD",
-        "record": 2,
+        "record": 3,
         "noCase": 0,
-        "open": 6
+        "open": 5
       },
       {
         "iso3": "CYP",
-        "record": 3,
+        "record": 4,
         "noCase": 1,
-        "open": 4
+        "open": 3
       },
       {
         "iso3": "TTO",
         "record": 3,
-        "noCase": 2,
-        "open": 3
+        "noCase": 3,
+        "open": 2
       },
       {
         "iso3": "MUS",
@@ -14637,8 +14497,8 @@
       {
         "iso3": "TZA",
         "indicatorId": "disaster_preparedness",
-        "status": "open",
-        "records": 0
+        "status": "record",
+        "records": 1
       },
       {
         "iso3": "TZA",
@@ -15405,7 +15265,7 @@
       {
         "iso3": "BFA",
         "indicatorId": "disaster_preparedness",
-        "status": "open",
+        "status": "no_case",
         "records": 0
       },
       {
@@ -15693,8 +15553,8 @@
       {
         "iso3": "ZWE",
         "indicatorId": "disaster_preparedness",
-        "status": "open",
-        "records": 0
+        "status": "record",
+        "records": 1
       },
       {
         "iso3": "ZWE",
@@ -15789,8 +15649,8 @@
       {
         "iso3": "BDI",
         "indicatorId": "disaster_preparedness",
-        "status": "open",
-        "records": 0
+        "status": "record",
+        "records": 1
       },
       {
         "iso3": "BDI",
@@ -15981,8 +15841,8 @@
       {
         "iso3": "CZE",
         "indicatorId": "disaster_preparedness",
-        "status": "open",
-        "records": 0
+        "status": "record",
+        "records": 2
       },
       {
         "iso3": "CZE",
@@ -16077,7 +15937,7 @@
       {
         "iso3": "PNG",
         "indicatorId": "disaster_preparedness",
-        "status": "open",
+        "status": "no_case",
         "records": 0
       },
       {
@@ -16269,8 +16129,8 @@
       {
         "iso3": "AUT",
         "indicatorId": "disaster_preparedness",
-        "status": "open",
-        "records": 0
+        "status": "record",
+        "records": 1
       },
       {
         "iso3": "AUT",
@@ -16317,8 +16177,8 @@
       {
         "iso3": "BLR",
         "indicatorId": "disaster_preparedness",
-        "status": "open",
-        "records": 0
+        "status": "record",
+        "records": 1
       },
       {
         "iso3": "BLR",
@@ -16509,7 +16369,7 @@
       {
         "iso3": "COG",
         "indicatorId": "disaster_preparedness",
-        "status": "open",
+        "status": "no_case",
         "records": 0
       },
       {
@@ -16557,8 +16417,8 @@
       {
         "iso3": "BGR",
         "indicatorId": "disaster_preparedness",
-        "status": "open",
-        "records": 0
+        "status": "record",
+        "records": 1
       },
       {
         "iso3": "BGR",
@@ -16749,8 +16609,8 @@
       {
         "iso3": "SVK",
         "indicatorId": "disaster_preparedness",
-        "status": "open",
-        "records": 0
+        "status": "record",
+        "records": 1
       },
       {
         "iso3": "SVK",
@@ -16845,8 +16705,8 @@
       {
         "iso3": "GEO",
         "indicatorId": "disaster_preparedness",
-        "status": "open",
-        "records": 0
+        "status": "record",
+        "records": 1
       },
       {
         "iso3": "GEO",
@@ -16941,8 +16801,8 @@
       {
         "iso3": "MNG",
         "indicatorId": "disaster_preparedness",
-        "status": "open",
-        "records": 0
+        "status": "record",
+        "records": 1
       },
       {
         "iso3": "MNG",
@@ -17037,8 +16897,8 @@
       {
         "iso3": "NAM",
         "indicatorId": "disaster_preparedness",
-        "status": "open",
-        "records": 0
+        "status": "record",
+        "records": 1
       },
       {
         "iso3": "NAM",
@@ -17133,7 +16993,7 @@
       {
         "iso3": "LTU",
         "indicatorId": "disaster_preparedness",
-        "status": "open",
+        "status": "no_case",
         "records": 0
       },
       {
@@ -17325,7 +17185,7 @@
       {
         "iso3": "LSO",
         "indicatorId": "disaster_preparedness",
-        "status": "open",
+        "status": "no_case",
         "records": 0
       },
       {
@@ -17469,7 +17329,7 @@
       {
         "iso3": "GNB",
         "indicatorId": "disaster_preparedness",
-        "status": "open",
+        "status": "no_case",
         "records": 0
       },
       {
@@ -17613,8 +17473,8 @@
       {
         "iso3": "MKD",
         "indicatorId": "disaster_preparedness",
-        "status": "open",
-        "records": 0
+        "status": "record",
+        "records": 1
       },
       {
         "iso3": "MKD",
@@ -17661,8 +17521,8 @@
       {
         "iso3": "CYP",
         "indicatorId": "disaster_preparedness",
-        "status": "open",
-        "records": 0
+        "status": "record",
+        "records": 1
       },
       {
         "iso3": "CYP",
@@ -17709,7 +17569,7 @@
       {
         "iso3": "TTO",
         "indicatorId": "disaster_preparedness",
-        "status": "open",
+        "status": "no_case",
         "records": 0
       },
       {
