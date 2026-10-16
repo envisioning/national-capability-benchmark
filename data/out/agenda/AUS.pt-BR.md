@@ -1,6 +1,6 @@
 # Agenda de capacidades: Austrália
 
-*Gerada em 2026-10-03*
+*Gerada em 2026-10-16*
 
 A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, sem classificação geral, e cada pontuação traz ao lado a solidez da evidência. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma pontuação.
 
@@ -119,7 +119,6 @@ As condições descrevem com o que um país conta: infraestrutura, acesso, dinhe
 
 Entregas documentadas ligadas a indicadores ausentes. Elas não alteram as pontuações nem a solidez da evidência.
 
-- **Compulsory voting** (Propósito compartilhado). Australia has required citizens to vote since 1924 and turnout at the 2025 federal election was 90.7 percent of enrolled voters, a level no large voluntary-voting democracy reaches.
 - **Cooperative Research Centres programme** (Coordenação). Australia's Department of Industry reported that its Cooperative Research Centres portfolio facilitated 304 businesses establishing research-focused collaborations in 2023–24, across 114 CRC and 190 CRC Projects partners, above the year's target of 248.
 - **VET FEE-HELP, and its abolition** (Aprendizagem). Australia's VET FEE-HELP loan scheme, introduced in 2008 to fund higher-level vocational courses, grew from fewer than 3,500 loans in 2009 to 196,108 in 2015, and was abolished and replaced from 1 January 2017 by VET Student Loans, which reached 53,892 students in 2019.
 - **JobKeeper Payment** (Adaptação). Australia's Treasury designed, Parliament legislated and the tax office began paying the JobKeeper wage subsidy just over five weeks after its announcement on 30 March 2020, and in its first phase it supported on average around 925,000 businesses and 3.6 million individuals each month before ending on 28 March 2021.

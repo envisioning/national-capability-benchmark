@@ -8843,3 +8843,50 @@ matching what the panelists saw, which the byte comparison confirms for round
 current brief moves by more than the panel's own IQR, in cells whose hash
 matched, which would mean the brief hash leaves out something the panelists
 read; or a run on the current dataset, which supersedes the carry.
+
+## D161 — Eight evidence records stranded by promoted gaps are refiled or deleted
+
+*Recorded 2026-10-16. Applies the rule in EVIDENCE.md ("When a gap is
+promoted") and follows D147. Issue #75.*
+
+**Decision.** Eight records were filed against gaps that later became scored
+rows, and `bench validate` warned on each one. One is refiled and seven are
+deleted from `data/evidence/records.json`. They remain in git.
+
+- `bra-capes` moves from `research_citation_impact` to
+  `adult_learning_participation`. Postgraduate students are adults in formal
+  education, and the corpus already files enrolment counts there. Its limits
+  now say that a 1995 student count is a system-scale figure and not a
+  participation share, and that the record was refiled.
+- `est-i-voting`, `aus-compulsory-voting`, `bra-sus-conselhos` and `prt-opp`
+  are deleted. They were filed against `civic_participation`, which EVS/WVS
+  charitable membership now scores. They record participation institutions,
+  and no declared gap measures participation: `institutional_trust` is
+  confidence.
+- `bra-inep` is deleted. It was filed against `research_citation_impact`
+  (OpenAlex, D124) and records a statistics institution.
+- `cri-ramp-up` is deleted. It was filed against `export_diversification`
+  (UNCTAD, D119) and records a training programme for firms, not joint
+  public-private delivery.
+- `fra-long-term-unemployment` is deleted. It was filed against
+  `long_term_unemployment_share` (ILOSTAT, D120) and records the statistic
+  itself.
+
+The pt-BR readings of `bra-inep` and `bra-sus-conselhos` leave
+`EVIDENCE_PT_BR` with their records.
+
+**Why.** A record filed against a scored row duplicates or misreads what the
+score carries, and the validator warned on all eight every run. MZ chose
+refile where a declared gap fits and delete the rest (2026-10-03).
+
+**Cost.** Seven delivered cases leave the published corpus, 742 to 735
+records. Four of them are participation institutions that the charitable
+membership row does not carry, so the corpus loses that reading until a
+participation gap is declared. None was a reversal, so the reversal count
+holds at 149 against a minimum that falls to 147. No grid cell opens: each
+country keeps another record or note in the columns concerned.
+
+**Overturned by.** A declared gap whose construct is participation in public
+decisions, which would make the four civic records admissible again; or
+`research_citation_impact`, `export_diversification` or
+`long_term_unemployment_share` returning to a gap.

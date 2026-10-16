@@ -736,43 +736,6 @@
       }
     },
     {
-      "id": "est-i-voting",
-      "indicatorId": "civic_participation",
-      "iso3": "EST",
-      "title": "Internet voting in national elections",
-      "claim": "Estonia has run legally binding internet voting since 2005, and at the 2023 Riigikogu election 312,182 votes, 51.1 percent of all votes cast, came in online, the first national election anywhere in which more than half the vote was digital.",
-      "metric": {
-        "name": "Share of votes cast online, 2023 Riigikogu election",
-        "value": 51.1,
-        "unit": "% of votes",
-        "asOf": "2023"
-      },
-      "secondMetric": {
-        "name": "Internet votes at first use, 2005 local elections",
-        "value": 9287,
-        "unit": "votes",
-        "asOf": "2005"
-      },
-      "started": 2005,
-      "status": "operating",
-      "source": {
-        "publisher": "State Electoral Office of Estonia, internet voting statistics",
-        "url": "https://www.valimised.ee/en/archive/statistics-about-internet-voting-estonia",
-        "tier": "official_statistical",
-        "retrievedAt": "2026-08-27"
-      },
-      "limits": "Turnout by channel measures adoption, not democratic quality: an online share says nothing about coercion outside the polling station, verifiability, or trust in the count, and Estonian i-voting has standing academic critics on all three. Adoption also rides on the national identity infrastructure recorded elsewhere in this dataset, so as evidence for civic participation it shows a lowered cost of voting rather than a raised desire to participate; overall turnout moved far less than the channel share.",
-      "pattern": {
-        "mechanism": "The state let any voter cast and re-cast a ballot online during the advance period, with the last vote counting and a paper vote overriding, which turned the coercion problem into a game the voter can always exit.",
-        "preconditions": [
-          "A universal cryptographic identity already in every pocket",
-          "An electoral authority with the engineering staff to own the system rather than rent it",
-          "Small scale, which keeps the attack surface and the audit tractable"
-        ],
-        "travelled": "Twenty years on, no other country runs internet voting at national scale: Switzerland trials and withdraws, Norway tried and stopped. The Estonian lesson is that the identity system came first, and copies that start with the voting app fail."
-      }
-    },
-    {
       "id": "tur-disinflation-2001",
       "indicatorId": "institutional_responsiveness",
       "iso3": "TUR",
@@ -952,37 +915,6 @@
       }
     },
     {
-      "id": "aus-compulsory-voting",
-      "indicatorId": "civic_participation",
-      "iso3": "AUS",
-      "title": "Compulsory voting",
-      "claim": "Australia has required citizens to vote since 1924 and turnout at the 2025 federal election was 90.7 percent of enrolled voters, a level no large voluntary-voting democracy reaches.",
-      "metric": {
-        "name": "House of Representatives turnout, 2025 federal election",
-        "value": 90.7,
-        "unit": "% of enrolled voters",
-        "asOf": "2025"
-      },
-      "started": 1924,
-      "status": "operating",
-      "source": {
-        "publisher": "Australian Electoral Commission, participation in the 2025 federal election",
-        "url": "https://www.aec.gov.au/election/fe25/participation-rates.htm",
-        "tier": "official_statistical",
-        "retrievedAt": "2026-08-27"
-      },
-      "limits": "Turnout under compulsion measures compliance, not civic desire, which is exactly the objection to filing it under civic participation; the record is here because the indicator's construct is participation behaviour, and ninety percent of a country voting for a century is behaviour, whatever its cause. The denominator is enrolled voters, and enrolment itself is near-complete only because it is also compulsory. The fine is small and enforcement light, so the mechanism is closer to a maintained norm than to coercion.",
-      "pattern": {
-        "mechanism": "Parliament made voting a legal duty with a token fine, paired it with automatic-style enrolment, Saturday voting and easy postal and early options, so the state removed every excuse at the same time as it imposed the duty.",
-        "preconditions": [
-          "Cross-party agreement to keep the duty, since either side could repeal it",
-          "An electoral commission trusted to run painless voting",
-          "A fine large enough to state the norm and small enough not to embitter"
-        ],
-        "travelled": "Around twenty countries mandate voting and fewer enforce it; Belgium and Luxembourg are the closest working siblings. Where compulsion was dropped, as in Chile in 2012, turnout fell by tens of points within two elections."
-      }
-    },
-    {
       "id": "rwa-umuganda",
       "indicatorId": "volunteering_rate",
       "iso3": "RWA",
@@ -1126,7 +1058,7 @@
     },
     {
       "id": "bra-capes",
-      "indicatorId": "research_citation_impact",
+      "indicatorId": "adult_learning_participation",
       "iso3": "BRA",
       "title": "CAPES, federal postgraduate funding",
       "claim": "Founded in 1951, CAPES built a national postgraduate funding and evaluation system, and by 1995 Brazil's system had more than 60,000 students across over 1,000 master's and 600 doctoral courses.",
@@ -1144,7 +1076,7 @@
         "tier": "official_statistical",
         "retrievedAt": "2026-08-29"
       },
-      "limits": "Student and course counts show the scale of the postgraduate system, not the quality or international impact of its research. CAPES reports the institutional history and its own programmes, while citation impact requires a separate bibliometric source.",
+      "limits": "Student and course counts show the scale of the postgraduate system, not the share of adults who take part in learning. A 1995 count of postgraduate students is a system-scale figure, not a participation rate. The record was first filed against research citation impact and was refiled here when that row became scored (D161).",
       "pattern": {
         "mechanism": "A federal agency combines funding with peer evaluation and a national standard, so postgraduate programmes coordinate around a common definition of quality instead of growing as isolated local institutions.",
         "preconditions": [
@@ -1305,36 +1237,6 @@
       }
     },
     {
-      "id": "bra-inep",
-      "indicatorId": "research_citation_impact",
-      "iso3": "BRA",
-      "title": "INEP, the standing education statistics institution",
-      "claim": "Created in 1937, INEP built a standing education statistics and census system that lets federal, state and municipal actors see schools, students and policy results across Brazil, while its historical archive now spans 218.68 linear metres.",
-      "metric": {
-        "name": "Historical archive",
-        "value": 218.68,
-        "unit": "linear metres",
-        "asOf": "2022"
-      },
-      "started": 1937,
-      "status": "operating",
-      "source": {
-        "publisher": "INEP, institutional history and historical archive",
-        "url": "https://www.gov.br/inep/pt-br/areas-de-atuacao/gestao-do-conhecimento-e-estudos-educacionais/cgdi/arquivo-historico",
-        "tier": "official_statistical",
-        "retrievedAt": "2026-08-29"
-      },
-      "limits": "An archive and a census show that a state can record itself, not that the resulting policy improves learning or research quality. The data system also depends on reporting by schools and education secretariats, and its history includes institutional redesign.",
-      "pattern": {
-        "mechanism": "A permanent statistical institution gives education policy a memory and a common set of objects, so schools, students and results can be compared across territories and governments.",
-        "preconditions": [
-          "A mandate to collect comparable information across levels of government",
-          "Schools and secretariats able to report through a shared system",
-          "Analytical staff and archival practice that preserve series across reforms"
-        ]
-      }
-    },
-    {
       "id": "bra-cgee",
       "indicatorId": "government_foresight_capacity",
       "iso3": "BRA",
@@ -1451,36 +1353,6 @@
           "Public research and technology centres able to work on firms' production problems",
           "A coordinating ministry with funding routes through FINEP and partner agencies",
           "Small firms able to identify a technical problem and use an external support network"
-        ]
-      }
-    },
-    {
-      "id": "bra-sus-conselhos",
-      "indicatorId": "civic_participation",
-      "iso3": "BRA",
-      "title": "SUS health councils, permanent public participation",
-      "claim": "Since Law 8.142 established them in 1990, Brazil's SUS has required permanent, deliberative health councils at the national, state and municipal levels, with users holding 50 percent of seats and health workers and government or providers holding 25 percent each.",
-      "metric": {
-        "name": "User share of health council seats",
-        "value": 50,
-        "unit": "% of seats",
-        "asOf": "current"
-      },
-      "started": 1990,
-      "status": "operating",
-      "source": {
-        "publisher": "Ministry of Health, SUS councils, with Law 8.142/1990",
-        "url": "https://www.gov.br/saude/pt-br/sus/conselhos",
-        "tier": "official_statistical",
-        "retrievedAt": "2026-08-30"
-      },
-      "limits": "A mandated seat structure creates a route for participation but does not show whether councils meet regularly, deliberate independently, change health priorities or attract people beyond organised representatives. The 50/25/25 composition is a legal and administrative design, not a measure of actual attendance or influence, and the ministry describes the system without an independent evaluation of outcomes.",
-      "pattern": {
-        "mechanism": "Brazil made participation part of the health system's operating structure: users, workers, government and providers share a permanent council whose decisions feed into policy formulation and control of execution.",
-        "preconditions": [
-          "A national health system with responsibilities distributed across government levels",
-          "A legal requirement that makes councils permanent and deliberative",
-          "Representative organisations able to select users and workers for the councils"
         ]
       }
     },
@@ -6761,43 +6633,6 @@
       }
     },
     {
-      "id": "cri-ramp-up",
-      "indicatorId": "export_diversification",
-      "iso3": "CRI",
-      "title": "Ramp Up, PROCOMER's export-readiness programme",
-      "claim": "Costa Rica's export agency PROCOMER reported that 40 SMEs graduated from its 16-week Ramp Up 2024 programme, delivered with INA and the Sistema de Banca para el Desarrollo, bringing the number of firms benefiting since the programme began in 2021 to 175.",
-      "metric": {
-        "name": "SMEs graduating from Ramp Up 2024",
-        "value": 40,
-        "unit": "SMEs",
-        "asOf": "2025-02-26"
-      },
-      "secondMetric": {
-        "name": "SMEs benefiting since launch",
-        "value": 175,
-        "unit": "SMEs",
-        "asOf": "2025-02-26"
-      },
-      "started": 2021,
-      "status": "operating",
-      "source": {
-        "publisher": "PROCOMER, Ramp Up 2024 export-capability programme",
-        "url": "https://procomer.com/40-pymes-costarricenses-fortalecieron-su-capacidad-exportadora-con-ramp-up-2024/",
-        "tier": "official_statistical",
-        "retrievedAt": "2026-08-31"
-      },
-      "limits": "Graduation and reach counts show programme delivery, not verified export growth, new markets, product diversification, export survival or causal impact. PROCOMER describes the firms as strengthening export capability; the source does not establish that all graduates exported or that the programme changed Costa Rica's aggregate concentration.",
-      "pattern": {
-        "mechanism": "PROCOMER, the national training institute and a development bank combine practical training in finance, strategy, governance and sustainability with export-market connections. The package builds the organisational routines and compliance readiness that small firms need before an overseas buyer or distributor can become repeat business.",
-        "preconditions": [
-          "An export agency that can identify firms, broker market access and coordinate services rather than offering disconnected workshops",
-          "SMEs with a product, management time and enough operational capacity to act on finance, quality and sustainability work",
-          "Training, development finance and buyer or standards networks that remain available after graduation"
-        ],
-        "travelled": "Export-readiness programmes travel when capability-building is tied to real market links and finance; a course certificate without buyer validation, working capital or standards support rarely diversifies exports by itself."
-      }
-    },
-    {
       "id": "aus-crc",
       "indicatorId": "university_industry_collaboration",
       "iso3": "AUS",
@@ -6906,43 +6741,6 @@
           "A public accountability norm that treats unresolved caseload as an operational problem while protecting judicial independence"
         ],
         "travelled": "Court-clearance management travels when administrative data, triage and dispute resolution reduce stock without turning speed into the only definition of justice."
-      }
-    },
-    {
-      "id": "fra-long-term-unemployment",
-      "indicatorId": "long_term_unemployment_share",
-      "iso3": "FRA",
-      "title": "France's long-term unemployment decline",
-      "claim": "France's national statistics office Insee reported that people unemployed for at least one year represented 23.3% of all unemployed people in 2024, while the long-term unemployment rate was 1.7% of the active population, down from 3.1% in 2015.",
-      "metric": {
-        "name": "Long-term unemployed as share of all unemployed",
-        "value": 23.3,
-        "unit": "% of unemployed",
-        "asOf": "2024"
-      },
-      "secondMetric": {
-        "name": "Long-term unemployment rate",
-        "value": 1.7,
-        "unit": "% of active population",
-        "asOf": "2024"
-      },
-      "started": 1975,
-      "status": "operating",
-      "source": {
-        "publisher": "Insee, Evolution du chômage / Employment Survey 2024",
-        "url": "https://www.insee.fr/fr/statistiques/8376836",
-        "tier": "official_statistical",
-        "retrievedAt": "2026-08-31"
-      },
-      "limits": "The figures describe labour-market duration, not the causes of unemployment, the quality of re-employment or whether training and employment services produced the decline. Insee's household-survey definitions and population scope matter, and a low long-term share can coexist with high short-term churn or discouraged workers outside the unemployment measure.",
-      "pattern": {
-        "mechanism": "France's employment system combines unemployment insurance, employment-service counselling and targeted training or hiring support, helping some jobseekers move through the labour market before unemployment becomes persistent. The falling long-term rate is an outcome to investigate, not proof that one programme caused it.",
-        "preconditions": [
-          "A labour-force survey and employment-service records that distinguish duration consistently",
-          "Income support and active labour-market services that preserve contact with jobseekers while they search",
-          "Employers, training providers and regional intermediaries able to convert counselling into credible vacancies or skill transitions"
-        ],
-        "travelled": "Long-term-unemployment reductions travel when income support, matching and skills services are connected to real employer demand; a falling rate can otherwise reflect exits from the labour force rather than successful re-employment."
       }
     },
     {
@@ -7165,43 +6963,6 @@
           "Long-horizon funding and cross-party continuity, because adult-learning capacity is slow to rebuild after a stop"
         ],
         "travelled": "The interruption travels as a warning: mass adult-learning systems need continuity and credible standards, or a high-enrolment push can leave a capability gap when the delivery network is withdrawn."
-      }
-    },
-    {
-      "id": "prt-opp",
-      "indicatorId": "civic_participation",
-      "iso3": "PRT",
-      "title": "Orçamento Participativo Portugal",
-      "claim": "Portugal's first national participatory-budget cycle drew almost 80,000 votes and committed €3.18 million to winning projects, which were written into the 2018 state budget.",
-      "metric": {
-        "name": "Votes cast in the first OPP cycle (approximately)",
-        "value": 80000,
-        "unit": "votes",
-        "asOf": "2017"
-      },
-      "secondMetric": {
-        "name": "Investment committed to winning projects",
-        "value": 3180000,
-        "unit": "EUR",
-        "asOf": "2017"
-      },
-      "started": 2017,
-      "status": "concluded",
-      "source": {
-        "publisher": "Presidência e Modernização Administrativa, OPP 2017 results",
-        "url": "https://portugal.gov.pt/gc21/comunicacao/noticias/20170914-mpma-opp",
-        "tier": "official_statistical",
-        "retrievedAt": "2026-08-31"
-      },
-      "limits": "A single cycle's votes do not establish sustained civic participation, representativeness, deliberative quality or whether every winning project was delivered on time. The government announcement reports the programme's own participation and budget totals, and the national cycle was later redesigned rather than becoming a stable annual measure of citizen voice.",
-      "pattern": {
-        "mechanism": "The central government opened a national proposal and voting platform, reserved a defined slice of the state budget, and promised to place winning projects in departmental budgets so participation could produce a visible delivery rather than only consultation.",
-        "preconditions": [
-          "A public budget line that can be set aside before proposals are voted on",
-          "A technical process for screening proposals without removing the final choice from citizens",
-          "Departments and regions willing to implement projects they did not originate"
-        ],
-        "travelled": "Participatory budgeting travels when a vote is linked to a protected implementation route; a platform without a budget, screening and delivery owner produces participation theatre."
       }
     },
     {

@@ -1,6 +1,6 @@
 # Capability agenda: Estonia
 
-*Generated 2026-10-03*
+*Generated 2026-10-16*
 
 The frame includes 125 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
@@ -123,7 +123,6 @@ Conditions describe what a country has to work with: infrastructure, access, mon
 These are documented institutional changes in Estonia that the framework records as evidence. They appear beside the score and do not change it or its confidence.
 
 - **X-Road national data exchange layer** (Building). Estonia has run one data exchange layer for the whole state since 2001, and in July 2026 it carried 374.9 million queries between 1,000 connected organizations, 251 of them government bodies, across 3,785 services.
-- **Internet voting in national elections** (Shared Purpose). Estonia has run legally binding internet voting since 2005, and at the 2023 Riigikogu election 312,182 votes, 51.1 percent of all votes cast, came in online, the first national election anywhere in which more than half the vote was digital.
 - **Estonian Defence League, national defence rebuilt after independence** (Adaptability). The Estonian Defence League was re-established in February 1990, before the country regained independence, and operates as a voluntary national defence organisation under the Ministry of Defence with territorial units and its own training structure.
 - **Foresight Centre at the Riigikogu (Arenguseire Keskus)** (Anticipation). Estonia's parliament set up a statutory Foresight Centre within the Chancellery of the Riigikogu under the Foresight Act of 2016. In 2025 the centre published four research-direction reports and 17 short reports, drawing on more than 30 researchers and experts.
 - **Estonian Stockpiling Agency (Eesti Varude Keskus) national emergency stocks** (Adaptability). After COVID-19 exposed supply gaps, Estonia set up a state stockpiling company in 2021 that holds food, healthcare, veterinary and fuel stocks. By the National Audit Office's January 2026 review, its food stocks covered 10% of the population for 30 days, against a government target of 14 days for the whole population, and just over 90% of the required pharmaceutical stock was in place.

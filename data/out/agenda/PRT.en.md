@@ -1,6 +1,6 @@
 # Capability agenda: Portugal
 
-*Generated 2026-10-03*
+*Generated 2026-10-16*
 
 The frame includes 125 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
@@ -125,7 +125,6 @@ Documented deliveries linked to missing indicators. They do not affect scores or
 - **Programa Qualifica and Portugal's adult-learning network** (Learning). Portugal's ANQEP reported 1,025,569 cumulative Qualifica registrations by December 2023; 90 percent received a training or recognition, validation and certification referral, and 510,113 registrants obtained some certification.
 - **Portugal Ventures, a public venture-capital bridge** (Experimentation). Portugal Ventures, the public venture-capital company in the Banco Português de Fomento group, reports €233.2 million invested in 256 new companies since 2012 and €283 million under management.
 - **Novas Oportunidades, and the qualification-policy interruption** (Learning). ANQEP's national review records 1,568,490 adult enrolments in Novas Oportunidades between 2006 and July 2011; after the initiative's peak and a period of disinvestment, Portugal launched Qualifica in 2017 and rebuilt a network of more than 300 Centros Qualifica.
-- **Orçamento Participativo Portugal** (Shared Purpose). Portugal's first national participatory-budget cycle drew almost 80,000 votes and committed €3.18 million to winning projects, which were written into the 2018 state budget.
 - **Empresa na Hora and the one-stop company registry** (Adaptability). Portugal's IRN reports 369,447 societies created through Empresa na Hora over its first 20 years; the service is available at more than 200 posts and averages 41 minutes from formation to registration.
 - **Plano de Recuperação e Resiliência delivery governance** (Building). Portugal's PRR barometer recorded €21.9 billion across 121 investments and 43 reforms, with €14.43 billion paid to beneficiaries by 27 August 2026.
 - **Sistema de Gestão Integrada de Fogos Rurais** (Adaptability). Portugal's integrated rural-fire system reported 85 of 97 national-action projects in progress and 48 percent cumulative execution in 2024; €638 million was spent that year, with 55 percent on prevention, even as 137,651 hectares burned.

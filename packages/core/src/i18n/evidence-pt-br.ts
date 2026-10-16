@@ -100,11 +100,6 @@ export const EVIDENCE_PT_BR: Record<string, { title: string; claim: string }> = 
     claim:
       'Lançado em 2004, o Portal da Transparência publica há 20 anos informações sobre receitas, despesas, pessoal e transferências federais, para que qualquer cidadão possa verificar como o dinheiro público é usado.',
   },
-  'bra-inep': {
-    title: 'INEP, a instituição permanente de estatísticas educacionais',
-    claim:
-      'Criado em 1937, o INEP construiu um sistema permanente de estatísticas e censos educacionais que permite a atores federais, estaduais e municipais acompanhar escolas, alunos e resultados de políticas em todo o Brasil; seu arquivo histórico ocupa hoje 218,68 metros lineares.',
-  },
   'bra-cgee': {
     title: 'CGEE, o centro de estudos estratégicos',
     claim:
@@ -124,11 +119,6 @@ export const EVIDENCE_PT_BR: Record<string, { title: string; claim: string }> = 
     title: 'SIBRATEC, as redes nacionais de tecnologia',
     claim:
       'Para aproximar universidades e empresas, o governo federal criou o SIBRATEC, coordenado pelo Ministério da Ciência e Tecnologia com a participação da FINEP, do BNDES e do INMETRO, como um sistema nacional que somava 56 redes de pesquisa e desenvolvimento em 2010: 14 redes de centros de inovação, 20 de serviços tecnológicos e 22 de extensão tecnológica nos estados.',
-  },
-  'bra-sus-conselhos': {
-    title: 'Conselhos de saúde do SUS, participação social permanente',
-    claim:
-      'Desde que a Lei 8.142 os instituiu, em 1990, o SUS exige conselhos de saúde permanentes e deliberativos nas esferas nacional, estadual e municipal, com metade das vagas para os usuários (50%) e 25% para cada um dos outros dois segmentos: trabalhadores da saúde, e governo ou prestadores de serviço.',
   },
   'bra-salario-minimo': {
     title: 'Salário mínimo e sua regra permanente de valorização',

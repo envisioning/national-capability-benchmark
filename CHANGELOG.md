@@ -9,6 +9,14 @@ The entries before App 1.0.0 are retrospective, high-level summaries
 reconstructed from the repository history. They document explicit version bumps
 and may skip versions that were never committed.
 
+## App 1.27.1 — 2026-10-16
+
+- **Seven evidence records leave the corpus and one moves.** They were filed
+  against rows that are now scored, so they repeated or misread what the
+  score carries. CAPES, Brazil's postgraduate funding agency, now stands
+  under adult learning participation. The corpus holds 735 records, and the
+  capability agendas list them. Decision D161 names each one.
+
 ## App 1.27.0 — 2026-10-03
 
 - **Panel estimates are back beside the scores.** 348 of the 455 panel
