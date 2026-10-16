@@ -1,8 +1,10 @@
 # The model layer: blind estimates, calibrated against hard data
 
-Design memo, 2026-10-03. Status: **design, pilot not yet run.** No decision
-entry exists yet; this memo becomes one after the pilot (see the last
-section). Owner choices recorded here were made by MZ on 2026-10-03.
+Design memo, 2026-10-03. Status: **pilot run 2026-10-16, no indicator
+passed the gate.** The results are in `docs/research/MODEL-LAYER-PILOT.md`.
+Estimates stay research notes and Delphi is kept, as the last section
+says. No decision entry was written. Owner choices recorded here were made
+by MZ on 2026-10-03.
 
 ## The idea in one paragraph
 

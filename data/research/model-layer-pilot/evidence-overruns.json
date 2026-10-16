@@ -1,0 +1,878 @@
+{
+ "description": "Cost and schedule overruns coded from the claim text of large_project_delivery evidence records (data/evidence/records.json). A record is coded only where its text states both a baseline and an outturn, or a forecast, for the same scope. Cost overrun = outturn / baseline - 1. Schedule overrun = actual (or forecast) duration / planned duration - 1. Flags: approx (dates at year precision), lowerBound (still unfinished or 'more than'), estimate (a forecast, not a final cost), scopeChange, subproject (one part of a programme), nominal, real, perKm, bidEstimate. Records not coded: programmes measured by adoption, coverage or output, cancellations with no baseline, IT systems (Phoenix, CFIS), decommissioning, and operating subsidies.",
+ "codedBy": "claude-opus-5-5, in the session that ran the pilot, from record text only",
+ "records": [
+  {
+   "recordId": "che-gotthard",
+   "iso3": "CHE",
+   "costOverrunPct": 50.9,
+   "scheduleOverrunPct": 0,
+   "flags": [],
+   "basis": "cost CHF 9.541bn vs 6.323bn (1998 prices); opened on the date set"
+  },
+  {
+   "recordId": "ken-sgr",
+   "iso3": "KEN",
+   "costOverrunPct": null,
+   "scheduleOverrunPct": 33.3,
+   "flags": [],
+   "basis": "Phase 2A: 18-month plan from Sept 2017, opened Sept 2019 (24 months)"
+  },
+  {
+   "recordId": "isr-red-line",
+   "iso3": "ISR",
+   "costOverrunPct": 75,
+   "scheduleOverrunPct": null,
+   "flags": [
+    "estimate"
+   ],
+   "basis": "cost estimate NIS 18.71bn vs 10.7bn"
+  },
+  {
+   "recordId": "are-barakah",
+   "iso3": "ARE",
+   "costOverrunPct": null,
+   "scheduleOverrunPct": 80,
+   "flags": [
+    "approx"
+   ],
+   "basis": "Unit 1: licence 2012, planned 2017, commercial operation 2021 (year precision)"
+  },
+  {
+   "recordId": "hnd-palmerola",
+   "iso3": "HND",
+   "costOverrunPct": null,
+   "scheduleOverrunPct": -1.6,
+   "flags": [],
+   "basis": "60 months against a 61-month works period"
+  },
+  {
+   "recordId": "slv-chaparral",
+   "iso3": "SLV",
+   "costOverrunPct": 285,
+   "scheduleOverrunPct": 275,
+   "flags": [
+    "approx"
+   ],
+   "basis": "US$800m vs initial US$207.8m; four planned years from 2008, inaugurated 2023"
+  },
+  {
+   "recordId": "hti-petrocaribe",
+   "iso3": "HTI",
+   "costOverrunPct": 18,
+   "scheduleOverrunPct": 162.5,
+   "flags": [
+    "subproject"
+   ],
+   "basis": "Cap-Haitien street: 18% over budget, 21 months against 8"
+  },
+  {
+   "recordId": "usa-interstate",
+   "iso3": "USA",
+   "costOverrunPct": 235,
+   "scheduleOverrunPct": null,
+   "flags": [
+    "nominal"
+   ],
+   "basis": "federal cost to complete US$114bn (1991) vs US$34bn (1958), nominal"
+  },
+  {
+   "recordId": "dom-punta-catalina",
+   "iso3": "DOM",
+   "costOverrunPct": 20.3,
+   "scheduleOverrunPct": null,
+   "flags": [],
+   "basis": "US$2,340.54m vs contract US$1,945.0m"
+  },
+  {
+   "recordId": "fra-grand-paris-express",
+   "iso3": "FRA",
+   "costOverrunPct": 59.7,
+   "scheduleOverrunPct": null,
+   "flags": [
+    "estimate"
+   ],
+   "basis": "EUR 36.1bn vs 22.6bn estimate"
+  },
+  {
+   "recordId": "ury-linea-rivera",
+   "iso3": "URY",
+   "costOverrunPct": null,
+   "scheduleOverrunPct": 83.3,
+   "flags": [
+    "scopeChange"
+   ],
+   "basis": "36 months from Nov 2013, last handover May 2019 (66 months), scope cut"
+  },
+  {
+   "recordId": "kor-ktx-gyeongbu",
+   "iso3": "KOR",
+   "costOverrunPct": 108.2,
+   "scheduleOverrunPct": 122.2,
+   "flags": [
+    "estimate",
+    "approx"
+   ],
+   "basis": "cost re-estimate 12,174.3 vs 5,846.2bn won; planned 1990 to 1999, whole line 2010"
+  },
+  {
+   "recordId": "per-refineria-talara",
+   "iso3": "PER",
+   "costOverrunPct": 284.6,
+   "scheduleOverrunPct": null,
+   "flags": [
+    "lowerBound"
+   ],
+   "basis": "over US$5bn vs US$1.3bn feasibility estimate (record metric states 400%)"
+  },
+  {
+   "recordId": "ecu-coca-codo-sinclair",
+   "iso3": "ECU",
+   "costOverrunPct": 37,
+   "scheduleOverrunPct": 41.7,
+   "flags": [],
+   "basis": "US$2,712.5m vs 1,979.7m; 60-month term from Oct 2009, commercial operation Nov 2016 (85 months)"
+  },
+  {
+   "recordId": "vnm-cat-linh-ha-dong",
+   "iso3": "VNM",
+   "costOverrunPct": 106.9,
+   "scheduleOverrunPct": null,
+   "flags": [
+    "estimate"
+   ],
+   "basis": "approved investment VND 18,000bn vs 8,700bn"
+  },
+  {
+   "recordId": "irl-new-childrens-hospital",
+   "iso3": "IRL",
+   "costOverrunPct": 29.5,
+   "scheduleOverrunPct": null,
+   "flags": [
+    "estimate"
+   ],
+   "basis": "approved budget EUR 2.24bn vs 1.73bn"
+  },
+  {
+   "recordId": "ind-commonwealth-games",
+   "iso3": "IND",
+   "costOverrunPct": 1444.4,
+   "scheduleOverrunPct": null,
+   "flags": [
+    "bidEstimate"
+   ],
+   "basis": "estimate INR 18,532 crore (2010) vs 1,200 crore in the 2003 bid"
+  },
+  {
+   "recordId": "zaf-meerkat",
+   "iso3": "ZAF",
+   "costOverrunPct": 0,
+   "scheduleOverrunPct": 0,
+   "flags": [],
+   "basis": "completed on schedule and on budget"
+  },
+  {
+   "recordId": "pol-vistula-spit-canal",
+   "iso3": "POL",
+   "costOverrunPct": 125,
+   "scheduleOverrunPct": null,
+   "flags": [],
+   "basis": "PLN 1,984m vs 880m"
+  },
+  {
+   "recordId": "jpn-hokuriku-shinkansen",
+   "iso3": "JPN",
+   "costOverrunPct": 41.5,
+   "scheduleOverrunPct": 9,
+   "flags": [
+    "approx"
+   ],
+   "basis": "authorised cost 1.6779 vs 1.1858 trillion yen (2017); one-year slip on a 2012 to FY2023 plan"
+  },
+  {
+   "recordId": "swe-botniabanan",
+   "iso3": "SWE",
+   "costOverrunPct": 73,
+   "scheduleOverrunPct": 57.1,
+   "flags": [
+    "approx"
+   ],
+   "basis": "73% above original estimate; 1999 start, planned 2006, opened 2010"
+  },
+  {
+   "recordId": "gbr-hs2",
+   "iso3": "GBR",
+   "costOverrunPct": 100,
+   "scheduleOverrunPct": null,
+   "flags": [
+    "lowerBound",
+    "estimate"
+   ],
+   "basis": "more than double the 2020 Phase 1 estimate"
+  },
+  {
+   "recordId": "gbr-crossrail",
+   "iso3": "GBR",
+   "costOverrunPct": 28,
+   "scheduleOverrunPct": 36.8,
+   "flags": [
+    "approx"
+   ],
+   "basis": "28% above the 2010 budget; 2009 start, Dec 2018 planned, up to 3.5 years late"
+  },
+  {
+   "recordId": "ind-dfc",
+   "iso3": "IND",
+   "costOverrunPct": 189,
+   "scheduleOverrunPct": null,
+   "flags": [
+    "estimate"
+   ],
+   "basis": "INR 81,459 crore (2015) vs 28,181 crore (2008)"
+  },
+  {
+   "recordId": "mex-olmeca-refinery",
+   "iso3": "MEX",
+   "costOverrunPct": 79,
+   "scheduleOverrunPct": null,
+   "flags": [],
+   "basis": "US$15,963m vs US$8,918.5m Class IV estimate"
+  },
+  {
+   "recordId": "gtm-chixoy",
+   "iso3": "GTM",
+   "costOverrunPct": 120.8,
+   "scheduleOverrunPct": null,
+   "flags": [],
+   "basis": "US$823.1m vs appraisal US$372.7m"
+  },
+  {
+   "recordId": "nga-abuja-kaduna-kano-road",
+   "iso3": "NGA",
+   "costOverrunPct": 412.1,
+   "scheduleOverrunPct": 131,
+   "flags": [
+    "lowerBound",
+    "approx"
+   ],
+   "basis": "contract sum N797.3bn vs N155.7bn; 36 months from Dec 2017, terminated unfinished Nov 2024"
+  },
+  {
+   "recordId": "pak-neelum-jhelum",
+   "iso3": "PAK",
+   "costOverrunPct": 401.1,
+   "scheduleOverrunPct": null,
+   "flags": [],
+   "basis": "Rs 423,446m vs 84,502m (2002 PC-I)"
+  },
+  {
+   "recordId": "pak-tarbela-t4",
+   "iso3": "PAK",
+   "costOverrunPct": null,
+   "scheduleOverrunPct": 0,
+   "flags": [],
+   "basis": "completed on time"
+  },
+  {
+   "recordId": "bgd-padma-bridge",
+   "iso3": "BGD",
+   "costOverrunPct": null,
+   "scheduleOverrunPct": 108,
+   "flags": [
+    "approx"
+   ],
+   "basis": "2010 appraisal, completion due end 2015, opened June 2022"
+  },
+  {
+   "recordId": "mar-noor-ouarzazate",
+   "iso3": "MAR",
+   "costOverrunPct": -6.3,
+   "scheduleOverrunPct": null,
+   "flags": [],
+   "basis": "US$1,962m vs appraisal US$2,093m"
+  },
+  {
+   "recordId": "uzb-pap-angren",
+   "iso3": "UZB",
+   "costOverrunPct": 2.6,
+   "scheduleOverrunPct": null,
+   "flags": [],
+   "basis": "US$1,475.68m vs 1,438.75m"
+  },
+  {
+   "recordId": "cod-pro-routes",
+   "iso3": "COD",
+   "costOverrunPct": 3.6,
+   "scheduleOverrunPct": null,
+   "flags": [],
+   "basis": "3.6% over the financing-agreement total"
+  },
+  {
+   "recordId": "uga-karuma",
+   "iso3": "UGA",
+   "costOverrunPct": null,
+   "scheduleOverrunPct": 116.7,
+   "flags": [],
+   "basis": "Aug 2013 start, 60-month plan, commercial operation June 2024 (130 months)"
+  },
+  {
+   "recordId": "tza-jnhpp",
+   "iso3": "TZA",
+   "costOverrunPct": 13.4,
+   "scheduleOverrunPct": 78.6,
+   "flags": [],
+   "basis": "TZS 7.44 vs 6.56 trillion; 42 months from Dec 2018, completed March 2025 (75 months)"
+  },
+  {
+   "recordId": "rou-a1-motorway",
+   "iso3": "ROU",
+   "costOverrunPct": -11,
+   "scheduleOverrunPct": 263,
+   "flags": [
+    "subproject",
+    "real"
+   ],
+   "basis": "latest estimate 11% below original in real terms; one section 263% of planned time late"
+  },
+  {
+   "recordId": "kaz-south-west-roads",
+   "iso3": "KAZ",
+   "costOverrunPct": -1.3,
+   "scheduleOverrunPct": 233.3,
+   "flags": [],
+   "basis": "US$2,468.6m vs 2,500m; 15 years against 4.5"
+  },
+  {
+   "recordId": "tun-rfr",
+   "iso3": "TUN",
+   "costOverrunPct": 18.7,
+   "scheduleOverrunPct": null,
+   "flags": [
+    "estimate"
+   ],
+   "basis": "EUR 653m (2017 appraisal) vs 550m (2009)"
+  },
+  {
+   "recordId": "lka-southern-expressway",
+   "iso3": "LKA",
+   "costOverrunPct": 206.4,
+   "scheduleOverrunPct": 116.7,
+   "flags": [
+    "scopeChange"
+   ],
+   "basis": "US$906.5m vs 295.9m, widened to four lanes; 13 years against six"
+  },
+  {
+   "recordId": "zwe-harare-beitbridge",
+   "iso3": "ZWE",
+   "costOverrunPct": null,
+   "scheduleOverrunPct": 125,
+   "flags": [
+    "lowerBound",
+    "approx"
+   ],
+   "basis": "2021 plan to finish by 2022, unfinished July 2025"
+  },
+  {
+   "recordId": "zmb-solar-milling-plants",
+   "iso3": "ZMB",
+   "costOverrunPct": null,
+   "scheduleOverrunPct": 158.3,
+   "flags": [
+    "lowerBound"
+   ],
+   "basis": "due 24 months after March 2016, still incomplete 38 months after due date"
+  },
+  {
+   "recordId": "mli-pemu-kabala",
+   "iso3": "MLI",
+   "costOverrunPct": -8,
+   "scheduleOverrunPct": null,
+   "flags": [],
+   "basis": "US$119.6m spent of US$130m approved"
+  },
+  {
+   "recordId": "bfa-ziga",
+   "iso3": "BFA",
+   "costOverrunPct": 30.8,
+   "scheduleOverrunPct": 0,
+   "flags": [],
+   "basis": "US$269.37m vs 205.88m; closed on its original date"
+  },
+  {
+   "recordId": "bdi-jiji-mulembwe",
+   "iso3": "BDI",
+   "costOverrunPct": 18.1,
+   "scheduleOverrunPct": 118,
+   "flags": [
+    "estimate",
+    "approx"
+   ],
+   "basis": "US$319.1m vs 270.3m; approved 2014 with closing Dec 2019, last plant June 2026"
+  },
+  {
+   "recordId": "mdg-tiip",
+   "iso3": "MDG",
+   "costOverrunPct": 2.3,
+   "scheduleOverrunPct": 100,
+   "flags": [
+    "approx"
+   ],
+   "basis": "US$169.39m vs 150.0m plus 15.6m additional financing; from 2004, closing extended four years from June 2008"
+  },
+  {
+   "recordId": "mwi-essp",
+   "iso3": "MWI",
+   "costOverrunPct": null,
+   "scheduleOverrunPct": 40,
+   "flags": [
+    "approx"
+   ],
+   "basis": "approved 2011, closing Oct 2018 against Oct 2016"
+  },
+  {
+   "recordId": "bwa-morupule-b",
+   "iso3": "BWA",
+   "costOverrunPct": null,
+   "scheduleOverrunPct": 7.4,
+   "flags": [
+    "approx"
+   ],
+   "basis": "appraised 2009, target Dec 2013, takeover May 2014"
+  },
+  {
+   "recordId": "mus-b6-road",
+   "iso3": "MUS",
+   "costOverrunPct": 56.9,
+   "scheduleOverrunPct": null,
+   "flags": [],
+   "basis": "US$33.88m vs 21.60m"
+  },
+  {
+   "recordId": "sdn-rahad-irrigation",
+   "iso3": "SDN",
+   "costOverrunPct": 216.5,
+   "scheduleOverrunPct": 85.7,
+   "flags": [],
+   "basis": "US$395.6m vs 125.0m; approved March 1973, planned June 1978, completed Dec 1982"
+  },
+  {
+   "recordId": "gha-accra-brt",
+   "iso3": "GHA",
+   "costOverrunPct": 118.9,
+   "scheduleOverrunPct": 49.3,
+   "flags": [
+    "estimate",
+    "approx"
+   ],
+   "basis": "BRT estimate US$100.7m vs 46m, not built; from 2007, closing 35.5 months after Dec 2012"
+  },
+  {
+   "recordId": "civ-yabayo-gagnoa-road",
+   "iso3": "CIV",
+   "costOverrunPct": 100.8,
+   "scheduleOverrunPct": 75,
+   "flags": [],
+   "basis": "US$24.7m vs 12.3m; approved June 1973, planned June 1976, completed Sept 1978"
+  },
+  {
+   "recordId": "gin-mamou-kankan-road",
+   "iso3": "GIN",
+   "costOverrunPct": 3.5,
+   "scheduleOverrunPct": 54.5,
+   "flags": [
+    "approx"
+   ],
+   "basis": "US$207m vs 200m; approved June 1988, credit closing three years late"
+  },
+  {
+   "recordId": "cog-cfco-realignment",
+   "iso3": "COG",
+   "costOverrunPct": 167.8,
+   "scheduleOverrunPct": null,
+   "flags": [],
+   "basis": "US$399m vs 149m"
+  },
+  {
+   "recordId": "gmb-banjul-rehabilitation",
+   "iso3": "GMB",
+   "costOverrunPct": null,
+   "scheduleOverrunPct": 40,
+   "flags": [
+    "lowerBound"
+   ],
+   "basis": "May 2019 contract for Nov 2021, completion extended to Nov 2022"
+  },
+  {
+   "recordId": "gnb-bissau-port",
+   "iso3": "GNB",
+   "costOverrunPct": 15.2,
+   "scheduleOverrunPct": null,
+   "flags": [],
+   "basis": "US$20.0m vs 17.36m"
+  },
+  {
+   "recordId": "svn-tes6",
+   "iso3": "SVN",
+   "costOverrunPct": 9.6,
+   "scheduleOverrunPct": null,
+   "flags": [
+    "estimate"
+   ],
+   "basis": "EUR 1,428.5m (2014) vs 1,302.7m (2011)"
+  },
+  {
+   "recordId": "lva-rail-baltica",
+   "iso3": "LVA",
+   "costOverrunPct": 600,
+   "scheduleOverrunPct": null,
+   "flags": [
+    "estimate"
+   ],
+   "basis": "main line estimate rose sevenfold since 2017"
+  },
+  {
+   "recordId": "aut-koralmbahn",
+   "iso3": "AUT",
+   "costOverrunPct": 5,
+   "scheduleOverrunPct": 56.4,
+   "flags": [
+    "approx"
+   ],
+   "basis": "5% above the 2012 baseline; 2004 contract with 2018 completion, passenger service Dec 2025"
+  },
+  {
+   "recordId": "dnk-femern",
+   "iso3": "DNK",
+   "costOverrunPct": 54,
+   "scheduleOverrunPct": 166.7,
+   "flags": [
+    "estimate",
+    "approx"
+   ],
+   "basis": "EUR 7.7bn vs 5.0bn (2019 values); planned 2012 to 2018, opening expected 2028"
+  },
+  {
+   "recordId": "srb-corridor-x",
+   "iso3": "SRB",
+   "costOverrunPct": -0.6,
+   "scheduleOverrunPct": 53.8,
+   "flags": [],
+   "basis": "EUR 316.2m vs 318.2m; 10 years against 6.5"
+  },
+  {
+   "recordId": "blr-m6-corridor",
+   "iso3": "BLR",
+   "costOverrunPct": -6.6,
+   "scheduleOverrunPct": 36.4,
+   "flags": [],
+   "basis": "US$242.15m vs 259.28m; Dec 2014 approval, closing June 2022 against June 2020"
+  },
+  {
+   "recordId": "bih-frsmp",
+   "iso3": "BIH",
+   "costOverrunPct": null,
+   "scheduleOverrunPct": 32.8,
+   "flags": [
+    "scopeChange"
+   ],
+   "basis": "Aug 2016 approval, closing Sept 2023 against Dec 2021"
+  },
+  {
+   "recordId": "mda-local-roads",
+   "iso3": "MDA",
+   "costOverrunPct": null,
+   "scheduleOverrunPct": 43.1,
+   "flags": [
+    "scopeChange"
+   ],
+   "basis": "Oct 2015 approval, closing July 2023 against March 2021"
+  },
+  {
+   "recordId": "alb-rlrcp",
+   "iso3": "ALB",
+   "costOverrunPct": null,
+   "scheduleOverrunPct": 32.1,
+   "flags": [],
+   "basis": "April 2018 approval, closing extended 18 months to June 2024"
+  },
+  {
+   "recordId": "mkd-kicevo-ohrid",
+   "iso3": "MKD",
+   "costOverrunPct": 45.5,
+   "scheduleOverrunPct": 142,
+   "flags": [
+    "lowerBound"
+   ],
+   "basis": "contract EUR 598m vs 411m; Nov 2013 for Jan 2018, still 72% complete Aug 2023"
+  },
+  {
+   "recordId": "hun-metro4",
+   "iso3": "HUN",
+   "costOverrunPct": 56.4,
+   "scheduleOverrunPct": 71.4,
+   "flags": [
+    "estimate"
+   ],
+   "basis": "forecast HUF 370bn vs 236.5bn; Sept 2004 for end 2009, forecast H2 2013"
+  },
+  {
+   "recordId": "bgr-rirp",
+   "iso3": "BGR",
+   "costOverrunPct": null,
+   "scheduleOverrunPct": 50,
+   "flags": [
+    "scopeChange"
+   ],
+   "basis": "June 2007 approval, closed June 2013, two years late"
+  },
+  {
+   "recordId": "egy-ain-sokhna",
+   "iso3": "EGY",
+   "costOverrunPct": -45.8,
+   "scheduleOverrunPct": null,
+   "flags": [],
+   "basis": "US$1,159.4m vs 2,139.6m base cost"
+  },
+  {
+   "recordId": "irq-hartha-rehabilitation",
+   "iso3": "IRQ",
+   "costOverrunPct": 25.1,
+   "scheduleOverrunPct": 128.6,
+   "flags": [
+    "estimate",
+    "lowerBound",
+    "approx"
+   ],
+   "basis": "estimate US$187.62m vs 150m; 2007 to Dec 2010 planned, unfinished at June 2015 closing"
+  },
+  {
+   "recordId": "lbn-greater-beirut-water",
+   "iso3": "LBN",
+   "costOverrunPct": 51.8,
+   "scheduleOverrunPct": null,
+   "flags": [],
+   "basis": "US$561.7m vs 370m at approval"
+  },
+  {
+   "recordId": "jor-amman-ring-road",
+   "iso3": "JOR",
+   "costOverrunPct": 183.9,
+   "scheduleOverrunPct": 70,
+   "flags": [
+    "estimate",
+    "lowerBound",
+    "approx"
+   ],
+   "basis": "US$455.97m vs 160.6m; 2004 appraisal, closing June 2009 moved to Dec 2012 unfinished"
+  },
+  {
+   "recordId": "arm-north-south-t1",
+   "iso3": "ARM",
+   "costOverrunPct": 1,
+   "scheduleOverrunPct": null,
+   "flags": [],
+   "basis": "US$68.7m vs 68.0m"
+  },
+  {
+   "recordId": "aze-snwssp",
+   "iso3": "AZE",
+   "costOverrunPct": 14.6,
+   "scheduleOverrunPct": null,
+   "flags": [
+    "scopeChange"
+   ],
+   "basis": "US$641.8m vs 560m, scope cut from 21 rayons to 8"
+  },
+  {
+   "recordId": "kgz-osh-batken-isfana",
+   "iso3": "KGZ",
+   "costOverrunPct": 70.8,
+   "scheduleOverrunPct": 61.1,
+   "flags": [
+    "scopeChange"
+   ],
+   "basis": "US$52.46m vs 30.72m with scope increased; four years ten months against three"
+  },
+  {
+   "recordId": "irn-tehran-sewerage",
+   "iso3": "IRN",
+   "costOverrunPct": 5.2,
+   "scheduleOverrunPct": 33.3,
+   "flags": [
+    "approx"
+   ],
+   "basis": "US$359.22m vs 341.45m; 2000 appraisal, closing two years late in 2008"
+  },
+  {
+   "recordId": "rus-tskad",
+   "iso3": "RUS",
+   "costOverrunPct": null,
+   "scheduleOverrunPct": 75,
+   "flags": [],
+   "basis": "first stage 2014 to 2018 rescheduled to 2014 to 2021"
+  },
+  {
+   "recordId": "png-rmrp",
+   "iso3": "PNG",
+   "costOverrunPct": 58.2,
+   "scheduleOverrunPct": null,
+   "flags": [],
+   "basis": "US$35.62m vs 22.52m"
+  },
+  {
+   "recordId": "lao-road13-south",
+   "iso3": "LAO",
+   "costOverrunPct": -7.5,
+   "scheduleOverrunPct": 0,
+   "flags": [],
+   "basis": "US$63.78m vs 68.92m; closed on its original date"
+  },
+  {
+   "recordId": "mng-energy-2",
+   "iso3": "MNG",
+   "costOverrunPct": -3.7,
+   "scheduleOverrunPct": null,
+   "flags": [],
+   "basis": "US$53.35m vs 55.40m"
+  },
+  {
+   "recordId": "nzl-crl",
+   "iso3": "NZL",
+   "costOverrunPct": 61.6,
+   "scheduleOverrunPct": null,
+   "flags": [],
+   "basis": "NZ$5,493m vs NZ$3.4bn 2014 estimate"
+  },
+  {
+   "recordId": "dnk-supersygehuse",
+   "iso3": "DNK",
+   "costOverrunPct": 44,
+   "scheduleOverrunPct": null,
+   "flags": [
+    "subproject"
+   ],
+   "basis": "Nyt Hospital Nordsjaelland budget raised 44%, the programme's largest overrun"
+  },
+  {
+   "recordId": "cze-d1-modernizace",
+   "iso3": "CZE",
+   "costOverrunPct": 5.8,
+   "scheduleOverrunPct": 54.5,
+   "flags": [],
+   "basis": "CZK 29.844bn vs 28.208bn; April 2013 start, Oct 2021 against the 2012 schedule's Oct 2018"
+  },
+  {
+   "recordId": "png-lae-tidal-basin",
+   "iso3": "PNG",
+   "costOverrunPct": 101.6,
+   "scheduleOverrunPct": 102.6,
+   "flags": [
+    "approx"
+   ],
+   "basis": "US$310.4m vs 154m; 2007 approval, about four years later than planned, Dec 2014"
+  },
+  {
+   "recordId": "grc-motorway-concessions",
+   "iso3": "GRC",
+   "costOverrunPct": 36,
+   "scheduleOverrunPct": null,
+   "flags": [
+    "perKm"
+   ],
+   "basis": "cost per km EUR 12.4m vs 9.1m"
+  },
+  {
+   "recordId": "aze-third-highway",
+   "iso3": "AZE",
+   "costOverrunPct": -16.6,
+   "scheduleOverrunPct": null,
+   "flags": [
+    "perKm"
+   ],
+   "basis": "US$2.47m vs 2.96m per km"
+  },
+  {
+   "recordId": "blr-belaes",
+   "iso3": "BLR",
+   "costOverrunPct": null,
+   "scheduleOverrunPct": 42.9,
+   "flags": [
+    "approx"
+   ],
+   "basis": "Nov 2013 start, unit 2 scheduled 2020, commercial operation Oct 2023"
+  },
+  {
+   "recordId": "kgz-bishkek-osh-road",
+   "iso3": "KGZ",
+   "costOverrunPct": 31.7,
+   "scheduleOverrunPct": null,
+   "flags": [],
+   "basis": "31.7% overrun on base cost items"
+  },
+  {
+   "recordId": "bel-gen-rer",
+   "iso3": "BEL",
+   "costOverrunPct": 27,
+   "scheduleOverrunPct": null,
+   "flags": [
+    "lowerBound"
+   ],
+   "basis": "cost of works charged to the RER Fund up more than 27%"
+  },
+  {
+   "recordId": "nor-sandbukta-moss-saastad",
+   "iso3": "NOR",
+   "costOverrunPct": 105,
+   "scheduleOverrunPct": 120,
+   "flags": [
+    "estimate"
+   ],
+   "basis": "NOK 24,060m vs 11,731m P50; 2019 to 2024 planned, 2030 estimated"
+  },
+  {
+   "recordId": "cyp-fourth-highway",
+   "iso3": "CYP",
+   "costOverrunPct": 42.4,
+   "scheduleOverrunPct": 15.2,
+   "flags": [],
+   "basis": "US$98.11m vs 68.9m; effective Aug 1986, loan closing March 1994 against March 1993"
+  },
+  {
+   "recordId": "tto-point-fortin-highway",
+   "iso3": "TTO",
+   "costOverrunPct": 36.3,
+   "scheduleOverrunPct": null,
+   "flags": [
+    "estimate"
+   ],
+   "basis": "revised budget TT$10,224.93m vs approved 7,502.6m"
+  },
+  {
+   "recordId": "moz-beira-railway",
+   "iso3": "MOZ",
+   "costOverrunPct": 23.8,
+   "scheduleOverrunPct": null,
+   "flags": [],
+   "basis": "financing US$188.70m vs 152.47m"
+  },
+  {
+   "recordId": "nam-rundu-elundu-road",
+   "iso3": "NAM",
+   "costOverrunPct": 42,
+   "scheduleOverrunPct": 47.8,
+   "flags": [],
+   "basis": "142% of planned cost; 68 months against 46"
+  },
+  {
+   "recordId": "jam-schip",
+   "iso3": "JAM",
+   "costOverrunPct": 38.8,
+   "scheduleOverrunPct": null,
+   "flags": [
+    "subproject"
+   ],
+   "basis": "Part B contract US$271.3m vs 195.4m"
+  }
+ ]
+}

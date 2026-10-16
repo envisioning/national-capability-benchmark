@@ -1,0 +1,29 @@
+{
+  "promptVersion": "1.0.0",
+  "indicators": {
+    "interpersonal_trust": {
+      "definition": "Share agreeing that most people can be trusted.",
+      "unit": "% agreeing",
+      "cells": 125,
+      "fallbackYear": 2022
+    },
+    "bribery_incidence": {
+      "definition": "Firms asked for at least one bribe payment across six public transactions covering utilities, permits, licences and taxes.",
+      "unit": "% of firms",
+      "cells": 125,
+      "fallbackYear": 2025
+    },
+    "unemployment_rate": {
+      "definition": "Unemployed as a share of the labour force, modelled ILO estimate.",
+      "unit": "% of labour force",
+      "cells": 125,
+      "fallbackYear": 2025
+    },
+    "large_project_delivery": {
+      "definition": "Cost and schedule performance of major public infrastructure projects.",
+      "unit": "% overrun",
+      "cells": 125,
+      "fallbackYear": 2025
+    }
+  }
+}

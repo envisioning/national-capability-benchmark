@@ -1,0 +1,1582 @@
+{
+  "generatedFrom": "scripts/model-layer-pilot.mjs score",
+  "gate": {
+    "minRankCorrelation": 0.7,
+    "minPostCutoffCells": 20,
+    "bandQuantile": 0.8,
+    "minBandCells": 10
+  },
+  "incomeQuartileCuts": [
+    8039,
+    18779,
+    41979
+  ],
+  "models": {
+    "opus": {
+      "modelId": "claude-opus-5-5",
+      "trainingCutoff": "2026-06"
+    },
+    "sonnet": {
+      "modelId": "claude-sonnet-5-5",
+      "trainingCutoff": "2026-06"
+    },
+    "fable": {
+      "modelId": "claude-fable-5-1",
+      "trainingCutoff": "2026-06"
+    }
+  },
+  "indicators": {
+    "interpersonal_trust": {
+      "cutoff": "2026-06",
+      "truths": {
+        "hard": {
+          "n": 72,
+          "models": {
+            "opus": {
+              "overall": {
+                "n": 72,
+                "rankCorrelation": 0.967,
+                "meanAbsoluteError": 1.83,
+                "bias": -0.18,
+                "band": 3.4
+              },
+              "byIncomeQuartile": {
+                "1": {
+                  "n": 8,
+                  "rankCorrelation": 0.97,
+                  "meanAbsoluteError": 1.97,
+                  "bias": 1.87,
+                  "band": null
+                },
+                "2": {
+                  "n": 20,
+                  "rankCorrelation": 0.926,
+                  "meanAbsoluteError": 1.91,
+                  "bias": -0.78,
+                  "band": 3.52
+                },
+                "3": {
+                  "n": 21,
+                  "rankCorrelation": 0.95,
+                  "meanAbsoluteError": 2.23,
+                  "bias": -0.36,
+                  "band": 4.1
+                },
+                "4": {
+                  "n": 22,
+                  "rankCorrelation": 0.985,
+                  "meanAbsoluteError": 1.32,
+                  "bias": -0.11,
+                  "band": 2.12
+                }
+              },
+              "postCutoff": {
+                "n": 0
+              },
+              "preCutoff": {
+                "n": 72,
+                "rankCorrelation": 0.967,
+                "meanAbsoluteError": 1.83,
+                "bias": -0.18,
+                "band": 3.4
+              },
+              "estimateVsLogGdp": 0.593,
+              "estimateVsLogGdpAll125": 0.58,
+              "selfConfidenceVsAbsError": -0.373,
+              "meanSelfConfidence": 0.37
+            },
+            "sonnet": {
+              "overall": {
+                "n": 72,
+                "rankCorrelation": 0.842,
+                "meanAbsoluteError": 4.99,
+                "bias": 2.61,
+                "band": 8.34
+              },
+              "byIncomeQuartile": {
+                "1": {
+                  "n": 8,
+                  "rankCorrelation": 0.724,
+                  "meanAbsoluteError": 7.01,
+                  "bias": 6.19,
+                  "band": null
+                },
+                "2": {
+                  "n": 20,
+                  "rankCorrelation": 0.547,
+                  "meanAbsoluteError": 5.97,
+                  "bias": 4.64,
+                  "band": 10.36
+                },
+                "3": {
+                  "n": 21,
+                  "rankCorrelation": 0.783,
+                  "meanAbsoluteError": 4.63,
+                  "bias": 2.57,
+                  "band": 6.1
+                },
+                "4": {
+                  "n": 22,
+                  "rankCorrelation": 0.978,
+                  "meanAbsoluteError": 3.75,
+                  "bias": -0.2,
+                  "band": 5.98
+                }
+              },
+              "postCutoff": {
+                "n": 0
+              },
+              "preCutoff": {
+                "n": 72,
+                "rankCorrelation": 0.842,
+                "meanAbsoluteError": 4.99,
+                "bias": 2.61,
+                "band": 8.34
+              },
+              "estimateVsLogGdp": 0.563,
+              "estimateVsLogGdpAll125": 0.592,
+              "selfConfidenceVsAbsError": -0.28,
+              "meanSelfConfidence": 0.31
+            },
+            "fable": {
+              "overall": {
+                "n": 72,
+                "rankCorrelation": 0.964,
+                "meanAbsoluteError": 1.63,
+                "bias": -0.27,
+                "band": 2.18
+              },
+              "byIncomeQuartile": {
+                "1": {
+                  "n": 8,
+                  "rankCorrelation": 0.881,
+                  "meanAbsoluteError": 2.75,
+                  "bias": 2.25,
+                  "band": null
+                },
+                "2": {
+                  "n": 20,
+                  "rankCorrelation": 0.918,
+                  "meanAbsoluteError": 2.42,
+                  "bias": -1.08,
+                  "band": 3.46
+                },
+                "3": {
+                  "n": 21,
+                  "rankCorrelation": 0.957,
+                  "meanAbsoluteError": 1.45,
+                  "bias": -0.84,
+                  "band": 2
+                },
+                "4": {
+                  "n": 22,
+                  "rankCorrelation": 0.996,
+                  "meanAbsoluteError": 0.66,
+                  "bias": 0.2,
+                  "band": 1.2
+                }
+              },
+              "postCutoff": {
+                "n": 0
+              },
+              "preCutoff": {
+                "n": 72,
+                "rankCorrelation": 0.964,
+                "meanAbsoluteError": 1.63,
+                "bias": -0.27,
+                "band": 2.18
+              },
+              "estimateVsLogGdp": 0.601,
+              "estimateVsLogGdpAll125": 0.525,
+              "selfConfidenceVsAbsError": -0.586,
+              "meanSelfConfidence": 0.52
+            },
+            "ensemble": {
+              "overall": {
+                "n": 72,
+                "rankCorrelation": 0.961,
+                "meanAbsoluteError": 1.89,
+                "bias": 0.19,
+                "band": 3.4
+              },
+              "byIncomeQuartile": {
+                "1": {
+                  "n": 8,
+                  "rankCorrelation": 0.929,
+                  "meanAbsoluteError": 3.34,
+                  "bias": 3.26,
+                  "band": null
+                },
+                "2": {
+                  "n": 20,
+                  "rankCorrelation": 0.917,
+                  "meanAbsoluteError": 1.99,
+                  "bias": -0.24,
+                  "band": 3.68
+                },
+                "3": {
+                  "n": 21,
+                  "rankCorrelation": 0.947,
+                  "meanAbsoluteError": 2.03,
+                  "bias": -0.24,
+                  "band": 3
+                },
+                "4": {
+                  "n": 22,
+                  "rankCorrelation": 0.998,
+                  "meanAbsoluteError": 1.14,
+                  "bias": -0.01,
+                  "band": 1.8
+                }
+              },
+              "postCutoff": {
+                "n": 0
+              },
+              "preCutoff": {
+                "n": 72,
+                "rankCorrelation": 0.961,
+                "meanAbsoluteError": 1.89,
+                "bias": 0.19,
+                "band": 3.4
+              },
+              "estimateVsLogGdp": 0.586,
+              "estimateVsLogGdpAll125": 0.556,
+              "gate": {
+                "heldOutSet": "none: too few post-cutoff cells to separate estimation from recall",
+                "heldOutCells": 0,
+                "heldOutRankCorrelation": null,
+                "recallRankCorrelation": 0.961,
+                "rankCorrelationPasses": false,
+                "bandInUnit": 3.68,
+                "bandPasses": true,
+                "worstIncomeQuartile": 2,
+                "incomeTrackingEstimate": 0.586,
+                "incomeTrackingHard": 0.604,
+                "incomeTrackingPasses": true,
+                "passes": false,
+                "incomeGap": -0.018,
+                "incomeGap90": [
+                  -0.044,
+                  0.009
+                ]
+              }
+            }
+          },
+          "truthVsLogGdp": 0.604,
+          "truthIqr": 21.13,
+          "truthMedian": 17,
+          "interModelRankCorrelation": {
+            "opus-sonnet": 0.847,
+            "opus-fable": 0.901,
+            "sonnet-fable": 0.79
+          }
+        }
+      },
+      "medianSpreadAcrossModels": 4.5,
+      "selfConfidence": {
+        "opus": {
+          "measured": 0.37,
+          "unmeasured": 0.19
+        },
+        "sonnet": {
+          "measured": 0.31,
+          "unmeasured": 0.19
+        },
+        "fable": {
+          "measured": 0.52,
+          "unmeasured": 0.26
+        }
+      },
+      "unmeasuredCells": 53
+    },
+    "bribery_incidence": {
+      "cutoff": "2026-06",
+      "truths": {
+        "hard": {
+          "n": 121,
+          "models": {
+            "opus": {
+              "overall": {
+                "n": 121,
+                "rankCorrelation": 0.766,
+                "meanAbsoluteError": 5.58,
+                "bias": -3.09,
+                "band": 9.26
+              },
+              "byIncomeQuartile": {
+                "1": {
+                  "n": 30,
+                  "rankCorrelation": 0.447,
+                  "meanAbsoluteError": 7.61,
+                  "bias": -1.4,
+                  "band": 11.71
+                },
+                "2": {
+                  "n": 30,
+                  "rankCorrelation": 0.651,
+                  "meanAbsoluteError": 7.58,
+                  "bias": -5.54,
+                  "band": 13.48
+                },
+                "3": {
+                  "n": 30,
+                  "rankCorrelation": 0.612,
+                  "meanAbsoluteError": 3.79,
+                  "bias": -2.32,
+                  "band": 5.94
+                },
+                "4": {
+                  "n": 30,
+                  "rankCorrelation": 0.443,
+                  "meanAbsoluteError": 3.46,
+                  "bias": -3.13,
+                  "band": 4.84
+                }
+              },
+              "postCutoff": {
+                "n": 38,
+                "rankCorrelation": 0.772,
+                "meanAbsoluteError": 5.75,
+                "bias": -3.15,
+                "band": 8.8
+              },
+              "preCutoff": {
+                "n": 83,
+                "rankCorrelation": 0.743,
+                "meanAbsoluteError": 5.51,
+                "bias": -3.07,
+                "band": 9.17
+              },
+              "estimateVsLogGdp": -0.722,
+              "estimateVsLogGdpAll125": -0.728,
+              "selfConfidenceVsAbsError": -0.027,
+              "meanSelfConfidence": 0.18
+            },
+            "sonnet": {
+              "overall": {
+                "n": 121,
+                "rankCorrelation": 0.74,
+                "meanAbsoluteError": 7.2,
+                "bias": 2.42,
+                "band": 12.4
+              },
+              "byIncomeQuartile": {
+                "1": {
+                  "n": 30,
+                  "rankCorrelation": 0.404,
+                  "meanAbsoluteError": 10.63,
+                  "bias": 7.34,
+                  "band": 13.91
+                },
+                "2": {
+                  "n": 30,
+                  "rankCorrelation": 0.622,
+                  "meanAbsoluteError": 9.47,
+                  "bias": 1.4,
+                  "band": 16.11
+                },
+                "3": {
+                  "n": 30,
+                  "rankCorrelation": 0.591,
+                  "meanAbsoluteError": 4.6,
+                  "bias": 2.24,
+                  "band": 7.88
+                },
+                "4": {
+                  "n": 30,
+                  "rankCorrelation": 0.377,
+                  "meanAbsoluteError": 3.37,
+                  "bias": -2.22,
+                  "band": 4.68
+                }
+              },
+              "postCutoff": {
+                "n": 38,
+                "rankCorrelation": 0.757,
+                "meanAbsoluteError": 7.05,
+                "bias": 2.52,
+                "band": 12.58
+              },
+              "preCutoff": {
+                "n": 83,
+                "rankCorrelation": 0.706,
+                "meanAbsoluteError": 7.28,
+                "bias": 2.37,
+                "band": 11.38
+              },
+              "estimateVsLogGdp": -0.799,
+              "estimateVsLogGdpAll125": -0.803,
+              "selfConfidenceVsAbsError": 0.271,
+              "meanSelfConfidence": 0.17
+            },
+            "fable": {
+              "overall": {
+                "n": 121,
+                "rankCorrelation": 0.733,
+                "meanAbsoluteError": 6.4,
+                "bias": 1.79,
+                "band": 10.88
+              },
+              "byIncomeQuartile": {
+                "1": {
+                  "n": 30,
+                  "rankCorrelation": 0.37,
+                  "meanAbsoluteError": 9.03,
+                  "bias": 5.07,
+                  "band": 12.68
+                },
+                "2": {
+                  "n": 30,
+                  "rankCorrelation": 0.661,
+                  "meanAbsoluteError": 8.38,
+                  "bias": 1.23,
+                  "band": 14.91
+                },
+                "3": {
+                  "n": 30,
+                  "rankCorrelation": 0.477,
+                  "meanAbsoluteError": 4.9,
+                  "bias": 2.6,
+                  "band": 8.72
+                },
+                "4": {
+                  "n": 30,
+                  "rankCorrelation": 0.397,
+                  "meanAbsoluteError": 2.98,
+                  "bias": -2.18,
+                  "band": 4.16
+                }
+              },
+              "postCutoff": {
+                "n": 38,
+                "rankCorrelation": 0.747,
+                "meanAbsoluteError": 5.98,
+                "bias": 0.89,
+                "band": 10.07
+              },
+              "preCutoff": {
+                "n": 83,
+                "rankCorrelation": 0.718,
+                "meanAbsoluteError": 6.59,
+                "bias": 2.2,
+                "band": 10.86
+              },
+              "estimateVsLogGdp": -0.71,
+              "estimateVsLogGdpAll125": -0.709,
+              "selfConfidenceVsAbsError": -0.007,
+              "meanSelfConfidence": 0.29
+            },
+            "ensemble": {
+              "overall": {
+                "n": 121,
+                "rankCorrelation": 0.755,
+                "meanAbsoluteError": 6.15,
+                "bias": 0.72,
+                "band": 10.11
+              },
+              "byIncomeQuartile": {
+                "1": {
+                  "n": 30,
+                  "rankCorrelation": 0.433,
+                  "meanAbsoluteError": 8.84,
+                  "bias": 4.64,
+                  "band": 11.08
+                },
+                "2": {
+                  "n": 30,
+                  "rankCorrelation": 0.718,
+                  "meanAbsoluteError": 8.23,
+                  "bias": -0.67,
+                  "band": 16.26
+                },
+                "3": {
+                  "n": 30,
+                  "rankCorrelation": 0.535,
+                  "meanAbsoluteError": 3.94,
+                  "bias": 1.06,
+                  "band": 7.09
+                },
+                "4": {
+                  "n": 30,
+                  "rankCorrelation": 0.448,
+                  "meanAbsoluteError": 3.29,
+                  "bias": -2.63,
+                  "band": 4.74
+                }
+              },
+              "postCutoff": {
+                "n": 38,
+                "rankCorrelation": 0.789,
+                "meanAbsoluteError": 5.65,
+                "bias": 0.12,
+                "band": 8.84
+              },
+              "preCutoff": {
+                "n": 83,
+                "rankCorrelation": 0.716,
+                "meanAbsoluteError": 6.38,
+                "bias": 0.99,
+                "band": 10.75
+              },
+              "estimateVsLogGdp": -0.76,
+              "estimateVsLogGdpAll125": -0.763,
+              "gate": {
+                "heldOutSet": "post-cutoff cells",
+                "heldOutCells": 38,
+                "heldOutRankCorrelation": 0.789,
+                "recallRankCorrelation": 0.755,
+                "rankCorrelationPasses": true,
+                "bandInUnit": 16.26,
+                "bandPasses": true,
+                "worstIncomeQuartile": 2,
+                "incomeTrackingEstimate": -0.76,
+                "incomeTrackingHard": -0.533,
+                "incomeTrackingPasses": false,
+                "passes": false,
+                "incomeGap": 0.227,
+                "incomeGap90": [
+                  0.127,
+                  0.33
+                ]
+              }
+            }
+          },
+          "truthVsLogGdp": -0.533,
+          "truthIqr": 15.1,
+          "truthMedian": 7.11,
+          "interModelRankCorrelation": {
+            "opus-sonnet": 0.933,
+            "opus-fable": 0.915,
+            "sonnet-fable": 0.927
+          }
+        }
+      },
+      "medianSpreadAcrossModels": 5,
+      "selfConfidence": {
+        "opus": {
+          "measured": 0.18,
+          "unmeasured": 0.09
+        },
+        "sonnet": {
+          "measured": 0.17,
+          "unmeasured": 0.13
+        },
+        "fable": {
+          "measured": 0.29,
+          "unmeasured": 0.1
+        }
+      },
+      "unmeasuredCells": 4
+    },
+    "unemployment_rate": {
+      "cutoff": "2026-06",
+      "truths": {
+        "hard": {
+          "n": 125,
+          "models": {
+            "opus": {
+              "overall": {
+                "n": 125,
+                "rankCorrelation": 0.969,
+                "meanAbsoluteError": 0.48,
+                "bias": 0.24,
+                "band": 0.64
+              },
+              "byIncomeQuartile": {
+                "1": {
+                  "n": 31,
+                  "rankCorrelation": 0.951,
+                  "meanAbsoluteError": 0.61,
+                  "bias": 0.22,
+                  "band": 0.88
+                },
+                "2": {
+                  "n": 31,
+                  "rankCorrelation": 0.958,
+                  "meanAbsoluteError": 0.76,
+                  "bias": 0.57,
+                  "band": 0.8
+                },
+                "3": {
+                  "n": 30,
+                  "rankCorrelation": 0.983,
+                  "meanAbsoluteError": 0.42,
+                  "bias": 0.18,
+                  "band": 0.72
+                },
+                "4": {
+                  "n": 31,
+                  "rankCorrelation": 0.991,
+                  "meanAbsoluteError": 0.17,
+                  "bias": 0.01,
+                  "band": 0.24
+                }
+              },
+              "postCutoff": {
+                "n": 0
+              },
+              "preCutoff": {
+                "n": 125,
+                "rankCorrelation": 0.969,
+                "meanAbsoluteError": 0.48,
+                "bias": 0.24,
+                "band": 0.64
+              },
+              "estimateVsLogGdp": -0.09,
+              "estimateVsLogGdpAll125": -0.09,
+              "selfConfidenceVsAbsError": -0.169,
+              "meanSelfConfidence": 0.34
+            },
+            "sonnet": {
+              "overall": {
+                "n": 125,
+                "rankCorrelation": 0.955,
+                "meanAbsoluteError": 0.61,
+                "bias": 0.28,
+                "band": 0.79
+              },
+              "byIncomeQuartile": {
+                "1": {
+                  "n": 31,
+                  "rankCorrelation": 0.918,
+                  "meanAbsoluteError": 0.96,
+                  "bias": 0.59,
+                  "band": 1.18
+                },
+                "2": {
+                  "n": 31,
+                  "rankCorrelation": 0.928,
+                  "meanAbsoluteError": 0.84,
+                  "bias": 0.52,
+                  "band": 1.48
+                },
+                "3": {
+                  "n": 30,
+                  "rankCorrelation": 0.971,
+                  "meanAbsoluteError": 0.45,
+                  "bias": 0,
+                  "band": 0.57
+                },
+                "4": {
+                  "n": 31,
+                  "rankCorrelation": 0.991,
+                  "meanAbsoluteError": 0.18,
+                  "bias": 0,
+                  "band": 0.29
+                }
+              },
+              "postCutoff": {
+                "n": 0
+              },
+              "preCutoff": {
+                "n": 125,
+                "rankCorrelation": 0.955,
+                "meanAbsoluteError": 0.61,
+                "bias": 0.28,
+                "band": 0.79
+              },
+              "estimateVsLogGdp": -0.125,
+              "estimateVsLogGdpAll125": -0.125,
+              "selfConfidenceVsAbsError": -0.306,
+              "meanSelfConfidence": 0.39
+            },
+            "fable": {
+              "overall": {
+                "n": 125,
+                "rankCorrelation": 0.969,
+                "meanAbsoluteError": 0.55,
+                "bias": 0.28,
+                "band": 0.71
+              },
+              "byIncomeQuartile": {
+                "1": {
+                  "n": 31,
+                  "rankCorrelation": 0.94,
+                  "meanAbsoluteError": 0.8,
+                  "bias": 0.46,
+                  "band": 0.92
+                },
+                "2": {
+                  "n": 31,
+                  "rankCorrelation": 0.964,
+                  "meanAbsoluteError": 0.72,
+                  "bias": 0.53,
+                  "band": 1
+                },
+                "3": {
+                  "n": 30,
+                  "rankCorrelation": 0.975,
+                  "meanAbsoluteError": 0.46,
+                  "bias": 0.18,
+                  "band": 0.78
+                },
+                "4": {
+                  "n": 31,
+                  "rankCorrelation": 0.99,
+                  "meanAbsoluteError": 0.22,
+                  "bias": -0.05,
+                  "band": 0.33
+                }
+              },
+              "postCutoff": {
+                "n": 0
+              },
+              "preCutoff": {
+                "n": 125,
+                "rankCorrelation": 0.969,
+                "meanAbsoluteError": 0.55,
+                "bias": 0.28,
+                "band": 0.71
+              },
+              "estimateVsLogGdp": -0.115,
+              "estimateVsLogGdpAll125": -0.115,
+              "selfConfidenceVsAbsError": -0.197,
+              "meanSelfConfidence": 0.44
+            },
+            "ensemble": {
+              "overall": {
+                "n": 125,
+                "rankCorrelation": 0.969,
+                "meanAbsoluteError": 0.52,
+                "bias": 0.27,
+                "band": 0.65
+              },
+              "byIncomeQuartile": {
+                "1": {
+                  "n": 31,
+                  "rankCorrelation": 0.948,
+                  "meanAbsoluteError": 0.78,
+                  "bias": 0.46,
+                  "band": 0.79
+                },
+                "2": {
+                  "n": 31,
+                  "rankCorrelation": 0.959,
+                  "meanAbsoluteError": 0.72,
+                  "bias": 0.5,
+                  "band": 0.8
+                },
+                "3": {
+                  "n": 30,
+                  "rankCorrelation": 0.981,
+                  "meanAbsoluteError": 0.38,
+                  "bias": 0.12,
+                  "band": 0.52
+                },
+                "4": {
+                  "n": 31,
+                  "rankCorrelation": 0.992,
+                  "meanAbsoluteError": 0.2,
+                  "bias": -0.01,
+                  "band": 0.39
+                }
+              },
+              "postCutoff": {
+                "n": 0
+              },
+              "preCutoff": {
+                "n": 125,
+                "rankCorrelation": 0.969,
+                "meanAbsoluteError": 0.52,
+                "bias": 0.27,
+                "band": 0.65
+              },
+              "estimateVsLogGdp": -0.114,
+              "estimateVsLogGdpAll125": -0.114,
+              "gate": {
+                "heldOutSet": "none: too few post-cutoff cells to separate estimation from recall",
+                "heldOutCells": 0,
+                "heldOutRankCorrelation": null,
+                "recallRankCorrelation": 0.969,
+                "rankCorrelationPasses": false,
+                "bandInUnit": 0.8,
+                "bandPasses": true,
+                "worstIncomeQuartile": 2,
+                "incomeTrackingEstimate": -0.114,
+                "incomeTrackingHard": -0.067,
+                "incomeTrackingPasses": false,
+                "passes": false,
+                "incomeGap": 0.047,
+                "incomeGap90": [
+                  -0.029,
+                  0.102
+                ]
+              }
+            }
+          },
+          "truthVsLogGdp": -0.067,
+          "truthIqr": 4.23,
+          "truthMedian": 5.08,
+          "interModelRankCorrelation": {
+            "opus-sonnet": 0.982,
+            "opus-fable": 0.989,
+            "sonnet-fable": 0.984
+          }
+        }
+      },
+      "medianSpreadAcrossModels": 0.3,
+      "selfConfidence": {
+        "opus": {
+          "measured": 0.34,
+          "unmeasured": null
+        },
+        "sonnet": {
+          "measured": 0.39,
+          "unmeasured": null
+        },
+        "fable": {
+          "measured": 0.44,
+          "unmeasured": null
+        }
+      },
+      "unmeasuredCells": 0
+    },
+    "large_project_delivery": {
+      "cutoff": "2026-06",
+      "truths": {
+        "cost": {
+          "n": 70,
+          "models": {
+            "opus": {
+              "overall": {
+                "n": 70,
+                "rankCorrelation": -0.08,
+                "meanAbsoluteError": 80.12,
+                "bias": -32.42,
+                "band": 82.76
+              },
+              "byIncomeQuartile": {
+                "1": {
+                  "n": 17,
+                  "rankCorrelation": -0.098,
+                  "meanAbsoluteError": 75.77,
+                  "bias": -3.64,
+                  "band": 80.72
+                },
+                "2": {
+                  "n": 21,
+                  "rankCorrelation": 0.105,
+                  "meanAbsoluteError": 121.36,
+                  "bias": -66.4,
+                  "band": 151.4
+                },
+                "3": {
+                  "n": 14,
+                  "rankCorrelation": -0.282,
+                  "meanAbsoluteError": 70.26,
+                  "bias": -17.92,
+                  "band": 51.42
+                },
+                "4": {
+                  "n": 18,
+                  "rankCorrelation": -0.018,
+                  "meanAbsoluteError": 43.8,
+                  "bias": -31.23,
+                  "band": 67.2
+                }
+              },
+              "postCutoff": {
+                "n": 0
+              },
+              "preCutoff": {
+                "n": 70,
+                "rankCorrelation": -0.08,
+                "meanAbsoluteError": 80.12,
+                "bias": -32.42,
+                "band": 82.76
+              },
+              "estimateVsLogGdp": -0.824,
+              "estimateVsLogGdpAll125": -0.811,
+              "selfConfidenceVsAbsError": 0.06,
+              "meanSelfConfidence": 0.06
+            },
+            "sonnet": {
+              "overall": {
+                "n": 70,
+                "rankCorrelation": -0.011,
+                "meanAbsoluteError": 77.02,
+                "bias": -45.35,
+                "band": 85.16
+              },
+              "byIncomeQuartile": {
+                "1": {
+                  "n": 17,
+                  "rankCorrelation": 0.033,
+                  "meanAbsoluteError": 69.74,
+                  "bias": -24.53,
+                  "band": 68.28
+                },
+                "2": {
+                  "n": 21,
+                  "rankCorrelation": 0.285,
+                  "meanAbsoluteError": 117.5,
+                  "bias": -79.97,
+                  "band": 156.4
+                },
+                "3": {
+                  "n": 14,
+                  "rankCorrelation": -0.086,
+                  "meanAbsoluteError": 65.69,
+                  "bias": -30.42,
+                  "band": 37.38
+                },
+                "4": {
+                  "n": 18,
+                  "rankCorrelation": -0.117,
+                  "meanAbsoluteError": 45.47,
+                  "bias": -36.23,
+                  "band": 70.2
+                }
+              },
+              "postCutoff": {
+                "n": 0
+              },
+              "preCutoff": {
+                "n": 70,
+                "rankCorrelation": -0.011,
+                "meanAbsoluteError": 77.02,
+                "bias": -45.35,
+                "band": 85.16
+              },
+              "estimateVsLogGdp": -0.752,
+              "estimateVsLogGdpAll125": -0.738,
+              "selfConfidenceVsAbsError": 0.112,
+              "meanSelfConfidence": 0.07
+            },
+            "fable": {
+              "overall": {
+                "n": 70,
+                "rankCorrelation": -0.04,
+                "meanAbsoluteError": 78.37,
+                "bias": -36.88,
+                "band": 81.64
+              },
+              "byIncomeQuartile": {
+                "1": {
+                  "n": 17,
+                  "rankCorrelation": 0.019,
+                  "meanAbsoluteError": 72.24,
+                  "bias": -10.7,
+                  "band": 70.72
+                },
+                "2": {
+                  "n": 21,
+                  "rankCorrelation": 0.028,
+                  "meanAbsoluteError": 120.83,
+                  "bias": -71.4,
+                  "band": 156.4
+                },
+                "3": {
+                  "n": 14,
+                  "rankCorrelation": -0.037,
+                  "meanAbsoluteError": 68.19,
+                  "bias": -23.64,
+                  "band": 43.42
+                },
+                "4": {
+                  "n": 18,
+                  "rankCorrelation": 0.073,
+                  "meanAbsoluteError": 42.52,
+                  "bias": -31.62,
+                  "band": 67.2
+                }
+              },
+              "postCutoff": {
+                "n": 0
+              },
+              "preCutoff": {
+                "n": 70,
+                "rankCorrelation": -0.04,
+                "meanAbsoluteError": 78.37,
+                "bias": -36.88,
+                "band": 81.64
+              },
+              "estimateVsLogGdp": -0.775,
+              "estimateVsLogGdpAll125": -0.759,
+              "selfConfidenceVsAbsError": 0.058,
+              "meanSelfConfidence": 0.15
+            },
+            "ensemble": {
+              "overall": {
+                "n": 70,
+                "rankCorrelation": -0.036,
+                "meanAbsoluteError": 78.58,
+                "bias": -37.09,
+                "band": 81.64
+              },
+              "byIncomeQuartile": {
+                "1": {
+                  "n": 17,
+                  "rankCorrelation": 0.019,
+                  "meanAbsoluteError": 72.24,
+                  "bias": -10.7,
+                  "band": 70.72
+                },
+                "2": {
+                  "n": 21,
+                  "rankCorrelation": 0.05,
+                  "meanAbsoluteError": 120.83,
+                  "bias": -71.4,
+                  "band": 156.4
+                },
+                "3": {
+                  "n": 14,
+                  "rankCorrelation": -0.037,
+                  "meanAbsoluteError": 68.19,
+                  "bias": -23.64,
+                  "band": 43.42
+                },
+                "4": {
+                  "n": 18,
+                  "rankCorrelation": 0.076,
+                  "meanAbsoluteError": 43.36,
+                  "bias": -32.46,
+                  "band": 67.2
+                }
+              },
+              "postCutoff": {
+                "n": 0
+              },
+              "preCutoff": {
+                "n": 70,
+                "rankCorrelation": -0.036,
+                "meanAbsoluteError": 78.58,
+                "bias": -37.09,
+                "band": 81.64
+              },
+              "estimateVsLogGdp": -0.782,
+              "estimateVsLogGdpAll125": -0.774,
+              "gate": {
+                "heldOutSet": "none: too few post-cutoff cells to separate estimation from recall",
+                "heldOutCells": 0,
+                "heldOutRankCorrelation": null,
+                "recallRankCorrelation": -0.036,
+                "rankCorrelationPasses": false,
+                "bandInUnit": 156.4,
+                "bandPasses": true,
+                "worstIncomeQuartile": 2,
+                "incomeTrackingEstimate": -0.782,
+                "incomeTrackingHard": -0.023,
+                "incomeTrackingPasses": false,
+                "passes": false,
+                "incomeGap": 0.759,
+                "incomeGap90": [
+                  0.571,
+                  0.806
+                ]
+              }
+            }
+          },
+          "truthVsLogGdp": -0.023,
+          "truthIqr": 90.23,
+          "truthMedian": 40.15,
+          "interModelRankCorrelation": {
+            "opus-sonnet": 0.926,
+            "opus-fable": 0.943,
+            "sonnet-fable": 0.91
+          }
+        },
+        "schedule": {
+          "n": 54,
+          "models": {
+            "opus": {
+              "overall": {
+                "n": 54,
+                "rankCorrelation": 0.115,
+                "meanAbsoluteError": 47.82,
+                "bias": -24.65,
+                "band": 67
+              },
+              "byIncomeQuartile": {
+                "1": {
+                  "n": 19,
+                  "rankCorrelation": 0.362,
+                  "meanAbsoluteError": 38.58,
+                  "bias": -8.11,
+                  "band": 62.96
+                },
+                "2": {
+                  "n": 13,
+                  "rankCorrelation": 0.113,
+                  "meanAbsoluteError": 52.77,
+                  "bias": -17.89,
+                  "band": 59.42
+                },
+                "3": {
+                  "n": 10,
+                  "rankCorrelation": 0.132,
+                  "meanAbsoluteError": 60.73,
+                  "bias": -51.64,
+                  "band": 106.26
+                },
+                "4": {
+                  "n": 12,
+                  "rankCorrelation": -0.043,
+                  "meanAbsoluteError": 46.32,
+                  "bias": -35.66,
+                  "band": 87
+                }
+              },
+              "postCutoff": {
+                "n": 0
+              },
+              "preCutoff": {
+                "n": 54,
+                "rankCorrelation": 0.115,
+                "meanAbsoluteError": 47.82,
+                "bias": -24.65,
+                "band": 67
+              },
+              "estimateVsLogGdp": -0.82,
+              "estimateVsLogGdpAll125": -0.811,
+              "selfConfidenceVsAbsError": 0.127,
+              "meanSelfConfidence": 0.06
+            },
+            "sonnet": {
+              "overall": {
+                "n": 54,
+                "rankCorrelation": 0.19,
+                "meanAbsoluteError": 51,
+                "bias": -37.89,
+                "band": 71.44
+              },
+              "byIncomeQuartile": {
+                "1": {
+                  "n": 19,
+                  "rankCorrelation": 0.606,
+                  "meanAbsoluteError": 42.74,
+                  "bias": -25.47,
+                  "band": 67.22
+                },
+                "2": {
+                  "n": 13,
+                  "rankCorrelation": 0.408,
+                  "meanAbsoluteError": 52.78,
+                  "bias": -32.89,
+                  "band": 70.84
+                },
+                "3": {
+                  "n": 10,
+                  "rankCorrelation": 0.107,
+                  "meanAbsoluteError": 67.16,
+                  "bias": -64.13,
+                  "band": 121.26
+                },
+                "4": {
+                  "n": 12,
+                  "rankCorrelation": -0.061,
+                  "meanAbsoluteError": 48.71,
+                  "bias": -41.07,
+                  "band": 93
+                }
+              },
+              "postCutoff": {
+                "n": 0
+              },
+              "preCutoff": {
+                "n": 54,
+                "rankCorrelation": 0.19,
+                "meanAbsoluteError": 51,
+                "bias": -37.89,
+                "band": 71.44
+              },
+              "estimateVsLogGdp": -0.777,
+              "estimateVsLogGdpAll125": -0.738,
+              "selfConfidenceVsAbsError": 0.048,
+              "meanSelfConfidence": 0.06
+            },
+            "fable": {
+              "overall": {
+                "n": 54,
+                "rankCorrelation": 0.102,
+                "meanAbsoluteError": 48.63,
+                "bias": -29.31,
+                "band": 63.02
+              },
+              "byIncomeQuartile": {
+                "1": {
+                  "n": 19,
+                  "rankCorrelation": 0.449,
+                  "meanAbsoluteError": 38.32,
+                  "bias": -13.11,
+                  "band": 57.68
+                },
+                "2": {
+                  "n": 13,
+                  "rankCorrelation": 0.189,
+                  "meanAbsoluteError": 52.43,
+                  "bias": -24.05,
+                  "band": 60.6
+                },
+                "3": {
+                  "n": 10,
+                  "rankCorrelation": -0.121,
+                  "meanAbsoluteError": 64.23,
+                  "bias": -59.14,
+                  "band": 116.26
+                },
+                "4": {
+                  "n": 12,
+                  "rankCorrelation": -0.247,
+                  "meanAbsoluteError": 47.82,
+                  "bias": -35.82,
+                  "band": 87
+                }
+              },
+              "postCutoff": {
+                "n": 0
+              },
+              "preCutoff": {
+                "n": 54,
+                "rankCorrelation": 0.102,
+                "meanAbsoluteError": 48.63,
+                "bias": -29.31,
+                "band": 63.02
+              },
+              "estimateVsLogGdp": -0.789,
+              "estimateVsLogGdpAll125": -0.759,
+              "selfConfidenceVsAbsError": 0.192,
+              "meanSelfConfidence": 0.14
+            },
+            "ensemble": {
+              "overall": {
+                "n": 54,
+                "rankCorrelation": 0.117,
+                "meanAbsoluteError": 48.63,
+                "bias": -29.68,
+                "band": 63.02
+              },
+              "byIncomeQuartile": {
+                "1": {
+                  "n": 19,
+                  "rankCorrelation": 0.445,
+                  "meanAbsoluteError": 38.84,
+                  "bias": -13.63,
+                  "band": 57.68
+                },
+                "2": {
+                  "n": 13,
+                  "rankCorrelation": 0.189,
+                  "meanAbsoluteError": 52.43,
+                  "bias": -24.05,
+                  "band": 60.6
+                },
+                "3": {
+                  "n": 10,
+                  "rankCorrelation": -0.121,
+                  "meanAbsoluteError": 64.23,
+                  "bias": -59.14,
+                  "band": 116.26
+                },
+                "4": {
+                  "n": 12,
+                  "rankCorrelation": 0.04,
+                  "meanAbsoluteError": 46.99,
+                  "bias": -36.66,
+                  "band": 87
+                }
+              },
+              "postCutoff": {
+                "n": 0
+              },
+              "preCutoff": {
+                "n": 54,
+                "rankCorrelation": 0.117,
+                "meanAbsoluteError": 48.63,
+                "bias": -29.68,
+                "band": 63.02
+              },
+              "estimateVsLogGdp": -0.798,
+              "estimateVsLogGdpAll125": -0.774,
+              "gate": {
+                "heldOutSet": "none: too few post-cutoff cells to separate estimation from recall",
+                "heldOutCells": 0,
+                "heldOutRankCorrelation": null,
+                "recallRankCorrelation": 0.117,
+                "rankCorrelationPasses": false,
+                "bandInUnit": 116.26,
+                "bandPasses": true,
+                "worstIncomeQuartile": 3,
+                "incomeTrackingEstimate": -0.798,
+                "incomeTrackingHard": -0.002,
+                "incomeTrackingPasses": false,
+                "passes": false,
+                "incomeGap": 0.796,
+                "incomeGap90": [
+                  0.519,
+                  0.82
+                ]
+              }
+            }
+          },
+          "truthVsLogGdp": -0.002,
+          "truthIqr": 79.19,
+          "truthMedian": 59.1,
+          "interModelRankCorrelation": {
+            "opus-sonnet": 0.926,
+            "opus-fable": 0.943,
+            "sonnet-fable": 0.91
+          }
+        },
+        "costClean": {
+          "n": 60,
+          "models": {
+            "opus": {
+              "overall": {
+                "n": 60,
+                "rankCorrelation": -0.094,
+                "meanAbsoluteError": 67.37,
+                "bias": -19.02,
+                "band": 80.28
+              },
+              "byIncomeQuartile": {
+                "1": {
+                  "n": 16,
+                  "rankCorrelation": -0.058,
+                  "meanAbsoluteError": 76.32,
+                  "bias": -8.06,
+                  "band": 81.4
+                },
+                "2": {
+                  "n": 16,
+                  "rankCorrelation": 0.082,
+                  "meanAbsoluteError": 72.44,
+                  "bias": -7.32,
+                  "band": 95.8
+                },
+                "3": {
+                  "n": 11,
+                  "rankCorrelation": -0.183,
+                  "meanAbsoluteError": 80.33,
+                  "bias": -31.91,
+                  "band": 51.3
+                },
+                "4": {
+                  "n": 17,
+                  "rankCorrelation": -0.1,
+                  "meanAbsoluteError": 45.79,
+                  "bias": -32.01,
+                  "band": 73.6
+                }
+              },
+              "postCutoff": {
+                "n": 0
+              },
+              "preCutoff": {
+                "n": 60,
+                "rankCorrelation": -0.094,
+                "meanAbsoluteError": 67.37,
+                "bias": -19.02,
+                "band": 80.28
+              },
+              "estimateVsLogGdp": -0.845,
+              "estimateVsLogGdpAll125": -0.811,
+              "selfConfidenceVsAbsError": 0.03,
+              "meanSelfConfidence": 0.06
+            },
+            "sonnet": {
+              "overall": {
+                "n": 60,
+                "rankCorrelation": -0.007,
+                "meanAbsoluteError": 63.98,
+                "bias": -31.85,
+                "band": 77.64
+              },
+              "byIncomeQuartile": {
+                "1": {
+                  "n": 16,
+                  "rankCorrelation": 0.077,
+                  "meanAbsoluteError": 71.78,
+                  "bias": -28.37,
+                  "band": 68.9
+                },
+                "2": {
+                  "n": 16,
+                  "rankCorrelation": 0.373,
+                  "meanAbsoluteError": 66.13,
+                  "bias": -20.76,
+                  "band": 85.8
+                },
+                "3": {
+                  "n": 11,
+                  "rankCorrelation": 0.057,
+                  "meanAbsoluteError": 76.24,
+                  "bias": -45.09,
+                  "band": 36.3
+                },
+                "4": {
+                  "n": 17,
+                  "rankCorrelation": -0.117,
+                  "meanAbsoluteError": 46.67,
+                  "bias": -37.01,
+                  "band": 77.6
+                }
+              },
+              "postCutoff": {
+                "n": 0
+              },
+              "preCutoff": {
+                "n": 60,
+                "rankCorrelation": -0.007,
+                "meanAbsoluteError": 63.98,
+                "bias": -31.85,
+                "band": 77.64
+              },
+              "estimateVsLogGdp": -0.781,
+              "estimateVsLogGdpAll125": -0.738,
+              "selfConfidenceVsAbsError": 0.083,
+              "meanSelfConfidence": 0.07
+            },
+            "fable": {
+              "overall": {
+                "n": 60,
+                "rankCorrelation": -0.061,
+                "meanAbsoluteError": 65.72,
+                "bias": -23.3,
+                "band": 73.12
+              },
+              "byIncomeQuartile": {
+                "1": {
+                  "n": 16,
+                  "rankCorrelation": 0.058,
+                  "meanAbsoluteError": 73.19,
+                  "bias": -14.93,
+                  "band": 71.4
+                },
+                "2": {
+                  "n": 16,
+                  "rankCorrelation": 0.082,
+                  "meanAbsoluteError": 70.51,
+                  "bias": -12.63,
+                  "band": 90.8
+                },
+                "3": {
+                  "n": 11,
+                  "rankCorrelation": -0.07,
+                  "meanAbsoluteError": 79.42,
+                  "bias": -37.36,
+                  "band": 41.3
+                },
+                "4": {
+                  "n": 17,
+                  "rankCorrelation": -0.055,
+                  "meanAbsoluteError": 45.32,
+                  "bias": -32.13,
+                  "band": 73.6
+                }
+              },
+              "postCutoff": {
+                "n": 0
+              },
+              "preCutoff": {
+                "n": 60,
+                "rankCorrelation": -0.061,
+                "meanAbsoluteError": 65.72,
+                "bias": -23.3,
+                "band": 73.12
+              },
+              "estimateVsLogGdp": -0.797,
+              "estimateVsLogGdpAll125": -0.759,
+              "selfConfidenceVsAbsError": 0.067,
+              "meanSelfConfidence": 0.15
+            },
+            "ensemble": {
+              "overall": {
+                "n": 60,
+                "rankCorrelation": -0.054,
+                "meanAbsoluteError": 65.8,
+                "bias": -23.55,
+                "band": 73.12
+              },
+              "byIncomeQuartile": {
+                "1": {
+                  "n": 16,
+                  "rankCorrelation": 0.058,
+                  "meanAbsoluteError": 73.19,
+                  "bias": -14.93,
+                  "band": 71.4
+                },
+                "2": {
+                  "n": 16,
+                  "rankCorrelation": 0.087,
+                  "meanAbsoluteError": 70.51,
+                  "bias": -12.63,
+                  "band": 90.8
+                },
+                "3": {
+                  "n": 11,
+                  "rankCorrelation": -0.07,
+                  "meanAbsoluteError": 79.42,
+                  "bias": -37.36,
+                  "band": 41.3
+                },
+                "4": {
+                  "n": 17,
+                  "rankCorrelation": -0.031,
+                  "meanAbsoluteError": 45.61,
+                  "bias": -33.01,
+                  "band": 73.6
+                }
+              },
+              "postCutoff": {
+                "n": 0
+              },
+              "preCutoff": {
+                "n": 60,
+                "rankCorrelation": -0.054,
+                "meanAbsoluteError": 65.8,
+                "bias": -23.55,
+                "band": 73.12
+              },
+              "estimateVsLogGdp": -0.805,
+              "estimateVsLogGdpAll125": -0.774,
+              "gate": {
+                "heldOutSet": "none: too few post-cutoff cells to separate estimation from recall",
+                "heldOutCells": 0,
+                "heldOutRankCorrelation": null,
+                "recallRankCorrelation": -0.054,
+                "rankCorrelationPasses": false,
+                "bandInUnit": 90.8,
+                "bandPasses": true,
+                "worstIncomeQuartile": 2,
+                "incomeTrackingEstimate": -0.805,
+                "incomeTrackingHard": 0.046,
+                "incomeTrackingPasses": false,
+                "passes": false,
+                "incomeGap": 0.759,
+                "incomeGap90": [
+                  0.546,
+                  0.823
+                ]
+              }
+            }
+          },
+          "truthVsLogGdp": 0.046,
+          "truthIqr": 79.97,
+          "truthMedian": 39.25,
+          "interModelRankCorrelation": {
+            "opus-sonnet": 0.926,
+            "opus-fable": 0.943,
+            "sonnet-fable": 0.91
+          }
+        }
+      },
+      "medianSpreadAcrossModels": 10,
+      "selfConfidence": {
+        "opus": {
+          "measured": 0.06,
+          "unmeasured": 0.06
+        },
+        "sonnet": {
+          "measured": 0.07,
+          "unmeasured": 0.07
+        },
+        "fable": {
+          "measured": 0.15,
+          "unmeasured": 0.16
+        }
+      },
+      "unmeasuredCells": 55
+    }
+  }
+}
