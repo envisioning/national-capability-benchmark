@@ -26408,6 +26408,296 @@
           "Counterpart and maintenance funding from a small budget, which arrived late and only after the works ended"
         ]
       }
+    },
+    {
+      "id": "bel-gen-rer",
+      "indicatorId": "large_project_delivery",
+      "iso3": "BEL",
+      "title": "Brussels regional express rail network (GEN/RER) infrastructure works, and their stall",
+      "claim": "Belgium's federal state and three regions agreed in 2001 to fund the infrastructure for a regional express rail network around Brussels through the RER Fund, with every work due by the end of 2012. The Court of Audit told the Chamber in February 2017 that the cost of the works charged to the fund had risen by more than 27 percent over 2001 to 2016, that all but one project ran six to 17.5 years late, that the works were largely at a standstill and that full four-tracking of lines 124 and 161 had been postponed with no date.",
+      "metric": {
+        "name": "Increase in the cost of the infrastructure works charged to the RER Fund",
+        "value": 27,
+        "unit": "% (more than), 2001 to 2016",
+        "asOf": "2016"
+      },
+      "secondMetric": {
+        "name": "Longest delay of an RER Fund infrastructure project against its planned completion date",
+        "value": 17.5,
+        "unit": "years",
+        "asOf": "2017-01"
+      },
+      "started": 2001,
+      "status": "eroded",
+      "source": {
+        "publisher": "Belgian Chamber of Representatives, integral report CRIV 54 COM 602 of the joint committee hearing of 21 February 2017 on the Court of Audit report 'Het GEN-Fonds / Le Fonds RER' of 25 January 2017",
+        "url": "https://www.lachambre.be/doc/CCRI/pdf/54/ic602x.pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-16"
+      },
+      "limits": "The figures are the Court of Audit's own, but they are read from the Chamber's transcript of the auditors presenting their report, not from the report itself, which sits on the Court's website behind bot protection; the transcript is a PDF whose text a plain download is refused, though it opens in a browser. The 27 percent is the Court's cost growth for the fund as a whole, which an auditor says is understated, because the least advanced projects (lines 124 and 161) show the smallest increases only because most of their cost is still to come; individual items rose far more, 53 percent for Watermael-Schuman-Josaphat and 100 percent for stations and car parks. Part of the increase is indexation and part is a financing effect that Infrabel puts at just under 200 million euros, which is Infrabel's calculation rather than the Court's. The minimum shortfall of 800 million euros to finish the works in the pipeline is in current euros and is also called a floor. The delays are attributed to late regional permits, repeated appeals (three Brussels permits for line 124 were annulled by the Council of State on language law grounds), the 60/40 regional spending key and the suspension of the 2013 to 2025 investment plan, so much of the loss lies in Belgium's multi-level permitting and budget rules rather than in project management. The figures date from early 2017. What happened after, including later federal funding and the phased reopening of sections, was not verified at an official source here, so the record documents the stall and the abandoned 2012 target, not the final outturn. The 2003 RER convention's service targets were themselves replaced in 2012 by a less ambitious intermediate scenario adopted only at ministerial level. The started year is the cooperation agreement that set the fund up, not the first construction contract.",
+      "pattern": {
+        "mechanism": "The federal state and the three regions ring-fenced a closed envelope for RER works in a cooperation agreement, paid it into a fund managed by the railway holding company, and left the infrastructure manager Infrabel to build four-track upgrades on existing lines under permits issued separately by each region.",
+        "preconditions": [
+          "A cooperation agreement binding the federal state and all three regions, which the 2003 convention needed three years to ratify",
+          "A rail spending key splitting investment 60/40 between Flanders and Wallonia each year, which slowed works when one region's sites stalled",
+          "Regional permitting and appeal routes, where a single annulled permit stops a line that crosses three regions"
+        ],
+        "travelled": "The Court noted that building section by section, which the mobility minister proposed in 2016, could have been planned from the start and might have reduced the delays."
+      }
+    },
+    {
+      "id": "nor-sandbukta-moss-saastad",
+      "indicatorId": "large_project_delivery",
+      "iso3": "NOR",
+      "title": "Østfold Line double track Sandbukta-Moss-Såstad, and its overrun",
+      "claim": "Norway's state rail infrastructure company Bane NOR began building the Sandbukta-Moss-Såstad double track on the Østfold Line in 2019 for opening in 2024, and Riksrevisjonen reported in November 2024 that its estimated final cost at the end of 2023 was NOK 24,060 million, 105 percent above the original P50 steering frame of NOK 11,731 million and 87 percent above the P85 cost frame (2023 kroner), with completion now estimated for 2030.",
+      "metric": {
+        "name": "Estimated final cost against the original steering frame (P50), Sandbukta-Moss-Såstad",
+        "value": 105,
+        "unit": "% overrun",
+        "asOf": "2023-12"
+      },
+      "secondMetric": {
+        "name": "Estimated year of completion, against an original plan of 2024",
+        "value": 2030,
+        "unit": "year",
+        "asOf": "2023-12"
+      },
+      "started": 2019,
+      "status": "operating",
+      "source": {
+        "publisher": "Riksrevisjonen (Office of the Auditor General of Norway), follow-up of the investigation of Bane NOR's operation, maintenance and investments, reported in Dokument 3:2 (2024-2025), Tables 5 and 7",
+        "url": "https://kudos.dfo.no/dokument/ce5d4321-a31e-41d8-8792-d6afe4bdcb46/filer/d5365005-6e80-48ef-b674-fdae34e8063f.pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-16"
+      },
+      "limits": "The figures are in a PDF hosted on DFØ's Kudos archive: Table 5 (PDF page 37) gives the costs and Table 7 (PDF page 39) the dates. The cost figures are Bane NOR's own estimates as at 31 December 2023, which the audit office reports with the source given as Bane NOR, so the 105 percent is a forecast against the first frame, not a final account. The comparison is in 2023 kroner, which the audit office indexed using Statistics Norway's road construction cost index, not a rail index. The project is unfinished and the works in central Moss were temporarily halted after large deposits of quick clay were found, so both numbers can still move. Parliament raised the cost frame twice, to NOK 17.9 billion in 2021 kroner in 2021 and to NOK 27,646 million in 2024 kroner in 2024, so the project now sits inside a frame that was moved to meet it. Part of the cost buys ground stabilisation that the ministry says makes large areas of Moss safer, which is benefit outside the rail scope. The project is one of four the audit office chose because they deviated from their frames or schedules, and in the same table two of the other three are forecast below their P50 frames, so this record is the worst case of the four and not the portfolio. The original frames were set before Bane NOR existed, by the former Jernbaneverket, and an internal Deloitte audit the report cites found the ground investigations of 2015 to 2016 insufficient.",
+      "pattern": {
+        "mechanism": "The state set a probabilistic cost frame after external quality assurance, and its rail infrastructure company built the line as client under a framework agreement with the Railway Directorate, returning to Parliament for a higher frame when ground conditions under Moss proved worse than assumed.",
+        "preconditions": [
+          "The state project model, which requires external quality assurance and P50 and P85 frames for any investment above NOK 1 billion",
+          "A state enterprise with its own balance sheet and multi-year agreements, so an overrun becomes a new frame rather than a halted build",
+          "An audit office that follows up named projects in the build phase and publishes the estimate against the original frame"
+        ],
+        "travelled": "Riksrevisjonen's earlier investigation, reported in Dokument 3:2 (2020-2021), already covered this project; by the follow-up its estimated final cost had risen by NOK 9 billion in 2023 kroner, so the audit tracked the overrun while it grew rather than after it."
+      }
+    },
+    {
+      "id": "cyp-fourth-highway",
+      "indicatorId": "large_project_delivery",
+      "iso3": "CYP",
+      "title": "Fourth Highway Project, Larnaca-Nicosia and Larnaca-Kophinou roads",
+      "claim": "Cyprus's Ministry of Communications and Works, with World Bank and Kuwait Fund loans effective from August 1986, upgraded the Larnaca-Nicosia and Larnaca-Kophinou roads and rehabilitated 111 km of rural and secondary roads, finishing a year late (loan closing moved from March 1993 to March 1994) at a final cost estimate of US$98.11 million against an original estimate of US$68.9 million, an overrun of about 42 percent.",
+      "metric": {
+        "name": "Final project cost estimate at completion",
+        "value": 98.11,
+        "unit": "US$ million",
+        "asOf": "1995-04"
+      },
+      "secondMetric": {
+        "name": "Original project cost estimate at appraisal",
+        "value": 68.9,
+        "unit": "US$ million",
+        "asOf": "1985"
+      },
+      "started": 1986,
+      "status": "concluded",
+      "source": {
+        "publisher": "World Bank, Implementation Completion Report, Republic of Cyprus Fourth Highway Project (Loan 2684-CY), report 14267, 3 April 1995",
+        "url": "https://documents.worldbank.org/curated/en/675551468025791264/text/multi-page.txt",
+        "tier": "international_organization",
+        "retrievedAt": "2026-10-16"
+      },
+      "limits": "The lender wrote the report, and it rates the project a success: it calls the one-year delay not excessive and judges the decisions behind the overrun sound. Most of the 42 percent is scope the government added after appraisal (reconstruction of the whole Larnaca-Kophinou road, the Kophinou interchange and a larger maintenance programme), so it is weak evidence of estimating failure; the report itself says strict comparison between the appraised and completed project cannot be made, and that the Larnaca-Nicosia alignment had to be changed after the loans became effective because it had not been cleared with Parliament or the local population. The US$98.11 million is an estimate made before all final contract payments, and both figures are in US dollars converted from Cyprus pounds at changing rates. US$300,000 was cancelled for misprocurement. The case is 30 years old, predates EU accession and the procurement rules that followed, and says nothing about how Cyprus delivers large projects today.",
+      "pattern": {
+        "mechanism": "The Ministry of Communications and Works let the scope of a co-financed road programme grow during delivery, rebuilding a whole corridor and adding an interchange, and the government and the Kuwait Fund absorbed the extra cost rather than cutting the works.",
+        "preconditions": [
+          "Two lenders with parallel financing, so a component could expand under one without renegotiating the other",
+          "A central tender board and planning bureau whose approvals took five to six months per contract",
+          "Road alignments designed before local and parliamentary consent, which forced redesign after the loans were effective"
+        ]
+      }
+    },
+    {
+      "id": "tto-point-fortin-highway",
+      "indicatorId": "large_project_delivery",
+      "iso3": "TTO",
+      "title": "Sir Solomon Hochoy Highway Extension to Point Fortin, and its abandoned contract",
+      "claim": "NIDCO signed a four-year TT$5,214 million design-build contract with Construtora OAS in July 2011 within a Cabinet-approved budget of TT$7,502.6 million; OAS abandoned the site in December 2015 and was terminated on 6 July 2016 with about 49 percent of the works done and TT$5,088.26 million spent, and NIDCO put the revised total budget to finish the highway at TT$10,224.93 million, 37 percent over the approved budget.",
+      "metric": {
+        "name": "Revised total project budget to complete the highway, estimated at the contractor's termination",
+        "value": 10224.93,
+        "unit": "TT$ million",
+        "asOf": "2016-07"
+      },
+      "secondMetric": {
+        "name": "Approved total project budget, Cabinet Minute No. 333",
+        "value": 7502.6,
+        "unit": "TT$ million",
+        "asOf": "2011-02"
+      },
+      "started": 2011,
+      "status": "operating",
+      "source": {
+        "publisher": "National Infrastructure Development Company (NIDCO), The Saga of the Sir Solomon Hochoy Highway Extension to Point Fortin Project, 31 October 2023, published by the Parliament of Trinidad and Tobago for the Joint Select Committee on Land and Physical Infrastructure",
+        "url": "https://www.ttparliament.org/wp-content/uploads/2024/03/ConstructionSAGAofSSHHEP-NIDCO.pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-16"
+      },
+      "limits": "This is the implementing agency's own account, written in 2023 for a parliamentary inquiry into the same project, and it places the blame on the contractor and on the 2015 addendum that kept an insolvent contractor on site; the committee's findings are not in it. All figures are read from Tables 4 and 5 of a PDF. The 37 percent is NIDCO's estimate at termination of what completion would cost, not a measured outturn: the report gives no final cost and no completion date for the whole highway, only that most of the 12 re-tendered packages (TT$1,913.03 million in Table 6) had opened to traffic by 2023. Part of the revised budget restores scope that Addendum 2 had removed, so not all of it is overrun on the original design. The 49 percent progress is NIDCO's weighting of design and construction, and the US$126.4 million LCIA partial award to OAS, set aside by the High Court in December 2022 and under appeal, could still add to the cost. The status is eroded because the original delivery collapsed halfway and the budget it was approved under was broken, not because a finished road was lost.",
+      "pattern": {
+        "mechanism": "NIDCO let a single lump-sum design-build contract for the whole highway to one foreign contractor before it held all the land, then, when the contractor filed for judicial reorganisation in 2015, signed an addendum that cut the scope instead of terminating, and after the contractor walked off it re-tendered the remainder in 12 packages to local firms.",
+        "preconditions": [
+          "A special-purpose state company able to award and finance a contract larger than the ministry's own capacity, under Cabinet approval",
+          "A land acquisition process that could not release the right-of-way before construction began",
+          "Performance and advance-payment standby letters of credit large enough to fund part of the restart (US$139.6 million recovered)"
+        ]
+      }
+    },
+    {
+      "id": "mmr-nep-grid-extension",
+      "indicatorId": "large_project_delivery",
+      "iso3": "MMR",
+      "title": "National Electrification Project grid extension, and its halt",
+      "claim": "Myanmar's Ministry of Electricity and Energy and its distribution utilities built 6,400 km of distribution lines and connected 361,703 households to the main grid under the National Electrification Project from 2016, against revised targets of 17,800 km and 645,000 households, before financing stopped after the military takeover of 1 February 2021 and the project closed on 30 September 2021 with the grid extension component at 52.3 percent of its approved cost.",
+      "metric": {
+        "name": "Distribution lines constructed or rehabilitated at closing, against a revised target of 17,800 km (36 percent)",
+        "value": 6400,
+        "unit": "km",
+        "asOf": "2021-09-30"
+      },
+      "secondMetric": {
+        "name": "Grid extension component cost at closing as a share of the US$375 million approved",
+        "value": 52.3,
+        "unit": "% of appraisal cost",
+        "asOf": "2021-09-30"
+      },
+      "started": 2016,
+      "status": "dismantled",
+      "source": {
+        "publisher": "World Bank, Implementation Completion and Results Report, Myanmar National Electrification Project (P152936), 2023",
+        "url": "https://documents.worldbank.org/curated/en/099053023190022291/text/BOSIB08d4ca64e0fb0bc3905771849c1516.txt",
+        "tier": "international_organization",
+        "retrievedAt": "2026-10-16"
+      },
+      "limits": "This is a shortfall against a target and an underspend, not a cost overrun: the grid extension component spent US$196.14 million of the US$375 million approved (Annex 3), and the report gives US$203.14 million for the same component in paragraph 18, so the two tables in one document disagree. The halt came from the World Bank pausing all disbursements under its policy on de facto governments after the military takeover, so the stop was a lender's decision triggered by a change of regime, not a ministry abandoning the build. The report was written as a desk review from supervision and progress reports filed before 1 February 2021, with no contact with the authorities and no borrower report, and it does not assess anything after that date. The 36 percent of distribution lines is against a target already cut from 20,700 to 17,800 km in the 2017 restructuring, and part of the shortfall predates the takeover: the report names low ministry capacity and delayed audits. The project is a national programme of many small medium and low voltage works rather than one structure, it also had an off-grid component that reached 92 percent of its target, and the report rated the whole project Moderately Satisfactory. Plain-text file of a PDF.",
+      "pattern": {
+        "mechanism": "Myanmar's electricity ministry ran the first phase of a national electrification plan through its distribution utilities, with IDA paying for poles, conductors and transformers and the utilities and communities paying for installation, and the build stopped part way when the 2021 takeover cut off the lender's money.",
+        "preconditions": [
+          "A concessional lender financing materials for a national grid roll-out",
+          "Distribution utilities able to install and connect at scale",
+          "A government the lender would keep dealing with, which ended on 1 February 2021"
+        ]
+      }
+    },
+    {
+      "id": "moz-beira-railway",
+      "indicatorId": "large_project_delivery",
+      "iso3": "MOZ",
+      "title": "Beira Railway concession and Sena line rehabilitation, and its termination",
+      "claim": "Mozambique's government and its ports and railways enterprise CFM rehabilitated the 600 km Sena railway from Dondo to Moatize through a 25-year concession signed on 30 August 2004, with total financing rising from US$152.47 million at appraisal to US$188.70 million, works finishing more than two years late, and the concession terminated on 7 December 2011.",
+      "metric": {
+        "name": "Total project financing by source, actual or latest estimate",
+        "value": 188.7,
+        "unit": "million US dollars",
+        "asOf": "2011-12-31"
+      },
+      "secondMetric": {
+        "name": "Total project financing by source, appraisal estimate",
+        "value": 152.47,
+        "unit": "million US dollars",
+        "asOf": "2004"
+      },
+      "started": 2004,
+      "status": "dismantled",
+      "source": {
+        "publisher": "World Bank, Implementation Completion and Results Report, Mozambique Beira Railway Project (IDA-39910), Report No. ICR2154, 27 June 2012",
+        "url": "https://documents.worldbank.org/curated/en/199071468323987742/text/NonAsciiFileName0.txt",
+        "tier": "international_organization",
+        "retrievedAt": "2026-10-16"
+      },
+      "limits": "The 23.8 percent rise is computed here from the two totals in Annex 1, table c; the report's own cost table by component shows actual spending below appraisal (73 percent) because the Machipanda line works the concessionaire was to fund never happened, so the two tables tell different stories and the overrun sits in extra shareholder loans and an EIB loan rather than in IDA money. The report also states cost overruns of US$50 million, a 35 percent increase, at the June 2008 mid-term review, and 'more than US$50 million' overall, without a baseline for either. The delay is stated only as 'over two years' against a four-year plan, and the report gives the termination date as 7 December 2011 in one place and September 2011 in another. The concessionaire, CCFB, was 51 percent held by the private concessionaire and 49 percent by CFM, so the delivery was a public-private vehicle and the report blames weak concessionaire capacity as much as the state. This is the World Bank's report on its own credit and rates its own performance Unsatisfactory. The Sena line was completed except for a 44 km section to the Malawi border and kept running under CFM after termination, so the line was not abandoned; what ended was the concession and its programme, with the Machipanda line left to deteriorate. Plain-text file of a PDF.",
+      "pattern": {
+        "mechanism": "The Mozambican government handed the rehabilitation and operation of the Beira railway system to a concession in which its own railway enterprise held 49 percent, paid for the Sena line works with an IDA credit whose proceeds went to the concessionaire, and took the line back when the works ran late and over cost.",
+        "preconditions": [
+          "A concessional lender willing to finance a private concessionaire through the state",
+          "A concessionaire with rail operating experience, which this one lacked",
+          "A conceding authority able to enforce the contract, which its 49 percent stake undercut"
+        ]
+      }
+    },
+    {
+      "id": "nam-rundu-elundu-road",
+      "indicatorId": "large_project_delivery",
+      "iso3": "NAM",
+      "title": "Rundu-Elundu trunk road upgrade, built late and over budget",
+      "claim": "Namibia's Roads Authority paved the 370 km Rundu-Elundu road through northern Namibia at 142 percent of its originally planned cost, and construction took 68 months against a planned 46, finishing in March 2012 instead of May 2010.",
+      "metric": {
+        "name": "Actual project cost as a share of the originally planned cost (JPY 18,243 million against a comparable plan of JPY 12,846 million)",
+        "value": 142,
+        "unit": "% of planned cost",
+        "asOf": "2013"
+      },
+      "secondMetric": {
+        "name": "Actual construction period as a share of plan (68 months, August 2006 to March 2012, against 46 months to May 2010)",
+        "value": 148,
+        "unit": "% of planned period",
+        "asOf": "2012"
+      },
+      "started": 2006,
+      "status": "concluded",
+      "source": {
+        "publisher": "Japan International Cooperation Agency, FY2015 Ex-Post Evaluation of Japanese ODA Loan, Rundu-Elundu Road Upgrading Project (external evaluator, OPMAC Corporation)",
+        "url": "https://openjicareport.jica.go.jp/pdf/1000032937.pdf",
+        "tier": "international_organization",
+        "retrievedAt": "2026-10-16"
+      },
+      "limits": "The figures are read from a PDF written by an external evaluator for the lender that financed the road, from documents the lender and the Roads Authority supplied; no Namibian audit of the project was found that opens without restriction. The 142 percent is the evaluator's own comparison after removing land-mine clearance and administrative items from the plan, and the overrun is in yen at nominal prices, so part of it is the 2004 to 2006 materials price rise the plan never included. The 148 percent uses construction completion; on the appraisal definition, which counts the warranty period, the project ran 80 months against 53. The road was built to its planned length, so the result stands, but traffic in the first year after completion reached only about 70 percent of the appraisal target, and the evaluator found the maintenance budget below the appropriate level. One donor-financed road says little about Namibia's wider project portfolio, and the large state builds of the period, the Neckartal Dam and the Mass Housing programme, have no comparable public cost-against-plan account.",
+      "pattern": {
+        "mechanism": "The Roads Authority upgraded a gravel trunk road to asphalt under a concessional Japanese loan, with two civil works packages let to foreign contractors and supervision by a Namibian consultant. A cost estimate fixed two years before the loan, a late loan effectuation and a shortage of local raw materials turned a 46-month build into 68 months and pushed the cost to 142 percent of plan.",
+        "preconditions": [
+          "A road agency able to tender and supervise long rural packages",
+          "A cost estimate refreshed for materials prices before the loan is signed",
+          "A domestic supply of aggregate and other raw materials large enough for the construction programme"
+        ]
+      }
+    },
+    {
+      "id": "jam-schip",
+      "indicatorId": "large_project_delivery",
+      "iso3": "JAM",
+      "title": "Southern Coastal Highway Improvement Project, Part B, over budget and late",
+      "claim": "Jamaica's Auditor General reported in June 2023 that the Part B civil works of the Southern Coastal Highway Improvement Project had grown from an original contract sum of US$195.4 million to a revised US$271.3 million, and that the project, due by October 2022, had a possible revised completion date of March 2024.",
+      "metric": {
+        "name": "Revised Part B civil works contract sum, including the requested US$70.89 million variation to complete the works",
+        "value": 271284891,
+        "unit": "US dollars",
+        "asOf": "2023-06"
+      },
+      "secondMetric": {
+        "name": "Original Part B civil works contract sum",
+        "value": 195449419,
+        "unit": "US dollars",
+        "asOf": "2019"
+      },
+      "started": 2019,
+      "status": "operating",
+      "source": {
+        "publisher": "Auditor General's Department, Jamaica, Performance Audit Report: National Works Agency, Managing the Main Road Network (June 2023)",
+        "url": "https://auditorgeneral.gov.jm/wp-content/uploads/2023/09/Performance-Audit-Report-National-Works-Agency.pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-16"
+      },
+      "limits": "The figures are read from a table in a PDF, which the audit compiled from National Works Agency data and a 2022 Cabinet decision. The revised sum includes a US$70.89 million variation that the ministry had requested from Cabinet, not a final account, and the roughly 39 percent increase is computed from the two sums. A further US$95.9 million of water and sewer pipeline work, added to the scope by Cabinet, sits outside both figures, so the overrun on the whole corridor is larger and also partly a scope decision. The audit is a snapshot of April 2023, when 108 of 553 land parcels were still not handed over. The Office of the Prime Minister later recorded the official opening of the Harbour View to Yallahs leg, and in June 2025 the government information service described the whole project, at US$575 million, as 96 percent complete, with no final cost or completion date published. The works were contracted to and financed by Chinese state entities, so the delays rest on both the contractor's subcontractors and the state's land and utility work.",
+      "pattern": {
+        "mechanism": "The government let the corridor to China Harbour Engineering under a China Exim Bank loan and left land acquisition and utility relocation with the National Works Agency. Work began three years after signing, Cabinet then added water and sewer pipelines to the same corridors, and slow handover of land and utility poles turned a 36-month programme into repeated extensions and a variation to finish the civil works.",
+        "preconditions": [
+          "Right of way and utility relocation settled before the order to commence",
+          "Utility owners brought into the road design at the start, not after works begin",
+          "A contract structure that lets the employer replace slow subcontractors without renegotiating the main contract"
+        ]
+      }
     }
   ]
 }

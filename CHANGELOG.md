@@ -9,6 +9,17 @@ The entries before App 1.0.0 are retrospective, high-level summaries
 reconstructed from the repository history. They document explicit version bumps
 and may skip versions that were never committed.
 
+## App 1.29.1 — 2026-10-16
+
+- **Every country now has a documented case under large project delivery.**
+  Eight new records close the column: Belgium's Brussels express rail works,
+  Norway's Moss double track, Cyprus's fourth highway project, Trinidad and
+  Tobago's Point Fortin highway, Myanmar's grid extension, Mozambique's Beira
+  railway concession, Namibia's Rundu-Elundu road and Jamaica's southern
+  coastal highway. Each one carries an audit or lender figure for cost or
+  time against plan. Three document a loss: the Brussels works stalled, and
+  the Myanmar and Mozambique programmes ended early.
+
 ## App 1.29.0 — 2026-10-16
 
 - **The benchmark now has a two-page brief.** It states the claim, what the
