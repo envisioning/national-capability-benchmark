@@ -9,6 +9,16 @@ The entries before App 1.0.0 are retrospective, high-level summaries
 reconstructed from the repository history. They document explicit version bumps
 and may skip versions that were never committed.
 
+## App 1.31.1 — 2026-10-16
+
+- **Every country is now checked for institutional responsiveness.**
+  Twenty new records and two no-case notes close the
+  column. Four of the records are reversals: Iraq gave back more than half of
+  its 2020 devaluation, Burundi's parallel exchange premium widened again
+  after the 2023 unification step, Zimbabwe abandoned dollarisation in 2019,
+  and both Tajik banks rescued in 2016 were liquidated in 2021. Belarus and
+  Albania close with a note that names the sources searched.
+
 ## App 1.31.0 — 2026-10-16
 
 - **Portugal, Angola, Mozambique and Guinea-Bissau now have readings in

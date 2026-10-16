@@ -3559,6 +3559,89 @@
         }
       ],
       "note": "Tunisia runs several instruments that join laboratories and firms (MOBIDOC, PRF, VRR, PR2I and the industry ministry's PNRI), but none publishes a count of joint projects or partner firms at an open URL. An ANPR, ministry or industry ministry report counting PNRI or PRF projects with firm partners by year would reopen this cell."
+    },
+    {
+      "iso3": "ALB",
+      "indicatorId": "institutional_responsiveness",
+      "checkedAt": "2026-10-16",
+      "searched": [
+        "(1) official records of a rule or programme changed in response to a shock (crisis response schemes, emergency legislation, reform timestamps)",
+        "(2) programme statistics showing speed of rollout after the change",
+        "(3) IMF/World Bank/OECD reviews of the response",
+        "Albanian Investment Council, COVID-19 summary on acts and measures taken in Albania (Normative Acts and DCM No. 305 of 16 April 2020)",
+        "World Bank, Western Balkans Regular Economic Report No. 19, Subdued Recovery, and its country notes (April 2021)",
+        "World Bank Let's Talk Development blog, COVID-19 impact on Albania's private sector (4 January 2021), from the June 2020 Enterprise Survey follow-up",
+        "Energy Community Secretariat, Energy Support Package report 2023, Albania section",
+        "IMF Albania 2021 Article IV staff report (Country Report 21/259), not retrievable from imf.org without a bot block",
+        "Ministry of Finance and Economy, report on the use of the Reserve and Contingency Fund for 2020 (arkiva.financa.gov.al), host did not answer",
+        "Office of the Prime Minister, kryeministria.al statements on the 2020 eligible list and the 2022 Social Resistance Package, pages returned no content",
+        "Existing records for Albania in data/evidence/records.json (the 2019 earthquake reconstruction is already filed under disaster_preparedness)"
+      ],
+      "candidates": [
+        {
+          "name": "COVID-19 financial packages 1 and 2: minimum wage of ALL 26,000 a month for employees of small businesses and a one-off ALL 40,000 for employees of closed large businesses, laid-off workers and tourism workers (Normative Acts and DCM No. 305, March to May 2020)",
+          "failed": "publisher_metric",
+          "why": "The legal acts are published, but no open official or international-organization source opened for this cell carries a delivered count of workers paid. The counts in circulation come from press reports and ministerial statements that give different totals, and the Ministry of Finance report on the 2020 contingency fund could not be retrieved. The World Bank country notes and regional report describe the wage subsidies without a beneficiary count."
+        },
+        {
+          "name": "Share of firms that received government support, from the World Bank Enterprise Survey COVID-19 follow-up (June 2020)",
+          "failed": "publisher_metric",
+          "why": "The World Bank blog states that nearly half of firms received government support by June 2020 and that wage subsidies reached 88 percent of firms that received any support, but it gives no exact share of all firms, and a survey share of 377 firms reports reach among formal firms, not the scale or speed of the programme change."
+        },
+        {
+          "name": "2022 energy price response: regulated household electricity tariff held at pre-crisis level for 1,107,214 households, the planned block tariff above 800 kWh postponed, and the solar collector subsidy for 2,000 households in 2022",
+          "failed": "declared_gap",
+          "why": "The Energy Community report concludes that Albania introduced no new support schemes for vulnerable customers in response to the energy crisis. The 1,107,214 households are the baseline of an existing regulated tariff kept in place, part financed by an EUR 80 million EU budget support contract, and the one new rule, the block tariff, was postponed on 30 September 2022. Holding an existing tariff does not evidence a rule or programme changed in response to new conditions, and the solar subsidy is a target figure, not a delivered count."
+        },
+        {
+          "name": "2022 Social Resistance Package (pension indexation and one-off payments to vulnerable groups)",
+          "failed": "publisher_metric",
+          "why": "Beneficiary figures appear only in Council of Ministers announcements made before payment; the kryeministria.al pages returned no content when opened, and no statistical or international-organization source carrying a delivered count was found."
+        },
+        {
+          "name": "Reversal search: a crisis programme delivered and then cut, lapsed or repealed",
+          "failed": "publisher_metric",
+          "why": "The COVID-19 packages were time-limited by design (April to June 2020) and ended as legislated, which is not a loss of a delivered capability. The postponed 2022 block tariff was never delivered. No delivered Albanian response programme with a documented peak and a documented loss was found in the sources above."
+        }
+      ],
+      "note": "Albania's crisis responses since 2020 are documented as legal acts and government announcements, but delivered beneficiary counts for them sit only in press reports and ministerial statements that contradict each other. The 2019 earthquake reconstruction, the clearest delivered response, is already a disaster_preparedness record and is not filed twice."
+    },
+    {
+      "iso3": "BLR",
+      "indicatorId": "institutional_responsiveness",
+      "checkedAt": "2026-10-16",
+      "searched": [
+        "(1) official records of a rule or programme changed in response to a shock (crisis response schemes, emergency legislation, reform timestamps)",
+        "(2) programme statistics showing speed of rollout after the change",
+        "(3) IMF/World Bank/OECD reviews of the response",
+        "World Bank documents API for Belarus COVID-19 response (Concept PID for P174400, Belarus COVID-19 Social Safety Nets Response, September 2020)",
+        "World Bank projects API for P174400 and P173828 (Belarus Emergency COVID-19 Response Project)",
+        "World Bank API, consumer price inflation for Belarus 2019 to 2025 (FP.CPI.TOTL.ZG)",
+        "IMF Article IV concluding statements for Belarus (2017 and 2018 missions)"
+      ],
+      "candidates": [
+        {
+          "name": "Temporary expansion of the Targeted Social Assistance programme (GASP) in response to COVID-19 (automatic six-month recertification, three-month income reference period, higher threshold for large families)",
+          "failed": "delivered",
+          "why": "The measures appear in the concept document of the World Bank project P174400, which expected to cover around 100,000 people; the World Bank projects API lists that project as Dropped. No ministry or statistical publication carrying a delivered caseload for the temporary rules was found, so the change cannot be shown to have operated at national scale. Read as a reversal it is a reform that was planned and not delivered, not the loss of a delivered capability."
+        },
+        {
+          "name": "Belarus Emergency COVID-19 Response Project (P173828, ventilators, protective equipment, ICU capacity)",
+          "failed": "institutional",
+          "why": "The World Bank projects API lists it as approved on 21 May 2020 and closed on 31 December 2022. It is a World Bank-financed health procurement project rather than Belarusian institutions changing a rule or programme, and no completion figure on delivered capacity was found."
+        },
+        {
+          "name": "Administrative price controls introduced in 2022 after sanctions and rising inflation",
+          "failed": "publisher_metric",
+          "why": "World Bank data show consumer price inflation at 15.2 percent in 2022 and 5.0 percent in 2023, but no open publisher was found that attributes the fall to the price rules or reports their coverage, and the newest IMF Article IV concluding statement found is from the 2018 mission. An inflation series alone cannot carry the claim that a rule change caused it."
+        },
+        {
+          "name": "Rerouting of potash and other exports through Russian ports after transit through Lithuania ended",
+          "failed": "publisher_metric",
+          "why": "No open official or international-organization series on the rerouted volumes was found; the figures in circulation are company or press statements."
+        }
+      ],
+      "note": "Belarus's documented responses to the 2020 pandemic shock and the 2022 sanctions shock rest either on donor project documents for reforms that were dropped or on rule changes with no published delivery figure. The newest independent IMF review found predates both shocks, which leaves few open numbers for any rule change since."
     }
   ]
 }

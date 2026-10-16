@@ -146,6 +146,7 @@ Entregas documentadas ligadas a indicadores ausentes. Elas não alteram as pontu
 
 - **Emergency Flood Assistance Project after the 1998 and 1999 floods** (Adaptação). After floods in 1998 caused damage estimated at US$40 million, about 2 percent of GDP, Tajikistan's Republican Project Coordination Unit for Liquidation of Consequences of Natural Disasters had repaired about 210 km of roads and fully completed seven bridges and structures by the credit's closing on 31 December 2001, with about 80 km of road repairs and three bridges unfinished, and the World Bank rated the outcome unsatisfactory.
 - **Rogun hydropower plant** (Construção). The Government of Tajikistan resumed construction of the Soviet-era Rogun hydropower plant in 2007 from the state budget, signed the main dam contract in 2016 and commissioned two temporary units (400 MW) in 2018 and 2019. It invested about US$3.3 billion in 2007 to 2022, and in November 2024 the World Bank put the cost to complete the plant at US$6.29 billion, with construction completion moved to 2033 and full reservoir impoundment not before 2039, 63 years after construction first began in 1976.
+- **Bank bailout of 2016, and the liquidation of both banks** (Adaptação). The Government of Tajikistan injected TJS 3.3 billion of public money into Agroinvestbank and Tojiksodirotbank in 2016, after both had been in difficulty since 2015, and in May 2021 the National Bank of Tajikistan revoked both licences and the Economic Court of Dushanbe ordered their compulsory liquidation.
 
 ## Contribua
 
