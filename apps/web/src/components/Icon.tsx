@@ -202,6 +202,7 @@ export const CONTRIBUTION_ICON = {
   evidence: 'file-clock',
   use: 'compass',
   code: 'plug',
+  review: 'eye',
   layer: 'globe',
-  fund: 'handshake',
+  venue: 'users',
 } as const satisfies Record<string, IconName>

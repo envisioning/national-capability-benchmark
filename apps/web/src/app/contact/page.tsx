@@ -78,7 +78,7 @@ export default async function ContactPage({
           <Link href={supportHref} className="underline underline-offset-4">
             ways to help
           </Link>{' '}
-          holds the rest, including the funded pieces.
+          holds the rest, including an outside review of the method.
         </p>
       </Section>
 
@@ -102,7 +102,7 @@ export default async function ContactPage({
           >
             the repository on GitHub
           </a>
-          . To fund or support the work, start at{' '}
+          . To take part in the work, start at{' '}
           <Link href={supportHref} className="underline underline-offset-4">
             support
           </Link>

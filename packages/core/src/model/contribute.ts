@@ -20,20 +20,20 @@ import type { ContactTopic } from './contact.js'
  */
 
 /** How much work an entry is, from the point of view of the person doing it. */
-export type ContributionEffort = 'minutes' | 'project' | 'funded'
+export type ContributionEffort = 'minutes' | 'project' | 'commitment'
 
 /** What each tier means, so no page invents its own words for the same size. */
 export const CONTRIBUTION_EFFORT_LABELS: Record<ContributionEffort, string> = {
   minutes: 'Minutes',
   project: 'A piece of work',
-  funded: 'Funded work',
+  commitment: 'An ongoing commitment',
 }
 
 /** The order the tiers are shown in, cheapest first. */
 export const CONTRIBUTION_EFFORTS: readonly ContributionEffort[] = [
   'minutes',
   'project',
-  'funded',
+  'commitment',
 ]
 
 /** Where a contribution goes. The web layer turns this into an address. */
@@ -46,7 +46,8 @@ export type ContributionId =
   | 'layer'
   | 'use'
   | 'code'
-  | 'fund'
+  | 'review'
+  | 'venue'
 
 export type ContributionWay = {
   id: ContributionId
@@ -67,8 +68,8 @@ export type ContributionWay = {
 }
 
 /**
- * Cheapest first inside each tier, so the page reads down into commitment
- * rather than opening on a funding ask.
+ * Cheapest first inside each tier, so the page reads down into commitment.
+ * Envisioning funds the project itself, so no entry asks for money (D164).
  */
 export const CONTRIBUTION_WAYS: readonly ContributionWay[] = [
   {
@@ -133,27 +134,40 @@ export const CONTRIBUTION_WAYS: readonly ContributionWay[] = [
     topic: 'general',
   },
   {
+    id: 'review',
+    label: 'Review the method from outside',
+    ask: 'Read how the benchmark separates capability from income, and tell us where the method fails.',
+    requires:
+      'Familiarity with composite indicators or with regression on country data, and time to read the decision record.',
+    who: 'Statisticians, econometricians and researchers who build or audit indices.',
+    effort: 'project',
+    outcome:
+      'The reading of what is left after income stays offline until someone outside the project has reviewed it. A review is what publishes it, or withdraws it.',
+    channel: 'contact',
+    topic: 'research',
+  },
+  {
     id: 'layer',
     label: 'Build a country layer',
     ask: 'Read one country in its own language, at its own depth, beside the English benchmark.',
     requires:
       'A lexicon, an institution map for that country, and somebody who can keep both current.',
     who: 'Institutions inside the country being read.',
-    effort: 'funded',
+    effort: 'commitment',
     outcome:
       'That country gets its shape, its agenda, its institutions and its subnational spread in the language its decisions are made in.',
     channel: 'contact',
     topic: 'layer',
   },
   {
-    id: 'fund',
-    label: 'Fund a named piece',
-    ask: 'Back one capability, one country layer, one source adapter or one reviewed expert panel.',
-    requires: 'A scope and a window. The work is modular so a funder backs a piece, not a promise.',
-    who: 'Research grants, public procurement, philanthropic funds, multilateral research budgets.',
-    effort: 'funded',
+    id: 'venue',
+    label: 'Host a discussion of the results',
+    ask: 'Put the benchmark in front of people who will argue with it: a seminar, a working group or a newsroom.',
+    requires: 'An audience that makes or studies the decisions a capability score is meant to inform.',
+    who: 'Universities, schools of government, think tanks, statistical offices.',
+    effort: 'commitment',
     outcome:
-      'Each piece has a stated deliverable and a stated effect on the published numbers.',
+      'A discussion surfaces objections and missing measures. Each objection filed is published beside the score it targets, and a missing measure can become a declared gap.',
     channel: 'contact',
     topic: 'support',
   },
@@ -166,62 +180,3 @@ export const contributionsByEffort = (effort: ContributionEffort): ContributionW
 /** One way by id, for a surface that invites a single contribution. */
 export const contributionWay = (id: ContributionId): ContributionWay | null =>
   CONTRIBUTION_WAYS.find((way) => way.id === id) ?? null
-
-/**
- * A funded piece of work: its scope, and what it moves.
- *
- * The support page used to name four pieces with no size on any of them, so a
- * funder could not tell a week from a year, or see what the money bought in
- * the published data. Each entry now states the boundary of the work and the
- * change a reader would see afterwards.
- */
-export type FundablePiece = {
-  id: 'capability' | 'layer' | 'adapter' | 'panel'
-  label: string
-  /** Where the work starts and stops. */
-  scope: string
-  /** What the reader sees change in the benchmark when it lands. */
-  effect: string
-  /** Where money for work this shape usually comes from. */
-  funders: string
-}
-
-export const FUNDABLE_PIECES: readonly FundablePiece[] = [
-  {
-    id: 'capability',
-    label: 'One capability',
-    scope:
-      'One of the nine dimensions: its indicator set reviewed, its declared gaps closed where a dataset exists, and its evidence corpus built out across the country set.',
-    effect:
-      'That dimension stops resting on two or three indicators. Its confidence rises for every country, and the ones below the coverage floor start publishing a score.',
-    funders: 'Most research grants are already this size.',
-  },
-  {
-    id: 'layer',
-    label: 'One country layer',
-    scope:
-      'One country read in its own language: the lexicon, the institution map, the subnational spread and the agenda, kept current for a defined period.',
-    effect:
-      "That country's institutions can argue with the benchmark in the language they make decisions in, and the map shows who would have to act.",
-    funders:
-      'Development banks, schools of government and public foundations inside the country.',
-  },
-  {
-    id: 'adapter',
-    label: 'One source adapter',
-    scope:
-      'One publisher wired into the ingest, validated against every country in the registry, and kept current through their release cycle.',
-    effect:
-      'Confidence rises across all countries at once, because coverage and recency are two of the three things confidence is made of.',
-    funders: 'Statistical agencies, data philanthropies, research infrastructure funds.',
-  },
-  {
-    id: 'panel',
-    label: 'One reviewed expert panel',
-    scope:
-      'A full Delphi run across the country set with named panelists, published dissent and a documented review.',
-    effect:
-      'The estimate layer stops being a session artifact and becomes evidence, which is the difference between a labeled guess and a second reading of a capability.',
-    funders: 'Research programmes and foresight units.',
-  },
-]

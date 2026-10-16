@@ -8984,3 +8984,32 @@ readings, and a print stylesheet scoped to the brief's pages.
 **Overturned by.** A reader of the brief taking a number from it that the
 release does not support, which would show the template wrong; or the
 readings changing so that two pages no longer hold them.
+
+## D164 — The ground layer asks for no money
+
+*Recorded 2026-10-16. Supersedes the funding parts of D78. Extends to the
+ground layer what D158 did for `/brasil/apoie`. Issue #94.*
+
+**Decision.** The project is self-funded (owner, 2026-10-03), so no page asks
+for money. `FUNDABLE_PIECES` and the "Fund a named piece" way leave
+`packages/core/src/model/contribute.ts`, and `/support` loses its "What
+funding pays for" section. The third effort tier, `funded`, becomes
+`commitment`, "An ongoing commitment". It holds building a country layer and
+a new way, hosting a discussion of the results. A second new way, an outside
+review of the method, joins the project tier, because the residual reading
+stays offline until one happens (D65, D138). The `support` contact topic
+keeps its id, so Core and old links still work, and its label becomes "Host a
+discussion of the results". `/contact` stops pointing at funded pieces.
+
+What the ground layer asks for now matches Brazil's page: use, an outside
+review, open data and a venue.
+
+**Why.** A funding ask on a self-funded project is a claim the project does
+not mean. A reader who funds nothing still needed to see what each way in
+changes, and every remaining entry keeps its stated outcome.
+
+**Cost.** Four scoped pieces of work lose their published scope and effect.
+A funder who wants to back one has no page that names it.
+
+**Overturned by.** The owner deciding to take outside money, which would
+bring back a funding section with a scope and an effect on each piece.

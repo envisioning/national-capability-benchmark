@@ -9,6 +9,13 @@ The entries before App 1.0.0 are retrospective, high-level summaries
 reconstructed from the repository history. They document explicit version bumps
 and may skip versions that were never committed.
 
+## App 1.30.1 — 2026-10-16
+
+- **The ways to help ask for no money.** Envisioning pays for the work. The
+  support page now asks for use, evidence, an outside review of the method
+  and a venue to discuss the results, the same things Brazil's page asks
+  for. Decision D164.
+
 ## App 1.30.0 — 2026-10-16
 
 - **The viewer runs on Next 16 and TypeScript 7, and the model on zod 4 and

@@ -25,7 +25,7 @@ export type ContactTopic = (typeof CONTACT_TOPICS)[number]
 
 /** What each topic says on the form. */
 export const CONTACT_TOPIC_LABELS: Record<ContactTopic, string> = {
-  support: 'Fund or host this work',
+  support: 'Host a discussion of the results',
   data: 'Contribute a source, a series or an evidence record',
   layer: 'Build a country layer',
   research: 'Use the benchmark in research or policy',

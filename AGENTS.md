@@ -490,8 +490,8 @@ port 3888. That entry starts Next directly and does not use the proxy.
   `packages/core/src/model/contribute.ts` holds every way in, each with what it
   needs, who brings it, how much work it is and what it changes in the published
   benchmark. `ContributionList` renders it, `contributionHref` in `links.ts`
-  addresses it, and `FUNDABLE_PIECES` holds the funded work with a scope and an
-  effect on each. Never write a list of ways to help into a page. Taking part is
+  addresses it, and no entry asks for money, because Envisioning funds the
+  project itself (D164). Never write a list of ways to help into a page. Taking part is
   a section of the nav tree, `PARTICIPATE_PAGES`, holding `/support`, `/gaps`,
   `/objections` and `/contact`: a page that asks for help and sits in no
   navigation is not published. `/gaps` is a second reading of the indicator

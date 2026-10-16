@@ -3,7 +3,6 @@ import Link from 'next/link'
 import {
   CONTRIBUTION_EFFORTS,
   COUNTRIES,
-  FUNDABLE_PIECES,
   INDICATORS,
   isDeclaredGap,
   REPO_URL,
@@ -24,7 +23,7 @@ import {
 export const metadata: Metadata = {
   title: 'Ways to help, NCB',
   description:
-    'Every way to take part in the National Capability Benchmark, from a five-minute correction to a funded piece of work.',
+    'Every way to take part in the National Capability Benchmark, from a five-minute correction to hosting a discussion of the results.',
 }
 
 /** What each tier is for, above the cards in it. */
@@ -33,8 +32,8 @@ const EFFORT_HINT: Record<(typeof CONTRIBUTION_EFFORTS)[number], string> = {
     'You know something the data does not. Each of these takes one message.',
   project:
     'You have a case, a series or a decision to test the benchmark against. These take real work and change what the benchmark can measure.',
-  funded:
-    'The work is modular on purpose, so a funder backs a named piece with a scope and a stated effect.',
+  commitment:
+    'These ask an institution to stay with the benchmark for a while: to keep a country reading current, or to put the results in front of people who will argue with them.',
 }
 
 /**
@@ -42,9 +41,9 @@ const EFFORT_HINT: Record<(typeof CONTRIBUTION_EFFORTS)[number], string> = {
  *
  * The page renders the contribution registry in `@ncb/core` rather than
  * restating it, and it opens on the cheapest thing a reader can do rather than
- * on a funding ask. A country layer may hold its own reading of this page,
- * written for that country's institutions and its own funding venues. See D71
- * and D78.
+ * on a funding ask. Envisioning funds the project itself, so the page asks
+ * for no money (D164). A country layer may hold its own reading of this page,
+ * written for that country's institutions. See D71, D78 and D158.
  */
 export default function SupportPage() {
   const gaps = INDICATORS.filter(isDeclaredGap).length
@@ -54,7 +53,8 @@ export default function SupportPage() {
       <PageTitle>Support the benchmark</PageTitle>
       <Headline>
         The benchmark scores {COUNTRIES.length} countries on nine capabilities from public data,
-        and its code is open. It still needs use, evidence and time. The ways to help below start
+        and its code is open. Envisioning pays for the work and asks for no money. It needs use,
+        evidence, an outside review and people who will argue with it. The ways to help below start
         with the cheapest.
       </Headline>
 
@@ -70,7 +70,7 @@ export default function SupportPage() {
               ? 'Start here if you have five minutes'
               : effort === 'project'
                 ? 'These take a piece of work'
-                : 'These need funding'
+                : 'These take an ongoing commitment'
           }
           hint={EFFORT_HINT[effort]}
         >
@@ -88,43 +88,10 @@ export default function SupportPage() {
         </Section>
       ))}
 
-      <Section
-        title="What funding pays for"
-        hint="Each piece names its scope and what changes in the published data once it is done."
-      >
-        <div className="space-y-8">
-          {FUNDABLE_PIECES.map((piece) => (
-            <div key={piece.id} className="max-w-3xl">
-              <h3 className="text-xl font-medium tracking-tight">{piece.label}</h3>
-              <dl className="mt-3 space-y-2 text-lg leading-relaxed">
-                <div>
-                  <dt className="inline font-medium">Scope. </dt>
-                  <dd className="inline">{piece.scope}</dd>
-                </div>
-                <div>
-                  <dt className="inline font-medium">Effect. </dt>
-                  <dd className="inline">{piece.effect}</dd>
-                </div>
-                <div>
-                  <dt className="inline font-medium">Funded by. </dt>
-                  <dd className="inline text-[var(--muted)]">{piece.funders}</dd>
-                </div>
-              </dl>
-            </div>
-          ))}
-        </div>
-        <p className="mt-8 max-w-3xl text-lg leading-relaxed">
-          If you work at one of those funders, or you know which funder a piece fits,{' '}
-          <Link href={contactTopicHref('support')} className="underline underline-offset-4">
-            write to us
-          </Link>{' '}
-          and say which piece.
-        </p>
-      </Section>
 
       <Section
         title="Read the limits first"
-        hint="Do not fund it or quote it without knowing where it fails."
+        hint="Do not quote it or build on it without knowing where it fails."
       >
         <ul className="max-w-3xl space-y-4 text-lg leading-relaxed">
           <li>
