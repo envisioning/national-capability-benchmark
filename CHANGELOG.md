@@ -17,8 +17,9 @@ and may skip versions that were never committed.
   strategic studies institute and Russia's science and technology forecast
   to 2030. One documents a loss: the staff ceiling of Ukraine's National
   Institute for Strategic Studies fell from 350 posts in 2010 to 234 in
-  2019. 17 countries close with a note, most because their planning or
-  forecasting bodies do not look past the budget cycle.
+  2019. 17 countries close with a note, most because their bodies do
+  economic forecasting or development planning, or ran a single exercise
+  with donor money.
 
 ## App 1.31.13 — 2026-10-17
 
