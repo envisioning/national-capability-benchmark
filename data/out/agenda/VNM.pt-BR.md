@@ -1,6 +1,6 @@
 # Agenda de capacidades: Vietnã
 
-*Gerada em 2026-10-16*
+*Gerada em 2026-10-17*
 
 A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, sem classificação geral, e cada pontuação traz ao lado a solidez da evidência. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma pontuação.
 
@@ -9,14 +9,14 @@ A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 | Dimensão | Pontuação | Solidez | Tendência |
 | --- | --- | --- | --- |
 | Antecipação | 27,7 | 0,46 (utilizável) | +13,6 em 10 anos, com base em 2 indicadores |
-| Agência | 61,6 | 0,56 (utilizável) | sem tendência comparável |
-| Coordenação | 80,2 | 0,4 (fraca) | sem tendência comparável |
-| Confiança | 42,9 | 0,49 (utilizável) | sem tendência comparável |
+| Agência | 63,5 | 0,63 (utilizável) | sem tendência comparável |
+| Coordenação | 81,4 | 0,47 (utilizável) | sem tendência comparável |
+| Confiança | 38,8 | 0,54 (utilizável) | sem tendência comparável |
 | Aprendizagem | 43,6 | 0,54 (utilizável) | sem tendência comparável |
-| Experimentação | 13,3 | 0,33 (fraca) | +1,7 em 10 anos, com base em 3 indicadores |
+| Experimentação | 15,2 | 0,41 (fraca) | +3,1 em 10 anos, com base em 3 indicadores |
 | Adaptação | 88,1 | 0,62 (utilizável) | sem tendência comparável |
-| Construção | 75,8 | 0,55 (utilizável) | +16 em 10 anos, com base em 3 indicadores |
-| Propósito compartilhado | 44,3 | 0,25 (fraca) | sem tendência comparável |
+| Construção | 76 | 0,55 (utilizável) | +16 em 10 anos, com base em 3 indicadores |
+| Propósito compartilhado | 43,6 | 0,25 (fraca) | sem tendência comparável |
 
 ## Dimensões com as pontuações mais baixas
 
@@ -31,15 +31,15 @@ Em que medida o país consegue identificar mudanças emergentes e se preparar pa
 - Registros de evidência desta dimensão em outros países, com êxitos e retrocessos, que não entram em nenhuma pontuação: Embrapa, uma aposta de cinquenta anos na agricultura tropical (Brasil); The Delta Programme and its fund (Países Baixos); Lei de Informática, uma política industrial setorial (Brasil); CGEE, o centro de estudos estratégicos (Brasil); Centre for Strategic Futures, foresight inside government (Singapura); Legally binding carbon budgets (Reino Unido); Fukushima decommissioning roadmap, a 30–40-year risk-reduction horizon (Japão); National basic-research funding allocation (China); PLANAPP and REPLAN, a centre-of-government foresight network (Portugal); Labour Market Intelligence Programme and forward skills planning (África do Sul); Government Report on the Future and the parliamentary Committee for the Future (Finlândia); Foresight Centre at the Riigikogu (Arenguseire Keskus) (Estônia); Office of Technology Assessment, defunded and closed in 1995 (Estados Unidos); Rządowe Centrum Studiów Strategicznych, liquidated in 2006 (Polônia); Office of Technology Assessment at the German Bundestag (TAB) (Alemanha); National Assembly Futures Institute (Coreia do Sul); Federal Chancellery situation and environment analysis (Perspektivstab) (Suíça); Senate foresight delegation (Délégation sénatoriale à la prospective) (França); Senate Commission on Future Challenges, Science, Technology and Innovation (Chile); Policy Horizons Canada, the federal foresight unit, and its 2024 disruption scan (Canadá); Framtidskommissionen, the Prime Minister's time-limited future commission (Suécia); National Planning Commission foresight work for Malawi 2063 (Malawi); Bureau National de la Prospective et de la Veille Stratégique and the national prospective studies (Costa do Marfim); Teknologiraadet, the Norwegian Board of Technology (Noruega); Teknologiraadet, the Danish Board of Technology, abolished in 2012 (Dinamarca); Bureau federal du Plan (Bélgica); Special Secretariat of Foresight (now of Long-term Planning) (Grécia); STRATA foresight for the Lietuva 2050 state progress strategy (Lituânia); Institut Royal des Etudes Stratégiques (IRES) (Marrocos); Long-term Insights Briefings under the Public Service Act 2020 (Nova Zelândia).
 - Lacunas declaradas: Capacidade governamental de prospecção, Compromissos de pesquisa de longo prazo.
 
-### Confiança: 42,9, solidez utilizável
+### Confiança: 38,8, solidez utilizável
 
 Quanta cooperação é possível para além do círculo pessoal mais próximo?
 
 - A pontuação se apoia em 5 indicadores observados.
-- No topo da escala, entre as pontuações com evidência utilizável: Dinamarca 94,1, Noruega 91,3, Finlândia 89,7.
+- No topo da escala, entre as pontuações com evidência utilizável: Suécia 90,3, Nova Zelândia 83,2, Estônia 75,7.
 - Registros de evidência desta dimensão em outros países, com êxitos e retrocessos, que não entram em nenhuma pontuação: Cadastro Único, o registro social unificado (Brasil); Portal da Transparência, as contas federais abertas (Brasil); MyData, citizen-directed data portability (Coreia do Sul); Singapore Courts' case-clearance discipline (Singapura); Civil-court clearance and the CEPEJ monitoring series (Portugal).
 - Lacunas declaradas: Confiança nas instituições públicas, Taxa de resolução de processos judiciais.
-- Bases rejeitadas: Estado de direito, Controle da corrupção, Taxa de homicídios dolosos.
+- Bases rejeitadas: Estado de direito, Controle da corrupção, Tempo para executar um contrato, Taxa de homicídios dolosos.
 
 ### Aprendizagem: 43,6, solidez utilizável
 
@@ -62,7 +62,7 @@ Até que ponto as pessoas conseguem se ver como participantes de um projeto comu
 - Lacunas declaradas: Sentimento de pertencimento nacional, Voluntariado, Polarização política.
 - Bases rejeitadas: Voz e prestação de contas.
 
-### Experimentação: solidez 0,33, fraca
+### Experimentação: solidez 0,41, fraca
 
 Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e melhoradas?
 
@@ -70,21 +70,14 @@ Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e 
 - Lacunas declaradas: Operações de capital de risco, Empresas em sandboxes regulatórios, Empresas derivadas de pesquisa universitária.
 - Bases rejeitadas: Parcela empresarial do P&D.
 
-### Coordenação: solidez 0,4, fraca
-
-Com que eficácia atores independentes conseguem se organizar em torno de objetivos comuns?
-
-- A pontuação se apoia em 3 indicadores observados.
-- Lacunas declaradas: Colaboração universidade-empresa, Colaboração público-privada.
-- Bases rejeitadas: Efetividade governamental, Qualidade regulatória, Desempenho logístico.
-
 ## Dimensões com as pontuações mais altas
 
 Estas dimensões têm pontuação de pelo menos 50, com evidência utilizável.
 
 - Adaptação: 88,1, solidez utilizável
-- Construção: 75,8, solidez utilizável
-- Agência: 61,6, solidez utilizável
+- Coordenação: 81,4, solidez utilizável
+- Construção: 76, solidez utilizável
+- Agência: 63,5, solidez utilizável
 
 ## Com o que o Vietnã conta
 
@@ -103,7 +96,7 @@ As condições descrevem com o que um país conta: infraestrutura, acesso, dinhe
 | Aprendizagem | Educação profissional no ensino secundário | 5,8 % das matrículas no ensino secundário | 1990 | 88º de 125 |
 | Adaptação | Participação na força de trabalho | 78,4 % das pessoas com 15 anos ou mais | 2025 | 24º de 125 |
 | Adaptação | Assinaturas de banda larga fixa | 23,7 por 100 pessoas | 2024 | 54º de 125 |
-| Adaptação | Perdas na transmissão de eletricidade | 6,6 % da produção | 2023 | 34º de 117 |
+| Adaptação | Perdas na transmissão de eletricidade | 6,7 % da produção | 2024 | 35º de 117 |
 | Adaptação | Emprego informal | 67 % do emprego | 2024 | 62º de 102 |
 | Construção | Produto por pessoa ocupada | 27.957,3 dólares PPC constantes de 2021 | 2025 | 83º de 123 |
 

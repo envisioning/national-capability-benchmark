@@ -1,6 +1,6 @@
 # Agenda de capacidades: Dinamarca
 
-*Gerada em 2026-10-16*
+*Gerada em 2026-10-17*
 
 A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, sem classificação geral, e cada pontuação traz ao lado a solidez da evidência. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma pontuação.
 
@@ -9,34 +9,42 @@ A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 | Dimensão | Pontuação | Solidez | Tendência |
 | --- | --- | --- | --- |
 | Antecipação | 98,1 | 0,46 (utilizável) | +13,3 em 10 anos, com base em 2 indicadores |
-| Agência | 72,8 | 0,56 (utilizável) | sem tendência comparável |
-| Coordenação | 99,6 | 0,23 (muito fraca) | sem tendência comparável |
-| Confiança | 94,1 | 0,5 (utilizável) | sem tendência comparável |
+| Agência | 65,3 | 0,44 (fraca) | sem tendência comparável |
+| Coordenação | sem pontuação | 0,1 (muito fraca) | sem tendência comparável |
+| Confiança | 97,8 | 0,41 (fraca) | sem tendência comparável |
 | Aprendizagem | 66 | 0,55 (utilizável) | sem tendência comparável |
-| Experimentação | 42,3 | 0,33 (fraca) | -2,6 em 10 anos, com base em 3 indicadores |
+| Experimentação | 40,6 | 0,41 (fraca) | -6,8 em 10 anos, com base em 3 indicadores |
 | Adaptação | 79,3 | 0,62 (utilizável) | sem tendência comparável |
-| Construção | 52,9 | 0,57 (utilizável) | +6,4 em 10 anos, com base em 3 indicadores |
-| Propósito compartilhado | 75 | 0,42 (fraca) | -2,6 em 10 anos, com base em 2 indicadores |
+| Construção | 53 | 0,57 (utilizável) | +6,4 em 10 anos, com base em 3 indicadores |
+| Propósito compartilhado | 74,4 | 0,42 (fraca) | -2,5 em 10 anos, com base em 2 indicadores |
 
 ## Dimensões com evidência fraca
 
 A solidez da evidência está abaixo da faixa utilizável, de modo que a pontuação diz pouco sobre o país enquanto faltarem dados.
 
-### Coordenação: solidez 0,23, muito fraca
+### Coordenação: solidez 0,1, muito fraca
 
 Com que eficácia atores independentes conseguem se organizar em torno de objetivos comuns?
 
-- A pontuação se apoia em 2 indicadores observados.
+- A pontuação se apoia em um indicador observado.
 - Lacunas declaradas: Colaboração universidade-empresa, Colaboração público-privada.
-- Bases rejeitadas: Efetividade governamental, Qualidade regulatória, Desempenho logístico.
+- Bases rejeitadas: Efetividade governamental, Qualidade regulatória, Desempenho logístico, Tempo de exportação na fronteira.
 
-### Experimentação: solidez 0,33, fraca
+### Experimentação: solidez 0,41, fraca
 
 Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e melhoradas?
 
 - A pontuação se apoia em 4 indicadores observados.
 - Lacunas declaradas: Operações de capital de risco, Empresas em sandboxes regulatórios, Empresas derivadas de pesquisa universitária.
 - Bases rejeitadas: Parcela empresarial do P&D.
+
+### Confiança: solidez 0,41, fraca
+
+Quanta cooperação é possível para além do círculo pessoal mais próximo?
+
+- A pontuação se apoia em 4 indicadores observados.
+- Lacunas declaradas: Confiança nas instituições públicas, Taxa de resolução de processos judiciais.
+- Bases rejeitadas: Estado de direito, Controle da corrupção, Tempo para executar um contrato, Taxa de homicídios dolosos.
 
 ### Propósito compartilhado: solidez 0,42, fraca
 
@@ -46,16 +54,22 @@ Até que ponto as pessoas conseguem se ver como participantes de um projeto comu
 - Lacunas declaradas: Sentimento de pertencimento nacional, Voluntariado, Polarização política.
 - Bases rejeitadas: Voz e prestação de contas.
 
+### Agência: solidez 0,44, fraca
+
+Em que medida pessoas e organizações conseguem transformar intenção em ação?
+
+- A pontuação se apoia em 3 indicadores observados.
+- Lacunas declaradas: Adultos que realizam tarefas digitais.
+- Bases rejeitadas: Tempo para abrir uma empresa.
+
 ## Dimensões com as pontuações mais altas
 
 Estas dimensões têm pontuação de pelo menos 50, com evidência utilizável.
 
 - Antecipação: 98,1, solidez utilizável
-- Confiança: 94,1, solidez utilizável
 - Adaptação: 79,3, solidez utilizável
-- Agência: 72,8, solidez utilizável
 - Aprendizagem: 66, solidez utilizável
-- Construção: 52,9, solidez utilizável
+- Construção: 53, solidez utilizável
 
 ## Com o que a Dinamarca conta
 
@@ -74,7 +88,7 @@ As condições descrevem com o que um país conta: infraestrutura, acesso, dinhe
 | Aprendizagem | Educação profissional no ensino secundário | 20,6 % das matrículas no ensino secundário | 2018 | 34º de 125 |
 | Adaptação | Participação na força de trabalho | 82,2 % das pessoas com 15 anos ou mais | 2025 | 9º de 125 |
 | Adaptação | Assinaturas de banda larga fixa | 43,4 por 100 pessoas | 2024 | 10º de 125 |
-| Adaptação | Perdas na transmissão de eletricidade | 6,2 % da produção | 2024 | 30º de 117 |
+| Adaptação | Perdas na transmissão de eletricidade | 7,2 % da produção | 2025 | 42º de 117 |
 | Adaptação | Emprego informal | 2,2 % do emprego | 2025 | 4º de 102 |
 | Construção | Produto por pessoa ocupada | 140.396,5 dólares PPC constantes de 2021 | 2025 | 7º de 123 |
 

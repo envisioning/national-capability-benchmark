@@ -239,6 +239,7 @@ export const ES: Lexicon = {
     new_business_density: 'Densidad de empresas nuevas',
     business_start_days: 'Tiempo para abrir una empresa',
     business_start_procedures: 'Trámites para abrir una empresa',
+    business_entry_efficiency: 'Eficiencia del registro de empresas',
     internet_users: 'Personas que usan internet',
     account_ownership: 'Titularidad de cuentas financieras',
     domestic_credit_private: 'Crédito al sector privado',
@@ -248,6 +249,7 @@ export const ES: Lexicon = {
     regulatory_quality: 'Calidad regulatoria',
     logistics_performance: 'Desempeño logístico',
     time_to_export: 'Tiempo de exportación en frontera',
+    trade_compliance_efficiency: 'Eficiencia del cumplimiento comercial',
     budget_execution_fidelity: 'Cumplimiento del presupuesto aprobado',
     university_industry_collaboration: 'Colaboración universidad-empresa',
     civil_society_strength: 'Fortaleza de la sociedad civil',
@@ -255,6 +257,7 @@ export const ES: Lexicon = {
     rule_of_law: 'Estado de derecho',
     control_of_corruption: 'Control de la corrupción',
     contract_enforcement_days: 'Tiempo para hacer cumplir un contrato',
+    dispute_resolution_efficiency: 'Eficiencia en la resolución de disputas',
     court_compliance: 'Cumplimiento de las decisiones judiciales por el gobierno',
     bribery_incidence: 'Incidencia de sobornos',
     court_case_clearance: 'Tasa de resolución de casos judiciales',
@@ -367,6 +370,8 @@ export const ES: Lexicon = {
       'Sociedades de responsabilidad limitada nuevas registradas por cada 1000 personas en edad de trabajar.',
     business_start_days: 'Días calendario para completar los trámites de registro de una empresa.',
     business_start_procedures: 'Número de trámites oficiales distintos para registrar una empresa.',
+    business_entry_efficiency:
+      'Puntuación B-READY del tiempo y el costo de registrar una nueva sociedad de responsabilidad limitada, nacional o extranjera.',
     internet_users: 'Proporción de la población que usó internet en los últimos tres meses.',
     account_ownership: 'Adultos con una cuenta en un banco o en un proveedor de dinero móvil.',
     domestic_credit_private:
@@ -379,12 +384,16 @@ export const ES: Lexicon = {
       'Puntuación general del Índice de Desempeño Logístico, a partir de una encuesta a operadores internacionales de carga.',
     time_to_export:
       'Horas para completar el cumplimiento aduanero y fronterizo de un envío de exportación estándar.',
+    trade_compliance_efficiency:
+      'Puntuación B-READY del tiempo y el costo que las empresas declaran para cumplir los requisitos de exportación e importación.',
     rule_of_law:
       'Estimación de los Indicadores Mundiales de Gobernanza sobre la confianza en las reglas de la sociedad y su cumplimiento.',
     control_of_corruption:
       'Estimación de los Indicadores Mundiales de Gobernanza sobre el grado en que el poder público se usa para beneficio privado.',
     contract_enforcement_days:
       'Días calendario desde la presentación de una demanda comercial hasta el pago.',
+    dispute_resolution_efficiency:
+      'Puntuación B-READY de la fiabilidad, el tiempo y el costo de resolver una disputa comercial y ejecutar la decisión.',
     bribery_incidence:
       'Empresas a las que se pidió al menos un soborno en seis trámites públicos que cubren servicios, permisos, licencias e impuestos.',
     homicide_rate: 'Homicidios intencionales por cada 100 000 personas.',

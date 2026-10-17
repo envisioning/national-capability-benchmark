@@ -1,6 +1,6 @@
 # Agenda de capacidades: Malásia
 
-*Gerada em 2026-10-16*
+*Gerada em 2026-10-17*
 
 A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, sem classificação geral, e cada pontuação traz ao lado a solidez da evidência. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma pontuação.
 
@@ -9,26 +9,18 @@ A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 | Dimensão | Pontuação | Solidez | Tendência |
 | --- | --- | --- | --- |
 | Antecipação | 54,4 | 0,46 (utilizável) | +23,2 em 10 anos, com base em 2 indicadores |
-| Agência | 52 | 0,56 (utilizável) | sem tendência comparável |
-| Coordenação | 86,1 | 0,41 (fraca) | sem tendência comparável |
-| Confiança | 58,2 | 0,5 (utilizável) | sem tendência comparável |
+| Agência | 55,9 | 0,63 (utilizável) | sem tendência comparável |
+| Coordenação | 76,1 | 0,48 (utilizável) | sem tendência comparável |
+| Confiança | 56,6 | 0,55 (utilizável) | sem tendência comparável |
 | Aprendizagem | 50,9 | 0,55 (utilizável) | sem tendência comparável |
-| Experimentação | 11,4 | 0,33 (fraca) | -3,4 em 10 anos, com base em 3 indicadores |
+| Experimentação | 12,5 | 0,41 (fraca) | -3,2 em 10 anos, com base em 3 indicadores |
 | Adaptação | 77,9 | 0,59 (utilizável) | sem tendência comparável |
-| Construção | 74,1 | 0,57 (utilizável) | +6,2 em 10 anos, com base em 3 indicadores |
-| Propósito compartilhado | 55,7 | 0,4 (fraca) | -1 em 10 anos, com base em 2 indicadores |
+| Construção | 74,3 | 0,57 (utilizável) | +6,3 em 10 anos, com base em 3 indicadores |
+| Propósito compartilhado | 55,3 | 0,4 (fraca) | -1,1 em 10 anos, com base em 2 indicadores |
 
 ## Dimensões com evidência fraca
 
 A solidez da evidência está abaixo da faixa utilizável, de modo que a pontuação diz pouco sobre o país enquanto faltarem dados.
-
-### Experimentação: solidez 0,33, fraca
-
-Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e melhoradas?
-
-- A pontuação se apoia em 4 indicadores observados.
-- Lacunas declaradas: Operações de capital de risco, Empresas em sandboxes regulatórios, Empresas derivadas de pesquisa universitária.
-- Bases rejeitadas: Parcela empresarial do P&D.
 
 ### Propósito compartilhado: solidez 0,4, fraca
 
@@ -38,23 +30,24 @@ Até que ponto as pessoas conseguem se ver como participantes de um projeto comu
 - Lacunas declaradas: Sentimento de pertencimento nacional, Voluntariado, Polarização política.
 - Bases rejeitadas: Voz e prestação de contas.
 
-### Coordenação: solidez 0,41, fraca
+### Experimentação: solidez 0,41, fraca
 
-Com que eficácia atores independentes conseguem se organizar em torno de objetivos comuns?
+Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e melhoradas?
 
-- A pontuação se apoia em 3 indicadores observados.
-- Lacunas declaradas: Colaboração universidade-empresa, Colaboração público-privada.
-- Bases rejeitadas: Efetividade governamental, Qualidade regulatória, Desempenho logístico.
+- A pontuação se apoia em 4 indicadores observados.
+- Lacunas declaradas: Operações de capital de risco, Empresas em sandboxes regulatórios, Empresas derivadas de pesquisa universitária.
+- Bases rejeitadas: Parcela empresarial do P&D.
 
 ## Dimensões com as pontuações mais altas
 
 Estas dimensões têm pontuação de pelo menos 50, com evidência utilizável.
 
 - Adaptação: 77,9, solidez utilizável
-- Construção: 74,1, solidez utilizável
-- Confiança: 58,2, solidez utilizável
+- Coordenação: 76,1, solidez utilizável
+- Construção: 74,3, solidez utilizável
+- Confiança: 56,6, solidez utilizável
+- Agência: 55,9, solidez utilizável
 - Antecipação: 54,4, solidez utilizável
-- Agência: 52, solidez utilizável
 - Aprendizagem: 50,9, solidez utilizável
 
 ## Com o que a Malásia conta
@@ -74,7 +67,7 @@ As condições descrevem com o que um país conta: infraestrutura, acesso, dinhe
 | Aprendizagem | Educação profissional no ensino secundário | 10,3 % das matrículas no ensino secundário | 2019 | 66º de 125 |
 | Adaptação | Participação na força de trabalho | 70,7 % das pessoas com 15 anos ou mais | 2025 | 63º de 125 |
 | Adaptação | Assinaturas de banda larga fixa | 13,5 por 100 pessoas | 2024 | 70º de 125 |
-| Adaptação | Perdas na transmissão de eletricidade | 6,9 % da produção | 2023 | 40º de 117 |
+| Adaptação | Perdas na transmissão de eletricidade | 6,9 % da produção | 2024 | 38º de 117 |
 | Construção | Produto por pessoa ocupada | 70.821,2 dólares PPC constantes de 2021 | 2025 | 42º de 123 |
 
 ## Agenda de medição

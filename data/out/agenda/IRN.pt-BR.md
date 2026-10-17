@@ -1,6 +1,6 @@
 # Agenda de capacidades: Irã
 
-*Gerada em 2026-10-16*
+*Gerada em 2026-10-17*
 
 A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, sem classificação geral, e cada pontuação traz ao lado a solidez da evidência. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma pontuação.
 
@@ -9,27 +9,18 @@ A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 | Dimensão | Pontuação | Solidez | Tendência |
 | --- | --- | --- | --- |
 | Antecipação | 33,8 | 0,46 (utilizável) | +14,7 em 10 anos, com base em 2 indicadores |
-| Agência | 24,8 | 0,49 (utilizável) | sem tendência comparável |
-| Coordenação | 35,3 | 0,23 (muito fraca) | sem tendência comparável |
-| Confiança | 39,5 | 0,37 (fraca) | sem tendência comparável |
+| Agência | 33 | 0,38 (fraca) | sem tendência comparável |
+| Coordenação | sem pontuação | 0,1 (muito fraca) | sem tendência comparável |
+| Confiança | 26,7 | 0,28 (fraca) | sem tendência comparável |
 | Aprendizagem | 37 | 0,32 (fraca) | sem tendência comparável |
-| Experimentação | 55,2 | 0,33 (fraca) | +0,7 em 10 anos, com base em 3 indicadores |
+| Experimentação | 39,8 | 0,41 (fraca) | -25,9 em 10 anos, com base em 3 indicadores |
 | Adaptação | 72,4 | 0,53 (utilizável) | sem tendência comparável |
-| Construção | 45 | 0,38 (fraca) | +10,8 em 10 anos, com base em 2 indicadores |
-| Propósito compartilhado | 72,8 | 0,26 (fraca) | sem tendência comparável |
+| Construção | 45,1 | 0,38 (fraca) | +10,8 em 10 anos, com base em 2 indicadores |
+| Propósito compartilhado | 72,1 | 0,26 (fraca) | sem tendência comparável |
 
 ## Dimensões com as pontuações mais baixas
 
 São as pontuações mais baixas entre as dimensões com evidência utilizável. As dimensões com evidência fraca aparecem na seção seguinte.
-
-### Agência: 24,8, solidez utilizável
-
-Em que medida pessoas e organizações conseguem transformar intenção em ação?
-
-- A pontuação se apoia em 4 indicadores observados.
-- No topo da escala, entre as pontuações com evidência utilizável: Nova Zelândia 92,3, Austrália 89,2, Estônia 84,3.
-- Registros de evidência desta dimensão em outros países, com êxitos e retrocessos, que não entram em nenhuma pontuação: Singapore's national ICT-skills measurement and baseline (Singapura); e.escola, a national laptop-and-broadband push (Portugal); Pradhan Mantri Gramin Digital Saksharta Abhiyan (Índia); Puntos México Conectado, national digital learning centres (México).
-- Lacunas declaradas: Adultos que realizam tarefas digitais.
 
 ### Antecipação: 33,8, solidez utilizável
 
@@ -44,13 +35,13 @@ Em que medida o país consegue identificar mudanças emergentes e se preparar pa
 
 A solidez da evidência está abaixo da faixa utilizável, de modo que a pontuação diz pouco sobre o país enquanto faltarem dados.
 
-### Coordenação: solidez 0,23, muito fraca
+### Coordenação: solidez 0,1, muito fraca
 
 Com que eficácia atores independentes conseguem se organizar em torno de objetivos comuns?
 
-- A pontuação se apoia em 2 indicadores observados.
+- A pontuação se apoia em um indicador observado.
 - Lacunas declaradas: Colaboração universidade-empresa, Colaboração público-privada.
-- Bases rejeitadas: Efetividade governamental, Qualidade regulatória, Desempenho logístico.
+- Bases rejeitadas: Efetividade governamental, Qualidade regulatória, Desempenho logístico, Tempo de exportação na fronteira.
 
 ### Propósito compartilhado: solidez 0,26, fraca
 
@@ -60,6 +51,14 @@ Até que ponto as pessoas conseguem se ver como participantes de um projeto comu
 - Lacunas declaradas: Sentimento de pertencimento nacional, Voluntariado, Polarização política.
 - Bases rejeitadas: Voz e prestação de contas.
 
+### Confiança: solidez 0,28, fraca
+
+Quanta cooperação é possível para além do círculo pessoal mais próximo?
+
+- A pontuação se apoia em 3 indicadores observados.
+- Lacunas declaradas: Confiança nas instituições públicas, Taxa de resolução de processos judiciais.
+- Bases rejeitadas: Estado de direito, Controle da corrupção, Tempo para executar um contrato, Taxa de homicídios dolosos.
+
 ### Aprendizagem: solidez 0,32, fraca
 
 Com que eficácia o país adquire, distribui e atualiza conhecimento?
@@ -67,21 +66,13 @@ Com que eficácia o país adquire, distribui e atualiza conhecimento?
 - A pontuação se apoia em 2 indicadores observados.
 - Lacunas declaradas: Participação de adultos em aprendizagem.
 
-### Experimentação: solidez 0,33, fraca
+### Agência: solidez 0,38, fraca
 
-Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e melhoradas?
+Em que medida pessoas e organizações conseguem transformar intenção em ação?
 
-- A pontuação se apoia em 4 indicadores observados.
-- Lacunas declaradas: Operações de capital de risco, Empresas em sandboxes regulatórios, Empresas derivadas de pesquisa universitária.
-- Bases rejeitadas: Parcela empresarial do P&D.
-
-### Confiança: solidez 0,37, fraca
-
-Quanta cooperação é possível para além do círculo pessoal mais próximo?
-
-- A pontuação se apoia em 4 indicadores observados.
-- Lacunas declaradas: Confiança nas instituições públicas, Taxa de resolução de processos judiciais.
-- Bases rejeitadas: Estado de direito, Controle da corrupção, Taxa de homicídios dolosos.
+- A pontuação se apoia em 3 indicadores observados.
+- Lacunas declaradas: Adultos que realizam tarefas digitais.
+- Bases rejeitadas: Tempo para abrir uma empresa.
 
 ### Construção: solidez 0,38, fraca
 
@@ -90,6 +81,14 @@ Em que medida o país consegue transformar planos e conhecimento em sistemas que
 - A pontuação se apoia em 3 indicadores observados.
 - Lacunas declaradas: Entrega de grandes projetos, Empresas jovens que ganham escala.
 - Bases rejeitadas: Qualidade da infraestrutura logística.
+
+### Experimentação: solidez 0,41, fraca
+
+Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e melhoradas?
+
+- A pontuação se apoia em 4 indicadores observados.
+- Lacunas declaradas: Operações de capital de risco, Empresas em sandboxes regulatórios, Empresas derivadas de pesquisa universitária.
+- Bases rejeitadas: Parcela empresarial do P&D.
 
 ## Dimensões com as pontuações mais altas
 
@@ -114,7 +113,7 @@ As condições descrevem com o que um país conta: infraestrutura, acesso, dinhe
 | Aprendizagem | Educação profissional no ensino secundário | 13,4 % das matrículas no ensino secundário | 2017 | 55º de 125 |
 | Adaptação | Participação na força de trabalho | 45 % das pessoas com 15 anos ou mais | 2025 | 120º de 125 |
 | Adaptação | Assinaturas de banda larga fixa | 12,1 por 100 pessoas | 2024 | 75º de 125 |
-| Adaptação | Perdas na transmissão de eletricidade | 10 % da produção | 2023 | 68º de 117 |
+| Adaptação | Perdas na transmissão de eletricidade | 10,1 % da produção | 2024 | 69º de 117 |
 | Construção | Produto por pessoa ocupada | 57.467,8 dólares PPC constantes de 2021 | 2025 | 53º de 123 |
 
 ## Agenda de medição

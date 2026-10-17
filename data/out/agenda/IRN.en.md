@@ -1,6 +1,6 @@
 # Capability agenda: Iran
 
-*Generated 2026-10-16*
+*Generated 2026-10-17*
 
 The frame includes 125 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
@@ -9,27 +9,18 @@ The frame includes 125 countries. Each dimension is scored from 0 to 100, with n
 | Dimension | Score | Confidence | Trend |
 | --- | --- | --- | --- |
 | Anticipation | 33.8 | 0.46 (usable) | +14.7 over 10 years using 2 indicators |
-| Agency | 24.8 | 0.49 (usable) | no trend |
-| Coordination | 35.3 | 0.23 (very thin) | no trend |
-| Trust | 39.5 | 0.37 (thin) | no trend |
+| Agency | 33 | 0.38 (thin) | no trend |
+| Coordination | not scored | 0.1 (very thin) | no trend |
+| Trust | 26.7 | 0.28 (thin) | no trend |
 | Learning | 37 | 0.32 (thin) | no trend |
-| Experimentation | 55.2 | 0.33 (thin) | +0.7 over 10 years using 3 indicators |
+| Experimentation | 39.8 | 0.41 (thin) | -25.9 over 10 years using 3 indicators |
 | Adaptability | 72.4 | 0.53 (usable) | no trend |
-| Building | 45 | 0.38 (thin) | +10.8 over 10 years using 2 indicators |
-| Shared Purpose | 72.8 | 0.26 (thin) | no trend |
+| Building | 45.1 | 0.38 (thin) | +10.8 over 10 years using 2 indicators |
+| Shared Purpose | 72.1 | 0.26 (thin) | no trend |
 
 ## What to raise
 
 These are the lowest scores with usable evidence. Thin evidence appears below.
-
-### Agency: 24.8, confidence usable
-
-How able are individuals and organizations to turn an intention into action?
-
-- Uses 4 observed indicators.
-- Highest usable scores: New Zealand 92.3, Australia 89.2, Estonia 84.3.
-- Related deliveries in other countries: Singapore's national ICT-skills measurement and baseline (Singapore); e.escola, a national laptop-and-broadband push (Portugal); Pradhan Mantri Gramin Digital Saksharta Abhiyan (India); Puntos México Conectado, national digital learning centres (Mexico).
-- Missing indicators: Adults doing digital tasks.
 
 ### Anticipation: 33.8, confidence usable
 
@@ -44,13 +35,13 @@ How capable is the country of identifying and preparing for emerging change?
 
 The evidence is too thin to manage these dimensions confidently.
 
-### Coordination: confidence 0.23, very thin
+### Coordination: confidence 0.1, very thin
 
 How effectively can independent actors organize around shared objectives?
 
-- Uses 2 observed indicators.
+- Uses one observed indicator.
 - Missing indicators: University-industry collaboration, Public-private collaboration.
-- Rejected datasets: Government effectiveness, Regulatory quality, Logistics performance.
+- Rejected datasets: Government effectiveness, Regulatory quality, Logistics performance, Border compliance time to export.
 
 ### Shared Purpose: confidence 0.26, thin
 
@@ -60,6 +51,14 @@ To what extent can people imagine themselves as participants in a common project
 - Missing indicators: Sense of national belonging, Volunteering, Political polarisation.
 - Rejected datasets: Voice and accountability.
 
+### Trust: confidence 0.28, thin
+
+How much cooperation is possible beyond immediate personal networks?
+
+- Uses 3 observed indicators.
+- Missing indicators: Trust in public institutions, Court case clearance rate.
+- Rejected datasets: Rule of law, Control of corruption, Time to enforce a contract, Intentional homicide rate.
+
 ### Learning: confidence 0.32, thin
 
 How effectively does the country acquire, distribute, and update knowledge?
@@ -67,21 +66,13 @@ How effectively does the country acquire, distribute, and update knowledge?
 - Uses 2 observed indicators.
 - Missing indicators: Adult learning participation.
 
-### Experimentation: confidence 0.33, thin
+### Agency: confidence 0.38, thin
 
-How easily can new approaches be attempted, tested, abandoned, and improved?
+How able are individuals and organizations to turn an intention into action?
 
-- Uses 4 observed indicators.
-- Missing indicators: Venture deals, Firms through regulatory sandboxes, University spinouts.
-- Rejected datasets: Business share of R&D.
-
-### Trust: confidence 0.37, thin
-
-How much cooperation is possible beyond immediate personal networks?
-
-- Uses 4 observed indicators.
-- Missing indicators: Trust in public institutions, Court case clearance rate.
-- Rejected datasets: Rule of law, Control of corruption, Intentional homicide rate.
+- Uses 3 observed indicators.
+- Missing indicators: Adults doing digital tasks.
+- Rejected datasets: Time to start a business.
 
 ### Building: confidence 0.38, thin
 
@@ -90,6 +81,14 @@ How capable is the country of turning plans and knowledge into functioning syste
 - Uses 3 observed indicators.
 - Missing indicators: Large project delivery, Firm scale-up rate.
 - Rejected datasets: Logistics infrastructure quality.
+
+### Experimentation: confidence 0.41, thin
+
+How easily can new approaches be attempted, tested, abandoned, and improved?
+
+- Uses 4 observed indicators.
+- Missing indicators: Venture deals, Firms through regulatory sandboxes, University spinouts.
+- Rejected datasets: Business share of R&D.
 
 ## What to keep watching
 
@@ -114,7 +113,7 @@ Conditions describe what a country has to work with: infrastructure, access, mon
 | Learning | Vocational share of secondary | 13.4 % of secondary | 2017 | 55 of 125 |
 | Adaptability | Labour force participation | 45 % aged 15+ | 2025 | 120 of 125 |
 | Adaptability | Fixed broadband subscriptions | 12.1 per 100 people | 2024 | 75 of 125 |
-| Adaptability | Electricity transmission losses | 10 % of output | 2023 | 68 of 117 |
+| Adaptability | Electricity transmission losses | 10.1 % of output | 2024 | 69 of 117 |
 | Building | Output per worker | 57,467.8 constant 2021 PPP $ | 2025 | 53 of 123 |
 
 ## Missing data

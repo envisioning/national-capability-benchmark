@@ -50,7 +50,7 @@ export const WB_DATABASES: Record<number, WbDatabase> = {
   1: {
     id: 1,
     name: 'Doing Business',
-    note: 'Discontinued and frozen at 2019. Recency marks its values down.',
+    note: 'Discontinued and frozen at 2019. Recency marks its values down. Two rows still read it; B-READY replaced the other three in World Development Indicators (D167).',
   },
   3: {
     id: 3,

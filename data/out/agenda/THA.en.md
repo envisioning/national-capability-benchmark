@@ -1,6 +1,6 @@
 # Capability agenda: Thailand
 
-*Generated 2026-10-16*
+*Generated 2026-10-17*
 
 The frame includes 125 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
@@ -9,14 +9,14 @@ The frame includes 125 countries. Each dimension is scored from 0 to 100, with n
 | Dimension | Score | Confidence | Trend |
 | --- | --- | --- | --- |
 | Anticipation | 46.2 | 0.46 (usable) | +8.6 over 10 years using 2 indicators |
-| Agency | 47.2 | 0.56 (usable) | no trend |
-| Coordination | 80.3 | 0.41 (thin) | no trend |
-| Trust | 56.6 | 0.5 (usable) | no trend |
+| Agency | 32.4 | 0.44 (thin) | no trend |
+| Coordination | 78.7 | 0.29 (thin) | no trend |
+| Trust | 49.9 | 0.41 (thin) | no trend |
 | Learning | 42.4 | 0.55 (usable) | no trend |
-| Experimentation | 13.8 | 0.33 (thin) | +0.2 over 10 years using 3 indicators |
+| Experimentation | 15.7 | 0.41 (thin) | +1.1 over 10 years using 3 indicators |
 | Adaptability | 87.6 | 0.62 (usable) | no trend |
-| Building | 64.8 | 0.57 (usable) | -0.4 over 10 years using 3 indicators |
-| Shared Purpose | 65.4 | 0.43 (thin) | +3.5 over 10 years using 2 indicators |
+| Building | 64.9 | 0.57 (usable) | -0.4 over 10 years using 3 indicators |
+| Shared Purpose | 64.8 | 0.43 (thin) | +3.4 over 10 years using 2 indicators |
 
 ## What to raise
 
@@ -40,20 +40,19 @@ How capable is the country of identifying and preparing for emerging change?
 - Related deliveries in other countries: Embrapa, a fifty-year bet on tropical agriculture (Brazil); The Delta Programme and its fund (Netherlands); Lei de Informática, a sectoral industrial policy (Brazil); CGEE, the strategic studies center (Brazil); Centre for Strategic Futures, foresight inside government (Singapore); Legally binding carbon budgets (United Kingdom); Fukushima decommissioning roadmap, a 30–40-year risk-reduction horizon (Japan); National basic-research funding allocation (China); PLANAPP and REPLAN, a centre-of-government foresight network (Portugal); Labour Market Intelligence Programme and forward skills planning (South Africa); Government Report on the Future and the parliamentary Committee for the Future (Finland); Foresight Centre at the Riigikogu (Arenguseire Keskus) (Estonia); Office of Technology Assessment, defunded and closed in 1995 (United States); Rządowe Centrum Studiów Strategicznych, liquidated in 2006 (Poland); Office of Technology Assessment at the German Bundestag (TAB) (Germany); National Assembly Futures Institute (South Korea); Federal Chancellery situation and environment analysis (Perspektivstab) (Switzerland); Senate foresight delegation (Délégation sénatoriale à la prospective) (France); Senate Commission on Future Challenges, Science, Technology and Innovation (Chile); Policy Horizons Canada, the federal foresight unit, and its 2024 disruption scan (Canada); Framtidskommissionen, the Prime Minister's time-limited future commission (Sweden); National Planning Commission foresight work for Malawi 2063 (Malawi); Bureau National de la Prospective et de la Veille Stratégique and the national prospective studies (Côte d'Ivoire); Teknologiraadet, the Norwegian Board of Technology (Norway); Teknologiraadet, the Danish Board of Technology, abolished in 2012 (Denmark); Bureau federal du Plan (Belgium); Special Secretariat of Foresight (now of Long-term Planning) (Greece); STRATA foresight for the Lietuva 2050 state progress strategy (Lithuania); Institut Royal des Etudes Stratégiques (IRES) (Morocco); Long-term Insights Briefings under the Public Service Act 2020 (New Zealand).
 - Missing indicators: Government foresight capacity, Long-horizon research commitments.
 
-### Agency: 47.2, confidence usable
-
-How able are individuals and organizations to turn an intention into action?
-
-- Uses 4 observed indicators.
-- Highest usable scores: New Zealand 92.3, Australia 89.2, Estonia 84.3.
-- Related deliveries in other countries: Singapore's national ICT-skills measurement and baseline (Singapore); e.escola, a national laptop-and-broadband push (Portugal); Pradhan Mantri Gramin Digital Saksharta Abhiyan (India); Puntos México Conectado, national digital learning centres (Mexico).
-- Missing indicators: Adults doing digital tasks.
-
 ## What to measure first
 
 The evidence is too thin to manage these dimensions confidently.
 
-### Experimentation: confidence 0.33, thin
+### Coordination: confidence 0.29, thin
+
+How effectively can independent actors organize around shared objectives?
+
+- Uses 2 observed indicators.
+- Missing indicators: University-industry collaboration, Public-private collaboration.
+- Rejected datasets: Government effectiveness, Regulatory quality, Logistics performance, Border compliance time to export.
+
+### Experimentation: confidence 0.41, thin
 
 How easily can new approaches be attempted, tested, abandoned, and improved?
 
@@ -61,13 +60,13 @@ How easily can new approaches be attempted, tested, abandoned, and improved?
 - Missing indicators: Venture deals, Firms through regulatory sandboxes, University spinouts.
 - Rejected datasets: Business share of R&D.
 
-### Coordination: confidence 0.41, thin
+### Trust: confidence 0.41, thin
 
-How effectively can independent actors organize around shared objectives?
+How much cooperation is possible beyond immediate personal networks?
 
-- Uses 3 observed indicators.
-- Missing indicators: University-industry collaboration, Public-private collaboration.
-- Rejected datasets: Government effectiveness, Regulatory quality, Logistics performance.
+- Uses 4 observed indicators.
+- Missing indicators: Trust in public institutions, Court case clearance rate.
+- Rejected datasets: Rule of law, Control of corruption, Time to enforce a contract, Intentional homicide rate.
 
 ### Shared Purpose: confidence 0.43, thin
 
@@ -77,13 +76,20 @@ To what extent can people imagine themselves as participants in a common project
 - Missing indicators: Sense of national belonging, Volunteering, Political polarisation.
 - Rejected datasets: Voice and accountability.
 
+### Agency: confidence 0.44, thin
+
+How able are individuals and organizations to turn an intention into action?
+
+- Uses 3 observed indicators.
+- Missing indicators: Adults doing digital tasks.
+- Rejected datasets: Time to start a business.
+
 ## What to keep watching
 
 These dimensions score at least 50 with usable evidence.
 
 - Adaptability: 87.6, confidence usable
-- Building: 64.8, confidence usable
-- Trust: 56.6, confidence usable
+- Building: 64.9, confidence usable
 
 ## What Thailand has to work with
 
@@ -102,7 +108,7 @@ Conditions describe what a country has to work with: infrastructure, access, mon
 | Learning | Vocational share of secondary | 11.2 % of secondary | 2019 | 63 of 125 |
 | Adaptability | Labour force participation | 75.8 % aged 15+ | 2025 | 40 of 125 |
 | Adaptability | Fixed broadband subscriptions | 14.9 per 100 people | 2024 | 69 of 125 |
-| Adaptability | Electricity transmission losses | 7.2 % of output | 2023 | 43 of 117 |
+| Adaptability | Electricity transmission losses | 7 % of output | 2024 | 40 of 117 |
 | Adaptability | Informal employment | 63.2 % of employment | 2024 | 57 of 102 |
 | Building | Output per worker | 39,617.4 constant 2021 PPP $ | 2025 | 73 of 123 |
 

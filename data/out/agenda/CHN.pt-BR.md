@@ -1,6 +1,6 @@
 # Agenda de capacidades: China
 
-*Gerada em 2026-10-16*
+*Gerada em 2026-10-17*
 
 A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, sem classificação geral, e cada pontuação traz ao lado a solidez da evidência. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma pontuação.
 
@@ -9,14 +9,14 @@ A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 | Dimensão | Pontuação | Solidez | Tendência |
 | --- | --- | --- | --- |
 | Antecipação | 30,1 | 0,46 (utilizável) | +10,7 em 10 anos, com base em 2 indicadores |
-| Agência | 76,3 | 0,56 (utilizável) | sem tendência comparável |
-| Coordenação | 67,9 | 0,41 (fraca) | sem tendência comparável |
-| Confiança | 55,3 | 0,5 (utilizável) | sem tendência comparável |
+| Agência | 72,5 | 0,44 (fraca) | sem tendência comparável |
+| Coordenação | 55,7 | 0,29 (fraca) | sem tendência comparável |
+| Confiança | 49,5 | 0,41 (fraca) | sem tendência comparável |
 | Aprendizagem | 76 | 0,55 (utilizável) | sem tendência comparável |
-| Experimentação | 100 | 0,24 (muito fraca) | +19,5 em 10 anos, com base em 3 indicadores |
+| Experimentação | 98 | 0,32 (fraca) | +14,8 em 10 anos, com base em 3 indicadores |
 | Adaptação | 79,6 | 0,46 (utilizável) | sem tendência comparável |
-| Construção | 77,4 | 0,57 (utilizável) | -5,1 em 10 anos, com base em 3 indicadores |
-| Propósito compartilhado | 29,9 | 0,41 (fraca) | +0,8 em 10 anos, com base em 2 indicadores |
+| Construção | 77,5 | 0,57 (utilizável) | -5,1 em 10 anos, com base em 3 indicadores |
+| Propósito compartilhado | 29,4 | 0,41 (fraca) | +0,7 em 10 anos, com base em 2 indicadores |
 
 ## Dimensões com as pontuações mais baixas
 
@@ -35,7 +35,15 @@ Em que medida o país consegue identificar mudanças emergentes e se preparar pa
 
 A solidez da evidência está abaixo da faixa utilizável, de modo que a pontuação diz pouco sobre o país enquanto faltarem dados.
 
-### Experimentação: solidez 0,24, muito fraca
+### Coordenação: solidez 0,29, fraca
+
+Com que eficácia atores independentes conseguem se organizar em torno de objetivos comuns?
+
+- A pontuação se apoia em 2 indicadores observados.
+- Lacunas declaradas: Colaboração universidade-empresa, Colaboração público-privada.
+- Bases rejeitadas: Efetividade governamental, Qualidade regulatória, Desempenho logístico, Tempo de exportação na fronteira.
+
+### Experimentação: solidez 0,32, fraca
 
 Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e melhoradas?
 
@@ -51,23 +59,29 @@ Até que ponto as pessoas conseguem se ver como participantes de um projeto comu
 - Lacunas declaradas: Sentimento de pertencimento nacional, Voluntariado, Polarização política.
 - Bases rejeitadas: Voz e prestação de contas.
 
-### Coordenação: solidez 0,41, fraca
+### Confiança: solidez 0,41, fraca
 
-Com que eficácia atores independentes conseguem se organizar em torno de objetivos comuns?
+Quanta cooperação é possível para além do círculo pessoal mais próximo?
+
+- A pontuação se apoia em 4 indicadores observados.
+- Lacunas declaradas: Confiança nas instituições públicas, Taxa de resolução de processos judiciais.
+- Bases rejeitadas: Estado de direito, Controle da corrupção, Tempo para executar um contrato, Taxa de homicídios dolosos.
+
+### Agência: solidez 0,44, fraca
+
+Em que medida pessoas e organizações conseguem transformar intenção em ação?
 
 - A pontuação se apoia em 3 indicadores observados.
-- Lacunas declaradas: Colaboração universidade-empresa, Colaboração público-privada.
-- Bases rejeitadas: Efetividade governamental, Qualidade regulatória, Desempenho logístico.
+- Lacunas declaradas: Adultos que realizam tarefas digitais.
+- Bases rejeitadas: Tempo para abrir uma empresa.
 
 ## Dimensões com as pontuações mais altas
 
 Estas dimensões têm pontuação de pelo menos 50, com evidência utilizável.
 
 - Adaptação: 79,6, solidez utilizável
-- Construção: 77,4, solidez utilizável
-- Agência: 76,3, solidez utilizável
+- Construção: 77,5, solidez utilizável
 - Aprendizagem: 76, solidez utilizável
-- Confiança: 55,3, solidez utilizável
 
 ## Com o que a China conta
 
@@ -86,7 +100,7 @@ As condições descrevem com o que um país conta: infraestrutura, acesso, dinhe
 | Aprendizagem | Educação profissional no ensino secundário | 18,1 % das matrículas no ensino secundário | 2019 | 42º de 125 |
 | Adaptação | Participação na força de trabalho | 74 % das pessoas com 15 anos ou mais | 2025 | 47º de 125 |
 | Adaptação | Assinaturas de banda larga fixa | 47,2 por 100 pessoas | 2024 | 3º de 125 |
-| Adaptação | Perdas na transmissão de eletricidade | 3,4 % da produção | 2023 | 4º de 117 |
+| Adaptação | Perdas na transmissão de eletricidade | 3,1 % da produção | 2024 | 4º de 117 |
 | Construção | Produto por pessoa ocupada | 48.125,8 dólares PPC constantes de 2021 | 2025 | 62º de 123 |
 
 ## Agenda de medição

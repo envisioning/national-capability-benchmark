@@ -75,6 +75,7 @@ export const PT_PT = withOverride(PT_BR, {
     basic_research_share: 'Compromissos de investigação de longo prazo',
     business_start_days: 'Tempo para criar uma empresa',
     business_start_procedures: 'Procedimentos para criar uma empresa',
+    business_entry_efficiency: 'Eficiência na criação de empresas',
     perceived_control: 'Perceção de controlo sobre a própria vida',
     budget_execution_fidelity: 'Fidelidade da execução orçamental',
     control_of_corruption: 'Controlo da corrupção',
@@ -127,6 +128,8 @@ export const PT_PT = withOverride(PT_BR, {
     business_start_days: 'Dias de calendário para cumprir os procedimentos de registo de uma empresa.',
     business_start_procedures:
       'Número de procedimentos oficiais distintos para registar uma empresa.',
+    business_entry_efficiency:
+      'Pontuação B-READY do tempo e do custo para registar uma nova sociedade por quotas, nacional ou estrangeira.',
     internet_users: 'Proporção da população que usou a internet nos últimos três meses.',
     account_ownership:
       'Adultos com conta num banco ou numa instituição de pagamento por telemóvel.',
@@ -152,6 +155,8 @@ export const PT_PT = withOverride(PT_BR, {
       'Estimativa dos Indicadores Mundiais de Governação para o uso do poder público em benefício privado.',
     contract_enforcement_days:
       'Dias de calendário entre a entrada de uma ação de cobrança comercial em tribunal e o pagamento.',
+    dispute_resolution_efficiency:
+      'Pontuação B-READY da fiabilidade, do tempo e do custo de resolver um litígio comercial e executar a decisão.',
     bribery_incidence:
       'Empresas a quem foi pedido pelo menos um suborno em seis transações com o poder público, entre ligações de serviços, licenças, autorizações e impostos.',
     homicide_rate: 'Homicídios voluntários por 100 mil pessoas.',

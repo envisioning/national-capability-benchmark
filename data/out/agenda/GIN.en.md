@@ -1,6 +1,6 @@
 # Capability agenda: Guinea
 
-*Generated 2026-10-16*
+*Generated 2026-10-17*
 
 The frame includes 125 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
@@ -9,9 +9,9 @@ The frame includes 125 countries. Each dimension is scored from 0 to 100, with n
 | Dimension | Score | Confidence | Trend |
 | --- | --- | --- | --- |
 | Anticipation | 10.1 | 0.46 (usable) | +6.5 over 10 years using 2 indicators |
-| Agency | 51.7 | 0.41 (thin) | no trend |
-| Coordination | 64.5 | 0.31 (thin) | no trend |
-| Trust | 68.1 | 0.3 (thin) | no trend |
+| Agency | 38.6 | 0.3 (thin) | no trend |
+| Coordination | 60.2 | 0.19 (very thin) | no trend |
+| Trust | 56.9 | 0.21 (very thin) | no trend |
 | Learning | 17.7 | 0.55 (usable) | no trend |
 | Experimentation | 0.3 | 0.11 (very thin) | no trend |
 | Adaptability | 39.6 | 0.46 (usable) | no trend |
@@ -69,28 +69,29 @@ How easily can new approaches be attempted, tested, abandoned, and improved?
 - Missing indicators: Venture deals, Firms through regulatory sandboxes, University spinouts.
 - Rejected datasets: Business share of R&D.
 
-### Trust: confidence 0.3, thin
-
-How much cooperation is possible beyond immediate personal networks?
-
-- Uses 3 observed indicators.
-- Missing indicators: Trust in public institutions, Court case clearance rate.
-- Rejected datasets: Rule of law, Control of corruption, Intentional homicide rate.
-
-### Coordination: confidence 0.31, thin
+### Coordination: confidence 0.19, very thin
 
 How effectively can independent actors organize around shared objectives?
 
-- Uses 3 observed indicators.
+- Uses 2 observed indicators.
 - Missing indicators: University-industry collaboration, Public-private collaboration.
-- Rejected datasets: Government effectiveness, Regulatory quality, Logistics performance.
+- Rejected datasets: Government effectiveness, Regulatory quality, Logistics performance, Border compliance time to export.
 
-### Agency: confidence 0.41, thin
+### Trust: confidence 0.21, very thin
+
+How much cooperation is possible beyond immediate personal networks?
+
+- Uses 2 observed indicators.
+- Missing indicators: Trust in public institutions, Court case clearance rate.
+- Rejected datasets: Rule of law, Control of corruption, Time to enforce a contract, Intentional homicide rate.
+
+### Agency: confidence 0.3, thin
 
 How able are individuals and organizations to turn an intention into action?
 
-- Uses 3 observed indicators.
+- Uses 2 observed indicators.
 - Missing indicators: Adults doing digital tasks.
+- Rejected datasets: Time to start a business.
 
 ### Building: confidence 0.44, thin
 
@@ -109,7 +110,7 @@ Conditions describe what a country has to work with: infrastructure, access, mon
 | Anticipation | Secure internet servers | 12.3 per million people | 2024 | 120 of 125 |
 | Agency | Individuals using the internet | 33.3 % of population | 2024 | 111 of 125 |
 | Agency | Financial account ownership | 36 % aged 15+ | 2024 | 113 of 122 |
-| Agency | Credit to the private sector | 10.6 % of GDP | 2025 | 115 of 124 |
+| Agency | Credit to the private sector | 10.6 % of GDP | 2025 | 116 of 124 |
 | Learning | Tertiary enrolment | 10.9 % gross | 2014 | 103 of 124 |
 | Learning | Public education expenditure | 1.7 % of GDP | 2023 | 118 of 125 |
 | Learning | Vocational share of secondary | 3.7 % of secondary | 2014 | 99 of 125 |

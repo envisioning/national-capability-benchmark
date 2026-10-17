@@ -1,6 +1,6 @@
 # Agenda de capacidades: Singapura
 
-*Gerada em 2026-10-16*
+*Gerada em 2026-10-17*
 
 A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, sem classificação geral, e cada pontuação traz ao lado a solidez da evidência. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma pontuação.
 
@@ -9,13 +9,13 @@ A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 | Dimensão | Pontuação | Solidez | Tendência |
 | --- | --- | --- | --- |
 | Antecipação | 82,2 | 0,46 (utilizável) | +17 em 10 anos, com base em 2 indicadores |
-| Agência | 74,5 | 0,56 (utilizável) | sem tendência comparável |
-| Coordenação | 74 | 0,4 (fraca) | sem tendência comparável |
-| Confiança | 70,4 | 0,49 (utilizável) | sem tendência comparável |
+| Agência | 74,9 | 0,63 (utilizável) | sem tendência comparável |
+| Coordenação | 70,9 | 0,47 (utilizável) | sem tendência comparável |
+| Confiança | 67,2 | 0,54 (utilizável) | sem tendência comparável |
 | Aprendizagem | 84,2 | 0,54 (utilizável) | sem tendência comparável |
-| Experimentação | 60,5 | 0,36 (fraca) | +3,6 em 10 anos, com base em 3 indicadores |
+| Experimentação | 60,9 | 0,43 (fraca) | +0,1 em 10 anos, com base em 3 indicadores |
 | Adaptação | 72,6 | 0,62 (utilizável) | sem tendência comparável |
-| Construção | 75 | 0,57 (utilizável) | +6,4 em 10 anos, com base em 3 indicadores |
+| Construção | 75,2 | 0,57 (utilizável) | +6,5 em 10 anos, com base em 3 indicadores |
 | Propósito compartilhado | 32,3 | 0,28 (fraca) | sem tendência comparável |
 
 ## Dimensões com evidência fraca
@@ -30,7 +30,7 @@ Até que ponto as pessoas conseguem se ver como participantes de um projeto comu
 - Lacunas declaradas: Sentimento de pertencimento nacional, Voluntariado, Polarização política.
 - Bases rejeitadas: Voz e prestação de contas.
 
-### Experimentação: solidez 0,36, fraca
+### Experimentação: solidez 0,43, fraca
 
 Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e melhoradas?
 
@@ -38,24 +38,17 @@ Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e 
 - Lacunas declaradas: Operações de capital de risco, Empresas em sandboxes regulatórios, Empresas derivadas de pesquisa universitária.
 - Bases rejeitadas: Parcela empresarial do P&D.
 
-### Coordenação: solidez 0,4, fraca
-
-Com que eficácia atores independentes conseguem se organizar em torno de objetivos comuns?
-
-- A pontuação se apoia em 3 indicadores observados.
-- Lacunas declaradas: Colaboração universidade-empresa, Colaboração público-privada.
-- Bases rejeitadas: Efetividade governamental, Qualidade regulatória, Desempenho logístico.
-
 ## Dimensões com as pontuações mais altas
 
 Estas dimensões têm pontuação de pelo menos 50, com evidência utilizável.
 
 - Aprendizagem: 84,2, solidez utilizável
 - Antecipação: 82,2, solidez utilizável
-- Construção: 75, solidez utilizável
-- Agência: 74,5, solidez utilizável
+- Construção: 75,2, solidez utilizável
+- Agência: 74,9, solidez utilizável
 - Adaptação: 72,6, solidez utilizável
-- Confiança: 70,4, solidez utilizável
+- Coordenação: 70,9, solidez utilizável
+- Confiança: 67,2, solidez utilizável
 
 ## Com o que Singapura conta
 
@@ -74,7 +67,7 @@ As condições descrevem com o que um país conta: infraestrutura, acesso, dinhe
 | Aprendizagem | Educação profissional no ensino secundário | 11,6 % das matrículas no ensino secundário | 2009 | 61º de 125 |
 | Adaptação | Participação na força de trabalho | 77 % das pessoas com 15 anos ou mais | 2025 | 33º de 125 |
 | Adaptação | Assinaturas de banda larga fixa | 27,8 por 100 pessoas | 2024 | 45º de 125 |
-| Adaptação | Perdas na transmissão de eletricidade | 0,2 % da produção | 2023 | 1º de 117 |
+| Adaptação | Perdas na transmissão de eletricidade | 0,2 % da produção | 2024 | 1º de 117 |
 | Construção | Produto por pessoa ocupada | 233.454,4 dólares PPC constantes de 2021 | 2025 | 2º de 123 |
 
 ## Agenda de medição

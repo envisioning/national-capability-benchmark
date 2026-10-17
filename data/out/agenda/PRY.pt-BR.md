@@ -1,6 +1,6 @@
 # Agenda de capacidades: Paraguai
 
-*Gerada em 2026-10-16*
+*Gerada em 2026-10-17*
 
 A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, sem classificação geral, e cada pontuação traz ao lado a solidez da evidência. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma pontuação.
 
@@ -9,14 +9,14 @@ A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 | Dimensão | Pontuação | Solidez | Tendência |
 | --- | --- | --- | --- |
 | Antecipação | 32,7 | 0,46 (utilizável) | +19,5 em 10 anos, com base em 2 indicadores |
-| Agência | 41,9 | 0,41 (fraca) | sem tendência comparável |
-| Coordenação | 59,5 | 0,37 (fraca) | sem tendência comparável |
-| Confiança | 66,3 | 0,29 (fraca) | sem tendência comparável |
+| Agência | 34,9 | 0,49 (utilizável) | sem tendência comparável |
+| Coordenação | 49,4 | 0,44 (fraca) | sem tendência comparável |
+| Confiança | 49,2 | 0,33 (fraca) | sem tendência comparável |
 | Aprendizagem | 30,9 | 0,54 (utilizável) | sem tendência comparável |
-| Experimentação | 12,3 | 0,33 (fraca) | -5,8 em 20 anos, com base em 3 indicadores |
+| Experimentação | 12,1 | 0,41 (fraca) | -8,9 em 20 anos, com base em 3 indicadores |
 | Adaptação | 65,2 | 0,62 (utilizável) | sem tendência comparável |
-| Construção | 38,4 | 0,57 (utilizável) | +2 em 10 anos, com base em 3 indicadores |
-| Propósito compartilhado | 36,5 | 0,32 (fraca) | +7,8 em 10 anos, com base em 2 indicadores |
+| Construção | 38,5 | 0,57 (utilizável) | +2 em 10 anos, com base em 3 indicadores |
+| Propósito compartilhado | 36 | 0,32 (fraca) | +7,7 em 10 anos, com base em 2 indicadores |
 
 ## Dimensões com as pontuações mais baixas
 
@@ -40,12 +40,22 @@ Em que medida o país consegue identificar mudanças emergentes e se preparar pa
 - Registros de evidência desta dimensão em outros países, com êxitos e retrocessos, que não entram em nenhuma pontuação: Embrapa, uma aposta de cinquenta anos na agricultura tropical (Brasil); The Delta Programme and its fund (Países Baixos); Lei de Informática, uma política industrial setorial (Brasil); CGEE, o centro de estudos estratégicos (Brasil); Centre for Strategic Futures, foresight inside government (Singapura); Legally binding carbon budgets (Reino Unido); Fukushima decommissioning roadmap, a 30–40-year risk-reduction horizon (Japão); National basic-research funding allocation (China); PLANAPP and REPLAN, a centre-of-government foresight network (Portugal); Labour Market Intelligence Programme and forward skills planning (África do Sul); Government Report on the Future and the parliamentary Committee for the Future (Finlândia); Foresight Centre at the Riigikogu (Arenguseire Keskus) (Estônia); Office of Technology Assessment, defunded and closed in 1995 (Estados Unidos); Rządowe Centrum Studiów Strategicznych, liquidated in 2006 (Polônia); Office of Technology Assessment at the German Bundestag (TAB) (Alemanha); National Assembly Futures Institute (Coreia do Sul); Federal Chancellery situation and environment analysis (Perspektivstab) (Suíça); Senate foresight delegation (Délégation sénatoriale à la prospective) (França); Senate Commission on Future Challenges, Science, Technology and Innovation (Chile); Policy Horizons Canada, the federal foresight unit, and its 2024 disruption scan (Canadá); Framtidskommissionen, the Prime Minister's time-limited future commission (Suécia); National Planning Commission foresight work for Malawi 2063 (Malawi); Bureau National de la Prospective et de la Veille Stratégique and the national prospective studies (Costa do Marfim); Teknologiraadet, the Norwegian Board of Technology (Noruega); Teknologiraadet, the Danish Board of Technology, abolished in 2012 (Dinamarca); Bureau federal du Plan (Bélgica); Special Secretariat of Foresight (now of Long-term Planning) (Grécia); STRATA foresight for the Lietuva 2050 state progress strategy (Lituânia); Institut Royal des Etudes Stratégiques (IRES) (Marrocos); Long-term Insights Briefings under the Public Service Act 2020 (Nova Zelândia).
 - Lacunas declaradas: Capacidade governamental de prospecção, Compromissos de pesquisa de longo prazo.
 
-### Construção: 38,4, solidez utilizável
+### Agência: 34,9, solidez utilizável
+
+Em que medida pessoas e organizações conseguem transformar intenção em ação?
+
+- A pontuação se apoia em 3 indicadores observados.
+- No topo da escala, entre as pontuações com evidência utilizável: Reino Unido 94,7, Nova Zelândia 91,4, Maurício 85,5.
+- Registros de evidência desta dimensão em outros países, com êxitos e retrocessos, que não entram em nenhuma pontuação: Singapore's national ICT-skills measurement and baseline (Singapura); e.escola, a national laptop-and-broadband push (Portugal); Pradhan Mantri Gramin Digital Saksharta Abhiyan (Índia); Puntos México Conectado, national digital learning centres (México).
+- Lacunas declaradas: Adultos que realizam tarefas digitais.
+- Bases rejeitadas: Tempo para abrir uma empresa.
+
+### Construção: 38,5, solidez utilizável
 
 Em que medida o país consegue transformar planos e conhecimento em sistemas que funcionam?
 
 - A pontuação se apoia em 4 indicadores observados.
-- No topo da escala, entre as pontuações com evidência utilizável: Coreia do Sul 85,1, Irlanda 80,3, China 77,4.
+- No topo da escala, entre as pontuações com evidência utilizável: Coreia do Sul 85,2, Irlanda 80,5, China 77,5.
 - Registros de evidência desta dimensão em outros países, com êxitos e retrocessos, que não entram em nenhuma pontuação: Pix, o sistema de pagamentos instantâneos (Brasil); GOV.BR, a plataforma federal de identidade e serviços (Brasil); X-Road national data exchange layer (Estônia); Pradhan Mantri Jan Dhan Yojana bank accounts (Índia); Electricity supply rebuilt on renewable sources (Uruguai); Plan Ceibal, one connected laptop per child (Uruguai); Sistema Único de Saúde, o sistema público e universal de saúde (Brasil); Programa Nacional de Imunizações e sua erosão (Brasil); Luz para Todos, a eletrificação rural (Brasil); Bolsa Família e o cadastro único por trás dele (Brasil); Eleições nacionais totalmente eletrônicas (Brasil); Petróleo em águas profundas e no pré-sal (Brasil); Seguro Popular, and its abolition (México); Sure Start children's centres, and their erosion (Reino Unido); Grid power, and load shedding (África do Sul); Measles elimination, and its erosion (Estados Unidos); BNDES, o banco nacional de desenvolvimento (Brasil); Casa da Moeda do Brasil, a fabricante oficial de cédulas e moedas (Brasil); Housing and Development Board, public housing at scale (Singapura); AFE passenger rail and network contraction (Uruguai); Flamanville 3 EPR, and the erosion of nuclear new-build delivery (França); Phoenix pay system, and its prolonged failure (Canadá); Groningen gas system, and its closure after induced earthquakes (Países Baixos); DigiD, a shared digital identity rail for public services (Países Baixos); Delta Works, a 43-year national flood-defence programme (Países Baixos); Betuweroute, a freight railway that missed its operating promise (Países Baixos); MijnOverheid, a shared citizen mailbox and data portal (Países Baixos); Fyra V250, a high-speed service withdrawn after a failed launch (Países Baixos); OVpay, nationwide contactless transit payments (Países Baixos); Omgevingswet and the Digital Environment System (Países Baixos); Transantiago, an integrated transport reform with rising subsidy dependence (Chile); 4G road concessions, a national infrastructure portfolio (Colômbia); Reficar, a refinery modernization with a fiscal-liability finding (Colômbia); GIGA School, one learning device per student (Japão); Monju, a fast-breeder programme ended before commercial operation (Japão); Invierte.pe, a national multi-year investment-management system (Peru); Reconstrucción con Cambios, a delayed recovery portfolio (Peru); ICE and a mostly renewable national electricity system (Costa Rica); CCSS universal health-insurance reach (Costa Rica); Metro de Quito, a cross-administration urban rail delivery (Equador); Panama Canal expansion and self-financing operations (Panamá); Metro de Panamá network operations (Panamá); Mi Teleférico urban cable-car network (Bolívia); Industrial lithium carbonate plant below design capacity (Bolívia); ARSAT-3 satellite programme suspended before launch (Argentina); DPWH national infrastructure delivery and transparency portal (Filipinas); Bataan Nuclear Power Plant, a mothballed megaproject (Filipinas); Trans-Sumatra toll-road programme, still short of its planned network (Indonésia); National expressway build-out in 2024 (Vietnã); Cat Linh–Ha Dong metro, a delayed and over-budget delivery (Vietnã); MRT Putrajaya Line (Malásia); Kuala Lumpur–Singapore high-speed rail, terminated before construction (Malásia); Hopewell elevated road-and-rail concession, and its termination (Tailândia); AVE high-speed rail network (Espanha); Castor underground gas storage, and its closure (Espanha); Ostrołęka C coal block, and its abandonment (Polônia); Nya Karolinska Solna public–private hospital project (Suécia); Barsebäck nuclear plant closure and decommissioning (Suécia); New Children's Hospital cost escalation (Irlanda); Rural electrification and near-universal grid coverage (Nicarágua); Gran Misión Vivienda Venezuela's five-million-home milestone (Venezuela); Plano de Recuperação e Resiliência delivery governance (Portugal); Lisbon–Madrid high-speed rail concession, formally abandoned (Portugal); Delhi Commonwealth Games, and the cost-estimate escalation (Índia); MeerKAT radio telescope, a delivered national research facility (África do Sul); CFE Telecomunicaciones e Internet para Todos (México); New International Airport of Mexico, and its cancellation (México); Marmaray, the Bosphorus rail crossing (Turquia); FATİH education technology infrastructure (Turquia); YEKA RES-1 renewable tender, and its cancellation (Turquia); Gotthard Base Tunnel (Suíça); Standard Gauge Railway, Mombasa to Naivasha (Quênia); Canadian long-gun registry, its information system overrun and its dismantling (Canadá); Tel Aviv light rail Red Line (Israel); National high-speed rail network (China); Barakah Nuclear Energy Plant (Emirados Árabes Unidos); Aeropuerto Internacional de Palmerola (Honduras); El Chaparral (3 de Febrero) hydroelectric plant (El Salvador); Programa Ampliado de Inmunizaciones, and its erosion (Venezuela); PetroCaribe-financed public investment programme, and its audited failure (Haiti); Interstate Highway System (Estados Unidos); Programa Nacional de la Vivienda, and its collapse (Cuba); Punta Catalina thermoelectric plant, and its cost overrun (República Dominicana); Grand Paris Express (França); Modjo-Hawassa expressway, World Bank-financed Lot 3 (Etiópia); Línea Rivera rail rehabilitation, and its decay (Uruguai); Gyeongbu high-speed railway (KTX), and its cost and schedule overrun (Coreia do Sul); Gasoducto Sur Peruano, a terminated pipeline concession (Peru); Talara refinery modernisation, delivered late and over cost (Peru); Program 35.000 MW power generation programme, and its schedule slip (Indonésia); El Mutún steel complex, inaugurated in 2025 and found never to have operated (Bolívia); Quang Trach to Pho Noi 500kV circuit-3 transmission line (Vietnã); Coca Codo Sinclair hydroelectric plant (Equador); Floating LNG import terminals of 2022 (Alemanha); Atucha II nuclear plant, and its 33-year build (Argentina); Vistula Spit shipping canal (Przekop Mierzei Wiślanej) (Polônia); Israel Railways electrification and the Jerusalem express line, and their delays (Israel); Samuel De Champlain Bridge corridor (Canadá); Hokuriku Shinkansen Kanazawa to Tsuruga extension, and its overrun (Japão); Botniabanan coastal railway (Suécia); High Speed Two, and the cancellation of Phase 2 (Reino Unido); Crossrail, the Elizabeth line (Reino Unido); Dedicated Freight Corridors, Eastern and Western (Índia); Olmeca refinery at Dos Bocas (México); Inland Rail, and its consolidation at Parkes (Austrália); Kehärata airport rail loop, and its cost overrun (Finlândia); Chixoy hydroelectric project, and its cost and time overrun (Guatemala); Abuja-Kaduna-Zaria-Kano dual carriageway, and the termination of its 2017 contract (Nigéria); Neelum-Jhelum Hydropower Project, and its shutdown (Paquistão); Tarbela Fourth Extension Hydropower Project (Paquistão); MOSE, the Venice lagoon flood barrier (Itália); Padma Multipurpose Bridge (Bangladesh); Noor-Ouarzazate solar complex (Marrocos); Pap-Angren railway and Kamchik tunnel (Uzbequistão); Pro-Routes high-priority road reopening and maintenance (República Democrática do Congo); Karuma Hydropower Project (Uganda); Julius Nyerere Hydropower Project (Tanzânia); A1 motorway, Bucharest to Nadlac (Romênia); South-West Roads: Western Europe-Western China corridor (CAREC 1b and 6b) (Cazaquistão); Reseau Ferroviaire Rapide de Tunis, lines D and E, and its overruns (Tunísia); Southern Expressway (Southern Transport Development Project) (Sri Lanka); Melamchi Water Supply Project, and its erosion after the 2021 flood (Nepal); Harare-Masvingo-Beitbridge highway rehabilitation, behind schedule (Zimbábue); Solar powered milling plants contract, and its erosion (Zâmbia); Urban Water Supply Project (PEMU), part of the Kabala programme for Bamako (Mali); Ouagadougou Water Supply Project (Ziga) (Burkina Faso); Jiji and Mulembwe hydropower project (Burundi); Transport Infrastructure Investment Project (national roads, ports and the Northern Railway) (Madagascar); Energy Sector Support Project (substations and distribution lines) (Malawi); Morupule B coal power station, and its underperformance (Botsuana); Metolong Dam and Water Supply Programme (Lesoto); B6 Belle Rive to Quartier Militaire road upgrade (Maurício); Rahad Irrigation Project, and its cost and time overrun (Sudão); Accra bus rapid transit under the Ghana Urban Transport Project, and its cancellation (Gana); Yabayo-Gagnoa road under the Fourth Highway Project, and its cost and time overrun (Costa do Marfim); Fourth Highway Project: paving of the Mamou-Kankan and Dubreka-Kolaboui roads (Guiné); Realignment of the Congo-Ocean Railway through the Mayombe, and its overruns (República do Congo); Banjul Rehabilitation Project (roads, drainage and sewage), and its delay (Gâmbia); Bissau Port Project, delivered two and a half years late (Guiné-Bissau); Šoštanj thermal power plant unit 6 (TEŠ 6), and its cost overrun (Eslovênia); Rail Baltica in Latvia, and its cost and schedule overrun (Letônia); Koralmbahn Graz to Klagenfurt, opened seven years after its contracted completion date (Áustria); Fehmarn Belt fixed link, and its cost and schedule overrun (Dinamarca); Motorway construction by the Road and Motorway Directorate, and its unit cost (Tchéquia); Pelješac Bridge, the first stage of the road connection to South Dalmatia (Croácia); Decommissioning of the Bohunice V1 nuclear power plant, and its four-year slip (Eslováquia); Decommissioning of the Ignalina nuclear power plant, and its delays (Lituânia); Corridor X motorway sections (E-75 and E-80) (Sérvia); Road Sector Development Project on the M-03 and M-12, and its cut scope (Ucrânia); M6 Minsk to Grodno transit corridor upgrade (Belarus); Federation Road Sector Modernization Project, and its shrunken rehabilitation scope (Bósnia e Herzegovina); Local Roads Improvement Project, and its halved scope (Moldávia); Regional and Local Roads Connectivity Project (Albânia); Kicevo to Ohrid motorway, and its cost and time overrun (Macedônia do Norte); Budapest metro line 4, first section, and its cost and time overrun (Hungria); Road Infrastructure Rehabilitation Project, and its cut after the 2009 budget squeeze (Bulgária); Ain Sokhna supercritical power plant (Egito); Hartha power station units 2 and 3 rehabilitation, and its halt (Iraque); Greater Beirut Water Supply Project (Awali to Beirut conveyor), and its unfinished delivery (Líbano); Amman Development Corridor (Amman Ring Road phase 1), and its overrun (Jordânia); East-West Highway Corridor Improvement Project (Rikoti Pass sections) (Geórgia); North-South Road Corridor Investment Program, Tranche 1 (Armênia); Second National Water Supply and Sanitation Project (rayon centres), and its downsizing (Azerbaijão); National Road Rehabilitation (Osh-Batken-Isfana) Project (Quirguistão); Tehran Sewerage Project (first phase: interceptors, trunk main and southern treatment plant) (Irã); Central Ring Road around Moscow (TsKAD), audited by the Accounts Chamber (Rússia); Road Maintenance and Rehabilitation Project (Papua-Nova Guiné); Road No. 13 South upgrading under the Third Highway Improvement Project (Laos); Second Energy Sector Project, distribution rehabilitation and the 10 MWp western solar plant (Mongólia); City Rail Link, Auckland, and its cost and time overrun (Nova Zelândia); Rogun hydropower plant (Tajiquistão); Kvalitetsfonden hospital building programme (supersygehuse), and its overruns (Dinamarca); Modernizace dálnice D1 (D1 motorway modernisation, Mirošovice to Kývalka) (Tchéquia); Lae Port Development Project (Lae Tidal Basin, phase 1) (Papua-Nova Guiné); Second-wave motorway concessions (Central E-65, Olympia Odos, Moreas), and their reset (Grécia); Third Highway Project: M4 Baku-Shamakhi and M3 Yenikend-Shorsulu motorways (Azerbaijão); Belene nuclear power plant, and its cancellation (Bulgária); Belarusian nuclear power plant (BelAES), delivered behind schedule (Belarus); Bishkek-Osh road rehabilitation, third phase (Quirguistão); Brussels regional express rail network (GEN/RER) infrastructure works, and their stall (Bélgica); Østfold Line double track Sandbukta-Moss-Såstad, and its overrun (Noruega); Fourth Highway Project, Larnaca-Nicosia and Larnaca-Kophinou roads (Chipre); Sir Solomon Hochoy Highway Extension to Point Fortin, and its abandoned contract (Trinidad e Tobago); National Electrification Project grid extension, and its halt (Mianmar); Beira Railway concession and Sena line rehabilitation, and its termination (Moçambique); Rundu-Elundu trunk road upgrade, built late and over budget (Namíbia); Southern Coastal Highway Improvement Project, Part B, over budget and late (Jamaica).
 - Lacunas declaradas: Entrega de grandes projetos, Empresas jovens que ganham escala.
 - Bases rejeitadas: Qualidade da infraestrutura logística.
@@ -53,14 +63,6 @@ Em que medida o país consegue transformar planos e conhecimento em sistemas que
 ## Dimensões com evidência fraca
 
 A solidez da evidência está abaixo da faixa utilizável, de modo que a pontuação diz pouco sobre o país enquanto faltarem dados.
-
-### Confiança: solidez 0,29, fraca
-
-Quanta cooperação é possível para além do círculo pessoal mais próximo?
-
-- A pontuação se apoia em 3 indicadores observados.
-- Lacunas declaradas: Confiança nas instituições públicas, Taxa de resolução de processos judiciais.
-- Bases rejeitadas: Estado de direito, Controle da corrupção, Taxa de homicídios dolosos.
 
 ### Propósito compartilhado: solidez 0,32, fraca
 
@@ -70,7 +72,15 @@ Até que ponto as pessoas conseguem se ver como participantes de um projeto comu
 - Lacunas declaradas: Sentimento de pertencimento nacional, Voluntariado, Polarização política.
 - Bases rejeitadas: Voz e prestação de contas.
 
-### Experimentação: solidez 0,33, fraca
+### Confiança: solidez 0,33, fraca
+
+Quanta cooperação é possível para além do círculo pessoal mais próximo?
+
+- A pontuação se apoia em 3 indicadores observados.
+- Lacunas declaradas: Confiança nas instituições públicas, Taxa de resolução de processos judiciais.
+- Bases rejeitadas: Estado de direito, Controle da corrupção, Tempo para executar um contrato, Taxa de homicídios dolosos.
+
+### Experimentação: solidez 0,41, fraca
 
 Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e melhoradas?
 
@@ -78,20 +88,13 @@ Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e 
 - Lacunas declaradas: Operações de capital de risco, Empresas em sandboxes regulatórios, Empresas derivadas de pesquisa universitária.
 - Bases rejeitadas: Parcela empresarial do P&D.
 
-### Coordenação: solidez 0,37, fraca
+### Coordenação: solidez 0,44, fraca
 
 Com que eficácia atores independentes conseguem se organizar em torno de objetivos comuns?
 
 - A pontuação se apoia em 3 indicadores observados.
 - Lacunas declaradas: Colaboração universidade-empresa, Colaboração público-privada.
-- Bases rejeitadas: Efetividade governamental, Qualidade regulatória, Desempenho logístico.
-
-### Agência: solidez 0,41, fraca
-
-Em que medida pessoas e organizações conseguem transformar intenção em ação?
-
-- A pontuação se apoia em 3 indicadores observados.
-- Lacunas declaradas: Adultos que realizam tarefas digitais.
+- Bases rejeitadas: Efetividade governamental, Qualidade regulatória, Desempenho logístico, Tempo de exportação na fronteira.
 
 ## Dimensões com as pontuações mais altas
 
@@ -116,7 +119,7 @@ As condições descrevem com o que um país conta: infraestrutura, acesso, dinhe
 | Aprendizagem | Educação profissional no ensino secundário | 15,9 % das matrículas no ensino secundário | 2016 | 48º de 125 |
 | Adaptação | Participação na força de trabalho | 73,9 % das pessoas com 15 anos ou mais | 2025 | 50º de 125 |
 | Adaptação | Assinaturas de banda larga fixa | 12,9 por 100 pessoas | 2023 | 72º de 125 |
-| Adaptação | Perdas na transmissão de eletricidade | 11,9 % da produção | 2023 | 79º de 117 |
+| Adaptação | Perdas na transmissão de eletricidade | 16,3 % da produção | 2024 | 94º de 117 |
 | Adaptação | Emprego informal | 64,5 % do emprego | 2025 | 60º de 102 |
 | Construção | Produto por pessoa ocupada | 36.003,6 dólares PPC constantes de 2021 | 2025 | 74º de 123 |
 

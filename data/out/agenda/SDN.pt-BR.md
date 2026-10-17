@@ -1,6 +1,6 @@
 # Agenda de capacidades: Sudão
 
-*Gerada em 2026-10-16*
+*Gerada em 2026-10-17*
 
 A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, sem classificação geral, e cada pontuação traz ao lado a solidez da evidência. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma pontuação.
 
@@ -9,14 +9,14 @@ A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 | Dimensão | Pontuação | Solidez | Tendência |
 | --- | --- | --- | --- |
 | Antecipação | 3,2 | 0,46 (utilizável) | +3,1 em 10 anos, com base em 2 indicadores, 1 limitados à borda da escala |
-| Agência | 53,6 | 0,22 (muito fraca) | sem tendência comparável |
-| Coordenação | 34 | 0,39 (fraca) | sem tendência comparável |
-| Confiança | 47,3 | 0,2 (muito fraca) | sem tendência comparável |
+| Agência | sem pontuação | 0,11 (muito fraca) | sem tendência comparável |
+| Coordenação | 34,8 | 0,27 (fraca) | sem tendência comparável |
+| Confiança | 41,8 | 0,12 (muito fraca) | sem tendência comparável |
 | Aprendizagem | 14,5 | 0,36 (fraca) | sem tendência comparável |
-| Experimentação | 1 | 0,31 (fraca) | sem tendência comparável |
+| Experimentação | 1,1 | 0,31 (fraca) | sem tendência comparável |
 | Adaptação | 35,7 | 0,57 (utilizável) | sem tendência comparável |
 | Construção | 27,2 | 0,33 (fraca) | sem tendência comparável |
-| Propósito compartilhado | 45 | 0,08 (muito fraca) | sem tendência comparável |
+| Propósito compartilhado | 44,2 | 0,08 (muito fraca) | sem tendência comparável |
 
 ## Dimensões com as pontuações mais baixas
 
@@ -52,20 +52,29 @@ Até que ponto as pessoas conseguem se ver como participantes de um projeto comu
 - Lacunas declaradas: Sentimento de pertencimento nacional, Voluntariado, Polarização política.
 - Bases rejeitadas: Voz e prestação de contas.
 
-### Confiança: solidez 0,2, muito fraca
-
-Quanta cooperação é possível para além do círculo pessoal mais próximo?
-
-- A pontuação se apoia em 3 indicadores observados.
-- Lacunas declaradas: Confiança nas instituições públicas, Taxa de resolução de processos judiciais.
-- Bases rejeitadas: Estado de direito, Controle da corrupção, Taxa de homicídios dolosos.
-
-### Agência: solidez 0,22, muito fraca
+### Agência: solidez 0,11, muito fraca
 
 Em que medida pessoas e organizações conseguem transformar intenção em ação?
 
-- A pontuação se apoia em 2 indicadores observados.
+- A pontuação se apoia em um indicador observado.
 - Lacunas declaradas: Adultos que realizam tarefas digitais.
+- Bases rejeitadas: Tempo para abrir uma empresa.
+
+### Confiança: solidez 0,12, muito fraca
+
+Quanta cooperação é possível para além do círculo pessoal mais próximo?
+
+- A pontuação se apoia em 2 indicadores observados.
+- Lacunas declaradas: Confiança nas instituições públicas, Taxa de resolução de processos judiciais.
+- Bases rejeitadas: Estado de direito, Controle da corrupção, Tempo para executar um contrato, Taxa de homicídios dolosos.
+
+### Coordenação: solidez 0,27, fraca
+
+Com que eficácia atores independentes conseguem se organizar em torno de objetivos comuns?
+
+- A pontuação se apoia em 2 indicadores observados.
+- Lacunas declaradas: Colaboração universidade-empresa, Colaboração público-privada.
+- Bases rejeitadas: Efetividade governamental, Qualidade regulatória, Desempenho logístico, Tempo de exportação na fronteira.
 
 ### Experimentação: solidez 0,31, fraca
 
@@ -90,14 +99,6 @@ Com que eficácia o país adquire, distribui e atualiza conhecimento?
 - A pontuação se apoia em 3 indicadores observados.
 - Lacunas declaradas: Participação de adultos em aprendizagem.
 
-### Coordenação: solidez 0,39, fraca
-
-Com que eficácia atores independentes conseguem se organizar em torno de objetivos comuns?
-
-- A pontuação se apoia em 3 indicadores observados.
-- Lacunas declaradas: Colaboração universidade-empresa, Colaboração público-privada.
-- Bases rejeitadas: Efetividade governamental, Qualidade regulatória, Desempenho logístico.
-
 ## Com o que o Sudão conta
 
 As condições descrevem com o que um país conta: infraestrutura, acesso, dinheiro, pessoas, matrículas e a própria renda. Cada uma aparece ao lado de uma capacidade e não entra na pontuação, na solidez da evidência nem na tendência. Lidas ao lado da pontuação, permitem ver se o que o país tem se converte no que ele faz. A posição conta os países com valor, do melhor para o pior.
@@ -114,7 +115,7 @@ As condições descrevem com o que um país conta: infraestrutura, acesso, dinhe
 | Aprendizagem | Educação profissional no ensino secundário | 1,1 % das matrículas no ensino secundário | 2017 | 115º de 125 |
 | Adaptação | Participação na força de trabalho | 37,9 % das pessoas com 15 anos ou mais | 2022 | 125º de 125 |
 | Adaptação | Assinaturas de banda larga fixa | 0,1 por 100 pessoas | 2022 | 122º de 125 |
-| Adaptação | Perdas na transmissão de eletricidade | 27,1 % da produção | 2023 | 113º de 117 |
+| Adaptação | Perdas na transmissão de eletricidade | 31,3 % da produção | 2024 | 114º de 117 |
 | Adaptação | Emprego informal | 94,2 % do emprego | 2022 | 94º de 102 |
 | Construção | Produto por pessoa ocupada | 15.276,6 dólares PPC constantes de 2021 | 2022 | 102º de 123 |
 

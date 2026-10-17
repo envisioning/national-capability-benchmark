@@ -1,6 +1,6 @@
 # Capability agenda: Bulgaria
 
-*Generated 2026-10-16*
+*Generated 2026-10-17*
 
 The frame includes 125 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
@@ -9,14 +9,14 @@ The frame includes 125 countries. Each dimension is scored from 0 to 100, with n
 | Dimension | Score | Confidence | Trend |
 | --- | --- | --- | --- |
 | Anticipation | 55.4 | 0.46 (usable) | +15.9 over 10 years using 2 indicators |
-| Agency | 53.8 | 0.56 (usable) | no trend |
-| Coordination | 85 | 0.41 (thin) | no trend |
-| Trust | 61.2 | 0.49 (usable) | no trend |
+| Agency | 55.8 | 0.63 (usable) | no trend |
+| Coordination | 83.1 | 0.48 (usable) | no trend |
+| Trust | 60.6 | 0.54 (usable) | no trend |
 | Learning | 32.6 | 0.54 (usable) | no trend |
-| Experimentation | 26.6 | 0.33 (thin) | -8.4 over 10 years using 3 indicators |
+| Experimentation | 32.2 | 0.41 (thin) | -5.2 over 10 years using 3 indicators |
 | Adaptability | 80.6 | 0.62 (usable) | no trend |
 | Building | 11 | 0.41 (thin) | +5 over 10 years using 2 indicators |
-| Shared Purpose | 40.3 | 0.42 (thin) | +2.1 over 10 years using 2 indicators |
+| Shared Purpose | 39.8 | 0.42 (thin) | +2 over 10 years using 2 indicators |
 
 ## What to raise
 
@@ -35,14 +35,6 @@ How effectively does the country acquire, distribute, and update knowledge?
 
 The evidence is too thin to manage these dimensions confidently.
 
-### Experimentation: confidence 0.33, thin
-
-How easily can new approaches be attempted, tested, abandoned, and improved?
-
-- Uses 4 observed indicators.
-- Missing indicators: Venture deals, Firms through regulatory sandboxes, University spinouts.
-- Rejected datasets: Business share of R&D.
-
 ### Building: confidence 0.41, thin
 
 How capable is the country of turning plans and knowledge into functioning systems?
@@ -51,13 +43,13 @@ How capable is the country of turning plans and knowledge into functioning syste
 - Missing indicators: Large project delivery, Firm scale-up rate.
 - Rejected datasets: Logistics infrastructure quality.
 
-### Coordination: confidence 0.41, thin
+### Experimentation: confidence 0.41, thin
 
-How effectively can independent actors organize around shared objectives?
+How easily can new approaches be attempted, tested, abandoned, and improved?
 
-- Uses 3 observed indicators.
-- Missing indicators: University-industry collaboration, Public-private collaboration.
-- Rejected datasets: Government effectiveness, Regulatory quality, Logistics performance.
+- Uses 4 observed indicators.
+- Missing indicators: Venture deals, Firms through regulatory sandboxes, University spinouts.
+- Rejected datasets: Business share of R&D.
 
 ### Shared Purpose: confidence 0.42, thin
 
@@ -71,10 +63,11 @@ To what extent can people imagine themselves as participants in a common project
 
 These dimensions score at least 50 with usable evidence.
 
+- Coordination: 83.1, confidence usable
 - Adaptability: 80.6, confidence usable
-- Trust: 61.2, confidence usable
+- Trust: 60.6, confidence usable
+- Agency: 55.8, confidence usable
 - Anticipation: 55.4, confidence usable
-- Agency: 53.8, confidence usable
 
 ## What Bulgaria has to work with
 
@@ -93,7 +86,7 @@ Conditions describe what a country has to work with: infrastructure, access, mon
 | Learning | Vocational share of secondary | 33.5 % of secondary | 2018 | 14 of 125 |
 | Adaptability | Labour force participation | 73.2 % aged 15+ | 2025 | 52 of 125 |
 | Adaptability | Fixed broadband subscriptions | 37 per 100 people | 2023 | 23 of 125 |
-| Adaptability | Electricity transmission losses | 5.9 % of output | 2023 | 28 of 117 |
+| Adaptability | Electricity transmission losses | 6 % of output | 2024 | 29 of 117 |
 | Adaptability | Informal employment | 3.6 % of employment | 2025 | 15 of 102 |
 | Building | Output per worker | 76,237.3 constant 2021 PPP $ | 2025 | 40 of 123 |
 

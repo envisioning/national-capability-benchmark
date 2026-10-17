@@ -1,6 +1,6 @@
 # Capability agenda: Italy
 
-*Generated 2026-10-16*
+*Generated 2026-10-17*
 
 The frame includes 125 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
@@ -9,34 +9,26 @@ The frame includes 125 countries. Each dimension is scored from 0 to 100, with n
 | Dimension | Score | Confidence | Trend |
 | --- | --- | --- | --- |
 | Anticipation | 74.1 | 0.46 (usable) | +6.9 over 10 years using 2 indicators |
-| Agency | 55.5 | 0.56 (usable) | no trend |
-| Coordination | 87.7 | 0.39 (thin) | no trend |
-| Trust | 53.6 | 0.5 (usable) | no trend |
+| Agency | 53.1 | 0.63 (usable) | no trend |
+| Coordination | 82.9 | 0.45 (usable) | no trend |
+| Trust | 62.9 | 0.55 (usable) | no trend |
 | Learning | 66.7 | 0.55 (usable) | no trend |
-| Experimentation | 61.5 | 0.33 (thin) | +7.4 over 10 years using 3 indicators |
+| Experimentation | 59.9 | 0.41 (thin) | +3.1 over 10 years using 3 indicators |
 | Adaptability | 64.2 | 0.62 (usable) | no trend |
-| Building | 59.4 | 0.57 (usable) | +2.6 over 10 years using 3 indicators |
-| Shared Purpose | 51.5 | 0.42 (thin) | +2 over 10 years using 2 indicators |
+| Building | 59.3 | 0.57 (usable) | +2.3 over 10 years using 3 indicators |
+| Shared Purpose | 51 | 0.42 (thin) | +2 over 10 years using 2 indicators |
 
 ## What to measure first
 
 The evidence is too thin to manage these dimensions confidently.
 
-### Experimentation: confidence 0.33, thin
+### Experimentation: confidence 0.41, thin
 
 How easily can new approaches be attempted, tested, abandoned, and improved?
 
 - Uses 4 observed indicators.
 - Missing indicators: Venture deals, Firms through regulatory sandboxes, University spinouts.
 - Rejected datasets: Business share of R&D.
-
-### Coordination: confidence 0.39, thin
-
-How effectively can independent actors organize around shared objectives?
-
-- Uses 3 observed indicators.
-- Missing indicators: University-industry collaboration, Public-private collaboration.
-- Rejected datasets: Government effectiveness, Regulatory quality, Logistics performance.
 
 ### Shared Purpose: confidence 0.42, thin
 
@@ -50,12 +42,13 @@ To what extent can people imagine themselves as participants in a common project
 
 These dimensions score at least 50 with usable evidence.
 
+- Coordination: 82.9, confidence usable
 - Anticipation: 74.1, confidence usable
 - Learning: 66.7, confidence usable
 - Adaptability: 64.2, confidence usable
-- Building: 59.4, confidence usable
-- Agency: 55.5, confidence usable
-- Trust: 53.6, confidence usable
+- Trust: 62.9, confidence usable
+- Building: 59.3, confidence usable
+- Agency: 53.1, confidence usable
 
 ## What Italy has to work with
 
@@ -74,7 +67,7 @@ Conditions describe what a country has to work with: infrastructure, access, mon
 | Learning | Vocational share of secondary | 33.1 % of secondary | 2018 | 15 of 125 |
 | Adaptability | Labour force participation | 66.6 % aged 15+ | 2025 | 83 of 125 |
 | Adaptability | Fixed broadband subscriptions | 31.8 per 100 people | 2024 | 35 of 125 |
-| Adaptability | Electricity transmission losses | 7.1 % of output | 2024 | 41 of 117 |
+| Adaptability | Electricity transmission losses | 6.9 % of output | 2025 | 39 of 117 |
 | Adaptability | Informal employment | 8.4 % of employment | 2025 | 25 of 102 |
 | Building | Output per worker | 131,480.6 constant 2021 PPP $ | 2025 | 8 of 123 |
 

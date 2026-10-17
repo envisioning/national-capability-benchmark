@@ -9,6 +9,37 @@ The entries before App 1.0.0 are retrospective, high-level summaries
 reconstructed from the repository history. They document explicit version bumps
 and may skip versions that were never committed.
 
+## App 1.31.6 — 2026-10-17
+
+- **The sources page lists the three B-READY series** that replace the
+  Doing Business rows in dataset 9.4.0. Their names and definitions read
+  in Spanish and Portuguese on the country layers.
+
+## Dataset 9.4.0 — 2026-10-17
+
+- **Three Doing Business rows move to B-READY.** Time to start a business,
+  border compliance time to export and time to enforce a contract stopped
+  in 2019. The World Bank's successor, B-READY, publishes the time and cost
+  of each of these transactions as a 0 to 100 score, and the new rows read
+  that score: business entry efficiency in Agency, trade compliance
+  efficiency in Coordination and dispute resolution efficiency in Trust.
+  The old rows stay in the registry as retired. Decision D167.
+- **The new rows cover 74 of the 125 countries**, at 2025. In the other 51
+  each of the three dimensions loses a row, and seven scores no longer
+  publish because fewer than two rows remain: Agency for Haiti, Sudan and
+  Malawi, Coordination for the United Arab Emirates, Venezuela, Iran and
+  Denmark, and Trust for the United Arab Emirates and Haiti.
+- **Procedures to start a business and electricity connection speed stay
+  at 2019.** B-READY counts no procedures, and it publishes utilities only
+  as one score that mixes rules with delivery. Both rows count until they
+  pass the 15-year limit.
+- **Patent, trademark and industrial design filings reach 2024.** The
+  same ingest picked up the World Bank's newer WIPO rounds, so most
+  Experimentation scores and confidences restate, and a few Building and
+  Shared Purpose scores move by a point or less.
+- **153 of the 455 panel cells from the 9.0.1 run apply**, against 348 in
+  9.3.0, because the evidence for Agency, Coordination and Trust changed.
+
 ## App 1.31.5 — 2026-10-17
 
 - **The foresight register stops.** Two coders from different model vendors

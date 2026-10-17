@@ -1,6 +1,6 @@
 # Capability agenda: Cuba
 
-*Generated 2026-10-16*
+*Generated 2026-10-17*
 
 The frame includes 125 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
@@ -13,9 +13,9 @@ The frame includes 125 countries. Each dimension is scored from 0 to 100, with n
 | Coordination | not scored | 0.1 (very thin) | no trend |
 | Trust | not scored | 0.07 (very thin) | no trend |
 | Learning | not scored | 0.16 (very thin) | no trend |
-| Experimentation | 1.5 | 0.24 (very thin) | -0.2 over 10 years using 3 indicators |
+| Experimentation | 2.5 | 0.32 (thin) | +0.6 over 10 years using 3 indicators |
 | Adaptability | 55.8 | 0.46 (usable) | no trend |
-| Building | 20.8 | 0.29 (thin) | -27.2 over 10 years using 2 indicators |
+| Building | 20.8 | 0.29 (thin) | -27.5 over 10 years using 2 indicators |
 | Shared Purpose | not scored | 0 (very thin) | no trend |
 
 ## What to measure first
@@ -28,6 +28,7 @@ How able are individuals and organizations to turn an intention into action?
 
 - Uses 0 observed indicators.
 - Missing indicators: Adults doing digital tasks.
+- Rejected datasets: Time to start a business.
 
 ### Shared Purpose: confidence 0, very thin
 
@@ -43,7 +44,7 @@ How much cooperation is possible beyond immediate personal networks?
 
 - Uses one observed indicator.
 - Missing indicators: Trust in public institutions, Court case clearance rate.
-- Rejected datasets: Rule of law, Control of corruption, Intentional homicide rate.
+- Rejected datasets: Rule of law, Control of corruption, Time to enforce a contract, Intentional homicide rate.
 
 ### Coordination: confidence 0.1, very thin
 
@@ -51,7 +52,7 @@ How effectively can independent actors organize around shared objectives?
 
 - Uses one observed indicator.
 - Missing indicators: University-industry collaboration, Public-private collaboration.
-- Rejected datasets: Government effectiveness, Regulatory quality, Logistics performance.
+- Rejected datasets: Government effectiveness, Regulatory quality, Logistics performance, Border compliance time to export.
 
 ### Learning: confidence 0.16, very thin
 
@@ -67,14 +68,6 @@ How capable is the country of identifying and preparing for emerging change?
 - Uses one observed indicator.
 - Missing indicators: Government foresight capacity, Long-horizon research commitments.
 
-### Experimentation: confidence 0.24, very thin
-
-How easily can new approaches be attempted, tested, abandoned, and improved?
-
-- Uses 3 observed indicators.
-- Missing indicators: Venture deals, Firms through regulatory sandboxes, University spinouts.
-- Rejected datasets: Business share of R&D.
-
 ### Building: confidence 0.29, thin
 
 How capable is the country of turning plans and knowledge into functioning systems?
@@ -82,6 +75,14 @@ How capable is the country of turning plans and knowledge into functioning syste
 - Uses 2 observed indicators.
 - Missing indicators: Large project delivery, Firm scale-up rate.
 - Rejected datasets: Logistics infrastructure quality.
+
+### Experimentation: confidence 0.32, thin
+
+How easily can new approaches be attempted, tested, abandoned, and improved?
+
+- Uses 3 observed indicators.
+- Missing indicators: Venture deals, Firms through regulatory sandboxes, University spinouts.
+- Rejected datasets: Business share of R&D.
 
 ## What to keep watching
 
@@ -104,7 +105,7 @@ Conditions describe what a country has to work with: infrastructure, access, mon
 | Learning | Vocational share of secondary | 27.4 % of secondary | 2019 | 25 of 125 |
 | Adaptability | Labour force participation | 63.8 % aged 15+ | 2025 | 92 of 125 |
 | Adaptability | Fixed broadband subscriptions | 3.1 per 100 people | 2024 | 94 of 125 |
-| Adaptability | Electricity transmission losses | 18.7 % of output | 2023 | 101 of 117 |
+| Adaptability | Electricity transmission losses | 16.2 % of output | 2024 | 93 of 117 |
 
 ## Missing data
 

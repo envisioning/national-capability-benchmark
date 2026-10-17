@@ -1,6 +1,6 @@
 # Capability agenda: United States
 
-*Generated 2026-10-16*
+*Generated 2026-10-17*
 
 The frame includes 125 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
@@ -9,33 +9,26 @@ The frame includes 125 countries. Each dimension is scored from 0 to 100, with n
 | Dimension | Score | Confidence | Trend |
 | --- | --- | --- | --- |
 | Anticipation | 70.6 | 0.46 (usable) | +0.5 over 10 years using 2 indicators |
-| Agency | 82.1 | 0.37 (thin) | no trend |
-| Coordination | 98.8 | 0.23 (very thin) | no trend |
-| Trust | 69.9 | 0.5 (usable) | no trend |
+| Agency | 73.6 | 0.44 (thin) | no trend |
+| Coordination | 79 | 0.29 (thin) | no trend |
+| Trust | 70.4 | 0.55 (usable) | no trend |
 | Learning | 61.6 | 0.55 (usable) | no trend |
-| Experimentation | 50.6 | 0.53 (usable) | +0.7 over 10 years using 3 indicators |
+| Experimentation | 51.3 | 0.6 (usable) | -0.9 over 10 years using 3 indicators |
 | Adaptability | 72.8 | 0.62 (usable) | no trend |
-| Building | 59.2 | 0.53 (usable) | +0.4 over 10 years using 3 indicators |
-| Shared Purpose | 54.3 | 0.43 (thin) | -0.8 over 10 years using 2 indicators |
+| Building | 59.3 | 0.53 (usable) | +0.4 over 10 years using 3 indicators |
+| Shared Purpose | 53.9 | 0.43 (thin) | -0.8 over 10 years using 2 indicators |
 
 ## What to measure first
 
 The evidence is too thin to manage these dimensions confidently.
 
-### Coordination: confidence 0.23, very thin
+### Coordination: confidence 0.29, thin
 
 How effectively can independent actors organize around shared objectives?
 
 - Uses 2 observed indicators.
 - Missing indicators: University-industry collaboration, Public-private collaboration.
-- Rejected datasets: Government effectiveness, Regulatory quality, Logistics performance.
-
-### Agency: confidence 0.37, thin
-
-How able are individuals and organizations to turn an intention into action?
-
-- Uses 3 observed indicators.
-- Missing indicators: Adults doing digital tasks.
+- Rejected datasets: Government effectiveness, Regulatory quality, Logistics performance, Border compliance time to export.
 
 ### Shared Purpose: confidence 0.43, thin
 
@@ -45,16 +38,24 @@ To what extent can people imagine themselves as participants in a common project
 - Missing indicators: Sense of national belonging, Volunteering, Political polarisation.
 - Rejected datasets: Voice and accountability.
 
+### Agency: confidence 0.44, thin
+
+How able are individuals and organizations to turn an intention into action?
+
+- Uses 3 observed indicators.
+- Missing indicators: Adults doing digital tasks.
+- Rejected datasets: Time to start a business.
+
 ## What to keep watching
 
 These dimensions score at least 50 with usable evidence.
 
 - Adaptability: 72.8, confidence usable
 - Anticipation: 70.6, confidence usable
-- Trust: 69.9, confidence usable
+- Trust: 70.4, confidence usable
 - Learning: 61.6, confidence usable
-- Building: 59.2, confidence usable
-- Experimentation: 50.6, confidence usable
+- Building: 59.3, confidence usable
+- Experimentation: 51.3, confidence usable
 
 ## What the United States has to work with
 
@@ -73,7 +74,7 @@ Conditions describe what a country has to work with: infrastructure, access, mon
 | Learning | Vocational share of secondary | 0 % of secondary | 1996 | 123 of 125 |
 | Adaptability | Labour force participation | 73.7 % aged 15+ | 2025 | 51 of 125 |
 | Adaptability | Fixed broadband subscriptions | 38.9 per 100 people | 2024 | 18 of 125 |
-| Adaptability | Electricity transmission losses | 5.3 % of output | 2024 | 23 of 117 |
+| Adaptability | Electricity transmission losses | 5.3 % of output | 2025 | 21 of 117 |
 | Building | Output per worker | 156,983.2 constant 2021 PPP $ | 2025 | 5 of 123 |
 
 ## Missing data

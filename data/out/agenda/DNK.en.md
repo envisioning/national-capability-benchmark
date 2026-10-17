@@ -1,6 +1,6 @@
 # Capability agenda: Denmark
 
-*Generated 2026-10-16*
+*Generated 2026-10-17*
 
 The frame includes 125 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
@@ -9,34 +9,42 @@ The frame includes 125 countries. Each dimension is scored from 0 to 100, with n
 | Dimension | Score | Confidence | Trend |
 | --- | --- | --- | --- |
 | Anticipation | 98.1 | 0.46 (usable) | +13.3 over 10 years using 2 indicators |
-| Agency | 72.8 | 0.56 (usable) | no trend |
-| Coordination | 99.6 | 0.23 (very thin) | no trend |
-| Trust | 94.1 | 0.5 (usable) | no trend |
+| Agency | 65.3 | 0.44 (thin) | no trend |
+| Coordination | not scored | 0.1 (very thin) | no trend |
+| Trust | 97.8 | 0.41 (thin) | no trend |
 | Learning | 66 | 0.55 (usable) | no trend |
-| Experimentation | 42.3 | 0.33 (thin) | -2.6 over 10 years using 3 indicators |
+| Experimentation | 40.6 | 0.41 (thin) | -6.8 over 10 years using 3 indicators |
 | Adaptability | 79.3 | 0.62 (usable) | no trend |
-| Building | 52.9 | 0.57 (usable) | +6.4 over 10 years using 3 indicators |
-| Shared Purpose | 75 | 0.42 (thin) | -2.6 over 10 years using 2 indicators |
+| Building | 53 | 0.57 (usable) | +6.4 over 10 years using 3 indicators |
+| Shared Purpose | 74.4 | 0.42 (thin) | -2.5 over 10 years using 2 indicators |
 
 ## What to measure first
 
 The evidence is too thin to manage these dimensions confidently.
 
-### Coordination: confidence 0.23, very thin
+### Coordination: confidence 0.1, very thin
 
 How effectively can independent actors organize around shared objectives?
 
-- Uses 2 observed indicators.
+- Uses one observed indicator.
 - Missing indicators: University-industry collaboration, Public-private collaboration.
-- Rejected datasets: Government effectiveness, Regulatory quality, Logistics performance.
+- Rejected datasets: Government effectiveness, Regulatory quality, Logistics performance, Border compliance time to export.
 
-### Experimentation: confidence 0.33, thin
+### Experimentation: confidence 0.41, thin
 
 How easily can new approaches be attempted, tested, abandoned, and improved?
 
 - Uses 4 observed indicators.
 - Missing indicators: Venture deals, Firms through regulatory sandboxes, University spinouts.
 - Rejected datasets: Business share of R&D.
+
+### Trust: confidence 0.41, thin
+
+How much cooperation is possible beyond immediate personal networks?
+
+- Uses 4 observed indicators.
+- Missing indicators: Trust in public institutions, Court case clearance rate.
+- Rejected datasets: Rule of law, Control of corruption, Time to enforce a contract, Intentional homicide rate.
 
 ### Shared Purpose: confidence 0.42, thin
 
@@ -46,16 +54,22 @@ To what extent can people imagine themselves as participants in a common project
 - Missing indicators: Sense of national belonging, Volunteering, Political polarisation.
 - Rejected datasets: Voice and accountability.
 
+### Agency: confidence 0.44, thin
+
+How able are individuals and organizations to turn an intention into action?
+
+- Uses 3 observed indicators.
+- Missing indicators: Adults doing digital tasks.
+- Rejected datasets: Time to start a business.
+
 ## What to keep watching
 
 These dimensions score at least 50 with usable evidence.
 
 - Anticipation: 98.1, confidence usable
-- Trust: 94.1, confidence usable
 - Adaptability: 79.3, confidence usable
-- Agency: 72.8, confidence usable
 - Learning: 66, confidence usable
-- Building: 52.9, confidence usable
+- Building: 53, confidence usable
 
 ## What Denmark has to work with
 
@@ -74,7 +88,7 @@ Conditions describe what a country has to work with: infrastructure, access, mon
 | Learning | Vocational share of secondary | 20.6 % of secondary | 2018 | 34 of 125 |
 | Adaptability | Labour force participation | 82.2 % aged 15+ | 2025 | 9 of 125 |
 | Adaptability | Fixed broadband subscriptions | 43.4 per 100 people | 2024 | 10 of 125 |
-| Adaptability | Electricity transmission losses | 6.2 % of output | 2024 | 30 of 117 |
+| Adaptability | Electricity transmission losses | 7.2 % of output | 2025 | 42 of 117 |
 | Adaptability | Informal employment | 2.2 % of employment | 2025 | 4 of 102 |
 | Building | Output per worker | 140,396.5 constant 2021 PPP $ | 2025 | 7 of 123 |
 

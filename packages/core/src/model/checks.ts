@@ -153,9 +153,10 @@ const RAW: Raw[] = [
     notes: NOTES_COURT_CONFIDENCE,
   },
   {
-    /* No declared gap carries this id. It sits beside `time_to_export`, the
-     * Doing Business border row frozen at 2019, and reads the same border from
-     * firms' own shipments. World Bank ingest, World Development Indicators. A
+    /* No declared gap carries this id. It sits beside
+     * `trade_compliance_efficiency`, the B-READY border row that replaced the
+     * Doing Business one in D167, and reads the same border from firms' own
+     * shipments. World Bank ingest, World Development Indicators. A
      * microdata base of 30 firms in 40 or more countries, or a second round on
      * the 2024 questionnaire, reopens it as an indicator. See D144. */
     id: 'customs_clearance_time',

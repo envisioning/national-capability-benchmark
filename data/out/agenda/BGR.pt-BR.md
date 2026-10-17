@@ -1,6 +1,6 @@
 # Agenda de capacidades: Bulgária
 
-*Gerada em 2026-10-16*
+*Gerada em 2026-10-17*
 
 A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, sem classificação geral, e cada pontuação traz ao lado a solidez da evidência. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma pontuação.
 
@@ -9,14 +9,14 @@ A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 | Dimensão | Pontuação | Solidez | Tendência |
 | --- | --- | --- | --- |
 | Antecipação | 55,4 | 0,46 (utilizável) | +15,9 em 10 anos, com base em 2 indicadores |
-| Agência | 53,8 | 0,56 (utilizável) | sem tendência comparável |
-| Coordenação | 85 | 0,41 (fraca) | sem tendência comparável |
-| Confiança | 61,2 | 0,49 (utilizável) | sem tendência comparável |
+| Agência | 55,8 | 0,63 (utilizável) | sem tendência comparável |
+| Coordenação | 83,1 | 0,48 (utilizável) | sem tendência comparável |
+| Confiança | 60,6 | 0,54 (utilizável) | sem tendência comparável |
 | Aprendizagem | 32,6 | 0,54 (utilizável) | sem tendência comparável |
-| Experimentação | 26,6 | 0,33 (fraca) | -8,4 em 10 anos, com base em 3 indicadores |
+| Experimentação | 32,2 | 0,41 (fraca) | -5,2 em 10 anos, com base em 3 indicadores |
 | Adaptação | 80,6 | 0,62 (utilizável) | sem tendência comparável |
 | Construção | 11 | 0,41 (fraca) | +5 em 10 anos, com base em 2 indicadores |
-| Propósito compartilhado | 40,3 | 0,42 (fraca) | +2,1 em 10 anos, com base em 2 indicadores |
+| Propósito compartilhado | 39,8 | 0,42 (fraca) | +2 em 10 anos, com base em 2 indicadores |
 
 ## Dimensões com as pontuações mais baixas
 
@@ -35,14 +35,6 @@ Com que eficácia o país adquire, distribui e atualiza conhecimento?
 
 A solidez da evidência está abaixo da faixa utilizável, de modo que a pontuação diz pouco sobre o país enquanto faltarem dados.
 
-### Experimentação: solidez 0,33, fraca
-
-Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e melhoradas?
-
-- A pontuação se apoia em 4 indicadores observados.
-- Lacunas declaradas: Operações de capital de risco, Empresas em sandboxes regulatórios, Empresas derivadas de pesquisa universitária.
-- Bases rejeitadas: Parcela empresarial do P&D.
-
 ### Construção: solidez 0,41, fraca
 
 Em que medida o país consegue transformar planos e conhecimento em sistemas que funcionam?
@@ -51,13 +43,13 @@ Em que medida o país consegue transformar planos e conhecimento em sistemas que
 - Lacunas declaradas: Entrega de grandes projetos, Empresas jovens que ganham escala.
 - Bases rejeitadas: Qualidade da infraestrutura logística.
 
-### Coordenação: solidez 0,41, fraca
+### Experimentação: solidez 0,41, fraca
 
-Com que eficácia atores independentes conseguem se organizar em torno de objetivos comuns?
+Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e melhoradas?
 
-- A pontuação se apoia em 3 indicadores observados.
-- Lacunas declaradas: Colaboração universidade-empresa, Colaboração público-privada.
-- Bases rejeitadas: Efetividade governamental, Qualidade regulatória, Desempenho logístico.
+- A pontuação se apoia em 4 indicadores observados.
+- Lacunas declaradas: Operações de capital de risco, Empresas em sandboxes regulatórios, Empresas derivadas de pesquisa universitária.
+- Bases rejeitadas: Parcela empresarial do P&D.
 
 ### Propósito compartilhado: solidez 0,42, fraca
 
@@ -71,10 +63,11 @@ Até que ponto as pessoas conseguem se ver como participantes de um projeto comu
 
 Estas dimensões têm pontuação de pelo menos 50, com evidência utilizável.
 
+- Coordenação: 83,1, solidez utilizável
 - Adaptação: 80,6, solidez utilizável
-- Confiança: 61,2, solidez utilizável
+- Confiança: 60,6, solidez utilizável
+- Agência: 55,8, solidez utilizável
 - Antecipação: 55,4, solidez utilizável
-- Agência: 53,8, solidez utilizável
 
 ## Com o que a Bulgária conta
 
@@ -93,7 +86,7 @@ As condições descrevem com o que um país conta: infraestrutura, acesso, dinhe
 | Aprendizagem | Educação profissional no ensino secundário | 33,5 % das matrículas no ensino secundário | 2018 | 14º de 125 |
 | Adaptação | Participação na força de trabalho | 73,2 % das pessoas com 15 anos ou mais | 2025 | 52º de 125 |
 | Adaptação | Assinaturas de banda larga fixa | 37 por 100 pessoas | 2023 | 23º de 125 |
-| Adaptação | Perdas na transmissão de eletricidade | 5,9 % da produção | 2023 | 28º de 117 |
+| Adaptação | Perdas na transmissão de eletricidade | 6 % da produção | 2024 | 29º de 117 |
 | Adaptação | Emprego informal | 3,6 % do emprego | 2025 | 15º de 102 |
 | Construção | Produto por pessoa ocupada | 76.237,3 dólares PPC constantes de 2021 | 2025 | 40º de 123 |
 

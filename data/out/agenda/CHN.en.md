@@ -1,6 +1,6 @@
 # Capability agenda: China
 
-*Generated 2026-10-16*
+*Generated 2026-10-17*
 
 The frame includes 125 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
@@ -9,14 +9,14 @@ The frame includes 125 countries. Each dimension is scored from 0 to 100, with n
 | Dimension | Score | Confidence | Trend |
 | --- | --- | --- | --- |
 | Anticipation | 30.1 | 0.46 (usable) | +10.7 over 10 years using 2 indicators |
-| Agency | 76.3 | 0.56 (usable) | no trend |
-| Coordination | 67.9 | 0.41 (thin) | no trend |
-| Trust | 55.3 | 0.5 (usable) | no trend |
+| Agency | 72.5 | 0.44 (thin) | no trend |
+| Coordination | 55.7 | 0.29 (thin) | no trend |
+| Trust | 49.5 | 0.41 (thin) | no trend |
 | Learning | 76 | 0.55 (usable) | no trend |
-| Experimentation | 100 | 0.24 (very thin) | +19.5 over 10 years using 3 indicators |
+| Experimentation | 98 | 0.32 (thin) | +14.8 over 10 years using 3 indicators |
 | Adaptability | 79.6 | 0.46 (usable) | no trend |
-| Building | 77.4 | 0.57 (usable) | -5.1 over 10 years using 3 indicators |
-| Shared Purpose | 29.9 | 0.41 (thin) | +0.8 over 10 years using 2 indicators |
+| Building | 77.5 | 0.57 (usable) | -5.1 over 10 years using 3 indicators |
+| Shared Purpose | 29.4 | 0.41 (thin) | +0.7 over 10 years using 2 indicators |
 
 ## What to raise
 
@@ -35,7 +35,15 @@ How capable is the country of identifying and preparing for emerging change?
 
 The evidence is too thin to manage these dimensions confidently.
 
-### Experimentation: confidence 0.24, very thin
+### Coordination: confidence 0.29, thin
+
+How effectively can independent actors organize around shared objectives?
+
+- Uses 2 observed indicators.
+- Missing indicators: University-industry collaboration, Public-private collaboration.
+- Rejected datasets: Government effectiveness, Regulatory quality, Logistics performance, Border compliance time to export.
+
+### Experimentation: confidence 0.32, thin
 
 How easily can new approaches be attempted, tested, abandoned, and improved?
 
@@ -51,23 +59,29 @@ To what extent can people imagine themselves as participants in a common project
 - Missing indicators: Sense of national belonging, Volunteering, Political polarisation.
 - Rejected datasets: Voice and accountability.
 
-### Coordination: confidence 0.41, thin
+### Trust: confidence 0.41, thin
 
-How effectively can independent actors organize around shared objectives?
+How much cooperation is possible beyond immediate personal networks?
+
+- Uses 4 observed indicators.
+- Missing indicators: Trust in public institutions, Court case clearance rate.
+- Rejected datasets: Rule of law, Control of corruption, Time to enforce a contract, Intentional homicide rate.
+
+### Agency: confidence 0.44, thin
+
+How able are individuals and organizations to turn an intention into action?
 
 - Uses 3 observed indicators.
-- Missing indicators: University-industry collaboration, Public-private collaboration.
-- Rejected datasets: Government effectiveness, Regulatory quality, Logistics performance.
+- Missing indicators: Adults doing digital tasks.
+- Rejected datasets: Time to start a business.
 
 ## What to keep watching
 
 These dimensions score at least 50 with usable evidence.
 
 - Adaptability: 79.6, confidence usable
-- Building: 77.4, confidence usable
-- Agency: 76.3, confidence usable
+- Building: 77.5, confidence usable
 - Learning: 76, confidence usable
-- Trust: 55.3, confidence usable
 
 ## What China has to work with
 
@@ -86,7 +100,7 @@ Conditions describe what a country has to work with: infrastructure, access, mon
 | Learning | Vocational share of secondary | 18.1 % of secondary | 2019 | 42 of 125 |
 | Adaptability | Labour force participation | 74 % aged 15+ | 2025 | 47 of 125 |
 | Adaptability | Fixed broadband subscriptions | 47.2 per 100 people | 2024 | 3 of 125 |
-| Adaptability | Electricity transmission losses | 3.4 % of output | 2023 | 4 of 117 |
+| Adaptability | Electricity transmission losses | 3.1 % of output | 2024 | 4 of 117 |
 | Building | Output per worker | 48,125.8 constant 2021 PPP $ | 2025 | 62 of 123 |
 
 ## Missing data

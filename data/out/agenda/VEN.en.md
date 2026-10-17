@@ -1,6 +1,6 @@
 # Capability agenda: Venezuela
 
-*Generated 2026-10-16*
+*Generated 2026-10-17*
 
 The frame includes 125 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
@@ -9,11 +9,11 @@ The frame includes 125 countries. Each dimension is scored from 0 to 100, with n
 | Dimension | Score | Confidence | Trend |
 | --- | --- | --- | --- |
 | Anticipation | 0.9 | 0.46 (usable) | -5.4 over 10 years using 2 indicators |
-| Agency | 26.1 | 0.37 (thin) | no trend |
-| Coordination | 16.7 | 0.22 (very thin) | no trend |
-| Trust | 23.8 | 0.37 (thin) | no trend |
+| Agency | 39.1 | 0.26 (thin) | no trend |
+| Coordination | not scored | 0.1 (very thin) | no trend |
+| Trust | 10.4 | 0.28 (thin) | no trend |
 | Learning | not scored | 0.16 (very thin) | no trend |
-| Experimentation | 5.7 | 0.19 (very thin) | no trend |
+| Experimentation | 2.9 | 0.41 (thin) | -2.1 over 10 years using 2 indicators |
 | Adaptability | 48.7 | 0.53 (usable) | no trend |
 | Building | 8.9 | 0.25 (thin) | no trend |
 | Shared Purpose | not scored | 0.12 (very thin) | no trend |
@@ -44,6 +44,14 @@ How effectively can the system respond when circumstances change?
 
 The evidence is too thin to manage these dimensions confidently.
 
+### Coordination: confidence 0.1, very thin
+
+How effectively can independent actors organize around shared objectives?
+
+- Uses one observed indicator.
+- Missing indicators: University-industry collaboration, Public-private collaboration.
+- Rejected datasets: Government effectiveness, Regulatory quality, Logistics performance, Border compliance time to export.
+
 ### Shared Purpose: confidence 0.12, very thin
 
 To what extent can people imagine themselves as participants in a common project?
@@ -59,22 +67,6 @@ How effectively does the country acquire, distribute, and update knowledge?
 - Uses one observed indicator.
 - Missing indicators: Adult learning participation.
 
-### Experimentation: confidence 0.19, very thin
-
-How easily can new approaches be attempted, tested, abandoned, and improved?
-
-- Uses 3 observed indicators.
-- Missing indicators: Venture deals, Firms through regulatory sandboxes, University spinouts.
-- Rejected datasets: Business share of R&D.
-
-### Coordination: confidence 0.22, very thin
-
-How effectively can independent actors organize around shared objectives?
-
-- Uses 2 observed indicators.
-- Missing indicators: University-industry collaboration, Public-private collaboration.
-- Rejected datasets: Government effectiveness, Regulatory quality, Logistics performance.
-
 ### Building: confidence 0.25, thin
 
 How capable is the country of turning plans and knowledge into functioning systems?
@@ -83,20 +75,29 @@ How capable is the country of turning plans and knowledge into functioning syste
 - Missing indicators: Large project delivery, Firm scale-up rate.
 - Rejected datasets: Logistics infrastructure quality.
 
-### Trust: confidence 0.37, thin
-
-How much cooperation is possible beyond immediate personal networks?
-
-- Uses 4 observed indicators.
-- Missing indicators: Trust in public institutions, Court case clearance rate.
-- Rejected datasets: Rule of law, Control of corruption, Intentional homicide rate.
-
-### Agency: confidence 0.37, thin
+### Agency: confidence 0.26, thin
 
 How able are individuals and organizations to turn an intention into action?
 
-- Uses 3 observed indicators.
+- Uses 2 observed indicators.
 - Missing indicators: Adults doing digital tasks.
+- Rejected datasets: Time to start a business.
+
+### Trust: confidence 0.28, thin
+
+How much cooperation is possible beyond immediate personal networks?
+
+- Uses 3 observed indicators.
+- Missing indicators: Trust in public institutions, Court case clearance rate.
+- Rejected datasets: Rule of law, Control of corruption, Time to enforce a contract, Intentional homicide rate.
+
+### Experimentation: confidence 0.41, thin
+
+How easily can new approaches be attempted, tested, abandoned, and improved?
+
+- Uses 4 observed indicators.
+- Missing indicators: Venture deals, Firms through regulatory sandboxes, University spinouts.
+- Rejected datasets: Business share of R&D.
 
 ## What Venezuela has to work with
 
@@ -115,7 +116,7 @@ Conditions describe what a country has to work with: infrastructure, access, mon
 | Learning | Vocational share of secondary | 5.4 % of secondary | 2017 | 90 of 125 |
 | Adaptability | Labour force participation | 56.6 % aged 15+ | 2025 | 110 of 125 |
 | Adaptability | Fixed broadband subscriptions | 12.9 per 100 people | 2024 | 71 of 125 |
-| Adaptability | Electricity transmission losses | 21.4 % of output | 2023 | 107 of 117 |
+| Adaptability | Electricity transmission losses | 18.3 % of output | 2024 | 99 of 117 |
 | Adaptability | Informal employment | 58.3 % of employment | 2017 | 55 of 102 |
 
 ## Missing data

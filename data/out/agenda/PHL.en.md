@@ -1,6 +1,6 @@
 # Capability agenda: Philippines
 
-*Generated 2026-10-16*
+*Generated 2026-10-17*
 
 The frame includes 125 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
@@ -9,27 +9,28 @@ The frame includes 125 countries. Each dimension is scored from 0 to 100, with n
 | Dimension | Score | Confidence | Trend |
 | --- | --- | --- | --- |
 | Anticipation | 41.5 | 0.46 (usable) | +10.1 over 10 years using 2 indicators |
-| Agency | 31.2 | 0.56 (usable) | no trend |
-| Coordination | 78.7 | 0.33 (thin) | no trend |
-| Trust | 47.5 | 0.49 (usable) | no trend |
+| Agency | 18.5 | 0.63 (usable) | no trend |
+| Coordination | 75.1 | 0.4 (thin) | no trend |
+| Trust | 48.7 | 0.54 (usable) | no trend |
 | Learning | 42.7 | 0.54 (usable) | no trend |
-| Experimentation | 6.4 | 0.33 (thin) | +0.2 over 10 years using 3 indicators |
+| Experimentation | 7.9 | 0.41 (thin) | +1.7 over 10 years using 3 indicators |
 | Adaptability | 70.5 | 0.46 (usable) | no trend |
 | Building | 62.4 | 0.57 (usable) | -5.2 over 10 years using 2 indicators |
-| Shared Purpose | 52.4 | 0.42 (thin) | +9.4 over 10 years using 2 indicators |
+| Shared Purpose | 52 | 0.42 (thin) | +9.2 over 10 years using 2 indicators |
 
 ## What to raise
 
 These are the lowest scores with usable evidence. Thin evidence appears below.
 
-### Agency: 31.2, confidence usable
+### Agency: 18.5, confidence usable
 
 How able are individuals and organizations to turn an intention into action?
 
 - Uses 4 observed indicators.
-- Highest usable scores: New Zealand 92.3, Australia 89.2, Estonia 84.3.
+- Highest usable scores: United Kingdom 94.7, New Zealand 91.4, Mauritius 85.5.
 - Related deliveries in other countries: Singapore's national ICT-skills measurement and baseline (Singapore); e.escola, a national laptop-and-broadband push (Portugal); Pradhan Mantri Gramin Digital Saksharta Abhiyan (India); Puntos México Conectado, national digital learning centres (Mexico).
 - Missing indicators: Adults doing digital tasks.
+- Rejected datasets: Time to start a business.
 
 ### Anticipation: 41.5, confidence usable
 
@@ -49,29 +50,29 @@ How effectively does the country acquire, distribute, and update knowledge?
 - Related deliveries in other countries: SkillsFuture Credit (Singapore); The public library system (Finland); CAPES, federal postgraduate funding (Brazil); Kartu Prakerja, a national lifelong-learning delivery system (Indonesia); Compte personnel de formation (France); Programa Qualifica and Portugal's adult-learning network (Portugal); Novas Oportunidades, and the qualification-policy interruption (Portugal); SWAYAM national online-course platform (India); SETAs and workplace-based learning delivery (South Africa); MEB public lifelong-learning network (Turkey); Kenya's adult education centres, and their halving (Kenya); Rwanda's adult literacy centres, and their decline (Rwanda); Integrated Functional Adult Education, and its erosion (Ethiopia); Instituto Técnico de Capacitación y Productividad (INTECAP) (Guatemala); INFOTEP national technical and vocational training (Dominican Republic); Campaña Nacional de Alfabetización (Cuba); VET FEE-HELP, and its abolition (Australia); Adult education allowance (aikuiskoulutustuki), and its abolition (Finland); INEFOP, the tripartite national training institute (Uruguay); Franquicia Tributaria SENCE, and its erosion (Chile); Employer and in-work training under Employment Insurance, and its erosion (South Korea); INADEH national vocational training (Panama); Yo, sí puedo national literacy campaign and post-literacy programme (Bolivia); Project 1956 vocational training for rural workers (Vietnam); Bildungsprämie training voucher, and its end (Germany); Aufstiegs-BAföG, upgrading training support (Germany); Formación programada por las empresas (FUNDAE training credit) (Spain); Community Education and Training colleges, and their erosion (South Africa); SENA complementary training (formación complementaria) (Colombia); Vocational skills upgrading action, 2019-2021 (China); INA national vocational training, and its contraction (Costa Rica); Kunskapslyftet adult education initiative (Sweden); Springboard+ upskilling programme (Ireland); State-administered adult education under the Adult Education and Family Literacy Act, and its erosion (United States); STAP-budget training grant, abolished in 2024 (Netherlands); INEA adult basic education (Mexico); Hello Training, public vocational training (Japan); Educação de Jovens e Adultos (EJA), and its erosion (Brazil); Government-funded adult further education in England, and its erosion (United Kingdom); Educación Básica Alternativa (EBA), and its erosion (Peru); Upper secondary education for adults in non-stationary study (Estonia); Department of Skill Development skill-upgrading training (Thailand); Adult literacy education under the National Commission for Mass Literacy, Adult and Non-Formal Education (Nigeria); Skills Development under the Labour Market Development Agreements, and its 2024-25 funding cut (Canada); Instituto Nacional de Formación Profesional (INFOP) (Honduras); Ministry of Labour Vocational Training Division adult courses (Israel); Educación Permanente para personas jóvenes y adultas (MEC) (Paraguay); National literacy campaigns, 2010-2015 (Haiti); County and city general secondary schools for adults (licea ogólnokształcące dla dorosłych) (Poland); Kolej Komuniti part-time and lifelong-learning (Pembelajaran Sepanjang Hayat) courses (Malaysia); Fondo nuove competenze (Italy); National adult literacy projects of the Bureau of Non-Formal Education, and their erosion (Bangladesh); Functional Adult Literacy programme, and its decline (Uganda); Integrated Community-Based Adult Education (MEMKWA), and its decline (Tanzania); National Functional Literacy Programme, and its erosion (Ghana); Centres d'alphabétisation, and their erosion (Côte d'Ivoire); Adult literacy centres financed through FONAENF, and their erosion (Burkina Faso); National Adult Literacy Programme (Malawi); Mauritius Institute of Training and Development part-time training (Mauritius); NAMCOL secondary education programme for out-of-school learners (Namibia); Alfabetização e Educação de Adultos (public adult literacy and adult primary education), and its decline (Mozambique); Sistema Nacional de Formação Profissional under INEFOP (Angola); Institut National de Préparation Professionnelle (INPP) (Democratic Republic of the Congo); AMS training measures (Schulungen) for jobseekers (Austria); Human Resource Development Authority (HRDA) subsidised training programmes (Cyprus); Arbejdsmarkedsuddannelser (AMU), adult vocational training courses, and their decline (Denmark); Vaučeri za obrazovanje, training vouchers of the Croatian Employment Service (Croatia); Mācības pieaugušajiem, the ESF training programme for employed adults 2017 to 2023 (Latvia); Grunnskoleopplæring for voksne, municipal primary and lower secondary education for adults (Norway); Zručnosti pre trh práce, retraining and training contributions of the labour offices (Slovakia); Upper secondary education for adults (srednješolsko izobraževanje odraslih) (Slovenia); Public vocational training centres of the National Agency for Employment and Skills (Albania); Employment Agency adult training, including the DI-GI digital skills vouchers (Bulgaria); ANOFM voucher-based vocational training for the unemployed (Moldova); ANOFM national vocational training plan, and its fall after 2023 (Romania); National Employment Service labour market training, and its 2025 non-delivery (Serbia); Programme national d'enseignement des adultes (national adult education programme) (Tunisia); Agence Nationale de Lutte contre l'Analphabetisme literacy and post-literacy programmes (Morocco); Federal project Sodeystvie zanyatosti (Employment Promotion) vocational training of adults (Russia); Short-term vocational training of the unemployed in monocentres and district vocational training centres (Uzbekistan); Self-Employment Program business training (Azerbaijan); HEART/NSTA Trust training enrolment (Jamaica); Enhanced Vocational Education and Training (EVENT II) short-term training (Nepal); Adult and community education at tertiary providers, and its halving (New Zealand); NCHD Adult Literacy Programme, and its collapse after 2013 (Pakistan); Youth Training and Employment Partnership Programme (YTEPP), and its shrinking enrolment (Trinidad and Tobago); Bildungskarenz with Weiterbildungsgeld, and its abolition (Austria).
 - Missing indicators: Adult learning participation.
 
-### Trust: 47.5, confidence usable
+### Trust: 48.7, confidence usable
 
 How much cooperation is possible beyond immediate personal networks?
 
 - Uses 5 observed indicators.
-- Highest usable scores: Denmark 94.1, Norway 91.3, Finland 89.7.
+- Highest usable scores: Sweden 90.3, New Zealand 83.2, Estonia 75.7.
 - Related deliveries in other countries: Cadastro Único, the unified social registry (Brazil); Portal da Transparência, the federal open-books system (Brazil); MyData, citizen-directed data portability (South Korea); Singapore Courts' case-clearance discipline (Singapore); Civil-court clearance and the CEPEJ monitoring series (Portugal).
 - Missing indicators: Trust in public institutions, Court case clearance rate.
-- Rejected datasets: Rule of law, Control of corruption, Intentional homicide rate.
+- Rejected datasets: Rule of law, Control of corruption, Time to enforce a contract, Intentional homicide rate.
 
 ## What to measure first
 
 The evidence is too thin to manage these dimensions confidently.
 
-### Coordination: confidence 0.33, thin
+### Coordination: confidence 0.4, thin
 
 How effectively can independent actors organize around shared objectives?
 
 - Uses 3 observed indicators.
 - Missing indicators: University-industry collaboration, Public-private collaboration.
-- Rejected datasets: Government effectiveness, Regulatory quality, Logistics performance.
+- Rejected datasets: Government effectiveness, Regulatory quality, Logistics performance, Border compliance time to export.
 
-### Experimentation: confidence 0.33, thin
+### Experimentation: confidence 0.41, thin
 
 How easily can new approaches be attempted, tested, abandoned, and improved?
 
@@ -111,7 +112,7 @@ Conditions describe what a country has to work with: infrastructure, access, mon
 | Learning | Vocational share of secondary | 9.7 % of secondary | 2018 | 70 of 125 |
 | Adaptability | Labour force participation | 63.7 % aged 15+ | 2025 | 93 of 125 |
 | Adaptability | Fixed broadband subscriptions | 7.1 per 100 people | 2024 | 86 of 125 |
-| Adaptability | Electricity transmission losses | 10 % of output | 2023 | 67 of 117 |
+| Adaptability | Electricity transmission losses | 9.8 % of output | 2024 | 65 of 117 |
 | Building | Output per worker | 24,593.1 constant 2021 PPP $ | 2025 | 86 of 123 |
 
 ## Missing data

@@ -1,6 +1,6 @@
 # Agenda de capacidades: Reino Unido
 
-*Gerada em 2026-10-16*
+*Gerada em 2026-10-17*
 
 A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, sem classificação geral, e cada pontuação traz ao lado a solidez da evidência. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma pontuação.
 
@@ -9,26 +9,18 @@ A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 | Dimensão | Pontuação | Solidez | Tendência |
 | --- | --- | --- | --- |
 | Antecipação | 71,8 | 0,46 (utilizável) | +3,3 em 10 anos, com base em 2 indicadores |
-| Agência | 92,7 | 0,41 (fraca) | sem tendência comparável |
-| Coordenação | 90,5 | 0,23 (muito fraca) | sem tendência comparável |
-| Confiança | 90,5 | 0,3 (fraca) | sem tendência comparável |
+| Agência | 94,7 | 0,49 (utilizável) | sem tendência comparável |
+| Coordenação | 84 | 0,29 (fraca) | sem tendência comparável |
+| Confiança | 86,4 | 0,34 (fraca) | sem tendência comparável |
 | Aprendizagem | 80,3 | 0,55 (utilizável) | sem tendência comparável |
-| Experimentação | 70,2 | 0,33 (fraca) | +20,7 em 10 anos, com base em 3 indicadores |
+| Experimentação | 70,7 | 0,41 (fraca) | +16,9 em 10 anos, com base em 3 indicadores |
 | Adaptação | 70,5 | 0,62 (utilizável) | sem tendência comparável |
-| Construção | 62,8 | 0,57 (utilizável) | +0,3 em 10 anos, com base em 3 indicadores |
-| Propósito compartilhado | 75,6 | 0,28 (fraca) | +3,3 em 10 anos, com base em 2 indicadores |
+| Construção | 62,9 | 0,57 (utilizável) | +0,3 em 10 anos, com base em 3 indicadores |
+| Propósito compartilhado | 74,7 | 0,28 (fraca) | +3,3 em 10 anos, com base em 2 indicadores |
 
 ## Dimensões com evidência fraca
 
 A solidez da evidência está abaixo da faixa utilizável, de modo que a pontuação diz pouco sobre o país enquanto faltarem dados.
-
-### Coordenação: solidez 0,23, muito fraca
-
-Com que eficácia atores independentes conseguem se organizar em torno de objetivos comuns?
-
-- A pontuação se apoia em 2 indicadores observados.
-- Lacunas declaradas: Colaboração universidade-empresa, Colaboração público-privada.
-- Bases rejeitadas: Efetividade governamental, Qualidade regulatória, Desempenho logístico.
 
 ### Propósito compartilhado: solidez 0,28, fraca
 
@@ -38,15 +30,23 @@ Até que ponto as pessoas conseguem se ver como participantes de um projeto comu
 - Lacunas declaradas: Sentimento de pertencimento nacional, Voluntariado, Polarização política.
 - Bases rejeitadas: Voz e prestação de contas.
 
-### Confiança: solidez 0,3, fraca
+### Coordenação: solidez 0,29, fraca
+
+Com que eficácia atores independentes conseguem se organizar em torno de objetivos comuns?
+
+- A pontuação se apoia em 2 indicadores observados.
+- Lacunas declaradas: Colaboração universidade-empresa, Colaboração público-privada.
+- Bases rejeitadas: Efetividade governamental, Qualidade regulatória, Desempenho logístico, Tempo de exportação na fronteira.
+
+### Confiança: solidez 0,34, fraca
 
 Quanta cooperação é possível para além do círculo pessoal mais próximo?
 
 - A pontuação se apoia em 3 indicadores observados.
 - Lacunas declaradas: Confiança nas instituições públicas, Taxa de resolução de processos judiciais.
-- Bases rejeitadas: Estado de direito, Controle da corrupção, Taxa de homicídios dolosos.
+- Bases rejeitadas: Estado de direito, Controle da corrupção, Tempo para executar um contrato, Taxa de homicídios dolosos.
 
-### Experimentação: solidez 0,33, fraca
+### Experimentação: solidez 0,41, fraca
 
 Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e melhoradas?
 
@@ -54,21 +54,15 @@ Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e 
 - Lacunas declaradas: Operações de capital de risco, Empresas em sandboxes regulatórios, Empresas derivadas de pesquisa universitária.
 - Bases rejeitadas: Parcela empresarial do P&D.
 
-### Agência: solidez 0,41, fraca
-
-Em que medida pessoas e organizações conseguem transformar intenção em ação?
-
-- A pontuação se apoia em 3 indicadores observados.
-- Lacunas declaradas: Adultos que realizam tarefas digitais.
-
 ## Dimensões com as pontuações mais altas
 
 Estas dimensões têm pontuação de pelo menos 50, com evidência utilizável.
 
+- Agência: 94,7, solidez utilizável
 - Aprendizagem: 80,3, solidez utilizável
 - Antecipação: 71,8, solidez utilizável
 - Adaptação: 70,5, solidez utilizável
-- Construção: 62,8, solidez utilizável
+- Construção: 62,9, solidez utilizável
 
 ## Com o que o Reino Unido conta
 
@@ -87,7 +81,7 @@ As condições descrevem com o que um país conta: infraestrutura, acesso, dinhe
 | Aprendizagem | Educação profissional no ensino secundário | 31,8 % das matrículas no ensino secundário | 2018 | 16º de 125 |
 | Adaptação | Participação na força de trabalho | 76,7 % das pessoas com 15 anos ou mais | 2025 | 35º de 125 |
 | Adaptação | Assinaturas de banda larga fixa | 42,2 por 100 pessoas | 2024 | 13º de 125 |
-| Adaptação | Perdas na transmissão de eletricidade | 9,9 % da produção | 2024 | 66º de 117 |
+| Adaptação | Perdas na transmissão de eletricidade | 9,6 % da produção | 2025 | 62º de 117 |
 | Adaptação | Emprego informal | 19,8 % do emprego | 2018 | 33º de 102 |
 | Construção | Produto por pessoa ocupada | 111.234,5 dólares PPC constantes de 2021 | 2025 | 17º de 123 |
 

@@ -1,6 +1,6 @@
 # Agenda de capacidades: Estados Unidos
 
-*Gerada em 2026-10-16*
+*Gerada em 2026-10-17*
 
 A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, sem classificação geral, e cada pontuação traz ao lado a solidez da evidência. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma pontuação.
 
@@ -9,33 +9,26 @@ A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 | Dimensão | Pontuação | Solidez | Tendência |
 | --- | --- | --- | --- |
 | Antecipação | 70,6 | 0,46 (utilizável) | +0,5 em 10 anos, com base em 2 indicadores |
-| Agência | 82,1 | 0,37 (fraca) | sem tendência comparável |
-| Coordenação | 98,8 | 0,23 (muito fraca) | sem tendência comparável |
-| Confiança | 69,9 | 0,5 (utilizável) | sem tendência comparável |
+| Agência | 73,6 | 0,44 (fraca) | sem tendência comparável |
+| Coordenação | 79 | 0,29 (fraca) | sem tendência comparável |
+| Confiança | 70,4 | 0,55 (utilizável) | sem tendência comparável |
 | Aprendizagem | 61,6 | 0,55 (utilizável) | sem tendência comparável |
-| Experimentação | 50,6 | 0,53 (utilizável) | +0,7 em 10 anos, com base em 3 indicadores |
+| Experimentação | 51,3 | 0,6 (utilizável) | -0,9 em 10 anos, com base em 3 indicadores |
 | Adaptação | 72,8 | 0,62 (utilizável) | sem tendência comparável |
-| Construção | 59,2 | 0,53 (utilizável) | +0,4 em 10 anos, com base em 3 indicadores |
-| Propósito compartilhado | 54,3 | 0,43 (fraca) | -0,8 em 10 anos, com base em 2 indicadores |
+| Construção | 59,3 | 0,53 (utilizável) | +0,4 em 10 anos, com base em 3 indicadores |
+| Propósito compartilhado | 53,9 | 0,43 (fraca) | -0,8 em 10 anos, com base em 2 indicadores |
 
 ## Dimensões com evidência fraca
 
 A solidez da evidência está abaixo da faixa utilizável, de modo que a pontuação diz pouco sobre o país enquanto faltarem dados.
 
-### Coordenação: solidez 0,23, muito fraca
+### Coordenação: solidez 0,29, fraca
 
 Com que eficácia atores independentes conseguem se organizar em torno de objetivos comuns?
 
 - A pontuação se apoia em 2 indicadores observados.
 - Lacunas declaradas: Colaboração universidade-empresa, Colaboração público-privada.
-- Bases rejeitadas: Efetividade governamental, Qualidade regulatória, Desempenho logístico.
-
-### Agência: solidez 0,37, fraca
-
-Em que medida pessoas e organizações conseguem transformar intenção em ação?
-
-- A pontuação se apoia em 3 indicadores observados.
-- Lacunas declaradas: Adultos que realizam tarefas digitais.
+- Bases rejeitadas: Efetividade governamental, Qualidade regulatória, Desempenho logístico, Tempo de exportação na fronteira.
 
 ### Propósito compartilhado: solidez 0,43, fraca
 
@@ -45,16 +38,24 @@ Até que ponto as pessoas conseguem se ver como participantes de um projeto comu
 - Lacunas declaradas: Sentimento de pertencimento nacional, Voluntariado, Polarização política.
 - Bases rejeitadas: Voz e prestação de contas.
 
+### Agência: solidez 0,44, fraca
+
+Em que medida pessoas e organizações conseguem transformar intenção em ação?
+
+- A pontuação se apoia em 3 indicadores observados.
+- Lacunas declaradas: Adultos que realizam tarefas digitais.
+- Bases rejeitadas: Tempo para abrir uma empresa.
+
 ## Dimensões com as pontuações mais altas
 
 Estas dimensões têm pontuação de pelo menos 50, com evidência utilizável.
 
 - Adaptação: 72,8, solidez utilizável
 - Antecipação: 70,6, solidez utilizável
-- Confiança: 69,9, solidez utilizável
+- Confiança: 70,4, solidez utilizável
 - Aprendizagem: 61,6, solidez utilizável
-- Construção: 59,2, solidez utilizável
-- Experimentação: 50,6, solidez utilizável
+- Construção: 59,3, solidez utilizável
+- Experimentação: 51,3, solidez utilizável
 
 ## Com o que os Estados Unidos conta
 
@@ -73,7 +74,7 @@ As condições descrevem com o que um país conta: infraestrutura, acesso, dinhe
 | Aprendizagem | Educação profissional no ensino secundário | 0 % das matrículas no ensino secundário | 1996 | 123º de 125 |
 | Adaptação | Participação na força de trabalho | 73,7 % das pessoas com 15 anos ou mais | 2025 | 51º de 125 |
 | Adaptação | Assinaturas de banda larga fixa | 38,9 por 100 pessoas | 2024 | 18º de 125 |
-| Adaptação | Perdas na transmissão de eletricidade | 5,3 % da produção | 2024 | 23º de 117 |
+| Adaptação | Perdas na transmissão de eletricidade | 5,3 % da produção | 2025 | 21º de 117 |
 | Construção | Produto por pessoa ocupada | 156.983,2 dólares PPC constantes de 2021 | 2025 | 5º de 123 |
 
 ## Agenda de medição

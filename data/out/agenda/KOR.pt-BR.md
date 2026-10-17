@@ -1,6 +1,6 @@
 # Agenda de capacidades: Coreia do Sul
 
-*Gerada em 2026-10-16*
+*Gerada em 2026-10-17*
 
 A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, sem classificação geral, e cada pontuação traz ao lado a solidez da evidência. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma pontuação.
 
@@ -9,14 +9,14 @@ A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 | Dimensão | Pontuação | Solidez | Tendência |
 | --- | --- | --- | --- |
 | Antecipação | 74,4 | 0,46 (utilizável) | +17,4 em 10 anos, com base em 2 indicadores |
-| Agência | 61,4 | 0,54 (utilizável) | sem tendência comparável |
-| Coordenação | 88,8 | 0,4 (fraca) | sem tendência comparável |
-| Confiança | 67,5 | 0,5 (utilizável) | sem tendência comparável |
+| Agência | 63,7 | 0,62 (utilizável) | sem tendência comparável |
+| Coordenação | 79,2 | 0,47 (utilizável) | sem tendência comparável |
+| Confiança | 66,4 | 0,55 (utilizável) | sem tendência comparável |
 | Aprendizagem | 52,1 | 0,55 (utilizável) | sem tendência comparável |
-| Experimentação | 72,6 | 0,53 (utilizável) | +12 em 10 anos, com base em 3 indicadores, 1 limitados à borda da escala |
+| Experimentação | 73,5 | 0,6 (utilizável) | +10,1 em 10 anos, com base em 3 indicadores, 1 limitados à borda da escala |
 | Adaptação | 73 | 0,46 (utilizável) | sem tendência comparável |
-| Construção | 85,1 | 0,57 (utilizável) | +3,1 em 10 anos, com base em 3 indicadores |
-| Propósito compartilhado | 40,6 | 0,4 (fraca) | +3,3 em 10 anos, com base em 2 indicadores |
+| Construção | 85,2 | 0,57 (utilizável) | +3,1 em 10 anos, com base em 3 indicadores |
+| Propósito compartilhado | 40,1 | 0,4 (fraca) | +3,2 em 10 anos, com base em 2 indicadores |
 
 ## Dimensões com evidência fraca
 
@@ -30,24 +30,17 @@ Até que ponto as pessoas conseguem se ver como participantes de um projeto comu
 - Lacunas declaradas: Sentimento de pertencimento nacional, Voluntariado, Polarização política.
 - Bases rejeitadas: Voz e prestação de contas.
 
-### Coordenação: solidez 0,4, fraca
-
-Com que eficácia atores independentes conseguem se organizar em torno de objetivos comuns?
-
-- A pontuação se apoia em 3 indicadores observados.
-- Lacunas declaradas: Colaboração universidade-empresa, Colaboração público-privada.
-- Bases rejeitadas: Efetividade governamental, Qualidade regulatória, Desempenho logístico.
-
 ## Dimensões com as pontuações mais altas
 
 Estas dimensões têm pontuação de pelo menos 50, com evidência utilizável.
 
-- Construção: 85,1, solidez utilizável
+- Construção: 85,2, solidez utilizável
+- Coordenação: 79,2, solidez utilizável
 - Antecipação: 74,4, solidez utilizável
+- Experimentação: 73,5, solidez utilizável
 - Adaptação: 73, solidez utilizável
-- Experimentação: 72,6, solidez utilizável
-- Confiança: 67,5, solidez utilizável
-- Agência: 61,4, solidez utilizável
+- Confiança: 66,4, solidez utilizável
+- Agência: 63,7, solidez utilizável
 - Aprendizagem: 52,1, solidez utilizável
 
 ## Com o que a Coreia do Sul conta
@@ -61,13 +54,13 @@ As condições descrevem com o que um país conta: infraestrutura, acesso, dinhe
 | Antecipação | Servidores de internet seguros | 11.902,4 por milhão de pessoas | 2024 | 42º de 125 |
 | Agência | Pessoas que usam a internet | 97,9 % da população | 2024 | 5º de 125 |
 | Agência | Adultos com conta financeira | 96,9 % das pessoas com 15 anos ou mais | 2024 | 24º de 122 |
-| Agência | Crédito ao setor privado | 160,3 % do PIB | 2024 | 5º de 124 |
+| Agência | Crédito ao setor privado | 160,3 % do PIB | 2024 | 4º de 124 |
 | Aprendizagem | Matrícula no ensino superior | 111,9 % (taxa bruta) | 2024 | 3º de 124 |
 | Aprendizagem | Dispêndio público em educação | 5,4 % do PIB | 2022 | 25º de 125 |
 | Aprendizagem | Educação profissional no ensino secundário | 9,4 % das matrículas no ensino secundário | 2018 | 74º de 125 |
 | Adaptação | Participação na força de trabalho | 71,2 % das pessoas com 15 anos ou mais | 2025 | 56º de 125 |
 | Adaptação | Assinaturas de banda larga fixa | 47,8 por 100 pessoas | 2024 | 2º de 125 |
-| Adaptação | Perdas na transmissão de eletricidade | 3,3 % da produção | 2024 | 3º de 117 |
+| Adaptação | Perdas na transmissão de eletricidade | 3 % da produção | 2025 | 3º de 117 |
 | Adaptação | Emprego informal | 29,1 % do emprego | 2019 | 37º de 102 |
 | Construção | Produto por pessoa ocupada | 99.046 dólares PPC constantes de 2021 | 2025 | 24º de 123 |
 

@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-03T13:15:42.863Z",
-  "version": "9.3.0",
+  "generatedAt": "2026-10-17T01:26:08.099Z",
+  "version": "9.4.0",
   "country": {
     "country": "Jordan",
     "iso3": "JOR",
@@ -421,19 +421,19 @@
         ]
       },
       "agency": {
-        "score": 54.9,
+        "score": 44.7,
         "observedIndicators": 4,
         "belowCoverageFloor": false,
-        "confidence": 0.555,
+        "confidence": 0.632,
         "confidenceParts": {
           "coverage": 0.8,
-          "recency": 0.75,
+          "recency": 0.854,
           "sourceQuality": 0.925
         },
         "delphiScore": null,
         "delphiIqr": null,
         "delphiDissent": false,
-        "blendedScore": 54.9,
+        "blendedScore": 44.7,
         "blendedFrom": "indicators",
         "momentum": [],
         "indicators": [
@@ -572,115 +572,35 @@
             "indicatorId": "business_start_days",
             "name": "Time to start a business",
             "measurementClass": "C",
-            "raw": 12,
-            "transformed": 12,
-            "normalized": 82.6,
-            "year": 2019,
+            "raw": null,
+            "transformed": null,
+            "normalized": null,
+            "year": null,
             "source": "World Bank (IC.REG.DURS.MA.DY)",
+            "sourceTier": null,
+            "winsorized": false,
+            "outOfFrame": false,
+            "series": [],
+            "status": "retired",
+            "staleExcluded": null
+          },
+          {
+            "indicatorId": "business_entry_efficiency",
+            "name": "Business entry efficiency",
+            "measurementClass": "C",
+            "raw": 55.661,
+            "transformed": 55.661,
+            "normalized": 41.9,
+            "year": 2025,
+            "source": "World Bank (IC.BRE.BE.P3)",
             "sourceTier": "international_organization",
             "winsorized": false,
             "outOfFrame": false,
             "series": [
               {
-                "year": 2003,
-                "raw": 79,
-                "normalized": 0,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2004,
-                "raw": 26,
-                "normalized": 61.4,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2005,
-                "raw": 16,
-                "normalized": 76.5,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2006,
-                "raw": 16,
-                "normalized": 76.5,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2007,
-                "raw": 13,
-                "normalized": 81.1,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2008,
-                "raw": 13,
-                "normalized": 81.1,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2009,
-                "raw": 12,
-                "normalized": 82.6,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2010,
-                "raw": 12,
-                "normalized": 82.6,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2011,
-                "raw": 12,
-                "normalized": 82.6,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2012,
-                "raw": 12,
-                "normalized": 82.6,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2013,
-                "raw": 12,
-                "normalized": 82.6,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2014,
-                "raw": 12,
-                "normalized": 82.6,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2015,
-                "raw": 12,
-                "normalized": 82.6,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2016,
-                "raw": 12,
-                "normalized": 82.6,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2017,
-                "raw": 12,
-                "normalized": 82.6,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2018,
-                "raw": 12,
-                "normalized": 82.6,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2019,
-                "raw": 12,
-                "normalized": 82.6,
+                "year": 2025,
+                "raw": 55.661,
+                "normalized": 41.9,
                 "tier": "international_organization"
               }
             ],
@@ -896,19 +816,19 @@
         ]
       },
       "coordination": {
-        "score": 79.2,
+        "score": 77,
         "observedIndicators": 3,
         "belowCoverageFloor": false,
-        "confidence": 0.4,
+        "confidence": 0.467,
         "confidenceParts": {
           "coverage": 0.6,
-          "recency": 0.833,
+          "recency": 0.972,
           "sourceQuality": 0.8
         },
         "delphiScore": null,
         "delphiIqr": null,
         "delphiDissent": false,
-        "blendedScore": 79.2,
+        "blendedScore": 77,
         "blendedFrom": "indicators",
         "momentum": [],
         "indicators": [
@@ -964,49 +884,35 @@
             "indicatorId": "time_to_export",
             "name": "Border compliance time to export",
             "measurementClass": "C",
-            "raw": 53,
-            "transformed": 53,
-            "normalized": 80.2,
-            "year": 2019,
+            "raw": null,
+            "transformed": null,
+            "normalized": null,
+            "year": null,
             "source": "World Bank (TRD.ACRS.BRDR.EXPT.BRDR.COMP.HR.DB1619)",
+            "sourceTier": null,
+            "winsorized": false,
+            "outOfFrame": false,
+            "series": [],
+            "status": "retired",
+            "staleExcluded": null
+          },
+          {
+            "indicatorId": "trade_compliance_efficiency",
+            "name": "Trade compliance efficiency",
+            "measurementClass": "C",
+            "raw": 69.686,
+            "transformed": 69.686,
+            "normalized": 73.7,
+            "year": 2025,
+            "source": "World Bank (IC.BRE.IT.P3)",
             "sourceTier": "international_organization",
             "winsorized": false,
             "outOfFrame": false,
             "series": [
               {
-                "year": 2014,
-                "raw": 55.057,
-                "normalized": 79.4,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2015,
-                "raw": 55.057,
-                "normalized": 79.4,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2016,
-                "raw": 53,
-                "normalized": 80.2,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2017,
-                "raw": 53,
-                "normalized": 80.2,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2018,
-                "raw": 53,
-                "normalized": 80.2,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2019,
-                "raw": 53,
-                "normalized": 80.2,
+                "year": 2025,
+                "raw": 69.686,
+                "normalized": 73.7,
                 "tier": "international_organization"
               }
             ],
@@ -1218,19 +1124,19 @@
         "conditions": []
       },
       "trust": {
-        "score": 60.2,
+        "score": 54.7,
         "observedIndicators": 5,
         "belowCoverageFloor": false,
-        "confidence": 0.498,
+        "confidence": 0.546,
         "confidenceParts": {
           "coverage": 0.714,
-          "recency": 0.85,
+          "recency": 0.933,
           "sourceQuality": 0.82
         },
         "delphiScore": null,
         "delphiIqr": null,
         "delphiDissent": false,
-        "blendedScore": 60.2,
+        "blendedScore": 54.7,
         "blendedFrom": "indicators",
         "momentum": [],
         "indicators": [
@@ -1270,115 +1176,35 @@
             "indicatorId": "contract_enforcement_days",
             "name": "Time to enforce a contract",
             "measurementClass": "C",
-            "raw": 642,
-            "transformed": 642,
-            "normalized": 69.1,
-            "year": 2019,
+            "raw": null,
+            "transformed": null,
+            "normalized": null,
+            "year": null,
             "source": "World Bank (ENF.CONT.DURS.DY)",
+            "sourceTier": null,
+            "winsorized": false,
+            "outOfFrame": false,
+            "series": [],
+            "status": "retired",
+            "staleExcluded": null
+          },
+          {
+            "indicatorId": "dispute_resolution_efficiency",
+            "name": "Dispute resolution efficiency",
+            "measurementClass": "C",
+            "raw": 50.006,
+            "transformed": 50.006,
+            "normalized": 41.4,
+            "year": 2025,
+            "source": "World Bank (IC.BRE.DR.P3)",
             "sourceTier": "international_organization",
             "winsorized": false,
             "outOfFrame": false,
             "series": [
               {
-                "year": 2003,
-                "raw": 689,
-                "normalized": 66,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2004,
-                "raw": 689,
-                "normalized": 66,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2005,
-                "raw": 689,
-                "normalized": 66,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2006,
-                "raw": 689,
-                "normalized": 66,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2007,
-                "raw": 689,
-                "normalized": 66,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2008,
-                "raw": 689,
-                "normalized": 66,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2009,
-                "raw": 689,
-                "normalized": 66,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2010,
-                "raw": 689,
-                "normalized": 66,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2011,
-                "raw": 689,
-                "normalized": 66,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2012,
-                "raw": 689,
-                "normalized": 66,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2013,
-                "raw": 689,
-                "normalized": 66,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2014,
-                "raw": 689,
-                "normalized": 66,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2015,
-                "raw": 689,
-                "normalized": 66,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2016,
-                "raw": 689,
-                "normalized": 66,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2017,
-                "raw": 642,
-                "normalized": 69.1,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2018,
-                "raw": 642,
-                "normalized": 69.1,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2019,
-                "raw": 642,
-                "normalized": 69.1,
+                "year": 2025,
+                "raw": 50.006,
+                "normalized": 41.4,
                 "tier": "international_organization"
               }
             ],
@@ -1751,27 +1577,27 @@
         ]
       },
       "experimentation": {
-        "score": 5.7,
+        "score": 6.6,
         "observedIndicators": 4,
         "belowCoverageFloor": false,
-        "confidence": 0.334,
+        "confidence": 0.411,
         "confidenceParts": {
           "coverage": 0.444,
-          "recency": 0.813,
+          "recency": 1,
           "sourceQuality": 0.925
         },
         "delphiScore": null,
         "delphiIqr": null,
         "delphiDissent": false,
-        "blendedScore": 5.7,
+        "blendedScore": 6.6,
         "blendedFrom": "indicators",
         "momentum": [
           {
             "baseYear": 2016,
             "currentYear": 2026,
-            "baseScore": 2.8,
-            "currentScore": 3.4,
-            "delta": 0.6,
+            "baseScore": 3.2,
+            "currentScore": 4.6,
+            "delta": 1.4,
             "matchedIndicators": 3,
             "basket": [
               "resident_patents_per_million",
@@ -1782,56 +1608,56 @@
             "series": [
               {
                 "year": 2016,
-                "score": 2.8
+                "score": 3.2
               },
               {
                 "year": 2017,
-                "score": 3.1
+                "score": 3.6
               },
               {
                 "year": 2018,
-                "score": 2.3
-              },
-              {
-                "year": 2019,
                 "score": 2.7
               },
               {
+                "year": 2019,
+                "score": 3.1
+              },
+              {
                 "year": 2020,
-                "score": 3
+                "score": 3.4
               },
               {
                 "year": 2021,
-                "score": 3.5
+                "score": 4
               },
               {
                 "year": 2022,
-                "score": 3.5
+                "score": 3.4
               },
               {
                 "year": 2023,
-                "score": 3.4
+                "score": 4
               },
               {
                 "year": 2024,
-                "score": 3.4
+                "score": 4.6
               },
               {
                 "year": 2025,
-                "score": 3.4
+                "score": 4.6
               },
               {
                 "year": 2026,
-                "score": 3.4
+                "score": 4.6
               }
             ]
           },
           {
             "baseYear": 2006,
             "currentYear": 2026,
-            "baseScore": 8.7,
-            "currentScore": 2.9,
-            "delta": -5.8,
+            "baseScore": 9.8,
+            "currentScore": 5.1,
+            "delta": -4.7,
             "matchedIndicators": 2,
             "basket": [
               "resident_patents_per_million",
@@ -1841,87 +1667,87 @@
             "series": [
               {
                 "year": 2006,
-                "score": 8.7
+                "score": 9.8
               },
               {
                 "year": 2007,
-                "score": 7.9
+                "score": 9
               },
               {
                 "year": 2008,
-                "score": 7.3
+                "score": 8.4
               },
               {
                 "year": 2009,
-                "score": 7.6
+                "score": 8.6
               },
               {
                 "year": 2010,
-                "score": 3.9
+                "score": 4.4
               },
               {
                 "year": 2011,
-                "score": 4
+                "score": 4.6
               },
               {
                 "year": 2012,
-                "score": 4.3
+                "score": 4.8
               },
               {
                 "year": 2013,
-                "score": 3.4
+                "score": 3.9
               },
               {
                 "year": 2014,
-                "score": 3.7
+                "score": 4.2
               },
               {
                 "year": 2015,
-                "score": 3.6
+                "score": 4
               },
               {
                 "year": 2016,
-                "score": 3.1
+                "score": 3.6
               },
               {
                 "year": 2017,
-                "score": 3.2
+                "score": 3.7
               },
               {
                 "year": 2018,
-                "score": 3
+                "score": 3.4
               },
               {
                 "year": 2019,
-                "score": 2.6
+                "score": 3.1
               },
               {
                 "year": 2020,
-                "score": 3
+                "score": 3.4
               },
               {
                 "year": 2021,
-                "score": 3
+                "score": 3.5
               },
               {
                 "year": 2022,
-                "score": 3
+                "score": 3.6
               },
               {
                 "year": 2023,
-                "score": 2.9
+                "score": 3.9
               },
               {
                 "year": 2024,
-                "score": 2.9
+                "score": 5.1
               },
               {
                 "year": 2025,
-                "score": 2.9
+                "score": 5.1
               },
               {
                 "year": 2026,
-                "score": 2.9
+                "score": 5.1
               }
             ]
           }
@@ -1931,10 +1757,10 @@
             "indicatorId": "resident_patents_per_million",
             "name": "Resident patent applications",
             "measurementClass": "O",
-            "raw": 25,
-            "transformed": 2.17,
-            "normalized": 1.2,
-            "year": 2021,
+            "raw": 14,
+            "transformed": 1.215,
+            "normalized": 0.7,
+            "year": 2024,
             "source": "World Bank (IP.PAT.RESD)",
             "sourceTier": "international_organization",
             "winsorized": false,
@@ -1949,13 +1775,13 @@
               {
                 "year": 2000,
                 "raw": 71,
-                "normalized": 7.6,
+                "normalized": 7.8,
                 "tier": "international_organization"
               },
               {
                 "year": 2001,
                 "raw": 52,
-                "normalized": 5.5,
+                "normalized": 5.6,
                 "tier": "international_organization"
               },
               {
@@ -1967,73 +1793,73 @@
               {
                 "year": 2003,
                 "raw": 25,
-                "normalized": 2.5,
+                "normalized": 2.6,
                 "tier": "international_organization"
               },
               {
                 "year": 2004,
                 "raw": 42,
-                "normalized": 4.1,
+                "normalized": 4.2,
                 "tier": "international_organization"
               },
               {
                 "year": 2005,
                 "raw": 49,
-                "normalized": 4.7,
+                "normalized": 4.8,
                 "tier": "international_organization"
               },
               {
                 "year": 2006,
                 "raw": 75,
-                "normalized": 6.7,
+                "normalized": 6.9,
                 "tier": "international_organization"
               },
               {
                 "year": 2007,
                 "raw": 59,
-                "normalized": 5,
+                "normalized": 5.1,
                 "tier": "international_organization"
               },
               {
                 "year": 2008,
                 "raw": 50,
-                "normalized": 4.1,
+                "normalized": 4.2,
                 "tier": "international_organization"
               },
               {
                 "year": 2009,
                 "raw": 60,
-                "normalized": 4.9,
+                "normalized": 5,
                 "tier": "international_organization"
               },
               {
                 "year": 2010,
                 "raw": 45,
-                "normalized": 3.6,
+                "normalized": 3.7,
                 "tier": "international_organization"
               },
               {
                 "year": 2011,
                 "raw": 40,
-                "normalized": 3.1,
+                "normalized": 3.2,
                 "tier": "international_organization"
               },
               {
                 "year": 2012,
                 "raw": 48,
-                "normalized": 3.7,
+                "normalized": 3.8,
                 "tier": "international_organization"
               },
               {
                 "year": 2013,
                 "raw": 35,
-                "normalized": 2.5,
+                "normalized": 2.6,
                 "tier": "international_organization"
               },
               {
                 "year": 2014,
                 "raw": 40,
-                "normalized": 2.6,
+                "normalized": 2.7,
                 "tier": "international_organization"
               },
               {
@@ -2057,25 +1883,43 @@
               {
                 "year": 2018,
                 "raw": 24,
-                "normalized": 1.3,
+                "normalized": 1.4,
                 "tier": "international_organization"
               },
               {
                 "year": 2019,
                 "raw": 21,
-                "normalized": 1.1,
+                "normalized": 1.2,
                 "tier": "international_organization"
               },
               {
                 "year": 2020,
                 "raw": 36,
-                "normalized": 1.9,
+                "normalized": 2,
                 "tier": "international_organization"
               },
               {
                 "year": 2021,
                 "raw": 25,
                 "normalized": 1.3,
+                "tier": "international_organization"
+              },
+              {
+                "year": 2022,
+                "raw": 25,
+                "normalized": 1.3,
+                "tier": "international_organization"
+              },
+              {
+                "year": 2023,
+                "raw": 21,
+                "normalized": 1.1,
+                "tier": "international_organization"
+              },
+              {
+                "year": 2024,
+                "raw": 14,
+                "normalized": 0.7,
                 "tier": "international_organization"
               }
             ],
@@ -2086,10 +1930,10 @@
             "indicatorId": "resident_trademarks_per_million",
             "name": "Resident trademark applications",
             "measurementClass": "O",
-            "raw": 3242,
-            "transformed": 281.407,
-            "normalized": 4.6,
-            "year": 2021,
+            "raw": 5613,
+            "transformed": 487.211,
+            "normalized": 9.5,
+            "year": 2024,
             "source": "World Bank (IP.TMK.RSCT)",
             "sourceTier": "international_organization",
             "winsorized": false,
@@ -2098,97 +1942,115 @@
               {
                 "year": 2004,
                 "raw": 3206,
-                "normalized": 8.9,
+                "normalized": 10.6,
                 "tier": "international_organization"
               },
               {
                 "year": 2005,
                 "raw": 3638,
-                "normalized": 9.8,
+                "normalized": 11.7,
                 "tier": "international_organization"
               },
               {
                 "year": 2006,
                 "raw": 4163,
-                "normalized": 10.6,
+                "normalized": 12.6,
                 "tier": "international_organization"
               },
               {
                 "year": 2007,
                 "raw": 4512,
-                "normalized": 10.8,
+                "normalized": 12.8,
                 "tier": "international_organization"
               },
               {
                 "year": 2010,
                 "raw": 1907,
-                "normalized": 4.2,
+                "normalized": 5.1,
                 "tier": "international_organization"
               },
               {
                 "year": 2011,
                 "raw": 2298,
-                "normalized": 5,
+                "normalized": 6,
                 "tier": "international_organization"
               },
               {
                 "year": 2012,
                 "raw": 2286,
-                "normalized": 4.9,
+                "normalized": 5.8,
                 "tier": "international_organization"
               },
               {
                 "year": 2013,
                 "raw": 2113,
-                "normalized": 4.3,
+                "normalized": 5.1,
                 "tier": "international_organization"
               },
               {
                 "year": 2014,
                 "raw": 2553,
-                "normalized": 4.7,
+                "normalized": 5.6,
                 "tier": "international_organization"
               },
               {
                 "year": 2015,
                 "raw": 2725,
-                "normalized": 4.6,
+                "normalized": 5.5,
                 "tier": "international_organization"
               },
               {
                 "year": 2016,
                 "raw": 3013,
-                "normalized": 4.9,
+                "normalized": 5.8,
                 "tier": "international_organization"
               },
               {
                 "year": 2017,
                 "raw": 3085,
-                "normalized": 4.9,
+                "normalized": 5.8,
                 "tier": "international_organization"
               },
               {
                 "year": 2018,
                 "raw": 2981,
-                "normalized": 4.6,
+                "normalized": 5.5,
                 "tier": "international_organization"
               },
               {
                 "year": 2019,
                 "raw": 2730,
-                "normalized": 4.2,
+                "normalized": 5,
                 "tier": "international_organization"
               },
               {
                 "year": 2020,
                 "raw": 2753,
-                "normalized": 4.1,
+                "normalized": 4.9,
                 "tier": "international_organization"
               },
               {
                 "year": 2021,
                 "raw": 3242,
-                "normalized": 4.8,
+                "normalized": 5.7,
+                "tier": "international_organization"
+              },
+              {
+                "year": 2022,
+                "raw": 3398,
+                "normalized": 5.9,
+                "tier": "international_organization"
+              },
+              {
+                "year": 2023,
+                "raw": 3925,
+                "normalized": 6.7,
+                "tier": "international_organization"
+              },
+              {
+                "year": 2024,
+                "raw": 5613,
+                "normalized": 9.4,
                 "tier": "international_organization"
               }
             ],
@@ -2199,10 +2061,10 @@
             "indicatorId": "resident_industrial_designs_per_million",
             "name": "Resident industrial design applications",
             "measurementClass": "O",
-            "raw": 114,
-            "transformed": 9.895,
-            "normalized": 4.3,
-            "year": 2021,
+            "raw": 86,
+            "transformed": 7.465,
+            "normalized": 3.7,
+            "year": 2024,
             "source": "World Bank (IP.IDS.RSCT)",
             "sourceTier": "international_organization",
             "winsorized": false,
@@ -2211,73 +2073,91 @@
               {
                 "year": 2010,
                 "raw": 42,
-                "normalized": 2.5,
+                "normalized": 2.8,
                 "tier": "international_organization"
               },
               {
                 "year": 2011,
                 "raw": 9,
-                "normalized": 0.5,
+                "normalized": 0.6,
                 "tier": "international_organization"
               },
               {
                 "year": 2012,
                 "raw": 38,
-                "normalized": 2.2,
+                "normalized": 2.5,
                 "tier": "international_organization"
               },
               {
                 "year": 2013,
                 "raw": 30,
-                "normalized": 1.6,
+                "normalized": 1.8,
                 "tier": "international_organization"
               },
               {
                 "year": 2014,
                 "raw": 17,
-                "normalized": 0.8,
+                "normalized": 0.9,
                 "tier": "international_organization"
               },
               {
                 "year": 2015,
                 "raw": 55,
-                "normalized": 2.5,
+                "normalized": 2.8,
                 "tier": "international_organization"
               },
               {
                 "year": 2016,
                 "raw": 53,
-                "normalized": 2.3,
+                "normalized": 2.6,
                 "tier": "international_organization"
               },
               {
                 "year": 2017,
                 "raw": 71,
-                "normalized": 3,
+                "normalized": 3.4,
                 "tier": "international_organization"
               },
               {
                 "year": 2018,
                 "raw": 26,
-                "normalized": 1,
+                "normalized": 1.2,
                 "tier": "international_organization"
               },
               {
                 "year": 2019,
                 "raw": 71,
-                "normalized": 2.9,
+                "normalized": 3.3,
                 "tier": "international_organization"
               },
               {
                 "year": 2020,
                 "raw": 74,
-                "normalized": 2.9,
+                "normalized": 3.4,
                 "tier": "international_organization"
               },
               {
                 "year": 2021,
                 "raw": 114,
-                "normalized": 4.5,
+                "normalized": 5.1,
+                "tier": "international_organization"
+              },
+              {
+                "year": 2022,
+                "raw": 68,
+                "normalized": 3,
+                "tier": "international_organization"
+              },
+              {
+                "year": 2023,
+                "raw": 100,
+                "normalized": 4.3,
+                "tier": "international_organization"
+              },
+              {
+                "year": 2024,
+                "raw": 86,
+                "normalized": 3.7,
                 "tier": "international_organization"
               }
             ],
@@ -2784,11 +2664,11 @@
             "definition": "Power lost in transmission and distribution, including unbilled use.",
             "unit": "% of output",
             "direction": "lower_better",
-            "value": 10.957,
-            "year": 2023,
+            "value": 10.958,
+            "year": 2024,
             "source": "World Bank (EG.ELC.LOSS.ZS)",
             "sourceTier": "international_organization",
-            "rank": 74,
+            "rank": 71,
             "n": 117,
             "stale": false,
             "note": "A condition, not scored: the state of the grid, and whether its operator can bill what it delivers, is infrastructure a country has to change with, not a record of it changing (D141). Read it beside broadband, the other installed network beside Adaptability."
@@ -2829,9 +2709,9 @@
           {
             "baseYear": 2016,
             "currentYear": 2026,
-            "baseScore": 18.4,
+            "baseScore": 18.5,
             "currentScore": 18.3,
-            "delta": -0.1,
+            "delta": -0.2,
             "matchedIndicators": 3,
             "basket": [
               "manufacturing_value_added",
@@ -2842,15 +2722,15 @@
             "series": [
               {
                 "year": 2016,
-                "score": 18.4
+                "score": 18.5
               },
               {
                 "year": 2017,
-                "score": 17.5
+                "score": 17.6
               },
               {
                 "year": 2018,
-                "score": 17
+                "score": 17.1
               },
               {
                 "year": 2019,
@@ -2862,7 +2742,7 @@
               },
               {
                 "year": 2021,
-                "score": 16.1
+                "score": 16.2
               },
               {
                 "year": 2022,
@@ -3311,13 +3191,13 @@
               {
                 "year": 2011,
                 "raw": 2.551,
-                "normalized": 4,
+                "normalized": 4.1,
                 "tier": "international_organization"
               },
               {
                 "year": 2012,
                 "raw": 2.368,
-                "normalized": 3.7,
+                "normalized": 3.8,
                 "tier": "international_organization"
               },
               {
@@ -3341,19 +3221,19 @@
               {
                 "year": 2016,
                 "raw": 3.378,
-                "normalized": 5.4,
+                "normalized": 5.5,
                 "tier": "international_organization"
               },
               {
                 "year": 2017,
                 "raw": 1.813,
-                "normalized": 2.8,
+                "normalized": 2.9,
                 "tier": "international_organization"
               },
               {
                 "year": 2018,
                 "raw": 1.509,
-                "normalized": 2.3,
+                "normalized": 2.4,
                 "tier": "international_organization"
               },
               {
@@ -3377,7 +3257,7 @@
               {
                 "year": 2022,
                 "raw": 1.45,
-                "normalized": 2.2,
+                "normalized": 2.3,
                 "tier": "international_organization"
               },
               {
@@ -3936,43 +3816,43 @@
               {
                 "year": 1986,
                 "raw": 36.1,
-                "normalized": 65.2,
+                "normalized": 63.7,
                 "tier": "international_organization"
               },
               {
                 "year": 1992,
                 "raw": 43.1,
-                "normalized": 45.3,
+                "normalized": 44.3,
                 "tier": "international_organization"
               },
               {
                 "year": 1997,
                 "raw": 36.4,
-                "normalized": 64.3,
+                "normalized": 62.9,
                 "tier": "international_organization"
               },
               {
                 "year": 2002,
                 "raw": 37,
-                "normalized": 62.6,
+                "normalized": 61.2,
                 "tier": "international_organization"
               },
               {
                 "year": 2006,
                 "raw": 33.9,
-                "normalized": 71.4,
+                "normalized": 69.8,
                 "tier": "international_organization"
               },
               {
                 "year": 2008,
                 "raw": 32.6,
-                "normalized": 75.1,
+                "normalized": 73.4,
                 "tier": "international_organization"
               },
               {
                 "year": 2010,
                 "raw": 33.7,
-                "normalized": 72,
+                "normalized": 70.4,
                 "tier": "international_organization"
               }
             ],

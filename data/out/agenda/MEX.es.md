@@ -1,6 +1,6 @@
 # Agenda de capacidades: México
 
-*Generado el 2026-10-16*
+*Generado el 2026-10-17*
 
 La comparación incluye 125 países. Cada dimensión recibe una puntuación de 0 a 100, sin clasificación general, y cada puntuación muestra a su lado la solidez de la evidencia. Antes de citar una puntuación, lea [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md).
 
@@ -9,38 +9,38 @@ La comparación incluye 125 países. Cada dimensión recibe una puntuación de 0
 | Dimensión | Puntuación | Solidez | Tendencia |
 | --- | --- | --- | --- |
 | Anticipación | 49.9 | 0.46 (utilizable) | +10.7 en 10 años, con 2 indicadores |
-| Iniciativa | 64.3 | 0.56 (utilizable) | sin base de tendencia |
-| Coordinación | 74.3 | 0.37 (débil) | sin base de tendencia |
-| Confianza | 41.2 | 0.49 (utilizable) | sin base de tendencia |
+| Iniciativa | 56.3 | 0.63 (utilizable) | sin base de tendencia |
+| Coordinación | 57 | 0.44 (débil) | sin base de tendencia |
+| Confianza | 35.5 | 0.54 (utilizable) | sin base de tendencia |
 | Aprendizaje | 42.5 | 0.54 (utilizable) | sin base de tendencia |
-| Experimentación | 25.2 | 0.53 (utilizable) | +0.4 en 10 años, con 3 indicadores |
+| Experimentación | 26.3 | 0.6 (utilizable) | +1.3 en 10 años, con 3 indicadores |
 | Adaptación | 65.4 | 0.46 (utilizable) | sin base de tendencia |
-| Ejecución | 54.9 | 0.57 (utilizable) | +2.5 en 10 años, con 3 indicadores |
-| Propósito compartido | 45.2 | 0.43 (débil) | +8.6 en 10 años, con 2 indicadores |
+| Ejecución | 55 | 0.57 (utilizable) | +2.5 en 10 años, con 3 indicadores |
+| Propósito compartido | 44.8 | 0.43 (débil) | +8.4 en 10 años, con 2 indicadores |
 
 ## Puntuaciones bajas con evidencia utilizable
 
 Estas son las puntuaciones más bajas con evidencia utilizable. Las dimensiones con evidencia débil aparecen más abajo.
 
-### Experimentación: 25.2, evidencia utilizable
+### Experimentación: 26.3, evidencia utilizable
 
 ¿Con qué facilidad se pueden intentar, probar, abandonar y mejorar enfoques nuevos?
 
 - Basada en 6 indicadores observados.
-- Puntuaciones más altas en esta dimensión, entre las que tienen evidencia utilizable: Corea del Sur 72.6, Suiza 68.6, Estados Unidos 50.6.
+- Puntuaciones más altas en esta dimensión, entre las que tienen evidencia utilizable: Corea del Sur 73.5, Suiza 68.8, Estados Unidos 51.3.
 - Casos documentados en otros países: The FCA regulatory sandbox (Reino Unido); Yozma, the venture capital catalyst (Israel); Korean regulatory-sandbox system across eight sectors (Corea del Sur); MAS FinTech Regulatory Sandbox variants (Singapur); British Patient Capital, a public venture-capital catalyst (Reino Unido); ICURe, from university research to spinouts (Reino Unido); Portugal Ventures, a public venture-capital bridge (Portugal); Rede Nacional de Test Beds for company experimentation (Portugal); Zonas Livres Tecnológicas, regulator-supervised experimentation zones (Portugal); Banco Central regulatory sandbox, first cycle (Brasil); Reserve Bank of India regulatory sandbox (India); Capital Markets Authority regulatory sandbox (Kenia); SEC Nigeria Regulatory Incubation Program (Nigeria); ADGM RegLab, the first fintech sandbox in the region (Emiratos Árabes Unidos); OJK regulatory sandbox for financial-sector technological innovation (Indonesia); Bank Negara Malaysia Fintech Regulatory Sandbox (Malasia); Bank of Thailand regulatory sandbox (Tailandia); Sandbox financiero (Ley 7/2020), and the fall in applications (España); IFWG Regulatory Sandbox (Sudáfrica); Project-based regulatory sandbox (new technology demonstration scheme) (Japón); CFPB Compliance Assistance Sandbox, rescinded in 2022 and withdrawn again in 2025 (Estados Unidos); CSA Regulatory Sandbox, succeeded by the Financial Innovation Hub (Canadá); ASIC enhanced regulatory sandbox (Australia); SINTEG-Verordnung, the energy-transition experimentation clause (Alemania); Experimenten Elektriciteitswet 2015-2018, and its erosion (Países Bajos); Bac à sable réglementaire in the energy sector (Francia); Italy's FinTech regulatory sandbox, and its contraction (Italia); Bank of Ghana Regulatory Sandbox (Ghana); AFSA FinTech Lab at the Astana International Financial Centre (Kazajistán); Banque Centrale de Tunisie regulatory sandbox, first cohort (Túnez); Sandbox Regulatório do Banco de Moçambique (Mozambique); Regulatory Sandbox Licence of the Economic Development Board (Mauricio); Bank of Uganda regulatory sandbox (Uganda); Regulatory Sandbox Framework for Capital Markets, first cohort (Zambia); Securities and Exchange Commission of Zimbabwe regulatory sandbox (Zimbabue); FMA Regulatory Sandbox (Austria); Regulatorisk sandkasse for AI (Datatilsynet and Digitaliseringsstyrelsen) (Dinamarca); Datatilsynet's regulatory sandbox for privacy-friendly innovation (Noruega); Bank of Lithuania regulatory sandbox, with one test in seven years (Lituania); Narodna banka Slovenska regulatory sandbox (Eslovaquia); Sandbox for AI and blockchain products, Ministry of Digital Transformation and Ukrainian Startup Fund (Ucrania); Bank of Russia regulatory sandbox (regulativnaya pesochnitsa) (Rusia); JoRegBox, the Central Bank of Jordan regulatory sandbox (Jordania); Special regulatory regimes (spetsialnye regulyativnye rezhimy) of the National Bank of the Kyrgyz Republic (Kirguistán); SECP Regulatory Sandbox, four cohorts and an open window (Pakistán); Bank of Jamaica FinTech Regulatory Sandbox (Jamaica); Financial Regulatory Commission sandbox regulatory environment (Mongolia); NAMFISA Regulatory Sandbox, microlending cohort (Namibia); Central Bank of Azerbaijan regulatory sandbox (Azerbaiyán); FRA Sandbox of the Financial Regulatory Authority (Egipto); Mohit-e azmoon-e tanzimgari (regulatory sandbox) of the Central Bank of the Islamic Republic of Iran (Irán); Regulatory sandbox (special legal regime) in the capital market of the National Agency of Perspective Projects (Uzbekistán); BRUGEL derogation framework for innovative energy projects (projets innovants) (Bélgica); FMA regulatory sandbox pilot (Nueva Zelanda); Regulatory Laboratory (regulatory sandbox) of the National Bank of Georgia (Georgia); Energy Sandbox (spatii de testare inovativa in domeniul energiei) (Moldavia).
 - Vacíos declarados: Operaciones de capital de riesgo, Empresas en espacios controlados de prueba, Empresas surgidas de universidades.
 - Series descartadas: I+D ejecutada por empresas.
 
-### Confianza: 41.2, evidencia utilizable
+### Confianza: 35.5, evidencia utilizable
 
 ¿Cuánta cooperación es posible más allá de las redes personales inmediatas?
 
 - Basada en 5 indicadores observados.
-- Puntuaciones más altas en esta dimensión, entre las que tienen evidencia utilizable: Dinamarca 94.1, Noruega 91.3, Finlandia 89.7.
+- Puntuaciones más altas en esta dimensión, entre las que tienen evidencia utilizable: Suecia 90.3, Nueva Zelanda 83.2, Estonia 75.7.
 - Casos documentados en otros países: Cadastro Único, the unified social registry (Brasil); Portal da Transparência, the federal open-books system (Brasil); MyData, citizen-directed data portability (Corea del Sur); Singapore Courts' case-clearance discipline (Singapur); Civil-court clearance and the CEPEJ monitoring series (Portugal).
 - Vacíos declarados: Confianza en las instituciones públicas, Tasa de resolución de casos judiciales.
-- Series descartadas: Estado de derecho, Control de la corrupción, Tasa de homicidios intencionales.
+- Series descartadas: Estado de derecho, Control de la corrupción, Tiempo para hacer cumplir un contrato, Tasa de homicidios intencionales.
 
 ### Aprendizaje: 42.5, evidencia utilizable
 
@@ -64,14 +64,6 @@ Estas son las puntuaciones más bajas con evidencia utilizable. Las dimensiones 
 
 La solidez de la evidencia está por debajo de la franja utilizable, así que la puntuación se apoya en poca evidencia.
 
-### Coordinación: solidez 0.37, evidencia débil
-
-¿Con qué eficacia logran organizarse actores independientes en torno a objetivos comunes?
-
-- Basada en 3 indicadores observados.
-- Vacíos declarados: Colaboración universidad-empresa, Colaboración público-privada.
-- Series descartadas: Efectividad del gobierno, Calidad regulatoria, Desempeño logístico.
-
 ### Propósito compartido: solidez 0.43, evidencia débil
 
 ¿Hasta qué punto las personas logran verse como parte de un proyecto común?
@@ -80,13 +72,21 @@ La solidez de la evidencia está por debajo de la franja utilizable, así que la
 - Vacíos declarados: Sentido de pertenencia nacional, Voluntariado, Polarización política.
 - Series descartadas: Voz y rendición de cuentas.
 
+### Coordinación: solidez 0.44, evidencia débil
+
+¿Con qué eficacia logran organizarse actores independientes en torno a objetivos comunes?
+
+- Basada en 3 indicadores observados.
+- Vacíos declarados: Colaboración universidad-empresa, Colaboración público-privada.
+- Series descartadas: Efectividad del gobierno, Calidad regulatoria, Desempeño logístico, Tiempo de exportación en frontera.
+
 ## Puntuaciones altas con evidencia utilizable
 
 Estas dimensiones tienen una puntuación de al menos 50, con evidencia utilizable.
 
 - Adaptación: 65.4, evidencia utilizable
-- Iniciativa: 64.3, evidencia utilizable
-- Ejecución: 54.9, evidencia utilizable
+- Iniciativa: 56.3, evidencia utilizable
+- Ejecución: 55, evidencia utilizable
 
 ## ¿Con qué cuenta México?
 
@@ -99,13 +99,13 @@ Las condiciones describen lo que un país tiene para trabajar: infraestructura, 
 | Anticipación | Servidores de internet seguros | 531.7 por millón de personas | 2024 | 75.º de 125 |
 | Iniciativa | Personas que usan internet | 83.1 % de la población | 2024 | 64.º de 125 |
 | Iniciativa | Titularidad de cuentas financieras | 53 % de las personas de 15 años o más | 2024 | 93.º de 122 |
-| Iniciativa | Crédito al sector privado | 35.5 % del PIB | 2025 | 71.º de 124 |
+| Iniciativa | Crédito al sector privado | 35.5 % del PIB | 2025 | 72.º de 124 |
 | Aprendizaje | Matrícula en educación superior | 48.2 % (tasa bruta) | 2024 | 67.º de 124 |
 | Aprendizaje | Gasto público en educación | 4.1 % del PIB | 2022 | 66.º de 125 |
 | Aprendizaje | Matrícula técnica en secundaria | 27.7 % de la matrícula secundaria | 2018 | 23.º de 125 |
 | Adaptación | Participación en la fuerza laboral | 66.3 % de las personas de 15 años o más | 2025 | 84.º de 125 |
 | Adaptación | Suscripciones de banda ancha fija | 21.7 por cada 100 personas | 2024 | 58.º de 125 |
-| Adaptación | Pérdidas en la transmisión de electricidad | 11.1 % de la producción | 2024 | 75.º de 117 |
+| Adaptación | Pérdidas en la transmisión de electricidad | 11.3 % de la producción | 2025 | 72.º de 117 |
 | Adaptación | Empleo informal | 56.9 % del empleo | 2025 | 53.º de 102 |
 | Ejecución | Producto por trabajador | 48,140.6 US$ PPA constantes de 2021 | 2025 | 61.º de 123 |
 

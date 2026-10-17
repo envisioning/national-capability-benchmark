@@ -65,18 +65,18 @@ O1 and breaks this.
 
 ### Where the objectives stand
 
-Dataset 9.0.0, 125 countries (D153). Recompute from `data/out/diagnostics.json` and
+Dataset 9.4.0, 125 countries (D153). Recompute from `data/out/diagnostics.json` and
 `data/out/index.json` after any rescore; never carry these figures forward by
 hand.
 
 | Dimension | Mean confidence | Observed rows (mean) | r with log GDP | Reading |
 | --- | ---: | ---: | ---: | --- |
-| Trust | 0.40 | 4.1 | 0.35 | misses O1 at 0.398; half its rows are survey items most added countries lack |
-| Experimentation | 0.32 | 4.0 | 0.73 | misses O1; tracks income; GEM covers 16 (D125) |
-| Shared purpose | 0.32 | 2.5 | 0.26 (n 122) | misses O1 |
-| Coordination | 0.37 | 2.9 | 0.53 | misses O1 |
+| Trust | 0.39 | 3.7 | 0.42 (n 121) | misses O1 at 0.392; survey rows and B-READY each reach about 72 countries |
+| Experimentation | 0.39 | 4.0 | 0.74 (n 120) | misses O1 at 0.391; tracks income; GEM covers 16 (D125) |
+| Shared purpose | 0.32 | 2.4 | 0.24 (n 118) | misses O1 |
+| Coordination | 0.36 | 2.5 | 0.43 (n 120) | misses O1; B-READY reaches 74 (D167) |
 | Learning | 0.52 | 2.9 | 0.71 | tracks income |
-| Agency | 0.47 | 3.5 | 0.47 | |
+| Agency | 0.47 | 3.1 | 0.48 (n 120) | |
 | Anticipation | 0.45 | 2.0 | 0.86 | tracks income |
 | Building | 0.55 | 3.9 | 0.57 | |
 | Adaptability | 0.58 | 3.9 | 0.53 | 15 countries without a long-term share (A16) |
@@ -172,7 +172,8 @@ log GDP 0.572 to 0.651, the guardrail 0.289 to 0.286. The GEM extension stays
 held (D125), so O1 is still missed; the next candidate is B-READY insolvency. `business_rd_share` is retired (D142): RICYT fills Latin
 America (34 of 53 with OECD MSTI), but the row is the make-up of a spending
 stock. B-READY
-(#37): 13 of 53 in the API, 26 in the 2025 package, gate 27.
+(#37) reached 74 of 125 in the API's 2025 round, and D167 scores three of its
+operational-efficiency pillars in Agency, Coordination and Trust.
 
 **Q5 status (2026-10-01): done, one row scored (D131).** The triage table
 is `docs/research/vdem-sweep/TRIAGE.md`: 21 codebook variables, construct

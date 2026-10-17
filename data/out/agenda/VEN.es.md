@@ -1,6 +1,6 @@
 # Agenda de capacidades: Venezuela
 
-*Generado el 2026-10-16*
+*Generado el 2026-10-17*
 
 La comparación incluye 125 países. Cada dimensión recibe una puntuación de 0 a 100, sin clasificación general, y cada puntuación muestra a su lado la solidez de la evidencia. Antes de citar una puntuación, lea [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md).
 
@@ -9,11 +9,11 @@ La comparación incluye 125 países. Cada dimensión recibe una puntuación de 0
 | Dimensión | Puntuación | Solidez | Tendencia |
 | --- | --- | --- | --- |
 | Anticipación | 0.9 | 0.46 (utilizable) | -5.4 en 10 años, con 2 indicadores |
-| Iniciativa | 26.1 | 0.37 (débil) | sin base de tendencia |
-| Coordinación | 16.7 | 0.22 (muy débil) | sin base de tendencia |
-| Confianza | 23.8 | 0.37 (débil) | sin base de tendencia |
+| Iniciativa | 39.1 | 0.26 (débil) | sin base de tendencia |
+| Coordinación | sin puntuación | 0.1 (muy débil) | sin base de tendencia |
+| Confianza | 10.4 | 0.28 (débil) | sin base de tendencia |
 | Aprendizaje | sin puntuación | 0.16 (muy débil) | sin base de tendencia |
-| Experimentación | 5.7 | 0.19 (muy débil) | sin base de tendencia |
+| Experimentación | 2.9 | 0.41 (débil) | -2.1 en 10 años, con 2 indicadores |
 | Adaptación | 48.7 | 0.53 (utilizable) | sin base de tendencia |
 | Ejecución | 8.9 | 0.25 (débil) | sin base de tendencia |
 | Propósito compartido | sin puntuación | 0.12 (muy débil) | sin base de tendencia |
@@ -44,6 +44,14 @@ Estas son las puntuaciones más bajas con evidencia utilizable. Las dimensiones 
 
 La solidez de la evidencia está por debajo de la franja utilizable, así que la puntuación se apoya en poca evidencia.
 
+### Coordinación: solidez 0.1, evidencia muy débil
+
+¿Con qué eficacia logran organizarse actores independientes en torno a objetivos comunes?
+
+- Basada en un indicador observado.
+- Vacíos declarados: Colaboración universidad-empresa, Colaboración público-privada.
+- Series descartadas: Efectividad del gobierno, Calidad regulatoria, Desempeño logístico, Tiempo de exportación en frontera.
+
 ### Propósito compartido: solidez 0.12, evidencia muy débil
 
 ¿Hasta qué punto las personas logran verse como parte de un proyecto común?
@@ -59,22 +67,6 @@ La solidez de la evidencia está por debajo de la franja utilizable, así que la
 - Basada en un indicador observado.
 - Vacíos declarados: Participación de adultos en aprendizaje.
 
-### Experimentación: solidez 0.19, evidencia muy débil
-
-¿Con qué facilidad se pueden intentar, probar, abandonar y mejorar enfoques nuevos?
-
-- Basada en 3 indicadores observados.
-- Vacíos declarados: Operaciones de capital de riesgo, Empresas en espacios controlados de prueba, Empresas surgidas de universidades.
-- Series descartadas: I+D ejecutada por empresas.
-
-### Coordinación: solidez 0.22, evidencia muy débil
-
-¿Con qué eficacia logran organizarse actores independientes en torno a objetivos comunes?
-
-- Basada en 2 indicadores observados.
-- Vacíos declarados: Colaboración universidad-empresa, Colaboración público-privada.
-- Series descartadas: Efectividad del gobierno, Calidad regulatoria, Desempeño logístico.
-
 ### Ejecución: solidez 0.25, evidencia débil
 
 ¿En qué medida es capaz el país de convertir planes y conocimiento en sistemas que funcionan?
@@ -83,20 +75,29 @@ La solidez de la evidencia está por debajo de la franja utilizable, así que la
 - Vacíos declarados: Ejecución de grandes proyectos, Empresas jóvenes que ganan escala.
 - Series descartadas: Calidad de la infraestructura logística.
 
-### Confianza: solidez 0.37, evidencia débil
-
-¿Cuánta cooperación es posible más allá de las redes personales inmediatas?
-
-- Basada en 4 indicadores observados.
-- Vacíos declarados: Confianza en las instituciones públicas, Tasa de resolución de casos judiciales.
-- Series descartadas: Estado de derecho, Control de la corrupción, Tasa de homicidios intencionales.
-
-### Iniciativa: solidez 0.37, evidencia débil
+### Iniciativa: solidez 0.26, evidencia débil
 
 ¿En qué medida son capaces las personas y las organizaciones de convertir una intención en acción?
 
-- Basada en 3 indicadores observados.
+- Basada en 2 indicadores observados.
 - Vacíos declarados: Adultos que realizan tareas digitales.
+- Series descartadas: Tiempo para abrir una empresa.
+
+### Confianza: solidez 0.28, evidencia débil
+
+¿Cuánta cooperación es posible más allá de las redes personales inmediatas?
+
+- Basada en 3 indicadores observados.
+- Vacíos declarados: Confianza en las instituciones públicas, Tasa de resolución de casos judiciales.
+- Series descartadas: Estado de derecho, Control de la corrupción, Tiempo para hacer cumplir un contrato, Tasa de homicidios intencionales.
+
+### Experimentación: solidez 0.41, evidencia débil
+
+¿Con qué facilidad se pueden intentar, probar, abandonar y mejorar enfoques nuevos?
+
+- Basada en 4 indicadores observados.
+- Vacíos declarados: Operaciones de capital de riesgo, Empresas en espacios controlados de prueba, Empresas surgidas de universidades.
+- Series descartadas: I+D ejecutada por empresas.
 
 ## ¿Con qué cuenta Venezuela?
 
@@ -115,7 +116,7 @@ Las condiciones describen lo que un país tiene para trabajar: infraestructura, 
 | Aprendizaje | Matrícula técnica en secundaria | 5.4 % de la matrícula secundaria | 2017 | 90.º de 125 |
 | Adaptación | Participación en la fuerza laboral | 56.6 % de las personas de 15 años o más | 2025 | 110.º de 125 |
 | Adaptación | Suscripciones de banda ancha fija | 12.9 por cada 100 personas | 2024 | 71.º de 125 |
-| Adaptación | Pérdidas en la transmisión de electricidad | 21.4 % de la producción | 2023 | 107.º de 117 |
+| Adaptación | Pérdidas en la transmisión de electricidad | 18.3 % de la producción | 2024 | 99.º de 117 |
 | Adaptación | Empleo informal | 58.3 % del empleo | 2017 | 55.º de 102 |
 
 ## ¿Qué falta medir?

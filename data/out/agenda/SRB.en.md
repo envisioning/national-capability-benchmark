@@ -1,6 +1,6 @@
 # Capability agenda: Serbia
 
-*Generated 2026-10-16*
+*Generated 2026-10-17*
 
 The frame includes 125 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
@@ -9,14 +9,14 @@ The frame includes 125 countries. Each dimension is scored from 0 to 100, with n
 | Dimension | Score | Confidence | Trend |
 | --- | --- | --- | --- |
 | Anticipation | 52.9 | 0.46 (usable) | +12.5 over 10 years using 2 indicators |
-| Agency | 56.7 | 0.41 (thin) | no trend |
-| Coordination | 81.6 | 0.4 (thin) | no trend |
-| Trust | 67.1 | 0.3 (thin) | no trend |
+| Agency | 58.9 | 0.49 (usable) | no trend |
+| Coordination | 73.6 | 0.47 (usable) | no trend |
+| Trust | 63.9 | 0.34 (thin) | no trend |
 | Learning | 40 | 0.55 (usable) | no trend |
-| Experimentation | 13.3 | 0.33 (thin) | -1.5 over 10 years using 3 indicators |
+| Experimentation | 14.2 | 0.41 (thin) | -1.6 over 10 years using 3 indicators |
 | Adaptability | 69.8 | 0.62 (usable) | no trend |
 | Building | 31.4 | 0.41 (thin) | -7 over 10 years using 2 indicators |
-| Shared Purpose | 70.7 | 0.28 (thin) | +10.6 over 10 years using 2 indicators |
+| Shared Purpose | 69.9 | 0.28 (thin) | +10.4 over 10 years using 2 indicators |
 
 ## What to raise
 
@@ -43,29 +43,13 @@ To what extent can people imagine themselves as participants in a common project
 - Missing indicators: Sense of national belonging, Volunteering, Political polarisation.
 - Rejected datasets: Voice and accountability.
 
-### Trust: confidence 0.3, thin
+### Trust: confidence 0.34, thin
 
 How much cooperation is possible beyond immediate personal networks?
 
 - Uses 3 observed indicators.
 - Missing indicators: Trust in public institutions, Court case clearance rate.
-- Rejected datasets: Rule of law, Control of corruption, Intentional homicide rate.
-
-### Experimentation: confidence 0.33, thin
-
-How easily can new approaches be attempted, tested, abandoned, and improved?
-
-- Uses 4 observed indicators.
-- Missing indicators: Venture deals, Firms through regulatory sandboxes, University spinouts.
-- Rejected datasets: Business share of R&D.
-
-### Coordination: confidence 0.4, thin
-
-How effectively can independent actors organize around shared objectives?
-
-- Uses 3 observed indicators.
-- Missing indicators: University-industry collaboration, Public-private collaboration.
-- Rejected datasets: Government effectiveness, Regulatory quality, Logistics performance.
+- Rejected datasets: Rule of law, Control of corruption, Time to enforce a contract, Intentional homicide rate.
 
 ### Building: confidence 0.41, thin
 
@@ -75,18 +59,21 @@ How capable is the country of turning plans and knowledge into functioning syste
 - Missing indicators: Large project delivery, Firm scale-up rate.
 - Rejected datasets: Logistics infrastructure quality.
 
-### Agency: confidence 0.41, thin
+### Experimentation: confidence 0.41, thin
 
-How able are individuals and organizations to turn an intention into action?
+How easily can new approaches be attempted, tested, abandoned, and improved?
 
-- Uses 3 observed indicators.
-- Missing indicators: Adults doing digital tasks.
+- Uses 4 observed indicators.
+- Missing indicators: Venture deals, Firms through regulatory sandboxes, University spinouts.
+- Rejected datasets: Business share of R&D.
 
 ## What to keep watching
 
 These dimensions score at least 50 with usable evidence.
 
+- Coordination: 73.6, confidence usable
 - Adaptability: 69.8, confidence usable
+- Agency: 58.9, confidence usable
 - Anticipation: 52.9, confidence usable
 
 ## What Serbia has to work with
@@ -100,13 +87,13 @@ Conditions describe what a country has to work with: infrastructure, access, mon
 | Anticipation | Secure internet servers | 12,941.8 per million people | 2024 | 38 of 125 |
 | Agency | Individuals using the internet | 87.7 % of population | 2024 | 51 of 125 |
 | Agency | Financial account ownership | 83.3 % aged 15+ | 2024 | 51 of 122 |
-| Agency | Credit to the private sector | 35.4 % of GDP | 2025 | 73 of 124 |
+| Agency | Credit to the private sector | 35.4 % of GDP | 2025 | 74 of 124 |
 | Learning | Tertiary enrolment | 70.6 % gross | 2024 | 40 of 124 |
 | Learning | Public education expenditure | 3.4 % of GDP | 2023 | 82 of 125 |
 | Learning | Vocational share of secondary | 35.5 % of secondary | 2019 | 10 of 125 |
 | Adaptability | Labour force participation | 74.2 % aged 15+ | 2025 | 46 of 125 |
 | Adaptability | Fixed broadband subscriptions | 33.4 per 100 people | 2024 | 32 of 125 |
-| Adaptability | Electricity transmission losses | 10.3 % of output | 2023 | 72 of 117 |
+| Adaptability | Electricity transmission losses | 10.6 % of output | 2024 | 70 of 117 |
 | Adaptability | Informal employment | 17.1 % of employment | 2025 | 31 of 102 |
 | Building | Output per worker | 58,609.3 constant 2021 PPP $ | 2025 | 51 of 123 |
 

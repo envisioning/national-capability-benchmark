@@ -1,6 +1,6 @@
 # Capability agenda: Switzerland
 
-*Generated 2026-10-16*
+*Generated 2026-10-17*
 
 The frame includes 125 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
@@ -9,28 +9,44 @@ The frame includes 125 countries. Each dimension is scored from 0 to 100, with n
 | Dimension | Score | Confidence | Trend |
 | --- | --- | --- | --- |
 | Anticipation | 93.4 | 0.46 (usable) | +2.2 over 10 years using 2 indicators, with 1 at the frame edge |
-| Agency | 60.5 | 0.52 (usable) | no trend |
-| Coordination | 98.7 | 0.35 (thin) | no trend |
-| Trust | 82.6 | 0.5 (usable) | no trend |
+| Agency | 52.1 | 0.41 (thin) | no trend |
+| Coordination | 98.2 | 0.23 (very thin) | no trend |
+| Trust | 85.3 | 0.41 (thin) | no trend |
 | Learning | 80 | 0.55 (usable) | no trend |
-| Experimentation | 68.6 | 0.53 (usable) | -2.2 over 10 years using 3 indicators |
+| Experimentation | 68.8 | 0.6 (usable) | -6.2 over 10 years using 3 indicators |
 | Adaptability | 55.6 | 0.62 (usable) | no trend |
-| Building | 72.7 | 0.57 (usable) | +0.9 over 10 years using 3 indicators |
-| Shared Purpose | 47.4 | 0.41 (thin) | -0.9 over 10 years using 2 indicators |
+| Building | 72.8 | 0.57 (usable) | +1 over 10 years using 3 indicators |
+| Shared Purpose | 47.1 | 0.42 (thin) | -0.4 over 10 years using 2 indicators |
 
 ## What to measure first
 
 The evidence is too thin to manage these dimensions confidently.
 
-### Coordination: confidence 0.35, thin
+### Coordination: confidence 0.23, very thin
 
 How effectively can independent actors organize around shared objectives?
 
-- Uses 3 observed indicators.
+- Uses 2 observed indicators.
 - Missing indicators: University-industry collaboration, Public-private collaboration.
-- Rejected datasets: Government effectiveness, Regulatory quality, Logistics performance.
+- Rejected datasets: Government effectiveness, Regulatory quality, Logistics performance, Border compliance time to export.
 
-### Shared Purpose: confidence 0.41, thin
+### Agency: confidence 0.41, thin
+
+How able are individuals and organizations to turn an intention into action?
+
+- Uses 3 observed indicators.
+- Missing indicators: Adults doing digital tasks.
+- Rejected datasets: Time to start a business.
+
+### Trust: confidence 0.41, thin
+
+How much cooperation is possible beyond immediate personal networks?
+
+- Uses 4 observed indicators.
+- Missing indicators: Trust in public institutions, Court case clearance rate.
+- Rejected datasets: Rule of law, Control of corruption, Time to enforce a contract, Intentional homicide rate.
+
+### Shared Purpose: confidence 0.42, thin
 
 To what extent can people imagine themselves as participants in a common project?
 
@@ -43,11 +59,9 @@ To what extent can people imagine themselves as participants in a common project
 These dimensions score at least 50 with usable evidence.
 
 - Anticipation: 93.4, confidence usable
-- Trust: 82.6, confidence usable
 - Learning: 80, confidence usable
-- Building: 72.7, confidence usable
-- Experimentation: 68.6, confidence usable
-- Agency: 60.5, confidence usable
+- Building: 72.8, confidence usable
+- Experimentation: 68.8, confidence usable
 - Adaptability: 55.6, confidence usable
 
 ## What Switzerland has to work with
@@ -61,13 +75,13 @@ Conditions describe what a country has to work with: infrastructure, access, mon
 | Anticipation | Secure internet servers | 167,357.6 per million people | 2024 | 7 of 125 |
 | Agency | Individuals using the internet | 97.3 % of population | 2025 | 6 of 125 |
 | Agency | Financial account ownership | 98.4 % aged 15+ | 2024 | 13 of 122 |
-| Agency | Credit to the private sector | 167.8 % of GDP | 2016 | 4 of 124 |
+| Agency | Credit to the private sector | 152.6 % of GDP | 2025 | 5 of 124 |
 | Learning | Tertiary enrolment | 73.5 % gross | 2024 | 37 of 124 |
 | Learning | Public education expenditure | 4.9 % of GDP | 2022 | 43 of 125 |
 | Learning | Vocational share of secondary | 36.9 % of secondary | 2018 | 8 of 125 |
 | Adaptability | Labour force participation | 84 % aged 15+ | 2025 | 4 of 125 |
 | Adaptability | Fixed broadband subscriptions | 47 per 100 people | 2024 | 4 of 125 |
-| Adaptability | Electricity transmission losses | 5 % of output | 2024 | 19 of 117 |
+| Adaptability | Electricity transmission losses | 6.3 % of output | 2025 | 32 of 117 |
 | Adaptability | Informal employment | 1.1 % of employment | 2024 | 2 of 102 |
 | Building | Output per worker | 158,634.2 constant 2021 PPP $ | 2025 | 4 of 123 |
 

@@ -9123,3 +9123,86 @@ and three recodes produces no scored series. It stays in
 publisher, which would promote the gap under D20; or a construct for
 foresight capacity that two coders of different vendors code at alpha 0.80
 or above on a fresh pilot, under rules fixed before coding.
+
+## D167 — Three Doing Business rows move to B-READY, and two have no successor
+
+*Recorded 2026-10-17. Applies D23 and D100 to three rows, D118 to the
+choice of series, and A6. Follows #37, which closed when B-READY reached 74
+of 125 countries in World Development Indicators. Dataset 9.4.0.*
+
+**Decision.** Three of the five Doing Business rows frozen at 2019 are
+retired and replaced by the third pillar, operational efficiency, of the
+matching B-READY topic. Two rows have no B-READY series with their construct
+and stay as they are.
+
+| Doing Business row | Dimension | B-READY successor | r with log GDP, old row (125) | r, new row (74) |
+| --- | --- | --- | ---: | ---: |
+| `business_start_days` | Agency | `business_entry_efficiency`, `IC.BRE.BE.P3` | 0.314 | 0.408 |
+| `time_to_export` | Coordination | `trade_compliance_efficiency`, `IC.BRE.IT.P3` | 0.544 | 0.482 |
+| `contract_enforcement_days` | Trust | `dispute_resolution_efficiency`, `IC.BRE.DR.P3` | 0.160 | 0.411 |
+| `business_start_procedures` | Agency | none | 0.327 | |
+| `electricity_connection_speed` | Building | none | 0.214 | |
+
+The series were chosen on what they observe, before their correlations were
+read (D118). Each Doing Business row counted the friction of one transaction:
+days to register, hours at the border, days in court. Each B-READY topic has
+three pillars. The first scores whether the law adopts listed good practices,
+the second scores public services and transparency, and the third measures
+the time and cost of the transaction itself. Only the third observes what the
+old rows observed, so the third is the successor. The topic scores were
+rejected because two thirds of each is rule quality and service design, a
+reading of the statute book (`IC.BRE.BE.OS` r 0.575, `IT.OS` 0.702, `DR.OS`
+0.659). The cross-topic pillar `IC.BRE.P3.OE` (r 0.676) mixes ten
+transactions into one number and was rejected for the same reason.
+
+**What the constructs lose and gain.** B-READY publishes a 0 to 100 score
+and no day, hour or procedure count, so every new row is a score.
+
+- Business entry efficiency adds the registration cost and the route for a
+  foreign firm. A slow but cheap registration and a fast but costly one can
+  score alike.
+- Trade compliance efficiency adds imports, compliance cost and goods ordered
+  online, and it reads firms' own reports where Doing Business asked experts
+  about one standard shipment. The World Bank's series note also names
+  participation in digital trade and perceived obstacles to trade. The 2023
+  scoring table of the B-READY International Trade note weighs only time and
+  cost; the weights of the revised 2024 handbook were not read.
+- Dispute resolution efficiency adds the cost, the reliability of the process
+  and the recognition and enforcement of a decision.
+
+**Why two rows have no successor.** B-READY counts no procedures. Its
+business entry first pillar scores which good practices a registration law
+adopts, which is a different object from the number of steps a founder
+takes, so `business_start_procedures` keeps its 2019 values. Utility
+services reach the API only as one topic score, `IC.BRE.US.OS` (r 0.735),
+which averages regulation, governance and delivery across electricity, water
+and internet, so `electricity_connection_speed` keeps its 2019 values. Both
+count until D159's 15-year limit sets them aside.
+
+**Probe.** `pnpm bench probe` on 2026-10-17, against all 125, database 2:
+`IC.BRE.BE.P3`, `IT.P3` and `DR.P3` each cover 74 of 125 with a latest
+year of 2025. The three retired rows had covered 124 or 125 at 2018 or
+2019.
+
+**Cost.** The 51 countries B-READY has not reached lose one row in each of
+three dimensions, and seven lose a published score under the coverage floor
+(D45): Agency for Haiti, Sudan and Malawi; Coordination for the United Arab
+Emirates, Venezuela, Iran and Denmark; Trust for the United Arab Emirates and
+Haiti. Denmark has no budget execution value, so its Coordination rested on
+border time and V-Dem. Mean confidence moves little, because the recency of
+a 2025 value offsets the lost coverage: Agency 0.470 to 0.471, Coordination
+0.371 to 0.361, Trust 0.398 to 0.392. Against log GDP per capita, Agency
+moves from r 0.445 to 0.484, Coordination from 0.533 to 0.429 and Trust from
+0.354 to 0.423. The one-factor model loses five complete countries, 115 to
+110, and its correlation with income goes from 0.814 to 0.824. 153 of the
+455 cells of the 9.0.1 panel run carry to 9.4.0, against 348 to 9.3.0,
+because the briefs of these dimensions changed (D160). A new panel run
+follows this release (#33).
+
+**Overturned by.** The revised International Trade handbook weighting
+digital trade participation and perceived obstacles at more than half of the
+third pillar, which would make `IC.BRE.IT.P3` a reading of adoption and
+opinion and send the row back to a gap; the World Bank publishing the
+utility services pillars, or a B-READY procedure count, which would give the
+two remaining rows a successor; or a B-READY round that drops a third of the
+74 countries, which would put the rows under the half-frame gate.

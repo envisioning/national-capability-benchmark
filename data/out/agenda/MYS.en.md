@@ -1,6 +1,6 @@
 # Capability agenda: Malaysia
 
-*Generated 2026-10-16*
+*Generated 2026-10-17*
 
 The frame includes 125 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
@@ -9,26 +9,18 @@ The frame includes 125 countries. Each dimension is scored from 0 to 100, with n
 | Dimension | Score | Confidence | Trend |
 | --- | --- | --- | --- |
 | Anticipation | 54.4 | 0.46 (usable) | +23.2 over 10 years using 2 indicators |
-| Agency | 52 | 0.56 (usable) | no trend |
-| Coordination | 86.1 | 0.41 (thin) | no trend |
-| Trust | 58.2 | 0.5 (usable) | no trend |
+| Agency | 55.9 | 0.63 (usable) | no trend |
+| Coordination | 76.1 | 0.48 (usable) | no trend |
+| Trust | 56.6 | 0.55 (usable) | no trend |
 | Learning | 50.9 | 0.55 (usable) | no trend |
-| Experimentation | 11.4 | 0.33 (thin) | -3.4 over 10 years using 3 indicators |
+| Experimentation | 12.5 | 0.41 (thin) | -3.2 over 10 years using 3 indicators |
 | Adaptability | 77.9 | 0.59 (usable) | no trend |
-| Building | 74.1 | 0.57 (usable) | +6.2 over 10 years using 3 indicators |
-| Shared Purpose | 55.7 | 0.4 (thin) | -1 over 10 years using 2 indicators |
+| Building | 74.3 | 0.57 (usable) | +6.3 over 10 years using 3 indicators |
+| Shared Purpose | 55.3 | 0.4 (thin) | -1.1 over 10 years using 2 indicators |
 
 ## What to measure first
 
 The evidence is too thin to manage these dimensions confidently.
-
-### Experimentation: confidence 0.33, thin
-
-How easily can new approaches be attempted, tested, abandoned, and improved?
-
-- Uses 4 observed indicators.
-- Missing indicators: Venture deals, Firms through regulatory sandboxes, University spinouts.
-- Rejected datasets: Business share of R&D.
 
 ### Shared Purpose: confidence 0.4, thin
 
@@ -38,23 +30,24 @@ To what extent can people imagine themselves as participants in a common project
 - Missing indicators: Sense of national belonging, Volunteering, Political polarisation.
 - Rejected datasets: Voice and accountability.
 
-### Coordination: confidence 0.41, thin
+### Experimentation: confidence 0.41, thin
 
-How effectively can independent actors organize around shared objectives?
+How easily can new approaches be attempted, tested, abandoned, and improved?
 
-- Uses 3 observed indicators.
-- Missing indicators: University-industry collaboration, Public-private collaboration.
-- Rejected datasets: Government effectiveness, Regulatory quality, Logistics performance.
+- Uses 4 observed indicators.
+- Missing indicators: Venture deals, Firms through regulatory sandboxes, University spinouts.
+- Rejected datasets: Business share of R&D.
 
 ## What to keep watching
 
 These dimensions score at least 50 with usable evidence.
 
 - Adaptability: 77.9, confidence usable
-- Building: 74.1, confidence usable
-- Trust: 58.2, confidence usable
+- Coordination: 76.1, confidence usable
+- Building: 74.3, confidence usable
+- Trust: 56.6, confidence usable
+- Agency: 55.9, confidence usable
 - Anticipation: 54.4, confidence usable
-- Agency: 52, confidence usable
 - Learning: 50.9, confidence usable
 
 ## What Malaysia has to work with
@@ -74,7 +67,7 @@ Conditions describe what a country has to work with: infrastructure, access, mon
 | Learning | Vocational share of secondary | 10.3 % of secondary | 2019 | 66 of 125 |
 | Adaptability | Labour force participation | 70.7 % aged 15+ | 2025 | 63 of 125 |
 | Adaptability | Fixed broadband subscriptions | 13.5 per 100 people | 2024 | 70 of 125 |
-| Adaptability | Electricity transmission losses | 6.9 % of output | 2023 | 40 of 117 |
+| Adaptability | Electricity transmission losses | 6.9 % of output | 2024 | 38 of 117 |
 | Building | Output per worker | 70,821.2 constant 2021 PPP $ | 2025 | 42 of 123 |
 
 ## Missing data

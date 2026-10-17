@@ -1,6 +1,6 @@
 # Capability agenda: Japan
 
-*Generated 2026-10-16*
+*Generated 2026-10-17*
 
 The frame includes 125 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
@@ -9,27 +9,14 @@ The frame includes 125 countries. Each dimension is scored from 0 to 100, with n
 | Dimension | Score | Confidence | Trend |
 | --- | --- | --- | --- |
 | Anticipation | 62.2 | 0.46 (usable) | +13.2 over 10 years using 2 indicators |
-| Agency | 38.6 | 0.56 (usable) | no trend |
-| Coordination | 69.4 | 0.39 (thin) | no trend |
-| Trust | 64.4 | 0.5 (usable) | no trend |
+| Agency | 23.5 | 0.44 (thin) | no trend |
+| Coordination | 59.2 | 0.27 (thin) | no trend |
+| Trust | 58.7 | 0.41 (thin) | no trend |
 | Learning | 52.4 | 0.55 (usable) | no trend |
-| Experimentation | 61.6 | 0.33 (thin) | -7 over 10 years using 3 indicators |
+| Experimentation | 63.5 | 0.41 (thin) | -11.5 over 10 years using 3 indicators |
 | Adaptability | 66.4 | 0.53 (usable) | no trend |
 | Building | 63.9 | 0.57 (usable) | -1.3 over 10 years using 3 indicators |
-| Shared Purpose | 41.7 | 0.23 (very thin) | no trend |
-
-## What to raise
-
-These are the lowest scores with usable evidence. Thin evidence appears below.
-
-### Agency: 38.6, confidence usable
-
-How able are individuals and organizations to turn an intention into action?
-
-- Uses 4 observed indicators.
-- Highest usable scores: New Zealand 92.3, Australia 89.2, Estonia 84.3.
-- Related deliveries in other countries: Singapore's national ICT-skills measurement and baseline (Singapore); e.escola, a national laptop-and-broadband push (Portugal); Pradhan Mantri Gramin Digital Saksharta Abhiyan (India); Puntos México Conectado, national digital learning centres (Mexico).
-- Missing indicators: Adults doing digital tasks.
+| Shared Purpose | 40.8 | 0.23 (very thin) | no trend |
 
 ## What to measure first
 
@@ -43,7 +30,15 @@ To what extent can people imagine themselves as participants in a common project
 - Missing indicators: Sense of national belonging, Volunteering, Political polarisation.
 - Rejected datasets: Voice and accountability.
 
-### Experimentation: confidence 0.33, thin
+### Coordination: confidence 0.27, thin
+
+How effectively can independent actors organize around shared objectives?
+
+- Uses 2 observed indicators.
+- Missing indicators: University-industry collaboration, Public-private collaboration.
+- Rejected datasets: Government effectiveness, Regulatory quality, Logistics performance, Border compliance time to export.
+
+### Experimentation: confidence 0.41, thin
 
 How easily can new approaches be attempted, tested, abandoned, and improved?
 
@@ -51,20 +46,27 @@ How easily can new approaches be attempted, tested, abandoned, and improved?
 - Missing indicators: Venture deals, Firms through regulatory sandboxes, University spinouts.
 - Rejected datasets: Business share of R&D.
 
-### Coordination: confidence 0.39, thin
+### Trust: confidence 0.41, thin
 
-How effectively can independent actors organize around shared objectives?
+How much cooperation is possible beyond immediate personal networks?
+
+- Uses 4 observed indicators.
+- Missing indicators: Trust in public institutions, Court case clearance rate.
+- Rejected datasets: Rule of law, Control of corruption, Time to enforce a contract, Intentional homicide rate.
+
+### Agency: confidence 0.44, thin
+
+How able are individuals and organizations to turn an intention into action?
 
 - Uses 3 observed indicators.
-- Missing indicators: University-industry collaboration, Public-private collaboration.
-- Rejected datasets: Government effectiveness, Regulatory quality, Logistics performance.
+- Missing indicators: Adults doing digital tasks.
+- Rejected datasets: Time to start a business.
 
 ## What to keep watching
 
 These dimensions score at least 50 with usable evidence.
 
 - Adaptability: 66.4, confidence usable
-- Trust: 64.4, confidence usable
 - Building: 63.9, confidence usable
 - Anticipation: 62.2, confidence usable
 - Learning: 52.4, confidence usable
@@ -80,13 +82,13 @@ Conditions describe what a country has to work with: infrastructure, access, mon
 | Anticipation | Secure internet servers | 32,928.8 per million people | 2024 | 26 of 125 |
 | Agency | Individuals using the internet | 85.5 % of population | 2024 | 57 of 125 |
 | Agency | Financial account ownership | 98.5 % aged 15+ | 2024 | 12 of 122 |
-| Agency | Credit to the private sector | 187.4 % of GDP | 2025 | 3 of 124 |
+| Agency | Credit to the private sector | 188.7 % of GDP | 2025 | 3 of 124 |
 | Learning | Tertiary enrolment | 64.5 % gross | 2023 | 48 of 124 |
 | Learning | Public education expenditure | 3.3 % of GDP | 2021 | 85 of 125 |
 | Learning | Vocational share of secondary | 11.4 % of secondary | 2018 | 62 of 125 |
 | Adaptability | Labour force participation | 82.3 % aged 15+ | 2025 | 8 of 125 |
 | Adaptability | Fixed broadband subscriptions | 38.6 per 100 people | 2023 | 19 of 125 |
-| Adaptability | Electricity transmission losses | 4.9 % of output | 2024 | 17 of 117 |
+| Adaptability | Electricity transmission losses | 4.6 % of output | 2025 | 15 of 117 |
 | Building | Output per worker | 87,888.3 constant 2021 PPP $ | 2025 | 32 of 123 |
 
 ## Missing data

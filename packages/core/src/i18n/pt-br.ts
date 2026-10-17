@@ -295,6 +295,7 @@ export const PT_BR: Lexicon = {
     new_business_density: 'Densidade de novas empresas',
     business_start_days: 'Tempo para abrir uma empresa',
     business_start_procedures: 'Procedimentos para abrir uma empresa',
+    business_entry_efficiency: 'Eficiência na abertura de empresas',
     internet_users: 'Pessoas que usam a internet',
     account_ownership: 'Adultos com conta financeira',
     domestic_credit_private: 'Crédito ao setor privado',
@@ -304,6 +305,7 @@ export const PT_BR: Lexicon = {
     regulatory_quality: 'Qualidade regulatória',
     logistics_performance: 'Desempenho logístico',
     time_to_export: 'Tempo de exportação na fronteira',
+    trade_compliance_efficiency: 'Eficiência no cumprimento das exigências de comércio exterior',
     budget_execution_fidelity: 'Aderência da execução ao orçamento',
     university_industry_collaboration: 'Colaboração universidade-empresa',
     civil_society_strength: 'Força da sociedade civil',
@@ -311,6 +313,7 @@ export const PT_BR: Lexicon = {
     rule_of_law: 'Estado de direito',
     control_of_corruption: 'Controle da corrupção',
     contract_enforcement_days: 'Tempo para executar um contrato',
+    dispute_resolution_efficiency: 'Eficiência na solução de disputas',
     court_compliance: 'Cumprimento das decisões judiciais pelo governo',
     bribery_incidence: 'Incidência de suborno',
     court_case_clearance: 'Taxa de resolução de processos judiciais',
@@ -428,6 +431,8 @@ export const PT_BR: Lexicon = {
     business_start_days: 'Dias corridos para cumprir os procedimentos de registro de uma empresa.',
     business_start_procedures:
       'Número de procedimentos oficiais distintos para registrar uma empresa.',
+    business_entry_efficiency:
+      'Pontuação B-READY do tempo e do custo para registrar uma nova sociedade limitada, nacional ou estrangeira.',
     internet_users: 'Parcela da população que usou a internet nos últimos três meses.',
     account_ownership:
       'Adultos com conta em banco ou em instituição de pagamento por celular.',
@@ -445,6 +450,8 @@ export const PT_BR: Lexicon = {
       'Pontuação geral do Índice de Desempenho Logístico, a partir de uma pesquisa com operadores internacionais de carga.',
     time_to_export:
       'Horas para cumprir as exigências aduaneiras e de fronteira de uma remessa padrão de exportação.',
+    trade_compliance_efficiency:
+      'Pontuação B-READY do tempo e do custo que as empresas relatam para cumprir as exigências de exportação e importação.',
     budget_execution_fidelity:
       'Desvio entre a despesa primária executada pelo governo e o orçamento originalmente aprovado.',
     university_industry_collaboration:
@@ -459,6 +466,8 @@ export const PT_BR: Lexicon = {
       'Estimativa dos Indicadores Mundiais de Governança para o uso do poder público em benefício privado.',
     contract_enforcement_days:
       'Dias corridos entre o ajuizamento de uma cobrança comercial e o pagamento.',
+    dispute_resolution_efficiency:
+      'Pontuação B-READY da confiabilidade, do tempo e do custo de resolver uma disputa comercial e executar a decisão.',
     bribery_incidence:
       'Empresas das quais se pediu ao menos um suborno em seis transações com o poder público, entre ligações de serviços, licenças, alvarás e tributos.',
     court_compliance:

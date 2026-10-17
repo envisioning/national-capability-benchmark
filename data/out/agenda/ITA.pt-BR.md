@@ -1,6 +1,6 @@
 # Agenda de capacidades: Itália
 
-*Gerada em 2026-10-16*
+*Gerada em 2026-10-17*
 
 A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, sem classificação geral, e cada pontuação traz ao lado a solidez da evidência. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma pontuação.
 
@@ -9,34 +9,26 @@ A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 | Dimensão | Pontuação | Solidez | Tendência |
 | --- | --- | --- | --- |
 | Antecipação | 74,1 | 0,46 (utilizável) | +6,9 em 10 anos, com base em 2 indicadores |
-| Agência | 55,5 | 0,56 (utilizável) | sem tendência comparável |
-| Coordenação | 87,7 | 0,39 (fraca) | sem tendência comparável |
-| Confiança | 53,6 | 0,5 (utilizável) | sem tendência comparável |
+| Agência | 53,1 | 0,63 (utilizável) | sem tendência comparável |
+| Coordenação | 82,9 | 0,45 (utilizável) | sem tendência comparável |
+| Confiança | 62,9 | 0,55 (utilizável) | sem tendência comparável |
 | Aprendizagem | 66,7 | 0,55 (utilizável) | sem tendência comparável |
-| Experimentação | 61,5 | 0,33 (fraca) | +7,4 em 10 anos, com base em 3 indicadores |
+| Experimentação | 59,9 | 0,41 (fraca) | +3,1 em 10 anos, com base em 3 indicadores |
 | Adaptação | 64,2 | 0,62 (utilizável) | sem tendência comparável |
-| Construção | 59,4 | 0,57 (utilizável) | +2,6 em 10 anos, com base em 3 indicadores |
-| Propósito compartilhado | 51,5 | 0,42 (fraca) | +2 em 10 anos, com base em 2 indicadores |
+| Construção | 59,3 | 0,57 (utilizável) | +2,3 em 10 anos, com base em 3 indicadores |
+| Propósito compartilhado | 51 | 0,42 (fraca) | +2 em 10 anos, com base em 2 indicadores |
 
 ## Dimensões com evidência fraca
 
 A solidez da evidência está abaixo da faixa utilizável, de modo que a pontuação diz pouco sobre o país enquanto faltarem dados.
 
-### Experimentação: solidez 0,33, fraca
+### Experimentação: solidez 0,41, fraca
 
 Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e melhoradas?
 
 - A pontuação se apoia em 4 indicadores observados.
 - Lacunas declaradas: Operações de capital de risco, Empresas em sandboxes regulatórios, Empresas derivadas de pesquisa universitária.
 - Bases rejeitadas: Parcela empresarial do P&D.
-
-### Coordenação: solidez 0,39, fraca
-
-Com que eficácia atores independentes conseguem se organizar em torno de objetivos comuns?
-
-- A pontuação se apoia em 3 indicadores observados.
-- Lacunas declaradas: Colaboração universidade-empresa, Colaboração público-privada.
-- Bases rejeitadas: Efetividade governamental, Qualidade regulatória, Desempenho logístico.
 
 ### Propósito compartilhado: solidez 0,42, fraca
 
@@ -50,12 +42,13 @@ Até que ponto as pessoas conseguem se ver como participantes de um projeto comu
 
 Estas dimensões têm pontuação de pelo menos 50, com evidência utilizável.
 
+- Coordenação: 82,9, solidez utilizável
 - Antecipação: 74,1, solidez utilizável
 - Aprendizagem: 66,7, solidez utilizável
 - Adaptação: 64,2, solidez utilizável
-- Construção: 59,4, solidez utilizável
-- Agência: 55,5, solidez utilizável
-- Confiança: 53,6, solidez utilizável
+- Confiança: 62,9, solidez utilizável
+- Construção: 59,3, solidez utilizável
+- Agência: 53,1, solidez utilizável
 
 ## Com o que a Itália conta
 
@@ -74,7 +67,7 @@ As condições descrevem com o que um país conta: infraestrutura, acesso, dinhe
 | Aprendizagem | Educação profissional no ensino secundário | 33,1 % das matrículas no ensino secundário | 2018 | 15º de 125 |
 | Adaptação | Participação na força de trabalho | 66,6 % das pessoas com 15 anos ou mais | 2025 | 83º de 125 |
 | Adaptação | Assinaturas de banda larga fixa | 31,8 por 100 pessoas | 2024 | 35º de 125 |
-| Adaptação | Perdas na transmissão de eletricidade | 7,1 % da produção | 2024 | 41º de 117 |
+| Adaptação | Perdas na transmissão de eletricidade | 6,9 % da produção | 2025 | 39º de 117 |
 | Adaptação | Emprego informal | 8,4 % do emprego | 2025 | 25º de 102 |
 | Construção | Produto por pessoa ocupada | 131.480,6 dólares PPC constantes de 2021 | 2025 | 8º de 123 |
 

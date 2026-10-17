@@ -1,6 +1,6 @@
 # Agenda de capacidades: Tchéquia
 
-*Gerada em 2026-10-16*
+*Gerada em 2026-10-17*
 
 A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, sem classificação geral, e cada pontuação traz ao lado a solidez da evidência. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma pontuação.
 
@@ -9,26 +9,18 @@ A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 | Dimensão | Pontuação | Solidez | Tendência |
 | --- | --- | --- | --- |
 | Antecipação | 67,3 | 0,46 (utilizável) | +0,9 em 10 anos, com base em 2 indicadores |
-| Agência | 48,5 | 0,41 (fraca) | sem tendência comparável |
-| Coordenação | 80,2 | 0,39 (fraca) | sem tendência comparável |
-| Confiança | 85,2 | 0,3 (fraca) | sem tendência comparável |
+| Agência | 55,1 | 0,49 (utilizável) | sem tendência comparável |
+| Coordenação | 80,2 | 0,45 (utilizável) | sem tendência comparável |
+| Confiança | 82,7 | 0,34 (fraca) | sem tendência comparável |
 | Aprendizagem | 76,3 | 0,55 (utilizável) | sem tendência comparável |
-| Experimentação | 29,8 | 0,33 (fraca) | -8,9 em 10 anos, com base em 3 indicadores |
+| Experimentação | 27,5 | 0,41 (fraca) | -15,9 em 10 anos, com base em 3 indicadores |
 | Adaptação | 75,5 | 0,62 (utilizável) | sem tendência comparável |
-| Construção | 53,6 | 0,57 (utilizável) | -0,6 em 10 anos, com base em 3 indicadores |
-| Propósito compartilhado | 73,2 | 0,3 (fraca) | -1,9 em 10 anos, com base em 2 indicadores |
+| Construção | 53,7 | 0,57 (utilizável) | -0,6 em 10 anos, com base em 3 indicadores |
+| Propósito compartilhado | 72,1 | 0,3 (fraca) | -1,9 em 10 anos, com base em 2 indicadores |
 
 ## Dimensões com evidência fraca
 
 A solidez da evidência está abaixo da faixa utilizável, de modo que a pontuação diz pouco sobre o país enquanto faltarem dados.
-
-### Confiança: solidez 0,3, fraca
-
-Quanta cooperação é possível para além do círculo pessoal mais próximo?
-
-- A pontuação se apoia em 3 indicadores observados.
-- Lacunas declaradas: Confiança nas instituições públicas, Taxa de resolução de processos judiciais.
-- Bases rejeitadas: Estado de direito, Controle da corrupção, Taxa de homicídios dolosos.
 
 ### Propósito compartilhado: solidez 0,3, fraca
 
@@ -38,7 +30,15 @@ Até que ponto as pessoas conseguem se ver como participantes de um projeto comu
 - Lacunas declaradas: Sentimento de pertencimento nacional, Voluntariado, Polarização política.
 - Bases rejeitadas: Voz e prestação de contas.
 
-### Experimentação: solidez 0,33, fraca
+### Confiança: solidez 0,34, fraca
+
+Quanta cooperação é possível para além do círculo pessoal mais próximo?
+
+- A pontuação se apoia em 3 indicadores observados.
+- Lacunas declaradas: Confiança nas instituições públicas, Taxa de resolução de processos judiciais.
+- Bases rejeitadas: Estado de direito, Controle da corrupção, Tempo para executar um contrato, Taxa de homicídios dolosos.
+
+### Experimentação: solidez 0,41, fraca
 
 Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e melhoradas?
 
@@ -46,29 +46,16 @@ Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e 
 - Lacunas declaradas: Operações de capital de risco, Empresas em sandboxes regulatórios, Empresas derivadas de pesquisa universitária.
 - Bases rejeitadas: Parcela empresarial do P&D.
 
-### Coordenação: solidez 0,39, fraca
-
-Com que eficácia atores independentes conseguem se organizar em torno de objetivos comuns?
-
-- A pontuação se apoia em 3 indicadores observados.
-- Lacunas declaradas: Colaboração universidade-empresa, Colaboração público-privada.
-- Bases rejeitadas: Efetividade governamental, Qualidade regulatória, Desempenho logístico.
-
-### Agência: solidez 0,41, fraca
-
-Em que medida pessoas e organizações conseguem transformar intenção em ação?
-
-- A pontuação se apoia em 3 indicadores observados.
-- Lacunas declaradas: Adultos que realizam tarefas digitais.
-
 ## Dimensões com as pontuações mais altas
 
 Estas dimensões têm pontuação de pelo menos 50, com evidência utilizável.
 
+- Coordenação: 80,2, solidez utilizável
 - Aprendizagem: 76,3, solidez utilizável
 - Adaptação: 75,5, solidez utilizável
 - Antecipação: 67,3, solidez utilizável
-- Construção: 53,6, solidez utilizável
+- Agência: 55,1, solidez utilizável
+- Construção: 53,7, solidez utilizável
 
 ## Com o que a Tchéquia conta
 
@@ -87,7 +74,7 @@ As condições descrevem com o que um país conta: infraestrutura, acesso, dinhe
 | Aprendizagem | Educação profissional no ensino secundário | 35,5 % das matrículas no ensino secundário | 2018 | 9º de 125 |
 | Adaptação | Participação na força de trabalho | 77,5 % das pessoas com 15 anos ou mais | 2025 | 28º de 125 |
 | Adaptação | Assinaturas de banda larga fixa | 38,9 por 100 pessoas | 2024 | 17º de 125 |
-| Adaptação | Perdas na transmissão de eletricidade | 4,3 % da produção | 2024 | 12º de 117 |
+| Adaptação | Perdas na transmissão de eletricidade | 4,1 % da produção | 2025 | 9º de 117 |
 | Adaptação | Emprego informal | 3,3 % do emprego | 2025 | 11º de 102 |
 | Construção | Produto por pessoa ocupada | 98.998,4 dólares PPC constantes de 2021 | 2025 | 25º de 123 |
 

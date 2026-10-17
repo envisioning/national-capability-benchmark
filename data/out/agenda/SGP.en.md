@@ -1,6 +1,6 @@
 # Capability agenda: Singapore
 
-*Generated 2026-10-16*
+*Generated 2026-10-17*
 
 The frame includes 125 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
@@ -9,13 +9,13 @@ The frame includes 125 countries. Each dimension is scored from 0 to 100, with n
 | Dimension | Score | Confidence | Trend |
 | --- | --- | --- | --- |
 | Anticipation | 82.2 | 0.46 (usable) | +17 over 10 years using 2 indicators |
-| Agency | 74.5 | 0.56 (usable) | no trend |
-| Coordination | 74 | 0.4 (thin) | no trend |
-| Trust | 70.4 | 0.49 (usable) | no trend |
+| Agency | 74.9 | 0.63 (usable) | no trend |
+| Coordination | 70.9 | 0.47 (usable) | no trend |
+| Trust | 67.2 | 0.54 (usable) | no trend |
 | Learning | 84.2 | 0.54 (usable) | no trend |
-| Experimentation | 60.5 | 0.36 (thin) | +3.6 over 10 years using 3 indicators |
+| Experimentation | 60.9 | 0.43 (thin) | +0.1 over 10 years using 3 indicators |
 | Adaptability | 72.6 | 0.62 (usable) | no trend |
-| Building | 75 | 0.57 (usable) | +6.4 over 10 years using 3 indicators |
+| Building | 75.2 | 0.57 (usable) | +6.5 over 10 years using 3 indicators |
 | Shared Purpose | 32.3 | 0.28 (thin) | no trend |
 
 ## What to measure first
@@ -30,7 +30,7 @@ To what extent can people imagine themselves as participants in a common project
 - Missing indicators: Sense of national belonging, Volunteering, Political polarisation.
 - Rejected datasets: Voice and accountability.
 
-### Experimentation: confidence 0.36, thin
+### Experimentation: confidence 0.43, thin
 
 How easily can new approaches be attempted, tested, abandoned, and improved?
 
@@ -38,24 +38,17 @@ How easily can new approaches be attempted, tested, abandoned, and improved?
 - Missing indicators: Venture deals, Firms through regulatory sandboxes, University spinouts.
 - Rejected datasets: Business share of R&D.
 
-### Coordination: confidence 0.4, thin
-
-How effectively can independent actors organize around shared objectives?
-
-- Uses 3 observed indicators.
-- Missing indicators: University-industry collaboration, Public-private collaboration.
-- Rejected datasets: Government effectiveness, Regulatory quality, Logistics performance.
-
 ## What to keep watching
 
 These dimensions score at least 50 with usable evidence.
 
 - Learning: 84.2, confidence usable
 - Anticipation: 82.2, confidence usable
-- Building: 75, confidence usable
-- Agency: 74.5, confidence usable
+- Building: 75.2, confidence usable
+- Agency: 74.9, confidence usable
 - Adaptability: 72.6, confidence usable
-- Trust: 70.4, confidence usable
+- Coordination: 70.9, confidence usable
+- Trust: 67.2, confidence usable
 
 ## What Singapore has to work with
 
@@ -74,7 +67,7 @@ Conditions describe what a country has to work with: infrastructure, access, mon
 | Learning | Vocational share of secondary | 11.6 % of secondary | 2009 | 61 of 125 |
 | Adaptability | Labour force participation | 77 % aged 15+ | 2025 | 33 of 125 |
 | Adaptability | Fixed broadband subscriptions | 27.8 per 100 people | 2024 | 45 of 125 |
-| Adaptability | Electricity transmission losses | 0.2 % of output | 2023 | 1 of 117 |
+| Adaptability | Electricity transmission losses | 0.2 % of output | 2024 | 1 of 117 |
 | Building | Output per worker | 233,454.4 constant 2021 PPP $ | 2025 | 2 of 123 |
 
 ## Missing data

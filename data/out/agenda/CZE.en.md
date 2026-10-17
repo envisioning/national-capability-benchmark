@@ -1,6 +1,6 @@
 # Capability agenda: Czechia
 
-*Generated 2026-10-16*
+*Generated 2026-10-17*
 
 The frame includes 125 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
@@ -9,26 +9,18 @@ The frame includes 125 countries. Each dimension is scored from 0 to 100, with n
 | Dimension | Score | Confidence | Trend |
 | --- | --- | --- | --- |
 | Anticipation | 67.3 | 0.46 (usable) | +0.9 over 10 years using 2 indicators |
-| Agency | 48.5 | 0.41 (thin) | no trend |
-| Coordination | 80.2 | 0.39 (thin) | no trend |
-| Trust | 85.2 | 0.3 (thin) | no trend |
+| Agency | 55.1 | 0.49 (usable) | no trend |
+| Coordination | 80.2 | 0.45 (usable) | no trend |
+| Trust | 82.7 | 0.34 (thin) | no trend |
 | Learning | 76.3 | 0.55 (usable) | no trend |
-| Experimentation | 29.8 | 0.33 (thin) | -8.9 over 10 years using 3 indicators |
+| Experimentation | 27.5 | 0.41 (thin) | -15.9 over 10 years using 3 indicators |
 | Adaptability | 75.5 | 0.62 (usable) | no trend |
-| Building | 53.6 | 0.57 (usable) | -0.6 over 10 years using 3 indicators |
-| Shared Purpose | 73.2 | 0.3 (thin) | -1.9 over 10 years using 2 indicators |
+| Building | 53.7 | 0.57 (usable) | -0.6 over 10 years using 3 indicators |
+| Shared Purpose | 72.1 | 0.3 (thin) | -1.9 over 10 years using 2 indicators |
 
 ## What to measure first
 
 The evidence is too thin to manage these dimensions confidently.
-
-### Trust: confidence 0.3, thin
-
-How much cooperation is possible beyond immediate personal networks?
-
-- Uses 3 observed indicators.
-- Missing indicators: Trust in public institutions, Court case clearance rate.
-- Rejected datasets: Rule of law, Control of corruption, Intentional homicide rate.
 
 ### Shared Purpose: confidence 0.3, thin
 
@@ -38,7 +30,15 @@ To what extent can people imagine themselves as participants in a common project
 - Missing indicators: Sense of national belonging, Volunteering, Political polarisation.
 - Rejected datasets: Voice and accountability.
 
-### Experimentation: confidence 0.33, thin
+### Trust: confidence 0.34, thin
+
+How much cooperation is possible beyond immediate personal networks?
+
+- Uses 3 observed indicators.
+- Missing indicators: Trust in public institutions, Court case clearance rate.
+- Rejected datasets: Rule of law, Control of corruption, Time to enforce a contract, Intentional homicide rate.
+
+### Experimentation: confidence 0.41, thin
 
 How easily can new approaches be attempted, tested, abandoned, and improved?
 
@@ -46,29 +46,16 @@ How easily can new approaches be attempted, tested, abandoned, and improved?
 - Missing indicators: Venture deals, Firms through regulatory sandboxes, University spinouts.
 - Rejected datasets: Business share of R&D.
 
-### Coordination: confidence 0.39, thin
-
-How effectively can independent actors organize around shared objectives?
-
-- Uses 3 observed indicators.
-- Missing indicators: University-industry collaboration, Public-private collaboration.
-- Rejected datasets: Government effectiveness, Regulatory quality, Logistics performance.
-
-### Agency: confidence 0.41, thin
-
-How able are individuals and organizations to turn an intention into action?
-
-- Uses 3 observed indicators.
-- Missing indicators: Adults doing digital tasks.
-
 ## What to keep watching
 
 These dimensions score at least 50 with usable evidence.
 
+- Coordination: 80.2, confidence usable
 - Learning: 76.3, confidence usable
 - Adaptability: 75.5, confidence usable
 - Anticipation: 67.3, confidence usable
-- Building: 53.6, confidence usable
+- Agency: 55.1, confidence usable
+- Building: 53.7, confidence usable
 
 ## What Czechia has to work with
 
@@ -87,7 +74,7 @@ Conditions describe what a country has to work with: infrastructure, access, mon
 | Learning | Vocational share of secondary | 35.5 % of secondary | 2018 | 9 of 125 |
 | Adaptability | Labour force participation | 77.5 % aged 15+ | 2025 | 28 of 125 |
 | Adaptability | Fixed broadband subscriptions | 38.9 per 100 people | 2024 | 17 of 125 |
-| Adaptability | Electricity transmission losses | 4.3 % of output | 2024 | 12 of 117 |
+| Adaptability | Electricity transmission losses | 4.1 % of output | 2025 | 9 of 117 |
 | Adaptability | Informal employment | 3.3 % of employment | 2025 | 11 of 102 |
 | Building | Output per worker | 98,998.4 constant 2021 PPP $ | 2025 | 25 of 123 |
 

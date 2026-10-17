@@ -1,6 +1,6 @@
 # Agenda de capacidades: Venezuela
 
-*Gerada em 2026-10-16*
+*Gerada em 2026-10-17*
 
 A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, sem classificação geral, e cada pontuação traz ao lado a solidez da evidência. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma pontuação.
 
@@ -9,11 +9,11 @@ A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 | Dimensão | Pontuação | Solidez | Tendência |
 | --- | --- | --- | --- |
 | Antecipação | 0,9 | 0,46 (utilizável) | -5,4 em 10 anos, com base em 2 indicadores |
-| Agência | 26,1 | 0,37 (fraca) | sem tendência comparável |
-| Coordenação | 16,7 | 0,22 (muito fraca) | sem tendência comparável |
-| Confiança | 23,8 | 0,37 (fraca) | sem tendência comparável |
+| Agência | 39,1 | 0,26 (fraca) | sem tendência comparável |
+| Coordenação | sem pontuação | 0,1 (muito fraca) | sem tendência comparável |
+| Confiança | 10,4 | 0,28 (fraca) | sem tendência comparável |
 | Aprendizagem | sem pontuação | 0,16 (muito fraca) | sem tendência comparável |
-| Experimentação | 5,7 | 0,19 (muito fraca) | sem tendência comparável |
+| Experimentação | 2,9 | 0,41 (fraca) | -2,1 em 10 anos, com base em 2 indicadores |
 | Adaptação | 48,7 | 0,53 (utilizável) | sem tendência comparável |
 | Construção | 8,9 | 0,25 (fraca) | sem tendência comparável |
 | Propósito compartilhado | sem pontuação | 0,12 (muito fraca) | sem tendência comparável |
@@ -44,6 +44,14 @@ Com que eficácia o sistema responde quando as circunstâncias mudam?
 
 A solidez da evidência está abaixo da faixa utilizável, de modo que a pontuação diz pouco sobre o país enquanto faltarem dados.
 
+### Coordenação: solidez 0,1, muito fraca
+
+Com que eficácia atores independentes conseguem se organizar em torno de objetivos comuns?
+
+- A pontuação se apoia em um indicador observado.
+- Lacunas declaradas: Colaboração universidade-empresa, Colaboração público-privada.
+- Bases rejeitadas: Efetividade governamental, Qualidade regulatória, Desempenho logístico, Tempo de exportação na fronteira.
+
 ### Propósito compartilhado: solidez 0,12, muito fraca
 
 Até que ponto as pessoas conseguem se ver como participantes de um projeto comum?
@@ -59,22 +67,6 @@ Com que eficácia o país adquire, distribui e atualiza conhecimento?
 - A pontuação se apoia em um indicador observado.
 - Lacunas declaradas: Participação de adultos em aprendizagem.
 
-### Experimentação: solidez 0,19, muito fraca
-
-Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e melhoradas?
-
-- A pontuação se apoia em 3 indicadores observados.
-- Lacunas declaradas: Operações de capital de risco, Empresas em sandboxes regulatórios, Empresas derivadas de pesquisa universitária.
-- Bases rejeitadas: Parcela empresarial do P&D.
-
-### Coordenação: solidez 0,22, muito fraca
-
-Com que eficácia atores independentes conseguem se organizar em torno de objetivos comuns?
-
-- A pontuação se apoia em 2 indicadores observados.
-- Lacunas declaradas: Colaboração universidade-empresa, Colaboração público-privada.
-- Bases rejeitadas: Efetividade governamental, Qualidade regulatória, Desempenho logístico.
-
 ### Construção: solidez 0,25, fraca
 
 Em que medida o país consegue transformar planos e conhecimento em sistemas que funcionam?
@@ -83,20 +75,29 @@ Em que medida o país consegue transformar planos e conhecimento em sistemas que
 - Lacunas declaradas: Entrega de grandes projetos, Empresas jovens que ganham escala.
 - Bases rejeitadas: Qualidade da infraestrutura logística.
 
-### Confiança: solidez 0,37, fraca
-
-Quanta cooperação é possível para além do círculo pessoal mais próximo?
-
-- A pontuação se apoia em 4 indicadores observados.
-- Lacunas declaradas: Confiança nas instituições públicas, Taxa de resolução de processos judiciais.
-- Bases rejeitadas: Estado de direito, Controle da corrupção, Taxa de homicídios dolosos.
-
-### Agência: solidez 0,37, fraca
+### Agência: solidez 0,26, fraca
 
 Em que medida pessoas e organizações conseguem transformar intenção em ação?
 
-- A pontuação se apoia em 3 indicadores observados.
+- A pontuação se apoia em 2 indicadores observados.
 - Lacunas declaradas: Adultos que realizam tarefas digitais.
+- Bases rejeitadas: Tempo para abrir uma empresa.
+
+### Confiança: solidez 0,28, fraca
+
+Quanta cooperação é possível para além do círculo pessoal mais próximo?
+
+- A pontuação se apoia em 3 indicadores observados.
+- Lacunas declaradas: Confiança nas instituições públicas, Taxa de resolução de processos judiciais.
+- Bases rejeitadas: Estado de direito, Controle da corrupção, Tempo para executar um contrato, Taxa de homicídios dolosos.
+
+### Experimentação: solidez 0,41, fraca
+
+Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e melhoradas?
+
+- A pontuação se apoia em 4 indicadores observados.
+- Lacunas declaradas: Operações de capital de risco, Empresas em sandboxes regulatórios, Empresas derivadas de pesquisa universitária.
+- Bases rejeitadas: Parcela empresarial do P&D.
 
 ## Com o que a Venezuela conta
 
@@ -115,7 +116,7 @@ As condições descrevem com o que um país conta: infraestrutura, acesso, dinhe
 | Aprendizagem | Educação profissional no ensino secundário | 5,4 % das matrículas no ensino secundário | 2017 | 90º de 125 |
 | Adaptação | Participação na força de trabalho | 56,6 % das pessoas com 15 anos ou mais | 2025 | 110º de 125 |
 | Adaptação | Assinaturas de banda larga fixa | 12,9 por 100 pessoas | 2024 | 71º de 125 |
-| Adaptação | Perdas na transmissão de eletricidade | 21,4 % da produção | 2023 | 107º de 117 |
+| Adaptação | Perdas na transmissão de eletricidade | 18,3 % da produção | 2024 | 99º de 117 |
 | Adaptação | Emprego informal | 58,3 % do emprego | 2017 | 55º de 102 |
 
 ## Agenda de medição

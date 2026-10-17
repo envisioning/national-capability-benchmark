@@ -1,6 +1,6 @@
 # Agenda de capacidades: Haiti
 
-*Gerada em 2026-10-16*
+*Gerada em 2026-10-17*
 
 A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, sem classificação geral, e cada pontuação traz ao lado a solidez da evidência. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma pontuação.
 
@@ -9,11 +9,11 @@ A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 | Dimensão | Pontuação | Solidez | Tendência |
 | --- | --- | --- | --- |
 | Antecipação | 0 | 0,46 (utilizável) | 0 em 10 anos, com base em 2 indicadores, 1 limitados à borda da escala |
-| Agência | 21,1 | 0,22 (muito fraca) | sem tendência comparável |
-| Coordenação | 63,1 | 0,39 (fraca) | sem tendência comparável |
-| Confiança | 50,6 | 0,16 (muito fraca) | sem tendência comparável |
+| Agência | sem pontuação | 0,11 (muito fraca) | sem tendência comparável |
+| Coordenação | 49,8 | 0,27 (fraca) | sem tendência comparável |
+| Confiança | sem pontuação | 0,07 (muito fraca) | sem tendência comparável |
 | Aprendizagem | 35,5 | 0,32 (fraca) | sem tendência comparável |
-| Experimentação | 0,9 | 0,14 (muito fraca) | sem tendência comparável |
+| Experimentação | 1 | 0,14 (muito fraca) | sem tendência comparável |
 | Adaptação | 27,2 | 0,46 (utilizável) | sem tendência comparável |
 | Construção | 46,8 | 0,41 (fraca) | +6 em 10 anos, com base em 2 indicadores |
 | Propósito compartilhado | sem pontuação | 0,02 (muito fraca) | sem tendência comparável |
@@ -52,6 +52,22 @@ Até que ponto as pessoas conseguem se ver como participantes de um projeto comu
 - Lacunas declaradas: Sentimento de pertencimento nacional, Voluntariado, Polarização política.
 - Bases rejeitadas: Voz e prestação de contas.
 
+### Confiança: solidez 0,07, muito fraca
+
+Quanta cooperação é possível para além do círculo pessoal mais próximo?
+
+- A pontuação se apoia em um indicador observado.
+- Lacunas declaradas: Confiança nas instituições públicas, Taxa de resolução de processos judiciais.
+- Bases rejeitadas: Estado de direito, Controle da corrupção, Tempo para executar um contrato, Taxa de homicídios dolosos.
+
+### Agência: solidez 0,11, muito fraca
+
+Em que medida pessoas e organizações conseguem transformar intenção em ação?
+
+- A pontuação se apoia em um indicador observado.
+- Lacunas declaradas: Adultos que realizam tarefas digitais.
+- Bases rejeitadas: Tempo para abrir uma empresa.
+
 ### Experimentação: solidez 0,14, muito fraca
 
 Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e melhoradas?
@@ -60,20 +76,13 @@ Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e 
 - Lacunas declaradas: Operações de capital de risco, Empresas em sandboxes regulatórios, Empresas derivadas de pesquisa universitária.
 - Bases rejeitadas: Parcela empresarial do P&D.
 
-### Confiança: solidez 0,16, muito fraca
+### Coordenação: solidez 0,27, fraca
 
-Quanta cooperação é possível para além do círculo pessoal mais próximo?
-
-- A pontuação se apoia em 2 indicadores observados.
-- Lacunas declaradas: Confiança nas instituições públicas, Taxa de resolução de processos judiciais.
-- Bases rejeitadas: Estado de direito, Controle da corrupção, Taxa de homicídios dolosos.
-
-### Agência: solidez 0,22, muito fraca
-
-Em que medida pessoas e organizações conseguem transformar intenção em ação?
+Com que eficácia atores independentes conseguem se organizar em torno de objetivos comuns?
 
 - A pontuação se apoia em 2 indicadores observados.
-- Lacunas declaradas: Adultos que realizam tarefas digitais.
+- Lacunas declaradas: Colaboração universidade-empresa, Colaboração público-privada.
+- Bases rejeitadas: Efetividade governamental, Qualidade regulatória, Desempenho logístico, Tempo de exportação na fronteira.
 
 ### Aprendizagem: solidez 0,32, fraca
 
@@ -81,14 +90,6 @@ Com que eficácia o país adquire, distribui e atualiza conhecimento?
 
 - A pontuação se apoia em 2 indicadores observados.
 - Lacunas declaradas: Participação de adultos em aprendizagem.
-
-### Coordenação: solidez 0,39, fraca
-
-Com que eficácia atores independentes conseguem se organizar em torno de objetivos comuns?
-
-- A pontuação se apoia em 3 indicadores observados.
-- Lacunas declaradas: Colaboração universidade-empresa, Colaboração público-privada.
-- Bases rejeitadas: Efetividade governamental, Qualidade regulatória, Desempenho logístico.
 
 ### Construção: solidez 0,41, fraca
 
@@ -113,7 +114,7 @@ As condições descrevem com o que um país conta: infraestrutura, acesso, dinhe
 | Aprendizagem | Educação profissional no ensino secundário | 3 % das matrículas no ensino secundário | 1986 | 102º de 125 |
 | Adaptação | Participação na força de trabalho | 65,3 % das pessoas com 15 anos ou mais | 2025 | 90º de 125 |
 | Adaptação | Assinaturas de banda larga fixa | 0,3 por 100 pessoas | 2022 | 114º de 125 |
-| Adaptação | Perdas na transmissão de eletricidade | 14,7 % da produção | 2022 | 89º de 117 |
+| Adaptação | Perdas na transmissão de eletricidade | 15,3 % da produção | 2024 | 90º de 117 |
 | Adaptação | Emprego informal | 91,6 % do emprego | 2012 | 89º de 102 |
 | Construção | Produto por pessoa ocupada | 7.115,3 dólares PPC constantes de 2021 | 2025 | 116º de 123 |
 

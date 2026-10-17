@@ -1,6 +1,6 @@
 # Agenda de capacidades: Guiné-Bissau
 
-*Gerada em 2026-10-16*
+*Gerada em 2026-10-17*
 
 A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, sem classificação geral, e cada pontuação traz ao lado a solidez da evidência. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma pontuação.
 
@@ -9,14 +9,14 @@ A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 | Dimensão | Pontuação | Solidez | Tendência |
 | --- | --- | --- | --- |
 | Antecipação | 8 | 0,46 (utilizável) | +7,9 em 10 anos, com base em 2 indicadores, 1 cortados na extremidade da escala |
-| Agência | 51,4 | 0,41 (fraca) | sem tendência comparável |
-| Coordenação | 56,3 | 0,32 (fraca) | sem tendência comparável |
-| Confiança | 27,9 | 0,3 (fraca) | sem tendência comparável |
+| Agência | 32,7 | 0,3 (fraca) | sem tendência comparável |
+| Coordenação | 56,5 | 0,21 (muito fraca) | sem tendência comparável |
+| Confiança | 41,8 | 0,21 (muito fraca) | sem tendência comparável |
 | Aprendizagem | 41,4 | 0,39 (fraca) | sem tendência comparável |
-| Experimentação | 0,7 | 0,12 (muito fraca) | sem tendência comparável |
+| Experimentação | 0,8 | 0,12 (muito fraca) | sem tendência comparável |
 | Adaptação | 42 | 0,59 (utilizável) | sem tendência comparável |
 | Construção | 7,9 | 0,45 (fraca) | 0 em 10 anos, com base em 2 indicadores |
-| Propósito partilhado | 47,4 | 0,28 (fraca) | sem tendência comparável |
+| Propósito partilhado | 46,6 | 0,28 (fraca) | sem tendência comparável |
 
 ## Dimensões com as pontuações mais baixas
 
@@ -52,6 +52,22 @@ Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e 
 - Lacunas declaradas: Operações de capital de risco, Empresas em ambientes de teste regulatório, Empresas derivadas da investigação universitária.
 - Bases rejeitadas: Peso das empresas na I&D.
 
+### Coordenação: solidez 0,21, muito fraca
+
+Com que eficácia atores independentes conseguem organizar-se em torno de objetivos comuns?
+
+- A pontuação assenta em 2 indicadores observados.
+- Lacunas declaradas: Colaboração universidade-empresa, Colaboração público-privada.
+- Bases rejeitadas: Efetividade governamental, Qualidade regulatória, Desempenho logístico, Tempo de exportação na fronteira.
+
+### Confiança: solidez 0,21, muito fraca
+
+Quanta cooperação é possível para além do círculo pessoal mais próximo?
+
+- A pontuação assenta em 2 indicadores observados.
+- Lacunas declaradas: Confiança nas instituições públicas, Taxa de resolução de processos judiciais.
+- Bases rejeitadas: Estado de direito, Controlo da corrupção, Tempo para executar um contrato, Taxa de homicídios dolosos.
+
 ### Propósito partilhado: solidez 0,28, fraca
 
 Até que ponto as pessoas conseguem ver-se como participantes de um projeto comum?
@@ -60,21 +76,13 @@ Até que ponto as pessoas conseguem ver-se como participantes de um projeto comu
 - Lacunas declaradas: Sentimento de pertença nacional, Voluntariado, Polarização política.
 - Bases rejeitadas: Voz e prestação de contas.
 
-### Confiança: solidez 0,3, fraca
+### Agência: solidez 0,3, fraca
 
-Quanta cooperação é possível para além do círculo pessoal mais próximo?
+Em que medida pessoas e organizações conseguem transformar intenção em ação?
 
-- A pontuação assenta em 3 indicadores observados.
-- Lacunas declaradas: Confiança nas instituições públicas, Taxa de resolução de processos judiciais.
-- Bases rejeitadas: Estado de direito, Controlo da corrupção, Taxa de homicídios dolosos.
-
-### Coordenação: solidez 0,32, fraca
-
-Com que eficácia atores independentes conseguem organizar-se em torno de objetivos comuns?
-
-- A pontuação assenta em 3 indicadores observados.
-- Lacunas declaradas: Colaboração universidade-empresa, Colaboração público-privada.
-- Bases rejeitadas: Efetividade governamental, Qualidade regulatória, Desempenho logístico.
+- A pontuação assenta em 2 indicadores observados.
+- Lacunas declaradas: Adultos que realizam tarefas digitais.
+- Bases rejeitadas: Tempo para criar uma empresa.
 
 ### Aprendizagem: solidez 0,39, fraca
 
@@ -82,13 +90,6 @@ Com que eficácia o país adquire, distribui e atualiza conhecimento?
 
 - A pontuação assenta em 2 indicadores observados.
 - Lacunas declaradas: Participação de adultos em aprendizagem.
-
-### Agência: solidez 0,41, fraca
-
-Em que medida pessoas e organizações conseguem transformar intenção em ação?
-
-- A pontuação assenta em 3 indicadores observados.
-- Lacunas declaradas: Adultos que realizam tarefas digitais.
 
 ### Construção: solidez 0,45, fraca
 
@@ -106,7 +107,7 @@ As condições descrevem aquilo com que um país conta: infraestrutura, acesso, 
 | --- | --- | --- | --- | --- |
 | Antecipação | Servidores de internet seguros | 10,9 por milhão de pessoas | 2024 | 121.º de 125 |
 | Agência | Pessoas que usam a internet | 29,8 % da população | 2024 | 114.º de 125 |
-| Agência | Crédito ao setor privado | 10 % do PIB | 2025 | 116.º de 124 |
+| Agência | Crédito ao setor privado | 10 % do PIB | 2025 | 117.º de 124 |
 | Aprendizagem | Matrícula no ensino superior | 2,6 % (taxa bruta) | 2006 | 122.º de 124 |
 | Aprendizagem | Despesa pública em educação | 2 % do PIB | 2013 | 114.º de 125 |
 | Aprendizagem | Ensino profissional no ensino secundário | 1,8 % das matrículas no ensino secundário | 2006 | 109.º de 125 |

@@ -1,6 +1,6 @@
 # Agenda de capacidades: Sérvia
 
-*Gerada em 2026-10-16*
+*Gerada em 2026-10-17*
 
 A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, sem classificação geral, e cada pontuação traz ao lado a solidez da evidência. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma pontuação.
 
@@ -9,14 +9,14 @@ A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 | Dimensão | Pontuação | Solidez | Tendência |
 | --- | --- | --- | --- |
 | Antecipação | 52,9 | 0,46 (utilizável) | +12,5 em 10 anos, com base em 2 indicadores |
-| Agência | 56,7 | 0,41 (fraca) | sem tendência comparável |
-| Coordenação | 81,6 | 0,4 (fraca) | sem tendência comparável |
-| Confiança | 67,1 | 0,3 (fraca) | sem tendência comparável |
+| Agência | 58,9 | 0,49 (utilizável) | sem tendência comparável |
+| Coordenação | 73,6 | 0,47 (utilizável) | sem tendência comparável |
+| Confiança | 63,9 | 0,34 (fraca) | sem tendência comparável |
 | Aprendizagem | 40 | 0,55 (utilizável) | sem tendência comparável |
-| Experimentação | 13,3 | 0,33 (fraca) | -1,5 em 10 anos, com base em 3 indicadores |
+| Experimentação | 14,2 | 0,41 (fraca) | -1,6 em 10 anos, com base em 3 indicadores |
 | Adaptação | 69,8 | 0,62 (utilizável) | sem tendência comparável |
 | Construção | 31,4 | 0,41 (fraca) | -7 em 10 anos, com base em 2 indicadores |
-| Propósito compartilhado | 70,7 | 0,28 (fraca) | +10,6 em 10 anos, com base em 2 indicadores |
+| Propósito compartilhado | 69,9 | 0,28 (fraca) | +10,4 em 10 anos, com base em 2 indicadores |
 
 ## Dimensões com as pontuações mais baixas
 
@@ -43,29 +43,13 @@ Até que ponto as pessoas conseguem se ver como participantes de um projeto comu
 - Lacunas declaradas: Sentimento de pertencimento nacional, Voluntariado, Polarização política.
 - Bases rejeitadas: Voz e prestação de contas.
 
-### Confiança: solidez 0,3, fraca
+### Confiança: solidez 0,34, fraca
 
 Quanta cooperação é possível para além do círculo pessoal mais próximo?
 
 - A pontuação se apoia em 3 indicadores observados.
 - Lacunas declaradas: Confiança nas instituições públicas, Taxa de resolução de processos judiciais.
-- Bases rejeitadas: Estado de direito, Controle da corrupção, Taxa de homicídios dolosos.
-
-### Experimentação: solidez 0,33, fraca
-
-Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e melhoradas?
-
-- A pontuação se apoia em 4 indicadores observados.
-- Lacunas declaradas: Operações de capital de risco, Empresas em sandboxes regulatórios, Empresas derivadas de pesquisa universitária.
-- Bases rejeitadas: Parcela empresarial do P&D.
-
-### Coordenação: solidez 0,4, fraca
-
-Com que eficácia atores independentes conseguem se organizar em torno de objetivos comuns?
-
-- A pontuação se apoia em 3 indicadores observados.
-- Lacunas declaradas: Colaboração universidade-empresa, Colaboração público-privada.
-- Bases rejeitadas: Efetividade governamental, Qualidade regulatória, Desempenho logístico.
+- Bases rejeitadas: Estado de direito, Controle da corrupção, Tempo para executar um contrato, Taxa de homicídios dolosos.
 
 ### Construção: solidez 0,41, fraca
 
@@ -75,18 +59,21 @@ Em que medida o país consegue transformar planos e conhecimento em sistemas que
 - Lacunas declaradas: Entrega de grandes projetos, Empresas jovens que ganham escala.
 - Bases rejeitadas: Qualidade da infraestrutura logística.
 
-### Agência: solidez 0,41, fraca
+### Experimentação: solidez 0,41, fraca
 
-Em que medida pessoas e organizações conseguem transformar intenção em ação?
+Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e melhoradas?
 
-- A pontuação se apoia em 3 indicadores observados.
-- Lacunas declaradas: Adultos que realizam tarefas digitais.
+- A pontuação se apoia em 4 indicadores observados.
+- Lacunas declaradas: Operações de capital de risco, Empresas em sandboxes regulatórios, Empresas derivadas de pesquisa universitária.
+- Bases rejeitadas: Parcela empresarial do P&D.
 
 ## Dimensões com as pontuações mais altas
 
 Estas dimensões têm pontuação de pelo menos 50, com evidência utilizável.
 
+- Coordenação: 73,6, solidez utilizável
 - Adaptação: 69,8, solidez utilizável
+- Agência: 58,9, solidez utilizável
 - Antecipação: 52,9, solidez utilizável
 
 ## Com o que a Sérvia conta
@@ -100,13 +87,13 @@ As condições descrevem com o que um país conta: infraestrutura, acesso, dinhe
 | Antecipação | Servidores de internet seguros | 12.941,8 por milhão de pessoas | 2024 | 38º de 125 |
 | Agência | Pessoas que usam a internet | 87,7 % da população | 2024 | 51º de 125 |
 | Agência | Adultos com conta financeira | 83,3 % das pessoas com 15 anos ou mais | 2024 | 51º de 122 |
-| Agência | Crédito ao setor privado | 35,4 % do PIB | 2025 | 73º de 124 |
+| Agência | Crédito ao setor privado | 35,4 % do PIB | 2025 | 74º de 124 |
 | Aprendizagem | Matrícula no ensino superior | 70,6 % (taxa bruta) | 2024 | 40º de 124 |
 | Aprendizagem | Dispêndio público em educação | 3,4 % do PIB | 2023 | 82º de 125 |
 | Aprendizagem | Educação profissional no ensino secundário | 35,5 % das matrículas no ensino secundário | 2019 | 10º de 125 |
 | Adaptação | Participação na força de trabalho | 74,2 % das pessoas com 15 anos ou mais | 2025 | 46º de 125 |
 | Adaptação | Assinaturas de banda larga fixa | 33,4 por 100 pessoas | 2024 | 32º de 125 |
-| Adaptação | Perdas na transmissão de eletricidade | 10,3 % da produção | 2023 | 72º de 117 |
+| Adaptação | Perdas na transmissão de eletricidade | 10,6 % da produção | 2024 | 70º de 117 |
 | Adaptação | Emprego informal | 17,1 % do emprego | 2025 | 31º de 102 |
 | Construção | Produto por pessoa ocupada | 58.609,3 dólares PPC constantes de 2021 | 2025 | 51º de 123 |
 

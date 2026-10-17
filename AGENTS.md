@@ -600,9 +600,12 @@ not an error status. `pnpm bench probe` reads that block and says the code is
 unknown, so a stalled request and a dead code never read the same.
 
 `IC.BRE.*`, B-READY, is the Doing Business successor and it is in World
-Development Indicators. It covered 12 of the 53 countries in the frame at the 2024 round, so
-it is not wireable yet, and it is what replaces the 2019-frozen Doing Business
-rows when its coverage arrives.
+Development Indicators, database 2. Its 2025 round covers 74 of the 125.
+D167 scores the third pillar of three topics (`IC.BRE.BE.P3`, `IT.P3`,
+`DR.P3`) in place of three Doing Business rows. Every B-READY series is a
+0 to 100 score: there is no day, hour or procedure count, and utility
+services reach the API only as the topic score `IC.BRE.US.OS`, with no
+pillars.
 
 Other traps found the hard way:
 

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-16T15:06:59.831Z",
+  "generatedAt": "2026-10-17T01:26:56.683Z",
   "iso3": "CHE",
   "country": "Switzerland",
   "dimensions": [
@@ -279,39 +279,40 @@
     },
     {
       "dimension": "agency",
-      "kind": "hold",
-      "score": 60.5,
-      "confidence": 0.524,
-      "band": "usable",
+      "kind": "measure",
+      "score": 52.1,
+      "confidence": 0.413,
+      "band": "thin",
       "trend": null,
       "scoredOn": [
         "new_business_density",
-        "business_start_days",
         "business_start_procedures",
         "perceived_control"
       ],
       "gaps": [
         "adult_digital_skills"
       ],
-      "retired": [],
+      "retired": [
+        "business_start_days"
+      ],
       "exemplars": [
+        {
+          "iso3": "GBR",
+          "country": "United Kingdom",
+          "score": 94.7,
+          "confidence": 0.491
+        },
         {
           "iso3": "NZL",
           "country": "New Zealand",
-          "score": 92.3,
-          "confidence": 0.555
+          "score": 91.4,
+          "confidence": 0.632
         },
         {
-          "iso3": "AUS",
-          "country": "Australia",
-          "score": 89.2,
-          "confidence": 0.555
-        },
-        {
-          "iso3": "EST",
-          "country": "Estonia",
-          "score": 84.3,
-          "confidence": 0.555
+          "iso3": "MUS",
+          "country": "Mauritius",
+          "score": 85.5,
+          "confidence": 0.491
         }
       ],
       "evidenceElsewhere": [
@@ -364,10 +365,10 @@
         },
         {
           "id": "domestic_credit_private",
-          "value": 167.773,
+          "value": 152.586,
           "unit": "% of GDP",
-          "year": 2016,
-          "rank": 4,
+          "year": 2025,
+          "rank": 5,
           "n": 124
         }
       ]
@@ -375,12 +376,11 @@
     {
       "dimension": "coordination",
       "kind": "measure",
-      "score": 98.7,
-      "confidence": 0.347,
-      "band": "thin",
+      "score": 98.2,
+      "confidence": 0.23,
+      "band": "very_thin",
       "trend": null,
       "scoredOn": [
-        "time_to_export",
         "budget_execution_fidelity",
         "civil_society_strength"
       ],
@@ -391,9 +391,29 @@
       "retired": [
         "government_effectiveness",
         "regulatory_quality",
-        "logistics_performance"
+        "logistics_performance",
+        "time_to_export"
       ],
-      "exemplars": [],
+      "exemplars": [
+        {
+          "iso3": "BEL",
+          "country": "Belgium",
+          "score": 93.2,
+          "confidence": 0.453
+        },
+        {
+          "iso3": "IRL",
+          "country": "Ireland",
+          "score": 91.1,
+          "confidence": 0.453
+        },
+        {
+          "iso3": "SVN",
+          "country": "Slovenia",
+          "score": 88.9,
+          "confidence": 0.453
+        }
+      ],
       "evidenceElsewhere": [
         {
           "id": "deu-fraunhofer",
@@ -1332,13 +1352,12 @@
     },
     {
       "dimension": "trust",
-      "kind": "hold",
-      "score": 82.6,
-      "confidence": 0.498,
-      "band": "usable",
+      "kind": "measure",
+      "score": 85.3,
+      "confidence": 0.413,
+      "band": "thin",
       "trend": null,
       "scoredOn": [
-        "contract_enforcement_days",
         "bribery_incidence",
         "court_compliance",
         "interpersonal_trust",
@@ -1351,26 +1370,27 @@
       "retired": [
         "rule_of_law",
         "control_of_corruption",
+        "contract_enforcement_days",
         "homicide_rate"
       ],
       "exemplars": [
         {
-          "iso3": "DNK",
-          "country": "Denmark",
-          "score": 94.1,
-          "confidence": 0.498
+          "iso3": "SWE",
+          "country": "Sweden",
+          "score": 90.3,
+          "confidence": 0.546
         },
         {
-          "iso3": "NOR",
-          "country": "Norway",
-          "score": 91.3,
-          "confidence": 0.498
+          "iso3": "NZL",
+          "country": "New Zealand",
+          "score": 83.2,
+          "confidence": 0.537
         },
         {
-          "iso3": "FIN",
-          "country": "Finland",
-          "score": 89.7,
-          "confidence": 0.498
+          "iso3": "EST",
+          "country": "Estonia",
+          "score": 75.7,
+          "confidence": 0.537
         }
       ],
       "evidenceElsewhere": [
@@ -2098,12 +2118,12 @@
     {
       "dimension": "experimentation",
       "kind": "hold",
-      "score": 68.6,
-      "confidence": 0.525,
+      "score": 68.8,
+      "confidence": 0.6,
       "band": "usable",
       "trend": {
         "spanYears": 10,
-        "delta": -2.2,
+        "delta": -6.2,
         "basket": 3,
         "clamped": 0
       },
@@ -2127,20 +2147,20 @@
         {
           "iso3": "KOR",
           "country": "South Korea",
-          "score": 72.6,
-          "confidence": 0.525
+          "score": 73.5,
+          "confidence": 0.6
         },
         {
           "iso3": "USA",
           "country": "United States",
-          "score": 50.6,
-          "confidence": 0.525
+          "score": 51.3,
+          "confidence": 0.6
         },
         {
           "iso3": "EST",
           "country": "Estonia",
-          "score": 40.2,
-          "confidence": 0.525
+          "score": 37.6,
+          "confidence": 0.6
         }
       ],
       "evidenceElsewhere": [
@@ -4490,10 +4510,10 @@
         },
         {
           "id": "electricity_transmission_losses",
-          "value": 5.013,
+          "value": 6.338,
           "unit": "% of output",
-          "year": 2024,
-          "rank": 19,
+          "year": 2025,
+          "rank": 32,
           "n": 117
         },
         {
@@ -4509,12 +4529,12 @@
     {
       "dimension": "building",
       "kind": "hold",
-      "score": 72.7,
+      "score": 72.8,
       "confidence": 0.568,
       "band": "usable",
       "trend": {
         "spanYears": 10,
-        "delta": 0.9,
+        "delta": 1,
         "basket": 3,
         "clamped": 0
       },
@@ -4535,19 +4555,19 @@
         {
           "iso3": "KOR",
           "country": "South Korea",
-          "score": 85.1,
+          "score": 85.2,
           "confidence": 0.568
         },
         {
           "iso3": "IRL",
           "country": "Ireland",
-          "score": 80.3,
+          "score": 80.5,
           "confidence": 0.568
         },
         {
           "iso3": "CHN",
           "country": "China",
-          "score": 77.4,
+          "score": 77.5,
           "confidence": 0.568
         }
       ],
@@ -5891,12 +5911,12 @@
     {
       "dimension": "shared_purpose",
       "kind": "measure",
-      "score": 47.4,
-      "confidence": 0.408,
+      "score": 47.1,
+      "confidence": 0.42,
       "band": "thin",
       "trend": {
         "spanYears": 10,
-        "delta": -0.9,
+        "delta": -0.4,
         "basket": 2,
         "clamped": 0
       },

@@ -1,6 +1,6 @@
 # Capability agenda: Sudan
 
-*Generated 2026-10-16*
+*Generated 2026-10-17*
 
 The frame includes 125 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
@@ -9,14 +9,14 @@ The frame includes 125 countries. Each dimension is scored from 0 to 100, with n
 | Dimension | Score | Confidence | Trend |
 | --- | --- | --- | --- |
 | Anticipation | 3.2 | 0.46 (usable) | +3.1 over 10 years using 2 indicators, with 1 at the frame edge |
-| Agency | 53.6 | 0.22 (very thin) | no trend |
-| Coordination | 34 | 0.39 (thin) | no trend |
-| Trust | 47.3 | 0.2 (very thin) | no trend |
+| Agency | not scored | 0.11 (very thin) | no trend |
+| Coordination | 34.8 | 0.27 (thin) | no trend |
+| Trust | 41.8 | 0.12 (very thin) | no trend |
 | Learning | 14.5 | 0.36 (thin) | no trend |
-| Experimentation | 1 | 0.31 (thin) | no trend |
+| Experimentation | 1.1 | 0.31 (thin) | no trend |
 | Adaptability | 35.7 | 0.57 (usable) | no trend |
 | Building | 27.2 | 0.33 (thin) | no trend |
-| Shared Purpose | 45 | 0.08 (very thin) | no trend |
+| Shared Purpose | 44.2 | 0.08 (very thin) | no trend |
 
 ## What to raise
 
@@ -52,20 +52,29 @@ To what extent can people imagine themselves as participants in a common project
 - Missing indicators: Sense of national belonging, Volunteering, Political polarisation.
 - Rejected datasets: Voice and accountability.
 
-### Trust: confidence 0.2, very thin
-
-How much cooperation is possible beyond immediate personal networks?
-
-- Uses 3 observed indicators.
-- Missing indicators: Trust in public institutions, Court case clearance rate.
-- Rejected datasets: Rule of law, Control of corruption, Intentional homicide rate.
-
-### Agency: confidence 0.22, very thin
+### Agency: confidence 0.11, very thin
 
 How able are individuals and organizations to turn an intention into action?
 
-- Uses 2 observed indicators.
+- Uses one observed indicator.
 - Missing indicators: Adults doing digital tasks.
+- Rejected datasets: Time to start a business.
+
+### Trust: confidence 0.12, very thin
+
+How much cooperation is possible beyond immediate personal networks?
+
+- Uses 2 observed indicators.
+- Missing indicators: Trust in public institutions, Court case clearance rate.
+- Rejected datasets: Rule of law, Control of corruption, Time to enforce a contract, Intentional homicide rate.
+
+### Coordination: confidence 0.27, thin
+
+How effectively can independent actors organize around shared objectives?
+
+- Uses 2 observed indicators.
+- Missing indicators: University-industry collaboration, Public-private collaboration.
+- Rejected datasets: Government effectiveness, Regulatory quality, Logistics performance, Border compliance time to export.
 
 ### Experimentation: confidence 0.31, thin
 
@@ -90,14 +99,6 @@ How effectively does the country acquire, distribute, and update knowledge?
 - Uses 3 observed indicators.
 - Missing indicators: Adult learning participation.
 
-### Coordination: confidence 0.39, thin
-
-How effectively can independent actors organize around shared objectives?
-
-- Uses 3 observed indicators.
-- Missing indicators: University-industry collaboration, Public-private collaboration.
-- Rejected datasets: Government effectiveness, Regulatory quality, Logistics performance.
-
 ## What Sudan has to work with
 
 Conditions describe what a country has to work with: infrastructure, access, money, people, enrolment and income itself. Each is published beside a capability and is not part of its score, its confidence or its trend. Read against the score, they show whether what a country has turns into what it does. The rank counts the countries with a value, best first.
@@ -114,7 +115,7 @@ Conditions describe what a country has to work with: infrastructure, access, mon
 | Learning | Vocational share of secondary | 1.1 % of secondary | 2017 | 115 of 125 |
 | Adaptability | Labour force participation | 37.9 % aged 15+ | 2022 | 125 of 125 |
 | Adaptability | Fixed broadband subscriptions | 0.1 per 100 people | 2022 | 122 of 125 |
-| Adaptability | Electricity transmission losses | 27.1 % of output | 2023 | 113 of 117 |
+| Adaptability | Electricity transmission losses | 31.3 % of output | 2024 | 114 of 117 |
 | Adaptability | Informal employment | 94.2 % of employment | 2022 | 94 of 102 |
 | Building | Output per worker | 15,276.6 constant 2021 PPP $ | 2022 | 102 of 123 |
 

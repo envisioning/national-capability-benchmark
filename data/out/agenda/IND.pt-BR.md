@@ -1,6 +1,6 @@
 # Agenda de capacidades: Índia
 
-*Gerada em 2026-10-16*
+*Gerada em 2026-10-17*
 
 A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, sem classificação geral, e cada pontuação traz ao lado a solidez da evidência. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma pontuação.
 
@@ -9,25 +9,25 @@ A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 | Dimensão | Pontuação | Solidez | Tendência |
 | --- | --- | --- | --- |
 | Antecipação | 34,5 | 0,46 (utilizável) | +8,7 em 10 anos, com base em 2 indicadores |
-| Agência | 46 | 0,56 (utilizável) | sem tendência comparável |
-| Coordenação | 82 | 0,41 (fraca) | sem tendência comparável |
-| Confiança | 45,3 | 0,5 (utilizável) | sem tendência comparável |
+| Agência | 36,6 | 0,44 (fraca) | sem tendência comparável |
+| Coordenação | 82,8 | 0,29 (fraca) | sem tendência comparável |
+| Confiança | 52,4 | 0,41 (fraca) | sem tendência comparável |
 | Aprendizagem | 21,7 | 0,55 (utilizável) | sem tendência comparável |
-| Experimentação | 12 | 0,53 (utilizável) | +3,1 em 10 anos, com base em 3 indicadores |
+| Experimentação | 16,1 | 0,6 (utilizável) | +10,9 em 10 anos, com base em 3 indicadores |
 | Adaptação | 82,4 | 0,46 (utilizável) | sem tendência comparável |
-| Construção | 62,1 | 0,57 (utilizável) | +7,9 em 10 anos, com base em 3 indicadores |
-| Propósito compartilhado | 63,2 | 0,38 (fraca) | -1,4 em 10 anos, com base em 2 indicadores |
+| Construção | 62,2 | 0,57 (utilizável) | +8 em 10 anos, com base em 3 indicadores |
+| Propósito compartilhado | 64,8 | 0,4 (fraca) | +1,9 em 10 anos, com base em 2 indicadores |
 
 ## Dimensões com as pontuações mais baixas
 
 São as pontuações mais baixas entre as dimensões com evidência utilizável. As dimensões com evidência fraca aparecem na seção seguinte.
 
-### Experimentação: 12, solidez utilizável
+### Experimentação: 16,1, solidez utilizável
 
 Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e melhoradas?
 
 - A pontuação se apoia em 6 indicadores observados.
-- No topo da escala, entre as pontuações com evidência utilizável: Coreia do Sul 72,6, Suíça 68,6, Estados Unidos 50,6.
+- No topo da escala, entre as pontuações com evidência utilizável: Coreia do Sul 73,5, Suíça 68,8, Estados Unidos 51,3.
 - Registros de evidência desta dimensão em outros países, com êxitos e retrocessos, que não entram em nenhuma pontuação: The FCA regulatory sandbox (Reino Unido); Yozma, the venture capital catalyst (Israel); Korean regulatory-sandbox system across eight sectors (Coreia do Sul); MAS FinTech Regulatory Sandbox variants (Singapura); British Patient Capital, a public venture-capital catalyst (Reino Unido); ICURe, from university research to spinouts (Reino Unido); Portugal Ventures, a public venture-capital bridge (Portugal); Rede Nacional de Test Beds for company experimentation (Portugal); Zonas Livres Tecnológicas, regulator-supervised experimentation zones (Portugal); Sandbox regulatório do Banco Central, primeiro ciclo (Brasil); Capital Markets Authority regulatory sandbox (Quênia); SEC Nigeria Regulatory Incubation Program (Nigéria); ADGM RegLab, the first fintech sandbox in the region (Emirados Árabes Unidos); OJK regulatory sandbox for financial-sector technological innovation (Indonésia); Bank Negara Malaysia Fintech Regulatory Sandbox (Malásia); Bank of Thailand regulatory sandbox (Tailândia); Sandbox financiero (Ley 7/2020), and the fall in applications (Espanha); IFWG Regulatory Sandbox (África do Sul); Project-based regulatory sandbox (new technology demonstration scheme) (Japão); CFPB Compliance Assistance Sandbox, rescinded in 2022 and withdrawn again in 2025 (Estados Unidos); CSA Regulatory Sandbox, succeeded by the Financial Innovation Hub (Canadá); ASIC enhanced regulatory sandbox (Austrália); SINTEG-Verordnung, the energy-transition experimentation clause (Alemanha); Experimenten Elektriciteitswet 2015-2018, and its erosion (Países Baixos); Bac à sable réglementaire in the energy sector (França); Italy's FinTech regulatory sandbox, and its contraction (Itália); Bank of Ghana Regulatory Sandbox (Gana); AFSA FinTech Lab at the Astana International Financial Centre (Cazaquistão); Banque Centrale de Tunisie regulatory sandbox, first cohort (Tunísia); Sandbox Regulatório do Banco de Moçambique (Moçambique); Regulatory Sandbox Licence of the Economic Development Board (Maurício); Bank of Uganda regulatory sandbox (Uganda); Regulatory Sandbox Framework for Capital Markets, first cohort (Zâmbia); Securities and Exchange Commission of Zimbabwe regulatory sandbox (Zimbábue); FMA Regulatory Sandbox (Áustria); Regulatorisk sandkasse for AI (Datatilsynet and Digitaliseringsstyrelsen) (Dinamarca); Datatilsynet's regulatory sandbox for privacy-friendly innovation (Noruega); Bank of Lithuania regulatory sandbox, with one test in seven years (Lituânia); Narodna banka Slovenska regulatory sandbox (Eslováquia); Sandbox for AI and blockchain products, Ministry of Digital Transformation and Ukrainian Startup Fund (Ucrânia); Bank of Russia regulatory sandbox (regulativnaya pesochnitsa) (Rússia); JoRegBox, the Central Bank of Jordan regulatory sandbox (Jordânia); Special regulatory regimes (spetsialnye regulyativnye rezhimy) of the National Bank of the Kyrgyz Republic (Quirguistão); SECP Regulatory Sandbox, four cohorts and an open window (Paquistão); Bank of Jamaica FinTech Regulatory Sandbox (Jamaica); Financial Regulatory Commission sandbox regulatory environment (Mongólia); NAMFISA Regulatory Sandbox, microlending cohort (Namíbia); Central Bank of Azerbaijan regulatory sandbox (Azerbaijão); FRA Sandbox of the Financial Regulatory Authority (Egito); Mohit-e azmoon-e tanzimgari (regulatory sandbox) of the Central Bank of the Islamic Republic of Iran (Irã); Regulatory sandbox (special legal regime) in the capital market of the National Agency of Perspective Projects (Uzbequistão); BRUGEL derogation framework for innovative energy projects (projets innovants) (Bélgica); FMA regulatory sandbox pilot (Nova Zelândia); Regulatory Laboratory (regulatory sandbox) of the National Bank of Georgia (Geórgia); Energy Sandbox (spatii de testare inovativa in domeniul energiei) (Moldávia).
 - Lacunas declaradas: Operações de capital de risco, Empresas em sandboxes regulatórios, Empresas derivadas de pesquisa universitária.
 - Bases rejeitadas: Parcela empresarial do P&D.
@@ -50,30 +50,19 @@ Em que medida o país consegue identificar mudanças emergentes e se preparar pa
 - Registros de evidência desta dimensão em outros países, com êxitos e retrocessos, que não entram em nenhuma pontuação: Embrapa, uma aposta de cinquenta anos na agricultura tropical (Brasil); The Delta Programme and its fund (Países Baixos); Lei de Informática, uma política industrial setorial (Brasil); CGEE, o centro de estudos estratégicos (Brasil); Centre for Strategic Futures, foresight inside government (Singapura); Legally binding carbon budgets (Reino Unido); Fukushima decommissioning roadmap, a 30–40-year risk-reduction horizon (Japão); National basic-research funding allocation (China); PLANAPP and REPLAN, a centre-of-government foresight network (Portugal); Labour Market Intelligence Programme and forward skills planning (África do Sul); Government Report on the Future and the parliamentary Committee for the Future (Finlândia); Foresight Centre at the Riigikogu (Arenguseire Keskus) (Estônia); Office of Technology Assessment, defunded and closed in 1995 (Estados Unidos); Rządowe Centrum Studiów Strategicznych, liquidated in 2006 (Polônia); Office of Technology Assessment at the German Bundestag (TAB) (Alemanha); National Assembly Futures Institute (Coreia do Sul); Federal Chancellery situation and environment analysis (Perspektivstab) (Suíça); Senate foresight delegation (Délégation sénatoriale à la prospective) (França); Senate Commission on Future Challenges, Science, Technology and Innovation (Chile); Policy Horizons Canada, the federal foresight unit, and its 2024 disruption scan (Canadá); Framtidskommissionen, the Prime Minister's time-limited future commission (Suécia); National Planning Commission foresight work for Malawi 2063 (Malawi); Bureau National de la Prospective et de la Veille Stratégique and the national prospective studies (Costa do Marfim); Teknologiraadet, the Norwegian Board of Technology (Noruega); Teknologiraadet, the Danish Board of Technology, abolished in 2012 (Dinamarca); Bureau federal du Plan (Bélgica); Special Secretariat of Foresight (now of Long-term Planning) (Grécia); STRATA foresight for the Lietuva 2050 state progress strategy (Lituânia); Institut Royal des Etudes Stratégiques (IRES) (Marrocos); Long-term Insights Briefings under the Public Service Act 2020 (Nova Zelândia).
 - Lacunas declaradas: Capacidade governamental de prospecção, Compromissos de pesquisa de longo prazo.
 
-### Confiança: 45,3, solidez utilizável
-
-Quanta cooperação é possível para além do círculo pessoal mais próximo?
-
-- A pontuação se apoia em 5 indicadores observados.
-- No topo da escala, entre as pontuações com evidência utilizável: Dinamarca 94,1, Noruega 91,3, Finlândia 89,7.
-- Registros de evidência desta dimensão em outros países, com êxitos e retrocessos, que não entram em nenhuma pontuação: Cadastro Único, o registro social unificado (Brasil); Portal da Transparência, as contas federais abertas (Brasil); MyData, citizen-directed data portability (Coreia do Sul); Singapore Courts' case-clearance discipline (Singapura); Civil-court clearance and the CEPEJ monitoring series (Portugal).
-- Lacunas declaradas: Confiança nas instituições públicas, Taxa de resolução de processos judiciais.
-- Bases rejeitadas: Estado de direito, Controle da corrupção, Taxa de homicídios dolosos.
-
-### Agência: 46, solidez utilizável
-
-Em que medida pessoas e organizações conseguem transformar intenção em ação?
-
-- A pontuação se apoia em 4 indicadores observados.
-- No topo da escala, entre as pontuações com evidência utilizável: Nova Zelândia 92,3, Austrália 89,2, Estônia 84,3.
-- Registros de evidência desta dimensão em outros países, com êxitos e retrocessos, que não entram em nenhuma pontuação: Singapore's national ICT-skills measurement and baseline (Singapura); e.escola, a national laptop-and-broadband push (Portugal); Puntos México Conectado, national digital learning centres (México).
-- Lacunas declaradas: Adultos que realizam tarefas digitais.
-
 ## Dimensões com evidência fraca
 
 A solidez da evidência está abaixo da faixa utilizável, de modo que a pontuação diz pouco sobre o país enquanto faltarem dados.
 
-### Propósito compartilhado: solidez 0,38, fraca
+### Coordenação: solidez 0,29, fraca
+
+Com que eficácia atores independentes conseguem se organizar em torno de objetivos comuns?
+
+- A pontuação se apoia em 2 indicadores observados.
+- Lacunas declaradas: Colaboração universidade-empresa, Colaboração público-privada.
+- Bases rejeitadas: Efetividade governamental, Qualidade regulatória, Desempenho logístico, Tempo de exportação na fronteira.
+
+### Propósito compartilhado: solidez 0,4, fraca
 
 Até que ponto as pessoas conseguem se ver como participantes de um projeto comum?
 
@@ -81,20 +70,28 @@ Até que ponto as pessoas conseguem se ver como participantes de um projeto comu
 - Lacunas declaradas: Sentimento de pertencimento nacional, Voluntariado, Polarização política.
 - Bases rejeitadas: Voz e prestação de contas.
 
-### Coordenação: solidez 0,41, fraca
+### Confiança: solidez 0,41, fraca
 
-Com que eficácia atores independentes conseguem se organizar em torno de objetivos comuns?
+Quanta cooperação é possível para além do círculo pessoal mais próximo?
+
+- A pontuação se apoia em 4 indicadores observados.
+- Lacunas declaradas: Confiança nas instituições públicas, Taxa de resolução de processos judiciais.
+- Bases rejeitadas: Estado de direito, Controle da corrupção, Tempo para executar um contrato, Taxa de homicídios dolosos.
+
+### Agência: solidez 0,44, fraca
+
+Em que medida pessoas e organizações conseguem transformar intenção em ação?
 
 - A pontuação se apoia em 3 indicadores observados.
-- Lacunas declaradas: Colaboração universidade-empresa, Colaboração público-privada.
-- Bases rejeitadas: Efetividade governamental, Qualidade regulatória, Desempenho logístico.
+- Lacunas declaradas: Adultos que realizam tarefas digitais.
+- Bases rejeitadas: Tempo para abrir uma empresa.
 
 ## Dimensões com as pontuações mais altas
 
 Estas dimensões têm pontuação de pelo menos 50, com evidência utilizável.
 
 - Adaptação: 82,4, solidez utilizável
-- Construção: 62,1, solidez utilizável
+- Construção: 62,2, solidez utilizável
 
 ## Com o que a Índia conta
 
@@ -113,7 +110,7 @@ As condições descrevem com o que um país conta: infraestrutura, acesso, dinhe
 | Aprendizagem | Educação profissional no ensino secundário | 1,3 % das matrículas no ensino secundário | 2019 | 113º de 125 |
 | Adaptação | Participação na força de trabalho | 59,1 % das pessoas com 15 anos ou mais | 2025 | 107º de 125 |
 | Adaptação | Assinaturas de banda larga fixa | 3,2 por 100 pessoas | 2024 | 93º de 125 |
-| Adaptação | Perdas na transmissão de eletricidade | 14,2 % da produção | 2023 | 86º de 117 |
+| Adaptação | Perdas na transmissão de eletricidade | 14,5 % da produção | 2024 | 86º de 117 |
 | Adaptação | Emprego informal | 87,2 % do emprego | 2025 | 82º de 102 |
 | Construção | Produto por pessoa ocupada | 24.842,1 dólares PPC constantes de 2021 | 2025 | 85º de 123 |
 

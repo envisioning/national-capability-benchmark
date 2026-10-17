@@ -1,6 +1,6 @@
 # Capability agenda: France
 
-*Generated 2026-10-16*
+*Generated 2026-10-17*
 
 The frame includes 125 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
@@ -9,20 +9,28 @@ The frame includes 125 countries. Each dimension is scored from 0 to 100, with n
 | Dimension | Score | Confidence | Trend |
 | --- | --- | --- | --- |
 | Anticipation | 62.2 | 0.46 (usable) | +0.3 over 10 years using 2 indicators |
-| Agency | 65 | 0.56 (usable) | no trend |
-| Coordination | 93.5 | 0.39 (thin) | no trend |
-| Trust | 69.8 | 0.5 (usable) | no trend |
+| Agency | 55.1 | 0.44 (thin) | no trend |
+| Coordination | 90.2 | 0.27 (thin) | no trend |
+| Trust | 66.8 | 0.41 (thin) | no trend |
 | Learning | 69.5 | 0.55 (usable) | no trend |
-| Experimentation | 74.7 | 0.33 (thin) | +2.6 over 10 years using 3 indicators |
+| Experimentation | 74 | 0.41 (thin) | -2.6 over 10 years using 3 indicators |
 | Adaptability | 72 | 0.62 (usable) | no trend |
-| Building | 61.9 | 0.57 (usable) | -3.3 over 10 years using 3 indicators |
-| Shared Purpose | 52.9 | 0.42 (thin) | -0.4 over 10 years using 2 indicators |
+| Building | 62 | 0.57 (usable) | -3.4 over 10 years using 3 indicators |
+| Shared Purpose | 52.3 | 0.42 (thin) | -0.4 over 10 years using 2 indicators |
 
 ## What to measure first
 
 The evidence is too thin to manage these dimensions confidently.
 
-### Experimentation: confidence 0.33, thin
+### Coordination: confidence 0.27, thin
+
+How effectively can independent actors organize around shared objectives?
+
+- Uses 2 observed indicators.
+- Missing indicators: University-industry collaboration, Public-private collaboration.
+- Rejected datasets: Government effectiveness, Regulatory quality, Logistics performance, Border compliance time to export.
+
+### Experimentation: confidence 0.41, thin
 
 How easily can new approaches be attempted, tested, abandoned, and improved?
 
@@ -30,13 +38,13 @@ How easily can new approaches be attempted, tested, abandoned, and improved?
 - Missing indicators: Venture deals, Firms through regulatory sandboxes, University spinouts.
 - Rejected datasets: Business share of R&D.
 
-### Coordination: confidence 0.39, thin
+### Trust: confidence 0.41, thin
 
-How effectively can independent actors organize around shared objectives?
+How much cooperation is possible beyond immediate personal networks?
 
-- Uses 3 observed indicators.
-- Missing indicators: University-industry collaboration, Public-private collaboration.
-- Rejected datasets: Government effectiveness, Regulatory quality, Logistics performance.
+- Uses 4 observed indicators.
+- Missing indicators: Trust in public institutions, Court case clearance rate.
+- Rejected datasets: Rule of law, Control of corruption, Time to enforce a contract, Intentional homicide rate.
 
 ### Shared Purpose: confidence 0.42, thin
 
@@ -46,16 +54,22 @@ To what extent can people imagine themselves as participants in a common project
 - Missing indicators: Sense of national belonging, Volunteering, Political polarisation.
 - Rejected datasets: Voice and accountability.
 
+### Agency: confidence 0.44, thin
+
+How able are individuals and organizations to turn an intention into action?
+
+- Uses 3 observed indicators.
+- Missing indicators: Adults doing digital tasks.
+- Rejected datasets: Time to start a business.
+
 ## What to keep watching
 
 These dimensions score at least 50 with usable evidence.
 
 - Adaptability: 72, confidence usable
-- Trust: 69.8, confidence usable
 - Learning: 69.5, confidence usable
-- Agency: 65, confidence usable
 - Anticipation: 62.2, confidence usable
-- Building: 61.9, confidence usable
+- Building: 62, confidence usable
 
 ## What France has to work with
 
@@ -74,7 +88,7 @@ Conditions describe what a country has to work with: infrastructure, access, mon
 | Learning | Vocational share of secondary | 17.6 % of secondary | 2018 | 44 of 125 |
 | Adaptability | Labour force participation | 74 % aged 15+ | 2025 | 48 of 125 |
 | Adaptability | Fixed broadband subscriptions | 48.9 per 100 people | 2024 | 1 of 125 |
-| Adaptability | Electricity transmission losses | 6.6 % of output | 2024 | 35 of 117 |
+| Adaptability | Electricity transmission losses | 6.4 % of output | 2025 | 33 of 117 |
 | Adaptability | Informal employment | 3.4 % of employment | 2025 | 13 of 102 |
 | Building | Output per worker | 128,587.1 constant 2021 PPP $ | 2025 | 12 of 123 |
 

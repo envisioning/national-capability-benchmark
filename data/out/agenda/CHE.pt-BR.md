@@ -1,6 +1,6 @@
 # Agenda de capacidades: Suíça
 
-*Gerada em 2026-10-16*
+*Gerada em 2026-10-17*
 
 A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, sem classificação geral, e cada pontuação traz ao lado a solidez da evidência. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma pontuação.
 
@@ -9,28 +9,44 @@ A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 | Dimensão | Pontuação | Solidez | Tendência |
 | --- | --- | --- | --- |
 | Antecipação | 93,4 | 0,46 (utilizável) | +2,2 em 10 anos, com base em 2 indicadores, 1 limitados à borda da escala |
-| Agência | 60,5 | 0,52 (utilizável) | sem tendência comparável |
-| Coordenação | 98,7 | 0,35 (fraca) | sem tendência comparável |
-| Confiança | 82,6 | 0,5 (utilizável) | sem tendência comparável |
+| Agência | 52,1 | 0,41 (fraca) | sem tendência comparável |
+| Coordenação | 98,2 | 0,23 (muito fraca) | sem tendência comparável |
+| Confiança | 85,3 | 0,41 (fraca) | sem tendência comparável |
 | Aprendizagem | 80 | 0,55 (utilizável) | sem tendência comparável |
-| Experimentação | 68,6 | 0,53 (utilizável) | -2,2 em 10 anos, com base em 3 indicadores |
+| Experimentação | 68,8 | 0,6 (utilizável) | -6,2 em 10 anos, com base em 3 indicadores |
 | Adaptação | 55,6 | 0,62 (utilizável) | sem tendência comparável |
-| Construção | 72,7 | 0,57 (utilizável) | +0,9 em 10 anos, com base em 3 indicadores |
-| Propósito compartilhado | 47,4 | 0,41 (fraca) | -0,9 em 10 anos, com base em 2 indicadores |
+| Construção | 72,8 | 0,57 (utilizável) | +1 em 10 anos, com base em 3 indicadores |
+| Propósito compartilhado | 47,1 | 0,42 (fraca) | -0,4 em 10 anos, com base em 2 indicadores |
 
 ## Dimensões com evidência fraca
 
 A solidez da evidência está abaixo da faixa utilizável, de modo que a pontuação diz pouco sobre o país enquanto faltarem dados.
 
-### Coordenação: solidez 0,35, fraca
+### Coordenação: solidez 0,23, muito fraca
 
 Com que eficácia atores independentes conseguem se organizar em torno de objetivos comuns?
 
-- A pontuação se apoia em 3 indicadores observados.
+- A pontuação se apoia em 2 indicadores observados.
 - Lacunas declaradas: Colaboração universidade-empresa, Colaboração público-privada.
-- Bases rejeitadas: Efetividade governamental, Qualidade regulatória, Desempenho logístico.
+- Bases rejeitadas: Efetividade governamental, Qualidade regulatória, Desempenho logístico, Tempo de exportação na fronteira.
 
-### Propósito compartilhado: solidez 0,41, fraca
+### Agência: solidez 0,41, fraca
+
+Em que medida pessoas e organizações conseguem transformar intenção em ação?
+
+- A pontuação se apoia em 3 indicadores observados.
+- Lacunas declaradas: Adultos que realizam tarefas digitais.
+- Bases rejeitadas: Tempo para abrir uma empresa.
+
+### Confiança: solidez 0,41, fraca
+
+Quanta cooperação é possível para além do círculo pessoal mais próximo?
+
+- A pontuação se apoia em 4 indicadores observados.
+- Lacunas declaradas: Confiança nas instituições públicas, Taxa de resolução de processos judiciais.
+- Bases rejeitadas: Estado de direito, Controle da corrupção, Tempo para executar um contrato, Taxa de homicídios dolosos.
+
+### Propósito compartilhado: solidez 0,42, fraca
 
 Até que ponto as pessoas conseguem se ver como participantes de um projeto comum?
 
@@ -43,11 +59,9 @@ Até que ponto as pessoas conseguem se ver como participantes de um projeto comu
 Estas dimensões têm pontuação de pelo menos 50, com evidência utilizável.
 
 - Antecipação: 93,4, solidez utilizável
-- Confiança: 82,6, solidez utilizável
 - Aprendizagem: 80, solidez utilizável
-- Construção: 72,7, solidez utilizável
-- Experimentação: 68,6, solidez utilizável
-- Agência: 60,5, solidez utilizável
+- Construção: 72,8, solidez utilizável
+- Experimentação: 68,8, solidez utilizável
 - Adaptação: 55,6, solidez utilizável
 
 ## Com o que a Suíça conta
@@ -61,13 +75,13 @@ As condições descrevem com o que um país conta: infraestrutura, acesso, dinhe
 | Antecipação | Servidores de internet seguros | 167.357,6 por milhão de pessoas | 2024 | 7º de 125 |
 | Agência | Pessoas que usam a internet | 97,3 % da população | 2025 | 6º de 125 |
 | Agência | Adultos com conta financeira | 98,4 % das pessoas com 15 anos ou mais | 2024 | 13º de 122 |
-| Agência | Crédito ao setor privado | 167,8 % do PIB | 2016 | 4º de 124 |
+| Agência | Crédito ao setor privado | 152,6 % do PIB | 2025 | 5º de 124 |
 | Aprendizagem | Matrícula no ensino superior | 73,5 % (taxa bruta) | 2024 | 37º de 124 |
 | Aprendizagem | Dispêndio público em educação | 4,9 % do PIB | 2022 | 43º de 125 |
 | Aprendizagem | Educação profissional no ensino secundário | 36,9 % das matrículas no ensino secundário | 2018 | 8º de 125 |
 | Adaptação | Participação na força de trabalho | 84 % das pessoas com 15 anos ou mais | 2025 | 4º de 125 |
 | Adaptação | Assinaturas de banda larga fixa | 47 por 100 pessoas | 2024 | 4º de 125 |
-| Adaptação | Perdas na transmissão de eletricidade | 5 % da produção | 2024 | 19º de 117 |
+| Adaptação | Perdas na transmissão de eletricidade | 6,3 % da produção | 2025 | 32º de 117 |
 | Adaptação | Emprego informal | 1,1 % do emprego | 2024 | 2º de 102 |
 | Construção | Produto por pessoa ocupada | 158.634,2 dólares PPC constantes de 2021 | 2025 | 4º de 123 |
 

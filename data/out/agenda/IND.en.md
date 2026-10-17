@@ -1,6 +1,6 @@
 # Capability agenda: India
 
-*Generated 2026-10-16*
+*Generated 2026-10-17*
 
 The frame includes 125 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
@@ -9,25 +9,25 @@ The frame includes 125 countries. Each dimension is scored from 0 to 100, with n
 | Dimension | Score | Confidence | Trend |
 | --- | --- | --- | --- |
 | Anticipation | 34.5 | 0.46 (usable) | +8.7 over 10 years using 2 indicators |
-| Agency | 46 | 0.56 (usable) | no trend |
-| Coordination | 82 | 0.41 (thin) | no trend |
-| Trust | 45.3 | 0.5 (usable) | no trend |
+| Agency | 36.6 | 0.44 (thin) | no trend |
+| Coordination | 82.8 | 0.29 (thin) | no trend |
+| Trust | 52.4 | 0.41 (thin) | no trend |
 | Learning | 21.7 | 0.55 (usable) | no trend |
-| Experimentation | 12 | 0.53 (usable) | +3.1 over 10 years using 3 indicators |
+| Experimentation | 16.1 | 0.6 (usable) | +10.9 over 10 years using 3 indicators |
 | Adaptability | 82.4 | 0.46 (usable) | no trend |
-| Building | 62.1 | 0.57 (usable) | +7.9 over 10 years using 3 indicators |
-| Shared Purpose | 63.2 | 0.38 (thin) | -1.4 over 10 years using 2 indicators |
+| Building | 62.2 | 0.57 (usable) | +8 over 10 years using 3 indicators |
+| Shared Purpose | 64.8 | 0.4 (thin) | +1.9 over 10 years using 2 indicators |
 
 ## What to raise
 
 These are the lowest scores with usable evidence. Thin evidence appears below.
 
-### Experimentation: 12, confidence usable
+### Experimentation: 16.1, confidence usable
 
 How easily can new approaches be attempted, tested, abandoned, and improved?
 
 - Uses 6 observed indicators.
-- Highest usable scores: South Korea 72.6, Switzerland 68.6, United States 50.6.
+- Highest usable scores: South Korea 73.5, Switzerland 68.8, United States 51.3.
 - Related deliveries in other countries: The FCA regulatory sandbox (United Kingdom); Yozma, the venture capital catalyst (Israel); Korean regulatory-sandbox system across eight sectors (South Korea); MAS FinTech Regulatory Sandbox variants (Singapore); British Patient Capital, a public venture-capital catalyst (United Kingdom); ICURe, from university research to spinouts (United Kingdom); Portugal Ventures, a public venture-capital bridge (Portugal); Rede Nacional de Test Beds for company experimentation (Portugal); Zonas Livres Tecnológicas, regulator-supervised experimentation zones (Portugal); Banco Central regulatory sandbox, first cycle (Brazil); Capital Markets Authority regulatory sandbox (Kenya); SEC Nigeria Regulatory Incubation Program (Nigeria); ADGM RegLab, the first fintech sandbox in the region (United Arab Emirates); OJK regulatory sandbox for financial-sector technological innovation (Indonesia); Bank Negara Malaysia Fintech Regulatory Sandbox (Malaysia); Bank of Thailand regulatory sandbox (Thailand); Sandbox financiero (Ley 7/2020), and the fall in applications (Spain); IFWG Regulatory Sandbox (South Africa); Project-based regulatory sandbox (new technology demonstration scheme) (Japan); CFPB Compliance Assistance Sandbox, rescinded in 2022 and withdrawn again in 2025 (United States); CSA Regulatory Sandbox, succeeded by the Financial Innovation Hub (Canada); ASIC enhanced regulatory sandbox (Australia); SINTEG-Verordnung, the energy-transition experimentation clause (Germany); Experimenten Elektriciteitswet 2015-2018, and its erosion (Netherlands); Bac à sable réglementaire in the energy sector (France); Italy's FinTech regulatory sandbox, and its contraction (Italy); Bank of Ghana Regulatory Sandbox (Ghana); AFSA FinTech Lab at the Astana International Financial Centre (Kazakhstan); Banque Centrale de Tunisie regulatory sandbox, first cohort (Tunisia); Sandbox Regulatório do Banco de Moçambique (Mozambique); Regulatory Sandbox Licence of the Economic Development Board (Mauritius); Bank of Uganda regulatory sandbox (Uganda); Regulatory Sandbox Framework for Capital Markets, first cohort (Zambia); Securities and Exchange Commission of Zimbabwe regulatory sandbox (Zimbabwe); FMA Regulatory Sandbox (Austria); Regulatorisk sandkasse for AI (Datatilsynet and Digitaliseringsstyrelsen) (Denmark); Datatilsynet's regulatory sandbox for privacy-friendly innovation (Norway); Bank of Lithuania regulatory sandbox, with one test in seven years (Lithuania); Narodna banka Slovenska regulatory sandbox (Slovakia); Sandbox for AI and blockchain products, Ministry of Digital Transformation and Ukrainian Startup Fund (Ukraine); Bank of Russia regulatory sandbox (regulativnaya pesochnitsa) (Russia); JoRegBox, the Central Bank of Jordan regulatory sandbox (Jordan); Special regulatory regimes (spetsialnye regulyativnye rezhimy) of the National Bank of the Kyrgyz Republic (Kyrgyzstan); SECP Regulatory Sandbox, four cohorts and an open window (Pakistan); Bank of Jamaica FinTech Regulatory Sandbox (Jamaica); Financial Regulatory Commission sandbox regulatory environment (Mongolia); NAMFISA Regulatory Sandbox, microlending cohort (Namibia); Central Bank of Azerbaijan regulatory sandbox (Azerbaijan); FRA Sandbox of the Financial Regulatory Authority (Egypt); Mohit-e azmoon-e tanzimgari (regulatory sandbox) of the Central Bank of the Islamic Republic of Iran (Iran); Regulatory sandbox (special legal regime) in the capital market of the National Agency of Perspective Projects (Uzbekistan); BRUGEL derogation framework for innovative energy projects (projets innovants) (Belgium); FMA regulatory sandbox pilot (New Zealand); Regulatory Laboratory (regulatory sandbox) of the National Bank of Georgia (Georgia); Energy Sandbox (spatii de testare inovativa in domeniul energiei) (Moldova).
 - Missing indicators: Venture deals, Firms through regulatory sandboxes, University spinouts.
 - Rejected datasets: Business share of R&D.
@@ -50,30 +50,19 @@ How capable is the country of identifying and preparing for emerging change?
 - Related deliveries in other countries: Embrapa, a fifty-year bet on tropical agriculture (Brazil); The Delta Programme and its fund (Netherlands); Lei de Informática, a sectoral industrial policy (Brazil); CGEE, the strategic studies center (Brazil); Centre for Strategic Futures, foresight inside government (Singapore); Legally binding carbon budgets (United Kingdom); Fukushima decommissioning roadmap, a 30–40-year risk-reduction horizon (Japan); National basic-research funding allocation (China); PLANAPP and REPLAN, a centre-of-government foresight network (Portugal); Labour Market Intelligence Programme and forward skills planning (South Africa); Government Report on the Future and the parliamentary Committee for the Future (Finland); Foresight Centre at the Riigikogu (Arenguseire Keskus) (Estonia); Office of Technology Assessment, defunded and closed in 1995 (United States); Rządowe Centrum Studiów Strategicznych, liquidated in 2006 (Poland); Office of Technology Assessment at the German Bundestag (TAB) (Germany); National Assembly Futures Institute (South Korea); Federal Chancellery situation and environment analysis (Perspektivstab) (Switzerland); Senate foresight delegation (Délégation sénatoriale à la prospective) (France); Senate Commission on Future Challenges, Science, Technology and Innovation (Chile); Policy Horizons Canada, the federal foresight unit, and its 2024 disruption scan (Canada); Framtidskommissionen, the Prime Minister's time-limited future commission (Sweden); National Planning Commission foresight work for Malawi 2063 (Malawi); Bureau National de la Prospective et de la Veille Stratégique and the national prospective studies (Côte d'Ivoire); Teknologiraadet, the Norwegian Board of Technology (Norway); Teknologiraadet, the Danish Board of Technology, abolished in 2012 (Denmark); Bureau federal du Plan (Belgium); Special Secretariat of Foresight (now of Long-term Planning) (Greece); STRATA foresight for the Lietuva 2050 state progress strategy (Lithuania); Institut Royal des Etudes Stratégiques (IRES) (Morocco); Long-term Insights Briefings under the Public Service Act 2020 (New Zealand).
 - Missing indicators: Government foresight capacity, Long-horizon research commitments.
 
-### Trust: 45.3, confidence usable
-
-How much cooperation is possible beyond immediate personal networks?
-
-- Uses 5 observed indicators.
-- Highest usable scores: Denmark 94.1, Norway 91.3, Finland 89.7.
-- Related deliveries in other countries: Cadastro Único, the unified social registry (Brazil); Portal da Transparência, the federal open-books system (Brazil); MyData, citizen-directed data portability (South Korea); Singapore Courts' case-clearance discipline (Singapore); Civil-court clearance and the CEPEJ monitoring series (Portugal).
-- Missing indicators: Trust in public institutions, Court case clearance rate.
-- Rejected datasets: Rule of law, Control of corruption, Intentional homicide rate.
-
-### Agency: 46, confidence usable
-
-How able are individuals and organizations to turn an intention into action?
-
-- Uses 4 observed indicators.
-- Highest usable scores: New Zealand 92.3, Australia 89.2, Estonia 84.3.
-- Related deliveries in other countries: Singapore's national ICT-skills measurement and baseline (Singapore); e.escola, a national laptop-and-broadband push (Portugal); Puntos México Conectado, national digital learning centres (Mexico).
-- Missing indicators: Adults doing digital tasks.
-
 ## What to measure first
 
 The evidence is too thin to manage these dimensions confidently.
 
-### Shared Purpose: confidence 0.38, thin
+### Coordination: confidence 0.29, thin
+
+How effectively can independent actors organize around shared objectives?
+
+- Uses 2 observed indicators.
+- Missing indicators: University-industry collaboration, Public-private collaboration.
+- Rejected datasets: Government effectiveness, Regulatory quality, Logistics performance, Border compliance time to export.
+
+### Shared Purpose: confidence 0.4, thin
 
 To what extent can people imagine themselves as participants in a common project?
 
@@ -81,20 +70,28 @@ To what extent can people imagine themselves as participants in a common project
 - Missing indicators: Sense of national belonging, Volunteering, Political polarisation.
 - Rejected datasets: Voice and accountability.
 
-### Coordination: confidence 0.41, thin
+### Trust: confidence 0.41, thin
 
-How effectively can independent actors organize around shared objectives?
+How much cooperation is possible beyond immediate personal networks?
+
+- Uses 4 observed indicators.
+- Missing indicators: Trust in public institutions, Court case clearance rate.
+- Rejected datasets: Rule of law, Control of corruption, Time to enforce a contract, Intentional homicide rate.
+
+### Agency: confidence 0.44, thin
+
+How able are individuals and organizations to turn an intention into action?
 
 - Uses 3 observed indicators.
-- Missing indicators: University-industry collaboration, Public-private collaboration.
-- Rejected datasets: Government effectiveness, Regulatory quality, Logistics performance.
+- Missing indicators: Adults doing digital tasks.
+- Rejected datasets: Time to start a business.
 
 ## What to keep watching
 
 These dimensions score at least 50 with usable evidence.
 
 - Adaptability: 82.4, confidence usable
-- Building: 62.1, confidence usable
+- Building: 62.2, confidence usable
 
 ## What India has to work with
 
@@ -113,7 +110,7 @@ Conditions describe what a country has to work with: infrastructure, access, mon
 | Learning | Vocational share of secondary | 1.3 % of secondary | 2019 | 113 of 125 |
 | Adaptability | Labour force participation | 59.1 % aged 15+ | 2025 | 107 of 125 |
 | Adaptability | Fixed broadband subscriptions | 3.2 per 100 people | 2024 | 93 of 125 |
-| Adaptability | Electricity transmission losses | 14.2 % of output | 2023 | 86 of 117 |
+| Adaptability | Electricity transmission losses | 14.5 % of output | 2024 | 86 of 117 |
 | Adaptability | Informal employment | 87.2 % of employment | 2025 | 82 of 102 |
 | Building | Output per worker | 24,842.1 constant 2021 PPP $ | 2025 | 85 of 123 |
 

@@ -1,6 +1,6 @@
 # Capability agenda: Vietnam
 
-*Generated 2026-10-16*
+*Generated 2026-10-17*
 
 The frame includes 125 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
@@ -9,14 +9,14 @@ The frame includes 125 countries. Each dimension is scored from 0 to 100, with n
 | Dimension | Score | Confidence | Trend |
 | --- | --- | --- | --- |
 | Anticipation | 27.7 | 0.46 (usable) | +13.6 over 10 years using 2 indicators |
-| Agency | 61.6 | 0.56 (usable) | no trend |
-| Coordination | 80.2 | 0.4 (thin) | no trend |
-| Trust | 42.9 | 0.49 (usable) | no trend |
+| Agency | 63.5 | 0.63 (usable) | no trend |
+| Coordination | 81.4 | 0.47 (usable) | no trend |
+| Trust | 38.8 | 0.54 (usable) | no trend |
 | Learning | 43.6 | 0.54 (usable) | no trend |
-| Experimentation | 13.3 | 0.33 (thin) | +1.7 over 10 years using 3 indicators |
+| Experimentation | 15.2 | 0.41 (thin) | +3.1 over 10 years using 3 indicators |
 | Adaptability | 88.1 | 0.62 (usable) | no trend |
-| Building | 75.8 | 0.55 (usable) | +16 over 10 years using 3 indicators |
-| Shared Purpose | 44.3 | 0.25 (thin) | no trend |
+| Building | 76 | 0.55 (usable) | +16 over 10 years using 3 indicators |
+| Shared Purpose | 43.6 | 0.25 (thin) | no trend |
 
 ## What to raise
 
@@ -31,15 +31,15 @@ How capable is the country of identifying and preparing for emerging change?
 - Related deliveries in other countries: Embrapa, a fifty-year bet on tropical agriculture (Brazil); The Delta Programme and its fund (Netherlands); Lei de Informática, a sectoral industrial policy (Brazil); CGEE, the strategic studies center (Brazil); Centre for Strategic Futures, foresight inside government (Singapore); Legally binding carbon budgets (United Kingdom); Fukushima decommissioning roadmap, a 30–40-year risk-reduction horizon (Japan); National basic-research funding allocation (China); PLANAPP and REPLAN, a centre-of-government foresight network (Portugal); Labour Market Intelligence Programme and forward skills planning (South Africa); Government Report on the Future and the parliamentary Committee for the Future (Finland); Foresight Centre at the Riigikogu (Arenguseire Keskus) (Estonia); Office of Technology Assessment, defunded and closed in 1995 (United States); Rządowe Centrum Studiów Strategicznych, liquidated in 2006 (Poland); Office of Technology Assessment at the German Bundestag (TAB) (Germany); National Assembly Futures Institute (South Korea); Federal Chancellery situation and environment analysis (Perspektivstab) (Switzerland); Senate foresight delegation (Délégation sénatoriale à la prospective) (France); Senate Commission on Future Challenges, Science, Technology and Innovation (Chile); Policy Horizons Canada, the federal foresight unit, and its 2024 disruption scan (Canada); Framtidskommissionen, the Prime Minister's time-limited future commission (Sweden); National Planning Commission foresight work for Malawi 2063 (Malawi); Bureau National de la Prospective et de la Veille Stratégique and the national prospective studies (Côte d'Ivoire); Teknologiraadet, the Norwegian Board of Technology (Norway); Teknologiraadet, the Danish Board of Technology, abolished in 2012 (Denmark); Bureau federal du Plan (Belgium); Special Secretariat of Foresight (now of Long-term Planning) (Greece); STRATA foresight for the Lietuva 2050 state progress strategy (Lithuania); Institut Royal des Etudes Stratégiques (IRES) (Morocco); Long-term Insights Briefings under the Public Service Act 2020 (New Zealand).
 - Missing indicators: Government foresight capacity, Long-horizon research commitments.
 
-### Trust: 42.9, confidence usable
+### Trust: 38.8, confidence usable
 
 How much cooperation is possible beyond immediate personal networks?
 
 - Uses 5 observed indicators.
-- Highest usable scores: Denmark 94.1, Norway 91.3, Finland 89.7.
+- Highest usable scores: Sweden 90.3, New Zealand 83.2, Estonia 75.7.
 - Related deliveries in other countries: Cadastro Único, the unified social registry (Brazil); Portal da Transparência, the federal open-books system (Brazil); MyData, citizen-directed data portability (South Korea); Singapore Courts' case-clearance discipline (Singapore); Civil-court clearance and the CEPEJ monitoring series (Portugal).
 - Missing indicators: Trust in public institutions, Court case clearance rate.
-- Rejected datasets: Rule of law, Control of corruption, Intentional homicide rate.
+- Rejected datasets: Rule of law, Control of corruption, Time to enforce a contract, Intentional homicide rate.
 
 ### Learning: 43.6, confidence usable
 
@@ -62,7 +62,7 @@ To what extent can people imagine themselves as participants in a common project
 - Missing indicators: Sense of national belonging, Volunteering, Political polarisation.
 - Rejected datasets: Voice and accountability.
 
-### Experimentation: confidence 0.33, thin
+### Experimentation: confidence 0.41, thin
 
 How easily can new approaches be attempted, tested, abandoned, and improved?
 
@@ -70,21 +70,14 @@ How easily can new approaches be attempted, tested, abandoned, and improved?
 - Missing indicators: Venture deals, Firms through regulatory sandboxes, University spinouts.
 - Rejected datasets: Business share of R&D.
 
-### Coordination: confidence 0.4, thin
-
-How effectively can independent actors organize around shared objectives?
-
-- Uses 3 observed indicators.
-- Missing indicators: University-industry collaboration, Public-private collaboration.
-- Rejected datasets: Government effectiveness, Regulatory quality, Logistics performance.
-
 ## What to keep watching
 
 These dimensions score at least 50 with usable evidence.
 
 - Adaptability: 88.1, confidence usable
-- Building: 75.8, confidence usable
-- Agency: 61.6, confidence usable
+- Coordination: 81.4, confidence usable
+- Building: 76, confidence usable
+- Agency: 63.5, confidence usable
 
 ## What Vietnam has to work with
 
@@ -103,7 +96,7 @@ Conditions describe what a country has to work with: infrastructure, access, mon
 | Learning | Vocational share of secondary | 5.8 % of secondary | 1990 | 88 of 125 |
 | Adaptability | Labour force participation | 78.4 % aged 15+ | 2025 | 24 of 125 |
 | Adaptability | Fixed broadband subscriptions | 23.7 per 100 people | 2024 | 54 of 125 |
-| Adaptability | Electricity transmission losses | 6.6 % of output | 2023 | 34 of 117 |
+| Adaptability | Electricity transmission losses | 6.7 % of output | 2024 | 35 of 117 |
 | Adaptability | Informal employment | 67 % of employment | 2024 | 62 of 102 |
 | Building | Output per worker | 27,957.3 constant 2021 PPP $ | 2025 | 83 of 123 |
 

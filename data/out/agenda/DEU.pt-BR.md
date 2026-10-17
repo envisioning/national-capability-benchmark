@@ -1,6 +1,6 @@
 # Agenda de capacidades: Alemanha
 
-*Gerada em 2026-10-16*
+*Gerada em 2026-10-17*
 
 A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, sem classificação geral, e cada pontuação traz ao lado a solidez da evidência. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma pontuação.
 
@@ -9,18 +9,34 @@ A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 | Dimensão | Pontuação | Solidez | Tendência |
 | --- | --- | --- | --- |
 | Antecipação | 71,4 | 0,46 (utilizável) | +4,3 em 10 anos, com base em 2 indicadores |
-| Agência | 51,5 | 0,41 (fraca) | sem tendência comparável |
-| Coordenação | 92,8 | 0,39 (fraca) | sem tendência comparável |
-| Confiança | 87,5 | 0,3 (fraca) | sem tendência comparável |
+| Agência | 32,9 | 0,3 (fraca) | sem tendência comparável |
+| Coordenação | 96 | 0,27 (fraca) | sem tendência comparável |
+| Confiança | 92,1 | 0,21 (muito fraca) | sem tendência comparável |
 | Aprendizagem | 66,2 | 0,55 (utilizável) | sem tendência comparável |
-| Experimentação | 70,7 | 0,33 (fraca) | +3,5 em 10 anos, com base em 3 indicadores |
+| Experimentação | 70,8 | 0,41 (fraca) | +1,1 em 10 anos, com base em 3 indicadores |
 | Adaptação | 74,3 | 0,62 (utilizável) | sem tendência comparável |
-| Construção | 68,8 | 0,57 (utilizável) | -3 em 10 anos, com base em 3 indicadores |
-| Propósito compartilhado | 50,7 | 0,29 (fraca) | -4,8 em 10 anos, com base em 2 indicadores |
+| Construção | 68,9 | 0,57 (utilizável) | -3 em 10 anos, com base em 3 indicadores |
+| Propósito compartilhado | 49,9 | 0,29 (fraca) | -4,7 em 10 anos, com base em 2 indicadores |
 
 ## Dimensões com evidência fraca
 
 A solidez da evidência está abaixo da faixa utilizável, de modo que a pontuação diz pouco sobre o país enquanto faltarem dados.
+
+### Confiança: solidez 0,21, muito fraca
+
+Quanta cooperação é possível para além do círculo pessoal mais próximo?
+
+- A pontuação se apoia em 2 indicadores observados.
+- Lacunas declaradas: Confiança nas instituições públicas, Taxa de resolução de processos judiciais.
+- Bases rejeitadas: Estado de direito, Controle da corrupção, Tempo para executar um contrato, Taxa de homicídios dolosos.
+
+### Coordenação: solidez 0,27, fraca
+
+Com que eficácia atores independentes conseguem se organizar em torno de objetivos comuns?
+
+- A pontuação se apoia em 2 indicadores observados.
+- Lacunas declaradas: Colaboração universidade-empresa, Colaboração público-privada.
+- Bases rejeitadas: Efetividade governamental, Qualidade regulatória, Desempenho logístico, Tempo de exportação na fronteira.
 
 ### Propósito compartilhado: solidez 0,29, fraca
 
@@ -30,15 +46,15 @@ Até que ponto as pessoas conseguem se ver como participantes de um projeto comu
 - Lacunas declaradas: Sentimento de pertencimento nacional, Voluntariado, Polarização política.
 - Bases rejeitadas: Voz e prestação de contas.
 
-### Confiança: solidez 0,3, fraca
+### Agência: solidez 0,3, fraca
 
-Quanta cooperação é possível para além do círculo pessoal mais próximo?
+Em que medida pessoas e organizações conseguem transformar intenção em ação?
 
-- A pontuação se apoia em 3 indicadores observados.
-- Lacunas declaradas: Confiança nas instituições públicas, Taxa de resolução de processos judiciais.
-- Bases rejeitadas: Estado de direito, Controle da corrupção, Taxa de homicídios dolosos.
+- A pontuação se apoia em 2 indicadores observados.
+- Lacunas declaradas: Adultos que realizam tarefas digitais.
+- Bases rejeitadas: Tempo para abrir uma empresa.
 
-### Experimentação: solidez 0,33, fraca
+### Experimentação: solidez 0,41, fraca
 
 Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e melhoradas?
 
@@ -46,28 +62,13 @@ Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e 
 - Lacunas declaradas: Operações de capital de risco, Empresas em sandboxes regulatórios, Empresas derivadas de pesquisa universitária.
 - Bases rejeitadas: Parcela empresarial do P&D.
 
-### Coordenação: solidez 0,39, fraca
-
-Com que eficácia atores independentes conseguem se organizar em torno de objetivos comuns?
-
-- A pontuação se apoia em 3 indicadores observados.
-- Lacunas declaradas: Colaboração universidade-empresa, Colaboração público-privada.
-- Bases rejeitadas: Efetividade governamental, Qualidade regulatória, Desempenho logístico.
-
-### Agência: solidez 0,41, fraca
-
-Em que medida pessoas e organizações conseguem transformar intenção em ação?
-
-- A pontuação se apoia em 3 indicadores observados.
-- Lacunas declaradas: Adultos que realizam tarefas digitais.
-
 ## Dimensões com as pontuações mais altas
 
 Estas dimensões têm pontuação de pelo menos 50, com evidência utilizável.
 
 - Adaptação: 74,3, solidez utilizável
 - Antecipação: 71,4, solidez utilizável
-- Construção: 68,8, solidez utilizável
+- Construção: 68,9, solidez utilizável
 - Aprendizagem: 66,2, solidez utilizável
 
 ## Com o que a Alemanha conta
@@ -81,13 +82,13 @@ As condições descrevem com o que um país conta: infraestrutura, acesso, dinhe
 | Antecipação | Servidores de internet seguros | 152.113,8 por milhão de pessoas | 2024 | 8º de 125 |
 | Agência | Pessoas que usam a internet | 93,5 % da população | 2024 | 24º de 125 |
 | Agência | Adultos com conta financeira | 98,3 % das pessoas com 15 anos ou mais | 2024 | 16º de 122 |
-| Agência | Crédito ao setor privado | 77,3 % do PIB | 2023 | 28º de 124 |
+| Agência | Crédito ao setor privado | 77,3 % do PIB | 2023 | 27º de 124 |
 | Aprendizagem | Matrícula no ensino superior | 76,7 % (taxa bruta) | 2024 | 32º de 124 |
 | Aprendizagem | Dispêndio público em educação | 5,2 % do PIB | 2022 | 32º de 125 |
 | Aprendizagem | Educação profissional no ensino secundário | 19,2 % das matrículas no ensino secundário | 2018 | 39º de 125 |
 | Adaptação | Participação na força de trabalho | 80 % das pessoas com 15 anos ou mais | 2025 | 16º de 125 |
 | Adaptação | Assinaturas de banda larga fixa | 45,6 por 100 pessoas | 2024 | 5º de 125 |
-| Adaptação | Perdas na transmissão de eletricidade | 5,1 % da produção | 2024 | 21º de 117 |
+| Adaptação | Perdas na transmissão de eletricidade | 5,3 % da produção | 2025 | 20º de 117 |
 | Adaptação | Emprego informal | 3,9 % do emprego | 2022 | 17º de 102 |
 | Construção | Produto por pessoa ocupada | 125.086,3 dólares PPC constantes de 2021 | 2025 | 13º de 123 |
 

@@ -1,6 +1,6 @@
 # Capability agenda: Guinea-Bissau
 
-*Generated 2026-10-16*
+*Generated 2026-10-17*
 
 The frame includes 125 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
@@ -9,14 +9,14 @@ The frame includes 125 countries. Each dimension is scored from 0 to 100, with n
 | Dimension | Score | Confidence | Trend |
 | --- | --- | --- | --- |
 | Anticipation | 8 | 0.46 (usable) | +7.9 over 10 years using 2 indicators, with 1 at the frame edge |
-| Agency | 51.4 | 0.41 (thin) | no trend |
-| Coordination | 56.3 | 0.32 (thin) | no trend |
-| Trust | 27.9 | 0.3 (thin) | no trend |
+| Agency | 32.7 | 0.3 (thin) | no trend |
+| Coordination | 56.5 | 0.21 (very thin) | no trend |
+| Trust | 41.8 | 0.21 (very thin) | no trend |
 | Learning | 41.4 | 0.39 (thin) | no trend |
-| Experimentation | 0.7 | 0.12 (very thin) | no trend |
+| Experimentation | 0.8 | 0.12 (very thin) | no trend |
 | Adaptability | 42 | 0.59 (usable) | no trend |
 | Building | 7.9 | 0.45 (thin) | 0 over 10 years using 2 indicators |
-| Shared Purpose | 47.4 | 0.28 (thin) | no trend |
+| Shared Purpose | 46.6 | 0.28 (thin) | no trend |
 
 ## What to raise
 
@@ -52,6 +52,22 @@ How easily can new approaches be attempted, tested, abandoned, and improved?
 - Missing indicators: Venture deals, Firms through regulatory sandboxes, University spinouts.
 - Rejected datasets: Business share of R&D.
 
+### Coordination: confidence 0.21, very thin
+
+How effectively can independent actors organize around shared objectives?
+
+- Uses 2 observed indicators.
+- Missing indicators: University-industry collaboration, Public-private collaboration.
+- Rejected datasets: Government effectiveness, Regulatory quality, Logistics performance, Border compliance time to export.
+
+### Trust: confidence 0.21, very thin
+
+How much cooperation is possible beyond immediate personal networks?
+
+- Uses 2 observed indicators.
+- Missing indicators: Trust in public institutions, Court case clearance rate.
+- Rejected datasets: Rule of law, Control of corruption, Time to enforce a contract, Intentional homicide rate.
+
 ### Shared Purpose: confidence 0.28, thin
 
 To what extent can people imagine themselves as participants in a common project?
@@ -60,21 +76,13 @@ To what extent can people imagine themselves as participants in a common project
 - Missing indicators: Sense of national belonging, Volunteering, Political polarisation.
 - Rejected datasets: Voice and accountability.
 
-### Trust: confidence 0.3, thin
+### Agency: confidence 0.3, thin
 
-How much cooperation is possible beyond immediate personal networks?
+How able are individuals and organizations to turn an intention into action?
 
-- Uses 3 observed indicators.
-- Missing indicators: Trust in public institutions, Court case clearance rate.
-- Rejected datasets: Rule of law, Control of corruption, Intentional homicide rate.
-
-### Coordination: confidence 0.32, thin
-
-How effectively can independent actors organize around shared objectives?
-
-- Uses 3 observed indicators.
-- Missing indicators: University-industry collaboration, Public-private collaboration.
-- Rejected datasets: Government effectiveness, Regulatory quality, Logistics performance.
+- Uses 2 observed indicators.
+- Missing indicators: Adults doing digital tasks.
+- Rejected datasets: Time to start a business.
 
 ### Learning: confidence 0.39, thin
 
@@ -82,13 +90,6 @@ How effectively does the country acquire, distribute, and update knowledge?
 
 - Uses 2 observed indicators.
 - Missing indicators: Adult learning participation.
-
-### Agency: confidence 0.41, thin
-
-How able are individuals and organizations to turn an intention into action?
-
-- Uses 3 observed indicators.
-- Missing indicators: Adults doing digital tasks.
 
 ### Building: confidence 0.45, thin
 
@@ -106,7 +107,7 @@ Conditions describe what a country has to work with: infrastructure, access, mon
 | --- | --- | --- | --- | --- |
 | Anticipation | Secure internet servers | 10.9 per million people | 2024 | 121 of 125 |
 | Agency | Individuals using the internet | 29.8 % of population | 2024 | 114 of 125 |
-| Agency | Credit to the private sector | 10 % of GDP | 2025 | 116 of 124 |
+| Agency | Credit to the private sector | 10 % of GDP | 2025 | 117 of 124 |
 | Learning | Tertiary enrolment | 2.6 % gross | 2006 | 122 of 124 |
 | Learning | Public education expenditure | 2 % of GDP | 2013 | 114 of 125 |
 | Learning | Vocational share of secondary | 1.8 % of secondary | 2006 | 109 of 125 |
