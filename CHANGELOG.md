@@ -9,6 +9,18 @@ The entries before App 1.0.0 are retrospective, high-level summaries
 reconstructed from the repository history. They document explicit version bumps
 and may skip versions that were never committed.
 
+## App 1.31.9 — 2026-10-17
+
+- **17 new cases stand beside Brazil's flagship deliveries.** They are
+  national programmes of the same kind as Pix, SUS, GOV.BR, the electronic
+  ballot box and Luz para Todos, built in other countries. Eight of them
+  document a loss: Kenya's Huduma Namba identity cards, the UK's GOV.UK
+  Verify, Germany's ELENA reporting system, Bangladesh's solar home systems,
+  South Africa's grid connections, the Dutch voting computers, Wallonia's
+  voting machines and Ecuador's central bank mobile money. Each one carries
+  a figure from an audit office, a central bank, a ministry, a court or a
+  lender, checked at its source.
+
 ## App 1.31.8 — 2026-10-17
 
 - **Two evidence records read in Portuguese on the Mozambique and

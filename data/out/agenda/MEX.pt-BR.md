@@ -149,6 +149,7 @@ Entregas documentadas ligadas a indicadores ausentes. Elas não alteram as pontu
 - **FONDEN, the natural disaster fund, and its abolition** (Adaptação). Mexico's federal government ran FONDEN from 1999 as a pre-arranged national fund for post-disaster reconstruction, allocating a record US$833 million to it in 2011 and insuring it with catastrophe bonds, and abrogated the FONDEN trust by the decree of 6 November 2020, moving disaster spending onto ordinary budget lines.
 - **Olmeca refinery at Dos Bocas** (Construção). Pemex built the Olmeca refinery at Dos Bocas, authorized in December 2018 and fully operational from February 2025, under an authorized budget of US$15,963.0 million, 79 percent above the US$8,918.5 million Class IV estimate stated when its board authorized the FEL II phase in July 2020.
 - **INEA adult basic education** (Aprendizagem). Mexico's Instituto Nacional para la Educación de los Adultos certified 651,473 young people and adults as having completed a level of literacy, primary or secondary education in 2024, with 352,600 learners in its services at the close of the year.
+- **CoDi, and its adoption gap** (Construção). Banco de México began operating CoDi on its SPEI interbank rail on 30 September 2019 with no fee to users and a list of obliged participants, yet by 20 September 2026 only 2.87 million accounts had ever made a CoDi payment, and the rail carried 4.35 million payments in all of 2025.
 
 ## Contribua
 

@@ -30,6 +30,11 @@ export const EVIDENCE_ES: Record<string, { title: string; claim: string }> = {
     claim:
       "Argentina puso fin a la hiperinflación al fijar por ley el peso al dólar en abril de 1991, lo que redujo la inflación anual de 4,923 por ciento en 1989 a 3.9 por ciento en 1994, y el régimen se mantuvo hasta su colapso en la crisis de 2001-2002.",
   },
+  "mex-codi": {
+    title: "CoDi y su brecha de adopción",
+    claim:
+      "El Banco de México empezó a operar CoDi sobre su sistema de pagos interbancarios SPEI el 30 de septiembre de 2019, sin costo para los usuarios y con una lista de participantes obligados, pero al 20 de septiembre de 2026 solo 2.87 millones de cuentas habían hecho alguna vez un pago con CoDi, y el sistema procesó 4.35 millones de pagos en todo 2025.",
+  },
   "mex-seguro-popular": {
     title: "Seguro Popular y su eliminación",
     claim:
@@ -139,6 +144,11 @@ export const EVIDENCE_ES: Record<string, { title: string; claim: string }> = {
     title: "Alcance universal del seguro de salud de la CCSS",
     claim:
       "La Caja Costarricense de Seguro Social informó una cobertura del seguro de salud del 92.92% de la población nacional en 2024, con base en encuestas de hogares y registros administrativos para incluir a cotizantes, dependientes, pensionados y hogares asegurados por el Estado.",
+  },
+  "ecu-dinero-electronico": {
+    title: "Dinero Electrónico, el sistema de dinero móvil del banco central, y su cierre",
+    claim:
+      "El Banco Central del Ecuador construyó y operó desde 2014 una plataforma de dinero móvil que abrió 360,916 cuentas, sumó 4,860 establecimientos y movió más de 47 millones de dólares en transacciones hasta agosto de 2017, cuando el gobierno y el sistema financiero acordaron que el banco central dejaría de administrar las cuentas y entregaría el servicio a bancos y cooperativas.",
   },
   "ecu-dollarization": {
     title: "Dolarización, un rediseño monetario de emergencia",

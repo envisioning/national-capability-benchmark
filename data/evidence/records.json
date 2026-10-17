@@ -28848,6 +28848,618 @@
           "Existing generating plant the state could sell into a joint company"
         ]
       }
+    },
+    {
+      "id": "ken-huduma-namba",
+      "indicatorId": "large_project_delivery",
+      "iso3": "KEN",
+      "title": "Huduma Namba national identity register, and its abandonment",
+      "claim": "Kenya's government registered 37,821,092 people for Huduma Namba from 2019, but by 14 October 2021 had printed 10,471,566 cards and seen 8,734,356 collected; the High Court quashed the card rollout that day, the Huduma Bill lapsed with the 12th Parliament in 2022, and the state piloted a separate Maisha Namba identity from November 2023.",
+      "metric": {
+        "name": "People registered for Huduma Namba before the first phase closed, including diaspora",
+        "value": 37821092,
+        "unit": "people",
+        "asOf": "2021-10"
+      },
+      "secondMetric": {
+        "name": "Huduma cards printed and distributed to registration offices",
+        "value": 10471566,
+        "unit": "cards",
+        "asOf": "2021-10-14"
+      },
+      "started": 2019,
+      "status": "dismantled",
+      "source": {
+        "publisher": "Kenya Law, Court of Appeal ruling in Mucheru and 2 others v Katiba Institute and 2 others (Civil Application E373 of 2021)",
+        "url": "https://new.kenyalaw.org/akn/ke/judgment/keca/2022/386/eng@2022-03-04",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-17"
+      },
+      "limits": "Every count here is the government's own figure, sworn in an affidavit by the Interior Principal Secretary and quoted in a court ruling; no audit has published a reconciled number or the project's total cost. Registration is not issuance: fewer than three in ten registrants had a card printed when the court ruled, and the ruling does not say how many cards reached people after that date. No single published instrument ends Huduma Namba by name. The end is read from three facts in Kenya Law rulings: the High Court quashed the November 2020 card rollout in October 2021, the Huduma Bill that would have given the system its own statute lapsed when the 12th Parliament's term ended in August 2022, and the government piloted Maisha Namba as a separate identifier from 1 November 2023. The registration data may live on inside the successor system, so the dismantling is of the programme and its card, not proof that the data were deleted. The cause was legal as much as managerial: the courts held that the state collected biometric data before a data protection framework existed.",
+      "pattern": {
+        "mechanism": "The Ministry of Interior ran a mass biometric registration on fixed deadlines through 2019, before the Data Protection Act was in force and before the statute that would govern the system had passed, then tried to issue a card to the registered population. Courts held the card rollout unlawful for want of a data protection impact assessment, the enabling bill lapsed, and the next administration started a new identifier instead of finishing the card run.",
+        "preconditions": [
+          "A national registration bureau with offices in every county able to enrol tens of millions of people in weeks",
+          "A legal framework for the register and for data protection in force before collection begins, which Kenya lacked in 2019",
+          "Card production capacity sized to the registered population, which reached about a quarter of it by October 2021"
+        ]
+      }
+    },
+    {
+      "id": "gbr-govuk-verify",
+      "indicatorId": "large_project_delivery",
+      "iso3": "GBR",
+      "title": "GOV.UK Verify identity assurance, and its closure",
+      "claim": "The UK Government Digital Service ran GOV.UK Verify as the cross-government online identity service from 2016, accumulating almost 10 million user accounts across up to 27 online services, then wound it down after a late 2018 decision, with closure confirmed for April 2023 and every account deleted.",
+      "metric": {
+        "name": "GOV.UK Verify user accounts accumulated since 2016",
+        "value": 10000000,
+        "unit": "accounts (almost)",
+        "asOf": "2022-09"
+      },
+      "secondMetric": {
+        "name": "Online government services reachable through Verify",
+        "value": 27,
+        "unit": "services (up to)",
+        "asOf": "2022-09"
+      },
+      "started": 2016,
+      "status": "dismantled",
+      "source": {
+        "publisher": "Cabinet Office, GOV.UK Verify Accounting Officer assessment (20 September 2022)",
+        "url": "https://www.gov.uk/government/publications/cabinet-office-accounting-officer-assessments/20-september-2022-govuk-verify-accounting-officer-assessment",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-17"
+      },
+      "limits": "The account figure is cumulative and self-reported by the Cabinet Office in a document written to justify funding the service until it closed; it does not count active users or how many people tried and failed to verify. The National Audit Office found in 2019 that 3.6 million people had signed up by February 2019 against a 25 million target for 2020, and a 48% verification success rate against a projected 90%. The closure ended one build, not the function: the government moved services to One Login, so the case shows a national identity platform abandoned for a successor, not a country left without one. Post Office and Digidentity, the remaining identity providers, deleted the accounts and keep some records for up to seven years.",
+      "pattern": {
+        "mechanism": "The Government Digital Service built identity assurance as a federation of private identity providers that citizens chose between, with departments paying per verification, and made it the default sign-in for central services. When take-up and success rates stayed far below the business case and departments kept their own routes, the Cabinet Office decided in 2018 to stop funding it and later replaced it with a government-run sign-on.",
+        "preconditions": [
+          "Private identity providers willing to verify citizens against credit and document data at a price departments would pay",
+          "Departments obliged to adopt one sign-in, which Verify never secured: several services kept alternative digital routes",
+          "Citizen records that private providers could check remotely, which failed for about half of attempts: the success rate stood at 48% in February 2019"
+        ]
+      }
+    },
+    {
+      "id": "deu-elena",
+      "indicatorId": "large_project_delivery",
+      "iso3": "DEU",
+      "title": "ELENA electronic income certificate procedure, and its repeal",
+      "claim": "Germany's federal government had employers report income data monthly to a central store under the ELENA procedure from 2010, collecting about 700 million data records, then decided in July 2011 to end it and delete the stored data because the qualified electronic signature it needed had not spread.",
+      "metric": {
+        "name": "Data records received by the ELENA central storage office",
+        "value": 700000000,
+        "unit": "records (about)",
+        "asOf": "2011-08"
+      },
+      "secondMetric": {
+        "name": "Federal spending allowed for the central store and registry, per year 2009 to 2013",
+        "value": 11,
+        "unit": "EUR million per year (up to)",
+        "asOf": "2011-08"
+      },
+      "started": 2010,
+      "status": "dismantled",
+      "source": {
+        "publisher": "Deutscher Bundestag, Antwort der Bundesregierung, Drucksache 17/6864 (26 August 2011)",
+        "url": "https://dserver.bundestag.de/btd/17/068/1706864.pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-17"
+      },
+      "limits": "Both figures are read from a PDF of the government's answer to a parliamentary question. The record count measures data collected, not certificates used: ELENA was built to replace paper employer certificates for unemployment, housing and parental benefits, and the count says nothing about whether any benefit office drew on the store. The government said in the same answer that it could not state the procedure's total cost to the federal budget, firms, states and municipalities, so the spending figure is a statutory ceiling, not an outturn. The repeal and the deletion of the stored data were attached to a statistics bill by Bundestag committee recommendation 17/7200 of September 2011. ELENA is a reporting platform rather than a citizen identity, and it enters this family because its failure was the failure of the identity layer: it depended on citizens holding a qualified electronic signature, which they did not acquire.",
+      "pattern": {
+        "mechanism": "The federal economics and labour ministries obliged employers to transmit income data monthly to a central store, so that benefit offices could later retrieve a certificate once the citizen authorised it with a qualified electronic signature. The collection side ran nationally from 2010; the retrieval side waited on a signature the population did not adopt, and the government ended the procedure and ordered the data deleted.",
+        "preconditions": [
+          "A mandatory employer reporting channel into social insurance, which Germany already had",
+          "A citizen-held digital signature or identity in wide use, which Germany lacked in 2011",
+          "Data protection consent for central storage of all employees' income records, which was contested from the start and supervised by the federal data protection commissioner holding the master key"
+        ]
+      }
+    },
+    {
+      "id": "bgd-idcol-shs",
+      "indicatorId": "large_project_delivery",
+      "iso3": "BGD",
+      "title": "IDCOL Solar Home Systems Program, and its collapse",
+      "claim": "Bangladesh's state-owned Infrastructure Development Company Limited (IDCOL) financed the sale of 4,115,484 solar home systems through partner organisations from 2003 to 2018, reaching 16.2 percent of rural households at the 2016 peak, before annual installations fell from 861,172 in 2013 to 3,455 in 2018 as grid extension and free government distribution displaced the programme.",
+      "metric": {
+        "name": "Solar home systems installed under the programme in 2018, the last year in the table",
+        "value": 3455,
+        "unit": "systems per year",
+        "asOf": "2018"
+      },
+      "secondMetric": {
+        "name": "Solar home systems installed in 2013, the peak year",
+        "value": 861172,
+        "unit": "systems per year",
+        "asOf": "2013"
+      },
+      "started": 2003,
+      "status": "dismantled",
+      "source": {
+        "publisher": "World Bank, Living in the Light: The Bangladesh Solar Home Systems Story, 2021, Table 4",
+        "url": "https://documents.worldbank.org/curated/en/153291616567928411/text/Living-in-the-Light-The-Bangladesh-Solar-Home-Systems-Story.txt",
+        "tier": "international_organization",
+        "retrievedAt": "2026-10-17"
+      },
+      "limits": "The installation counts are IDCOL's own programme data, published in a World Bank study about a programme the World Bank financed, so the publisher is not independent of the delivery. The 16.2 percent peak share is the study's estimate, computed on an assumed 12 year system life, not a count of systems still working. The collapse is partly a success elsewhere: the study attributes it to rapid grid expansion from 2015 and to the government's TR/KABITA social safety net programme, which gave systems away from 2014 to 2015, so households that left the programme often gained grid power, and the World Bank series for Bangladesh shows access to electricity rising in the same years. The loss is the programme and its credit model, not household access. The World Bank's 2024 Implementation Completion and Results Report for RERED II (P131263), a separate document, records that the SHS component was discontinued from 2017 to 2018 and that partner organisations' collection efficiency on SHS loans fell from 90 percent in 2013 to 7 percent in 2018. Plain-text file of a PDF.",
+      "pattern": {
+        "mechanism": "IDCOL refinanced partner organisations, microfinance institutions and NGOs, that sold solar home systems to rural households on credit, with donor grants buying down part of the price and an independent standards committee setting equipment performance standards, and the model stopped working when the state reached the same households with the grid and with free systems.",
+        "preconditions": [
+          "A microfinance sector able to sell, collect and service across rural districts",
+          "Concessional donor credit and grants channelled through one state financier",
+          "Households with no near prospect of a grid connection, which ended once the grid arrived"
+        ]
+      }
+    },
+    {
+      "id": "zaf-inep",
+      "indicatorId": "large_project_delivery",
+      "iso3": "ZAF",
+      "title": "Integrated National Electrification Programme, and its slowdown",
+      "claim": "South Africa's energy department funded grid connections for households through Eskom and municipalities under the Integrated National Electrification Programme from 2001/02, reaching 292,714 additional households electrified in 2013/14, and the audited annual figure fell to 145,877 in 2022/23 as Cabinet cut the programme's allocations by R7.8 billion over the 2024 medium term and set the target at 100,000 a year.",
+      "metric": {
+        "name": "Additional households electrified with grid electrification, audited",
+        "value": 145877,
+        "unit": "households per year",
+        "asOf": "2022/23"
+      },
+      "secondMetric": {
+        "name": "Additional households electrified, audited, in the peak year shown in the 2016 Estimates of National Expenditure",
+        "value": 292714,
+        "unit": "households per year",
+        "asOf": "2013/14"
+      },
+      "started": 2001,
+      "status": "eroded",
+      "source": {
+        "publisher": "National Treasury of South Africa, Estimates of National Expenditure 2024, Vote 34: Mineral Resources and Energy, Table 34.1",
+        "url": "https://www.treasury.gov.za/documents/national%20budget/2024/ene/FullENE.pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-17"
+      },
+      "limits": "The peak comes from a different document, the Estimates of National Expenditure 2016, Vote 26: Energy, Table 26.1 (https://www.treasury.gov.za/documents/national%20budget/2016/ene/FullENE.pdf), where the indicator is named additional households electrified per year with non-grid connections in a separate row; the 2024 edition names it grid electrification, so the two rows may not be defined identically. Both are department figures reported through Treasury, not independent counts. The fall is in the pace of new connections: households already connected keep their connection, and a smaller annual number partly reflects a backlog that is harder and costlier to reach in the deep rural areas the 2024 edition names. The R7.8 billion is a cut against earlier baselines over three years, not against the 2013/14 budget. The 2014 Estimates of National Expenditure state a target of 97 percent of households with access by 2025; the World Bank series gives 90.2 percent of the population in 2024, but that series measures people, not households, and comes from surveys and models. Read from PDF tables.",
+      "pattern": {
+        "mechanism": "The national energy department set annual connection targets and transferred conditional grants to Eskom and to municipal distributors, who built the connections, and Cabinet-approved reductions later cut the grants.",
+        "preconditions": [
+          "A national utility and municipal distributors with the crews to connect households at scale",
+          "A conditional grant that ring-fences the money from other municipal spending",
+          "A fiscal position that keeps the grant whole, which did not hold in the 2024 budget"
+        ]
+      }
+    },
+    {
+      "id": "mar-perg",
+      "indicatorId": "large_project_delivery",
+      "iso3": "MAR",
+      "title": "PERG, the global rural electrification programme",
+      "claim": "Morocco's national electricity utility ran the Programme d'Electrification Rurale Global from 1996, with beneficiary households paying part of each connection, and rural access to electricity rose from 20.0 percent in 1995 to 100 percent of the rural population in 2024 in the World Bank series.",
+      "metric": {
+        "name": "Access to electricity, rural",
+        "value": 100,
+        "unit": "% of rural population",
+        "asOf": "2024"
+      },
+      "secondMetric": {
+        "name": "Access to electricity, rural, the year before the programme took effect",
+        "value": 20.0,
+        "unit": "% of rural population",
+        "asOf": "1995"
+      },
+      "started": 1996,
+      "status": "concluded",
+      "source": {
+        "publisher": "World Bank, World Development Indicators, from national and utility sources",
+        "url": "https://api.worldbank.org/v2/country/MAR/indicator/EG.ELC.ACCS.RU.ZS?format=json",
+        "tier": "international_organization",
+        "retrievedAt": "2026-10-17"
+      },
+      "limits": "The series is noisy enough to warn against reading single years: it reports 93 percent for 2006, 65.4 percent for 2007 and 92.9 percent for 2010, which reflects mixed survey and model inputs rather than real swings. A value of 100 is rounded at the series ceiling and does not mean every dispersed household is connected. Access counts a connection and says nothing about reliability, consumption or price, and the programme used solar and decentralised generation as well as grid lines, so some connections are not grid connections. The series does not separate the programme's effect from other change over 30 years, so attributing the whole rise to PERG is a reading, not a measurement. The cost sharing described in the pattern comes from JICA's 2007 ex-post evaluation of a PERG loan, not from this series.",
+      "pattern": {
+        "mechanism": "The national electricity office, ONE (now ONEE), took on about 55 percent of the cost of rural connections and asked beneficiary households for about 25 percent, with local authorities involved in planning, and used grid extension, solar and decentralised generation according to cost.",
+        "preconditions": [
+          "A vertically integrated state utility able to plan and finance village by village",
+          "Households willing and able to pay a share of the connection in instalments",
+          "Concessional lenders willing to finance successive phases"
+        ]
+      }
+    },
+    {
+      "id": "ken-last-mile-connectivity",
+      "indicatorId": "large_project_delivery",
+      "iso3": "KEN",
+      "title": "Last Mile Connectivity Project, and its delays",
+      "claim": "Kenya's Ministry of Energy and Kenya Power connected 683,762 beneficiaries to the grid under phases one to three of the Last Mile Connectivity Project by 30 April 2022, 89 percent of a target revised to 766,173 and two years after the 2020 end date, while the connection loans the project was to recover through prepaid tokens had returned Ksh 1 billion against Ksh 11 billion.",
+      "metric": {
+        "name": "Beneficiaries connected under phases one to three, against a revised target of 766,173 (89 percent)",
+        "value": 683762,
+        "unit": "beneficiaries",
+        "asOf": "2022-04-30"
+      },
+      "secondMetric": {
+        "name": "Connection fees recovered from beneficiaries, against a target of Ksh 11 billion",
+        "value": 1,
+        "unit": "Ksh billion",
+        "asOf": "2022-04-30"
+      },
+      "started": 2015,
+      "status": "operating",
+      "source": {
+        "publisher": "Office of the Auditor-General of Kenya, Performance Audit Report on Implementation of the Last Mile Connectivity Project by the Ministry of Energy and Petroleum and the Kenya Power and Lighting Company, March 2023",
+        "url": "https://libraryir.parliament.go.ke/bitstreams/5d028463-5c9c-4c2e-a31d-ab2a0aae5485/download",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-17"
+      },
+      "limits": "The audit counts connections from Kenya Power's own progress reports, and Kenya Power told the auditor that 723,910 were connected by October 2022 with the project 99 percent complete, a figure the audit reports but did not verify. The target was cut from 941,637 to 766,173 after design because some intended beneficiaries had already connected through the paid route, so 89 percent is against the lower number. Phase four, 181,320 beneficiaries of the original 1,145,957, had not started at the time of the audit because of a court case. A connection is not use: the auditor found meters mounted on boards on empty plots, stolen meters in use elsewhere, metering that took 74 to 509 days, unreliable supply, and that only 11 percent of sampled loan beneficiaries bought tokens above the expected Ksh 416 a month. Most of the money was loans from the World Bank and the African Development Bank, with Ksh 16 billion of government counterpart funding. Read from a scanned PDF with OCR text.",
+      "pattern": {
+        "mechanism": "Kenya Power extended low-voltage lines from existing transformers to households within 600 metres, waived the upfront fee and recovered it as a Stima Loan deducted from prepaid token purchases, so the connection was free at the door and paid for out of later consumption.",
+        "preconditions": [
+          "A transformer network dense enough that short low-voltage extensions reach many households",
+          "Prepaid metering that lets the utility recover a loan from each purchase",
+          "Household consumption high enough to repay, which the audit found most beneficiaries did not reach"
+        ]
+      }
+    },
+    {
+      "id": "nld-stemcomputers",
+      "indicatorId": "large_project_delivery",
+      "iso3": "NLD",
+      "title": "Voting computers, and their withdrawal",
+      "claim": "The Netherlands brought voting machines into its municipalities step by step until electronic voting covered municipalities holding some 98 percent of the electorate by the 2006 Lower House election, on some 8,290 Nedap machines; the state secretary for the interior withdrew the machine approval regulation from 21 October 2007 and the Elections Decree was amended so that no vote could be cast on a machine.",
+      "metric": {
+        "name": "Share of the electorate in municipalities that had introduced electronic voting",
+        "value": 98,
+        "unit": "% of the electorate (approximate, 'some 98 percent')",
+        "asOf": "2006"
+      },
+      "secondMetric": {
+        "name": "Nedap ES3B voting machines sold or leased to Dutch municipalities",
+        "value": 8290,
+        "unit": "machines (approximate, 'some 8290')",
+        "asOf": "2006"
+      },
+      "started": 1989,
+      "status": "dismantled",
+      "source": {
+        "publisher": "OSCE Office for Democratic Institutions and Human Rights, Election Assessment Mission final report, Netherlands parliamentary elections of 22 November 2006",
+        "url": "https://odihr.osce.org/sites/default/files/f/documents/b/1/24322.pdf",
+        "tier": "international_organization",
+        "retrievedAt": "2026-10-17"
+      },
+      "limits": "Both figures are read from a PDF and both are approximate in the source. The 98 percent is the electorate of municipalities that had introduced electronic voting, not the share of votes cast on machines: the same report puts machine voting at some 90 percent of the electorate in 2006, after Amsterdam and some other municipalities returned to paper balloting. The end of machine voting is sourced separately, from the explanatory note to the amended Elections Decree in Staatsblad 2007, 485, which also records that two government commissions found the machines insufficiently transparent and verifiable. The started year is the Elections Decree of 1989 that set the rules for machine voting; neither source gives the year of first use. The record shows a delivery that reached nearly every voter and was then ended by decision; it does not show that any count was wrong. The Netherlands already holds many records in this corpus.",
+      "pattern": {
+        "mechanism": "The interior ministry approved machine models and let each municipality buy or lease its own, so coverage spread without a national procurement. When a citizens' group showed that the machines' radiation could be intercepted to break the secrecy of the ballot, two government commissions found the machines not transparent or verifiable, and the ministry withdrew the approval regime and returned every polling station to paper.",
+        "preconditions": [
+          "Municipal election budgets and a domestic vendor willing to sell or lease machines",
+          "A ministerial approval regime that set no requirements for security, storage or transport of the machines",
+          "A paper ballot still valid in law, so the state could fall back without new legislation"
+        ]
+      }
+    },
+    {
+      "id": "bel-vote-automatise",
+      "indicatorId": "large_project_delivery",
+      "iso3": "BEL",
+      "title": "Automated voting, and its withdrawal from Wallonia",
+      "claim": "Belgium extended electronic voting after a 1991 trial in two cantons until 44 percent of the electorate voted on machines in 1999, when 22 percent of polling stations in Wallonia were equipped; the Walloon Parliament abolished automated voting for French-speaking communes by a decree of 9 March 2017, the Constitutional Court rejected a challenge in September 2018, and the FPS Interior now lists the 252 communes in Wallonia as voting on paper while 152 Flemish, all 19 Brussels and the nine German-speaking communes vote electronically.",
+      "metric": {
+        "name": "Communes in Wallonia voting on paper",
+        "value": 252,
+        "unit": "communes",
+        "asOf": "2024"
+      },
+      "secondMetric": {
+        "name": "Share of polling stations in Wallonia equipped with voting machines at the 1999 peak",
+        "value": 22,
+        "unit": "% of Walloon polling stations",
+        "asOf": "1999"
+      },
+      "started": 1994,
+      "status": "eroded",
+      "source": {
+        "publisher": "FPS Interior (SPF Intérieur), Elections directorate, voting mode by commune",
+        "url": "https://elections.fgov.be/electeurs-comment-voter/vote-papier",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-17"
+      },
+      "limits": "The two numbers are in different units and come from different publishers, so the loss cannot be read as one falling series. The 1999 figures, 44 percent of the national electorate and 22 percent of Walloon polling stations, come from a comparative study by the French Senate (Législation comparée LC 176, 2007), read from a PDF. The FPS Interior pages for paper and electronic voting carry no date and no electorate figures; their commune counts match the municipal map after the 2024 local elections, which is why the record dates them 2024, and the current national share of voters on machines is not published there. The decree and its date are taken from Constitutional Court judgment 115/2018. The loss is regional: Brussels, the German-speaking communes and about half of the Flemish communes still vote electronically, and 49 percent of Flemish polling stations were equipped in 1999, so the national system eroded rather than ended. Wallonia had never equipped more than a minority of its polling stations.",
+      "pattern": {
+        "mechanism": "A 1994 federal law let the government designate volunteer communes for machine voting, so coverage grew where communes asked for it. After regionalisation of local elections, the Walloon Parliament used its competence to abolish the system for French-speaking communes, and the Constitutional Court upheld that choice.",
+        "preconditions": [
+          "A federal law that allowed machine voting commune by commune rather than imposing it nationally",
+          "Regional competence over local elections, which let one region exit without the others",
+          "A paper ballot that every polling station could still run"
+        ]
+      }
+    },
+    {
+      "id": "ken-nhif",
+      "indicatorId": "large_project_delivery",
+      "iso3": "KEN",
+      "title": "National Hospital Insurance Fund, and its repeal",
+      "claim": "Kenya's National Hospital Insurance Fund grew to 16,859,910 principal members and 32.3 million people with dependants in 2023/24, and Kenya then replaced it with the Social Health Authority, whose Social Health Insurance Fund paid out 159 percent of the premiums it received in 2024/25.",
+      "metric": {
+        "name": "NHIF principal members in its last reported year",
+        "value": 16859910,
+        "unit": "people",
+        "asOf": "2023/24"
+      },
+      "secondMetric": {
+        "name": "Social Health Insurance Fund payout ratio after the replacement",
+        "value": 159,
+        "unit": "% of premiums received",
+        "asOf": "2024/25"
+      },
+      "started": 1998,
+      "status": "concluded",
+      "source": {
+        "publisher": "Kenya National Bureau of Statistics, Economic Survey 2026, chapter 16 data tables (tables 16.3 to 16.5, compiled from NHIF and the Social Health Authority)",
+        "url": "https://www.knbs.or.ke/wp-content/uploads/2026/10/Chapter-16-Health-and-Vital-Statistics.xlsx",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-17"
+      },
+      "limits": "The status records the end of an institution, not a loss of registration: the same workbook shows the Social Health Authority with 20,997,620 registered members in 2024/25, more than NHIF's last principal-member count, although the two counts are defined differently and are not comparable. The 2023/24 NHIF figure is marked provisional. Both series are administrative counts supplied by the fund and its successor, which KNBS publishes but does not audit, and a registered member is not a person who received care. The repeal date comes from the Kenya Law record of the NHIF Act, not from this workbook. The 159 percent payout ratio is one year of a new scheme and may reflect a backlog carried over from NHIF.",
+      "pattern": {
+        "mechanism": "Parliament repealed the NHIF Act in 2023 and the government moved its members into three new funds run by the Social Health Authority, so a fund that had grown mainly through informal-sector micro-insurance and sponsored members ended by decision rather than by collapse.",
+        "preconditions": [
+          "A statutory fund whose existence rested on one Act that a single parliamentary majority could repeal",
+          "A successor design that needed new registration of the whole membership",
+          "Premium income that did not cover the claims the new benefit package created"
+        ]
+      }
+    },
+    {
+      "id": "usa-aca-marketplaces",
+      "indicatorId": "large_project_delivery",
+      "iso3": "USA",
+      "title": "Affordable Care Act marketplaces, and their 2026 contraction",
+      "claim": "The United States' health insurance exchanges enrolled 23.1 million people in the 2026 open enrollment period, the first after the enhanced premium tax credits expired at the end of 2025, about 1.2 million fewer than in 2025.",
+      "metric": {
+        "name": "Exchange plan selections, 2026 open enrollment period",
+        "value": 23.1,
+        "unit": "million people",
+        "asOf": "2026"
+      },
+      "secondMetric": {
+        "name": "Fewer plan selections than in the 2025 open enrollment period",
+        "value": 1.2,
+        "unit": "million people",
+        "asOf": "2026"
+      },
+      "started": 2014,
+      "status": "operating",
+      "source": {
+        "publisher": "Centers for Medicare and Medicaid Services, Health Insurance Exchanges 2026 Open Enrollment Report",
+        "url": "https://www.cms.gov/files/document/health-insurance-exchanges-2026-open-enrollment-report.pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-17"
+      },
+      "limits": "The figures are read from a PDF and are plan selections, not effectuated coverage: people who select a plan and never pay a premium are counted. CMS reports on its own programme. Part of the 5 percent fall is not a loss of wanted coverage: CMS ended tax-credit payments or coverage for nearly 1.5 million people it found ineligible or enrolled without their authorization. The 2026 total is still 1.7 million above 2024, so the 2025 peak was itself lifted by temporary subsidies. Illinois moved to its own exchange in 2026, which shifts the platform split but not the national total. The exchanges cover the individual market only and are not a universal system.",
+      "pattern": {
+        "mechanism": "Congress widened the exchange tax credits in 2021 and extended them in 2022 with an end date. When the extension lapsed at the end of 2025 and CMS removed improper enrolments, plan selections fell, most among automatic re-enrollees and rural consumers.",
+        "preconditions": [
+          "Subsidies written with a sunset date that needs a new vote to continue",
+          "Enrolment that depends on the size of a means-tested credit",
+          "No universal public option beneath the marketplace to catch those who leave"
+        ]
+      }
+    },
+    {
+      "id": "gha-nhis",
+      "indicatorId": "large_project_delivery",
+      "iso3": "GHA",
+      "title": "National Health Insurance Scheme",
+      "claim": "Ghana's National Health Insurance Authority, set up under the 2003 National Health Insurance Act, had 18.47 million active members at the end of 2024, 56.26 percent of the population, up from 16.31 million in 2020.",
+      "metric": {
+        "name": "NHIS active membership",
+        "value": 18470000,
+        "unit": "people",
+        "asOf": "2024"
+      },
+      "secondMetric": {
+        "name": "NHIS active membership five years earlier",
+        "value": 16310000,
+        "unit": "people",
+        "asOf": "2020"
+      },
+      "started": 2003,
+      "status": "operating",
+      "source": {
+        "publisher": "National Health Insurance Authority of Ghana, 2024 Annual Report",
+        "url": "https://www.nhis.gov.gh/files/2024-Annual-Report.pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-17"
+      },
+      "limits": "The figures are read from a PDF annual report in which the authority reports on itself. After two decades the scheme covers just over half of the population: 44 percent of residents hold no active membership. Active membership counts people with a current card, not care received. Children under 18 and indigents make up 54.7 percent of active members, so the count says little about the contributory base. The same report records ongoing work to link membership records to the Ghana Card, which means duplicate or stale records may still be in the count.",
+      "pattern": {
+        "mechanism": "Parliament created a national insurer financed mainly by earmarked levies and a share of social-security contributions, and the authority enrols children and indigents alongside informal-sector adults.",
+        "preconditions": [
+          "An earmarked tax that funds the scheme without depending on premiums",
+          "A national identity system able to deduplicate members",
+          "A credentialed network of public and private providers paid through claims"
+        ]
+      }
+    },
+    {
+      "id": "rwa-cbhi",
+      "indicatorId": "large_project_delivery",
+      "iso3": "RWA",
+      "title": "Community-based health insurance (Mutuelles de sante)",
+      "claim": "Rwanda's community-based health insurance covered 82.2 percent of women aged 15 to 49 in the 2025 Demographic and Health Survey, up from 77.2 percent in 2019-20.",
+      "metric": {
+        "name": "Women 15-49 covered by community-based health insurance",
+        "value": 82.2,
+        "unit": "% of women 15-49",
+        "asOf": "2025"
+      },
+      "secondMetric": {
+        "name": "Women 15-49 covered by community-based health insurance, previous survey",
+        "value": 77.2,
+        "unit": "% of women 15-49",
+        "asOf": "2019-20"
+      },
+      "started": 2004,
+      "status": "operating",
+      "source": {
+        "publisher": "National Institute of Statistics of Rwanda, Rwanda Demographic and Health Survey 2025 and 2019-20, via the DHS Program indicator API (AH_HINS_W_MUT)",
+        "url": "https://api.dhsprogram.com/rest/dhs/data?countryIds=RW&indicatorIds=AH_HINS_W_MUT&breakdown=national&f=json",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-17"
+      },
+      "limits": "The survey covers women aged 15 to 49, not the whole population, and coverage is self-reported in an interview, not checked against the scheme's register. The same survey, through the same API (indicator AH_HINS_W_NON), finds 12.6 percent of women with no insurance at all. Membership says nothing about the depth of the benefit package, co-payments, or the quality of the health centres members use. Only two survey rounds carry the indicator, so the series cannot show whether coverage dipped between them. The start year is the national policy on mutual health organisations, which this source does not carry.",
+      "pattern": {
+        "mechanism": "The Rwandan state turned district-level mutual health organisations into one national community-based scheme that households join year by year.",
+        "preconditions": [
+          "A dense network of public health centres that members can reach",
+          "Local administration able to register households and collect premiums every year",
+          "Public or donor money to pay premiums for households that cannot"
+        ]
+      }
+    },
+    {
+      "id": "mex-codi",
+      "indicatorId": "large_project_delivery",
+      "iso3": "MEX",
+      "title": "CoDi, and its adoption gap",
+      "claim": "Banco de México began operating CoDi on its SPEI interbank rail on 30 September 2019 with no fee to users and a list of obliged participants, yet by 20 September 2026 only 2.87 million accounts had ever made a CoDi payment, and the rail carried 4.35 million payments in all of 2025.",
+      "metric": {
+        "name": "Accounts that have made at least one CoDi payment, cumulative since launch",
+        "value": 2870066,
+        "unit": "accounts",
+        "asOf": "2026-09-20"
+      },
+      "secondMetric": {
+        "name": "CoDi operations sent in the calendar year",
+        "value": 4354930,
+        "unit": "transactions",
+        "asOf": "2025"
+      },
+      "started": 2019,
+      "status": "operating",
+      "source": {
+        "publisher": "Banco de México, Sistema de Información Económica, table CF882 (accounts with at least one transaction) and table CF884 (operations through CoDi)",
+        "url": "https://www.banxico.org.mx/SieInternet/consultarDirectorioInternetAction.do?sector=21&accion=consultarCuadro&idCuadro=CF882&locale=es",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-17"
+      },
+      "limits": "This is a record of a delivery that ran at national scale and stayed small, not of a loss: daily CoDi volume has grown slowly every year since 2019 and nothing documented has been withdrawn, so the status is operating. The account figure is cumulative, so it counts any account that paid once in seven years and overstates current use. The 2025 total is computed here by summing the daily series SF335701 (total operations sent) exported from table CF884 of the same system; Banco de México publishes no annual total, and its note says the last day is preliminary and past values were revised in March 2021. The series covers CoDi messages only, while ordinary SPEI transfers from the same banking apps are much larger and are not counted, so a reader cannot tell how much CoDi lost to plain transfers that already worked. The central bank reports on its own product.",
+      "pattern": {
+        "mechanism": "Banco de México specified a request-to-pay standard on top of its existing real-time interbank system, named the institutions obliged to implement it and removed fees for users. It did not set a single consumer brand, a merchant price incentive or a simple proxy such as a phone number for paying, and the obliged banks implemented it inside their own apps.",
+        "preconditions": [
+          "A central bank that already runs a 24-hour real-time interbank rail with broad bank participation",
+          "Participants with a commercial reason to push the new flow to customers, which the obliged banks largely lacked",
+          "A payer experience simple enough to beat cash and card at the till, which a QR request-to-pay inside each bank app did not deliver"
+        ]
+      }
+    },
+    {
+      "id": "ecu-dinero-electronico",
+      "indicatorId": "large_project_delivery",
+      "iso3": "ECU",
+      "title": "Dinero Electrónico, the central bank mobile money system, and its closure",
+      "claim": "Banco Central del Ecuador built and ran a mobile money platform from 2014 that opened 360,916 accounts, signed up 4,860 establishments and carried more than 47 million dollars of transactions by August 2017, when the government and the financial system agreed that the central bank would stop holding the accounts and hand the service to banks and cooperatives.",
+      "metric": {
+        "name": "Dinero Electrónico accounts opened since 2014",
+        "value": 360916,
+        "unit": "accounts",
+        "asOf": "2017-08"
+      },
+      "secondMetric": {
+        "name": "Value of Dinero Electrónico transactions since 2014",
+        "value": 47000000,
+        "unit": "US dollars, lower bound",
+        "asOf": "2017-08"
+      },
+      "started": 2014,
+      "status": "dismantled",
+      "source": {
+        "publisher": "Banco Central del Ecuador, press statement of 29 August 2017 on the agreements with the financial system",
+        "url": "https://www.bce.fin.ec/dinero-electronico-sera-manejado-por-la-banca-publica-privada-y-el-sistema-financiero-popular-y-solidario/",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-17"
+      },
+      "limits": "The figures are the central bank's own cumulative counts, stated in a press statement and not in a statistical series: accounts opened is not accounts used, and the transaction value is given only as more than 47 million dollars over roughly three years, which is very small for a dollarised economy that the same statement says needs 2,000 million dollars of new notes and coins each year. The source documents the decision to end central bank accounts, not the closure itself; a later Banco Central del Ecuador notice of 6 February 2018, republished by the Ministry of Finance, states that the central bank stopped opening accounts on 29 December 2017 and that Monetary Board resolution 435-2018-M set 16 April 2018 as the end of the closure and deactivation of accounts. The platform ended by a change of law after a change of government, so its end is weak evidence about whether the design could have worked under a different mandate.",
+      "pattern": {
+        "mechanism": "The central bank built and ran the accounts itself rather than setting a standard for banks to implement. After a change of government, the 2017 agreement and a new law moved electronic payments to banks and cooperatives, and the central bank closed its platform.",
+        "preconditions": [
+          "A political mandate that outlasts the government that launched the platform",
+          "Trust that balances held at the central bank are as safe and usable as dollars in a bank account",
+          "Participation by the banks and cooperatives that hold the customers, or a reason for them to join"
+        ]
+      }
+    },
+    {
+      "id": "gha-e-zwich",
+      "indicatorId": "large_project_delivery",
+      "iso3": "GHA",
+      "title": "e-zwich national biometric smart card, and its falling use",
+      "claim": "Ghana's central bank, through its wholly owned subsidiary GhIPSS, built the e-zwich interoperable biometric card system that held 4.31 million issued cards in 2025, but e-zwich transactions fell 44.9 percent that year to 5.31 million from 9.63 million in 2024, which the Bank of Ghana attributes to a significant reduction in government payments.",
+      "metric": {
+        "name": "Volume of e-zwich transactions",
+        "value": 5305040,
+        "unit": "transactions",
+        "asOf": "2025"
+      },
+      "secondMetric": {
+        "name": "Volume of e-zwich transactions in the prior peak year of the 2021 to 2025 table",
+        "value": 9625110,
+        "unit": "transactions",
+        "asOf": "2024"
+      },
+      "started": 2008,
+      "status": "operating",
+      "source": {
+        "publisher": "Bank of Ghana, Payment Systems Oversight Annual Report 2025, Table 3.5",
+        "url": "https://www.bog.gov.gh/wp-content/uploads/2026/08/Payment-Systems-Annual-Report-2025-1.pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-17"
+      },
+      "limits": "The figures are read from a PDF table. The loss is in transaction count only: the value of e-zwich transactions rose 25.1 percent to GH¢47.40 billion in 2025, and cards issued rose 2.7 percent, so a reviewer could argue the card moved from frequent small payments to fewer large government disbursements rather than eroding. The table starts in 2021, and 2024 is the peak only within that window. The Bank of Ghana names one cause, fewer government payments, so much of the fall reflects a payer's choice of channel rather than the infrastructure failing. About 5.3 million transactions on 4.3 million issued cards is close to one transaction per card per year, which says the card is no longer an everyday instrument while mobile money, reported in the same document, grew. The regulator reports on a system its own subsidiary runs.",
+      "pattern": {
+        "mechanism": "The Bank of Ghana built a national biometric card and switch through its own payments subsidiary and connected the banks to it, so that the unbanked could be paid and could transact offline. Government payroll and benefit payments carried much of the volume, and when the government moved those payments elsewhere the volume fell.",
+        "preconditions": [
+          "A large anchor payer, such as government salaries and benefits, committed to the channel",
+          "Merchant and agent acceptance dense enough for cardholders to spend without cashing out",
+          "A cost and convenience edge over phone-based alternatives once mobile money arrived"
+        ]
+      }
+    },
+    {
+      "id": "usa-fednow",
+      "indicatorId": "large_project_delivery",
+      "iso3": "USA",
+      "title": "FedNow Service, an opt-in central bank instant rail",
+      "claim": "The Federal Reserve Banks launched the FedNow instant payment service in 2023 and it settled 8.41 million customer credit transfers in 2025, an average of 23,050 a day, rising to 5.00 million in the second quarter of 2026.",
+      "metric": {
+        "name": "FedNow settled payments in the calendar year",
+        "value": 8413402,
+        "unit": "transactions",
+        "asOf": "2025"
+      },
+      "secondMetric": {
+        "name": "FedNow settled payments in the quarter",
+        "value": 4997811,
+        "unit": "transactions",
+        "asOf": "2026-Q2"
+      },
+      "started": 2023,
+      "status": "operating",
+      "source": {
+        "publisher": "Federal Reserve Financial Services, FedNow Service Volume and Value Statistics",
+        "url": "https://www.frbservices.org/resources/financial-services/fednow/quarterly-volume-value-stats",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-17"
+      },
+      "limits": "The series counts settled customer credit transfers only and uses calendar days, as the publisher notes. Volume is growing fast from a small base, so the record shows a slow start and not a failure, and the status is operating. The page gives no count of participating institutions, no share of US payments and no figures for the privately run RTP network, which competes for the same banks, so it cannot show how much of US instant payment the public rail carries. Average value per payment was 101,435 dollars in 2025, which suggests much of the value is business and interbank liquidity flows rather than retail use. The operator reports on its own service.",
+      "pattern": {
+        "mechanism": "The Federal Reserve built and runs the instant rail for institutions that choose to connect, and left participation and customer-facing products to each bank's own decision.",
+        "preconditions": [
+          "Thousands of banks and credit unions that each decide separately whether to connect",
+          "A private instant rail already operating, which gives large banks an alternative",
+          "Card and account-to-account habits that already work well enough for most retail payments"
+        ]
+      }
     }
   ]
 }

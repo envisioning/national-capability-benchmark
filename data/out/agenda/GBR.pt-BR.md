@@ -126,6 +126,7 @@ São mudanças institucionais documentadas neste país, registradas como evidên
 - **Government-funded adult further education in England, and its erosion** (Aprendizagem). Participation of adults aged 19 and over in government-funded further education and skills in England fell from a recent peak of nearly 3.3 million learners in 2012/13 to 1.6 million in 2020/21, and stood at 1,798,970 in 2024/25, according to the Department for Education.
 - **Coronavirus Job Retention Scheme** (Adaptação). The UK's Coronavirus Job Retention Scheme, which started in March 2020, had 8.9 million jobs on furlough at its peak on 8 May 2020 and supported 11.7 million jobs from 1.3 million employers before it closed on 30 September 2021.
 - **Private Finance Initiative and PF2, and their abolition** (Coordenação). HM Treasury's Private Finance Initiative signed on average 55 contracts a year between 1997 and 2010 and left 704 current PFI and PF2 projects with a capital value of £57 billion at 31 March 2018, after signings fell to an average of nine a year after May 2010 and the Chancellor announced at Budget 2018 that the government would no longer use PF2 for new projects.
+- **GOV.UK Verify identity assurance, and its closure** (Construção). The UK Government Digital Service ran GOV.UK Verify as the cross-government online identity service from 2016, accumulating almost 10 million user accounts across up to 27 online services, then wound it down after a late 2018 decision, with closure confirmed for April 2023 and every account deleted.
 
 ## Contribua
 

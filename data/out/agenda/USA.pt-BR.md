@@ -117,6 +117,8 @@ Entregas documentadas ligadas a indicadores ausentes. Elas não alteram as pontu
 - **Manufacturing USA innovation institutes** (Coordenação). In fiscal 2023 the 16 reporting Manufacturing USA institutes, public-private consortia sponsored by the Departments of Commerce, Defense and Energy, managed 929 applied research and development projects and held 2,921 memberships, 655 of them universities, community colleges and other academic members alongside 1,315 small and 493 large manufacturers.
 - **National Flood Insurance Program coverage, and its erosion** (Adaptação). OpenFEMA's records of National Flood Insurance Program contracts in force fell from 4,667,875 on 31 December 2009 to 3,589,275 on 31 December 2025, a fall of about 23 percent in the federal flood insurance base over 16 years.
 - **Expanded Child Tax Credit of 2021, and its lapse** (Adaptação). The American Rescue Plan, passed in March 2021, expanded the Child Tax Credit and made it payable monthly, and on 15 July 2021 the IRS paid roughly 15 billion dollars to families of nearly 60 million children; Congress did not extend the expansion beyond 2021.
+- **Affordable Care Act marketplaces, and their 2026 contraction** (Construção). The United States' health insurance exchanges enrolled 23.1 million people in the 2026 open enrollment period, the first after the enhanced premium tax credits expired at the end of 2025, about 1.2 million fewer than in 2025.
+- **FedNow Service, an opt-in central bank instant rail** (Construção). The Federal Reserve Banks launched the FedNow instant payment service in 2023 and it settled 8.41 million customer credit transfers in 2025, an average of 23,050 a day, rising to 5.00 million in the second quarter of 2026.
 
 ## Contribua
 
