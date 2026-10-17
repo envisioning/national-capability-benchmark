@@ -9,6 +9,12 @@ The entries before App 1.0.0 are retrospective, high-level summaries
 reconstructed from the repository history. They document explicit version bumps
 and may skip versions that were never committed.
 
+## App 1.31.8 — 2026-10-17
+
+- **Two evidence records read in Portuguese on the Mozambique and
+  Guinea-Bissau pages.** Mozambique's PASD-PE cash transfers and the Guiné
+  Telecom concession had shown in English there.
+
 ## App 1.31.7 — 2026-10-17
 
 - **Every country is now checked for public-private collaboration.** 19

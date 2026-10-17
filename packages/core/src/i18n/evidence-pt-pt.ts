@@ -158,4 +158,14 @@ export const EVIDENCE_PT_PT: Record<string, { title: string; claim: string }> = 
     claim:
       'O Governo de Moçambique e a sua empresa de portos e caminhos de ferro, os CFM, reabilitaram os 600 km da linha de Sena, de Dondo a Moatize, através de uma concessão de 25 anos assinada a 30 de agosto de 2004; o financiamento total subiu de 152,47 milhões de dólares na avaliação para 188,70 milhões de dólares, as obras terminaram com mais de dois anos de atraso e a concessão terminou a 7 de dezembro de 2011.',
   },
+  'moz-pasd-pe-covid': {
+    title: 'As transferências monetárias do PASD-PE na COVID-19',
+    claim:
+      'O Instituto Nacional de Ação Social de Moçambique (INAS) alargou o seu programa de transferências monetárias pós-emergência (PASD-PE) a novos agregados urbanos e periurbanos depois do choque da COVID-19, abrangendo 280.000 novos agregados em 2020 e 572.415 famílias acumuladas até novembro de 2023.',
+  },
+  'gnb-guine-telecom': {
+    title: 'A concessão da Guiné Telecom e o seu colapso',
+    claim:
+      'A Guiné-Bissau atribuiu em 1989 à Guiné Telecom, um operador histórico de que a Portugal Telecom era o principal acionista, uma concessão exclusiva para explorar as telecomunicações nacionais; as assinaturas de telefone fixo atingiram o máximo de 11.197 em 2002 e caíram para 4.844 em 2009, a partir daí a série do Banco Mundial regista zero, a Portugal Telecom devolveu as suas ações ao Estado, e a Guiné Telecom e o seu braço móvel, a Guinetel, deixaram de operar.',
+  },
 }
