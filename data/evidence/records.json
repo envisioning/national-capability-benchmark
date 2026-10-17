@@ -30356,6 +30356,294 @@
           "Political and security stability long enough for a fund to plan beyond one budget year"
         ]
       }
+    },
+    {
+      "id": "hrv-opkk",
+      "indicatorId": "university_industry_collaboration",
+      "iso3": "HRV",
+      "title": "Operational Programme Competitiveness and Cohesion 2014-2020, research and innovation axis",
+      "claim": "Croatia's Operational Programme Competitiveness and Cohesion reported at its close that 284 enterprises supported under its business research and innovation priority had cooperated with research institutions by the end of 2023, against a target of 250, and 38 more under its research capacity priority.",
+      "metric": {
+        "name": "Enterprises cooperating with research institutions, investment priority 1b (common indicator CO26, cumulative implemented value)",
+        "value": 284,
+        "unit": "enterprises",
+        "asOf": "2023"
+      },
+      "secondMetric": {
+        "name": "Enterprises cooperating with research institutions, investment priority 1a (common indicator CO26, cumulative implemented value)",
+        "value": 38,
+        "unit": "enterprises",
+        "asOf": "2023"
+      },
+      "started": 2017,
+      "status": "concluded",
+      "source": {
+        "publisher": "European Commission, Cohesion Open Data Platform, ESIF 2014-2020 Achievement Details timeseries (programme 2014HR16M1OP001, indicator CO26)",
+        "url": "https://cohesiondata.ec.europa.eu/resource/aesb-873i.json?ms=HR&ind_code=CO26&year=2023",
+        "tier": "international_organization",
+        "retrievedAt": "2026-10-17"
+      },
+      "limits": "The values are what the Croatian managing authority reported to the Commission in its annual implementation reports, so they are the programme's own account, republished by the Commission without audit. CO26 counts enterprises, not projects, money or results, and the definition counts any firm that took part in a supported project with a research institution, so a short contract counts the same as a multi-year centre. The two priorities are reported separately and a firm can appear in both, so 284 and 38 are not added here. A research institution includes public institutes as well as universities, and the dataset does not split them. The dataset gives no figure per call, so the record cannot say how much came from the competence centres and how much from the individual research and innovation grants. The money was mostly European Regional Development Fund co-financing, so the record shows what cohesion funding bought through Croatian ministries as much as national research policy. The first achieved value appears in 2017, so the started year is the first reported delivery, not the first call. No reversal was found: the programme closed on schedule, and whether the 2021-2027 programme continues the collaboration at the same scale was not checked.",
+      "pattern": {
+        "mechanism": "Croatian ministries ran research and innovation grant calls under the cohesion programme that paid firms for research and development projects carried out with universities and public institutes, and reported each participating firm against a common European indicator.",
+        "preconditions": [
+          "Cohesion funding far larger than the national research budget, with a common indicator the managing authority had to report every year",
+          "Public universities and institutes able to sign research contracts and collaboration agreements with firms",
+          "Firms able to co-finance research and to carry the administrative load of a structural funds project"
+        ]
+      }
+    },
+    {
+      "id": "jor-irdf",
+      "indicatorId": "university_industry_collaboration",
+      "iso3": "JOR",
+      "title": "HCST Industrial Research and Development Fund (IR&DF)",
+      "claim": "Jordan's Higher Council for Science and Technology, through its Industrial Research and Development Fund, supported 380 projects from 1994 to 2017 worth JD 3,306,208, of which 204 were research and development projects worth JD 2,116,308 that industrial firms carried out with a university, research centre or consulting partner.",
+      "metric": {
+        "name": "Research and development projects supported by the Fund, cumulative",
+        "value": 204,
+        "unit": "projects",
+        "asOf": "1994-2017"
+      },
+      "secondMetric": {
+        "name": "Fund support to research and development projects, cumulative",
+        "value": 2116308,
+        "unit": "Jordanian dinars",
+        "asOf": "1994-2017"
+      },
+      "started": 1994,
+      "status": "operating",
+      "source": {
+        "publisher": "Higher Council for Science and Technology (HCST), Industrial Research and Development Fund, presentation by the fund director to the INVENT industrial innovation workshop (Arabic, slides 'Projects supported 1994-2017'), hosted by Jordan University of Science and Technology",
+        "url": "https://invent.just.edu.jo/Downloads/WP2%2C%20WP4%20D2.3%20%2C%20D4.3%20and%20D4.4%20Industrial%20Innovation%20Workshop%20%20%D9%88%D8%B1%D8%B4%D8%A9%20%D8%B9%D9%85%D9%84%20%D8%A7%D9%84%D8%A7%D8%A8%D8%AA%D9%83%D8%A7%D8%B1%20%D8%A7%D9%84%D8%B5%D9%86%D8%A7%D8%B9%D9%8A/%D8%B5%D9%86%D8%AF%D9%88%D9%82%20%D8%AF%D8%B9%D9%85%20%D8%A7%D9%84%D8%A8%D8%AD%D8%AB%20%D8%A7%D9%84%D8%B9%D9%84%D9%85%D9%8A%20%D9%88%20%D8%A7%D9%84%D8%AA%D8%B7%D9%88%D9%8A%D8%B1%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%B5%D9%86%D8%A7%D8%B9%D8%A9.pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-17"
+      },
+      "limits": "The figures are the fund's own, read from a slide deck in PDF dated October 2017, and they are cumulative over 23 years, about 16 projects a year on average; no later count was found, so the current scale is not known. The 380 total includes 157 quality and certification grants (ISO 9000, ISO 14000, HACCP and quality marks, our sum) and 19 studies, incubator and other grants that are not research collaboration, which is why the record leads with the 204 research and development projects. The partner on a project need not be a university: the fund's rules ask only for a research or consulting partner, and by the deck's own table about 205 projects ran with universities and public research bodies, 138 of them with eight universities (our sum), while about 175 ran with private consulting firms, a row the PDF text renders imperfectly. Grants are capped at JD 30,000 or 75 percent of project cost, so each collaboration is small. The deck gives no outcome measure beyond one case study. The HCST page archived in May 2026 still describes the fund and its committees, but its last listed calls date from 2022 and are run with the Royal Academy of Engineering.",
+      "pattern": {
+        "mechanism": "The Higher Council for Science and Technology pays up to three quarters of a small applied project that a registered manufacturer runs with a university, research centre or consultancy, and releases later payments against progress reports from both partners.",
+        "preconditions": [
+          "Manufacturers with at least a year of production and a concrete process or product problem",
+          "University and public research staff willing to take small contract projects",
+          "A management committee that seats the industry ministry, the industry chamber and the universities"
+        ]
+      }
+    },
+    {
+      "id": "irn-msrt-industry-contracts",
+      "indicatorId": "university_industry_collaboration",
+      "iso3": "IRN",
+      "title": "University contracts with society and industry, MSRT monitoring",
+      "claim": "Iran's Ministry of Science, Research and Technology recorded more than 8,700 contracts in progress between universities and higher education centres on one side and industry and executive bodies on the other in its 1400 (2021/22) monitoring, worth about 3,106 billion tomans.",
+      "metric": {
+        "name": "University contracts with society and industry in progress",
+        "value": 8700,
+        "unit": "contracts (lower bound, 'more than')",
+        "asOf": "1400 (2021/22)"
+      },
+      "secondMetric": {
+        "name": "Value of university contracts with society and industry in progress",
+        "value": 3106,
+        "unit": "billion tomans",
+        "asOf": "1400 (2021/22)"
+      },
+      "started": 2020,
+      "status": "operating",
+      "source": {
+        "publisher": "Ministry of Science, Research and Technology (MSRT) of Iran, Office of Relations with Society and Industry, news release of 6 Dey 1400 (27 December 2021) on the 1400 contract monitoring, archived copy",
+        "url": "https://web.archive.org/web/20220124223627/https://www.msrt.ir/fa/news/65854/",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-17"
+      },
+      "limits": "The count is a lower bound ('more than 8,700') and the value an estimate ('about'), both from a ministry news release rather than a published dataset, and both rest on what universities report to the ministry. The contracts are with 'society and industry', so they include government ministries and executive agencies as clients, not only firms, and the release gives no split; nor does it say how much of the work is research rather than testing, consulting or training. The value is in nominal tomans during high inflation, so a rise between years says little about real volume. msrt.ir did not answer on 17 October 2026, so the source is the Internet Archive copy of January 2022. Mehr News reported later monitoring rounds at 11,212 contracts in 1402 and 11,568 in 1403, short of the plan's 10 percent yearly growth target, but no ministry page carrying those figures was reached. The start year is the September 2020 launch of the ministry's plan to transform university cooperation with society and industry as Mehr News reports it; the ministry page does not state it.",
+      "pattern": {
+        "mechanism": "The Ministry of Science, Research and Technology sets a growth target for contracts between universities and outside clients, has every university report its contracts each year, and publishes rankings of institutions by contracts per faculty member.",
+        "preconditions": [
+          "Universities allowed to sign and keep revenue from outside contracts",
+          "Large state-owned industries and executive bodies with research budgets that buy from domestic universities",
+          "A ministry office with the authority to collect contract data from every university"
+        ]
+      }
+    },
+    {
+      "id": "egy-gaae-literacy-classes",
+      "indicatorId": "adult_learning_participation",
+      "iso3": "EGY",
+      "title": "National adult literacy classes",
+      "claim": "Egypt enrolled 846,730 people in adult literacy classes in 2017/2018 and 272,520 of them were made literate that year, against a target of 2,012,660, according to the Cabinet's Information and Decision Support Center.",
+      "metric": {
+        "name": "People enrolled in literacy classes",
+        "value": 846730,
+        "unit": "people",
+        "asOf": "2017/2018"
+      },
+      "secondMetric": {
+        "name": "People made literate in the year",
+        "value": 272520,
+        "unit": "people",
+        "asOf": "2017/2018"
+      },
+      "started": 1992,
+      "status": "operating",
+      "source": {
+        "publisher": "Information and Decision Support Center of the Egyptian Cabinet, Wasf Misr bil-Maalumat 2018, education section, page 24 (literacy 2017/2018)",
+        "url": "https://www.eip.gov.eg/IDSC/Upload/Periodicals/WasfMisr/2018/9.pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-17"
+      },
+      "limits": "The three figures are read from an infographic page of a PDF bulletin, printed in thousands (846.73, 272.52 and 2,012.66 thousand people), with no table, definitions or note on the original data source. The page does not name the delivering body; the General Authority for Adult Education is the statutory body for literacy, and its 1992 start under Law 8 of 1991 comes from parliamentary press coverage, not from the cited page. Enrolment is not completion: about a third of those enrolled were counted as made literate, and delivery reached under half the year's target. Literacy classes are basic education, only part of the adult learning construct, and the count is people, not a share of adults. The figure is eight years old and no later national count was found at an open official URL. A 2018 bill in parliament proposed dissolving the authority; no law doing so was found.",
+      "pattern": {
+        "mechanism": "The state runs a national literacy authority under the education ministry that sets a yearly target of illiterate adults, opens classes with universities, ministries and associations, and examines learners to certify them as literate.",
+        "preconditions": [
+          "A literacy law that names one authority responsible for adult literacy",
+          "Partners such as universities and civil-society groups that host classes and supply teachers",
+          "A large stock of illiterate adults, about a quarter of people aged 10 and over in 2017"
+        ]
+      }
+    },
+    {
+      "id": "irn-tvto-fixed-centres",
+      "indicatorId": "adult_learning_participation",
+      "iso3": "IRN",
+      "title": "Technical and Vocational Training Organization public centres",
+      "claim": "Iran's Technical and Vocational Training Organization trained 376,248 people in its fixed public centres in the Iranian year 1394 (2015/16), up from 322,657 the year before, in industry, services, culture and arts, and agriculture courses, according to the Statistical Centre of Iran yearbook.",
+      "metric": {
+        "name": "Trainees in fixed centres of the Technical and Vocational Training Organization",
+        "value": 376248,
+        "unit": "people",
+        "asOf": "1394 (2015/16)"
+      },
+      "secondMetric": {
+        "name": "Trainees in fixed centres of the Technical and Vocational Training Organization",
+        "value": 322657,
+        "unit": "people",
+        "asOf": "1393 (2014/15)"
+      },
+      "started": 1980,
+      "status": "operating",
+      "source": {
+        "publisher": "Statistical Centre of Iran, Iran Statistical Yearbook 1395, chapter 17 (education), table 17-34, citing the Technical and Vocational Training Organization; copy hosted by the Iran Data Portal, Syracuse University",
+        "url": "https://irandataportal.syr.edu/wp-content/uploads/Education-4.pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-17"
+      },
+      "limits": "The figures are read from a PDF copy of the yearbook chapter on a university mirror, because the statistics office's own site did not open. The latest year in the table is 1394 (2015/16); the 1395 row is blank and no later edition was read, so the count is about ten years old. It covers the organisation's fixed public centres only, not its mobile units, prison and garrison courses or the licensed private institutes it supervises, and it counts trainees, not a share of adults. The yearbook defines trainees as people who learn a trade, retrain or upgrade skills for a set period, so the count mixes first-time vocational learners with adults returning to training, and it says nothing about course length or completion. The 1980 start is the yearbook's statement that the organisation was formed in 1359 by merging earlier training funds and centres.",
+      "pattern": {
+        "mechanism": "The labour ministry runs a national training organisation with public centres in every province that offer short trade, retraining and skill-upgrading courses to adults and young people, and reports its trainee counts to the national statistics office each year.",
+        "preconditions": [
+          "A single state training body formed from earlier training funds, with workshops in every province",
+          "Public funding that keeps courses in public centres low cost",
+          "A national skills certification that gives short courses labour-market value"
+        ]
+      }
+    },
+    {
+      "id": "irq-government-training-centres",
+      "indicatorId": "adult_learning_participation",
+      "iso3": "IRQ",
+      "title": "Government vocational and development training centres",
+      "claim": "Iraq's government training centres ran 18,177 vocational and development courses for 331,547 trainees in 2019, up from 199,804 trainees in 2015 but below the 372,321 of 2017, according to the Central Statistical Organization's survey of parallel education and training.",
+      "metric": {
+        "name": "Trainees in training centres of the government sector",
+        "value": 331547,
+        "unit": "trainees",
+        "asOf": "2019"
+      },
+      "secondMetric": {
+        "name": "Trainees in training centres of the government sector, highest year in the series",
+        "value": 372321,
+        "unit": "trainees",
+        "asOf": "2017"
+      },
+      "started": 2014,
+      "status": "operating",
+      "source": {
+        "publisher": "Central Statistical Organization of Iraq, Directorate of Social and Educational Statistics, Statistics of parallel education and vocational and development training in Iraq, academic year 2019/2020, table 6",
+        "url": "https://cosit.gov.iq/documents/education/reports/par/%D8%A7%D9%84%D8%AA%D8%B9%D9%84%D9%8A%D9%85%20%D8%A7%D9%84%D9%85%D9%88%D8%A7%D8%B2%D9%8A%202019-2020.pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-17"
+      },
+      "limits": "The figure is read from a PDF report whose Arabic text layer is partly garbled; the table numbers are legible and match the 2018/2019 edition for the overlapping years. The report does not describe the trainees: it does not separate public employees on in-service courses from jobseekers or other adults, and 14,841 of the 18,177 courses are development courses rather than vocational ones. It counts trainees per course and does not say whether a person on two courses counts twice. The count is a head count, not a share of adults, and it leaves out literacy centres, which this survey does not cover. 2019 is the latest year read; newer editions of the report were not found at an open URL. The 2014 start is the first year of the statistics office's published series in the 2018/2019 edition; the centres themselves are older and the report gives no founding date.",
+      "pattern": {
+        "mechanism": "Each ministry runs its own training centres that teach vocational and staff development courses, and the national statistics office surveys every centre each year and publishes the counts of courses and trainees.",
+        "preconditions": [
+          "A large public sector whose ministries keep their own training budgets and centres",
+          "A statistics office able to survey training units in every ministry and governorate",
+          "Courses short enough to fit around employment"
+        ]
+      }
+    },
+    {
+      "id": "zmb-tevet-fund-informal-training",
+      "indicatorId": "adult_learning_participation",
+      "iso3": "ZMB",
+      "title": "TEVET Fund training for MSMEs and the informal sector",
+      "claim": "Zambia's TEVET Fund, set up under the TEVET Act and financed mainly by the Skills Development Levy, paid 101 training institutions to train micro, small and medium enterprise operators, informal sector workers and out-of-school youth, and enrolled 10,270 trainees in 2025 against a target of 9,350; its employer-based in-service window trained 1,188 employees against a target of 8,602.",
+      "metric": {
+        "name": "Trainees enrolled under the TEVET Fund MSME and informal sector training window",
+        "value": 10270,
+        "unit": "trainees",
+        "asOf": "2025"
+      },
+      "secondMetric": {
+        "name": "Employees trained under the TEVET Fund employer-based in-service training window",
+        "value": 1188,
+        "unit": "employees",
+        "asOf": "2025"
+      },
+      "started": 1998,
+      "status": "operating",
+      "source": {
+        "publisher": "Technical Education, Vocational and Entrepreneurship Training Authority (TEVETA), Zambia, TEVET Fund Annual Report 2025, sections 4.2.1 and 4.3.2",
+        "url": "https://www.teveta.org.zm/root/php/download.php?id=750&ref=ar",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-17"
+      },
+      "limits": "The gap asks for a share of adults in education and training, and this is a count of trainees the fund paid for, reported by the authority that runs the fund, read from a PDF. Against an adult population of more than ten million, about 10,000 trainees a year is a fraction of one percent. The report gives no age breakdown, and it names out-of-school youth among the trainees, so an unknown part are young people in their first training rather than adults returning to learn. The report contradicts itself on the employer window: section 4.2.1 gives 1,188 employees trained, and the summary table of annual activities gives 2,557 employees. The 10,270 figure is an enrolment; 8,895 learners sat the assessment, against a different target of 9,674 in the same report. The report does not state the year the informal sector window opened; 1998 is the year of the TEVET Act that created the fund. The 2022 TEVETA annual report, a separate document, gives 8,297 enrolled in the same window that year. A count of trainees says nothing about course length, completion rates or effect on earnings.",
+      "pattern": {
+        "mechanism": "Parliament created a training fund in the TEVET Act, the revenue authority collects a payroll skills levy for it, and the training authority's board signs competitive contracts with registered public and private institutions to train informal operators and employees in priority sectors.",
+        "preconditions": [
+          "A revenue authority that collects a payroll levy from formal employers and remits it to the fund",
+          "A register of accredited training institutions spread across the provinces that can bid for contracts",
+          "Employers willing to take up in-service training, which the 2025 shortfall shows is not assured"
+        ]
+      }
+    },
+    {
+      "id": "png-fode",
+      "indicatorId": "adult_learning_participation",
+      "iso3": "PNG",
+      "title": "Flexible Open and Distance Education (FODE) secondary programme",
+      "claim": "The Department of Education's FODE programme, the national distance pathway to secondary certificates for people who left school, registered 82,877 students in 2022, up from 35,513 in 2020, according to the department's 2022 Annual Report as published by the Department of Prime Minister and National Executive Council.",
+      "metric": {
+        "name": "FODE student registrations",
+        "value": 82877,
+        "unit": "students registered",
+        "asOf": "2022"
+      },
+      "secondMetric": {
+        "name": "FODE student registrations, earlier year",
+        "value": 35513,
+        "unit": "students registered",
+        "asOf": "2020"
+      },
+      "started": 2020,
+      "status": "operating",
+      "source": {
+        "publisher": "Department of Prime Minister and National Executive Council, Papua New Guinea, reporting the Department of Education 2022 Annual Report",
+        "url": "https://www.pmnec.gov.pg/?p=764",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-17"
+      },
+      "limits": "The figures come from a government news release of 2 August 2023 that reports the Department of Education's 2022 Annual Report; the report itself was not found at an open URL, and the department's own FODE page carries no enrolment figures. Registration is not attendance, completion or a certificate earned. FODE serves school dropouts of any age at secondary level, so an unknown share of the 82,877 are young people under 25 and not adults in mid-life, and the count is not a share of the adult population. No figure after 2022 was found, so the operating status rests on a three-year-old count and the release's own statement that growth was expected. `started` is the year of the first published count, not the year FODE began.",
+      "pattern": {
+        "mechanism": "The Department of Education runs secondary-level courses by distance through FODE centres and registered schools, so a person who left school can study for a secondary certificate up to Grade 12 without returning to a classroom.",
+        "preconditions": [
+          "A national examination and certificate that a distance learner can sit on the same terms as a school student",
+          "Printed or digital course material and local study centres that reach provinces with few secondary schools",
+          "A large stock of school leavers without certificates who want a second chance"
+        ]
+      }
     }
   ]
 }

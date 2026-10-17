@@ -9,6 +9,14 @@ The entries before App 1.0.0 are retrospective, high-level summaries
 reconstructed from the repository history. They document explicit version bumps
 and may skip versions that were never committed.
 
+## App 1.31.12 — 2026-10-17
+
+- **Adult learning and university-industry collaboration now cover every
+  country.** A second search closed the last 21 cells: eight new records,
+  among them Croatia's cohesion-funded research partnerships, Iraq's
+  government training centres and Zambia's informal-sector training fund,
+  and 13 notes that name what was searched and why nothing qualified.
+
 ## App 1.31.11 — 2026-10-17
 
 - **Adult learning now has cases or searched notes for 115 of 125

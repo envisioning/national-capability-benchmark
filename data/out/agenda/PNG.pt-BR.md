@@ -141,6 +141,7 @@ Entregas documentadas ligadas a indicadores ausentes. Elas não alteram as pontu
 
 - **Road Maintenance and Rehabilitation Project** (Construção). Papua New Guinea's Department of Works restored or maintained 600 km of national roads against a 640 km target under the Road Maintenance and Rehabilitation Project, closing in June 2012 five and a half years after the original December 2006 closing date, with national road works under the original loan costing US$35.62 million, 158 percent of their US$22.52 million appraisal estimate.
 - **Lae Port Development Project (Lae Tidal Basin, phase 1)** (Construção). Papua New Guinea's Independent Public Business Corporation, using ADB and OPEC Fund loans, built the first phase of the Lae tidal basin, a new berth and container terminal at the port of Lae, between April 2012 and December 2014. It was about four years later than planned and cost $310.4 million, against a $154 million project at the 2007 approval.
+- **Flexible Open and Distance Education (FODE) secondary programme** (Aprendizagem). The Department of Education's FODE programme, the national distance pathway to secondary certificates for people who left school, registered 82,877 students in 2022, up from 35,513 in 2020, according to the department's 2022 Annual Report as published by the Department of Prime Minister and National Executive Council.
 
 ## Contribua
 
