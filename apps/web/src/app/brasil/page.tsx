@@ -432,13 +432,11 @@ export default async function BrazilLayerPage() {
               href={layerSectionHref(layer, localSection)}
               className="rounded-xl border border-[var(--rule)] p-5 transition-all duration-200 hover:border-[var(--foreground)]"
             >
-              <h3 className="text-xl font-medium tracking-tight">
-                {localSection.label}, em inglês
-              </h3>
+              <h3 className="text-xl font-medium tracking-tight">{localSection.label}</h3>
               <p className="mt-2 text-lg leading-relaxed text-[var(--muted)]">
                 Um agregado federal responde à pergunta comparativa e esconde a variação entre as
-                unidades que executam a política. A leitura subnacional mostra essa faixa, com a
-                fonte e a regra de conciliação à vista. Ela ainda não tem versão em português.
+                unidades que executam a política. A leitura dos estados mostra essa faixa, com a
+                fonte e a regra de conciliação à vista.
               </p>
             </Link>
           ) : null}

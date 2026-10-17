@@ -133,6 +133,125 @@ export type LayerWords = {
    * page of its own, so Portuguese has none.
    */
   pages?: LayerPageWords
+  /**
+   * The words of the layer's subnational reading, where the layer has one.
+   * Only Brazil's does, at `/brasil/estados`. See D69.
+   */
+  local?: LocalWords
+}
+
+/**
+ * The subnational reading's words. Every number in them is a placeholder the
+ * page fills from `data/out/subnational`, so no sentence states a value.
+ */
+export type LocalWords = {
+  metaTitle: string
+  metaDescription: string
+  title: string
+  headline: string
+  nationalHeading: string
+  nationalHint: string
+  /** {countries} */
+  nationalBody: string
+  peersHeading: string
+  peersHint: string
+  /** {dimension} */
+  peerStrongest: string
+  peerNone: string
+  /** {n} */
+  statesHeading: string
+  statesHint: string
+  nationalValue: string
+  stateRange: string
+  /** {low} {high} */
+  rangeValue: string
+  /** {n} {date} */
+  unitsCount: string
+  reconciliationLabel: string
+  reconciliation: Record<'aggregate' | 'independent' | 'context_only', string>
+  /** {recomposed} {national} {residual} */
+  reconciliationBody: string
+  notAvailable: string
+  source: string
+  tableCaption: string
+  unitColumn: string
+  valueColumn: string
+  gapColumn: string
+  yearColumn: string
+  direction: Record<'higher_better' | 'lower_better', string>
+  institutionsHeading: string
+  institutionsHint: string
+  /** {nodes} {edges} */
+  institutionsBody: string
+  institutionsLink: string
+  disputesHeading: string
+  disputesHint: string
+  disputesNone: string
+  disputeStatus: Record<'submitted' | 'accepted' | 'rejected', string>
+  missingFile: string
+  missingCountry: string
+}
+
+/** Brazil's subnational reading in Portuguese. See D69. */
+const PT_LOCAL_WORDS: LocalWords = {
+  metaTitle: 'Estados brasileiros, NCB',
+  metaDescription:
+    'A variação entre as unidades da federação num indicador do NCB, ao lado da pontuação nacional do Brasil, com a fonte e a regra de conciliação.',
+  title: 'O Brasil abaixo da pontuação nacional',
+  headline:
+    'A comparação internacional põe o Brasil ao lado de outros países. Esta página mostra o mesmo número nacional com os estados e as instituições à vista.',
+  nationalHeading: 'A pontuação nacional é a primeira camada',
+  nationalHint:
+    'O radar reúne as nove capacidades nacionais. O texto ao lado diz o que o desenho pode e o que não pode dizer.',
+  nationalBody:
+    'A pontuação federal usa evidência comparável entre os {countries} países, por isso mostra onde a capacidade do Brasil se afasta da de seus pares. Ela não descreve cada estado, município ou sistema de entrega. Um ministério, um governo estadual e uma prefeitura enfrentam restrições diferentes e ainda assim contribuem para o mesmo resultado nacional. Esta página acrescenta a faixa dos estados num indicador, com fonte, e as contestações públicas às pontuações do Brasil. As duas ficam fora da pontuação. A média dos estados é um diagnóstico, e cada valor estadual traz o coeficiente e o ano que o publicador divulgou.',
+  peersHeading: 'O Brasil ao lado de quatro pares',
+  peersHint:
+    'Cada radar usa as mesmas nove capacidades e a mesma escala. Abra um para ler o país ao lado do Brasil, linha a linha, na comparação internacional em inglês.',
+  peerStrongest: 'Sinal atual mais forte: {dimension}.',
+  peerNone: 'Nenhuma capacidade com pontuação nesta versão.',
+  statesHeading: 'Um valor nacional e {n} unidades da federação',
+  statesHint:
+    'O piloto cobre um indicador. A faixa dos estados acrescenta detalhe e fica fora da comparação entre países.',
+  nationalValue: 'Coeficiente nacional',
+  stateRange: 'Faixa entre as unidades',
+  rangeValue: '{low} a {high}',
+  unitsCount: '{n} unidades da federação, {date}',
+  reconciliationLabel: 'Regra de conciliação',
+  reconciliation: {
+    aggregate: 'agregado',
+    independent: 'independente',
+    context_only: 'só contexto',
+  },
+  reconciliationBody:
+    'A média simples das unidades é {recomposed}, e o valor nacional é {national}, uma diferença de {residual}. Esse número mede a distância entre a leitura estadual e a estatística nacional. Ele não aponta falha em nenhuma das duas e fica fora da pontuação do NCB.',
+  notAvailable: 'indisponível',
+  source: 'Fonte',
+  tableCaption: 'Valor de cada unidade da federação e diferença para o valor nacional',
+  unitColumn: 'Unidade da federação',
+  valueColumn: 'Valor',
+  gapColumn: 'Diferença para o nacional',
+  yearColumn: 'Ano',
+  direction: {
+    higher_better: 'Quanto maior o valor, melhor.',
+    lower_better: 'Quanto menor o valor, mais igual a distribuição.',
+  },
+  institutionsHeading: 'Quem age no território',
+  institutionsHint:
+    'O mapa institucional explica funções e vínculos. Ele não mede desempenho e não altera as pontuações.',
+  institutionsBody: 'A rede do Brasil tem {nodes} instituições e {edges} relações, cada uma com fonte.',
+  institutionsLink: 'Abrir o mapa institucional',
+  disputesHeading: 'As contestações ficam no registro nacional',
+  disputesHint:
+    'A lista mostra as contestações aceitas e as que aguardam revisão sobre o Brasil. As rejeitadas ficam de fora.',
+  disputesNone: 'Ainda não há contestações aceitas ou em revisão sobre o Brasil.',
+  disputeStatus: {
+    submitted: 'aguardando revisão',
+    accepted: 'aceita',
+    rejected: 'rejeitada',
+  },
+  missingFile: 'O arquivo subnacional do Brasil não está disponível nesta implantação.',
+  missingCountry: 'A pontuação do Brasil não está disponível nesta implantação.',
 }
 
 export type LayerPageWords = {
@@ -234,6 +353,7 @@ export const LAYER_WORDS: Partial<Record<Lang, LayerWords>> = {
     field: PT_FIELD_WORDS,
     conditions: PT_CONDITION_WORDS,
     noData: 'Ainda não há dados gerados. Rode pnpm bench all na raiz do repositório e recarregue.',
+    local: PT_LOCAL_WORDS,
   },
   'pt-PT': PT_PT_LAYER_WORDS,
   es: ES_LAYER_WORDS,

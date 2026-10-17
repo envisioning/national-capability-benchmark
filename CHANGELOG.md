@@ -9,6 +9,17 @@ The entries before App 1.0.0 are retrospective, high-level summaries
 reconstructed from the repository history. They document explicit version bumps
 and may skip versions that were never committed.
 
+## App 1.32.0 — 2026-10-17
+
+- **Brazil's layer now reads the states in Portuguese.** The new page at
+  /brasil/estados shows the national Gini coefficient beside the range
+  across the 27 federative units, a sortable table of every unit and its
+  distance from the national value, and the reconciliation rule. The page
+  also shows Brazil's radar beside four peers, links to the institution map
+  and lists the open disputes. Every number comes from the published
+  subnational file. The Estados tab joins the layer's band, and the English
+  reading stays at /country/BRA/local.
+
 ## App 1.31.15 — 2026-10-17
 
 - **Every country has now been searched for every declared gap that a

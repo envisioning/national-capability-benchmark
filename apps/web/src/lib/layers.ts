@@ -115,10 +115,9 @@ export const COUNTRY_LAYERS: readonly CountryLayer[] = [
       { id: 'agenda', label: 'Agenda', slug: 'agenda' },
       { id: 'map', label: PT_BR.capabilityMap.index.navLabel, slug: 'mapa' },
       { id: 'institutions', label: 'Instituições', slug: 'instituicoes' },
-      /* The subnational reading is still an English ground-layer page. The
-       * layer links to it until it is written in Portuguese, at which point
-       * this slug becomes 'estados' and nothing else changes. */
-      { id: 'local', label: 'Estados', slug: null },
+      /* The subnational reading in Portuguese. The English one stays at
+       * /country/BRA/local in the ground layer. */
+      { id: 'local', label: 'Estados', slug: 'estados' },
       /* Labelled Participe since D158, when the page stopped asking for
        * funding; the address keeps its slug. */
       { id: 'support', label: 'Participe', slug: 'apoie' },
