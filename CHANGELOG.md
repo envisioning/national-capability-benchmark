@@ -9,6 +9,15 @@ The entries before App 1.0.0 are retrospective, high-level summaries
 reconstructed from the repository history. They document explicit version bumps
 and may skip versions that were never committed.
 
+## App 1.31.13 — 2026-10-17
+
+- **Cyprus and Slovenia now have a documented case of university and
+  industry collaboration.** Both come from the European Commission's
+  cohesion data, which counts the firms each programme paired with research
+  institutions. Each record says how its target moved: Cyprus beat a target
+  it had lowered from 200 to 120, and Slovenia raised its target only after
+  passing it.
+
 ## App 1.31.12 — 2026-10-17
 
 - **Adult learning and university-industry collaboration now cover every

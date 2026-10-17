@@ -30644,6 +30644,78 @@
           "A large stock of school leavers without certificates who want a second chance"
         ]
       }
+    },
+    {
+      "id": "cyp-competitiveness-rtdi",
+      "indicatorId": "university_industry_collaboration",
+      "iso3": "CYP",
+      "title": "Competitiveness and Sustainable Development programme 2014-2020, research and innovation priority",
+      "claim": "Cyprus's cohesion programme for competitiveness and sustainable development reported that 143 enterprises it supported had cooperated with research institutions by the end of 2023, against a final target of 120, after a slow start in which only five had done so by the end of 2019.",
+      "metric": {
+        "name": "Enterprises cooperating with research institutions, investment priority 1b (common indicator CO26, cumulative implemented value)",
+        "value": 143,
+        "unit": "enterprises",
+        "asOf": "2023"
+      },
+      "secondMetric": {
+        "name": "Original target for the same indicator, before it was lowered in 2020",
+        "value": 200,
+        "unit": "enterprises",
+        "asOf": "2019"
+      },
+      "started": 2018,
+      "status": "concluded",
+      "source": {
+        "publisher": "European Commission, Cohesion Open Data Platform, ESIF 2014-2020 Achievement Details timeseries (programme 2014CY16M1OP001, indicator CO26)",
+        "url": "https://cohesiondata.ec.europa.eu/resource/aesb-873i.json?ms=CY&ind_code=CO26&year=2023",
+        "tier": "international_organization",
+        "retrievedAt": "2026-10-17"
+      },
+      "limits": "The values are what the Cypriot managing authority reported to the Commission in its annual implementation reports, so they are the programme's own account, republished by the Commission without audit. The target moved: it was 200 enterprises until 2019, 100 in 2020 to 2022 and 120 in 2023, so the programme exceeded a target that had been cut, and against the original target it reached 72 percent. Delivery came late, with two enterprises counted in 2018, five in 2019 and most of the total in the last three years. CO26 counts enterprises, not projects, money or results, and any firm that took part in a supported project with a research institution counts once, whatever the size of the collaboration. A research institution includes public research centres as well as universities, and the dataset does not split them or give a figure per call. The money was mostly European Regional Development Fund co-financing administered nationally. The year 2018 is the first year with a reported value, not the first call. The single-year URL carries the 2023 values; the earlier years are in the same dataset without the year filter.",
+      "pattern": {
+        "mechanism": "Cyprus's research and innovation agency ran cohesion-funded calls that paid firms for research projects carried out with universities and research centres, and the managing authority reported each participating firm against a common European indicator.",
+        "preconditions": [
+          "Cohesion funding large relative to the national research budget, with a common indicator reported every year",
+          "Universities and research centres able to sign research agreements with firms",
+          "A small enterprise base able to co-finance research, which is the likely reason uptake came late"
+        ]
+      }
+    },
+    {
+      "id": "svn-ekp-rtdi",
+      "indicatorId": "university_industry_collaboration",
+      "iso3": "SVN",
+      "title": "Cohesion Policy operational programme 2014-2020, research and innovation priority",
+      "claim": "Slovenia's cohesion policy operational programme reported that 241 enterprises it supported had cooperated with research institutions by 2020, against a target of 135 that was later raised to 210, and the count held at 241 through the end of 2023.",
+      "metric": {
+        "name": "Enterprises cooperating with research institutions, investment priority 1a (common indicator CO26, cumulative implemented value)",
+        "value": 241,
+        "unit": "enterprises",
+        "asOf": "2023"
+      },
+      "secondMetric": {
+        "name": "Final target for the same indicator, raised from 135",
+        "value": 210,
+        "unit": "enterprises",
+        "asOf": "2023"
+      },
+      "started": 2016,
+      "status": "concluded",
+      "source": {
+        "publisher": "European Commission, Cohesion Open Data Platform, ESIF 2014-2020 Achievement Details timeseries (programme 2014SI16MAOP001, indicator CO26)",
+        "url": "https://cohesiondata.ec.europa.eu/resource/aesb-873i.json?ms=SI&ind_code=CO26&year=2023",
+        "tier": "international_organization",
+        "retrievedAt": "2026-10-17"
+      },
+      "limits": "The values are what the Slovenian managing authority reported to the Commission in its annual implementation reports, so they are the programme's own account, republished by the Commission without audit. The target moved upward: it was 135 until 2019 and 210 from 2020, after the programme had already passed the first figure, so beating the final target says little on its own. The count stopped growing in 2020 and stayed at 241 to 2023, so the collaboration counted here was mostly delivered in 2016 to 2019. CO26 counts enterprises, not projects, money or results, and any firm that took part in a supported project with a research institution counts once. A research institution includes public institutes as well as universities, and the dataset does not split them or give a figure per call. The money was mostly European Regional Development Fund co-financing administered through Slovenian ministries. The year 2016 is the first year with a reported value, not the first call. The single-year URL carries the 2023 values; the earlier years are in the same dataset without the year filter.",
+      "pattern": {
+        "mechanism": "Slovenian ministries ran cohesion-funded research and innovation calls that paid firms for projects carried out with universities and public institutes, and reported each participating firm against a common European indicator.",
+        "preconditions": [
+          "Cohesion funding large relative to the national research budget, with a common indicator reported every year",
+          "Public universities and institutes able to contract research with firms",
+          "Firms able to co-finance research and carry the administrative load of a structural funds project"
+        ]
+      }
     }
   ]
 }
