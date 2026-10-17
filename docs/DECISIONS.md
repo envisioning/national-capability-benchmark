@@ -9206,3 +9206,63 @@ opinion and send the row back to a gap; the World Bank publishing the
 utility services pillars, or a B-READY procedure count, which would give the
 two remaining rows a successor; or a B-READY round that drops a third of the
 74 countries, which would put the rows under the half-frame gate.
+
+## D168 — The benchmark gains a public AI fitness module, outside every score
+
+*Recorded 2026-10-17. Design: `docs/research/public-ai-fitness/DESIGN.md`.
+Owner choices made by MZ on 2026-10-17. Designed, not built.*
+
+**Decision.** The repository gains a second instrument beside the capability
+benchmark. It tests whether a language model is fit to answer Brazilian
+citizens about public life. It asks 400 questions in Portuguese across four
+topics (public services, public money, legislators, contested policy) and
+grades two constructs: factual accuracy against dated public sources, and
+value restraint on every answer. Its primary user is an institution deciding
+whether a model may serve citizens. Its first output is an open dataset and
+harness. Its results are a profile per model and a pass or fail per topic in
+`grounded` mode, against thresholds MZ sets before the full run.
+
+Five rules hold from the first run:
+
+1. The module never enters a capability score, a confidence, the frame or
+   the panel.
+2. No judge grades an answer from its own lab, and judge agreement is
+   published with every grade.
+3. Restraint stops if judge alpha is below 0.667 after one rubric revision,
+   fixed before any grading, in the pattern of D166.
+4. No overall score and no ordering of models. A gate is per topic and
+   absolute.
+5. Every fact item carries a snapshot date and is graded against the record
+   at that date. A changed fact is a new item version, never an edit.
+
+The tested models are Sabiá-4, Claude Opus 5.5, GPT-5.6 Sol, Gemini 3.1 Pro,
+Grok 4.7 and DeepSeek V4 Pro. Grok is in because Brazilian X users already
+ask it to check political claims in public, and because its vendor states a
+different moderation stance from the other labs.
+
+**Why.** Public bodies in Brazil are deploying models to citizens with no
+public test of either construct. The repository already holds the parts the
+test needs: a multi-vendor gateway provider, a cost command, stored
+provenance (D14), and a stop rule that was proven when it stopped the
+foresight register. The model layer pilot showed that models recall
+published values and fail on unseen ones, which is why an honest abstention
+on a post-cutoff fact grades as correct.
+
+Cross-camp fairness and steelmanning are out of v0. Both need a rater panel
+balanced across political camps, the most expensive and least certain part
+of the plan.
+
+**Cost.** About US$270 per full run with batch rates and rubric caching, and
+US$570 without, before `bench fitness cost` measures the real prompts. MZ
+grades a 5% blind sample by hand on every run. Sabiá is not on the gateway
+and needs its own provider and key. The module needs a viewer surface only if
+a later decision gives it one under D80. A procurement gate is a stronger
+claim than a profile: a model that passes can be cited as fit, and the
+benchmark answers for that citation.
+
+**Overturned by.** A pilot where judge alpha on accuracy, not only restraint,
+stays below 0.667, which would make the grades opinions; no institution
+willing to cite the gate after the pilot result, which would leave a
+procurement instrument with no procurement; or a public test of the same two
+constructs in Portuguese, from a named publisher, that institutions already
+cite.
