@@ -150,6 +150,7 @@ Entregas documentadas ligadas a indicadores ausentes. Elas não alteram as pontu
 - **Rundu-Elundu trunk road upgrade, built late and over budget** (Construção). Namibia's Roads Authority paved the 370 km Rundu-Elundu road through northern Namibia at 142 percent of its originally planned cost, and construction took 68 months against a planned 46, finishing in March 2012 instead of May 2010.
 - **Emergency Income Grant, the 2020 COVID-19 cash payment** (Adaptação). Namibia's government paid a once-off Emergency Income Grant to 769,000 Namibians in 2020, at a cost of N$560 million, as part of its COVID-19 stimulus and relief package.
 - **Drought relief programme 2019/20** (Adaptação). Namibia's Office of the Prime Minister coordinated a N$595.2 million drought relief programme in 2019/20, after the President declared a State of Emergency: National Disaster (Drought) with effect from 6 May 2019, providing monthly food to 172,000 households and funding boreholes through the regional councils, livestock fodder and seed.
+- **Renewable Energy Feed-in Tariff (REFIT) independent power producers** (Coordenação). NamPower, the state utility, contracted 14 private renewable producers of 5 MW each under the REFIT programme, the first three were commissioned by June 2017, and in the year to June 2025 all 14 plants operated and supplied 183.2 GWh, 7.4 percent of the units Namibia put into its grid.
 
 ## Contribua
 

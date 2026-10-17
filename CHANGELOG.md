@@ -9,6 +9,21 @@ The entries before App 1.0.0 are retrospective, high-level summaries
 reconstructed from the repository history. They document explicit version bumps
 and may skip versions that were never committed.
 
+## App 1.31.7 — 2026-10-17
+
+- **Every country is now checked for public-private collaboration.** 19
+  new records and 12 no-case notes close the column. Seven records
+  document a loss: Lesotho ended its national referral hospital
+  partnership in 2021, Georgia moved state health cover from private
+  insurers to its own agency, Albania's health fund takes the national
+  check-up back from its private operator, Lebanon took back the
+  management of its two mobile networks in 2020, Guiné Telecom stopped
+  operating, Pakistan terminated six power purchase agreements in 2024,
+  and Austria's training firms fell by a third from their 1999 peak. The
+  other 12 records are operating concessions and independent power
+  programmes. The notes name the sources searched and the first test
+  each candidate failed. Reversals rise from 157 to 164 in 803 records.
+
 ## App 1.31.6 — 2026-10-17
 
 - **The sources page lists the three B-READY series** that replace the

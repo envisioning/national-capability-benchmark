@@ -146,6 +146,7 @@ As condições descrevem aquilo com que um país conta: infraestrutura, acesso, 
 Entregas documentadas ligadas a indicadores ausentes. Não alteram as pontuações nem a solidez da evidência.
 
 - **O Projeto do Porto de Bissau, concluído com dois anos e meio de atraso** (Construção). A autoridade portuária da Guiné-Bissau (JAPG) reabilitou o antigo cais comercial do Porto de Bissau, construiu portos fluviais e rampas para embarcações e, com um novo cais de águas profundas financiado em paralelo por quatro fundos árabes, concluiu o Projeto do Porto de Bissau, financiado pela AID, a 30 de junho de 1990, quando o previsto era 31 de dezembro de 1987, a um custo final de 20,0 milhões de dólares contra uma estimativa inicial de 17,36 milhões de dólares.
+- **Guiné Telecom concession, and its collapse** (Coordenação). Guinea-Bissau gave Guiné Telecom, an incumbent in which Portugal Telecom was the major stockholder, an exclusive concession to run national telecommunications in 1989; fixed telephone subscriptions peaked at 11,197 in 2002 and fell to 4,844 in 2009, after which the World Bank series reports zero, Portugal Telecom handed its shares back to the state, and both Guiné Telecom and its mobile arm Guinetel stopped operating.
 
 ## Contribua
 

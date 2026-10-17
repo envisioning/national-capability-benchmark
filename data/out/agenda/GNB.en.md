@@ -146,6 +146,7 @@ Conditions describe what a country has to work with: infrastructure, access, mon
 Documented deliveries linked to missing indicators. They do not affect scores or confidence.
 
 - **Bissau Port Project, delivered two and a half years late** (Building). Guinea-Bissau's port authority (JAPG) rehabilitated the old commercial wharf of Bissau Port, built river ports and ferry ramps and, with a new deepwater wharf financed in parallel by four Arab funds, completed the IDA-financed Bissau Port Project on 30 June 1990 against a planned 31 December 1987, at a final cost of US$20.0 million against an appraisal estimate of US$17.36 million.
+- **Guiné Telecom concession, and its collapse** (Coordination). Guinea-Bissau gave Guiné Telecom, an incumbent in which Portugal Telecom was the major stockholder, an exclusive concession to run national telecommunications in 1989; fixed telephone subscriptions peaked at 11,197 in 2002 and fell to 4,844 in 2009, after which the World Bank series reports zero, Portugal Telecom handed its shares back to the state, and both Guiné Telecom and its mobile arm Guinetel stopped operating.
 
 ## Contribute
 

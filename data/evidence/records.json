@@ -28165,6 +28165,689 @@
           "A Government willing to pass one decision per project, which makes each admission slow"
         ]
       }
+    },
+    {
+      "id": "alb-check-up-concession",
+      "indicatorId": "public_private_collaboration",
+      "iso3": "ALB",
+      "title": "National basic medical check-up concession, and its dismantling",
+      "claim": "Albania's Health Insurance Fund financed a free national check-up for adults aged 35 to 70 through a contract with private operators under the concessions and PPP law, and the programme carried out 454,828 check-ups in 2022 against 475,000 planned and 2,523,419 from 2015 to 2022; in July 2026 the Ministry of Health announced that the check-up service would pass under state administration.",
+      "metric": {
+        "name": "Basic medical check-ups carried out nationwide",
+        "value": 454828,
+        "unit": "check-ups",
+        "asOf": "2022"
+      },
+      "secondMetric": {
+        "name": "Basic medical check-ups planned under the contract",
+        "value": 475000,
+        "unit": "check-ups",
+        "asOf": "2022"
+      },
+      "started": 2015,
+      "status": "dismantled",
+      "source": {
+        "publisher": "Fondi i Sigurimit të Detyrueshëm të Kujdesit Shëndetësor (FSDKSH), reply to an information request on the Kontrolli Mjekësor Bazë programme, January 2024",
+        "url": "https://fsdksh.gov.al/wp-content/uploads/2024/01/pergjigje-21.pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-17"
+      },
+      "limits": "The numbers sit in a PDF reply by the paying fund, which reports on a programme it finances, and they cover one year plus a cumulative total; the reply does not name the private operator. The PPP basis comes from a second official document, Council of Ministers decision no. 185 of 2 April 2014 as amended (fsdksh.gov.al), which tells the fund to contract the check-up with operators selected under law no. 125/2013 on concessions and public-private partnership. The end of the partnership comes from the Ministry of Health's July 2026 bulletin (shendetesia.gov.al), which states that check-up and dialysis services will pass under state administration, in the future tense and without a decision number or effective date; that the concession itself was revoked, and why, is reported by the press and not at an official URL. A reported state audit finding of payments for analyses never performed is press-only and is not used. The loss is the end of the joint delivery by decision, not a fall in screening volume: the state keeps the programme and widens it to every adult over 35, so the record documents a dismantled partnership, not a dismantled service. The check-up count is a count of visits, not of people screened once, and it says nothing about what share of the private payment bought delivered tests.",
+      "pattern": {
+        "mechanism": "The government wrote a national screening entitlement into a Council of Ministers decision and had the health insurance fund buy the service from private operators on a fixed planned volume, then took the service back under state administration in 2026.",
+        "preconditions": [
+          "A single payer able to finance a fixed annual volume of check-ups",
+          "Public primary care centres to recruit and see the patients",
+          "Contract monitoring able to match payments to tests actually performed"
+        ]
+      }
+    },
+    {
+      "id": "aut-lehre",
+      "indicatorId": "public_private_collaboration",
+      "iso3": "AUT",
+      "title": "Duale Lehrausbildung, and the erosion of its training firms",
+      "claim": "Austria runs apprenticeship as a joint delivery in which firms train and pay apprentices under the federal Berufsausbildungsgesetz and the economic chambers and the state certify them, and the number of firms that train fell from 39,906 in 1999 to 26,237 at the end of 2024, a loss of about a third, while apprentices fell from 194,089 in 1980 to 106,452 in 2024.",
+      "metric": {
+        "name": "Training firms (Lehrbetriebe, counted by chamber memberships), 31 December",
+        "value": 26237,
+        "unit": "firms",
+        "asOf": "2024"
+      },
+      "secondMetric": {
+        "name": "Training firms (Lehrbetriebe, counted by chamber memberships), peak of the published series",
+        "value": 39906,
+        "unit": "firms",
+        "asOf": "1999"
+      },
+      "started": 1969,
+      "status": "eroded",
+      "source": {
+        "publisher": "ibw Institut für Bildungsforschung der Wirtschaft, Lehrlingsausbildung im Überblick 2025 (ibw-Forschungsbericht Nr. 225), tables on WKO Lehrlingsstatistik",
+        "url": "https://ibw.at/en/resource/download/2907/ibw-forschungsbericht-225,pdf",
+        "tier": "academic_survey",
+        "retrievedAt": "2026-10-17"
+      },
+      "limits": "Both numbers are inside a 213-page PDF: the training firm series is Tabelle 15 (Entwicklung der Lehrbetriebszahl nach Sparten, 1994 to 2024) and the apprentice series is Tabelle 1 (1970 to 2024). ibw is the research institute of the Austrian economic chambers, and it republishes the chambers' own administrative statistic, so the publisher is close to one of the partners. The firm count is by chamber membership: a firm in several Länder counts more than once, and the series starts in 1994, so 1999 is the peak of the published series, not a proven all-time peak. Much of the fall follows demography: ibw itself attributes the 2007 to 2017 decline mainly to fewer 15-year-olds, and training is concentrating in large firms, so fewer firms can train a similar number of apprentices per cohort. The count does not show training quality, completion or wages. The system is still large and running, so this is erosion of participation, not a collapse. The 1969 start is the current federal act; apprenticeship in Austria is far older.",
+      "pattern": {
+        "mechanism": "The federal state sets occupations and examinations by law, the economic chambers run apprenticeship offices and final examinations, and firms recruit, employ and train apprentices on the job, so delivery depends on how many firms choose to train each year.",
+        "preconditions": [
+          "Statutory economic chambers able to administer contracts and examinations",
+          "Enough small and medium firms for which training pays net of apprentice output",
+          "A steady supply of 15-year-olds who choose the vocational route"
+        ],
+        "travelled": "Switzerland and Germany run sibling systems; Switzerland is filed in this column as che-dual-vet."
+      }
+    },
+    {
+      "id": "bgr-fraport-twin-star",
+      "indicatorId": "public_private_collaboration",
+      "iso3": "BGR",
+      "title": "Varna and Burgas airports concession",
+      "claim": "Bulgaria's Ministry of Transport signed a concession on 10 September 2006 that gave Fraport Twin Star, a German-Bulgarian company 60 percent owned by Fraport, the operation of the state airports at Varna and Burgas, and the two airports served 3.7 million passengers in 2025.",
+      "metric": {
+        "name": "Passengers served at Burgas and Varna airports combined",
+        "value": 3700000,
+        "unit": "passengers",
+        "asOf": "2025"
+      },
+      "started": 2006,
+      "status": "operating",
+      "source": {
+        "publisher": "Fraport Twin Star Airport Management (Fraport Bulgaria), annual traffic release for 2025, 12 January 2026",
+        "url": "https://www.fraport-bulgaria.com/en/press-center/news/archive/2026/Passengers-in-2025.html",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-17"
+      },
+      "limits": "The number is the concessionaire reporting on itself, rounded to 3.7 million, and no official statistical series was checked against it. The concession start and the 60 percent Fraport share come from a second page, Fraport's company listing (fraport.com, Fraport Twin Star Airport Management AD), which gives the term as 40 years while other sources say 35. Passenger counts show the traffic the airports handled, which depends mostly on tourism demand and airline decisions, not on what the public and private partners delivered together; the record carries no figure for investment delivered, service quality or payments to the state. The release names a runway rehabilitation at Burgas worth over 50 million euros but does not say it was completed. This is one concession for two regional airports run by a multinational, not a national programme, and the tier is generous for an operator's press release.",
+      "pattern": {
+        "mechanism": "The Ministry of Transport kept ownership of two Black Sea airports and tendered their operation and investment as one long concession, so a private operator carries traffic risk and capital spending while the state collects concession fees and keeps the assets.",
+        "preconditions": [
+          "Seasonal tourist traffic large enough to make two regional airports bankable as a pair",
+          "A concession law and a ministry able to run, and after a court challenge rerun, an international tender",
+          "An experienced airport operator willing to hold traffic risk for decades"
+        ]
+      }
+    },
+    {
+      "id": "cog-congo-terminal",
+      "indicatorId": "public_private_collaboration",
+      "iso3": "COG",
+      "title": "Congo Terminal container concession at Pointe-Noire",
+      "claim": "The Congolese state conceded the Pointe-Noire container terminal to the Bolloré group's Congo Terminal for 30 years from 2009, and container traffic through the Republic of Congo's ports rose from 355,000 TEU in 2010 to 1,046,064 TEU in 2024.",
+      "metric": {
+        "name": "Container port traffic, Republic of Congo",
+        "value": 1046064,
+        "unit": "TEU",
+        "asOf": "2024"
+      },
+      "secondMetric": {
+        "name": "Container port traffic, Republic of Congo, first year in the series",
+        "value": 355000,
+        "unit": "TEU",
+        "asOf": "2010"
+      },
+      "started": 2009,
+      "status": "operating",
+      "source": {
+        "publisher": "World Bank, World Development Indicators, container port traffic (IS.SHP.GOOD.TU), from UNCTAD",
+        "url": "https://api.worldbank.org/v2/country/COG/indicator/IS.SHP.GOOD.TU?format=json&date=2005:2025&per_page=50",
+        "tier": "international_organization",
+        "retrievedAt": "2026-10-17"
+      },
+      "limits": "The series counts all container lifts in the country, not the concession's own output, and Pointe-Noire is the only container port, so the attribution is by geography. UNCTAD counts a transshipment box twice and includes empties, and Pointe-Noire handles transit and transshipment traffic, so the figure overstates the containers that serve the Congolese economy. The concession facts are not at the source URL: the 30-year award to Bolloré and close to 700 million euros of modernisation since 2009, about half carried by the group, come from the French Treasury's country page (July 2021), and the 2009 start comes from the operator's figures as reported by Financial Afrik in January 2026. Volume is not performance: the World Bank and S&P Global Container Port Performance Index for 2024, as reported by Ecomatin, ranked Pointe-Noire 401st of 403 ports, with its score falling from -145 to -283. Traffic also follows oil revenue and the hinterland, so the growth cannot be credited to the concession alone. The operator is a foreign group, so the state's part is the award, the port authority's share of the quay investment and supervision of the contract.",
+      "pattern": {
+        "mechanism": "The state and its port authority handed container handling at the country's one deep-water port to an international terminal operator under a long concession, and split the quay and equipment investment with it, so private capital and operating know-how carried the volume growth while the port stayed public.",
+        "preconditions": [
+          "A single natural gateway port, so one concession covers national container trade",
+          "An international operator willing to invest against a 30-year term",
+          "Demand from oil-sector imports and transit to inland neighbours"
+        ]
+      }
+    },
+    {
+      "id": "cyp-hermes-airports",
+      "indicatorId": "public_private_collaboration",
+      "iso3": "CYP",
+      "title": "Larnaka and Pafos airports BOT concession to Hermes Airports",
+      "claim": "The Republic of Cyprus handed both of its international airports to the Hermes Airports consortium under a 25-year build-operate-transfer concession in May 2006; the consortium delivered new terminals at Pafos in 2008 and Larnaka in 2009, and traffic rose from 7,028,959 passengers in 2007 to 13,751,247 in 2025.",
+      "metric": {
+        "name": "Passengers at Larnaka and Pafos airports combined",
+        "value": 13751247,
+        "unit": "passengers",
+        "asOf": "2025"
+      },
+      "secondMetric": {
+        "name": "Passengers at Larnaka and Pafos airports combined, first full concession year",
+        "value": 7028959,
+        "unit": "passengers",
+        "asOf": "2007"
+      },
+      "started": 2006,
+      "status": "operating",
+      "source": {
+        "publisher": "Hermes Airports, passenger traffic statistics for Larnaka and Pafos",
+        "url": "https://www.hermesairports.com/corporate/doing-business-with-us/statistics/passenger-traffic/",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-17"
+      },
+      "limits": "The traffic series and the concession terms both come from the concessionaire's own website (the terms on hermesairports.com/corporate/who-we-are/), so this is self-reporting by the private partner and not a state or statistical office count. The tier is the closest available for an operator's traffic table; a reviewer may prefer to treat it as self-reporting. Passenger growth in Cyprus is driven by tourism demand and by airline entry after the 2015 collapse of Cyprus Airways, and the record cannot separate the concession's contribution from demand any operator would have seen. Traffic was flat at about seven million from 2007 to 2015 and fell to 2,312,697 in 2020 before recovering. The site gives no investment amount, only 'a substantial investment', and says nothing on fees paid to the state or on renegotiations. Two airports carry almost all of the island's air access, so the delivery is national in reach, but it is one infrastructure concession, a narrow slice of the construct.",
+      "pattern": {
+        "mechanism": "The Republic of Cyprus bundled both international airports into one 25-year BOT concession, so a consortium of construction, airport-operator and Cypriot investors financed and built the new terminals and recovers the cost from traffic before handing the assets back.",
+        "preconditions": [
+          "An island whose air access runs through two airports, which makes one bundled concession national in reach",
+          "Tourism demand steady enough to finance new terminals from traffic",
+          "Foreign airport operators and local investors willing to share one consortium"
+        ]
+      }
+    },
+    {
+      "id": "geo-map-private-insurers",
+      "indicatorId": "public_private_collaboration",
+      "iso3": "GEO",
+      "title": "State health cover bought through private insurers, and its dismantling",
+      "claim": "From 2007 Georgia's health ministry contracted private insurance companies to buy care for the people covered by its state Medical Assistance Program, and medical policies in force at Georgian insurers reached 1,959,338 at the end of 2013. After the government moved purchasing to its own Social Service Agency under the Universal Health Coverage Program, policies in force fell to 535,505 at the end of 2014.",
+      "metric": {
+        "name": "Medical (health) insurance policies in force at insurers, end of year",
+        "value": 535505,
+        "unit": "policies",
+        "asOf": "2014"
+      },
+      "secondMetric": {
+        "name": "Medical (health) insurance policies in force at insurers, end of year, peak",
+        "value": 1959338,
+        "unit": "policies",
+        "asOf": "2013"
+      },
+      "started": 2007,
+      "status": "dismantled",
+      "source": {
+        "publisher": "Insurance State Supervision Service of Georgia, insurance market statistics, number of policies, 12 months 2014",
+        "url": "https://insurance.gov.ge/en/Statistics/GetFile/544?type=4",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-17"
+      },
+      "limits": "The regulator counts policies, not people, and the count mixes the state programmes with voluntary corporate and retail cover. The 2014 value is in the 2014 Excel file at the source URL; the 2013 peak is in the 2013 file (https://insurance.gov.ge/en/Statistics/GetFile/543?type=4), and the same regulator's 2013 file without state programmes (https://insurance.gov.ge/en/Statistics/GetFile/431?type=4) gives 491,885 medical policies, so state programmes held about 1,467,453 policies at the end of 2013. That split is computed by subtraction, not published, and no split exists for earlier years. The year-end series in the same files was 1,311,287 in 2009, 1,915,952 in 2012 and 533,471 in 2015. The account of the arrangement and of the takeover comes from a World Bank knowledge brief (https://documents1.worldbank.org/curated/en/099802505242216398/pdf/IDU07bfac40d035c20431a0bc1b0755ced4057df.pdf, a PDF), which dates the Social Service Agency's takeover of purchasing to the start of 2013; the policy counts stayed high through 2013 and fell in 2014, and no source here explains the lag. The record documents the end of a public-private delivery model, not a loss of health coverage: the same brief reports that public health spending rose from 19.4 percent of current health expenditure in 2012 to 40.8 percent in 2019. The brief also reports that insurers had integrated with hospitals and contracted selectively, which is a reason the state ended the model.",
+      "pattern": {
+        "mechanism": "The health ministry paid private insurers, first through vouchers the poor could take to any insurer and from 2010 through regional tenders, to carry the risk and buy care for state beneficiaries. In 2013 a new government made its Social Service Agency the single purchaser, and the insurers' public book ran off.",
+        "preconditions": [
+          "Private insurers with provider networks able to absorb a state book",
+          "A state agency able to means-test beneficiaries and pay premiums monthly",
+          "Political consensus on contracting out, which the 2012 change of government removed"
+        ]
+      }
+    },
+    {
+      "id": "gnb-guine-telecom",
+      "indicatorId": "public_private_collaboration",
+      "iso3": "GNB",
+      "title": "Guiné Telecom concession, and its collapse",
+      "claim": "Guinea-Bissau gave Guiné Telecom, an incumbent in which Portugal Telecom was the major stockholder, an exclusive concession to run national telecommunications in 1989; fixed telephone subscriptions peaked at 11,197 in 2002 and fell to 4,844 in 2009, after which the World Bank series reports zero, Portugal Telecom handed its shares back to the state, and both Guiné Telecom and its mobile arm Guinetel stopped operating.",
+      "metric": {
+        "name": "Fixed telephone subscriptions, last year with a non-zero value",
+        "value": 4844,
+        "unit": "subscriptions",
+        "asOf": "2009"
+      },
+      "secondMetric": {
+        "name": "Fixed telephone subscriptions at the peak of the series",
+        "value": 11197,
+        "unit": "subscriptions",
+        "asOf": "2002"
+      },
+      "started": 1989,
+      "status": "dismantled",
+      "source": {
+        "publisher": "World Bank, World Development Indicators, Fixed telephone subscriptions (IT.MLT.MAIN), from ITU data",
+        "url": "https://api.worldbank.org/v2/country/GNB/indicator/IT.MLT.MAIN?format=json&per_page=60",
+        "tier": "international_organization",
+        "retrievedAt": "2026-10-17"
+      },
+      "limits": "The subscription series measures the network, not the partnership: it does not show who invested, what the concession required, or why lines fell. Mobile service from Orange and MTN substituted for fixed lines in the same years, so part of the fall is substitution and not only failure of the incumbent. The zeros from 2010 onward probably mean that no operator reported, not a counted zero, which is why the record uses 2009 as the current value. The ownership facts come from other sources: the 1989 concession and Portugal Telecom's role as major stockholder are stated by the regulator, the Institute of Communications of Guinea Bissau, in an ITU-T workshop document of 2003 (ccTLD Doc 16); the transfer of Portugal Telecom's 40 percent of Guiné Telecom and 55 percent of Guinetel to the state, under an amicable agreement, is a Lusa report republished by RTP that carries no year in its text; and the dormancy of both companies and the 2023 privatisation call are press and law-firm reports (Forbes Africa Lusófona, 29 January 2023; CMS e-alert, 1 February 2023). Sources disagree on the stake: Lusa gives 40 percent, Forbes Africa Lusófona 49 percent.",
+      "pattern": {
+        "mechanism": "The government granted a monopoly concession to a company it co-owned with the former colonial operator, so that a foreign partner would finance and run the national network; when the state stopped paying its bills and the partner stopped investing, the partner returned its shares and the state was left owning an operator it could not run.",
+        "preconditions": [
+          "A foreign operator willing to invest in a small market in return for exclusivity",
+          "A state able to pay for its own telecommunications use and to honour the concession terms",
+          "Political stability long enough for a concession's investment to pay back"
+        ],
+        "travelled": "In 2023 the government announced a tender to sell 80 percent of Guiné Telecom and Guinetel with IFC and World Bank advice, which repeats the original move of bringing in a private partner."
+      }
+    },
+    {
+      "id": "irq-basrah-gas",
+      "indicatorId": "public_private_collaboration",
+      "iso3": "IRQ",
+      "title": "Basrah Gas Company",
+      "claim": "Iraq's Ministry of Oil put the southern gas infrastructure of its South Gas Company into a 25-year joint venture with Shell and Mitsubishi, with the state holding 51 percent, and from May 2013 the venture gathered and processed associated gas that the Rumaila, West Qurna 1 and Zubair oil fields had flared, reaching a raw gas processing capacity of 1 billion standard cubic feet per day by 2019.",
+      "metric": {
+        "name": "BGC raw gas processing capacity",
+        "value": 1,
+        "unit": "billion standard cubic feet per day",
+        "asOf": "2019-10"
+      },
+      "secondMetric": {
+        "name": "Greenhouse gas emissions prevented by BGC since inception, 2013 to 2018",
+        "value": 70,
+        "unit": "million tons CO2e",
+        "asOf": "2018"
+      },
+      "started": 2013,
+      "status": "operating",
+      "source": {
+        "publisher": "International Finance Corporation, Summary of Investment Information, Basrah Gas Co (project 39146)",
+        "url": "https://disclosuresservice.ifc.org/api/ProjectAccess/SIIProject?projectId=39146",
+        "tier": "international_organization",
+        "retrievedAt": "2026-10-17"
+      },
+      "limits": "Both numbers are sponsor information that IFC republished: the disclosure states that IFC has not necessarily verified the project information independently. The capacity figure is installed processing capacity in 2019, not gas actually captured, and the disclosure gives no flared volume, so it cannot show what share of the associated gas the venture captured or how much is still flared. The second number comes from the IFC Environmental and Social Review Summary for the same project (https://disclosuresservice.ifc.org/api/ProjectAccess/ESRSProject?projectId=39146), not from the investment summary, and an avoided-emissions figure rests on a counterfactual the company chose. Both URLs return JSON from IFC's disclosure service; the human-readable page at disclosures.ifc.org renders the same text with JavaScript. The case is one concession in one province, so it shows that the state can run one large joint venture, not how often it does so. The disclosure dates from 2019 and the record cannot show whether the planned expansion to 1.4 billion cubic feet per day by 2024 was delivered. The processing plants at North Rumaila and Khor Al Zubair date from the early 1980s, so part of the capacity is rehabilitated state infrastructure, not new private build.",
+      "pattern": {
+        "mechanism": "The Ministry of Oil transferred South Gas Company's existing southern gas assets into a joint venture in which the state kept majority ownership and an international operator brought capital and operating capability, and the venture sold dry gas into the national grid and LPG to the domestic market under a fixed 25-year term.",
+        "preconditions": [
+          "Existing state gas plants and pipelines that a venture could take over and rehabilitate",
+          "Oil fields under service contracts whose associated gas had no other buyer",
+          "A domestic power sector short of fuel, which gave the captured gas a national buyer"
+        ]
+      }
+    },
+    {
+      "id": "jam-sangster-concession",
+      "indicatorId": "public_private_collaboration",
+      "iso3": "JAM",
+      "title": "Sangster International Airport concession",
+      "claim": "The Government of Jamaica granted MBJ Airports Limited a 30-year build-operate-transfer concession for Sangster International Airport, financed from April 2003 for a US$135 million expansion sized for about 5 million passengers a year, and the airport, which served more than 3 million passengers in 2001, handled 5,105,420 passenger movements in 2024 and 4,495,210 in 2025 after Hurricane Melissa.",
+      "metric": {
+        "name": "Passenger movements at Sangster International Airport",
+        "value": 5105420,
+        "unit": "passenger movements",
+        "asOf": "2024"
+      },
+      "secondMetric": {
+        "name": "Passenger movements at Sangster International Airport, year of Hurricane Melissa",
+        "value": 4495210,
+        "unit": "passenger movements",
+        "asOf": "2025"
+      },
+      "started": 2003,
+      "status": "operating",
+      "source": {
+        "publisher": "Jamaica Civil Aviation Authority, Statistical Report October to December 2025, passenger movements at NMIA and SIA",
+        "url": "https://www.jcaa.gov.jm/wp-content/uploads/2026/02/JCAA-Statistical-Report-Oct-Dec-2025.pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-17"
+      },
+      "limits": "Passenger movements count arrivals, departures and transit passengers, so one traveller counts at least twice, and the figures sit in a table inside a PDF. Traffic measures tourism demand as much as the concession: the source cannot show what state operation would have carried. The concession terms, the US$135 million cost, the 5 million passenger design target and the 2001 baseline of more than 3 million passengers come from a different source, the IFC project disclosure for project 11353 (https://disclosures.ifc.org/project-detail/SPI/11353/sangster-international-airport-montego-bay), which records the financing plan as approved in 2002, not the final cost; JCAA publishes no open passenger series for the years between, so growth over the concession rests on two points from two publishers. The 2025 fall of 12 percent follows Hurricane Melissa in October 2025, which JCAA names as the cause of a 35 percent drop in fourth-quarter movements at the two airports; it is a storm effect, not a loss of the partnership. One airport is a single asset, although it carries most of Jamaica's international air passengers, and the concessionaire is a consortium of foreign airport and construction firms.",
+      "pattern": {
+        "mechanism": "The Government of Jamaica kept ownership of its main tourist airport and let a private consortium finance, expand and run it for 30 years, paid for partly by a passenger fee, so terminal capacity followed tourism growth without public borrowing.",
+        "preconditions": [
+          "Steady tourism demand that makes a passenger fee bankable",
+          "A development lender willing to finance the first phase",
+          "A state able to write and supervise a long concession contract"
+        ],
+        "travelled": "Jamaica reused the model for Norman Manley International Airport in Kingston, under a 25-year concession signed in October 2018."
+      }
+    },
+    {
+      "id": "lbn-mobile-management",
+      "indicatorId": "public_private_collaboration",
+      "iso3": "LBN",
+      "title": "Private management of the state mobile networks, and its end",
+      "claim": "Lebanon's government kept ownership of its two mobile networks, Alfa and Touch, and paid private operators to run them under management contracts from 2004, and mobile subscriptions grew from 884,445 in 2004 to 4,237,962 in 2019, the last full year of private management; the government did not renew the contracts in September 2020 and took management back itself.",
+      "metric": {
+        "name": "Mobile cellular subscriptions, last full year under private management",
+        "value": 4237962,
+        "unit": "subscriptions",
+        "asOf": "2019"
+      },
+      "secondMetric": {
+        "name": "Mobile cellular subscriptions, first year of private management",
+        "value": 884445,
+        "unit": "subscriptions",
+        "asOf": "2004"
+      },
+      "started": 2004,
+      "status": "dismantled",
+      "source": {
+        "publisher": "World Bank, World Development Indicators, mobile cellular subscriptions (IT.CEL.SETS), from ITU data",
+        "url": "https://api.worldbank.org/v2/country/LBN/indicator/IT.CEL.SETS?format=json&date=2004:2022",
+        "tier": "international_organization",
+        "retrievedAt": "2026-10-17"
+      },
+      "limits": "The subscription series shows national mobile scale, not the quality of the management contracts or what the state paid for them, and growth from 2004 also reflects the spread of mobile phones everywhere in those years. Both numbers are at the World Bank URL, but the contract history is not: the end of the contracts in September and October 2020 comes from Freedom House, Freedom on the Net 2021, Lebanon (republished at ecoi.net/de/dokument/2060922.html), and the 2004 start of private management from secondary sources. The loss is the arrangement, not the service: subscriptions stood at 4,251,774 in 2022, about the 2019 level, so the record does not show that service fell after the state took over. The series peaked at 4,657,651 in 2015, under private management, and the 2020 and 2021 values are identical, which suggests a carried-forward estimate. Freedom House also records that the contracts were provisional after the tender expired in 2019, so the collaboration was weakening before it ended.",
+      "pattern": {
+        "mechanism": "The state kept the licences, the assets and the prices, and hired private telecom groups for fixed fees to run the two networks, then let the contracts lapse into provisional extensions and finally took management back into the ministry when it could not agree a new tender.",
+        "preconditions": [
+          "State ownership of the networks, so management could be tendered without selling assets",
+          "A ministry able to set prices and subscription permits, which left the operators little room to compete",
+          "Government stability long enough to re-tender contracts on schedule, which Lebanon lacked after 2019"
+        ]
+      }
+    },
+    {
+      "id": "lka-colombo-terminal-concessions",
+      "indicatorId": "public_private_collaboration",
+      "iso3": "LKA",
+      "title": "Colombo port container terminal concessions, SAGT and CICT",
+      "claim": "The Sri Lanka Ports Authority let two privately led terminal companies in which it holds equity, South Asia Gateway Terminals (development began 1999) and Colombo International Container Terminal (South Container Terminal agreement signed 2011), operate container berths in the Port of Colombo, and in 2024 they handled 2,025,840 and 3,353,067 TEUs, 5.38 million of the port's record 7,792,069 TEUs.",
+      "metric": {
+        "name": "Container throughput, South Asia Gateway Terminals",
+        "value": 2025840,
+        "unit": "TEU",
+        "asOf": "2024"
+      },
+      "secondMetric": {
+        "name": "Container throughput, Colombo International Container Terminal",
+        "value": 3353067,
+        "unit": "TEU",
+        "asOf": "2024"
+      },
+      "started": 1999,
+      "status": "operating",
+      "source": {
+        "publisher": "Sri Lanka Ports Authority, Annual Report 2024, container throughput of Port of Colombo by terminal",
+        "url": "https://www.slpa.lk/uploads/article_attachment/annual-report-2024.pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-17"
+      },
+      "limits": "The figures sit in a 177-page PDF, which the SLPA publishes about its own port, and the 5.38 million combined figure is the sum of the two terminal totals, not a number the report prints. Throughput is about 81 percent transshipment, so it measures Colombo's role as a regional hub for shipping lines more than delivery to Sri Lankan importers and exporters. The report does not restate the concession terms; the joint structure is visible only through the SLPA's equity holdings in both companies and the royalties and lease rent it books from them. CICT's private partner is China Merchants Port, a foreign state-owned group, so a hostile reader can call it a foreign investment with a local landlord. 1999 is the year SAGT development began according to the SLPA chronology, not the first year of operations. The record says nothing about tariffs, efficiency against the SLPA's own terminals, which handled 2,413,162 TEUs, or the value Sri Lanka captured.",
+      "pattern": {
+        "mechanism": "The Sri Lanka Ports Authority kept the land and a minority equity stake and let private terminal companies finance, build and run container berths against royalties and lease rent, then added each new terminal to the same port rather than to a rival one.",
+        "preconditions": [
+          "A port authority that keeps landlord rights and a revenue share",
+          "A location on the main East-West shipping lane that carriers want to call at",
+          "Private partners that bring both capital and shipping-line cargo"
+        ],
+        "travelled": "The SLPA repeated the structure for West Container Terminal I, a 35-year BOT with Adani Ports and John Keells signed in 2021 and 2022."
+      }
+    },
+    {
+      "id": "lso-qmmh-ppp",
+      "indicatorId": "public_private_collaboration",
+      "iso3": "LSO",
+      "title": "Queen 'Mamohato Memorial Hospital PPP, and its termination",
+      "claim": "Lesotho's Ministry of Health replaced its national referral hospital through an 18-year partnership with the private Tsepong consortium, which opened the hospital and three filter clinics in 2010 and 2011 and handled 24,796 admissions in 2018; the government terminated the contract in 2021, about five years before its end date, and took over management in mid-2021.",
+      "metric": {
+        "name": "Admissions at the PPP-run national referral hospital",
+        "value": 24796,
+        "unit": "admissions",
+        "asOf": "2018"
+      },
+      "secondMetric": {
+        "name": "Years of the 18-year contract term cut by the 2021 termination",
+        "value": 5,
+        "unit": "years",
+        "asOf": "2021"
+      },
+      "started": 2011,
+      "status": "dismantled",
+      "source": {
+        "publisher": "McGuire et al., Annals of Global Health (2024), study of the Queen 'Mamohato Memorial Hospital integrated network PPP",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10921972",
+        "tier": "academic_survey",
+        "retrievedAt": "2026-10-17"
+      },
+      "limits": "The source is a peer-reviewed interview study, not a government or World Bank evaluation, and its volume figures come from the hospital itself for one year, 2018. The termination is given only as approximately five years before the contract end, so the second metric is a rounded figure. The record shows one hospital network, the country's single referral facility, so it bears on national delivery only because that facility is the top of the public referral system; it is not a programme of many projects. The source does not give the annual payment to the consortium or its share of the health budget, and that cost is the main reason a reviewer would call the partnership a failure of design before it was a failure of delivery. Admissions after the government takeover are not published at this URL, so the record cannot show whether service fell after the handover.",
+      "pattern": {
+        "mechanism": "The Ministry of Health contracted a private consortium to build and run the national referral hospital and its clinics for a fixed fee against quality standards, then ended the contract in 2021 after a nurse strike and the consortium's dismissal of the strikers broke the relationship.",
+        "preconditions": [
+          "A health budget able to carry a fixed, indexed unitary payment over 18 years",
+          "A ministry able to monitor performance standards and enforce deductions",
+          "Wage policy for public health workers that does not undercut the contract's staffing terms"
+        ]
+      }
+    },
+    {
+      "id": "mar-wind-ipp",
+      "indicatorId": "public_private_collaboration",
+      "iso3": "MAR",
+      "title": "Private wind producers under ONEE power purchase agreements",
+      "claim": "Private independent power producers selling to the state utility ONEE under power purchase agreements generated 47 percent of Morocco's 9,363 GWh of wind electricity in 2024, the largest share of any producer category, while ONEE's own wind farms generated 6 percent; wind supplied 21 percent of national electricity production that year.",
+      "metric": {
+        "name": "Share of national wind generation from private IPPs under ONEE PPAs",
+        "value": 47,
+        "unit": "% of wind generation",
+        "asOf": "2024"
+      },
+      "secondMetric": {
+        "name": "National wind electricity generation",
+        "value": 9363,
+        "unit": "GWh",
+        "asOf": "2024"
+      },
+      "started": 2014,
+      "status": "operating",
+      "source": {
+        "publisher": "Autorité Nationale de Régulation de l'Électricité (ANRE), Rapport annuel 2024",
+        "url": "https://anre.ma/wp-content/uploads/2025/12/ANRE-Rapport-VF-web.pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-17"
+      },
+      "limits": "The 47 percent is read off a pie chart in a PDF (report pages 46 to 47); the text states only that IPPs under ONEE contracts cover most wind generation, followed by law 13-09 free-market operators, and the chart's two largest labels, 47 and 43 percent, match that order. The report gives no GWh figure per producer category, so the IPP output in GWh is not published, only implied. The regulator reports on the sector it regulates, and it does not say what the state paid: the PPA tariffs, take-or-pay obligations and ONEE's fiscal exposure are absent. Wind is one technology; coal at 60 percent of production also runs largely through private concessional plants, which this record does not count. The started year is the full commercial operation of the 301 MW Tarfaya farm under a 20-year ONEE PPA in December 2014, sourced from trade press; smaller private farms selling to the utility existed before it. The record overlaps in method, though not in programme, with the MASEN solar procurement filed as mar-noor-ouarzazate under large project delivery.",
+      "pattern": {
+        "mechanism": "ONEE tendered wind capacity to private developers and bought their output under long-term power purchase agreements, while a separate law, 13-09, let private producers sell renewable power to industrial customers over the national grid, so private capital built most of the country's wind fleet against a state offtaker or a state-licensed market.",
+        "preconditions": [
+          "A single creditworthy state offtaker able to sign 20-year PPAs",
+          "A national energy strategy with capacity targets that gave developers a pipeline",
+          "Domestic industrial groups able to co-develop with foreign utilities"
+        ]
+      }
+    },
+    {
+      "id": "mkd-tav-airports",
+      "indicatorId": "public_private_collaboration",
+      "iso3": "MKD",
+      "title": "Skopje and Ohrid airports concession to TAV Macedonia",
+      "claim": "The government of North Macedonia handed both of the country's international airports, Skopje and Ohrid, to the concessionaire TAV Macedonia in 2010, and combined passenger traffic rose from 729,297 in 2010 to 3,475,288 in 2025.",
+      "metric": {
+        "name": "Passengers at Skopje and Ohrid airports combined",
+        "value": 3475288,
+        "unit": "passengers",
+        "asOf": "2025"
+      },
+      "secondMetric": {
+        "name": "Passengers at Skopje and Ohrid airports combined, first year of the concession",
+        "value": 729297,
+        "unit": "passengers",
+        "asOf": "2010"
+      },
+      "started": 2010,
+      "status": "operating",
+      "source": {
+        "publisher": "TAV Macedonia, press release on 2025 traffic at Skopje and Ohrid airports",
+        "url": "https://airports.com.mk/en-EN/media-centre/press-releases/page/tav-airports-2025-strong-and-positive-year-for-both-macedonian-airports-3-5-million-passengers-travelled-which-is-9-annual-increase",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-17"
+      },
+      "limits": "Both numbers come from the concessionaire's own press releases, not from the state or a statistical office, and the 2010 figure sits on a second TAV page (airports.com.mk, release 'Five years of TAV in Macedonia'). The tier is the closest available for an operator's traffic count; a reviewer may prefer to treat it as self-reporting. Passenger growth mostly reflects low-cost carrier entry and diaspora travel, and the record cannot separate what the concession contributed from what any operator of the two airports would have seen. Passengers measure throughput, not the quality of the partnership. The concession also lost part of its scope: the cargo airport at Shtip that TAV was obliged to build was declared not economically justifiable in 2020, and the government diverted the 49.7 million euros planned for it to other projects through an annex (Meta.mk, 21 September 2020, reporting the economy minister). The amount TAV actually invested against its original commitment is not published at either source. Two airports in a small country is national in reach but a narrow slice of the construct.",
+      "pattern": {
+        "mechanism": "The government tendered the operation of both national airports as one 20-year concession, so a single private operator carried the terminal build and the route development and paid the state from traffic it grew.",
+        "preconditions": [
+          "An airport system small enough to bundle into one concession",
+          "Latent demand from a large diaspora and underserved low-cost routes",
+          "A government willing to renegotiate scope by annex when an obligation stopped making sense"
+        ]
+      }
+    },
+    {
+      "id": "mwi-mobile-money",
+      "indicatorId": "public_private_collaboration",
+      "iso3": "MWI",
+      "title": "Mobile money under the Reserve Bank of Malawi",
+      "claim": "Mobile network operators licensed and supervised by the Reserve Bank of Malawi grew mobile money from 185,758 subscribers in 2012 to 19.9 million registered wallets in 2025, of which about 11.7 million transacted within 90 days, served by 482,188 agents active within 90 days.",
+      "metric": {
+        "name": "Mobile money subscribers active within 90 days",
+        "value": 11700000,
+        "unit": "subscribers",
+        "asOf": "2025"
+      },
+      "secondMetric": {
+        "name": "Mobile money agents active within 90 days",
+        "value": 482188,
+        "unit": "agents",
+        "asOf": "2025"
+      },
+      "started": 2012,
+      "status": "operating",
+      "source": {
+        "publisher": "Reserve Bank of Malawi, 2025 National Payments System (NPS) Report",
+        "url": "https://www.rbm.mw/PaymentSystems/GetContentFile/?ContentID=63344",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-17"
+      },
+      "limits": "The numbers sit in a PDF report, on pages 7 to 10, and the operators report them to the central bank, so the figures are self-reported by the firms that deliver the service. The 11.7 million active figure is a rounded number the report gives as approximate. The report says the 19.9 million registered wallets include churned and inactive SIM cards and may be restated downward under new reporting standards, and that both activity rates fell against 2024. The delivery is the mobile network operators' product; the state's part is licensing, supervision and interoperability through the National Switch, so the record bears on collaboration only through that role. In 2025, 44.5 percent of rural agents were active within 90 days against 74.9 percent of urban agents.",
+      "pattern": {
+        "mechanism": "The Reserve Bank of Malawi licensed mobile network operators to issue e-money from 2012, supervised their agent networks, and connected their wallets to banks through the National Switch, so private distribution carried a payment service to most adults.",
+        "preconditions": [
+          "A central bank willing to license non-bank e-money issuers",
+          "Mobile operators with national coverage and an agent channel",
+          "A shared switch so wallets and bank accounts can pay each other"
+        ],
+        "travelled": "The model follows Kenya's sequencing of permit first, regulate after, which most East and Southern African central banks copied."
+      }
+    },
+    {
+      "id": "nam-refit",
+      "indicatorId": "public_private_collaboration",
+      "iso3": "NAM",
+      "title": "Renewable Energy Feed-in Tariff (REFIT) independent power producers",
+      "claim": "NamPower, the state utility, contracted 14 private renewable producers of 5 MW each under the REFIT programme, the first three were commissioned by June 2017, and in the year to June 2025 all 14 plants operated and supplied 183.2 GWh, 7.4 percent of the units Namibia put into its grid.",
+      "metric": {
+        "name": "Energy supplied by REFIT independent power producers",
+        "value": 183.2,
+        "unit": "GWh",
+        "asOf": "2025"
+      },
+      "secondMetric": {
+        "name": "REFIT share of total units into the system",
+        "value": 7.4,
+        "unit": "% of units into system",
+        "asOf": "2025"
+      },
+      "started": 2017,
+      "status": "operating",
+      "source": {
+        "publisher": "NamPower, Integrated Annual Report 2025 (financial year to 30 June 2025)",
+        "url": "https://www.nampower.com.na/Media/Document/108386cd-c2b5-4861-97ac-69a0eea46309.pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-17"
+      },
+      "limits": "The figure is the state utility reporting on its own purchases, inside a 264-page PDF (page 104 carries the REFIT sentence, page 125 the 70 MW contracted capacity). The programme is small: 70 MW in a system with a maximum demand of 670 MW, and Namibia still imported 48 percent of its electricity in the same year, so the REFIT plants did not change the country's supply position. The share fell from 7.7 percent in 2024 to 7.4 percent in 2025, which the report attributes to no loss of plants. The programme was a fixed tariff paid to 14 licensees, not a competitive procurement, and the 5 MW cap per plant and the 30 percent previously disadvantaged ownership rule were policy choices whose cost the record does not show. The 2017 start year comes from a newspaper report of the first three commissionings, not from NamPower.",
+      "pattern": {
+        "mechanism": "The Ministry of Mines and Energy, the Electricity Control Board and NamPower reserved 70 MW for small private renewable plants, licensed 14 producers at 5 MW each, and NamPower signed 25-year power purchase agreements at a set tariff, so private capital built generation the utility had not financed itself.",
+        "preconditions": [
+          "A creditworthy single buyer able to sign long-term purchase agreements",
+          "A regulator that issues generation licences to non-utility producers",
+          "Solar resource strong enough for small plants to pay back at a fixed tariff"
+        ]
+      }
+    },
+    {
+      "id": "npl-ipp-hydropower",
+      "indicatorId": "public_private_collaboration",
+      "iso3": "NPL",
+      "title": "Independent power producers under NEA power purchase agreements",
+      "claim": "The Nepal Electricity Authority bought power from private hydropower, solar and bagasse producers under long-term power purchase agreements, and in fiscal year 2025/26 those producers supplied 10,825 GWh of the 18,624 GWh available on the national grid, up from 1,623 GWh in 2017.",
+      "metric": {
+        "name": "Energy purchased by NEA from independent power producers",
+        "value": 10825,
+        "unit": "GWh",
+        "asOf": "2026"
+      },
+      "secondMetric": {
+        "name": "Energy purchased by NEA from independent power producers, fiscal year 2017",
+        "value": 1623,
+        "unit": "GWh",
+        "asOf": "2017"
+      },
+      "started": 2000,
+      "status": "operating",
+      "source": {
+        "publisher": "Nepal Electricity Authority, A Year in Review, Fiscal Year 2025/2026 (annual report)",
+        "url": "https://nea.org.np/uploads/shares/td_tender/A%20Year%20In%20Review%20Annual%20Report%202025_2026_compressed.pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-17"
+      },
+      "limits": "The numbers sit inside a 232-page PDF of about 10 MB: the purchased-energy figures are in the financial highlights table and the ten-year availability table, and NEA is the buyer reporting on its own purchases. Purchased energy measures what the private side delivered, not the quality of the collaboration: the same report shows NEA froze new hydropower agreements for years, and press reports put about 16,000 MW of private projects in limbo, so the pipeline side of the partnership is strained even while delivery grows. The report's figure of 227 IPP projects with 3,459 MW reads, against its own installed capacity table, as including the 748.4 MW of NEA subsidiaries, which are state-controlled companies, so the private-only capacity is closer to the table's 2,710 MW of IPP hydro, solar and bagasse. The fiscal year ends in mid-July, so '2026' means fiscal year 2025/26. The start year rests on the commercial operation date of the Khimti Khola plant, listed in the report's appendix in the Bikram Sambat calendar as 2057.03.27, which converts to mid-2000. The purchased volume includes energy NEA later exported: the same report shows 3,965 GWh exported to India and Bangladesh in the year, so the IPP figure is not all domestic consumption.",
+      "pattern": {
+        "mechanism": "The state utility signed standard long-term power purchase agreements with licensed private developers and kept the grid and the single-buyer role, so private capital built most new generation while NEA carried the offtake and transmission risk.",
+        "preconditions": [
+          "A single state buyer able to sign bankable long-term tariffs",
+          "A domestic banking and equity market willing to finance small and medium hydropower",
+          "Transmission built fast enough to evacuate the new plants, which the report names as a recurring constraint"
+        ]
+      }
+    },
+    {
+      "id": "pak-ipp-programme",
+      "indicatorId": "public_private_collaboration",
+      "iso3": "PAK",
+      "title": "Independent power producer programme, and its erosion",
+      "claim": "Through the Private Power and Infrastructure Board, Pakistan's government commissioned 101 private power plants with 25,841 MW of capacity under long-term purchase contracts, and by March 2025 only 88 plants with 20,726 MW still operated, after the government terminated the purchase agreements of six of them, Hub, Lalpir, Pakgen, Roush, Saba and Atlas, with effect from 1 October 2024.",
+      "metric": {
+        "name": "Capacity of operational PPIB-facilitated IPPs",
+        "value": 20726,
+        "unit": "MW",
+        "asOf": "2025-03"
+      },
+      "secondMetric": {
+        "name": "Cumulative capacity of IPPs commissioned through PPIB",
+        "value": 25841,
+        "unit": "MW",
+        "asOf": "2025-03"
+      },
+      "started": 1994,
+      "status": "eroded",
+      "source": {
+        "publisher": "Finance Division, Government of Pakistan, Pakistan Economic Survey 2024-25, chapter 14 Energy",
+        "url": "https://finance.gov.pk/survey/chapter_25/14_Energy.pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-17"
+      },
+      "limits": "Both numbers sit in one PDF and are read from its text, with PPIB as the underlying source. The 25,841 MW is cumulative capacity ever commissioned, not a published peak of capacity operating at one time, so the 5,115 MW gap overstates the loss: some of the 13 plants that no longer operate left at the scheduled end of their contracts, and the survey does not split expiries from terminations. The survey ties the six terminations to a fall in installed thermal capacity from 28,766 MW in FY 2024 to 25,937 MW in March 2025, and it calls them a deliberate removal of costly and underutilized thermal contracts, so a reader can also see this as a buyer ending contracts it no longer needed rather than a loss of collaboration capacity. The same chapter shows the programme still adding plants, among them the 884 MW Suki Kinari hydropower project. The record does not show the price of capacity payments that drove the terminations, the settlement terms, or the later renegotiation of other contracts, none of which appear at this URL. The survey does not state the 1994 start or how close the terminated contracts were to their end: Dawn reported that four of the plants were set up under the 1994 power policy, Hub Power before it, and that their contracts were set to expire within two to three years, which makes the early loss smaller than the termination suggests.",
+      "pattern": {
+        "mechanism": "The federal government let private firms build and own power plants and bought their output under long-term purchase agreements with sovereign guarantees issued through PPIB, which closed the shortage, then made the state liable for capacity payments it could not afford and led it to terminate the oldest contracts.",
+        "preconditions": [
+          "A sovereign guarantee that private lenders would accept",
+          "A single public buyer able to sign take-or-pay contracts",
+          "Demand forecasts that the contracted capacity later outran"
+        ]
+      }
+    },
+    {
+      "id": "tto-ipp-model",
+      "indicatorId": "public_private_collaboration",
+      "iso3": "TTO",
+      "title": "PowerGen and the independent power producer model",
+      "claim": "In December 1994 T&TEC sold its generating assets to PowerGen, a company it kept 51 percent of beside private investors, and since then independent power producers have generated Trinidad's electricity for sale to T&TEC; the regulator put their contracted capacity at 1,754 MW for 2023 to 2027, against a maximum demand of 1,356 MW in 2021.",
+      "metric": {
+        "name": "Contracted generating capacity at the four IPP power stations",
+        "value": 1754,
+        "unit": "MW",
+        "asOf": "2023"
+      },
+      "secondMetric": {
+        "name": "T&TEC system maximum demand",
+        "value": 1356,
+        "unit": "MW",
+        "asOf": "2021"
+      },
+      "started": 1994,
+      "status": "operating",
+      "source": {
+        "publisher": "Regulated Industries Commission, Final Determination for the Electricity Transmission and Distribution Sector of Trinidad and Tobago 2023 to 2028",
+        "url": "https://www.ric.org.tt/wp-content/uploads/2023/11/RICs-Final-Determination-for-the-Electricity-Transmission-and-Distribution-Sector-of-Trinidad-and-Tobago-2023-2028.pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-17"
+      },
+      "limits": "Both numbers are inside a long PDF: the contracted capacity is a note under Table 7.7 and is a projection for 2023 to 2027, and the maximum demand is in Table 6.1. Contracted capacity measures what T&TEC pays for, not what the plants delivered, and respondents to the regulator objected that the take-or-pay contracts make customers pay for excess capacity. Not all of that capacity is joint: the 720 MW Union Estate plant (TGU) began as a joint venture with AES, but the state bought AES out in July 2013 and has owned it outright since, so the public-private part is PowerGen, 51 percent T&TEC, and the wholly private Trinity Power. The state also supplies the gas the plants burn, so the private side carries plant risk only. The power purchase agreements are not public, so prices and performance terms cannot be checked.",
+      "pattern": {
+        "mechanism": "T&TEC divested its generation into a company it controlled with private shareholders, paid for the assets in equity, and then bought all output under take-or-pay contracts while supplying the fuel itself, so private partners ran plants with guaranteed revenue and no fuel risk.",
+        "preconditions": [
+          "A state gas company able to supply cheap natural gas to the utility",
+          "A single-buyer utility whose contracts private investors trust to be paid",
+          "Existing generating plant the state could sell into a joint company"
+        ]
+      }
     }
   ]
 }

@@ -152,6 +152,7 @@ Documented deliveries linked to missing indicators. They do not affect scores or
 
 - **Child Grants Programme drought top-ups, 2020** (Adaptability). After Lesotho declared a drought emergency in October 2019, the government and the World Bank restructured the Social Assistance Project in January 2020 to reallocate US$7.4 million, and between February and September 2020 the Ministry of Social Development paid more than 40,000 Child Grants Programme households a LSL 500 monthly top-up for six months and added about 10,000 new households, which it kept on the programme at its own cost.
 - **Metolong Dam and Water Supply Programme** (Building). Lesotho's Metolong Authority built the Metolong Dam and raw water pump station near Maseru, starting impoundment on 15 February 2014 against a contract date of 31 October 2012 and delivering 93 megalitres a day on 8 October 2014 against a contract date of 1 July 2013, with every component of the programme overrunning its cost.
+- **Queen 'Mamohato Memorial Hospital PPP, and its termination** (Coordination). Lesotho's Ministry of Health replaced its national referral hospital through an 18-year partnership with the private Tsepong consortium, which opened the hospital and three filter clinics in 2010 and 2011 and handled 24,796 admissions in 2018; the government terminated the contract in 2021, about five years before its end date, and took over management in mid-2021.
 
 ## Contribute
 

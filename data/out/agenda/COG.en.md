@@ -156,6 +156,7 @@ Documented deliveries linked to missing indicators. They do not affect scores or
 
 - **Lisungi emergency cash transfers for COVID-19** (Adaptability). The Republic of Congo's Ministry of Social Affairs and the Lisungi programme unit paid one-off emergency cash transfers of about US$82 to more than 206,800 mostly urban households hit by COVID-19 by April 2022, above a target of 200,000, while the social registry used to target them grew to more than 830,000 households and 95 percent of the transfers were paid digitally.
 - **Realignment of the Congo-Ocean Railway through the Mayombe, and its overruns** (Building). The Republic of the Congo's transport agency ATC rebuilt an 88 km section of the Brazzaville to Pointe-Noire railway through the Mayombe range, with 19 bridges, three tunnels including one of 4.6 km and 17 million m3 of earthworks, completing it in mid-1985 against an expected end of 1979 at a cost of US$399 million against an estimate of US$149 million, an overrun of 168 percent.
+- **Congo Terminal container concession at Pointe-Noire** (Coordination). The Congolese state conceded the Pointe-Noire container terminal to the Bolloré group's Congo Terminal for 30 years from 2009, and container traffic through the Republic of Congo's ports rose from 355,000 TEU in 2010 to 1,046,064 TEU in 2024.
 
 ## Contribute
 
