@@ -9,6 +9,15 @@ The entries before App 1.0.0 are retrospective, high-level summaries
 reconstructed from the repository history. They document explicit version bumps
 and may skip versions that were never committed.
 
+## App 1.31.15 — 2026-10-17
+
+- **Every country has now been searched for every declared gap that a
+  delivery can evidence.** The last 28 government foresight cells close
+  with notes. Across the eight gaps and 125 countries, 700 cells hold a
+  documented case and 300 hold a note naming what was searched and why
+  nothing qualified. A note says no case met the inclusion rule, not that
+  the country lacks the capability.
+
 ## App 1.31.14 — 2026-10-17
 
 - **Government foresight has 25 more countries searched.** Eight new
