@@ -9,6 +9,14 @@ The entries before App 1.0.0 are retrospective, high-level summaries
 reconstructed from the repository history. They document explicit version bumps
 and may skip versions that were never committed.
 
+## App 1.31.5 — 2026-10-17
+
+- **The foresight register stops.** Two coders from different model vendors
+  disagreed on what counts as a foresight body more often than the codebook
+  allows, after three revisions, so the rule fixed before coding ends the
+  register. Government foresight stays a declared gap, and documented cases
+  will fill it country by country, as for the other gaps. Decision D166.
+
 ## App 1.31.4 — 2026-10-16
 
 - **Every country is now checked for regulatory sandbox activity.** Seven

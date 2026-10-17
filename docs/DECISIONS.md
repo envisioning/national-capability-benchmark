@@ -9079,3 +9079,47 @@ native speaker of any of the four varieties.
 Angolan or Mozambican usage in a way a reader notices, which would call for a
 per-country override on top of pt-PT; or a layer that its country's readers
 do not use, which would argue for withdrawing the computed layers.
+
+## D166 — The foresight register stops, and foresight goes back to the evidence grid
+
+*Recorded 2026-10-17. Applies the stop rule in section 8 of
+`docs/research/anticipation/FORESIGHT-REGISTER-CODEBOOK.md`. Supersedes D148.
+Closes #68. The recode and its spot-check are e59cab53.*
+
+**Decision.** The project-coded register for `government_foresight_capacity`
+stops. The row stays a declared gap, unscored. Foresight returns to the
+evidence grid as an ordinary column: its 53 open cells close by record or
+no-case note under `docs/EVIDENCE.md`, like every other column. No codebook
+1.4 is written.
+
+**Why.** Codebook section 8 was fixed before any coding: *stop* when an alpha
+is below 0.667 after one revision. The 1.3 recode was the third revision.
+Under it I1 alpha is 0.548, I3 is 0.620 and body-by-body alpha is 0.616. The
+rule fires on all three. The spot-check passed D148 (one of 21 sampled bodies
+overturned, no country item changed), so the coders' facts hold. They
+disagree on what counts as a qualifying body or a statute, where one coder
+finds a body or a mandate the other misses (OSPRE, Ipea, SPING). That is the
+construct failing to fix one reading, not the coders failing to read.
+
+Round 2 under codebook 1.1 reached alpha 1.00 with two coders of one vendor.
+Under 1.3 the coders were of two vendors (Opus and GPT through codex), and
+agreement fell to 0.55 to 0.62. D148 named correlated errors as a cost. This
+recode measured that cost: most of round 2's agreement was shared error.
+
+Two other exits were open and are declined. Writing a 1.4 after seeing
+which points split the coders is fitting the rule to the data, which the
+pre-registration exists to prevent. Dropping I1 and I3 leaves I2, the product
+item, and I4, which has sat at the floor in every round: a one-item register
+that reads whether a body published a forward-looking product. The evidence
+grid already carries that reading, case by case, with its limits stated.
+
+**Cost.** Anticipation keeps two scored rows. Its income correlation, r 0.86
+on 9.3.0, stands as a published finding against the claim, and the third row
+that could have tested it does not arrive. The work in four codebook versions
+and three recodes produces no scored series. It stays in
+`docs/research/anticipation/` and `data/research/` as the record of why.
+
+**Overturned by.** A published, comparable foresight series from a named
+publisher, which would promote the gap under D20; or a construct for
+foresight capacity that two coders of different vendors code at alpha 0.80
+or above on a fresh pilot, under rules fixed before coding.
