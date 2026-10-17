@@ -9,6 +9,15 @@ The entries before App 1.0.0 are retrospective, high-level summaries
 reconstructed from the repository history. They document explicit version bumps
 and may skip versions that were never committed.
 
+## App 1.31.11 — 2026-10-17
+
+- **Adult learning now has cases or searched notes for 115 of 125
+  countries.** 15 new records cover national training and second-chance
+  programmes from Czechia and Greece to Kazakhstan, Sri Lanka, Madagascar
+  and Zimbabwe. One documents a loss: Mali's vocational training fund
+  trained 661 people in its informal economy division in 2023, against
+  12,951 in 2015.
+
 ## App 1.31.10 — 2026-10-17
 
 - **University and industry collaboration now has cases or searched notes

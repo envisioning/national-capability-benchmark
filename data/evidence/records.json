@@ -29822,6 +29822,540 @@
           "A national budget commitment to continue the facility after external financing ends, which was the missing condition here"
         ]
       }
+    },
+    {
+      "id": "ukr-dsz-profnavchannia",
+      "indicatorId": "adult_learning_participation",
+      "iso3": "UKR",
+      "title": "State Employment Service vocational training",
+      "claim": "Ukraine's State Employment Service put 93,000 people through vocational training in 2025, 55,000 of them registered unemployed and 38,000 in its own vocational education centres, after 33,000 in 2023, the second full year of the war.",
+      "metric": {
+        "name": "People who completed training through the State Employment Service in the year",
+        "value": 93000,
+        "unit": "people",
+        "asOf": "2025"
+      },
+      "secondMetric": {
+        "name": "Unemployed people in vocational training through the service in 2023",
+        "value": 33000,
+        "unit": "people",
+        "asOf": "2023"
+      },
+      "started": 1991,
+      "status": "operating",
+      "source": {
+        "publisher": "Government of Ukraine portal (kmu.gov.ua), State Employment Service results for 2025, 6 January 2026",
+        "url": "https://www.kmu.gov.ua/news/u-2025-rotsi-za-spryiannia-derzhavnoi-sluzhby-zainiatosti-pratsevlashtovano-ponad-315-tysiach-liudei",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-17"
+      },
+      "limits": "Both figures are the service reporting on itself in government news items, rounded to the thousand, and not a statistical table; the 2023 figure comes from a separate item (https://www.kmu.gov.ua/news/derzhavna-sluzhba-zainiatosti-osnovni-zdobutky-2023-roku) and counts unemployed trainees only, while the 2025 figure counts all trainees, so the two are not strictly comparable. 93,000 people is about one percent of the working-age population the service can reach, far below the indicator's construct of all adult participation. The same service reported 93,000 trainees for 2020, before the full-scale invasion, so 2025 is a recovery to the pre-war level and not an expansion. The 88 percent employment rate after training is self-reported and has no comparison group. The service trains inside territory under government control, so the count does not cover occupied regions or the millions of Ukrainians abroad.",
+      "pattern": {
+        "mechanism": "The State Employment Service funds training for registered unemployed people through its own vocational education centres and contracted providers, and since 2023 also issues training vouchers that let adults choose a course and provider themselves.",
+        "preconditions": [
+          "A national register of jobseekers that ties benefit receipt to contact with a counsellor",
+          "A network of state-owned training centres that kept operating under wartime conditions",
+          "Unemployment insurance and donor funding that held up through the war"
+        ]
+      }
+    },
+    {
+      "id": "cze-rekvalifikace",
+      "indicatorId": "adult_learning_participation",
+      "iso3": "CZE",
+      "title": "Labour Office retraining (rekvalifikace)",
+      "claim": "Czech Labour Office retraining reached almost 16,500 jobseekers and job applicants in 2023, 14,300 of them in courses they chose themselves, up from about 3,000 chosen retraining courses in 2018, according to the Ministry of Labour and Social Affairs.",
+      "metric": {
+        "name": "Jobseekers and job applicants who took Labour Office retraining in the year",
+        "value": 16500,
+        "unit": "people (almost)",
+        "asOf": "2023"
+      },
+      "secondMetric": {
+        "name": "Chosen retraining courses started",
+        "value": 3000,
+        "unit": "courses (approximately)",
+        "asOf": "2018"
+      },
+      "started": 1991,
+      "status": "operating",
+      "source": {
+        "publisher": "Ministerstvo práce a sociálních věcí (Ministry of Labour and Social Affairs), Analýza rekvalifikací: kde jsme a co dál?, December 2024",
+        "url": "https://www.mpsv.cz/cms/documents/e5a212d8-8b68-cf2f-205a-55a0da3402b5/Anal%C3%BDza%20rekvalifikac%C3%AD%20-%20kde%20jsme%20a%20co%20d%C3%A1l%20(1).pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-17"
+      },
+      "limits": "The figures are read from a PDF analysis by the ministry that runs the programme, and the 2018 figure is approximate and counts courses, not people. 16,500 people a year is a fraction of one percent of Czech adults; the same analysis says only 2.14 percent of registered unemployed people enter retraining and that Czech spending on retraining is among the lowest in the EU. The growth is driven by job applicants who are not unemployed, through a ministry e-shop, and only 11 percent of 2023 spending came from national funds, the rest mostly from the EU-funded National Recovery Plan, so the scale depends on money that is time-limited. The analysis notes that 2023 data are incomplete.",
+      "pattern": {
+        "mechanism": "The Labour Office pays for retraining courses that it assigns to jobseekers or that people choose themselves, and the ministry opened an online e-shop of subsidised accredited courses that working adults can apply for directly.",
+        "preconditions": [
+          "A register of accredited retraining courses that the Labour Office can pay for",
+          "EU recovery funds to cover most of the cost",
+          "An online application route that does not require registration as unemployed"
+        ]
+      }
+    },
+    {
+      "id": "grc-dypa-skills-upgrade",
+      "indicatorId": "adult_learning_participation",
+      "iso3": "GRC",
+      "title": "DYPA digital and green skills training for the unemployed",
+      "claim": "Greece's public employment service DYPA had paid the training allowance to 70,000 unemployed people who completed a training programme of their choice and were certified in digital and green skills by June 2023, under the national recovery plan.",
+      "metric": {
+        "name": "Unemployed people paid the training allowance after completing and certifying digital or green skills training",
+        "value": 70000,
+        "unit": "people (cumulative)",
+        "asOf": "2023-06-02"
+      },
+      "started": 2022,
+      "status": "operating",
+      "source": {
+        "publisher": "Dimosia Ypiresia Apascholisis (DYPA, Public Employment Service), press release of 2 June 2023",
+        "url": "https://dypa.gov.gr/storage/deltia-typoy/eftasan-tis-70000-oi-pliromes-se-psifiakes-kai-prasines-deksiotites.pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-17"
+      },
+      "limits": "The figure is a count of allowance payments in a one-page press release by the agency that runs the programme, read from a PDF, and it is cumulative, not a yearly rate. The release itself says 83 percent of eligible completers had been paid, so completions were somewhat higher. The programme is funded by NextGenerationEU through the Greece 2.0 recovery plan, so its scale depends on money that ends with the facility. Certification is by independent bodies but the courses are voucher-funded private provision, and the release mentions provider delays and a new penalty regime. Greece's adult participation in training in the EU labour force survey stayed between 3.3 and 5.2 percent from 2015 to 2025, so the programme did not move the national rate the indicator measures.",
+      "pattern": {
+        "mechanism": "DYPA registers unemployed people for a voucher, lets each choose a course from approved providers, and pays a training allowance of up to 1,000 euros only after the trainee passes a certification exam run by an independent body.",
+        "preconditions": [
+          "A digital voucher platform and register of approved providers",
+          "Recovery facility funds large enough to pay allowances at scale",
+          "Independent certification bodies to break the link between provider and pass rate"
+        ]
+      }
+    },
+    {
+      "id": "ltu-imp-kursuok",
+      "indicatorId": "adult_learning_participation",
+      "iso3": "LTU",
+      "title": "Individual learning accounts (Kursuok)",
+      "claim": "Lithuania's individual learning account system, run by the European Social Fund Agency for the Ministry of Education, Science and Sport, had issued 12,896 course completion certificates to adults by the end of 2024, from 59,860 people who registered in the year.",
+      "metric": {
+        "name": "Completion certificates issued for non-formal adult and continuing learning programmes",
+        "value": 12896,
+        "unit": "certificates",
+        "asOf": "2024"
+      },
+      "secondMetric": {
+        "name": "People who registered in the individual learning account system",
+        "value": 59860,
+        "unit": "people",
+        "asOf": "2024"
+      },
+      "started": 2024,
+      "status": "operating",
+      "source": {
+        "publisher": "Europos socialinio fondo agentūra (European Social Fund Agency), Individualių mokymosi paskyrų sistemos 2024 m. veiklos ataskaita",
+        "url": "https://www.kursuok.lt/wp-content/uploads/2026/05/t2024-m-kursuok-ataskaita-4.pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-17"
+      },
+      "limits": "The figures are read from a PDF activity report by the agency that runs the system, and the report itself gives a second, later count of 13,997 certificates for 2024. About 13,000 completers is well under one percent of Lithuanian adults. Only about 16,000 of the 59,860 registered people took part in training at all. Participation is skewed: about 83.5 percent of participants are women and 59.66 percent hold a master's degree or doctorate, so the accounts mostly reach adults who already learn. The report also records 1,148 programmes returned for quality failures and an anti-corruption assessment of the rules, and the Employment Service was not yet connected to the system in 2024.",
+      "pattern": {
+        "mechanism": "The education ministry gives adults an individual learning account on a national platform, a quality agency approves the courses listed on it, and the European Social Fund Agency pays providers for the adults who enrol.",
+        "preconditions": [
+          "A national register of non-formal education programmes and a quality agency to vet them",
+          "EU social fund money to pay a fixed course amount per adult",
+          "A single digital platform tied to national identity"
+        ]
+      }
+    },
+    {
+      "id": "hun-felnott-szakkepzes",
+      "indicatorId": "adult_learning_participation",
+      "iso3": "HUN",
+      "title": "Non-day enrolment in vocational and technical schools",
+      "claim": "Hungary's vocational schools and technical schools enrolled 90,337 students in non-day programmes in the 2025/2026 school year, more than double the 41,422 of 2020/2021, according to the Hungarian Central Statistical Office.",
+      "metric": {
+        "name": "Students in non-day education in vocational schools (szakképző iskola) and technical schools (technikum), sum of two columns",
+        "value": 90337,
+        "unit": "students",
+        "asOf": "2025/2026"
+      },
+      "secondMetric": {
+        "name": "Students in non-day education in the same two school types",
+        "value": 41422,
+        "unit": "students",
+        "asOf": "2020/2021"
+      },
+      "started": 2020,
+      "status": "operating",
+      "source": {
+        "publisher": "Központi Statisztikai Hivatal (Hungarian Central Statistical Office), STADAT table 23.1.1.4",
+        "url": "https://www.ksh.hu/stadat_files/okt/hu/okt0004.html",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-17"
+      },
+      "limits": "The metric is computed: the sum of the non-day columns for vocational schools (42,496) and technical schools (47,841) in 2025/2026, and 15,803 plus 25,619 in 2020/2021. Non-day students are mostly adults but the table does not report age. In 2019/2020 the same two columns summed to 57,461, so part of the rise is a recovery from a low in the first year of the new school types, and the table marks school types as only partly comparable across the 2016 and 2020 reforms. The source does not say why enrolment rose; the link to the 2019 Vocational Training Act is our reading. Enrolment is not completion, and 90,000 students is around two percent of Hungarian adults. The page blocks automated clients, so a machine check needs a browser.",
+      "pattern": {
+        "mechanism": "The state regrouped vocational schools into vocational training centres under the 2019 Vocational Training Act and offered adults evening and correspondence programmes leading to a state qualification in the same schools that teach teenagers.",
+        "preconditions": [
+          "A state-owned network of vocational schools with spare evening capacity",
+          "A national qualification register that adult and youth routes share",
+          "State funding of adult school-based vocational education without tuition"
+        ]
+      }
+    },
+    {
+      "id": "kaz-skills-enbek",
+      "indicatorId": "adult_learning_participation",
+      "iso3": "KAZ",
+      "title": "Skills Enbek online vocational training platform",
+      "claim": "Kazakhstan's Ministry of Labour and Social Protection runs the Skills Enbek online training platform, on which 107,900 citizens, about 52,400 of them unemployed, earned course certificates in 2024, and 410,900 people had completed training since the platform opened.",
+      "metric": {
+        "name": "Citizens who received a course completion certificate on Skills Enbek in the year",
+        "value": 107900,
+        "unit": "people",
+        "asOf": "2024"
+      },
+      "secondMetric": {
+        "name": "Of whom unemployed",
+        "value": 52400,
+        "unit": "people",
+        "asOf": "2024"
+      },
+      "started": 2021,
+      "status": "operating",
+      "source": {
+        "publisher": "Ministry of Labour and Social Protection of the Population of the Republic of Kazakhstan, press release of 10 January 2025",
+        "url": "https://www.gov.kz/memleket/entities/enbek/press/news/details/915713?lang=ru",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-17"
+      },
+      "limits": "The ministry reports on its own platform in a press release, and the page renders only with JavaScript, so a plain fetch returns an empty shell. A certificate counts a completed online course, and the release states courses last from 1 to 72 hours, so one certificate can be one hour of content; the count is certificates issued to people, not hours, skills or job outcomes. About 108,000 completers is under 1 percent of the adult population. The same release folds in mandatory courses for social workers and individual assistants and the Bastau Business entrepreneurship course (35,300 certificates), so part of the total is training the state requires for its own programmes rather than voluntary adult learning. The 2021 start is the platform's launch year as reported elsewhere and is not stated at the cited URL.",
+      "pattern": {
+        "mechanism": "The labour ministry built a free online course marketplace inside its national employment portal, routes registered unemployed people and programme participants to it, and links each certificate to vacancy suggestions on the state job exchange.",
+        "preconditions": [
+          "A national digital employment portal with a single user identity",
+          "Course authors willing to publish free or subsidised content in Kazakh and Russian",
+          "Internet access good enough for short video courses outside the cities"
+        ]
+      }
+    },
+    {
+      "id": "blr-rynok-truda-training",
+      "indicatorId": "adult_learning_participation",
+      "iso3": "BLR",
+      "title": "Vocational training of the unemployed under the State Programme Labour Market and Employment Promotion",
+      "claim": "Belarus's labour, employment and social protection bodies referred 11,900 unemployed people to vocational training, retraining, upgrading and short courses in 2021 to 2024, 2,300 of them in 2024, and 91.9 percent of the 2024 referrals were training ordered by an employer with a guaranteed job.",
+      "metric": {
+        "name": "Unemployed people referred to vocational training, retraining, upgrading and training courses (measure 16)",
+        "value": 2300,
+        "unit": "people",
+        "asOf": "2024"
+      },
+      "secondMetric": {
+        "name": "Unemployed people referred to the same training, cumulative",
+        "value": 11900,
+        "unit": "people",
+        "asOf": "2021 to 2024"
+      },
+      "started": 2021,
+      "status": "operating",
+      "source": {
+        "publisher": "Ministry of Labour and Social Protection of the Republic of Belarus, report on the implementation in 2021 to 2024 of the State Programme Labour Market and Employment Promotion for 2021 to 2025",
+        "url": "https://mintrud.gov.by/uploads/files/GP-Rynok-2021-2024.pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-17"
+      },
+      "limits": "The ministry reports on its own programme, in a Russian-language PDF; the figures are on pages 6 to 7. Referrals are not completions or job outcomes. The scale is very small: 2,300 people in a country of about 9 million, which the report itself puts at 6 percent of unemployed people needing work, and registered unemployment in Belarus is low by design, so the count says little about adults in work. The same report gives a separate indicator, the share of employees who completed vocational training, at 16 percent in 2024, which sits closer to the construct but is employer training reported by the state, not a delivery. The 2021 start is the start of the current five-year programme; training of the unemployed by the employment bodies predates it and is not counted.",
+      "pattern": {
+        "mechanism": "District employment bodies refer registered unemployed people to short vocational courses, mostly training ordered by a named employer who guarantees the job afterwards, with the state paying tuition and a stipend.",
+        "preconditions": [
+          "A register of unemployed people kept by district labour offices",
+          "State and enterprise training centres able to run short worker courses",
+          "Employers in a mostly state-owned economy who accept a hiring guarantee"
+        ]
+      }
+    },
+    {
+      "id": "geo-sesa-training-retraining",
+      "indicatorId": "adult_learning_participation",
+      "iso3": "GEO",
+      "title": "SESA vocational training and retraining programme for jobseekers",
+      "claim": "Georgia's State Employment Support Agency has run voucher-funded short vocational courses for registered jobseekers since 2020, averaging more than 2,000 participants a year, and an evaluation of the 2,521 people who completed training in 2022 found that about 5 in 100 previously unemployed participants found a job the following year.",
+      "metric": {
+        "name": "Participants who completed training in 2022, analysed with Revenue Service administrative data",
+        "value": 2521,
+        "unit": "people",
+        "asOf": "2022"
+      },
+      "secondMetric": {
+        "name": "Hard employment indicator: share of participants unemployed in 2022 who were employed in 2023",
+        "value": 4.8,
+        "unit": "percent",
+        "asOf": "2023"
+      },
+      "started": 2020,
+      "status": "operating",
+      "source": {
+        "publisher": "European Training Foundation, peer learning event Effectiveness of ALMPs, Evaluation of vocational training-retraining measure in Georgia (Ana Diakonidze), June 2026",
+        "url": "https://www.etf.europa.eu/sites/default/files/2026-06/Block%206_Ana%20Diakonidze_Georgia.pdf",
+        "tier": "international_organization",
+        "retrievedAt": "2026-10-17"
+      },
+      "limits": "The figures come from slides in a PDF presentation, not a published evaluation report, so the method cannot be checked in full; slide 5 gives the 2,521 individuals analysed, and it does not state whether that is every 2022 completer or the subset matched to tax records. The annual scale is given only as an average of more than 2,000 participants over the last five years, with no year-by-year series at an open URL; the agency's own site did not resolve. The evaluation's results are poor: a 4.8 percent hard employment rate (about 10 percent among the previously unemployed only), and a return of 75 GEL in taxes per 100 GEL spent. About 2,000 people a year is a very small share of Georgia's adults. The 2020 start is the start under SESA; earlier job-seeker training ran under the Social Service Agency and is not counted.",
+      "pattern": {
+        "mechanism": "The employment agency issues training vouchers to registered jobseekers for courses of up to three months at public VET colleges and accredited training enterprises, and tracks outcomes through tax records.",
+        "preconditions": [
+          "A network of public VET colleges able to run short courses for adults",
+          "A jobseeker register linked to Revenue Service employment and earnings data",
+          "An annual state programme budget for active labour market measures"
+        ]
+      }
+    },
+    {
+      "id": "kgz-profobuchenie",
+      "indicatorId": "adult_learning_participation",
+      "iso3": "KGZ",
+      "title": "Vocational training of the unemployed through the state employment service",
+      "claim": "Kyrgyzstan's Ministry of Labour, Social Security and Migration sent 7,566 registered jobseekers to vocational training in 2024, against 7,109 in 2020, and 4,154 people found work after the training in 2024, according to the ministry's active-measures table reproduced by the European Training Foundation.",
+      "metric": {
+        "name": "People sent to vocational training by the state employment service",
+        "value": 7566,
+        "unit": "people",
+        "asOf": "2024"
+      },
+      "secondMetric": {
+        "name": "Same count in the first year of the published table",
+        "value": 7109,
+        "unit": "people",
+        "asOf": "2020"
+      },
+      "started": 2020,
+      "status": "operating",
+      "source": {
+        "publisher": "European Training Foundation, Kyrgyzstan: active labour market measures for youth (working paper, 2025), Table 2, active measures implemented by the Ministry of Labour, Social Security and Migration, 2020 to 2024",
+        "url": "https://www.etf.europa.eu/sites/default/files/2026-07/Country%20Analysis%20ALMP_Kyrgyzstan_Final_RU.pdf",
+        "tier": "international_organization",
+        "retrievedAt": "2026-10-17"
+      },
+      "limits": "The number is a count of referrals to training, not completions, and it is read from a table in a PDF working paper that the ETF commissioned from a national author; the table carries no source line, and the text attributes the measures to the ministry. The ministry's own release and the statistics committee's labour tables were not found to carry the same series at an open URL. The scale is small: 7,566 people is well under one percent of Kyrgyzstan's adults, and the count covers only registered jobseekers, so it says nothing about employer training, adult education or private courses, which is what the indicator's survey share would capture. Only five years are given, so 2020 is the first year of the published table and not the year the scheme began. The rise from 7,109 to 7,566 is not monotonic: the table shows 6,852 in 2023.",
+      "pattern": {
+        "mechanism": "The labour ministry registers jobseekers through district employment centres and refers a share of them to short vocational courses in licensed providers and its own training centres, then counts referrals and job placements after training.",
+        "preconditions": [
+          "A labour ministry with district employment centres that register the unemployed",
+          "A regulation on training of the unemployed and a budget line to pay providers",
+          "Licensed training providers in the regions willing to run short courses for referred clients"
+        ]
+      }
+    },
+    {
+      "id": "tjk-adult-learning-centres",
+      "indicatorId": "adult_learning_participation",
+      "iso3": "TJK",
+      "title": "Adult learning centres of the Agency of Labour and Employment",
+      "claim": "Tajikistan's Agency of Labour and Employment trained 55,361 people in 2024 in its network of adult learning centres, built up since the 2008 government decree that created the Adult Education Centre of Tajikistan, and 20,100 of them were sent and paid for by the agency.",
+      "metric": {
+        "name": "People trained in the adult learning centres of the Agency of Labour and Employment",
+        "value": 55361,
+        "unit": "people",
+        "asOf": "2024"
+      },
+      "secondMetric": {
+        "name": "People sent to short-term vocational training by the agency, with a stipend",
+        "value": 20100,
+        "unit": "people",
+        "asOf": "2024"
+      },
+      "started": 2008,
+      "status": "operating",
+      "source": {
+        "publisher": "European Training Foundation, Tajikistan: active labour market measures for youth (working paper, 2025), section 4 and Table 2, citing the Agency of Labour and Employment's 2024 annual report and the Agency on Statistics under the President",
+        "url": "https://www.etf.europa.eu/sites/default/files/2026-07/Country%20Analysis%20ALMP_Tajikistan_Final_RU.pdf",
+        "tier": "international_organization",
+        "retrievedAt": "2026-10-17"
+      },
+      "limits": "Both figures are read from a PDF working paper that the ETF commissioned from a national author; the 55,361 total comes from the agency's own 2024 annual report, and the 2024 column of Table 2 is marked as preliminary. The total mixes very different things: 34,660 of the 55,361 paid for their own course, 12,033 of those bought validation of skills they already had rather than training, and the centres also run life-skills, language and basic literacy courses, so the count is not a count of vocational learners. It is a count of people, not a share of adults, and it covers one public network only. The agency-funded referrals barely moved over a decade (18,397 in 2015 against 20,100 in 2024) while registrations rose by more than half. In 2025 the government moved the Adult Education Centre out of the agency and renamed it, so the series may break.",
+      "pattern": {
+        "mechanism": "The labour ministry turned a handful of former vocational schools into a national chain of short-course adult learning centres under its employment agency, which sends registered jobseekers on stipends and also sells courses and skills validation to anyone aged 15 and over.",
+        "preconditions": [
+          "A shortage of places in formal vocational schools that pushed adults toward short courses",
+          "A government decree creating a lead adult education institution with regional branches",
+          "Large flows of returning labour migrants who want their skills certified"
+        ]
+      }
+    },
+    {
+      "id": "jor-vtc",
+      "indicatorId": "adult_learning_participation",
+      "iso3": "JOR",
+      "title": "Vocational Training Corporation continuing training",
+      "claim": "Jordan's Vocational Training Corporation took in 10,712 new trainees in 2022 across its institutes in the north, centre and south, and 7,292 trainees graduated that year, including 2,864 new entrants and 2,794 graduates in its continuing-training courses, according to the corporation's tables on the national open data portal.",
+      "metric": {
+        "name": "New entrants to Vocational Training Corporation continuing-training courses",
+        "value": 2864,
+        "unit": "trainees",
+        "asOf": "2022"
+      },
+      "secondMetric": {
+        "name": "Graduates of Vocational Training Corporation continuing-training courses",
+        "value": 2794,
+        "unit": "graduates",
+        "asOf": "2022"
+      },
+      "started": 1976,
+      "status": "operating",
+      "source": {
+        "publisher": "Vocational Training Corporation, Trainee Data 2022 (numbers of trainees by region and by occupational level), Jordan Open Government Data portal",
+        "url": "https://opendata.gov.jo/en/dataset/trainee-data-2590-2023",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-17"
+      },
+      "limits": "The figures are the corporation's own administrative counts, published as spreadsheets for one year only, so no trend can be read from this source. The corporation mainly trains young school leavers for initial occupational qualifications, so the record rests on its continuing-training line alone; most of its 10,712 new trainees are initial vocational students rather than adults returning to learning. The count is a head count at one provider, not a share of adults, and it leaves out the Ministry of Education's adult literacy centres, employer training and universities. The 1976 founding year is not stated on the portal; it comes from the corporation's statements relayed by the state news agency.",
+      "pattern": {
+        "mechanism": "The state set up a public training corporation that runs its own vocational institutes in every region, enrols school leavers and adults on graded occupational courses and continuing-training courses, and publishes its intake and graduate counts.",
+        "preconditions": [
+          "A statutory training body with its own institutes and workshops in each region",
+          "An occupational level structure (semi-skilled, skilled, craftsman) that courses map onto",
+          "Public funding to keep course fees low for trainees"
+        ]
+      }
+    },
+    {
+      "id": "lka-vta",
+      "indicatorId": "adult_learning_participation",
+      "iso3": "LKA",
+      "title": "Vocational Training Authority of Sri Lanka",
+      "claim": "The Vocational Training Authority of Sri Lanka, set up under Act No 12 of 1995, took in 34,999 trainees in 2022 through 212 training centres across the island, against 37,936 in 2019, according to its annual reports tabled in Parliament.",
+      "metric": {
+        "name": "Trainees taken into full-time and part-time vocational courses",
+        "value": 34999,
+        "unit": "trainees",
+        "asOf": "2022"
+      },
+      "secondMetric": {
+        "name": "Trainees taken into vocational courses in 2019, the highest year in the 2017 to 2022 reports",
+        "value": 37936,
+        "unit": "trainees",
+        "asOf": "2019"
+      },
+      "started": 1995,
+      "status": "operating",
+      "source": {
+        "publisher": "Vocational Training Authority of Sri Lanka, Annual Report 2022, as tabled in the Parliament of Sri Lanka",
+        "url": "https://www.parliament.lk/uploads/documents/paperspresented/1706095236051610.pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-17"
+      },
+      "limits": "The figure is an intake count the authority reports about itself, read from a 42 MB PDF, and not the share of adults in education and training that the indicator defines: 34,999 is a small fraction of one percent of Sri Lanka's adult population. The authority describes its trainees as youth, mostly school leavers, so the count sits closer to initial vocational training than to learning by adults already in work. Intake is not completion: the same report counts 22,003 completions in 2022. The reports restate their own series (2020 appears as 24,705, 23,455 and 23,417 in successive reports, 2021 as 33,416 and 33,431). Intake ran well below plan: 83 percent of target in 2022, 120 courses not started because instructors could not be recruited, and 33,416 against a planned 58,585 in 2021. The fall from 37,936 in 2019 is about eight percent and follows the 2020 pandemic trough, so it reads as a shortfall on a running delivery and not as a reversal. The 2019 peak comes from a separate annual report (https://www.parliament.lk/uploads/documents/paperspresented/1683183407035072.pdf). The authority is one of several public training bodies, beside NAITA and the technical colleges, so it does not cover the national system.",
+      "pattern": {
+        "mechanism": "Parliament created a statutory training authority, and the authority runs a fixed national network of national, district and regional centres that enrol school leavers and adults in short full-time and part-time courses certified against the national vocational qualification framework.",
+        "preconditions": [
+          "A national vocational qualification framework that the authority's courses certify against",
+          "A network of centres down to regional level, built and funded through the line ministry",
+          "Enough paid instructors to open the planned courses, which is the constraint the 2022 report names"
+        ]
+      }
+    },
+    {
+      "id": "zwe-non-formal-education",
+      "indicatorId": "adult_learning_participation",
+      "iso3": "ZWE",
+      "title": "Non-formal education in Zimbabwe's schools",
+      "claim": "Under its 2015 Non-Formal Education Policy, Zimbabwe's Ministry of Primary and Secondary Education ran literacy, adult basic education (ZABEC) and part-time continuing secondary classes (PTCEC) in ordinary schools, and recorded 105,138 non-formal enrolments in 2019, with the number of schools offering the programmes rising from 1,503 in 2015 to 4,401 in 2019.",
+      "metric": {
+        "name": "Enrolment in non-formal education programmes, primary and secondary levels",
+        "value": 105138,
+        "unit": "learners",
+        "asOf": "2019"
+      },
+      "secondMetric": {
+        "name": "Primary and secondary schools offering non-formal education programmes",
+        "value": 4401,
+        "unit": "schools",
+        "asOf": "2019"
+      },
+      "started": 2015,
+      "status": "operating",
+      "source": {
+        "publisher": "Ministry of Primary and Secondary Education, Zimbabwe, 2019 Primary and Secondary Education Statistics Report (May 2020), Chapter 10, Tables 10.1 and 10.10",
+        "url": "https://www.policyvault.africa/wp-content/uploads/policy/ZWE130.pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-17"
+      },
+      "limits": "The gap asks for a share of adults in education and training, and this is a head count of enrolments in one ministry's non-formal classes, read from tables in a PDF. The report does not break the count down by age, and the policy also serves out-of-school children and youth, so an unknown part of the 105,138 are not adults. The figure leaves out vocational colleges, universities, employer training and NGO classes. The ministry does not host the report on an openable page of its own; the URL is a copy held by Policy Vault Africa, a policy archive, and the figure is the ministry's administrative return. 2019 is the latest year with a published count that could be checked: a 2025 newspaper report says the 2024 statistics report shows a notable increase in non-formal enrolment, but gives no number. The school count fell from a high of 4,779 in 2017 to 4,401 in 2019 in the same table, and secondary PTCEC enrolment of 23,324 was below the ministry's own 2019 target of 33,500. Enrolment says nothing about completion, attendance or what was learned.",
+      "pattern": {
+        "mechanism": "The education ministry wrote a non-formal education policy and delivered it through the existing school network, so ordinary primary and secondary schools open afternoon and evening classes for adults and out-of-school learners, with courses that let a learner move back into the formal track.",
+        "preconditions": [
+          "A dense network of public schools with teachers who can take extra classes",
+          "An annual school census that already collects enrolment, so the new classes are counted from the start",
+          "Equivalence between non-formal courses and formal grades, so the classes lead to a recognised certificate"
+        ]
+      }
+    },
+    {
+      "id": "mdg-fmfp",
+      "indicatorId": "adult_learning_participation",
+      "iso3": "MDG",
+      "title": "Fonds Malgache de Formation Professionnelle",
+      "claim": "Madagascar's vocational training fund, the FMFP, financed by a payroll levy on formal employers and governed with ministry, employer and worker representatives, trained 30,043 people in 2022 after 42,044 in 2021 and 19,898 in 2020, through 741 company training requests and sector projects in 21 regions.",
+      "metric": {
+        "name": "People trained with FMFP financing",
+        "value": 30043,
+        "unit": "people",
+        "asOf": "2022"
+      },
+      "secondMetric": {
+        "name": "People trained with FMFP financing",
+        "value": 42044,
+        "unit": "people",
+        "asOf": "2021"
+      },
+      "started": 2019,
+      "status": "operating",
+      "source": {
+        "publisher": "Fonds Malgache de Formation Professionnelle (FMFP), Rapport moral 2022, key figures",
+        "url": "https://www.fmfp.mg/wp-content/uploads/2025/03/Rapport-moral-site.pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-17"
+      },
+      "limits": "The fund reports on itself, in a PDF annual report with no stated method, and the figures do not reconcile: the key-figures page gives 30,043 people trained in 2022, while the sector breakdown in the same report totals 28,791. The 2024 annual report prints a beneficiary breakdown of 42,044 with the same male and female counts as 2021, which looks like a copied table, so the 2023 and 2024 counts cannot be read from it. A person trained in two projects may be counted twice. Against an adult population of well over ten million, about 30,000 trainees a year is a fraction of one percent. The fund mainly serves employees of levy-paying formal firms, a small part of a mostly informal workforce, although its equity projects reach informal workers. Its expansion in 2021 and 2022 relied on additional money from the European Union and the French development agency, AFD. A count of people trained says nothing about training length, quality, or effect on skills or earnings.",
+      "pattern": {
+        "mechanism": "The state created a training fund paid for by a levy on the payroll of formal employers, and a board of ministries, employers and unions spends it on company training plans, sector projects and equity projects for informal workers chosen through calls for proposals.",
+        "preconditions": [
+          "A social security agency that can collect a payroll levy from formal employers",
+          "Employer and union bodies willing to sit on the board and set priorities by sector",
+          "Private and public training providers in the regions able to deliver the courses the fund pays for"
+        ]
+      }
+    },
+    {
+      "id": "mli-fafpa",
+      "indicatorId": "adult_learning_participation",
+      "iso3": "MLI",
+      "title": "FAFPA informal economy training, and its erosion",
+      "claim": "Mali's Vocational Training and Apprenticeship Support Fund (FAFPA) financed training for workers in the informal economy, and the beneficiaries of its Informal Economy Division fell from 12,951 in 2015 to 661 in 2023, a decline of 92 percent, while its budget fell from CFAF 9.5 billion in 2015 to CFAF 2.8 billion in 2022.",
+      "metric": {
+        "name": "Beneficiaries supported through FAFPA's Informal Economy Division, 2023",
+        "value": 661,
+        "unit": "beneficiaries",
+        "asOf": "2023"
+      },
+      "secondMetric": {
+        "name": "Beneficiaries supported through FAFPA's Informal Economy Division, 2015",
+        "value": 12951,
+        "unit": "beneficiaries",
+        "asOf": "2015"
+      },
+      "started": 1997,
+      "status": "eroded",
+      "source": {
+        "publisher": "International Labour Organization, news release on the FAFPA diagnostic study (28 July 2026)",
+        "url": "https://www.ilo.org/resource/news/ilo-helps-advance-reform-malis-vocational-training-fund",
+        "tier": "international_organization",
+        "retrievedAt": "2026-10-17"
+      },
+      "limits": "The figures come from an internal diagnostic of FAFPA covering 2010 to 2023, which FAFPA and its stakeholders validated in Bamako with ILO technical and financial support. The ILO page reports them in a news release, and the diagnostic report itself is not published at that URL, so the series between 2015 and 2023 cannot be checked year by year. 2015 is the year the release names as the high point of comparison, not a confirmed all-time peak. The count is beneficiaries of one division, not a participation rate, and even the 2015 figure reaches a very small share of Mali's adult workforce. The release does not say how long each training lasted or whether a beneficiary is counted once or per course. The same release says dual apprenticeship, which reached 5,761 beneficiaries in 2015 and stopped by 2019, but apprenticeship is mostly initial training for young people and is not used here. The budget fall followed the replacement of the vocational training levy by a government subsidy, and the years of conflict and political transition in Mali after 2012 also bear on the decline; the release does not separate these causes. The start year is the year of FAFPA's founding legal instruments, as the release names them.",
+      "pattern": {
+        "mechanism": "The Malian state set up FAFPA to channel a payroll training levy into training for formal and informal sector workers. When the government replaced the levy with a budget subsidy, the fund's resources fell by about 70 percent and its informal economy training shrank by more than 90 percent.",
+        "preconditions": [
+          "An earmarked levy that the finance ministry cannot redirect, which is what protected the fund before 2015",
+          "Training providers and artisan associations able to absorb informal workers into short courses",
+          "Political and security stability long enough for a fund to plan beyond one budget year"
+        ]
+      }
     }
   ]
 }
