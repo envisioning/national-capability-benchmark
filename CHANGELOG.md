@@ -9,6 +9,26 @@ The entries before App 1.0.0 are retrospective, high-level summaries
 reconstructed from the repository history. They document explicit version bumps
 and may skip versions that were never committed.
 
+## App 1.33.0 — 2026-10-17
+
+- **A model panel now scores every country on all nine capabilities.**
+  Three Claude panelists scored all 1,125 country and capability cells of
+  dataset 9.4.0 over two rounds. Each argued from one fixed stance in its
+  own working context. The previous panel scored only the 455 cells where
+  source coverage was 50% or less, and the 9.3.0 and 9.4.0 releases set
+  many of those aside because the evidence behind them had changed. A
+  panel estimate is shown beside a score and never enters it.
+- **The panelists agree closely, and with one vendor that agreement
+  understates the uncertainty.** The median interquartile range is two
+  points. No cell reaches the 25-point line the project counts as dissent.
+  All three panelists are Claude models, so they share blind spots that a
+  narrow spread cannot show (decision D155).
+- **The panel tracks income more closely than the indicators do.** On
+  every capability, the panel median correlates more strongly with log GDP
+  per head than the indicator score does for the same countries. The
+  difference ranges from 0.003 on Anticipation to 0.34 on Shared purpose,
+  and the report prints the full table.
+
 ## App 1.32.0 — 2026-10-17
 
 - **Brazil's layer now reads the states in Portuguese.** The new page at

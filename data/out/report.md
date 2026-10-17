@@ -1,6 +1,6 @@
 # National Capability Benchmark, prototype v0
 
-*Generated 2026-10-17T01:26:49.255Z*
+*Generated 2026-10-17T14:25:34.915Z*
 
 This run covers 125 countries and nine dimensions. Indicators carry equal weight within each dimension, and the benchmark has no headline ranking.
 
@@ -1119,23 +1119,11 @@ These rows remain in the registry and lower confidence like gaps. The project re
 
 ## A panel scored the same cells
 
-Run 2026-10-03T07-39-51-747Z-in_session, provenance `in_session`, 2 round(s), panel: Institutionalist (claude-opus-5-5), Bottom-up analyst (claude-opus-5-5), Wealth sceptic (claude-sonnet-5-5).
+Run 2026-10-17T14-24-56-314Z-in_session, provenance `in_session`, 2 round(s), panel: Institutionalist (claude-opus-5-5), Bottom-up analyst (claude-opus-5-5), Wealth sceptic (claude-sonnet-5-5).
 
-> In-session one-vendor panel under D154(b) as amended by D155, run on 2026-10-03 by a Claude Code orchestrating session (Claude Opus 5.5). Three panelists, each stance a separate set of contexts: institutionalist on claude-opus-5-5, bottom_up on claude-opus-5-5, wealth_sceptic on claude-sonnet-5-5, all Anthropic, each through Claude Code subagents. Each panelist answered in batches of 25 countries, one fresh context per batch and per round, so no context held two stances and none saw another panelist's text except the anonymised round-1 summary the round-2 prompt carries. Two rounds plus the indicator audit, at the code default scope (maxCoverage 0.5): 455 country-dimension cells across all 125 countries. Prompts are byte-identical to a gateway run's, built by pnpm bench delphi --in-session with prompt version 3; the system rules were given as a file each panelist read first. Every batch confirmed it read every prompt in full and wrote every answer by hand. No call failed and none was rerun into this file; an earlier attempt on prompt version 2 was discarded because panelists condensed prompts. One vendor means the spread measures stance, not vendor, and shared model-family blind spots are hidden by a narrow IQR (D155). An OpenAI panelist through the codex CLI (gpt-5.6-sol) can be added as a follow-up multi-vendor run, which supersedes this one under D155. Estimates are an interpretation layer beside the indicators and never enter score.
+> In-session one-vendor panel under D154(b) as amended by D155, run on 2026-10-17 by a Claude Code orchestrating session (Claude Opus 5.5) on dataset 9.4.0, after D167. Three panelists, each stance a separate set of contexts: institutionalist on claude-opus-5-5, bottom_up on claude-opus-5-5, wealth_sceptic on claude-sonnet-5-5, all Anthropic, each through Claude Code subagents. Each panelist answered in batches of ten countries, one fresh context per batch and per round, and the indicator audit in one context per stance, so no context held two stances and none saw another panelist's text except the anonymised round-1 summary the round-2 prompt carries. Two rounds plus the indicator audit, at maxCoverage 1: all nine dimensions for all 125 countries, 1125 country-dimension cells, not the 0.5 ceiling of the 9.0.1 run. Prompts are byte-identical to a gateway run's, built by pnpm bench delphi --in-session with the current prompt version; the system rules were given as a file each panelist read first. Every batch reported it read every prompt in full and wrote every answer by hand. A first attempt the same day stopped at the account's usage limit before any batch finished; its partial answers were discarded and every prompt was regenerated and answered from scratch. No call in this run failed and none was rerun into it. One vendor means the spread measures stance, not vendor, and shared model-family blind spots are hidden by a narrow IQR, which is a floor on real uncertainty (D155). A multi-vendor or gateway run on the same dataset supersedes this one. This is an interpretation layer: its estimates reach only delphiScore and delphiIqr, and blendedScore only where a dimension has no observed indicator; they never enter score.
 
-Carried from dataset 9.0.1 onto 9.4.0: 153 of 455 cells kept because the evidence brief each was made on is unchanged; 302 dropped. 93 of 183 indicator judgements kept. See D160.
-
-| Dimension | Dropped | No stored hash | Countries |
-| --- | --- | --- | --- |
-| Agency | 2 | 0 | CUB SDN |
-| Coordination | 12 | 0 | ARE CAN CUB DNK GBR IRN ISR NZL SWE TTO USA VEN |
-| Trust | 53 | 0 | AGO ARE ARM BDI BEL BFA BWA CIV COD COG CRI CUB CZE DEU DOM GBR GHA GIN GMB GNB HND HTI IRL ISR JAM LAO LKA LSO MDA MDG MLI MOZ MUS MWI NAM NLD NPL PAN PNG PRY ROU RUS RWA SDN SLV SRB SVK TTO TZA UGA UKR ZAF ZMB |
-| Learning | 1 | 0 | VEN |
-| Experimentation | 107 | 0 | AGO ALB ARE ARM AUS AUT AZE BDI BEL BFA BGD BGR BIH BLR BOL BWA CAN CHN COG CUB CYP CZE DEU DNK DOM ECU EGY ESP ETH FIN FRA GBR GEO GHA GMB GNB GRC GTM HND HRV HTI HUN IDN IRL IRN IRQ ISR ITA JAM JOR JPN KAZ KEN KGZ LAO LBN LKA LSO LTU LVA MAR MDA MDG MKD MLI MMR MNG MOZ MUS MWI MYS NAM NGA NIC NLD NOR NPL NZL PAK PAN PHL PNG POL PRT PRY ROU RUS RWA SDN SLV SRB SVK SVN SWE THA TJK TTO TUN TUR TZA UGA UKR UZB VEN VNM ZMB ZWE |
-| Building | 6 | 0 | BGR CUB HTI IRN IRQ VEN |
-| Shared Purpose | 121 | 0 | AGO ALB ARE ARG ARM AUS AUT AZE BDI BEL BFA BGD BGR BIH BLR BOL BRA BWA CAN CHE CHL CHN CIV COD COG COL CRI CYP CZE DEU DNK DOM ECU EGY ESP EST ETH FIN FRA GBR GEO GHA GIN GMB GNB GRC GTM HND HRV HTI HUN IDN IND IRL IRN IRQ ISR ITA JAM JOR JPN KAZ KEN KGZ KOR LAO LBN LKA LSO LTU LVA MAR MDA MDG MEX MKD MLI MMR MNG MOZ MUS MWI MYS NGA NIC NLD NOR NPL PAK PAN PER PHL PNG POL PRT PRY ROU RUS RWA SDN SLV SRB SVK SVN SWE THA TJK TTO TUN TUR TZA UGA UKR URY USA UZB VEN VNM ZAF ZMB ZWE |
-
-Convergence: 140 of 153 cells narrowed between rounds.
+Convergence: 1030 of 1125 cells narrowed between rounds.
 
 ### Panel disagreement remains visible
 
@@ -1145,97 +1133,97 @@ No cell has an interquartile range above 25 points.
 
 | Country | Dimension | Indicator score | Panel median | Difference |
 | --- | --- | --- | --- | --- |
-| Singapore | Shared Purpose | 32.3 | 60 | 27.7 |
-| Papua New Guinea | Adaptability | 52.2 | 25 | -27.2 |
-| China | Anticipation | 30.1 | 56 | 25.9 |
-| Guinea-Bissau | Learning | 41.4 | 16 | -25.4 |
-| India | Adaptability | 82.4 | 61 | -21.4 |
-| Uzbekistan | Adaptability | 82.3 | 61 | -21.3 |
-| Haiti | Learning | 35.5 | 15 | -20.5 |
-| Trinidad and Tobago | Adaptability | 56.1 | 36 | -20.1 |
-| Greece | Anticipation | 68.2 | 50 | -18.2 |
-| Tajikistan | Adaptability | 54.1 | 36 | -18.1 |
-| El Salvador | Adaptability | 63.9 | 47 | -16.9 |
-| Philippines | Adaptability | 70.5 | 54 | -16.5 |
-| Vietnam | Anticipation | 27.7 | 43 | 15.3 |
-| Denmark | Anticipation | 98.1 | 83 | -15.1 |
-| Croatia | Anticipation | 69.1 | 54 | -15.1 |
-| Guinea | Adaptability | 39.6 | 25 | -14.6 |
-| United Arab Emirates | Learning | 75.1 | 62 | -13.1 |
-| Italy | Anticipation | 74.1 | 61 | -13.1 |
-| Cyprus | Anticipation | 66.6 | 54 | -12.6 |
-| Bangladesh | Anticipation | 30.6 | 43 | 12.4 |
+| Lebanon | Coordination | 85.6 | 30 | -55.6 |
+| Myanmar | Adaptability | 82.9 | 30 | -52.9 |
+| Honduras | Trust | 81.8 | 31 | -50.8 |
+| Nicaragua | Agency | 79.9 | 30 | -49.9 |
+| Honduras | Coordination | 87.4 | 38 | -49.4 |
+| Democratic Republic of the Congo | Coordination | 67.7 | 20 | -47.7 |
+| Mozambique | Coordination | 84.7 | 40 | -44.7 |
+| Iran | Shared Purpose | 72.1 | 28 | -44.1 |
+| Papua New Guinea | Learning | 64.9 | 21 | -43.9 |
+| Tanzania | Trust | 87.7 | 44 | -43.7 |
+| Malawi | Coordination | 89.8 | 47 | -42.8 |
+| Uganda | Coordination | 83.6 | 41 | -42.6 |
+| South Africa | Trust | 89.3 | 47 | -42.3 |
+| Republic of the Congo | Coordination | 66.1 | 24 | -42.1 |
+| Bosnia and Herzegovina | Coordination | 77.7 | 37 | -40.7 |
+| Romania | Trust | 87.7 | 48 | -39.7 |
+| Myanmar | Shared Purpose | 59.6 | 20 | -39.6 |
+| Haiti | Building | 46.8 | 8 | -38.8 |
+| Laos | Adaptability | 75.5 | 38 | -37.5 |
+| Nepal | Trust | 82 | 45 | -37 |
 
 ### The panel takes the same income test
 
-A panel is not independent evidence: it reads the same published record as the indicators. An unmeasured dimension can return a panel number that restates income per head. Here the panel column is correlated with log GDP per capita, with the same-country indicator score beside it. Every dimension of the panel column except Agency, Coordination, Trust and Building reaches 0.7 or above.
+A panel is not independent evidence: it reads the same published record as the indicators. An unmeasured dimension can return a panel number that restates income per head. Here the panel column is correlated with log GDP per capita, with the same-country indicator score beside it. Every dimension of the panel column except Trust and Shared Purpose reaches 0.7 or above.
 
 | Dimension | Panel r vs log GDP pc | Spearman | Indicator r, same countries | Difference | Panel n | Indicator n |
 | --- | --- | --- | --- | --- | --- | --- |
-| Learning | 0.997 | 1 | 0.764 | 0.233 | 5 | 5 |
-| Experimentation | 0.959 | 1 | 0.811 | 0.149 | 3 | 3 |
-| Anticipation | 0.859 | 0.893 | 0.863 | -0.004 | 123 | 123 |
-| Adaptability | 0.739 | 0.666 | 0.519 | 0.22 | 15 | 15 |
-| Shared Purpose | 0.715 | 0.5 | -0.201 | 0.514 | 3 | 3 |
-| Agency | no data | no data | no data | no data | 0 | 0 |
-| Coordination | no data | no data | no data | no data | 0 | 0 |
-| Trust | no data | no data | no data | no data | 0 | 0 |
-| Building | no data | no data | no data | no data | 0 | 0 |
+| Anticipation | 0.866 | 0.898 | 0.863 | 0.003 | 123 | 123 |
+| Learning | 0.846 | 0.889 | 0.709 | 0.137 | 123 | 123 |
+| Experimentation | 0.784 | 0.856 | 0.739 | 0.045 | 123 | 120 |
+| Building | 0.758 | 0.789 | 0.571 | 0.187 | 123 | 123 |
+| Adaptability | 0.751 | 0.771 | 0.533 | 0.218 | 123 | 123 |
+| Coordination | 0.734 | 0.754 | 0.429 | 0.305 | 123 | 120 |
+| Agency | 0.73 | 0.725 | 0.484 | 0.246 | 123 | 120 |
+| Trust | 0.647 | 0.674 | 0.423 | 0.223 | 123 | 121 |
+| Shared Purpose | 0.587 | 0.604 | 0.244 | 0.342 | 123 | 118 |
 
 ### Indicators the panel rates weakest
 
 | Indicator | Registry class | Panel class | Construct validity | Wealth proxy risk | Prior |
 | --- | --- | --- | --- | --- | --- |
-| Business share of R&D | I | I | 0.22 | 0.57 | 0.7 |
-| Unemployment rate | O | O | 0.23 | 0.28 | 0.25 |
-| Voice and accountability | P | P | 0.27 | 0.75 | 0.35 |
-| Scientific articles | O | I (reclassified) | 0.3 | 0.78 | 0.4 |
-| Income inequality | O | I (reclassified) | 0.3 | 0.35 | 0.2 |
-| Export diversification | C | O (reclassified) | 0.32 | 0.53 | 0.3 |
-| Tax revenue | O | O | 0.33 | 0.63 | 0.3 |
-| Resident patent applications | O | O | 0.35 | 0.73 | 0.45 |
-| Resident industrial design applications | O | O | 0.37 | 0.57 | 0.3 |
-| University spinouts | C | O (reclassified) | 0.37 | 0.67 | 0.35 |
-| Research citation impact | O | O | 0.4 | 0.58 | 0.6 |
-| Political polarisation | P | P | 0.4 | 0.33 | 0.05 |
-| Resident trademark applications | O | O | 0.42 | 0.62 | 0.3 |
-| Long-term unemployment share | O | O | 0.42 | 0.37 | 0.2 |
-| New public software repositories | O | O | 0.43 | 0.58 | 0.7 |
-| Human Capital Index | C | O (reclassified) | 0.45 | 0.87 | 0.5 |
-| Venture deals | C | O (reclassified) | 0.45 | 0.68 | 0.6 |
-| Early-stage entrepreneurial activity | C | O (reclassified) | 0.45 | 0.33 | 0.15 |
-| Long-horizon research commitments | C | C | 0.47 | 0.42 | 0.3 |
-| Tolerance of entrepreneurial failure | P | P | 0.47 | 0.32 | 0.1 |
+| Intentional homicide rate | O | O | 0.2 | 0.63 | 0.35 |
+| Business share of R&D | I | I | 0.22 | 0.6 | 0.7 |
+| Unemployment rate | O | O | 0.23 | 0.27 | 0.25 |
+| Voice and accountability | P | P | 0.25 | 0.75 | 0.35 |
+| Regulatory quality | P | P | 0.27 | 0.9 | 0.6 |
+| High-technology exports | O | O | 0.27 | 0.43 | 0.4 |
+| Income inequality | O | O | 0.27 | 0.35 | 0.2 |
+| Scientific articles | O | O | 0.28 | 0.78 | 0.4 |
+| Logistics infrastructure quality | P | P | 0.28 | 0.78 | 0.5 |
+| Export diversification | C | O (reclassified) | 0.3 | 0.52 | 0.3 |
+| Manufacturing value added | O | O | 0.3 | 0.3 | 0.2 |
+| Logistics performance | P | P | 0.32 | 0.78 | 0.5 |
+| Control of corruption | P | P | 0.32 | 0.88 | 0.55 |
+| Tax revenue | O | O | 0.32 | 0.6 | 0.3 |
+| Procedures to start a business | C | I (reclassified) | 0.35 | 0.35 | 0.15 |
+| Perceived control over life | P | P | 0.35 | 0.32 | 0.2 |
+| Government effectiveness | P | P | 0.35 | 0.9 | 0.6 |
+| Trust in public institutions | P | P | 0.35 | 0.35 | 0.2 |
+| Resident patent applications | O | O | 0.37 | 0.73 | 0.45 |
+| Resident industrial design applications | O | O | 0.37 | 0.55 | 0.3 |
 
 ### Evidence the panel requested
 
 | Evidence | Mentions | Dimensions |
 | --- | --- | --- |
-| government foresight capacity dataset | 75 | 1 |
-| government foresight capacity register | 50 | 1 |
-| government foresight capacity record | 24 | 1 |
-| multi-year public research grant register | 22 | 1 |
-| grant register with multi-year award durations | 21 | 1 |
-| grant register with multi-year commitments | 21 | 1 |
-| long-horizon public research grant register | 19 | 1 |
-| grant register with award durations | 19 | 1 |
-| grant register with multi-year awards | 17 | 1 |
-| long-term unemployment share | 12 | 1 |
-| long-term unemployment share from ilostat | 11 | 1 |
-| institutional responsiveness timestamps | 9 | 1 |
-| early-warning reach survey item | 9 | 1 |
-| government foresight records | 8 | 1 |
-| adult learning participation | 5 | 1 |
-| ilostat long-term unemployment share for mexico | 3 | 1 |
-| ilostat long-term unemployment share for peru | 3 | 1 |
-| anii grant register with award durations | 3 | 1 |
-| implementation rate of recommendations from the 2020 royal commission into national natural disaster arrangements | 3 | 1 |
-| nafosted grant register with award durations | 3 | 1 |
-| senacyt grant register with award durations | 3 | 1 |
-| ubos release calendar adherence | 3 | 1 |
-| grant register with award durations of five years or more | 3 | 1 |
-| national volunteer and philanthropy centre individual giving survey volunteering rate | 2 | 1 |
-| estonian research council grant register with award durations | 2 | 1 |
+| cross-agency delivery records | 327 | 1 |
+| adult learning participation | 283 | 1 |
+| court case clearance rate | 259 | 1 |
+| venture first-round counts | 157 | 1 |
+| institutional responsiveness timestamps | 157 | 1 |
+| firm scale-up rate | 141 | 3 |
+| gem tea rate | 97 | 2 |
+| court case clearance rates | 91 | 1 |
+| large project delivery dataset | 88 | 1 |
+| adults doing digital tasks | 79 | 1 |
+| perceived control over life | 79 | 1 |
+| volunteering | 67 | 1 |
+| government foresight capacity | 60 | 1 |
+| large project delivery register | 59 | 1 |
+| large project delivery record | 57 | 1 |
+| civic participation | 52 | 1 |
+| long-term unemployment share | 50 | 1 |
+| sense of national belonging | 50 | 1 |
+| volunteering data | 50 | 1 |
+| trade compliance efficiency | 48 | 1 |
+| hostile polarisation measure | 48 | 1 |
+| large project delivery records | 48 | 1 |
+| generalised interpersonal trust | 48 | 1 |
+| government foresight capacity records | 42 | 1 |
+| b-ready business entry score | 41 | 1 |
 
 ## Assumptions to challenge
 
