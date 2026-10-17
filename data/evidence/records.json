@@ -30716,6 +30716,284 @@
           "Firms able to co-finance research and carry the administrative load of a structural funds project"
         ]
       }
+    },
+    {
+      "id": "aut-parlament-fta",
+      "indicatorId": "government_foresight_capacity",
+      "iso3": "AUT",
+      "title": "Foresight und Technikfolgenabschätzung für das österreichische Parlament",
+      "claim": "Austria's parliament has bought external foresight and technology assessment since July 2017, after the Presidial Conference agreed unanimously in October 2016 to provide EUR 200,000 a year; the service delivers a half-yearly monitoring of future topics, survived a Europe-wide re-tender in 2022, and parliament commissioned six studies from it between 2019 and 2026.",
+      "metric": {
+        "name": "Annual budget the Presidial Conference set for scientific foresight and technology assessment support to members",
+        "value": 200000,
+        "unit": "euro per year",
+        "asOf": "October 2016 decision"
+      },
+      "secondMetric": {
+        "name": "Foresight and technology assessment studies commissioned by parliament, listed on the parliament's page",
+        "value": 6,
+        "unit": "studies",
+        "asOf": "2019 to 2026"
+      },
+      "started": 2017,
+      "status": "operating",
+      "source": {
+        "publisher": "Parliament of Austria, Parlamentskorrespondenz Nr. 46 of 19 January 2023",
+        "url": "https://www.parlament.gv.at/aktuelles/pk/jahr_2023/pk0046",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-17"
+      },
+      "limits": "The EUR 200,000 is the yearly sum the Presidial Conference agreed in October 2016, as reported by parliament's own press service in 2023; the source does not say what was spent in any year or what the 2023 contract is worth. The count of six studies is ours, read from the list on the parliament's foresight page (https://www.parlament.gv.at/fachinfos/rlw/zukunftsthemen/): four from 2019 to 2022 under the first contract, which the press release also names, and two (2025, 2026) under the second. That is fewer than one study a year. This is self-reporting by parliament on a service it buys, with no external evaluation of use. The work is done by an outside contractor, the Institute of Technology Assessment of the Austrian Academy of Sciences (with AIT until 2022), so the capacity sits in an academy institute under a re-tendered contract, not in a statutory parliamentary office, and a lost tender or a cut would end it without a law. It serves parliament, not the executive, and says nothing about foresight inside ministries. The page states six new future topics each May and November, but its current topics section showed no entries when read.",
+      "pattern": {
+        "mechanism": "The Presidial Conference of the National Council set a fixed yearly budget and the Parliamentary Administration tendered a framework contract for half-yearly horizon scanning plus studies that a board of the parliamentary director and one member per parliamentary group can commission by consensus.",
+        "preconditions": [
+          "A national academy institute already running technology assessment that could bid for the contract",
+          "Consensus across parliamentary groups, since study orders need agreement in the board",
+          "Procurement law that forces a re-tender, which tests the service's support at each renewal"
+        ],
+        "travelled": "Germany's Bundestag runs the same contract model through TAB (deu-tab), with a larger budget and a longer record."
+      }
+    },
+    {
+      "id": "lva-latvija-2050",
+      "indicatorId": "government_foresight_capacity",
+      "iso3": "LVA",
+      "title": "Latvija 2050 long-term scenario framework for the State Chancellery",
+      "claim": "Latvia's State Chancellery commissioned the University of Latvia under contract 2024/065 of 5 November 2024 to build the analytical framework for the Latvija 2050 strategy; the study, delivered in 2026, set out three macroeconomic development scenarios to 2050 and drew on a Kantar survey in December 2024 and expert focus groups in four regions in September and October 2025.",
+      "metric": {
+        "name": "Macroeconomic development scenarios to 2050 in the Latvija 2050 framework study",
+        "value": 3,
+        "unit": "scenarios",
+        "asOf": "2026-03"
+      },
+      "secondMetric": {
+        "name": "Regional expert focus groups held for the study",
+        "value": 4,
+        "unit": "focus groups",
+        "asOf": "2025-09-15 to 2025-10-03"
+      },
+      "started": 2024,
+      "status": "concluded",
+      "source": {
+        "publisher": "Valsts kanceleja (State Chancellery of Latvia), policy planning documents portal: Ietvars Latvijas ilgtermina planosanai Latvija 2050, study by the University of Latvia LV PEAK under contract 2024/065",
+        "url": "https://ppdb.mk.gov.lv/wp-content/uploads/2026/04/LV2050_gala_versija_pdf.pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-17"
+      },
+      "limits": "The counts are read from a 291-page PDF (the three scenarios are listed on PDF page 6 and modelled in section 4, the four focus groups are on PDF page 36). The authors are university researchers working to a State Chancellery contract, not civil servants, so the State Chancellery bought the foresight rather than producing it; the document is hosted on the government's planning portal but does not state that the government endorses it. Three scenarios and four focus groups measure the shape of one exercise, not influence: as of a State Chancellery release of 4 September 2026 on LV portals (https://lvportals.lv/dienaskartiba/394043-latvija-2050-no-nakotnes-scenarijiem-lidz-kopigai-ricibai-2026) the Latvija 2050 strategy was still a draft, not adopted by the Saeima, so whether the scenarios shape policy is unknown. The record shows one delivery tied to one strategy cycle, not a standing foresight unit with yearly output. Continuity rests on an institutional change: the Cabinet liquidated the Cross-Sectoral Coordination Centre, which had run long-term planning, as a separate institution and moved its functions and 25 posts to the State Chancellery by 1 March 2023 (LV portals, https://lvportals.lv/norises/346547-parresoru-koordinacijas-centru-likvide-ka-atsevisku-iestadi-2022); the posts moved intact, so this is not counted as a loss. The study cost was not found.",
+      "pattern": {
+        "mechanism": "The State Chancellery, which absorbed the cross-sectoral planning centre, contracted a university think tank to build values, scenarios and quantified targets for the next long-term strategy, and tested them in a national survey, regional focus groups and conferences in the Saeima before drafting the strategy itself.",
+        "preconditions": [
+          "An earlier long-term strategy (Latvija 2030) whose challenges could be reviewed rather than written from zero",
+          "A centre-of-government body with the planning mandate and a budget to commission research",
+          "A domestic university group able to model macroeconomic scenarios over 25 years"
+        ]
+      }
+    },
+    {
+      "id": "ukr-niss",
+      "indicatorId": "government_foresight_capacity",
+      "iso3": "UKR",
+      "title": "Natsionalnyi instytut stratehichnykh doslidzhen, and its falling staff ceiling",
+      "claim": "Presidents of Ukraine kept the National Institute for Strategic Studies, created by decree in 1992 to carry out analytical and forecasting research for the President and the National Security and Defence Council, through every change of president, but cut its staff ceiling from 350 posts, set by Decree 662/2010 when it took over the tasks of two liquidated security institutes, to 260 posts by Decree 120/2015 and to 234 posts by Decree 737/2019, which is in force.",
+      "metric": {
+        "name": "Staff ceiling of the National Institute for Strategic Studies set by presidential decree",
+        "value": 234,
+        "unit": "posts",
+        "asOf": "2019-10 (Decree 737/2019, in force on 2026-10-17)"
+      },
+      "secondMetric": {
+        "name": "Staff ceiling under Decree 662/2010, in force from June 2010 to March 2015",
+        "value": 350,
+        "unit": "posts",
+        "asOf": "2010-06 to 2015-03"
+      },
+      "started": 1992,
+      "status": "eroded",
+      "source": {
+        "publisher": "Verkhovna Rada of Ukraine, Legislation of Ukraine portal, Decree of the President of Ukraine No. 737/2019 of 7 October 2019 and the Statute of the Institute it approves",
+        "url": "https://zakon.rada.gov.ua/laws/show/737/2019",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-17"
+      },
+      "limits": "Both figures are staff ceilings set by decree, not headcounts, budgets or output: they show how many posts the President allowed, not how many were filled or what the institute produced. The 350 ceiling of 2010 included the tasks of the Institute for National Security Problems and the National Institute for International Security Problems, which Decree 662/2010 liquidated and folded in, so part of the later cut undoes a merger rather than removing a capacity the institute always had. The 350 and 260 values were read from dated editions of Decree 662/2010 on the same portal (https://zakon.rada.gov.ua/laws/show/662/2010/ed20100720/print and https://zakon.rada.gov.ua/laws/show/662/2010/ed20150306/print); a short-lived edition of July 2010 carried 315 posts before Decree 760/2010 restored 350. Forecasting is one task among several: the 2019 statute names analytical and forecasting research on the development and national security of Ukraine, drafting the President's annual messages to parliament and expert review of draft laws, so the institute is a presidential think tank with a forecasting mandate rather than a dedicated foresight unit. The ceiling has not changed in law since 2019, through the full-scale war; this record does not show staffing after 2022.",
+      "pattern": {
+        "mechanism": "The President kept a strategic studies institute directly subordinate to the office and resized it by decree, enlarging it in 2010 by absorbing two liquidated security institutes and then cutting its staff ceiling twice, in 2015 and 2019, without closing it.",
+        "preconditions": [
+          "Direct subordination to the President, which lets each president resize the institute by decree without a parliamentary vote",
+          "A recurring statutory output, the draft annual presidential message to parliament, which gives every new president a reason to keep the institute",
+          "A legal basis in presidential decrees rather than a law, which makes continuity depend on each president's choice"
+        ]
+      }
+    },
+    {
+      "id": "rus-pntr-2030",
+      "indicatorId": "government_foresight_capacity",
+      "iso3": "RUS",
+      "title": "Prognoz nauchno-tekhnologicheskogo razvitiya Rossiyskoy Federatsii na period do 2030 goda",
+      "claim": "Russia's Ministry of Education and Science issued in December 2013 the Science and Technology Development Forecast of the Russian Federation to 2030, which states that it is one of the main documents of the strategic planning system, sets out challenges and windows of opportunity in seven priority areas, was agreed with eight federal ministries, the space agency and the Academy of Sciences, and rests on an expert base of more than 200 organisations and over 2,000 Russian and foreign experts.",
+      "metric": {
+        "name": "Experts in the expert base of the Science and Technology Development Forecast to 2030 (stated as over 2,000)",
+        "value": 2000,
+        "unit": "experts",
+        "asOf": "2013-12 (forecast horizon 2030)"
+      },
+      "secondMetric": {
+        "name": "Organisations in the expert base of the forecast (stated as more than 200)",
+        "value": 200,
+        "unit": "organisations",
+        "asOf": "2013-12"
+      },
+      "started": 2013,
+      "status": "concluded",
+      "source": {
+        "publisher": "Government of the Russian Federation, government.ru, Prognoz nauchno-tekhnologicheskogo razvitiya Rossiyskoy Federatsii na period do 2030 goda (Ministry of Education and Science, December 2013, No. DM-P8-5), introduction, page 2",
+        "url": "http://static.government.ru/media/files/41d4b737638b91da2184.pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-17"
+      },
+      "limits": "The PDF is a scan with no text layer, so both figures were read from the image of page 2, and both are lower bounds the document reports about itself (more than 200 organisations, over 2,000 experts) with no list behind them. The figures measure participation in one forecast, not a standing function: the record shows a delivery, not continuity. The 2014 Federal Law on strategic planning (172-FZ) puts the science and technology forecast on a six-year revision cycle, and this record does not establish whether a successor to the 2030 forecast was approved on that cycle. The cover gives December 2013 and the number DM-P8-5 but no approval text, so the record does not date a formal approval. The document lists the Higher School of Economics, the Centre for Macroeconomic Analysis and Short-term Forecasting, academy institutes and university sector forecasting centres among the organisations whose material it used, so much of the work was contracted out of government. Priority areas and consultation say nothing about whether any ministry used the forecast in a decision.",
+      "pattern": {
+        "mechanism": "The Ministry of Education and Science assembled a long-term science and technology forecast from a network of university forecasting centres, academy institutes and research centres, had it agreed by the economic and sector ministries, and placed it in the strategic planning system as the common base for long-term strategies and programmes.",
+        "preconditions": [
+          "A presidential instruction, Decree 596 of 7 May 2012, to build a national technology forecasting system",
+          "A university research institute and sector centres able to run large expert consultations for the ministry",
+          "Ministries willing to sign off on a shared list of priority areas before writing their own strategies"
+        ]
+      }
+    },
+    {
+      "id": "kaz-asp",
+      "indicatorId": "government_foresight_capacity",
+      "iso3": "KAZ",
+      "title": "Agency for Strategic Planning, merged into a ministry in 2002",
+      "claim": "Kazakhstan's President created an Agency for Strategic Planning directly subordinate to him by Decree No. 3377 of 4 March 1997; parliament appropriated KZT 29,040 thousand to it for 2002, including a programme to monitor geopolitical and geo-economic processes and assess their effect on the country's development prospects, and Decree No. 931 of 28 August 2002 then merged the agency into the Ministry of Economy and Budget Planning.",
+      "metric": {
+        "name": "Republican budget appropriation to administrator 604, Agency for Strategic Planning of the Republic of Kazakhstan",
+        "value": 29040,
+        "unit": "thousand tenge",
+        "asOf": "2002 (budget law)"
+      },
+      "started": 1997,
+      "status": "concluded",
+      "source": {
+        "publisher": "Parliament of the Republic of Kazakhstan, Law No. 273-II of 15 December 2001 on the republican budget for 2002, annex on expenditure by administrator and programme, via the zakon.uchet.kz legal database",
+        "url": "https://zakon.uchet.kz/rus/docs/Z010000273_",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-17"
+      },
+      "limits": "The figure is an appropriation in the budget law, not an outturn, and the agency was merged before the year ended, so it did not spend the full year as a separate body. The text was read on zakon.uchet.kz, a private mirror of the official adilet.zan.kz database, because adilet renders acts only with JavaScript; the mirror shows the law's current edition, which may carry amendments made during 2002. Of the KZT 29,040 thousand, 22,940 thousand was administrative cost, and only 1,200 thousand went to the programme on world geopolitical and geo-economic processes, the line closest to foresight; the rest funded energy-sector planning, public administration recommendations and a demographic information system. The agency was a planning body, closer to development planning than to scenario-based foresight. Its name and form changed between 1997 and 2002: a 1998 decree (No. 3958) reorganised the then Agency for Strategic Planning and Reforms by dividing it, and describes it as a central executive body outside the government, so the 2002 body was smaller than the 1997 one, and this record does not measure by how much. Decree No. 931 merged the agency rather than abolishing its tasks, so planning work moved to a line ministry, and in 2020 the President created a new Agency for Strategic Planning and Reforms whose regulations list strategic forecasting (zakon.uchet.kz, Decree No. 427 of 5 October 2020, https://zakon.uchet.kz/rus/docs/U2000000427). What ended in 2002 is a dedicated agency with its own budget administrator code, not the planning function, and the function returned 18 years later.",
+      "pattern": {
+        "mechanism": "The President set up a strategic planning agency reporting to him and outside the cabinet, then a later administrative reform folded it into a merged economy and budget ministry, which put long-range planning under the body that writes the annual budget.",
+        "preconditions": [
+          "A presidential system in which agencies are created and merged by decree, with no statute to repeal",
+          "A government reform programme that counted separate agencies as overhead and merged them into larger ministries",
+          "A receiving ministry able to absorb planning tasks, so the closure left no visible gap in the budget law"
+        ],
+        "travelled": "Poland's strategic studies centre (pol-rcss) was folded into the Chancellery and a line ministry in 2006 on the same consolidation logic; Kazakhstan, unlike Poland, recreated a presidential planning agency in 2020."
+      }
+    },
+    {
+      "id": "tun-ites",
+      "indicatorId": "government_foresight_capacity",
+      "iso3": "TUN",
+      "title": "Institut Tunisien des Études Stratégiques (ITES)",
+      "claim": "Tunisia's Institut Tunisien des Études Stratégiques, created by Law 93-103 of 25 October 1993 as a public establishment under the Presidency with a statutory mission of short and long-term prospective analysis through scenarios, reported that it prepared 50 strategic and foresight studies for the President of the Republic in 2020 to 2024, and 90 geopolitical notes in the same period.",
+      "metric": {
+        "name": "Strategic and foresight studies prepared for the President of the Republic",
+        "value": 50,
+        "unit": "studies",
+        "asOf": "2020-2024"
+      },
+      "secondMetric": {
+        "name": "Geopolitical notes submitted to the President of the Republic",
+        "value": 90,
+        "unit": "notes",
+        "asOf": "2020-2024"
+      },
+      "started": 1993,
+      "status": "operating",
+      "source": {
+        "publisher": "Institut Tunisien des Études Stratégiques, activity report for the last five years 2020-2024 (Arabic, PDF)",
+        "url": "https://www.admin.ites.tn/api/uploads/67b8593220e15fd9536c47f6Ar.pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-17"
+      },
+      "limits": "The institute reports on itself, and both figures are its own counts in an Arabic activity report published in February 2025, read with pdftotext; the institute's website renders with JavaScript and lists the report under its publications, which is how the file was found. Most of the 50 studies went to the President and are not public: the public catalogue holds 56 items, several of them executive summaries or language versions of the same study. Many listed studies are policy analyses (public finance, the informal sector, the emigration of engineers and health workers) rather than scenario work, though several carry horizons of 2025, 2030, 2035 and 2050. The report gives no budget or staff count and no figure for any year before 2020, so the 1993 law shows the mandate's continuity across the 2011 change of regime but not continuous output. The statute (Law 93-103, Article 2) was read in the legislation database of the Tunisian security sector (https://legislation-securite.tn/wp-content/uploads/sites/5/2023/11/Loi-n%C2%B0-93-103-du-25-Octobre-1993-Fr.pdf). The institute sits under the President's tutelage and its studies are addressed to him alone, so nothing read shows the work entering a government decision.",
+      "pattern": {
+        "mechanism": "Parliament gave a strategic studies institute under the Presidency a statutory mission of prospective analysis and scenario building, and the institute writes studies and confidential reports addressed to the head of state, publishing a part of them.",
+        "preconditions": [
+          "A law that gives the institute its own legal personality and a foresight mission, which outlasted the 2011 change of regime",
+          "A head of state who commissions studies directly and is the only formal recipient",
+          "A permanent team, including former diplomats who run geopolitical monitoring"
+        ]
+      }
+    },
+    {
+      "id": "egy-idsc-afaq",
+      "indicatorId": "government_foresight_capacity",
+      "iso3": "EGY",
+      "title": "Cabinet Information and Decision Support Center (IDSC), Afaq Mostaqbaliya",
+      "claim": "Egypt's Information and Decision Support Center, attached to the Cabinet since 1985 and naming foresight of the future in its mission, published six annual issues of Afaq Mostaqbaliya (Futuristic Prospects), a publication that foresees the main expected political, economic, social and technological trends at global, regional and local level, from January 2021 to January 2026.",
+      "metric": {
+        "name": "Issues of the annual foresight publication Afaq Mostaqbaliya",
+        "value": 6,
+        "unit": "issues",
+        "asOf": "2021-01 to 2026-01"
+      },
+      "started": 1985,
+      "status": "operating",
+      "source": {
+        "publisher": "Information and Decision Support Center, Egyptian Cabinet, periodic publications listing (site API)",
+        "url": "https://idsc.gov.eg/api/DocumentLibraryVersionsAPI/GetAllPeriodicPublication",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-17"
+      },
+      "limits": "The centre reports on itself. The count is the `count` field the centre's own API returns for the publication (id 21); the reader page, https://idsc.gov.eg/PeriodicPublications, renders the same list with JavaScript, and the issue dates (issue 1 January 2021, issue 6 January 2026) come from the issue list the same API returns for that id. Each issue looks one year ahead at about ten expected trends, so this is horizon scanning on a short horizon, not long-range scenarios, and outside experts write much of it. The centre is a broad information and decision support body that also runs data, indicators, surveys and public policy journals, so the publication is one task among many, and no dedicated foresight unit, budget or staff figure was read. The founding year and the mission statement come from the centre's about page, served by the same API (StaticContentAPI/Details?StaticContentId=3). Started is 1985, the year the centre was founded; the foresight publication starts in 2021, and nothing read shows an issue entering a Cabinet decision.",
+      "pattern": {
+        "mechanism": "The Prime Minister's office keeps a decision support centre that, among its research and data work, convenes domestic and foreign experts once a year to publish a forecast of the main trends for the coming year.",
+        "preconditions": [
+          "A centre-of-government research body that has survived successive governments since 1985",
+          "A head of the centre who sits as an assistant to the Prime Minister",
+          "A pool of outside experts willing to contribute each year"
+        ]
+      }
+    },
+    {
+      "id": "irn-olgou",
+      "indicatorId": "government_foresight_capacity",
+      "iso3": "IRN",
+      "title": "Center for the Islamic Iranian Model of Progress (Markaz-e Olgu)",
+      "claim": "Iran's Center for the Islamic Iranian Model of Progress, set up by decree of the Leader on 2 Khordad 1390 (May 2011), drafted a document that sets the country's desired horizon for the next five decades, which the Leader issued for review on 22 Mehr 1397 (October 2018), and reports that it analysed 5,300 critiques and proposals on that draft and received 3,803 papers over its first fourteen annual conferences.",
+      "metric": {
+        "name": "Critiques and proposals on the 2018 draft model received and analysed",
+        "value": 5300,
+        "unit": "critiques and proposals",
+        "asOf": "2018-2025 (performance report 1390 to 1404)"
+      },
+      "secondMetric": {
+        "name": "Papers received, cumulative to the fourteenth annual conference",
+        "value": 3803,
+        "unit": "papers",
+        "asOf": "cumulative to the fourteenth conference"
+      },
+      "started": 2011,
+      "status": "operating",
+      "source": {
+        "publisher": "Center for the Islamic Iranian Model of Progress, performance report 1390 to 1404 (Persian, PDF, published 1405)",
+        "url": "https://www.olgou.ir/images/files/report.pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-17"
+      },
+      "limits": "The centre reports on itself, and the figures were read in a 78-page Persian PDF with pdftotext. The Leader's 2018 text, reproduced in the report, asked the centre to present an upgraded version within at most two years for approval and promulgation, with implementation from the start of the fifteenth solar century (1400, March 2021); the centre's own document page (https://www.olgou.ir/fa/olgoudocument.html) still says the document will be downloadable after promulgation, so no final version was in force at retrieval. That is a delivery overrun on the centre's core product, not a closure. The centre sits under the Leader, outside the elected government, and the model is a normative and ideological document rather than exploratory scenarios. The 5,300 figure counts comments received, not changes made, and the conference count measures academic participation, not foresight output. The report gives no budget or staff figure. The founding decree is on the centre's site (https://www.olgou.ir/fa/about/%D8%AD%DA%A9%D9%85-%D8%AA%D8%A3%D8%B3%DB%8C%D8%B3.html).",
+      "pattern": {
+        "mechanism": "The Leader created by decree a research centre with its own legal personality and a high council he appoints; the centre coordinates university and seminary researchers through think tanks and annual conferences to draft a fifty-year model meant to sit above general policies and development plans.",
+        "preconditions": [
+          "A head of state who commissions a long-range document and sets its review path through parliament, government and councils",
+          "A large network of university and seminary researchers who can be mobilised through calls and conferences",
+          "A status outside the elected government, which protects continuity but leaves promulgation to one person"
+        ]
+      }
     }
   ]
 }

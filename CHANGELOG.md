@@ -9,6 +9,17 @@ The entries before App 1.0.0 are retrospective, high-level summaries
 reconstructed from the repository history. They document explicit version bumps
 and may skip versions that were never committed.
 
+## App 1.31.14 — 2026-10-17
+
+- **Government foresight has 25 more countries searched.** Eight new
+  records include Austria's parliamentary foresight service, Egypt's
+  yearly outlook from the Cabinet's decision support centre, Tunisia's
+  strategic studies institute and Russia's science and technology forecast
+  to 2030. One documents a loss: the staff ceiling of Ukraine's National
+  Institute for Strategic Studies fell from 350 posts in 2010 to 234 in
+  2019. 17 countries close with a note, most because their planning or
+  forecasting bodies do not look past the budget cycle.
+
 ## App 1.31.13 — 2026-10-17
 
 - **Cyprus and Slovenia now have a documented case of university and
