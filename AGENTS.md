@@ -26,6 +26,8 @@ pnpm bench residual    write the provisional wealth-residual fixture, one number
 pnpm bench institutions project the institution map into the explorer feed: one JSON per lexicon
 pnpm bench probe       test candidate World Bank series before wiring them: --series a,b[@db]
 pnpm bench validate    schema-check data/delphi and data/evidence; add --fetch to live-check evidence source URLs
+pnpm bench fitness validate  schema-check data/fitness/items, the public AI fitness item set (D168)
+pnpm bench fitness cost      price a fitness run: --scope items|pilot|full, --samples 3
 pnpm bench all         ingest, score, diagnose, report, agenda, brief
 pnpm build             tsc for packages/core, then next build for apps/web
 pnpm typecheck         both packages
@@ -108,6 +110,11 @@ port 3888. That entry starts Next directly and does not use the proxy.
   ledger of bodies no country owns. A country file never holds a global node:
   it reaches one by id in an edge, and `attachGlobalInstitutions` joins the
   two before anything renders. See D107.
+- `data/fitness` — the public AI fitness module (D168), a separate instrument
+  that tests language models on Brazil's public facts and value restraint.
+  `items/{topic}.json` holds the item set, one file per topic. Design and the
+  planned layout of runs, grades and outputs:
+  `docs/research/public-ai-fitness/DESIGN.md`.
 - `data/evidence` — evidence records: documented deliveries filed against
   indicators that have no dataset. Never scored. Inclusion rule and authoring
   guide in `docs/EVIDENCE.md`. See D20.
@@ -220,6 +227,13 @@ port 3888. That entry starts Next directly and does not use the proxy.
   to `data/observations/revisions.json`. Never bypass that by writing
   `worldbank.json` directly: a restated value that is not logged is a number the
   record claims was always this. See D25.
+- **The fitness module never touches the benchmark.** Nothing in
+  `packages/core/src/fitness` is read by scoring, confidence, the frame, the
+  panel or the viewer. The tested models and the judges are declared once, in
+  `FITNESS_MODELS` and `FITNESS_JUDGES` in `fitness/roster.ts`, and
+  `judgesFor` is the only place a judge is assigned: no judge grades an
+  answer from its own lab. Results are a profile per model and a pass or fail
+  per topic, never an overall score or an ordering of models. See D168.
 - An evidence record's `pattern` field is analysis, not data. Everything else in
   the record is sourced from a named publisher; the mechanism and preconditions
   are ours. Keep them in that field so the two are never confused. See D31.

@@ -1,6 +1,9 @@
 # Public AI fitness: Brazil's public facts and value restraint
 
-Design memo, 2026-10-17. Status: **designed, not built.** Working name
+Design memo, 2026-10-17. Status: **scaffold built, no items, no runs.**
+The schema, roster, validator and cost estimate are in
+`packages/core/src/fitness`; `bench fitness validate` and `bench fitness cost`
+run. The run, grade and report steps are not built. Working name
 Placar Neutro. Decision entry: D168. Owner choices recorded here were made by
 MZ on 2026-10-17.
 
@@ -238,11 +241,18 @@ Item shape, as Zod will hold it:
 }
 ```
 
-## Commands (proposed)
+## Commands
+
+Built:
 
 ```
-pnpm bench fitness validate   schema-check items, live-check source URLs
-pnpm bench fitness cost       price a run from the real prompts, as bench cost does
+pnpm bench fitness validate   schema-check items: one topic per file, unique ids, sources and snapshots
+pnpm bench fitness cost       price a run: --scope items|pilot|full, from token assumptions
+```
+
+Proposed:
+
+```
 pnpm bench fitness run        answer: --mode grounded|closed --models a,b --samples 3
 pnpm bench fitness grade      judge the run under the no-own-lab rule
 pnpm bench fitness report     profiles and gate

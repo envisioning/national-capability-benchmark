@@ -24,6 +24,28 @@ export const PRICES: Record<string, Price> = {
   'openai/gpt-5': { input: 1.25, output: 10, verified: true },
   'google/gemini-2.5-pro': { input: 1.25, output: 10, verified: true },
   'mistral/mistral-medium-3.5': { input: 1.5, output: 7.5, verified: true },
+  /* The public AI fitness roster (D168), read from the gateway list on 2026-10-17. */
+  'anthropic/claude-opus-5.5': { input: 4, output: 20, verified: true },
+  'anthropic/claude-opus-5.5-batch': { input: 2, output: 10, verified: true },
+  'anthropic/claude-sonnet-5.5': { input: 2, output: 10, verified: true },
+  'anthropic/claude-sonnet-5.5-batch': { input: 1, output: 5, verified: true },
+  'openai/gpt-5.6-sol': { input: 4, output: 20, verified: true },
+  'openai/gpt-5.6-sol-batch': { input: 2, output: 10, verified: true },
+  'openai/gpt-5.6-terra': { input: 2, output: 12, verified: true },
+  'openai/gpt-5.6-terra-batch': { input: 1, output: 6, verified: true },
+  'google/gemini-3.1-pro-preview': { input: 2, output: 12, verified: true },
+  'google/gemini-3.1-pro-preview-batch': { input: 1, output: 6, verified: true },
+  'google/gemini-3.5-flash': { input: 1.5, output: 9, verified: true },
+  'google/gemini-3.5-flash-batch': { input: 0.75, output: 4.5, verified: true },
+  'spacexai/grok-4.7': { input: 2, output: 6, verified: true },
+  'deepseek/deepseek-v4-pro': { input: 0.66, output: 1.98, verified: true },
+  /* Not on the gateway. Maritaca lists R$5 / R$20; converted at R$5.5 to the dollar. */
+  'maritaca/sabia-4': { input: 0.91, output: 3.64, verified: false },
+}
+
+/** The batch rate for a model, where the gateway lists one. */
+export function batchPriceFor(model: string): Price | null {
+  return PRICES[`${model}-batch`] ?? null
 }
 
 /** Fallback used when a model id is not in the table. Deliberately Opus-tier. */

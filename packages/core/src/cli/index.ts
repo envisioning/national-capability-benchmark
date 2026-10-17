@@ -21,6 +21,10 @@ import type { Observation } from '../model/index.js'
 import { fetchOpenAlexCitationImpact } from '../pipeline/adapters/openalex.js'
 import { fetchGithubNewRepositories } from '../pipeline/adapters/github.js'
 import { probeSeries, registrySeries, searchCatalogue } from '../pipeline/probe.js'
+import { loadFitnessItems } from '../fitness/validate.js'
+import { estimateFitnessCost, FITNESS_PRICES_VERIFIED, FITNESS_SCOPES, FITNESS_TOKENS } from '../fitness/cost.js'
+import type { FitnessScope } from '../fitness/cost.js'
+import { FITNESS_MODELS } from '../fitness/roster.js'
 import type { ProbeRequest } from '../pipeline/probe.js'
 import {
   COUNTRY_OUT_DIR,
@@ -818,6 +822,54 @@ async function brief(): Promise<void> {
   console.log(`brief       -> ${written.length} documents (${written.join(', ')}) -> data/out/brief`)
 }
 
+/**
+ * Public AI fitness (D168): a separate instrument that never touches a score.
+ * `validate` checks the item set; `cost` prices a run. The run, grade and
+ * report steps are not built yet.
+ */
+async function fitness(args: Args): Promise<void> {
+  const action = args._[1] ?? 'help'
+  if (action === 'validate') {
+    const { items, files, problems } = await loadFitnessItems()
+    const facts = items.filter((item) => item.kind === 'fact').length
+    console.log(`fitness     -> ${items.length} items in ${files} files (${facts} fact, ${items.length - facts} value)`)
+    for (const p of problems) console.log(`  ${p.file.padEnd(46)} ${p.problem}`)
+    if (problems.some((p) => p.severity === 'error')) process.exitCode = 1
+    return
+  }
+  if (action === 'cost') {
+    const scope = str(args, 'scope', 'items')
+    let counts: { fact: number; value: number }
+    if (scope === 'items') {
+      const { items } = await loadFitnessItems()
+      const fact = items.filter((item) => item.kind === 'fact').length
+      counts = { fact, value: items.length - fact }
+    } else if (scope in FITNESS_SCOPES) {
+      counts = FITNESS_SCOPES[scope as FitnessScope]
+    } else {
+      throw new Error(`Unknown --scope ${scope}. Use items, pilot or full.`)
+    }
+    const est = estimateFitnessCost({ items: counts, samples: num(args, 'samples', 3) })
+    console.log(`\n${counts.fact} fact and ${counts.value} value items, ${FITNESS_MODELS.length} models`)
+    console.log(`${est.answers} answers, ${est.judgeCalls} judge calls\n`)
+    for (const line of est.lines) {
+      const batch = line.usdBatch === null ? 'no batch' : `$${line.usdBatch.toFixed(2)}`
+      console.log(
+        `  ${line.role.padEnd(7)} ${line.model.padEnd(34)} $${line.usd.toFixed(2).padStart(8)}  ${batch.padStart(9)}${line.verifiedPrice ? '' : '  (price unverified)'}`,
+      )
+    }
+    console.log(`\n  ${'TOTAL'.padEnd(42)} $${est.usd.toFixed(2).padStart(8)}  $${est.usdCheapest.toFixed(2)}`)
+    console.log(`\nSecond column: batch rate where the gateway lists one, and the judge rubric cached.`)
+    console.log(
+      `Token counts are assumptions until the run prompts exist: ${FITNESS_TOKENS.answerOutput} output tokens per answer, thinking included.`,
+    )
+    console.log(`Roster prices read from the gateway list on ${FITNESS_PRICES_VERIFIED}. The gateway may add margin.`)
+    return
+  }
+  console.log(`pnpm bench fitness validate                      schema-check data/fitness/items
+pnpm bench fitness cost [--scope items|pilot|full] [--samples 3]  price a run`)
+}
+
 async function main() {
   const args = parseArgs(process.argv.slice(2))
   const command = args._[0] ?? 'help'
@@ -932,6 +984,10 @@ async function main() {
 
     case 'research':
       await research(args)
+      break
+
+    case 'fitness':
+      await fitness(args)
       break
 
     case 'agenda': {
@@ -1454,6 +1510,8 @@ Start with file 1.
                                           measure the prompts and price the panel run
   pnpm bench probe     --search <regex> [--limit 40]             find World Bank series by name, with the database each needs
   pnpm bench probe     --series a,b[@db] [--from 2010] [--json]  test candidate World Bank series before wiring them
+  pnpm bench fitness  validate | cost [--scope items|pilot|full] [--samples 3]
+                                          public AI fitness (D168): check the item set, price a run
   pnpm bench validate  [--fetch]          schema-check Delphi, evidence, institution and subnational data; --fetch live-checks evidence URLs
   pnpm bench report                       write the findings report
   pnpm bench agenda    [BRA IND ...] [--lang pt-BR]
