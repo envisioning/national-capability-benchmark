@@ -29460,6 +29460,368 @@
           "Card and account-to-account habits that already work well enough for most retail payments"
         ]
       }
+    },
+    {
+      "id": "bel-poles-de-competitivite",
+      "indicatorId": "university_industry_collaboration",
+      "iso3": "BEL",
+      "title": "Wallonia's pôles de compétitivité",
+      "claim": "The Walloon government labelled 266 collaborative research, development and innovation projects through its six pôles de compétitivité over 24 calls from 2006 to June 2018, each needing at least two firms and two distinct research actors, with forecast budgets of 930 million euros, and 126 of those projects had been completed with final payment by early 2019.",
+      "metric": {
+        "name": "Collaborative RDI projects labelled by the Walloon government, calls 1 to 24",
+        "value": 266,
+        "unit": "projects",
+        "asOf": "2006-2018"
+      },
+      "secondMetric": {
+        "name": "RDI projects completed with final payment",
+        "value": 126,
+        "unit": "projects",
+        "asOf": "2019"
+      },
+      "started": 2006,
+      "status": "operating",
+      "source": {
+        "publisher": "IWEPS (Walloon Institute for Evaluation, Prospective and Statistics), Rapport de recherche n°25, La politique des pôles de compétitivité dans le cadre de la Stratégie de spécialisation intelligente, Tableau 2.2",
+        "url": "https://www.iweps.be/wp-content/uploads/2019/05/RR25-PM4-Louis-complet.pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-17"
+      },
+      "limits": "This is a regional delivery, not a federal one: research and innovation policy is a regional competence in Belgium, and the record covers Wallonia only, not Flanders or Brussels. The figures are read from a PDF (Tableau 2.2, page 18) that IWEPS computed from the administration's SIPOLES project database; they stop at call 24 (June 2018) and are seven years old. The 930 million euros is the sum of forecast project budgets at submission, public and private together, not money spent. A research actor can be a university laboratory, an accredited research centre or a haute école, so the count is firm-research collaboration of which university collaboration is a part, not all of it. The same report's causal analysis covers only calls 1 to 16 and is cautious about effects on firm performance. The Walloon government's procedure page, updated 30 September 2026, describes a 47th call with a forecast budget of 20 million euros, which is the basis for the operating status; no later project count was found.",
+      "pattern": {
+        "mechanism": "The Walloon government funds research only through consortia that pair at least two firms with at least two research actors, labels projects on an international jury's advice, and pays a higher public rate (the pôle bonus) to projects that pass through a pôle.",
+        "preconditions": [
+          "Universities and research centres with laboratories able to take on industrial problems",
+          "Firms, SMEs among them, that can co-finance a project and agree intellectual property terms",
+          "A regional government with stable research subsidy instruments to top up across many calls"
+        ],
+        "travelled": "The design follows the French pôles de compétitivité launched in 2005."
+      }
+    },
+    {
+      "id": "bgr-coe-coc",
+      "indicatorId": "university_industry_collaboration",
+      "iso3": "BGR",
+      "title": "Centres of Excellence and Centres of Competence",
+      "claim": "Bulgaria's Operational Programme Science and Education for Smart Growth established 16 Centres of Excellence and Centres of Competence, led by universities and Bulgarian Academy of Sciences institutes, with 215 million euros of ERDF support, and by 2023 they reported 257 joint research projects with business against a target of 150.",
+      "metric": {
+        "name": "Joint research projects between the centres and business",
+        "value": 257,
+        "unit": "projects",
+        "asOf": "2023"
+      },
+      "secondMetric": {
+        "name": "Target for joint research projects with business",
+        "value": 150,
+        "unit": "projects",
+        "asOf": "2023"
+      },
+      "started": 2018,
+      "status": "operating",
+      "source": {
+        "publisher": "Executive Agency Program Education (Bulgaria), Centers of Excellence and Centers of Competence in Bulgaria, presentation by the Deputy Executive Director, Interreg Europe, 19 November 2024",
+        "url": "https://interregeurope.eu/sites/default/files/2024-12/Presentation%20by%20Ivan%20Popov.pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-17"
+      },
+      "limits": "The figure is the managing authority's own report of its programme, read from a slide in a conference presentation, not from a published monitoring report. The slide does not define a joint research project, give their value or say how many firms took part, so 257 could include small service contracts. Several centres are led by Academy of Sciences institutes rather than universities. The same presentation cites a 2021 JRC strategic evaluation that found the centres strongly focused on research excellence and less on commercialisation, with technology transfer still relatively limited. About 75 percent of the 2014-2020 money went to research infrastructure. The centres continue under the 2021-2027 Research, Innovation and Digitalisation programme with 168 million euros, which is the basis for the operating status.",
+      "pattern": {
+        "mechanism": "The education ministry's managing authority used cohesion funds to build research centres in the smart specialisation areas, set an output target for joint projects with business, and then made 2021-2027 funding depend on each centre's business plan.",
+        "preconditions": [
+          "Cohesion funding large enough to build infrastructure the national budget could not",
+          "Universities and Academy institutes able to run multi-partner centres",
+          "Firms with a research need the centres can serve, which the evaluation found was the weak link"
+        ]
+      }
+    },
+    {
+      "id": "grc-edk",
+      "indicatorId": "university_industry_collaboration",
+      "iso3": "GRC",
+      "title": "Ερευνώ-Δημιουργώ-Καινοτομώ (Research-Create-Innovate), 2014-2020",
+      "claim": "Greece's Research-Create-Innovate action under the 2014-2020 competitiveness programme completed 1,105 projects with 535.8 million euros of public funding, in which 1,267 firms worked with research organisations.",
+      "metric": {
+        "name": "Firms that collaborated with research organisations",
+        "value": 1267,
+        "unit": "firms",
+        "asOf": "2014-2020 programme, reported 2025"
+      },
+      "secondMetric": {
+        "name": "Public funding of completed projects",
+        "value": 535777014,
+        "unit": "euros",
+        "asOf": "2014-2020 programme, reported 2025"
+      },
+      "started": 2017,
+      "status": "concluded",
+      "source": {
+        "publisher": "General Secretariat for Research and Innovation (Greece), press release of 10 April 2025 on the evaluation of Research-Create-Innovate (EPAnEK, ESPA 2014-2020)",
+        "url": "https://gsri.gov.gr/wp-content/uploads/2025/04/Τάσος-Γαϊτάνης-στην-εκδήλωση-αποτίμησης-του-Έρευνώ-Δημιουργώ-Καινοτομώ-1.pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-17"
+      },
+      "limits": "The figures come from a two-page ministry press release that reports a speech at the programme's own evaluation event, so they are the funder's account; the evaluation report itself was not found. The release does not split the 1,105 projects between firm-only research and joint firm-research projects, and the action also funded SME research without a research partner, so the 1,267 firms are the closest figure to the construct, not a count of joint projects. A research organisation includes public research centres, not only universities. The other outputs in the release (1,190 products on the market, 462 patent applications, over 8,500 full-time person-years) are self-reported and not verified there. The action was co-financed by the ERDF, so it measures what cohesion money bought as much as national capacity.",
+      "pattern": {
+        "mechanism": "The research secretariat ran repeated competitive calls that paid a high public share for projects linking firms, SMEs and micro-firms included, with universities and research centres, implemented by a dedicated management body.",
+        "preconditions": [
+          "Cohesion funding on a scale the national research budget could not match after the crisis",
+          "A research base in universities and centres across regions, since regional convergence was a selection aim",
+          "Firms able to co-fund about one seventh of project budgets"
+        ]
+      }
+    },
+    {
+      "id": "hun-fiek",
+      "indicatorId": "university_industry_collaboration",
+      "iso3": "HUN",
+      "title": "Centres for Higher Education and Industrial Cooperation (FIEK)",
+      "claim": "Hungary's National Research, Development and Innovation Office funded eight university-led consortia with firms to set up Centres for Higher Education and Industrial Cooperation from 2016: five under GINOP-2.3.4-15 for 88 million euros and three under the domestically funded FIEK_16 call for 26 million euros.",
+      "metric": {
+        "name": "Grants to FIEK consortia under GINOP-2.3.4-15",
+        "value": 88000000,
+        "unit": "euros",
+        "asOf": "2016-2019"
+      },
+      "secondMetric": {
+        "name": "Grants to FIEK consortia under FIEK_16",
+        "value": 26000000,
+        "unit": "euros",
+        "asOf": "2016-2019"
+      },
+      "started": 2016,
+      "status": "concluded",
+      "source": {
+        "publisher": "OECD STIP Compass, Knowledge Transfer and Policies project: Centres for Higher Education and Industrial Cooperation, Hungary (National Research, Development and Innovation Office), Annex A, Table 5",
+        "url": "https://stip.oecd.org/assets/TKKT/CaseStudies/10.pdf",
+        "tier": "international_organization",
+        "retrievedAt": "2026-10-17"
+      },
+      "limits": "The figures are read from a PDF (Annex A, Table 5) dated April 2019. The case study is hosted by the OECD but written by the funding agency itself, so it is the funder's account, and it states that no programme-level assessment had taken place because implementation only began in 2017. The amounts are grants awarded, an input, not money spent or results. Eight centres in one programme cycle is a small number, and the case study says the projects were built on existing, sometimes decades-long, university-firm relationships, so the scheme may have funded collaboration that already existed. The concluded status rests on the University of Miskolc's own release of 27 October 2021 announcing the close of its FIEK project, which reported 30 prototypes or market-ready results and 16 industrial property filings; the other seven projects' closures were not checked.",
+      "pattern": {
+        "mechanism": "The research office paid for a university to set up a permanent cooperation centre run jointly with its industrial partners, with voting rights in the centre proportional to each member's financial share, so firms set the research direction.",
+        "preconditions": [
+          "Universities with existing long-term research contracts with specific firms",
+          "Cohesion funds for the less developed regions and a domestic fund to mirror the call in the capital region",
+          "University rules on intellectual property and infrastructure use clear enough to let competing firms in"
+        ]
+      }
+    },
+    {
+      "id": "svk-matching-granty",
+      "indicatorId": "university_industry_collaboration",
+      "iso3": "SVK",
+      "title": "Matching grants for research income from the private sector",
+      "claim": "Slovakia's Research and Innovation Authority, under the Recovery and Resilience Plan, contracted 44 matching grants worth 30.8 million euros in 2024 and 2025 to universities and public research organisations as a reward for the research and development they had already done with the private sector, 21 of them, worth 24.2 million euros, to universities.",
+      "metric": {
+        "name": "Matching grant funds contracted, rounds one and two (summed from the published recipient lists)",
+        "value": 30778076,
+        "unit": "euros",
+        "asOf": "2024-2025"
+      },
+      "secondMetric": {
+        "name": "Matching grant contracts signed, rounds one and two",
+        "value": 44,
+        "unit": "contracts",
+        "asOf": "2024-2025"
+      },
+      "started": 2024,
+      "status": "concluded",
+      "source": {
+        "publisher": "Vyskumna a inovacna autorita (VAIA), call 09I02-03-V02 'Matching granty ku zdrojom ziskanym od sukromneho sektora v ramci vyskumnej spoluprace', call page and recipient lists as of 4 September 2024 and 27 June 2025",
+        "url": "https://vaia.gov.sk/sk/2023/06/matching-granty-ku-zdrojom-ziskanym-od-sukromneho-sektora-v-ramci-vyskumnej-spoluprace/",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-17"
+      },
+      "limits": "The call page gives the allocation (32,473,000 euros) and the number of applications (15 in round one, 31 in round two) but no total of awards: 44 contracts and 30.8 million euros are our sums of the two recipient spreadsheets linked from that page (13 contracts and 17.2 million euros in round one, 31 contracts and 13.6 million euros in round two), and the 21 university contracts are those whose recipient name contains 'univerzita'; the rest went to Slovak Academy of Sciences institutes and state research centres. Contracted sums are not disbursed sums. The grant is a reward for collaboration that already happened, matched against private research income for periods the project titles give as 2020 to 2023, and the money buys research equipment, so the record shows how much contract and joint research with firms the public research system had, not new collaboration the grant created. The lists do not name the firms or say how much income each institution earned, and the matching ratio is set in the call text, not on the page. The money is European Union Recovery and Resilience Facility funding, run once through a closed call, so this is a one-off delivery rather than a standing programme. The University of Zilina, the Slovak University of Technology and the Technical University of Kosice took 21.3 million euros between them, so the volume is concentrated in a few technical universities.",
+      "pattern": {
+        "mechanism": "The research and innovation authority paid each university and public research organisation a grant sized by the research income it had already earned from private firms, so institutions that had sold research to industry received equipment money that the others did not.",
+        "preconditions": [
+          "Institutions able to document and certify their private research income for past years",
+          "A one-off pool of recovery money that could be spent on equipment rather than salaries",
+          "A national agency able to contract dozens of public research bodies in two rounds"
+        ]
+      }
+    },
+    {
+      "id": "nzl-preseed",
+      "indicatorId": "university_industry_collaboration",
+      "iso3": "NZL",
+      "title": "PreSeed Accelerator Fund, commercialising university and public research",
+      "claim": "Through the PreSeed Accelerator Fund that the Ministry of Business, Innovation and Employment contracts to KiwiNet, a network owned by New Zealand universities and public research organisations, PreSeed provided 7.7 million New Zealand dollars across 255 commercialisation projects in 2024/25, with 1.5 million dollars of business co-funding, and 357 businesses had co-invested in PreSeed projects to 30 June 2025.",
+      "metric": {
+        "name": "Business co-funding into PreSeed projects in the year",
+        "value": 1500000,
+        "unit": "New Zealand dollars",
+        "asOf": "1 July 2024 to 30 June 2025"
+      },
+      "secondMetric": {
+        "name": "Business co-investors in PreSeed projects, cumulative",
+        "value": 357,
+        "unit": "businesses",
+        "asOf": "to 30 June 2025"
+      },
+      "started": 2003,
+      "status": "operating",
+      "source": {
+        "publisher": "KiwiNet, Annual PreSeed Report 2025 (report on the MBIE PreSeed Accelerator Fund devolved contract)",
+        "url": "https://kiwinet.org.nz/files/AnnualReports/KiwiNet-Annual-PreSeed-Report-2025.pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-17"
+      },
+      "limits": "The figures are KiwiNet's own report on the fund it administers, read from a PDF (the executive summary and Table 1). PreSeed pays for early commercialisation work inside research organisations, such as market validation, patents and prototypes, and the firm comes in as a co-investor, licensee or spin-out investor, so the record evidences technology transfer from public research to firms more than joint research. The pool covers universities and Crown Research Institutes, now public research organisations, together, and the report does not split the figures between them. The report says its historical data before July 2023 is likely incomplete, and its cumulative figures move between editions: the 2026 report gives 371 business co-investors but 26.4 million dollars of cumulative business co-investment against 29.4 million in the 2025 report. The 2026 report also shows the annual flow falling to 4.5 million dollars across 200 projects and 765,000 dollars of business co-funding in 2025/26, and the report does not say whether that is a funding cut. Business money is small against the public and research-organisation shares. The started year is the first year the report counts returns from.",
+      "pattern": {
+        "mechanism": "The ministry gives a pooled commercialisation fund to a company owned by the universities and research institutes, and an investment committee with independent business members releases staged money to projects that must attract research-organisation and business co-funding.",
+        "preconditions": [
+          "Technology transfer offices in each university able to run projects and report outcomes",
+          "Research organisations willing to pool money and accept a shared investment committee",
+          "Firms and investors able to license or back early-stage public research"
+        ]
+      }
+    },
+    {
+      "id": "ukr-technoparks",
+      "indicatorId": "university_industry_collaboration",
+      "iso3": "UKR",
+      "title": "Technological parks under the 1999 special regime, and their collapse",
+      "claim": "Ukraine's technological parks, set up from 2000 under the 1999 law on a special regime of innovation activity to join research institutes and universities with industrial enterprises in state-registered projects, had 120 projects approved from 2000 to 2014 and raised the annual output of their innovative products from UAH 0.18 billion in 2001 to UAH 2.6 billion in 2007; after the state cut their benefits from 2005, project approvals were blocked from 2005 to 2010, no project was accepted after the 2010 Tax Code, and the parks' performance came to nothing by 2010 to 2014.",
+      "metric": {
+        "name": "Annual output of innovative products from technopark projects under the special regime, at the peak",
+        "value": 2600000000,
+        "unit": "hryvnias",
+        "asOf": "2007"
+      },
+      "secondMetric": {
+        "name": "Technological park projects approved, cumulative",
+        "value": 120,
+        "unit": "projects",
+        "asOf": "2000-2014"
+      },
+      "started": 2000,
+      "status": "dismantled",
+      "source": {
+        "publisher": "Mazur, A.A. and Pustovoit, S.V., Paton Electric Welding Institute of the NAS of Ukraine, Social and economic efficiency of academic technoparks in Ukraine, Science and Innovation 12(3), 2016, pp. 59-69, table and text from Ministry of Education and Science departmental reporting",
+        "url": "https://nasu-periodicals.org.ua/index.php/science/article/download/6183/5501/12144",
+        "tier": "academic_survey",
+        "retrievedAt": "2026-10-17"
+      },
+      "limits": "The figures are in a PDF and come from authors at the Paton Electric Welding Institute, whose own technopark is the largest in the table, so the account is written by a beneficiary arguing for the regime's return. The authors say the table rests on the Ministry of Education and Science's departmental reporting, which the ministry does not publish at an open URL. More than 98 percent of the parks' sales came from three parks built on National Academy of Sciences institutes, so the evidence is mostly about academy institutes working with enterprises, and much less about universities. Sales of innovative products measure the commercial output of registered projects, often made by enterprises tied to the institutes, and do not count joint research projects or the firms involved one by one. The peak and the 2001 value are read from the text; the annual series is drawn in a chart without printed values, so the 2010 to 2014 level is stated only in words ('came to nothing'). The law was not repealed: the source describes cut benefits and blocked project approvals, and some incentives were later restored, so the collapse is of the delivery, not of the legal form. The source ends in 2014 and does not show whether projects were registered after its publication.",
+      "pattern": {
+        "mechanism": "Parliament gave named technological parks, built mostly on academy research institutes, tax and customs relief on state-registered projects that took their research into production with industrial partners, and the relief was reinvested in the projects. The government withdrew the relief from 2005 and stopped approving projects, and output fell with it.",
+        "preconditions": [
+          "Research institutes with technologies close to production and enterprises able to manufacture them",
+          "A tax and customs relief that the finance ministry was willing to forgo, which it stopped being after 2005",
+          "Stable rules over the five-year life of a project, which the repeated legal changes removed"
+        ],
+        "travelled": "Belarus and Kazakhstan run science and technology parks with tax relief for residents. The Ukrainian case shows that a regime tied to a tax privilege can be ended in one budget law when the privilege is accused of abuse."
+      }
+    },
+    {
+      "id": "pak-tdf",
+      "indicatorId": "university_industry_collaboration",
+      "iso3": "PAK",
+      "title": "HEC Technology Development Fund",
+      "claim": "Pakistan's Higher Education Commission funds joint academia-industry projects that take university research to prototype and licence through its Technology Development Fund, which had awarded 238 projects by December 2025, 192 of them completed, with 162 technology licences signed.",
+      "metric": {
+        "name": "Joint academia-industry projects awarded under the Fund, cumulative",
+        "value": 238,
+        "unit": "projects",
+        "asOf": "2025-12"
+      },
+      "secondMetric": {
+        "name": "Technology licences signed under the Fund, cumulative",
+        "value": 162,
+        "unit": "licences",
+        "asOf": "2025-12"
+      },
+      "started": 2016,
+      "status": "operating",
+      "source": {
+        "publisher": "Higher Education Commission (HEC) Pakistan, HEC Displays Over 100 Tech Solutions Developed under Technology Development Fund (news release, Islamabad, 31 December 2025), archived copy",
+        "url": "https://web.archive.org/web/20260212103440/https://www.hec.gov.pk/english/news/news/Pages/HEC-Displays-Over-100-Tech-Solutions.aspx",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-17"
+      },
+      "limits": "The figures are HEC's own report of its own programme, given in a news release about a showcase event, and no independent evaluation is cited. They are cumulative counts since the first call, not a yearly rate, and a project count says nothing about the size, success or additionality of each project. HEC reports licences signed, not licence revenue or products sold, and the release gives no count of firms involved. The programme's own introduction page says it funds proposals submitted by consortia of industry and academic partners, so the industry side is a condition of the grant, but the scale of each firm's contribution is not published. The hec.gov.pk host did not answer on 17 October 2026, so the source is the Internet Archive copy of 12 February 2026. The start year follows the August 2016 press report of HEC opening the first call; neither HEC page states it.",
+      "pattern": {
+        "mechanism": "The Higher Education Commission pays university faculty to take finished lab research to a prototype, but only for proposals filed jointly with an industry partner, and it then brokers licences for the results.",
+        "preconditions": [
+          "Faculty with completed applied research ready for prototyping",
+          "Firms willing to co-sign a proposal and take a licence",
+          "University offices that handle intellectual property and licensing, which HEC built through its ORIC network"
+        ]
+      }
+    },
+    {
+      "id": "egy-itac",
+      "indicatorId": "university_industry_collaboration",
+      "iso3": "EGY",
+      "title": "Information Technology Academia Collaboration (ITAC) collaborative funded projects",
+      "claim": "Egypt's Information Technology Industry Development Agency (ITIDA) funded 249 collaborative ICT research and product projects through its ITAC national calls from 2006 to 2025, worth 191.6 million Egyptian pounds and involving 25 universities and 108 companies.",
+      "metric": {
+        "name": "ITAC collaborative funded projects, cumulative",
+        "value": 249,
+        "unit": "projects",
+        "asOf": "2006-2025"
+      },
+      "secondMetric": {
+        "name": "Companies in ITAC collaborative funded projects, cumulative",
+        "value": 108,
+        "unit": "companies",
+        "asOf": "2006-2025"
+      },
+      "started": 2006,
+      "status": "operating",
+      "source": {
+        "publisher": "Information Technology Industry Development Agency (ITIDA), ITAC awareness brief 2025, slide 'Programs Breakdown (2006 - Present)'",
+        "url": "https://itida.gov.eg/English/Programs/ITAC-CFP/PublishingImages/Pages/default/ITAC-Awareness-brief-2025.pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-17"
+      },
+      "limits": "The figures are the agency's own, read from a slide deck in PDF, and are cumulative over about 20 years with no annual series, so the rate of collaboration in any one year cannot be read from them. Not every one of the 249 projects joined a university and a firm: the agency's 2023 brief says the preliminary research track could go to a university or a company alone, while the advanced research and product tracks required a faculty member and a company. In the 2025 brief the university-led preliminary research track is marked on hold, and the open call page for Round 41 (2026) accepts only product development proposals, whose eligibility rule names a registered company and a principal investigator but no university partner, so the university side of the scheme is narrower now than its record. The scheme covers ICT only, and an ESCWA review the 2023 brief quotes calls its funding limited compared with Egypt's main science fund. The cumulative university count fell from 26 in the 2023 brief to 25 in the 2025 brief, which the source does not explain. Project counts are inputs: the brief lists products and acquisitions as examples but gives no total of sales or firms that used the results.",
+      "pattern": {
+        "mechanism": "The ICT industry agency ran twice-yearly national calls that paid faculty researchers and companies to take a research idea to a prototype or product together, with a steering committee drawn from universities and industry choosing the projects.",
+        "preconditions": [
+          "An industry development agency with its own budget and a mandate over one sector",
+          "Engineering faculties with researchers able to work to product milestones",
+          "Domestic ICT and electronics firms able to absorb a prototype, which limits the model to one sector"
+        ]
+      }
+    },
+    {
+      "id": "uga-msi",
+      "indicatorId": "university_industry_collaboration",
+      "iso3": "UGA",
+      "title": "Millennium Science Initiative industry window, and its end",
+      "claim": "The Uganda National Council for Science and Technology ran the Millennium Science Initiative from 2007 to June 2013 on a 30 million dollar IDA credit, and its Window C awarded six grants for firms and researchers to solve industry problems together; when the credit closed, the government neither funded the facility from its own resources nor requested follow-up financing.",
+      "metric": {
+        "name": "Grants awarded to finance collaboration between industry and researchers",
+        "value": 6,
+        "unit": "grants",
+        "asOf": "2007-2013"
+      },
+      "secondMetric": {
+        "name": "IDA credit disbursed for the whole project",
+        "value": 30000000,
+        "unit": "US dollars",
+        "asOf": "2007-2013"
+      },
+      "started": 2007,
+      "status": "concluded",
+      "source": {
+        "publisher": "World Bank Independent Evaluation Group, Project Performance Assessment Report: Uganda, Millennium Science Initiative (Report No. 102970), 7 April 2016, text version",
+        "url": "https://documents.worldbank.org/curated/en/812191467995625310/text/102970-REPLACEMENT-SAME-BOX-PUBLIC-SecM2016-0135.txt",
+        "tier": "international_organization",
+        "retrievedAt": "2026-10-17"
+      },
+      "limits": "Six grants of up to 50,000 dollars each are a very small instrument, and the evaluation rates the objective of firms using science and technology as modest: three of the grants were feasibility studies that their holders did not take further, and the evaluation found technology transfer or adoption in only two. The 30 million dollars financed the whole project, mostly research and undergraduate programme grants and outreach, not the industry window. The money was an IDA credit, a loan to the government, and the evaluation itself says full IDA financing did not build government ownership, so a reader can argue this was a donor instrument run through a national council rather than a national programme. The end was a funding decision by omission, not a judgement that the window failed. The source is a World Bank evaluation read from the disclosed text version, whose cover still carries a restricted-distribution notice. This record does not assess whether later Ugandan research funds took over the role.",
+      "pattern": {
+        "mechanism": "The national science council opened a competitive grant window that paid firms and researchers to work on a problem the firm named, financed entirely by a development credit. When the credit closed, no national budget line took the window over, so the collaboration instrument ended with the loan.",
+        "preconditions": [
+          "A science council able to run open, merit-based calls and track grants",
+          "Firms with problems they can state and some capacity to adopt a solution, which in Uganda were mostly small and medium enterprises",
+          "A national budget commitment to continue the facility after external financing ends, which was the missing condition here"
+        ]
+      }
     }
   ]
 }

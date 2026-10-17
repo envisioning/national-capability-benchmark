@@ -9,6 +9,16 @@ The entries before App 1.0.0 are retrospective, high-level summaries
 reconstructed from the repository history. They document explicit version bumps
 and may skip versions that were never committed.
 
+## App 1.31.10 — 2026-10-17
+
+- **University and industry collaboration now has cases or searched notes
+  for 114 of 125 countries.** Ten new records include Wallonia's
+  competitiveness poles, Greece's Research-Create-Innovate, Pakistan's
+  Technology Development Fund and Egypt's ITAC. One documents a loss:
+  Ukraine's technology parks, whose tax regime was suspended from 2005 and
+  admitted no project after 2010. 27 countries close with a note that names
+  what was searched and why nothing qualified.
+
 ## App 1.31.9 — 2026-10-17
 
 - **17 new cases stand beside Brazil's flagship deliveries.** They are
