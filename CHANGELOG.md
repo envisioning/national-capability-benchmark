@@ -9,6 +9,21 @@ The entries before App 1.0.0 are retrospective, high-level summaries
 reconstructed from the repository history. They document explicit version bumps
 and may skip versions that were never committed.
 
+## App 1.33.1 — 2026-10-17
+
+- **A design for testing language models on Brazil's public life.** A new
+  design document describes a second instrument, kept apart from the
+  capability scores. It would ask language models 400 questions in
+  Portuguese about public services, public money, legislators and contested
+  policy. Facts are graded against dated public sources, and every answer is
+  checked for whether it takes a side on a value question. Nothing is built
+  or scored yet. Decision D168.
+- **A religious tradition enters the institution map as a tag and a
+  presence.** It never becomes a node of its own, and no tradition is
+  ranked. A research brief sets out how the project will study organizations
+  outside the state, starting with evangelical churches in Brazil. Decision
+  D169.
+
 ## App 1.33.0 — 2026-10-17
 
 - **A model panel now scores every country on all nine capabilities.**
