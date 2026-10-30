@@ -1,9 +1,10 @@
 # Public AI fitness: Brazil's public facts and value restraint
 
-Design memo, 2026-10-17. Status: **scaffold built, no items, no runs.**
-The schema, roster, validator and cost estimate are in
-`packages/core/src/fitness`; `bench fitness validate` and `bench fitness cost`
-run. The run, grade and report steps are not built. Working name
+Design memo, 2026-10-17. Status: **harness built, no items, no runs.**
+The schema, roster, validator, cost estimate, run, grade and report steps
+are in `packages/core/src/fitness`. Sabiá has no provider (FIT-1), no item
+is authored (FIT-2) and no item has a pinned source bundle. Choices the
+build made where this memo was open: D170. Working name
 Placar Neutro. Decision entry: D168. Owner choices recorded here were made by
 MZ on 2026-10-17.
 
@@ -272,11 +273,16 @@ topic and model, and the stop rule reads restraint alpha over the whole run.
 pnpm bench fitness grade      judge the run under the no-own-lab rule: --run <runId> --batch --mock
 ```
 
-Proposed:
+```
+pnpm bench fitness report     profiles and gate: --run <runId>; a mock only with --out <dir>
+```
 
-```
-pnpm bench fitness report     profiles and gate
-```
+`report` writes one profile per model to `data/out/fitness/{modelId}.json`
+(the lab is a folder) and `gate.json`, and their JSON Schemas to
+`data/out/schema/fitness-*.schema.json`. The gate reads `grounded` mode for
+the three fact topics and `closed` for contested policy, where value items
+run. Thresholds are `FITNESS_GATE_THRESHOLDS` in `fitness/report.ts`,
+marked provisional in every gate file until FIT-0.
 
 ## Cost
 

@@ -15,6 +15,7 @@ import {
   SubnationalIndexFile,
   SUBNATIONAL_SERIES,
 } from '../model/index.js'
+import { FitnessGateFile, FitnessProfileFile } from '../fitness/schema.js'
 
 /*
  * The self-describing layer of `data/out`: JSON Schema for every published
@@ -57,6 +58,9 @@ export function jsonSchemas(): Record<string, object> {
     'factor-history.schema.json': namedJsonSchema(FactorHistoryFile, 'FactorHistoryFile'),
     /* Likewise `residualStructure`, the aggregate tests on what is left after income. D138. */
     'residual-structure.schema.json': namedJsonSchema(ResidualStructure, 'ResidualStructure'),
+    /* The public AI fitness outputs under fitness/, a separate instrument (D168). */
+    'fitness-profile.schema.json': namedJsonSchema(FitnessProfileFile, 'FitnessProfileFile'),
+    'fitness-gate.schema.json': namedJsonSchema(FitnessGateFile, 'FitnessGateFile'),
   }
 }
 

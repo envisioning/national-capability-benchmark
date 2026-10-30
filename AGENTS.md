@@ -30,6 +30,7 @@ pnpm bench fitness validate  schema-check data/fitness/items, the public AI fitn
 pnpm bench fitness cost      price a fitness run: --scope items|pilot|full, --samples 3; measures the real prompts when items exist
 pnpm bench fitness run       answer every item with every roster model into data/fitness/runs/<runId>.json: --models, --mode, --samples 3, --batch, --mock
 pnpm bench fitness grade     judge a run under the no-own-lab rule into data/fitness/grades/<runId>.json, with judge alpha and the stop rule: --run <runId>, --batch, --mock
+pnpm bench fitness report    write data/out/fitness/<lab>/<model>.json profiles and gate.json from a graded run; refuses a mock unless --out <dir>
 pnpm bench all         ingest, score, diagnose, report, agenda, brief
 pnpm build             tsc for packages/core, then next build for apps/web
 pnpm typecheck         both packages
@@ -114,9 +115,11 @@ port 3888. That entry starts Next directly and does not use the proxy.
   two before anything renders. See D107.
 - `data/fitness` — the public AI fitness module (D168), a separate instrument
   that tests language models on Brazil's public facts and value restraint.
-  `items/{topic}.json` holds the item set, one file per topic. Design and the
-  planned layout of runs, grades and outputs:
-  `docs/research/public-ai-fitness/DESIGN.md`.
+  `items/{topic}.json` holds the item set, one file per topic,
+  `sources/{itemId}/{n}.txt` the pinned text a `grounded` run supplies,
+  `runs/{runId}.json` the answers and `grades/{runId}.json` the judge
+  grades. Profiles and the gate go to `data/out/fitness`. Design:
+  `docs/research/public-ai-fitness/DESIGN.md`. The gate fails closed: D170.
 - `data/evidence` — evidence records: documented deliveries filed against
   indicators that have no dataset. Never scored. Inclusion rule and authoring
   guide in `docs/EVIDENCE.md`. See D20.
