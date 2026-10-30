@@ -259,10 +259,22 @@ FIT-1) is listed there too. `--batch` calls the gateway's `-batch` id where
 it lists one. A failed call stays in the run file as an answer with no text
 and its error.
 
+`grade` sends every answer to the two judges `judgesFor` names. The rubric
+is `FITNESS_RUBRIC` in `fitness/prompts.ts`, frozen under
+`FITNESS_RUBRIC_REVISION` and hashed into the grade file. A script item is
+graded `correct` by script only when the answer states every reference value;
+otherwise the judges decide, because a script cannot tell a wrong figure from
+an invented one. A construct the two judges disagree on has no final grade
+and is counted as disputed. Krippendorff's alpha is written per construct,
+topic and model, and the stop rule reads restraint alpha over the whole run.
+
+```
+pnpm bench fitness grade      judge the run under the no-own-lab rule: --run <runId> --batch --mock
+```
+
 Proposed:
 
 ```
-pnpm bench fitness grade      judge the run under the no-own-lab rule
 pnpm bench fitness report     profiles and gate
 ```
 
