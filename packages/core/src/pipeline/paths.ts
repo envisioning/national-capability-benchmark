@@ -15,6 +15,10 @@ export const INSTITUTIONS_DIR = resolve(DATA_DIR, 'institutions')
 /** Public AI fitness, a separate instrument from the benchmark (D168). */
 export const FITNESS_DIR = resolve(DATA_DIR, 'fitness')
 export const FITNESS_ITEMS_DIR = resolve(FITNESS_DIR, 'items')
+/** Pinned source text for `grounded` mode: `{itemId}/{n}.txt`, n the 1-based index into the item's sources. */
+export const FITNESS_SOURCES_DIR = resolve(FITNESS_DIR, 'sources')
+export const FITNESS_RUNS_DIR = resolve(FITNESS_DIR, 'runs')
+export const FITNESS_GRADES_DIR = resolve(FITNESS_DIR, 'grades')
 export const SNAPSHOT_DIR = resolve(OBSERVATIONS_DIR, 'snapshots')
 export const OUT_DIR = resolve(DATA_DIR, 'out')
 export const COUNTRY_OUT_DIR = resolve(OUT_DIR, 'countries')
@@ -24,6 +28,8 @@ export const AGENDA_OUT_DIR = resolve(OUT_DIR, 'agenda')
 export const INSTITUTION_OUT_DIR = resolve(OUT_DIR, 'institutions')
 export const SCHEMA_OUT_DIR = resolve(OUT_DIR, 'schema')
 export const BRIEF_OUT_DIR = resolve(OUT_DIR, 'brief')
+/** Profiles and the gate. Never read by scoring or the viewer (D168). */
+export const FITNESS_OUT_DIR = resolve(OUT_DIR, 'fitness')
 
 export const FILES = {
   worldBank: resolve(OBSERVATIONS_DIR, 'worldbank.json'),

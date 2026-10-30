@@ -22,15 +22,21 @@ import { fetchOpenAlexCitationImpact } from '../pipeline/adapters/openalex.js'
 import { fetchGithubNewRepositories } from '../pipeline/adapters/github.js'
 import { probeSeries, registrySeries, searchCatalogue } from '../pipeline/probe.js'
 import { loadFitnessItems } from '../fitness/validate.js'
-import { estimateFitnessCost, FITNESS_PRICES_VERIFIED, FITNESS_SCOPES, FITNESS_TOKENS } from '../fitness/cost.js'
+import { estimateFitnessCost, FITNESS_PRICES_VERIFIED, FITNESS_SCOPES, FITNESS_TOKENS, measureFitnessTokens } from '../fitness/cost.js'
 import type { FitnessScope } from '../fitness/cost.js'
 import { FITNESS_MODELS } from '../fitness/roster.js'
+import { GatewayFitnessProvider, MockFitnessProvider } from '../fitness/provider.js'
+import type { FitnessProvider } from '../fitness/provider.js'
+import { runFitness } from '../fitness/run.js'
+import { FitnessMode } from '../fitness/schema.js'
+import { loadSourceBundles, saveFitnessRun } from '../fitness/store.js'
 import type { ProbeRequest } from '../pipeline/probe.js'
 import {
   COUNTRY_OUT_DIR,
   DELPHI_DIR,
   FILES,
   INDICATOR_OUT_DIR,
+  ROOT,
   SCHEMA_OUT_DIR,
   agendaDoc,
   agendaFile,
@@ -38,7 +44,7 @@ import {
   countryFile,
   indicatorFile,
 } from '../pipeline/paths.js'
-import { resolve } from 'node:path'
+import { relative, resolve } from 'node:path'
 import { mkdir, readFile, readdir, rm, writeFile } from 'node:fs/promises'
 import { buildDataPackage, jsonSchemas } from '../pipeline/datapackage.js'
 import { flatTable, scoreAll } from '../pipeline/score.js'
@@ -822,10 +828,27 @@ async function brief(): Promise<void> {
   console.log(`brief       -> ${written.length} documents (${written.join(', ')}) -> data/out/brief`)
 }
 
+/** Gateway unless `--mock` or no key, as `bench delphi` decides. Sabiá waits for FIT-1. */
+function fitnessProviders(args: Args): FitnessProvider[] {
+  if (bool(args, 'mock') || !process.env['AI_GATEWAY_API_KEY']) {
+    if (!bool(args, 'mock')) console.log('AI_GATEWAY_API_KEY is not set. Falling back to the mock, which is not evidence.')
+    return [new MockFitnessProvider()]
+  }
+  return [new GatewayFitnessProvider()]
+}
+
+/** `--models a,b` narrows a roster to ids or labs it names; unknown names fail. */
+function pickRoster<T extends { id: string; lab: string }>(roster: readonly T[], args: Args, flag: string): T[] {
+  const wanted = str(args, flag, '').split(',').map((s) => s.trim()).filter(Boolean)
+  if (wanted.length === 0) return [...roster]
+  const unknown = wanted.filter((w) => !roster.some((m) => m.id === w || m.lab === w))
+  if (unknown.length > 0) throw new Error(`Unknown --${flag} ${unknown.join(', ')}. Roster: ${roster.map((m) => m.id).join(', ')}.`)
+  return roster.filter((m) => wanted.includes(m.id) || wanted.includes(m.lab))
+}
+
 /**
  * Public AI fitness (D168): a separate instrument that never touches a score.
- * `validate` checks the item set; `cost` prices a run. The run, grade and
- * report steps are not built yet.
+ * `validate` checks the item set, `cost` prices a run, `run` answers it.
  */
 async function fitness(args: Args): Promise<void> {
   const action = args._[1] ?? 'help'
@@ -840,16 +863,19 @@ async function fitness(args: Args): Promise<void> {
   if (action === 'cost') {
     const scope = str(args, 'scope', 'items')
     let counts: { fact: number; value: number }
+    let measured: ReturnType<typeof measureFitnessTokens> | null = null
     if (scope === 'items') {
       const { items } = await loadFitnessItems()
       const fact = items.filter((item) => item.kind === 'fact').length
       counts = { fact, value: items.length - fact }
+      if (items.length > 0) measured = measureFitnessTokens(items, await loadSourceBundles(items))
     } else if (scope in FITNESS_SCOPES) {
       counts = FITNESS_SCOPES[scope as FitnessScope]
     } else {
       throw new Error(`Unknown --scope ${scope}. Use items, pilot or full.`)
     }
-    const est = estimateFitnessCost({ items: counts, samples: num(args, 'samples', 3) })
+    const tokens = measured?.tokens ?? FITNESS_TOKENS
+    const est = estimateFitnessCost({ items: counts, samples: num(args, 'samples', 3), tokens })
     console.log(`\n${counts.fact} fact and ${counts.value} value items, ${FITNESS_MODELS.length} models`)
     console.log(`${est.answers} answers, ${est.judgeCalls} judge calls\n`)
     for (const line of est.lines) {
@@ -860,14 +886,49 @@ async function fitness(args: Args): Promise<void> {
     }
     console.log(`\n  ${'TOTAL'.padEnd(42)} $${est.usd.toFixed(2).padStart(8)}  $${est.usdCheapest.toFixed(2)}`)
     console.log(`\nSecond column: batch rate where the gateway lists one, and the judge rubric cached.`)
-    console.log(
-      `Token counts are assumptions until the run prompts exist: ${FITNESS_TOKENS.answerOutput} output tokens per answer, thinking included.`,
-    )
+    if (measured) {
+      console.log(`Input measured from the prompts: ${measured.measured.join(', ')}. Still assumed: everything else.`)
+      if (measured.groundedWithoutBundle > 0) {
+        console.log(`${measured.groundedWithoutBundle} fact item(s) have no pinned bundle: they cannot run grounded, and the grounded size is ${measured.measured.includes('groundedInput') ? 'measured on the others' : 'assumed'}.`)
+      }
+    } else {
+      console.log(`Input token counts are assumptions: no items to measure.`)
+    }
+    console.log(`Output is assumed: ${tokens.answerOutput} tokens per answer, thinking included.`)
     console.log(`Roster prices read from the gateway list on ${FITNESS_PRICES_VERIFIED}. The gateway may add margin.`)
     return
   }
+  if (action === 'run') {
+    const { items, problems } = await loadFitnessItems()
+    if (problems.some((p) => p.severity === 'error')) throw new Error('The item set has errors. Run `pnpm bench fitness validate`.')
+    if (items.length === 0) throw new Error('No items in data/fitness/items. Author them first (FIT-2).')
+    const modeFlag = str(args, 'mode', '')
+    const modes = modeFlag ? [FitnessMode.parse(modeFlag)] : [...FitnessMode.options]
+    const run = await runFitness({
+      items,
+      models: pickRoster(FITNESS_MODELS, args, 'models'),
+      providers: fitnessProviders(args),
+      samples: num(args, 'samples', 3),
+      modes,
+      bundles: await loadSourceBundles(items),
+      batch: bool(args, 'batch'),
+      concurrency: num(args, 'concurrency', 6),
+      onProgress: (m) => console.log(m),
+    })
+    const path = await saveFitnessRun(run)
+    const skippedModels = run.skipped.filter((s) => s.model)
+    const skippedItems = run.skipped.filter((s) => s.itemId)
+    console.log(`fitness run -> ${relative(ROOT, path)}`)
+    console.log(`  ${run.answers.length - run.failedCalls} answers, ${run.failedCalls} failed of ${run.attemptedCalls} calls (provenance ${run.provenance})`)
+    for (const s of skippedModels) console.log(`  skipped ${s.model}: ${s.reason}`)
+    if (skippedItems.length > 0) console.log(`  skipped ${skippedItems.length} item-mode pair(s) with no source bundle, e.g. ${skippedItems[0]?.itemId}`)
+    if (run.failedCalls > 0) process.exitCode = 1
+    return
+  }
   console.log(`pnpm bench fitness validate                      schema-check data/fitness/items
-pnpm bench fitness cost [--scope items|pilot|full] [--samples 3]  price a run`)
+pnpm bench fitness cost [--scope items|pilot|full] [--samples 3]  price a run
+pnpm bench fitness run [--models a,b] [--mode grounded|closed] [--samples 3] [--batch] [--mock]
+                                                  answer every item, write data/fitness/runs/<runId>.json`)
 }
 
 async function main() {
@@ -1510,8 +1571,8 @@ Start with file 1.
                                           measure the prompts and price the panel run
   pnpm bench probe     --search <regex> [--limit 40]             find World Bank series by name, with the database each needs
   pnpm bench probe     --series a,b[@db] [--from 2010] [--json]  test candidate World Bank series before wiring them
-  pnpm bench fitness  validate | cost [--scope items|pilot|full] [--samples 3]
-                                          public AI fitness (D168): check the item set, price a run
+  pnpm bench fitness  validate | cost [--scope items|pilot|full] [--samples 3] | run [--models a,b] [--mode m] [--batch] [--mock]
+                                          public AI fitness (D168): check the item set, price a run, answer it
   pnpm bench validate  [--fetch]          schema-check Delphi, evidence, institution and subnational data; --fetch live-checks evidence URLs
   pnpm bench report                       write the findings report
   pnpm bench agenda    [BRA IND ...] [--lang pt-BR]

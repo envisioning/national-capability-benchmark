@@ -51,7 +51,7 @@ type CellJob = {
 }
 
 /** Attempted and failed provider calls, accumulated across every pool() call. */
-type CallTally = { attempted: number; failed: number }
+export type CallTally = { attempted: number; failed: number }
 
 /**
  * Bounded-concurrency map. Keeps the panel from opening 40 sockets at once.
@@ -63,7 +63,7 @@ type CallTally = { attempted: number; failed: number }
  * narrower IQR on the affected cells and therefore less apparent dissent. See
  * D106.
  */
-async function pool<T, R>(
+export async function pool<T, R>(
   items: T[],
   limit: number,
   tally: CallTally,

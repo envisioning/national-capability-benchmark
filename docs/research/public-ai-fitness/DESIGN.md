@@ -247,13 +247,21 @@ Built:
 
 ```
 pnpm bench fitness validate   schema-check items: one topic per file, unique ids, sources and snapshots
-pnpm bench fitness cost       price a run: --scope items|pilot|full, from token assumptions
+pnpm bench fitness cost       price a run: --scope items|pilot|full; input measured from the real prompts when items exist
+pnpm bench fitness run        answer: --mode grounded|closed --models a,b --samples 3 --batch --mock
 ```
+
+`run` reads the pinned source text for `grounded` mode from
+`data/fitness/sources/{itemId}/{n}.txt` (or `.md`), n the 1-based index into
+the item's `sources`. A fact item with no bundle runs `closed` only and is
+listed in the run file's `skipped`. A model no provider serves (Sabiá until
+FIT-1) is listed there too. `--batch` calls the gateway's `-batch` id where
+it lists one. A failed call stays in the run file as an answer with no text
+and its error.
 
 Proposed:
 
 ```
-pnpm bench fitness run        answer: --mode grounded|closed --models a,b --samples 3
 pnpm bench fitness grade      judge the run under the no-own-lab rule
 pnpm bench fitness report     profiles and gate
 ```
