@@ -1,0 +1,308 @@
+{
+  "$ref": "#/definitions/FitnessProfileFile",
+  "definitions": {
+    "FitnessProfileFile": {
+      "type": "object",
+      "properties": {
+        "generatedAt": {
+          "type": "string"
+        },
+        "runId": {
+          "type": "string"
+        },
+        "model": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "lab": {
+              "type": "string"
+            },
+            "label": {
+              "type": "string"
+            },
+            "provider": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "id",
+            "lab",
+            "label",
+            "provider"
+          ],
+          "additionalProperties": false
+        },
+        "provenance": {
+          "type": "string",
+          "enum": [
+            "gateway",
+            "maritaca",
+            "mock"
+          ]
+        },
+        "rubricHash": {
+          "type": "string"
+        },
+        "restraintStatus": {
+          "type": "string",
+          "enum": [
+            "readable",
+            "revise_rubric",
+            "stopped",
+            "no_reading"
+          ]
+        },
+        "cells": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "topic": {
+                "type": "string",
+                "enum": [
+                  "public_services",
+                  "public_money",
+                  "legislators",
+                  "contested_policy"
+                ]
+              },
+              "mode": {
+                "type": "string",
+                "enum": [
+                  "grounded",
+                  "closed"
+                ]
+              },
+              "items": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "answers": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "failedAnswers": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "accuracy": {
+                "anyOf": [
+                  {
+                    "type": "object",
+                    "properties": {
+                      "graded": {
+                        "type": "integer",
+                        "minimum": 0
+                      },
+                      "disputed": {
+                        "type": "integer",
+                        "minimum": 0
+                      },
+                      "counts": {
+                        "type": "object",
+                        "propertyNames": {
+                          "type": "string",
+                          "enum": [
+                            "correct",
+                            "partial",
+                            "wrong",
+                            "fabricated",
+                            "abstained_ok",
+                            "abstained_bad"
+                          ]
+                        },
+                        "additionalProperties": {
+                          "type": "integer",
+                          "minimum": 0
+                        }
+                      },
+                      "shares": {
+                        "type": "object",
+                        "propertyNames": {
+                          "type": "string",
+                          "enum": [
+                            "correct",
+                            "partial",
+                            "wrong",
+                            "fabricated",
+                            "abstained_ok",
+                            "abstained_bad"
+                          ]
+                        },
+                        "additionalProperties": {
+                          "type": "number"
+                        }
+                      }
+                    },
+                    "required": [
+                      "graded",
+                      "disputed",
+                      "counts",
+                      "shares"
+                    ],
+                    "additionalProperties": false
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "restraint": {
+                "anyOf": [
+                  {
+                    "type": "object",
+                    "properties": {
+                      "graded": {
+                        "type": "integer",
+                        "minimum": 0
+                      },
+                      "disputed": {
+                        "type": "integer",
+                        "minimum": 0
+                      },
+                      "counts": {
+                        "type": "object",
+                        "propertyNames": {
+                          "type": "string",
+                          "enum": [
+                            "restrained",
+                            "leans",
+                            "takes_side",
+                            "refuses",
+                            "omits"
+                          ]
+                        },
+                        "additionalProperties": {
+                          "type": "integer",
+                          "minimum": 0
+                        }
+                      },
+                      "shares": {
+                        "type": "object",
+                        "propertyNames": {
+                          "type": "string",
+                          "enum": [
+                            "restrained",
+                            "leans",
+                            "takes_side",
+                            "refuses",
+                            "omits"
+                          ]
+                        },
+                        "additionalProperties": {
+                          "type": "number"
+                        }
+                      }
+                    },
+                    "required": [
+                      "graded",
+                      "disputed",
+                      "counts",
+                      "shares"
+                    ],
+                    "additionalProperties": false
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "favouredPositions": {
+                "anyOf": [
+                  {
+                    "type": "object",
+                    "propertyNames": {
+                      "type": "string"
+                    },
+                    "additionalProperties": {
+                      "type": "object",
+                      "propertyNames": {
+                        "type": "string"
+                      },
+                      "additionalProperties": {
+                        "type": "integer"
+                      }
+                    }
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "sampleConsistency": {
+                "type": "object",
+                "properties": {
+                  "accuracy": {
+                    "type": [
+                      "number",
+                      "null"
+                    ]
+                  },
+                  "restraint": {
+                    "type": [
+                      "number",
+                      "null"
+                    ]
+                  }
+                },
+                "required": [
+                  "accuracy",
+                  "restraint"
+                ],
+                "additionalProperties": false
+              },
+              "alpha": {
+                "type": "object",
+                "properties": {
+                  "accuracy": {
+                    "type": [
+                      "number",
+                      "null"
+                    ]
+                  },
+                  "restraint": {
+                    "type": [
+                      "number",
+                      "null"
+                    ]
+                  }
+                },
+                "required": [
+                  "accuracy",
+                  "restraint"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "required": [
+              "topic",
+              "mode",
+              "items",
+              "answers",
+              "failedAnswers",
+              "accuracy",
+              "restraint",
+              "favouredPositions",
+              "sampleConsistency",
+              "alpha"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": [
+        "generatedAt",
+        "runId",
+        "model",
+        "provenance",
+        "rubricHash",
+        "restraintStatus",
+        "cells"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}

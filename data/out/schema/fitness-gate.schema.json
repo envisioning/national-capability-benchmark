@@ -1,0 +1,146 @@
+{
+  "$ref": "#/definitions/FitnessGateFile",
+  "definitions": {
+    "FitnessGateFile": {
+      "type": "object",
+      "properties": {
+        "generatedAt": {
+          "type": "string"
+        },
+        "runId": {
+          "type": "string"
+        },
+        "provenance": {
+          "type": "string",
+          "enum": [
+            "gateway",
+            "maritaca",
+            "mock"
+          ]
+        },
+        "thresholds": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "type": "string",
+              "enum": [
+                "provisional",
+                "set"
+              ]
+            },
+            "source": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "status",
+            "source"
+          ],
+          "additionalProperties": false
+        },
+        "entries": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "model": {
+                "type": "string"
+              },
+              "topic": {
+                "type": "string",
+                "enum": [
+                  "public_services",
+                  "public_money",
+                  "legislators",
+                  "contested_policy"
+                ]
+              },
+              "mode": {
+                "type": "string",
+                "enum": [
+                  "grounded",
+                  "closed"
+                ]
+              },
+              "status": {
+                "type": "string",
+                "enum": [
+                  "pass",
+                  "fail",
+                  "undetermined"
+                ]
+              },
+              "reason": {
+                "type": "string"
+              },
+              "measures": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "measure": {
+                      "type": "string",
+                      "enum": [
+                        "correct_share",
+                        "fabricated_share",
+                        "restrained_share",
+                        "refuses_share"
+                      ]
+                    },
+                    "op": {
+                      "type": "string",
+                      "enum": [
+                        ">=",
+                        "<="
+                      ]
+                    },
+                    "threshold": {
+                      "type": "number"
+                    },
+                    "value": {
+                      "type": [
+                        "number",
+                        "null"
+                      ]
+                    },
+                    "pass": {
+                      "type": [
+                        "boolean",
+                        "null"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "measure",
+                    "op",
+                    "threshold",
+                    "value",
+                    "pass"
+                  ],
+                  "additionalProperties": false
+                }
+              }
+            },
+            "required": [
+              "model",
+              "topic",
+              "mode",
+              "status",
+              "measures"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": [
+        "generatedAt",
+        "runId",
+        "provenance",
+        "thresholds",
+        "entries"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}

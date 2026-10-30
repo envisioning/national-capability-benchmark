@@ -29,14 +29,16 @@ import { GatewayFitnessProvider, MockFitnessProvider } from '../fitness/provider
 import type { FitnessProvider } from '../fitness/provider.js'
 import { runFitness } from '../fitness/run.js'
 import { gradeFitnessRun } from '../fitness/grade.js'
+import { buildFitnessGate, buildFitnessProfiles, FITNESS_GATE_THRESHOLDS } from '../fitness/report.js'
 import { FitnessMode } from '../fitness/schema.js'
-import { loadFitnessRun, loadSourceBundles, saveFitnessGrades, saveFitnessRun } from '../fitness/store.js'
+import { loadFitnessGrades, loadFitnessRun, loadSourceBundles, saveFitnessGrades, saveFitnessRun } from '../fitness/store.js'
 import type { ProbeRequest } from '../pipeline/probe.js'
 import {
   COUNTRY_OUT_DIR,
   DELPHI_DIR,
   FILES,
   INDICATOR_OUT_DIR,
+  FITNESS_OUT_DIR,
   ROOT,
   SCHEMA_OUT_DIR,
   agendaDoc,
@@ -850,7 +852,7 @@ function pickRoster<T extends { id: string; lab: string }>(roster: readonly T[],
 /**
  * Public AI fitness (D168): a separate instrument that never touches a score.
  * `validate` checks the item set, `cost` prices a run, `run` answers it,
- * `grade` judges it.
+ * `grade` judges it, `report` writes the profiles and the gate.
  */
 async function fitness(args: Args): Promise<void> {
   const action = args._[1] ?? 'help'
@@ -947,11 +949,37 @@ async function fitness(args: Args): Promise<void> {
     if (grades.failedCalls > 0) process.exitCode = 1
     return
   }
+  if (action === 'report') {
+    const run = await loadFitnessRun(str(args, 'run', '') || undefined)
+    const grades = await loadFitnessGrades(run.runId)
+    const out = str(args, 'out', '')
+    /* A mock run is never published: it goes to a directory you name, or nowhere. */
+    if (grades.provenance === 'mock' && !out) {
+      throw new Error(`Run ${run.runId} is a mock. It is not evidence and is not written to data/out. Pass --out <dir> to inspect it.`)
+    }
+    const dir = out ? resolve(out) : FITNESS_OUT_DIR
+    const generatedAt = new Date().toISOString()
+    const profiles = buildFitnessProfiles(run, grades, generatedAt)
+    const gate = buildFitnessGate(profiles, generatedAt)
+    for (const profile of profiles) {
+      await writeOut(resolve(dir, `${profile.model.id}.json`), `${JSON.stringify(profile, null, 2)}\n`)
+    }
+    await writeOut(resolve(dir, 'gate.json'), `${JSON.stringify(gate, null, 2)}\n`)
+    for (const [file, body] of Object.entries(jsonSchemas()).filter(([f]) => f.startsWith('fitness-'))) {
+      await writeOut(resolve(SCHEMA_OUT_DIR, file), `${JSON.stringify(body, null, 2)}\n`)
+    }
+    const count = (status: string) => gate.entries.filter((e) => e.status === status).length
+    console.log(`fitness report -> ${out ? dir : relative(ROOT, dir)}: ${profiles.length} profiles and gate.json (provenance ${gate.provenance})`)
+    console.log(`  gate: ${count('pass')} pass, ${count('fail')} fail, ${count('undetermined')} undetermined of ${gate.entries.length} model-topic cells`)
+    console.log(`  thresholds ${FITNESS_GATE_THRESHOLDS.status}; restraint ${grades.stopRule.status}`)
+    return
+  }
   console.log(`pnpm bench fitness validate                      schema-check data/fitness/items
 pnpm bench fitness cost [--scope items|pilot|full] [--samples 3]  price a run
 pnpm bench fitness run [--models a,b] [--mode grounded|closed] [--samples 3] [--batch] [--mock]
                                                   answer every item, write data/fitness/runs/<runId>.json
-pnpm bench fitness grade [--run <runId>] [--batch] [--mock]  judge the newest or named run into data/fitness/grades/<runId>.json`)
+pnpm bench fitness grade [--run <runId>] [--batch] [--mock]  judge the newest or named run into data/fitness/grades/<runId>.json
+pnpm bench fitness report [--run <runId>] [--out <dir>]  profiles and the gate into data/out/fitness`)
 }
 
 async function main() {
@@ -1594,8 +1622,8 @@ Start with file 1.
                                           measure the prompts and price the panel run
   pnpm bench probe     --search <regex> [--limit 40]             find World Bank series by name, with the database each needs
   pnpm bench probe     --series a,b[@db] [--from 2010] [--json]  test candidate World Bank series before wiring them
-  pnpm bench fitness  validate | cost [--scope items|pilot|full] [--samples 3] | run [--models a,b] [--mode m] [--batch] [--mock] | grade [--run id]
-                                          public AI fitness (D168): check the item set, price a run, answer it, grade it
+  pnpm bench fitness  validate | cost [--scope items|pilot|full] [--samples 3] | run [--models a,b] [--mode m] [--batch] [--mock] | grade [--run id] | report [--run id]
+                                          public AI fitness (D168): check the item set, price a run, answer it, grade it, report it
   pnpm bench validate  [--fetch]          schema-check Delphi, evidence, institution and subnational data; --fetch live-checks evidence URLs
   pnpm bench report                       write the findings report
   pnpm bench agenda    [BRA IND ...] [--lang pt-BR]

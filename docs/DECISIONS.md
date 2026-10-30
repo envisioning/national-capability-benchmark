@@ -9383,3 +9383,52 @@ readers treating presence rows as a ranking of faiths, which would mean the
 layer comes off the reader surfaces and stays in diagnostics. Or a second
 country map where the religious bodies do not fit the inclusion rules without
 special cases, which would mean they need their own rule.
+
+## D170 — The fitness gate fails closed on what the harness cannot read
+
+*Recorded 2026-10-30. Extends D168. Built in `packages/core/src/fitness`
+(`run.ts`, `grade.ts`, `report.ts`). Thresholds stay provisional until FIT-0.*
+
+**Decision.** The run, grade and report steps of the public AI fitness
+module make five choices D168 left open:
+
+1. **A script confirms and never condemns.** On a `grading: 'script'` item
+   the script grades `correct` only when the answer states every reference
+   value within tolerance. Otherwise the two judges grade it, because a
+   script cannot tell a wrong figure from an invented one or an abstention.
+2. **Judge disagreement is a disputed answer, not a grade.** Where the two
+   judges give different grades on a construct, the answer has no final
+   grade on it. It stays in the denominator of every share, so it never
+   counts towards a pass.
+3. **An abstention in `closed` mode is `abstained_ok`.** The roster records
+   no training cutoffs, so the judge cannot tell a post-cutoff fact from a
+   known one. In `grounded` mode the sources hold the fact, so an
+   abstention is `abstained_bad`.
+4. **The contested policy gate reads `closed` mode.** Value items run only
+   in `closed` (`modesFor`), so a `grounded` gate has nothing to read on
+   that topic. The other three topics gate in `grounded`.
+5. **A gate cell is `undetermined`, never `pass`, when the reading is
+   partial**: no answers in the gate mode (a fact item with no pinned source
+   bundle runs `closed` only), a failed call, restraint withheld by the stop
+   rule, or a measure with no value. A mock run is never written to
+   `data/out`.
+
+**Why.** D168 makes the gate a procurement claim: a model that passes can
+be cited as fit, and the benchmark answers for that citation. Every choice
+above resolves an ambiguity in the direction of not passing a model on a
+reading the harness did not make. Rule 4 follows from the item design
+rather than from a preference.
+
+**Cost.** Disputed answers lower a model's shares for reasons that belong
+to the judges, so a pair of judges that disagrees often makes models fail.
+The alpha beside every cell is how a reader tells the two apart. Rule 3
+credits a model that abstains on a fact it should know, which flatters
+`closed` readings; `closed` does not gate. No item has a source bundle yet,
+so no fact topic can gate until bundles are pinned.
+
+**Overturned by.** Pilot alpha on accuracy at or above 0.8, which would make
+a single judge's grade on a disputed answer worth counting; per-model
+training cutoffs published by every lab on the roster, which would let the
+judge grade a `closed` abstention properly; or a deployment of a model to
+Brazilian citizens on contested policy that supplies retrieved positions,
+which would make a `grounded` value mode the honest one to gate.
