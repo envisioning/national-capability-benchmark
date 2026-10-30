@@ -29,6 +29,7 @@ pnpm bench validate    schema-check data/delphi and data/evidence; add --fetch t
 pnpm bench fitness validate  schema-check data/fitness/items, the public AI fitness item set (D168)
 pnpm bench fitness cost      price a fitness run: --scope items|pilot|full, --samples 3; measures the real prompts when items exist
 pnpm bench fitness run       answer every item with every roster model into data/fitness/runs/<runId>.json: --models, --mode, --samples 3, --batch, --mock
+pnpm bench fitness grade     judge a run under the no-own-lab rule into data/fitness/grades/<runId>.json, with judge alpha and the stop rule: --run <runId>, --batch, --mock
 pnpm bench all         ingest, score, diagnose, report, agenda, brief
 pnpm build             tsc for packages/core, then next build for apps/web
 pnpm typecheck         both packages

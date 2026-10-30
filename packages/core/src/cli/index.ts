@@ -28,8 +28,9 @@ import { FITNESS_MODELS } from '../fitness/roster.js'
 import { GatewayFitnessProvider, MockFitnessProvider } from '../fitness/provider.js'
 import type { FitnessProvider } from '../fitness/provider.js'
 import { runFitness } from '../fitness/run.js'
+import { gradeFitnessRun } from '../fitness/grade.js'
 import { FitnessMode } from '../fitness/schema.js'
-import { loadSourceBundles, saveFitnessRun } from '../fitness/store.js'
+import { loadFitnessRun, loadSourceBundles, saveFitnessGrades, saveFitnessRun } from '../fitness/store.js'
 import type { ProbeRequest } from '../pipeline/probe.js'
 import {
   COUNTRY_OUT_DIR,
@@ -848,7 +849,8 @@ function pickRoster<T extends { id: string; lab: string }>(roster: readonly T[],
 
 /**
  * Public AI fitness (D168): a separate instrument that never touches a score.
- * `validate` checks the item set, `cost` prices a run, `run` answers it.
+ * `validate` checks the item set, `cost` prices a run, `run` answers it,
+ * `grade` judges it.
  */
 async function fitness(args: Args): Promise<void> {
   const action = args._[1] ?? 'help'
@@ -925,10 +927,31 @@ async function fitness(args: Args): Promise<void> {
     if (run.failedCalls > 0) process.exitCode = 1
     return
   }
+  if (action === 'grade') {
+    const run = await loadFitnessRun(str(args, 'run', '') || undefined)
+    const { items } = await loadFitnessItems()
+    const grades = await gradeFitnessRun({
+      run,
+      items,
+      providers: fitnessProviders(args),
+      batch: bool(args, 'batch'),
+      concurrency: num(args, 'concurrency', 6),
+      onProgress: (m) => console.log(m),
+    })
+    const path = await saveFitnessGrades(grades)
+    const disputed = grades.grades.filter((g) => g.disputed.length > 0).length
+    const alpha = grades.stopRule.restraintAlpha
+    console.log(`fitness grade -> ${relative(ROOT, path)}`)
+    console.log(`  ${grades.grades.length} answers graded, ${disputed} with a disputed construct, ${grades.failedCalls} failed of ${grades.attemptedCalls} judge calls (provenance ${grades.provenance})`)
+    console.log(`  restraint alpha ${alpha === null ? 'undefined' : alpha.toFixed(3)} against the ${grades.stopRule.alphaFloor} floor: ${grades.stopRule.status}`)
+    if (grades.failedCalls > 0) process.exitCode = 1
+    return
+  }
   console.log(`pnpm bench fitness validate                      schema-check data/fitness/items
 pnpm bench fitness cost [--scope items|pilot|full] [--samples 3]  price a run
 pnpm bench fitness run [--models a,b] [--mode grounded|closed] [--samples 3] [--batch] [--mock]
-                                                  answer every item, write data/fitness/runs/<runId>.json`)
+                                                  answer every item, write data/fitness/runs/<runId>.json
+pnpm bench fitness grade [--run <runId>] [--batch] [--mock]  judge the newest or named run into data/fitness/grades/<runId>.json`)
 }
 
 async function main() {
@@ -1571,8 +1594,8 @@ Start with file 1.
                                           measure the prompts and price the panel run
   pnpm bench probe     --search <regex> [--limit 40]             find World Bank series by name, with the database each needs
   pnpm bench probe     --series a,b[@db] [--from 2010] [--json]  test candidate World Bank series before wiring them
-  pnpm bench fitness  validate | cost [--scope items|pilot|full] [--samples 3] | run [--models a,b] [--mode m] [--batch] [--mock]
-                                          public AI fitness (D168): check the item set, price a run, answer it
+  pnpm bench fitness  validate | cost [--scope items|pilot|full] [--samples 3] | run [--models a,b] [--mode m] [--batch] [--mock] | grade [--run id]
+                                          public AI fitness (D168): check the item set, price a run, answer it, grade it
   pnpm bench validate  [--fetch]          schema-check Delphi, evidence, institution and subnational data; --fetch live-checks evidence URLs
   pnpm bench report                       write the findings report
   pnpm bench agenda    [BRA IND ...] [--lang pt-BR]
