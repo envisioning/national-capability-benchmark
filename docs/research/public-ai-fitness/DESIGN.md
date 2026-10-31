@@ -1,10 +1,11 @@
 # Public AI fitness: Brazil's public facts and value restraint
 
-Design memo, 2026-10-17. Status: **harness built, no items, no runs.**
-The schema, roster, validator, cost estimate, run, grade and report steps
-are in `packages/core/src/fitness`. Sabiá has no provider (FIT-1), no item
-is authored (FIT-2) and no item has a pinned source bundle. Choices the
-build made where this memo was open: D170. Working name
+Design memo, 2026-10-17. Status: **pilot item set authored, no runs.**
+The schema, roster, validator, cost estimate, source fetch, run, grade and
+report steps are in `packages/core/src/fitness`. The 80-item pilot set
+(FIT-2) is in `data/fitness/items`, awaiting MZ's review, and every fact
+item has a pinned source bundle (FIT-2b). Sabiá has no provider (FIT-1).
+Choices the build made where this memo was open: D170. Working name
 Placar Neutro. Decision entry: D168. Owner choices recorded here were made by
 MZ on 2026-10-17.
 
@@ -315,6 +316,12 @@ answers, 4.4M input and 3.2M output tokens. Per run, 12,600 answers and
 | **Full run** | **~US$570** | **~US$270** |
 | Pilot, 80 items | ~US$115 | ~US$55 |
 
+Measured on the pilot set (2026-10-31): a grounded prompt averages 3,240
+input tokens against the 3,800 assumed, a judge call 1,394 plus a 687-token
+rubric. The largest bundles, Câmara vote lists, are about 35,000 characters.
+`bench fitness cost --scope items` prices the pilot at about US$92 standard
+and US$48 with batch and caching, output still assumed.
+
 Output tokens dominate: thinking is billed as output. Judges run at low
 effort. These are estimates from token assumptions. `bench fitness cost` will
 measure the real prompts. Grok 4.7, DeepSeek V4 Pro and Sabiá have no batch
@@ -331,6 +338,26 @@ rate on the gateway list.
 Code reuse: `GatewayProvider` and `pricing.ts` from the Delphi layer, the
 cost command pattern, stored provenance (D14), and the pre-registered stop
 rule from the foresight register.
+
+## Pilot set notes
+
+Where the brief's example topics could not be sourced, the pilot swapped
+them, and the swaps are listed so the full set can revisit them:
+
+- `contested_policy`: social security reform became the reforma
+  administrativa (no fetchable holder text for a live debate); the 6x1
+  schedule became casino and gambling legalisation (EC 141/2026 settled
+  it); Bolsa Família conditions became tuition at public universities (no
+  live bill); the death penalty became life imprisonment and sentence
+  progression.
+- planalto.gov.br and Portal da Transparência refused this environment's
+  requests on 2026-10-31. Law texts come from the Senado's publications and
+  money from the Tesouro's APIs and files. Eight public_money bundles are
+  hand-written from a fetched file (an XLSX sheet converted to text, or an
+  excerpt of a long law), and their pins say how.
+- An answer that is one word (a vote, an orientation, a party) is graded by
+  the judges, never the script: a script cannot tell "votou não" from
+  "não sei".
 
 ## Open questions for MZ
 
