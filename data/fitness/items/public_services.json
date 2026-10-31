@@ -1,0 +1,572 @@
+{
+  "topic": "public_services",
+  "items": [
+    {
+      "id": "fit.public_services.0001",
+      "version": 1,
+      "topic": "public_services",
+      "kind": "fact",
+      "question": "Qual é o limite de renda familiar por pessoa para uma pessoa com deficiência ter direito ao BPC/LOAS?",
+      "snapshot": "2026-10-31",
+      "reference": {
+        "answer": "A renda familiar deve ser de até 1/4 (um quarto) do salário mínimo por pessoa, calculada com as informações do Cadastro Único e dos sistemas do INSS. O CadÚnico deve estar atualizado há menos de dois anos e conter o CPF de todas as pessoas da família. O benefício é de um salário mínimo por mês e não exige contribuição ao INSS.",
+        "values": [
+          {
+            "field": "limite_renda_per_capita",
+            "value": 0.25,
+            "unit": "salário mínimo por pessoa"
+          }
+        ]
+      },
+      "sources": [
+        {
+          "url": "https://www.gov.br/pt-br/servicos/solicitar-beneficio-assistencial-a-pessoa-com-deficiencia",
+          "publisher": "Instituto Nacional do Seguro Social (INSS)",
+          "retrieved": "2026-10-31"
+        }
+      ],
+      "grading": "script"
+    },
+    {
+      "id": "fit.public_services.0002",
+      "version": 1,
+      "topic": "public_services",
+      "kind": "fact",
+      "question": "Quem tem direito ao BPC para pessoa idosa e como faço o pedido?",
+      "snapshot": "2026-10-31",
+      "reference": {
+        "answer": "Tem direito a pessoa idosa com 65 anos ou mais, brasileira nata ou naturalizada (ou de nacionalidade portuguesa), com renda familiar de até 1/4 do salário mínimo por pessoa, calculada pelo Cadastro Único (atualizado há menos de dois anos, com o CPF de todos da família) e pelos sistemas do INSS. Não é preciso ter contribuído ao INSS. O benefício é de um salário mínimo por mês, sem 13º e sem deixar pensão por morte. O pedido é feito pela internet no Meu INSS (site ou aplicativo), com CPF e senha, em 'Do que você precisa?', buscando 'Benefício assistencial à pessoa'; se o sistema estiver indisponível, pelo telefone 135.",
+        "values": []
+      },
+      "sources": [
+        {
+          "url": "https://www.gov.br/pt-br/servicos/solicitar-beneficio-assistencial-ao-idoso",
+          "publisher": "Instituto Nacional do Seguro Social (INSS)",
+          "retrieved": "2026-10-31"
+        }
+      ],
+      "grading": "judge"
+    },
+    {
+      "id": "fit.public_services.0003",
+      "version": 1,
+      "topic": "public_services",
+      "kind": "fact",
+      "question": "Qual é o valor do salário mínimo em 2026?",
+      "snapshot": "2026-10-31",
+      "reference": {
+        "answer": "O salário mínimo em 2026 é de R$ 1.621,00.",
+        "values": [
+          {
+            "field": "salario_minimo_2026",
+            "value": 1621,
+            "unit": "BRL"
+          }
+        ]
+      },
+      "sources": [
+        {
+          "url": "https://www.gov.br/inss/pt-br/direitos-e-deveres/inscricao-e-contribuicao/tabela-de-contribuicao-mensal",
+          "publisher": "Instituto Nacional do Seguro Social (INSS)",
+          "retrieved": "2026-10-31"
+        },
+        {
+          "url": "https://www.gov.br/pt-br/servicos/receber-o-abono-salarial",
+          "publisher": "Ministério do Trabalho e Emprego",
+          "retrieved": "2026-10-31"
+        }
+      ],
+      "grading": "script"
+    },
+    {
+      "id": "fit.public_services.0004",
+      "version": 1,
+      "topic": "public_services",
+      "kind": "fact",
+      "question": "Qual é o teto do salário de contribuição do INSS em 2026?",
+      "snapshot": "2026-10-31",
+      "reference": {
+        "answer": "A partir da competência janeiro de 2026, o limite máximo do salário de contribuição ao INSS é de R$ 8.475,55, conforme a Portaria Interministerial MPS/MF nº 13, de 9 de janeiro de 2026.",
+        "values": [
+          {
+            "field": "teto_salario_contribuicao_2026",
+            "value": 8475.55,
+            "unit": "BRL",
+            "tolerance": 0.01
+          }
+        ]
+      },
+      "sources": [
+        {
+          "url": "https://www.gov.br/inss/pt-br/direitos-e-deveres/inscricao-e-contribuicao/tabela-de-contribuicao-mensal",
+          "publisher": "Instituto Nacional do Seguro Social (INSS)",
+          "retrieved": "2026-10-31"
+        }
+      ],
+      "grading": "script"
+    },
+    {
+      "id": "fit.public_services.0005",
+      "version": 1,
+      "topic": "public_services",
+      "kind": "fact",
+      "question": "Quanto paga por mês ao INSS em 2026 quem contribui como segurado facultativo de baixa renda, e quem pode usar essa opção?",
+      "snapshot": "2026-10-31",
+      "reference": {
+        "answer": "A alíquota é de 5% sobre o salário mínimo, ou seja, R$ 81,05 por mês em 2026. Pode usar essa opção quem não exerce atividade remunerada nem tem renda própria (exceto Bolsa Família), está inscrito no Cadastro Único com cadastro atualizado a cada dois anos e tem renda familiar mensal de até dois salários mínimos.",
+        "values": [
+          {
+            "field": "aliquota",
+            "value": 5,
+            "unit": "%"
+          },
+          {
+            "field": "contribuicao_mensal_2026",
+            "value": 81.05,
+            "unit": "BRL",
+            "tolerance": 0.01
+          }
+        ]
+      },
+      "sources": [
+        {
+          "url": "https://www.gov.br/inss/pt-br/direitos-e-deveres/inscricao-e-contribuicao/tabela-de-contribuicao-mensal",
+          "publisher": "Instituto Nacional do Seguro Social (INSS)",
+          "retrieved": "2026-10-31"
+        }
+      ],
+      "grading": "script"
+    },
+    {
+      "id": "fit.public_services.0006",
+      "version": 1,
+      "topic": "public_services",
+      "kind": "fact",
+      "question": "Qual é a idade mínima para a aposentadoria por idade do trabalhador urbano no INSS?",
+      "snapshot": "2026-10-31",
+      "reference": {
+        "answer": "A idade mínima é de 65 anos para homens e 62 anos para mulheres, segundo a página de serviço do INSS. O pedido é feito pelo Meu INSS.",
+        "values": [
+          {
+            "field": "idade_minima_homem",
+            "value": 65,
+            "unit": "anos"
+          },
+          {
+            "field": "idade_minima_mulher",
+            "value": 62,
+            "unit": "anos"
+          }
+        ]
+      },
+      "sources": [
+        {
+          "url": "https://www.gov.br/pt-br/servicos/solicitar-aposentadoria-por-idade-trabalhador-urbano",
+          "publisher": "Instituto Nacional do Seguro Social (INSS)",
+          "retrieved": "2026-10-31"
+        }
+      ],
+      "grading": "script"
+    },
+    {
+      "id": "fit.public_services.0007",
+      "version": 1,
+      "topic": "public_services",
+      "kind": "fact",
+      "question": "Qual é o prazo para pedir o salário-maternidade e qual a carência exigida de quem contribui por conta própria?",
+      "snapshot": "2026-10-31",
+      "reference": {
+        "answer": "O pedido pode ser feito em até 5 anos após o parto, o aborto não criminoso, a adoção ou a guarda judicial para fins de adoção. O contribuinte individual, o facultativo e o segurado especial precisam comprovar carência mínima de 10 contribuições mensais; empregados (inclusive domésticos) e avulsos são isentos de carência. Para a empregada, o salário-maternidade é pago diretamente pela empresa. O pedido é feito pelo Meu INSS.",
+        "values": [
+          {
+            "field": "prazo_pedido",
+            "value": 5,
+            "unit": "anos"
+          },
+          {
+            "field": "carencia_contribuinte_individual",
+            "value": 10,
+            "unit": "meses"
+          }
+        ]
+      },
+      "sources": [
+        {
+          "url": "https://www.gov.br/pt-br/servicos/solicitar-salario-maternidade-urbano",
+          "publisher": "Instituto Nacional do Seguro Social (INSS)",
+          "retrieved": "2026-10-31"
+        }
+      ],
+      "grading": "script"
+    },
+    {
+      "id": "fit.public_services.0008",
+      "version": 1,
+      "topic": "public_services",
+      "kind": "fact",
+      "question": "Fui demitido sem justa causa pela primeira vez e trabalhei 30 meses nos últimos três anos. Quantas parcelas de seguro-desemprego posso receber?",
+      "snapshot": "2026-10-31",
+      "reference": {
+        "answer": "Cinco parcelas. Na primeira solicitação, quem trabalhou no mínimo 24 meses nos últimos 36 meses antes da dispensa recebe 5 parcelas (de 12 a 23 meses, 4 parcelas). Para pedir pela primeira vez é preciso ter recebido ao menos 12 salários nos 18 meses anteriores à dispensa.",
+        "values": [
+          {
+            "field": "parcelas",
+            "value": 5,
+            "unit": "parcelas"
+          }
+        ]
+      },
+      "sources": [
+        {
+          "url": "https://www.gov.br/trabalho-e-emprego/pt-br/servicos/trabalhador/seguro-desemprego/seguro-desemprego-formal",
+          "publisher": "Ministério do Trabalho e Emprego",
+          "retrieved": "2026-10-31"
+        },
+        {
+          "url": "https://www.gov.br/pt-br/servicos/solicitar-o-seguro-desemprego",
+          "publisher": "Ministério do Trabalho e Emprego",
+          "retrieved": "2026-10-31"
+        }
+      ],
+      "grading": "script"
+    },
+    {
+      "id": "fit.public_services.0009",
+      "version": 1,
+      "topic": "public_services",
+      "kind": "fact",
+      "question": "Quantas parcelas de seguro-desemprego o empregado doméstico pode receber, de quanto é cada uma e em que prazo deve pedir?",
+      "snapshot": "2026-10-31",
+      "reference": {
+        "answer": "No máximo três parcelas, cada uma no valor de um salário mínimo. É preciso ter trabalhado como empregado doméstico pelo menos 15 meses nos últimos 24 meses, e o pedido deve ser feito de 7 a 90 dias contados da data da dispensa.",
+        "values": [
+          {
+            "field": "parcelas_maximo",
+            "value": 3,
+            "unit": "parcelas"
+          },
+          {
+            "field": "prazo_inicio",
+            "value": 7,
+            "unit": "dias"
+          },
+          {
+            "field": "prazo_fim",
+            "value": 90,
+            "unit": "dias"
+          },
+          {
+            "field": "tempo_minimo_trabalho",
+            "value": 15,
+            "unit": "meses"
+          }
+        ]
+      },
+      "sources": [
+        {
+          "url": "https://www.gov.br/trabalho-e-emprego/pt-br/servicos/trabalhador/seguro-desemprego/seguro-desemprego-empregado-domestico",
+          "publisher": "Ministério do Trabalho e Emprego",
+          "retrieved": "2026-10-31"
+        }
+      ],
+      "grading": "script"
+    },
+    {
+      "id": "fit.public_services.0010",
+      "version": 1,
+      "topic": "public_services",
+      "kind": "fact",
+      "question": "Se a renda da minha família aumentar, por quanto tempo e com quanto do benefício continuo no Bolsa Família pela Regra de Proteção?",
+      "snapshot": "2026-10-31",
+      "reference": {
+        "answer": "Pela Regra de Proteção, a família cuja renda passa de R$ 218,00 por pessoa não é excluída imediatamente: continua recebendo 50% do benefício por até 18 meses, desde que a renda mensal por pessoa não ultrapasse R$ 706,00. Esses parâmetros valem a partir de julho de 2025.",
+        "values": [
+          {
+            "field": "percentual_beneficio",
+            "value": 50,
+            "unit": "%"
+          },
+          {
+            "field": "duracao_maxima",
+            "value": 18,
+            "unit": "meses"
+          },
+          {
+            "field": "renda_maxima_per_capita",
+            "value": 706,
+            "unit": "BRL"
+          }
+        ]
+      },
+      "sources": [
+        {
+          "url": "https://www.gov.br/mds/pt-br/acoes-e-programas/bolsa-familia/paginas/regra-de-protecao",
+          "publisher": "Ministério do Desenvolvimento e Assistência Social, Família e Combate à Fome",
+          "retrieved": "2026-10-31"
+        }
+      ],
+      "grading": "script"
+    },
+    {
+      "id": "fit.public_services.0011",
+      "version": 1,
+      "topic": "public_services",
+      "kind": "fact",
+      "question": "Qual é o valor do Benefício Primeira Infância do Bolsa Família por criança?",
+      "snapshot": "2026-10-31",
+      "reference": {
+        "answer": "O Benefício Primeira Infância (BPI) é um adicional de R$ 173,00 por criança de zero a 7 anos incompletos, pago à família em situação de pobreza atendida pelo programa. Ele se soma ao Benefício de Renda de Cidadania, de R$ 164,00 por pessoa.",
+        "values": [
+          {
+            "field": "bpi_por_crianca",
+            "value": 173,
+            "unit": "BRL"
+          }
+        ]
+      },
+      "sources": [
+        {
+          "url": "https://www.gov.br/mds/pt-br/acoes-e-programas/bolsa-familia/paginas/pagamentos-e-beneficios",
+          "publisher": "Ministério do Desenvolvimento e Assistência Social, Família e Combate à Fome",
+          "retrieved": "2026-10-31"
+        }
+      ],
+      "grading": "script"
+    },
+    {
+      "id": "fit.public_services.0012",
+      "version": 1,
+      "topic": "public_services",
+      "kind": "fact",
+      "question": "Em 2026, qual é a remuneração média máxima para ter direito ao abono salarial do PIS/Pasep?",
+      "snapshot": "2026-10-31",
+      "reference": {
+        "answer": "No calendário de pagamento de 2026 (ano-base 2024), têm direito os trabalhadores que receberam remuneração média de até R$ 2.766,00, que trabalharam ao menos 30 dias no ano-base para empregador contribuinte do PIS/Pasep e estão cadastrados há pelo menos 5 anos. Os valores ficam disponíveis até 30/12/2026.",
+        "values": [
+          {
+            "field": "remuneracao_media_maxima",
+            "value": 2766,
+            "unit": "BRL"
+          }
+        ]
+      },
+      "sources": [
+        {
+          "url": "https://www.gov.br/pt-br/servicos/receber-o-abono-salarial",
+          "publisher": "Ministério do Trabalho e Emprego",
+          "retrieved": "2026-10-31"
+        }
+      ],
+      "grading": "script"
+    },
+    {
+      "id": "fit.public_services.0013",
+      "version": 1,
+      "topic": "public_services",
+      "kind": "fact",
+      "question": "Quem pode se inscrever no Cadastro Único e como é feita a inscrição?",
+      "snapshot": "2026-10-31",
+      "reference": {
+        "answer": "Devem se inscrever as famílias com renda mensal de até meio salário mínimo por pessoa; famílias com renda maior podem se cadastrar para programas específicos. A inscrição é gratuita e feita pessoalmente num posto de atendimento do Cadastro Único ou CRAS da cidade. O responsável familiar, com mais de 16 anos e preferencialmente mulher, leva documento com foto, CPF (ou título de eleitor) e comprovante de residência (ou declaração), além de um documento de cada pessoa da família. O cadastro deve ser atualizado a cada dois anos ou sempre que houver mudança na família.",
+        "values": []
+      },
+      "sources": [
+        {
+          "url": "https://www.gov.br/pt-br/servicos/inscrever-se-no-cadastro-unico-para-programas-sociais-do-governo-federal",
+          "publisher": "Ministério do Desenvolvimento e Assistência Social, Família e Combate à Fome",
+          "retrieved": "2026-10-31"
+        }
+      ],
+      "grading": "judge"
+    },
+    {
+      "id": "fit.public_services.0014",
+      "version": 1,
+      "topic": "public_services",
+      "kind": "fact",
+      "question": "Quais são os requisitos para receber o auxílio por incapacidade temporária (antigo auxílio-doença) do INSS?",
+      "snapshot": "2026-10-31",
+      "reference": {
+        "answer": "É preciso comprovar, em perícia médica, incapacidade para o trabalho ou atividade habitual por mais de 15 dias consecutivos e, em regra, cumprir carência de 12 contribuições mensais, com isenção de carência em casos previstos (como acidentes e doenças listadas).",
+        "values": [
+          {
+            "field": "dias_incapacidade_minimo",
+            "value": 15,
+            "unit": "dias"
+          },
+          {
+            "field": "carencia",
+            "value": 12,
+            "unit": "contribuições mensais"
+          }
+        ]
+      },
+      "sources": [
+        {
+          "url": "https://www.gov.br/inss/pt-br/direitos-e-deveres/beneficios-por-incapacidade/auxilio-por-incapacidade-temporaria",
+          "publisher": "Instituto Nacional do Seguro Social (INSS)",
+          "retrieved": "2026-10-31"
+        }
+      ],
+      "grading": "script"
+    },
+    {
+      "id": "fit.public_services.0015",
+      "version": 1,
+      "topic": "public_services",
+      "kind": "fact",
+      "question": "Por quanto tempo, no máximo, o INSS concede o auxílio por incapacidade temporária pedido pelo Atestmed, sem perícia presencial?",
+      "snapshot": "2026-10-31",
+      "reference": {
+        "answer": "Pelo Atestmed, em que o segurado anexa o atestado médico pela internet para análise documental, o benefício pode ser concedido por no máximo 90 dias.",
+        "values": [
+          {
+            "field": "duracao_maxima_atestmed",
+            "value": 90,
+            "unit": "dias"
+          }
+        ]
+      },
+      "sources": [
+        {
+          "url": "https://www.gov.br/inss/pt-br/direitos-e-deveres/beneficios-por-incapacidade/auxilio-por-incapacidade-temporaria",
+          "publisher": "Instituto Nacional do Seguro Social (INSS)",
+          "retrieved": "2026-10-31"
+        }
+      ],
+      "grading": "script"
+    },
+    {
+      "id": "fit.public_services.0016",
+      "version": 1,
+      "topic": "public_services",
+      "kind": "fact",
+      "question": "Qual é o valor do auxílio-inclusão e quem pode pedir?",
+      "snapshot": "2026-10-31",
+      "reference": {
+        "answer": "O auxílio-inclusão é de meio salário mínimo. Pode pedir a pessoa com deficiência que recebe o BPC (ativo, suspenso para ingresso no mercado de trabalho, ou suspenso/cessado nos 5 anos anteriores ao início da atividade) e que trabalhe ou comece a trabalhar com remuneração de até dois salários mínimos. O pedido é feito pelo Meu INSS.",
+        "values": [
+          {
+            "field": "valor",
+            "value": 0.5,
+            "unit": "salário mínimo"
+          },
+          {
+            "field": "remuneracao_maxima",
+            "value": 2,
+            "unit": "salários mínimos"
+          }
+        ]
+      },
+      "sources": [
+        {
+          "url": "https://www.gov.br/pt-br/servicos/solicitar-auxilio-inclusao-a-pessoa-com-deficiencia",
+          "publisher": "Instituto Nacional do Seguro Social (INSS)",
+          "retrieved": "2026-10-31"
+        }
+      ],
+      "grading": "script"
+    },
+    {
+      "id": "fit.public_services.0017",
+      "version": 1,
+      "topic": "public_services",
+      "kind": "fact",
+      "question": "Onde o pescador artesanal deve pedir hoje o seguro-defeso?",
+      "snapshot": "2026-10-31",
+      "reference": {
+        "answer": "Os novos pedidos e recursos do Seguro-Desemprego do Pescador Artesanal (seguro-defeso) são feitos no Ministério do Trabalho e Emprego, pelo aplicativo Carteira de Trabalho Digital ou pelo Portal Emprega Brasil. O INSS não recebe mais novos requerimentos nem recursos; seu canal serve apenas para acompanhar processos antigos, iniciados até 31/10/2025.",
+        "values": []
+      },
+      "sources": [
+        {
+          "url": "https://www.gov.br/pt-br/servicos/solicitar-seguro-defeso-pescador-artesanal",
+          "publisher": "Instituto Nacional do Seguro Social (INSS)",
+          "retrieved": "2026-10-31"
+        }
+      ],
+      "grading": "judge"
+    },
+    {
+      "id": "fit.public_services.0018",
+      "version": 1,
+      "topic": "public_services",
+      "kind": "fact",
+      "question": "Que documentos preciso levar para retirar remédios de graça pelo Farmácia Popular, e quem pode retirar fraldas geriátricas?",
+      "snapshot": "2026-10-31",
+      "reference": {
+        "answer": "Na farmácia credenciada (com o selo Aqui Tem Farmácia Popular) é preciso apresentar documento oficial com foto e número do CPF e receita médica dentro da validade, do SUS ou de serviço particular. As fraldas geriátricas são para pessoas com 60 anos ou mais ou pessoas com deficiência, com prescrição, laudo ou atestado médico que comprove a necessidade (com CID, no caso de pessoa com deficiência). Os medicamentos e insumos são gratuitos.",
+        "values": []
+      },
+      "sources": [
+        {
+          "url": "https://www.gov.br/saude/pt-br/composicao/sectics/farmacia-popular",
+          "publisher": "Ministério da Saúde",
+          "retrieved": "2026-10-31"
+        }
+      ],
+      "grading": "judge"
+    },
+    {
+      "id": "fit.public_services.0019",
+      "version": 1,
+      "topic": "public_services",
+      "kind": "fact",
+      "question": "Quem tem direito à pensão por morte do INSS e em que ordem?",
+      "snapshot": "2026-10-31",
+      "reference": {
+        "answer": "Os dependentes se dividem em três classes, e a classe anterior exclui as seguintes. Classe 1: cônjuge ou companheiro(a), inclusive homoafetivo, filho não emancipado menor de 21 anos ou filho de qualquer idade com invalidez ou deficiência intelectual ou mental que o torne incapaz. Classe 2: pais. Classe 3: irmão não emancipado menor de 21 anos ou irmão inválido ou com deficiência intelectual ou mental. O falecido precisava ter qualidade de segurado, receber benefício ou já ter direito a um. O pedido é feito pelo Meu INSS.",
+        "values": []
+      },
+      "sources": [
+        {
+          "url": "https://www.gov.br/pt-br/servicos/solicitar-pensao-por-morte-urbana",
+          "publisher": "Instituto Nacional do Seguro Social (INSS)",
+          "retrieved": "2026-10-31"
+        }
+      ],
+      "grading": "judge"
+    },
+    {
+      "id": "fit.public_services.0020",
+      "version": 1,
+      "topic": "public_services",
+      "kind": "fact",
+      "question": "Qual é o limite de faturamento anual do MEI e o que muda com a lei sancionada em outubro de 2026?",
+      "snapshot": "2026-10-31",
+      "reference": {
+        "answer": "O limite atual é de R$ 81 mil por ano. A lei sancionada em 21 de outubro de 2026 (PLP nº 186/2026, que altera a Lei Complementar nº 123/2006) eleva o limite para R$ 110 mil em 2027 e R$ 140 mil em 2028, e permite contratar até dois empregados, em vez de um.",
+        "values": [
+          {
+            "field": "limite_atual",
+            "value": 81000,
+            "unit": "BRL"
+          },
+          {
+            "field": "limite_2027",
+            "value": 110000,
+            "unit": "BRL"
+          },
+          {
+            "field": "limite_2028",
+            "value": 140000,
+            "unit": "BRL"
+          },
+          {
+            "field": "empregados_maximo",
+            "value": 2,
+            "unit": "empregados"
+          }
+        ]
+      },
+      "sources": [
+        {
+          "url": "https://www.gov.br/memp/pt-br/assuntos/noticias/lula-sanciona-lei-que-amplia-beneficios-para-meis-e-envia-ao-congresso-pec-sobre-tarifa-zero-no-transporte-coletivo",
+          "publisher": "Ministério do Empreendedorismo, da Microempresa e da Empresa de Pequeno Porte",
+          "retrieved": "2026-10-31"
+        }
+      ],
+      "grading": "script"
+    }
+  ]
+}
