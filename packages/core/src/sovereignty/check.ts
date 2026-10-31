@@ -117,8 +117,10 @@ function checkCase(
     if (s.control !== 'unknown' && fetched === 0) {
       err(`${c.id}: stage ${s.stage} is ${s.control} with no fetched source; unsourced is unknown`)
     }
-    if (s.control === 'verified' && !MATURE.has(c.status) && c.status !== 'discontinued' && RUNNING_STAGES.has(s.stage)) {
-      err(`${c.id}: stage ${s.stage} is verified on a ${c.status} capability; only a working system can be in control there`)
+    if (s.control === 'verified' && c.status === 'proposed' && s.stage !== 'research') {
+      err(`${c.id}: stage ${s.stage} is verified on a proposal; a plan earns verified at research only`)
+    } else if (s.control === 'verified' && c.status === 'pilot' && RUNNING_STAGES.has(s.stage)) {
+      err(`${c.id}: stage ${s.stage} is verified on a pilot; only a working system can be in control there`)
     }
   }
   if (c.stages.some((s) => s.control === 'verified') && c.counterevidence.length === 0) {

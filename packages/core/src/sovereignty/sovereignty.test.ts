@@ -56,7 +56,8 @@ test('a classification other than unknown needs a fetched source', () => {
 
 test('a proposal cannot be verified at operation', () => {
   const stages = SOVEREIGNTY_STAGES.map((stage) => ({ stage, control: stage === 'operation' ? 'verified' : 'unknown', basis: 'x', sourceIds: stage === 'operation' ? ['s1'] : [] }))
-  assert.ok(errors([caseWith({ status: 'proposed', stages })]).some((p) => p.includes('only a working system')))
+  assert.ok(errors([caseWith({ status: 'proposed', stages })]).some((p) => p.includes('a plan earns verified at research only')))
+  assert.ok(errors([caseWith({ status: 'pilot', stages })]).some((p) => p.includes('only a working system')))
 })
 
 test('an institution id must exist in the map', () => {
