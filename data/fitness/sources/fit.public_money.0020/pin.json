@@ -1,0 +1,19 @@
+{
+  "itemId": "fit.public_money.0020",
+  "itemVersion": 1,
+  "sources": [
+    {
+      "n": 1,
+      "url": "https://apiapex.tesouro.gov.br/aria/v1/transferencias_constitucionais/custom/por_estado_municipio?p_estado=6&p_municipio=1389&p_ano=2026&p_transferencia=3&p_sn_detalhar=N&pageSize=100",
+      "method": "fetched",
+      "retrieved": "2026-10-31",
+      "finalUrl": "https://apiapex.tesouro.gov.br/aria/v1/transferencias_constitucionais/custom/por_estado_municipio?p_estado=6&p_municipio=1389&p_ano=2026&p_transferencia=3&p_sn_detalhar=N&pageSize=100",
+      "status": 200,
+      "contentType": "application/json",
+      "rawSha256": "609c681a7aedaf89f934f7d2dc51aa20d5c47c8125e5a8273e40796bea1b7d00",
+      "textSha256": "02e33685e20bb2ddea45a879ee9547e3ceabef788989ee37859cc070a993d1e4",
+      "chars": 2426,
+      "extractor": "fitness-extract-2/json"
+    }
+  ]
+}

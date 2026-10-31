@@ -1,0 +1,639 @@
+{
+  "topic": "public_money",
+  "items": [
+    {
+      "id": "fit.public_money.0001",
+      "version": 1,
+      "topic": "public_money",
+      "kind": "fact",
+      "question": "Qual é o valor total da receita estimada, e da despesa fixada em igual valor, na Lei Orçamentária Anual da União para 2025 (Lei nº 15.121/2025), somando os três orçamentos (Fiscal, Seguridade Social e Investimento das estatais), conforme o texto aprovado da lei? Quanto desse total corresponde ao Refinanciamento da Dívida Pública Federal? Responda em R$ bilhões, valores nominais.",
+      "snapshot": "2026-10-31",
+      "reference": {
+        "answer": "A Lei nº 15.121, de 10 de abril de 2025, estima a receita e fixa a despesa da União para 2025 em R$ 5.888.958.698.709,00 (cerca de R$ 5.888,96 bilhões). Desse total, R$ 1.655.840.500.148,00 (cerca de R$ 1.655,84 bilhões) correspondem ao Refinanciamento da Dívida Pública Federal, constante do Orçamento Fiscal. Os Orçamentos Fiscal e da Seguridade Social somam R$ 5.722,39 bilhões, já incluído o refinanciamento.",
+        "values": [
+          {
+            "field": "loa_2025_total",
+            "value": 5888.96,
+            "unit": "BRL bilhões",
+            "tolerance": 29.44
+          },
+          {
+            "field": "loa_2025_refinanciamento_dpf",
+            "value": 1655.84,
+            "unit": "BRL bilhões",
+            "tolerance": 8.28
+          }
+        ]
+      },
+      "sources": [
+        {
+          "url": "https://legis.senado.leg.br/norma/40523493/publicacao/40523841",
+          "publisher": "Senado Federal (Legislação Federal)",
+          "retrieved": "2026-10-31"
+        }
+      ],
+      "grading": "script"
+    },
+    {
+      "id": "fit.public_money.0002",
+      "version": 1,
+      "topic": "public_money",
+      "kind": "fact",
+      "question": "Qual é o valor total da receita estimada e da despesa fixada na Lei Orçamentária Anual da União para 2026 (Lei nº 15.346/2026), somando os três orçamentos, conforme o texto sancionado? E quanto foi fixado para o Orçamento de Investimento das empresas estatais? Responda em R$ bilhões, valores nominais.",
+      "snapshot": "2026-10-31",
+      "reference": {
+        "answer": "A Lei nº 15.346, de 14 de janeiro de 2026, estima a receita e fixa a despesa da União para 2026 em R$ 6.542.612.741.768,00 (cerca de R$ 6.542,61 bilhões). O Orçamento de Investimento das estatais foi fixado em R$ 197.894.202.561,00 (cerca de R$ 197,89 bilhões). Os Orçamentos Fiscal e da Seguridade Social somam R$ 6.344,72 bilhões, incluídos R$ 1.822,97 bilhões de refinanciamento da dívida.",
+        "values": [
+          {
+            "field": "loa_2026_total",
+            "value": 6542.61,
+            "unit": "BRL bilhões",
+            "tolerance": 32.71
+          },
+          {
+            "field": "loa_2026_orcamento_investimento",
+            "value": 197.89,
+            "unit": "BRL bilhões",
+            "tolerance": 0.99
+          }
+        ]
+      },
+      "sources": [
+        {
+          "url": "https://legis.senado.leg.br/norma/42252600/publicacao/42252791",
+          "publisher": "Senado Federal (Legislação Federal)",
+          "retrieved": "2026-10-31"
+        }
+      ],
+      "grading": "script"
+    },
+    {
+      "id": "fit.public_money.0003",
+      "version": 1,
+      "topic": "public_money",
+      "kind": "fact",
+      "question": "Qual é a meta de resultado primário do Governo Central para 2026 fixada na Lei de Diretrizes Orçamentárias de 2026 (Lei nº 15.321/2025), e quais são os limites inferior e superior do intervalo de tolerância? Responda em R$ bilhões, valores nominais.",
+      "snapshot": "2026-10-31",
+      "reference": {
+        "answer": "A LDO 2026 (Lei nº 15.321, de 31 de dezembro de 2025, art. 2º) fixa meta de superávit primário de R$ 34.264.603.518,00 (cerca de R$ 34,26 bilhões) para o Governo Central nos Orçamentos Fiscal e da Seguridade Social. O intervalo de tolerância vai de um resultado primário de R$ 0,00 (limite inferior) a um superávit de R$ 68.529.207.037,00 (cerca de R$ 68,53 bilhões, limite superior).",
+        "values": [
+          {
+            "field": "meta_primaria_2026",
+            "value": 34.26,
+            "unit": "BRL bilhões",
+            "tolerance": 0.17
+          },
+          {
+            "field": "tolerancia_limite_inferior",
+            "value": 0,
+            "unit": "BRL bilhões",
+            "tolerance": 0.05
+          },
+          {
+            "field": "tolerancia_limite_superior",
+            "value": 68.53,
+            "unit": "BRL bilhões",
+            "tolerance": 0.34
+          }
+        ]
+      },
+      "sources": [
+        {
+          "url": "https://legis.senado.leg.br/norma/41912067/publicacao/41913017",
+          "publisher": "Senado Federal (Legislação Federal)",
+          "retrieved": "2026-10-31"
+        }
+      ],
+      "grading": "script"
+    },
+    {
+      "id": "fit.public_money.0004",
+      "version": 1,
+      "topic": "public_money",
+      "kind": "fact",
+      "question": "Pela Lei Complementar nº 200/2023 (o arcabouço fiscal), em que proporção do crescimento real da receita primária podem crescer os limites de despesa primária quando a meta de resultado primário foi cumprida, e quando não foi? E quais são o piso e o teto do crescimento real anual desses limites? Responda em percentuais.",
+      "snapshot": "2026-10-31",
+      "reference": {
+        "answer": "Pelo art. 5º da LC 200/2023, a variação real dos limites de despesa primária fica limitada a 70% da variação real da receita primária se a meta de resultado primário do exercício anterior ao da elaboração da lei orçamentária tiver sido cumprida, e a 50% se não tiver sido cumprida. Em qualquer caso, o crescimento real dos limites não será inferior a 0,6% ao ano nem superior a 2,5% ao ano.",
+        "values": [
+          {
+            "field": "proporcao_meta_cumprida",
+            "value": 70,
+            "unit": "%",
+            "tolerance": 0
+          },
+          {
+            "field": "proporcao_meta_descumprida",
+            "value": 50,
+            "unit": "%",
+            "tolerance": 0
+          },
+          {
+            "field": "piso_crescimento_real",
+            "value": 0.6,
+            "unit": "% a.a.",
+            "tolerance": 0
+          },
+          {
+            "field": "teto_crescimento_real",
+            "value": 2.5,
+            "unit": "% a.a.",
+            "tolerance": 0
+          }
+        ]
+      },
+      "sources": [
+        {
+          "url": "https://legis.senado.leg.br/norma/37553820/publicacao/37556723",
+          "publisher": "Senado Federal (Legislação Federal)",
+          "retrieved": "2026-10-31"
+        }
+      ],
+      "grading": "script"
+    },
+    {
+      "id": "fit.public_money.0005",
+      "version": 1,
+      "topic": "public_money",
+      "kind": "fact",
+      "question": "Segundo a Lei Complementar nº 200/2023, que incluiu a regra na Lei de Responsabilidade Fiscal, qual é o intervalo de tolerância para verificar o cumprimento da meta anual de resultado primário? Responda em pontos percentuais do PIB.",
+      "snapshot": "2026-10-31",
+      "reference": {
+        "answer": "A LC 200/2023 incluiu no art. 4º, § 5º, inciso IV, da Lei de Responsabilidade Fiscal intervalos de tolerância de menos 0,25 ponto percentual e de mais 0,25 ponto percentual do PIB previsto no projeto de lei de diretrizes orçamentárias, convertidos em valores correntes. A meta é considerada cumprida se o resultado primário apurado pelo Banco Central superar o limite inferior desse intervalo.",
+        "values": [
+          {
+            "field": "intervalo_tolerancia",
+            "value": 0.25,
+            "unit": "p.p. do PIB",
+            "tolerance": 0
+          }
+        ]
+      },
+      "sources": [
+        {
+          "url": "https://legis.senado.leg.br/norma/37553820/publicacao/37556723",
+          "publisher": "Senado Federal (Legislação Federal)",
+          "retrieved": "2026-10-31"
+        }
+      ],
+      "grading": "script"
+    },
+    {
+      "id": "fit.public_money.0006",
+      "version": 1,
+      "topic": "public_money",
+      "kind": "fact",
+      "question": "Pela Lei Complementar nº 200/2023, qual é o valor mínimo que a programação de investimentos deve ter no projeto e na lei orçamentária anual, em percentual do PIB? E qual é o nível mínimo de despesas discricionárias considerado necessário ao funcionamento regular da administração pública, em percentual do valor autorizado na LOA?",
+      "snapshot": "2026-10-31",
+      "reference": {
+        "answer": "O art. 10 da LC 200/2023 determina que a programação destinada a investimentos no projeto e na lei orçamentária anual não será inferior a 0,6% do PIB estimado no respectivo projeto. O art. 7º, § 2º, fixa o nível mínimo de despesas discricionárias necessárias ao funcionamento regular da administração pública em 75% do valor autorizado na respectiva lei orçamentária anual.",
+        "values": [
+          {
+            "field": "piso_investimentos",
+            "value": 0.6,
+            "unit": "% do PIB",
+            "tolerance": 0
+          },
+          {
+            "field": "minimo_discricionarias",
+            "value": 75,
+            "unit": "% do autorizado na LOA",
+            "tolerance": 0
+          }
+        ]
+      },
+      "sources": [
+        {
+          "url": "https://legis.senado.leg.br/norma/37553820/publicacao/37556723",
+          "publisher": "Senado Federal (Legislação Federal)",
+          "retrieved": "2026-10-31"
+        }
+      ],
+      "grading": "script"
+    },
+    {
+      "id": "fit.public_money.0007",
+      "version": 1,
+      "topic": "public_money",
+      "kind": "fact",
+      "question": "O que acontece, pela Lei Complementar nº 200/2023, quando o resultado primário do Governo Central fica abaixo do limite inferior do intervalo de tolerância da meta? E o que muda se isso ocorrer pelo segundo ano consecutivo?",
+      "snapshot": "2026-10-31",
+      "reference": {
+        "answer": "Pelo art. 5º, o crescimento real dos limites de despesa passa a ser de 50% (e não 70%) da variação real da receita. Pelo art. 6º, aplicam-se imediatamente, até a próxima apuração anual, as vedações dos incisos II, III e VI a X do art. 167-A da Constituição. Se o descumprimento ocorrer pelo segundo ano consecutivo, aplicam-se as vedações dos incisos I a X do art. 167-A enquanto ele perdurar. O Presidente da República pode enviar projeto de lei complementar propondo suspensão parcial ou gradação das vedações. A vedação do inciso VIII não se aplica aos reajustes do salário mínimo previstos em lei de valorização. Pelo art. 7º, o descumprimento não configura infração à LRF para o agente que adotou a limitação de empenho e pagamento e não autorizou medida contrária às vedações.",
+        "values": []
+      },
+      "sources": [
+        {
+          "url": "https://legis.senado.leg.br/norma/37553820/publicacao/37556723",
+          "publisher": "Senado Federal (Legislação Federal)",
+          "retrieved": "2026-10-31"
+        }
+      ],
+      "grading": "judge"
+    },
+    {
+      "id": "fit.public_money.0008",
+      "version": 1,
+      "topic": "public_money",
+      "kind": "fact",
+      "question": "Segundo a Emenda Constitucional nº 126/2022, qual é o limite para aprovação das emendas parlamentares individuais ao projeto de lei orçamentária, em percentual da receita corrente líquida? Quanto desse percentual deve ir para ações e serviços públicos de saúde, e como o limite se divide entre deputados e senadores?",
+      "snapshot": "2026-10-31",
+      "reference": {
+        "answer": "A EC 126/2022 alterou o art. 166, § 9º, da Constituição: as emendas individuais são aprovadas no limite de 2% da receita corrente líquida do exercício anterior ao do encaminhamento do projeto, e metade desse percentual (1% da RCL) vai para ações e serviços públicos de saúde. Pelo § 9º-A, 1,55% cabe às emendas de deputados e 0,45% às de senadores. A execução dessas emendas é obrigatória até esse limite (§ 11).",
+        "values": [
+          {
+            "field": "limite_emendas_individuais",
+            "value": 2,
+            "unit": "% da RCL",
+            "tolerance": 0
+          },
+          {
+            "field": "parcela_saude",
+            "value": 1,
+            "unit": "% da RCL",
+            "tolerance": 0
+          },
+          {
+            "field": "parcela_deputados",
+            "value": 1.55,
+            "unit": "% da RCL",
+            "tolerance": 0
+          },
+          {
+            "field": "parcela_senadores",
+            "value": 0.45,
+            "unit": "% da RCL",
+            "tolerance": 0
+          }
+        ]
+      },
+      "sources": [
+        {
+          "url": "https://legis.senado.leg.br/norma/36621395/publicacao/36631160",
+          "publisher": "Senado Federal (Legislação Federal)",
+          "retrieved": "2026-10-31"
+        }
+      ],
+      "grading": "script"
+    },
+    {
+      "id": "fit.public_money.0009",
+      "version": 1,
+      "topic": "public_money",
+      "kind": "fact",
+      "question": "O que é a \"transferência especial\" criada pela Emenda Constitucional nº 105/2019 para as emendas parlamentares individuais (as chamadas emendas Pix)? Como os recursos chegam ao ente beneficiado, em que não podem ser gastos e qual parcela mínima deve ir para despesas de capital?",
+      "snapshot": "2026-10-31",
+      "reference": {
+        "answer": "A EC 105/2019 criou o art. 166-A da Constituição. As emendas individuais impositivas podem alocar recursos a Estados, Distrito Federal e Municípios por transferência especial ou por transferência com finalidade definida. Na transferência especial, os recursos são repassados diretamente ao ente, sem convênio ou instrumento congênere, pertencem ao ente no ato da transferência e devem ser aplicados em programações finalísticas das áreas de competência do Poder Executivo local. Os recursos não podem pagar despesas com pessoal e encargos sociais (ativos, inativos e pensionistas) nem encargos da dívida. Pelo menos 70% das transferências especiais devem ser aplicados em despesas de capital. A LC 210/2024 repete a exigência de 70% em despesas de capital, por autor, e sujeita esses recursos também ao TCU.",
+        "values": []
+      },
+      "sources": [
+        {
+          "url": "https://legis.senado.leg.br/norma/31825677/publicacao/31825800",
+          "publisher": "Senado Federal (Legislação Federal)",
+          "retrieved": "2026-10-31"
+        },
+        {
+          "url": "https://legis.senado.leg.br/norma/39857130/publicacao/39857348",
+          "publisher": "Senado Federal (Legislação Federal)",
+          "retrieved": "2026-10-31"
+        }
+      ],
+      "grading": "judge"
+    },
+    {
+      "id": "fit.public_money.0010",
+      "version": 1,
+      "topic": "public_money",
+      "kind": "fact",
+      "question": "Pela Lei Complementar nº 210/2024, que regula as emendas parlamentares, quantas emendas cada bancada estadual pode apresentar e aprovar por ano, e qual é a parcela mínima das emendas de comissão que deve ir para ações e serviços públicos de saúde?",
+      "snapshot": "2026-10-31",
+      "reference": {
+        "answer": "Pelo art. 3º da LC 210/2024, cada bancada estadual apresenta e aprova até 8 emendas; até 3 emendas adicionais destinadas à continuidade de obras já iniciadas não entram nesse limite. Pelo art. 4º, § 4º, no mínimo 50% das emendas de comissão devem ir para ações e serviços públicos de saúde.",
+        "values": [
+          {
+            "field": "max_emendas_bancada",
+            "value": 8,
+            "unit": "emendas",
+            "tolerance": 0
+          },
+          {
+            "field": "minimo_saude_emendas_comissao",
+            "value": 50,
+            "unit": "%",
+            "tolerance": 0
+          }
+        ]
+      },
+      "sources": [
+        {
+          "url": "https://legis.senado.leg.br/norma/39857130/publicacao/39857348",
+          "publisher": "Senado Federal (Legislação Federal)",
+          "retrieved": "2026-10-31"
+        }
+      ],
+      "grading": "script"
+    },
+    {
+      "id": "fit.public_money.0011",
+      "version": 1,
+      "topic": "public_money",
+      "kind": "fact",
+      "question": "Qual foi o resultado primário do Governo Central em 2025, pelo critério acima da linha do Resultado do Tesouro Nacional (RTN), em valores nominais? Foi superávit ou déficit? Responda em R$ bilhões.",
+      "snapshot": "2026-10-31",
+      "reference": {
+        "answer": "Pela série histórica do RTN (Tabela 2.1, valores correntes), o Governo Central teve déficit primário de R$ 61.694,3 milhões em 2025 (cerca de R$ 61,7 bilhões), cerca de 0,48% do PIB. O resultado abaixo da linha, apurado pelo Banco Central, foi déficit de R$ 58,7 bilhões.",
+        "values": [
+          {
+            "field": "deficit_primario_2025",
+            "value": 61.69,
+            "unit": "BRL bilhões",
+            "tolerance": 0.31
+          }
+        ]
+      },
+      "sources": [
+        {
+          "url": "https://www.tesourotransparente.gov.br/ckan/dataset/ab56485b-9c40-4efb-8563-9ce3e1973c4b/resource/527ccdb1-3059-42f3-bf23-b5e3ab4c6dc6/download/seriehistoricajul26.xlsx",
+          "publisher": "Tesouro Nacional (Tesouro Transparente)",
+          "retrieved": "2026-10-31"
+        },
+        {
+          "url": "https://apiapex.tesouro.gov.br/aria/v1/series-temporais/custom/resultado-fiscal?data_inicio=01-2025&data_fim=12-2025&tema=10&codigo_da_serie=10.04.1&correcao_ipca=N",
+          "publisher": "Tesouro Nacional",
+          "retrieved": "2026-10-31"
+        }
+      ],
+      "grading": "script"
+    },
+    {
+      "id": "fit.public_money.0012",
+      "version": 1,
+      "topic": "public_money",
+      "kind": "fact",
+      "question": "Qual foi o resultado primário do Governo Central em 2023, pelo critério acima da linha do Resultado do Tesouro Nacional (RTN), em valores nominais? Responda em R$ bilhões.",
+      "snapshot": "2026-10-31",
+      "reference": {
+        "answer": "Pela série histórica do RTN (Tabela 2.1, valores correntes), o Governo Central teve déficit primário de R$ 228.499,4 milhões em 2023 (cerca de R$ 228,5 bilhões), cerca de 2,1% do PIB.",
+        "values": [
+          {
+            "field": "deficit_primario_2023",
+            "value": 228.5,
+            "unit": "BRL bilhões",
+            "tolerance": 1.14
+          }
+        ]
+      },
+      "sources": [
+        {
+          "url": "https://www.tesourotransparente.gov.br/ckan/dataset/ab56485b-9c40-4efb-8563-9ce3e1973c4b/resource/527ccdb1-3059-42f3-bf23-b5e3ab4c6dc6/download/seriehistoricajul26.xlsx",
+          "publisher": "Tesouro Nacional (Tesouro Transparente)",
+          "retrieved": "2026-10-31"
+        },
+        {
+          "url": "https://apiapex.tesouro.gov.br/aria/v1/series-temporais/custom/resultado-fiscal?data_inicio=01-2023&data_fim=12-2023&tema=10&codigo_da_serie=10.04.1&correcao_ipca=N",
+          "publisher": "Tesouro Nacional",
+          "retrieved": "2026-10-31"
+        }
+      ],
+      "grading": "script"
+    },
+    {
+      "id": "fit.public_money.0013",
+      "version": 1,
+      "topic": "public_money",
+      "kind": "fact",
+      "question": "Quanto o Governo Central gastou com o Bolsa Família em 2025, segundo o Resultado do Tesouro Nacional (linha \"Bolsa Família e Auxílio Brasil\", valores nominais)? Responda em R$ bilhões.",
+      "snapshot": "2026-10-31",
+      "reference": {
+        "answer": "Pela série histórica do RTN (Tabela 2.2, valores correntes), a despesa com Bolsa Família e Auxílio Brasil foi de R$ 158.125,7 milhões em 2025 (cerca de R$ 158,1 bilhões), abaixo dos R$ 168,0 bilhões de 2024. Pelo critério de valor pago (Tabela 2.5), o valor é de R$ 158,2 bilhões.",
+        "values": [
+          {
+            "field": "bolsa_familia_2025",
+            "value": 158.13,
+            "unit": "BRL bilhões",
+            "tolerance": 0.79
+          }
+        ]
+      },
+      "sources": [
+        {
+          "url": "https://www.tesourotransparente.gov.br/ckan/dataset/ab56485b-9c40-4efb-8563-9ce3e1973c4b/resource/527ccdb1-3059-42f3-bf23-b5e3ab4c6dc6/download/seriehistoricajul26.xlsx",
+          "publisher": "Tesouro Nacional (Tesouro Transparente)",
+          "retrieved": "2026-10-31"
+        },
+        {
+          "url": "https://apiapex.tesouro.gov.br/aria/v1/series-temporais/custom/resultado-fiscal?data_inicio=01-2025&data_fim=12-2025&tema=10&codigo_da_serie=10.03.1.4.1.2&correcao_ipca=N",
+          "publisher": "Tesouro Nacional",
+          "retrieved": "2026-10-31"
+        }
+      ],
+      "grading": "script"
+    },
+    {
+      "id": "fit.public_money.0014",
+      "version": 1,
+      "topic": "public_money",
+      "kind": "fact",
+      "question": "Quanto o Governo Central gastou em 2025 com os Benefícios de Prestação Continuada da LOAS e a Renda Mensal Vitalícia (BPC/RMV), segundo o Resultado do Tesouro Nacional, em valores nominais? Responda em R$ bilhões.",
+      "snapshot": "2026-10-31",
+      "reference": {
+        "answer": "Pela série histórica do RTN (Tabela 2.1, valores correntes), a despesa com Benefícios de Prestação Continuada da LOAS/RMV foi de R$ 127.236,0 milhões em 2025 (cerca de R$ 127,2 bilhões), cerca de 1,0% do PIB. Em 2024 foi de R$ 111,1 bilhões.",
+        "values": [
+          {
+            "field": "bpc_rmv_2025",
+            "value": 127.24,
+            "unit": "BRL bilhões",
+            "tolerance": 0.64
+          }
+        ]
+      },
+      "sources": [
+        {
+          "url": "https://www.tesourotransparente.gov.br/ckan/dataset/ab56485b-9c40-4efb-8563-9ce3e1973c4b/resource/527ccdb1-3059-42f3-bf23-b5e3ab4c6dc6/download/seriehistoricajul26.xlsx",
+          "publisher": "Tesouro Nacional (Tesouro Transparente)",
+          "retrieved": "2026-10-31"
+        },
+        {
+          "url": "https://apiapex.tesouro.gov.br/aria/v1/series-temporais/custom/resultado-fiscal?data_inicio=01-2025&data_fim=12-2025&tema=10&codigo_da_serie=10.03.1.3.05&correcao_ipca=N",
+          "publisher": "Tesouro Nacional",
+          "retrieved": "2026-10-31"
+        }
+      ],
+      "grading": "script"
+    },
+    {
+      "id": "fit.public_money.0015",
+      "version": 1,
+      "topic": "public_money",
+      "kind": "fact",
+      "question": "Quanto a União pagou em 2025 como complementação ao FUNDEB, segundo o Resultado do Tesouro Nacional, em valores nominais? Responda em R$ bilhões.",
+      "snapshot": "2026-10-31",
+      "reference": {
+        "answer": "Pela série histórica do RTN (Tabela 2.1, linha \"FUNDEB (Complem. União)\", valores correntes), a complementação da União ao FUNDEB foi de R$ 59.727,6 milhões em 2025 (cerca de R$ 59,7 bilhões), ante R$ 47,5 bilhões em 2024.",
+        "values": [
+          {
+            "field": "fundeb_complementacao_2025",
+            "value": 59.73,
+            "unit": "BRL bilhões",
+            "tolerance": 0.3
+          }
+        ]
+      },
+      "sources": [
+        {
+          "url": "https://www.tesourotransparente.gov.br/ckan/dataset/ab56485b-9c40-4efb-8563-9ce3e1973c4b/resource/527ccdb1-3059-42f3-bf23-b5e3ab4c6dc6/download/seriehistoricajul26.xlsx",
+          "publisher": "Tesouro Nacional (Tesouro Transparente)",
+          "retrieved": "2026-10-31"
+        },
+        {
+          "url": "https://apiapex.tesouro.gov.br/aria/v1/series-temporais/custom/resultado-fiscal?data_inicio=01-2025&data_fim=12-2025&tema=10&codigo_da_serie=10.03.1.3.10&correcao_ipca=N",
+          "publisher": "Tesouro Nacional",
+          "retrieved": "2026-10-31"
+        }
+      ],
+      "grading": "script"
+    },
+    {
+      "id": "fit.public_money.0016",
+      "version": 1,
+      "topic": "public_money",
+      "kind": "fact",
+      "question": "Qual era o estoque da Dívida Pública Federal (DPF) em poder do público ao final de dezembro de 2025, segundo o Tesouro Nacional? Quanto disso era dívida mobiliária interna (DPMFi)? Responda em R$ bilhões, valores nominais.",
+      "snapshot": "2026-10-31",
+      "reference": {
+        "answer": "Pela série do Tesouro Nacional (Anexo 2.1 do Relatório Mensal da Dívida), o estoque da DPF em poder do público era de R$ 8.635,09 bilhões em dezembro de 2025. Desse total, R$ 8.309,03 bilhões eram DPMFi e R$ 326,07 bilhões eram dívida externa (DPFe).",
+        "values": [
+          {
+            "field": "dpf_dez_2025",
+            "value": 8635.09,
+            "unit": "BRL bilhões",
+            "tolerance": 43.18
+          },
+          {
+            "field": "dpmfi_dez_2025",
+            "value": 8309.03,
+            "unit": "BRL bilhões",
+            "tolerance": 41.55
+          }
+        ]
+      },
+      "sources": [
+        {
+          "url": "https://www.tesourotransparente.gov.br/ckan/dataset/0998f610-bc25-4ce3-b32c-a873447500c2/resource/0402cb77-5e4c-4414-966f-0e87d802a29a/download/estoque-da-divida-publica-federal.xlsx",
+          "publisher": "Tesouro Nacional (Tesouro Transparente)",
+          "retrieved": "2026-10-31"
+        }
+      ],
+      "grading": "script"
+    },
+    {
+      "id": "fit.public_money.0017",
+      "version": 1,
+      "topic": "public_money",
+      "kind": "fact",
+      "question": "Qual era o estoque da Dívida Pública Federal (DPF) em poder do público ao final de setembro de 2026, segundo o Tesouro Nacional? Responda em R$ bilhões, valores nominais.",
+      "snapshot": "2026-10-31",
+      "reference": {
+        "answer": "Pela série do Tesouro Nacional (Anexo 2.1, estoque da DPF), o estoque da DPF em poder do público era de R$ 9.382,95 bilhões em setembro de 2026: R$ 9.037,54 bilhões de DPMFi e R$ 345,41 bilhões de DPFe. Em agosto de 2026 era de R$ 9.292,73 bilhões.",
+        "values": [
+          {
+            "field": "dpf_set_2026",
+            "value": 9382.95,
+            "unit": "BRL bilhões",
+            "tolerance": 46.91
+          }
+        ]
+      },
+      "sources": [
+        {
+          "url": "https://www.tesourotransparente.gov.br/ckan/dataset/0998f610-bc25-4ce3-b32c-a873447500c2/resource/0402cb77-5e4c-4414-966f-0e87d802a29a/download/estoque-da-divida-publica-federal.xlsx",
+          "publisher": "Tesouro Nacional (Tesouro Transparente)",
+          "retrieved": "2026-10-31"
+        }
+      ],
+      "grading": "script"
+    },
+    {
+      "id": "fit.public_money.0018",
+      "version": 1,
+      "topic": "public_money",
+      "kind": "fact",
+      "question": "Quanto o estado da Bahia recebeu de Fundo de Participação dos Estados (FPE) no ano de 2025, somando os 12 meses, segundo a API de Transferências Constitucionais do Tesouro Nacional? Responda em R$ milhões, valores nominais.",
+      "snapshot": "2026-10-31",
+      "reference": {
+        "answer": "Pela API de Transferências Constitucionais do Tesouro Nacional, a Bahia recebeu R$ 15.075,34 milhões de FPE em 2025 (cerca de R$ 15,08 bilhões), somados os repasses de janeiro a dezembro. O maior repasse mensal foi o de fevereiro, de R$ 1.675,77 milhões.",
+        "values": [
+          {
+            "field": "fpe_bahia_2025",
+            "value": 15075.34,
+            "unit": "BRL milhões",
+            "tolerance": 75.38
+          }
+        ]
+      },
+      "sources": [
+        {
+          "url": "https://apiapex.tesouro.gov.br/aria/v1/transferencias_constitucionais/custom/por_estados?p_sn_detalhar=N&p_estado=5&p_ano=2025&p_transferencia=7",
+          "publisher": "Tesouro Nacional",
+          "retrieved": "2026-10-31"
+        }
+      ],
+      "grading": "script"
+    },
+    {
+      "id": "fit.public_money.0019",
+      "version": 1,
+      "topic": "public_money",
+      "kind": "fact",
+      "question": "Em quais meses de 2025 o município de Fortaleza (CE) recebeu as parcelas adicionais de 1% do Fundo de Participação dos Municípios (FPM 1%), e qual foi o valor total dessas parcelas no ano, segundo a API de Transferências Constitucionais do Tesouro Nacional? Responda em R$ milhões, valores nominais.",
+      "snapshot": "2026-10-31",
+      "reference": {
+        "answer": "Pela API de Transferências Constitucionais do Tesouro Nacional, Fortaleza recebeu três parcelas de FPM 1% em 2025: julho (R$ 79,09 milhões), setembro (R$ 67,63 milhões) e dezembro (R$ 81,64 milhões), num total de R$ 228,35 milhões.",
+        "values": [
+          {
+            "field": "fpm_1pct_fortaleza_2025_total",
+            "value": 228.35,
+            "unit": "BRL milhões",
+            "tolerance": 1.14
+          }
+        ]
+      },
+      "sources": [
+        {
+          "url": "https://apiapex.tesouro.gov.br/aria/v1/transferencias_constitucionais/custom/por_estado_municipio?p_estado=6&p_municipio=1389&p_ano=2025&p_transferencia=18&p_sn_detalhar=N&pageSize=100",
+          "publisher": "Tesouro Nacional",
+          "retrieved": "2026-10-31"
+        }
+      ],
+      "grading": "script"
+    },
+    {
+      "id": "fit.public_money.0020",
+      "version": 1,
+      "topic": "public_money",
+      "kind": "fact",
+      "question": "Quanto o município de Fortaleza (CE) recebeu de Fundo de Participação dos Municípios (FPM, sem as parcelas adicionais de 1%) em janeiro de 2026, segundo a API de Transferências Constitucionais do Tesouro Nacional? Responda em R$ milhões, valores nominais.",
+      "snapshot": "2026-10-31",
+      "reference": {
+        "answer": "Pela API de Transferências Constitucionais do Tesouro Nacional, Fortaleza recebeu R$ 138,73 milhões de FPM em janeiro de 2026 (R$ 138.725.965,21).",
+        "values": [
+          {
+            "field": "fpm_fortaleza_jan_2026",
+            "value": 138.73,
+            "unit": "BRL milhões",
+            "tolerance": 0.69
+          }
+        ]
+      },
+      "sources": [
+        {
+          "url": "https://apiapex.tesouro.gov.br/aria/v1/transferencias_constitucionais/custom/por_estado_municipio?p_estado=6&p_municipio=1389&p_ano=2026&p_transferencia=3&p_sn_detalhar=N&pageSize=100",
+          "publisher": "Tesouro Nacional",
+          "retrieved": "2026-10-31"
+        }
+      ],
+      "grading": "script"
+    }
+  ]
+}

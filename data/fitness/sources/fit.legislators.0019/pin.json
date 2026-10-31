@@ -1,0 +1,32 @@
+{
+  "itemId": "fit.legislators.0019",
+  "itemVersion": 1,
+  "sources": [
+    {
+      "n": 1,
+      "url": "https://legis.senado.leg.br/dadosabertos/senador/6331.json",
+      "method": "fetched",
+      "retrieved": "2026-10-31",
+      "finalUrl": "https://legis.senado.leg.br/dadosabertos/senador/6331.json",
+      "status": 200,
+      "contentType": "application/json",
+      "rawSha256": "2853cdf8508a0d615fa8e3835d954ae79756e8a34623eb95cea0b01a7e8351de",
+      "textSha256": "ac72680fdde109a919823d1e16df4665ff1aa33155354dcb0735c1796dc449be",
+      "chars": 3290,
+      "extractor": "fitness-extract-2/json"
+    },
+    {
+      "n": 2,
+      "url": "https://legis.senado.leg.br/dadosabertos/senador/6331/filiacoes.json",
+      "method": "fetched",
+      "retrieved": "2026-10-31",
+      "finalUrl": "https://legis.senado.leg.br/dadosabertos/senador/6331/filiacoes.json",
+      "status": 200,
+      "contentType": "application/json",
+      "rawSha256": "997550b791bc5f1b698881fd323d86e4a732b7ad5c3da4adac0d48f7d2af3dfe",
+      "textSha256": "5103155e71851dcd0266ef358ac0e867d8768d84eb85cf20fda8f52344fd2f18",
+      "chars": 1023,
+      "extractor": "fitness-extract-2/json"
+    }
+  ]
+}
