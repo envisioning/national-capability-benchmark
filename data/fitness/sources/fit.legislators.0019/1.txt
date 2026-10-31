@@ -1,0 +1,93 @@
+{
+  "DetalheParlamentar": {
+    "noNamespaceSchemaLocation": "https://legis.senado.leg.br/dadosabertos/dados/DetalheParlamentarv6.xsd",
+    "Metadados": {
+      "Versao": "31/10/2026 07:34:49",
+      "VersaoServico": "6",
+      "DataVersaoServico": "2021-09-09",
+      "DescricaoDataSet": "Retorna os detalhes de um Senador informado no parâmetro."
+    },
+    "Parlamentar": {
+      "IdentificacaoParlamentar": {
+        "CodigoParlamentar": "6331",
+        "CodigoPublicoNaLegAtual": "886",
+        "NomeParlamentar": "Sergio Moro",
+        "NomeCompletoParlamentar": "Sergio Fernando Moro",
+        "SexoParlamentar": "Masculino",
+        "EmailParlamentar": "sen.sergiomoro@senado.leg.br",
+        "SiglaPartidoParlamentar": "PL",
+        "UfParlamentar": "PR"
+      },
+      "DadosBasicosParlamentar": {
+        "DataNascimento": "1972-08-01",
+        "Naturalidade": "Maringá",
+        "UfNaturalidade": "PR",
+        "EnderecoParlamentar": "Senado Federal Anexo 2   Ala Affonso Arinos Gabinete 04"
+      },
+      "Telefones": {
+        "Telefone": [
+          {
+            "NumeroTelefone": "33036202",
+            "OrdemPublicacao": "1",
+            "IndicadorFax": "Não"
+          }
+        ]
+      },
+      "OutrasInformacoes": {
+        "Servico": [
+          {
+            "NomeServico": "ApartesParlamentar",
+            "DescricaoServico": "Apartes do parlamentar"
+          },
+          {
+            "NomeServico": "CargoParlamentar",
+            "DescricaoServico": "Cargos do parlamentar ao longo do(s) mandato(s)."
+          },
+          {
+            "NomeServico": "DiscursosParlamentar",
+            "DescricaoServico": "Discursos do parlamentar. Se não informar o período, serão retornados os discursos dos últimos 30 dias."
+          },
+          {
+            "NomeServico": "FiliacaoParlamentar"
+          },
+          {
+            "NomeServico": "HistoricoAcademicoParlamentar",
+            "DescricaoServico": "Retorna o histporico acadêmico do parlamentar."
+          },
+          {
+            "NomeServico": "LicencaParlamentar",
+            "DescricaoServico": "Licenças do parlamentar."
+          },
+          {
+            "NomeServico": "LiderancaParlamentar",
+            "DescricaoServico": "Cargos de liderança do parlamentar ao longo do(s) mandato(s)"
+          },
+          {
+            "NomeServico": "MandatoParlamentar",
+            "DescricaoServico": "Mandatos do parlamentar (atual e anteriores, se houver)"
+          },
+          {
+            "NomeServico": "MateriasAutoriaParlamentar",
+            "DescricaoServico": "Matérias de autoria ou coautoria do parlamentar"
+          },
+          {
+            "NomeServico": "MateriasRelatoriaParlamentar",
+            "DescricaoServico": "Matérias de relatoria do parlamentar"
+          },
+          {
+            "NomeServico": "MembroComissaoParlamentar",
+            "DescricaoServico": "Comissões em que o parlamentar é (ou foi) membro"
+          },
+          {
+            "NomeServico": "ProfissaoParlamentar",
+            "DescricaoServico": "Retorna a(s) profissão(ões) do parlamentar."
+          },
+          {
+            "NomeServico": "VotacaoParlamentar",
+            "DescricaoServico": "Votos do parlamentar ao longo do(s) mandato(s)"
+          }
+        ]
+      }
+    }
+  }
+}
