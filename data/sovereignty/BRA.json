@@ -1,0 +1,3286 @@
+{
+  "iso3": "BRA",
+  "framework": "D171",
+  "updatedAt": "2026-10-31",
+  "coverage": "Researched on 2026-10-31 by four parallel searches, one per group of domains, each told to report only what a fetched page carried and to list pages that would not load. Quotes were captured through a fetch tool that summarises pages; a sample of five (Viasat contract, Resende 70 percent, Santos Dumont integrator and operator, P-78 integration, Mero 3 subsea scope) was re-fetched and matched verbatim, and the rest still need a verbatim audit. Official sources that would not load are listed as blocked in each record: butantan.gov.br (403), planalto.gov.br decrees (blocked), gov.br/mcti (bot check), the LNCC expansion page (401), ceitec-sa.com (503), the Navy CTMSP page (403), Embraer's E2 page (404). Where a TCU ruling or a Diário Oficial page was read, it was read from a copy hosted by Poder360 that carries the official authenticity code. Searched and not recorded: Bipe, the messaging project SOV-2 names. No fetched page mentions it, so it has no record and nothing here says whether it exists or works. Advanced semiconductors have no record of their own: Brazil has no domestic function to classify, so the dependence is recorded where it bites, in bra.sov.ceitec (imports of advanced chips) and bra.sov.public-ai-compute (Nvidia and AMD silicon). Open gaps, in order of how much they would change a classification: the software and hardware stack under gov.br and Pix; the current foreign enricher for Angra 2 and Resende's capacity in SWU; who makes the soybean inoculants; owned against chartered FPSOs; the E2's final assembly and Brazilian value share; CEITEC's process node and equipment vendors; MSG GOV's hosting. Update rule: every record is re-checked by 31 October each year or when its status changes; a re-check re-opens every fetched source and moves one that no longer carries its claim to blocked, which turns the stage it held back to unknown.",
+  "cases": [
+    {
+      "id": "bra.sov.pix",
+      "title": "Pix instant payments",
+      "domain": "digital_public_infrastructure",
+      "function": "Settles retail payments between accounts at different institutions in real time, every day of the year, in central bank money, with a directory that resolves Pix keys to accounts.",
+      "status": "deployed",
+      "statusSourceIds": [
+        "s1",
+        "s2"
+      ],
+      "organizations": [
+        {
+          "name": "Banco Central do Brasil",
+          "role": "scheme owner, regulator and operator of the SPI settlement system and the DICT key directory",
+          "country": "BRA",
+          "institutionId": "bra.federal.bcb"
+        },
+        {
+          "name": "Red Hat",
+          "role": "supplier of the platform software and consulting",
+          "country": "USA"
+        },
+        {
+          "name": "C&M Software",
+          "role": "licensed technology provider connecting institutions to the system",
+          "country": "BRA"
+        }
+      ],
+      "stages": [
+        {
+          "stage": "research",
+          "control": "unknown",
+          "basis": "No fetched source settles who controls this stage.",
+          "sourceIds": []
+        },
+        {
+          "stage": "design_ip",
+          "control": "verified",
+          "basis": "The central bank designed the scheme with participants through consultations and the Fórum Pix; messages follow ISO 20022, an open international standard.",
+          "sourceIds": [
+            "s1"
+          ]
+        },
+        {
+          "stage": "components",
+          "control": "foreign_dependent_operation",
+          "basis": "The core runs on Red Hat OpenShift and AMQ Streams under commercial subscription. Both are built on open source (Kubernetes, Apache Kafka), but no source shows the central bank running them without the vendor.",
+          "sourceIds": [
+            "s2"
+          ]
+        },
+        {
+          "stage": "production",
+          "control": "partial",
+          "basis": "The central bank built the system with Red Hat Consulting, which a central bank official called an active and essential partner.",
+          "sourceIds": [
+            "s2"
+          ]
+        },
+        {
+          "stage": "deployment",
+          "control": "verified",
+          "basis": "The central bank launched Pix in November 2020.",
+          "sourceIds": [
+            "s2"
+          ]
+        },
+        {
+          "stage": "operation",
+          "control": "verified",
+          "basis": "The central bank operates the system from two data centres at separate sites, active-active with synchronous replication, a 15 minute recovery time objective and two independent networks from different providers.",
+          "sourceIds": [
+            "s1"
+          ]
+        },
+        {
+          "stage": "maintenance",
+          "control": "partial",
+          "basis": "Development, maintenance and operation are paid from the central bank's own budget; Red Hat provides technical account management and training.",
+          "sourceIds": [
+            "s1",
+            "s2"
+          ]
+        },
+        {
+          "stage": "governance",
+          "control": "verified",
+          "basis": "The scheme rests on Lei 12.865/2013 and central bank resolutions, and the central bank writes its rules.",
+          "sourceIds": [
+            "s1"
+          ]
+        }
+      ],
+      "dependencies": [
+        {
+          "kind": "single_vendor",
+          "stage": "components",
+          "item": "Container platform and messaging middleware (OpenShift, AMQ Streams)",
+          "supplier": "Red Hat",
+          "jurisdiction": "USA",
+          "substitutes": "Upstream Kubernetes and Apache Kafka are open source and could in principle be self-supported.",
+          "switching": "unknown: no source shows a self-supported build or a migration plan.",
+          "sourceIds": [
+            "s2"
+          ]
+        },
+        {
+          "kind": "open_source",
+          "stage": "components",
+          "item": "Kubernetes and Apache Kafka",
+          "supplier": "open-source communities",
+          "jurisdiction": "multiple",
+          "substitutes": "Forkable by licence.",
+          "switching": "unknown",
+          "sourceIds": [
+            "s2"
+          ]
+        },
+        {
+          "kind": "foreign_jurisdiction",
+          "stage": "governance",
+          "item": "US trade pressure on the scheme's design (Section 301 investigation, July 2025)",
+          "supplier": "Office of the US Trade Representative",
+          "jurisdiction": "USA",
+          "substitutes": "Not applicable: the scheme is governed by Brazilian law.",
+          "switching": "Not a technical dependency; recorded because it targets the scheme's operating model.",
+          "sourceIds": [
+            "s3"
+          ]
+        }
+      ],
+      "constraints": "The design and the operation sit in the central bank by construction; the software platform under them is a US vendor's commercial distribution of open-source projects. Hardware origin is not on any fetched source.",
+      "counterevidence": [
+        {
+          "claim": "In July 2025 criminals used compromised credentials at a licensed technology provider, C&M Software, to move funds from banks' reserve accounts through Pix; the central bank let the provider resume under controlled production.",
+          "sourceIds": [
+            "s4"
+          ]
+        },
+        {
+          "claim": "The United States opened a Section 301 investigation in 2025 that cites Pix being both operated and regulated by the central bank.",
+          "sourceIds": [
+            "s3"
+          ]
+        }
+      ],
+      "uncertainty": "Research is unknown: no source covers the work before design. Whether any Pix workload sits in Serpro's government cloud is unknown; the TCU cites a Serpro contract with the central bank but no link to Pix. The Red Hat source is vendor marketing.",
+      "challengesNarrative": false,
+      "sources": [
+        {
+          "id": "s1",
+          "url": "https://www.bcb.gov.br/content/estabilidadefinanceira/sistemapagamentosinstantaneos_docs/principios_infraestruturas_mercado_financeiro.pdf",
+          "publisher": "Banco Central do Brasil",
+          "title": "SPI – Princípios para Infraestruturas do Mercado Financeiro: Divulgação de informações sobre o Sistema de Pagamentos Instantâneos (SPI)",
+          "published": 2026,
+          "accessed": "2026-10-31",
+          "access": "fetched",
+          "quote": "O sistema possui dois Centros de Serviços de Informática (CSIs) instalados em locais distintos, com replicação síncrona de dados e operação em regime ativo-ativo."
+        },
+        {
+          "id": "s2",
+          "url": "https://www.redhat.com/rhdc/managed-files/rh-central-bank-of-brazil-case-study-f26354pr-202012-a4-ptbr.pdf",
+          "publisher": "Red Hat",
+          "title": "Banco Central do Brasil constrói rede de pagamentos instantâneos, Pix, com tecnologia da Red Hat",
+          "published": 2020,
+          "accessed": "2026-10-31",
+          "access": "fetched",
+          "quote": "O BCB realizou uma licitação para contratação de uma arquitetura distribuída, altamente escalável, baseada no Apache Kafka. A solução vencedora foi Red Hat AMQ.",
+          "note": "Vendor case study."
+        },
+        {
+          "id": "s3",
+          "url": "https://www.everycrsreport.com/reports/IN12613.html",
+          "publisher": "Congressional Research Service (via EveryCRSReport)",
+          "title": "Section 301 Investigation into Brazil's Acts, Policies, and Practices (IN12613)",
+          "published": 2025,
+          "accessed": "2026-10-31",
+          "access": "fetched",
+          "quote": "both operated and regulated by the Central Bank of Brazil."
+        },
+        {
+          "id": "s4",
+          "url": "https://www.diariodepernambuco.com.br/economia/2025/07/7793465-ataque-hacker-nao-envolveu-extracao-de-dados-de-clientes-diz-c-m-software.html",
+          "publisher": "Agência Brasil (republished by Diario de Pernambuco)",
+          "title": "Ataque hacker não envolveu extração de dados de clientes, diz C&M Software",
+          "published": 2025,
+          "accessed": "2026-10-31",
+          "access": "fetched",
+          "quote": "atua como provedora de tecnologia homologada pelo Banco Central"
+        },
+        {
+          "id": "s5",
+          "url": "https://www.bcb.gov.br/estabilidadefinanceira/pix",
+          "publisher": "Banco Central do Brasil",
+          "title": "Pix",
+          "published": null,
+          "accessed": "2026-10-31",
+          "access": "blocked",
+          "note": "Rendered only a heading on 2026-10-31; the page needs JavaScript."
+        }
+      ],
+      "reviewedAt": "2026-10-31"
+    },
+    {
+      "id": "bra.sov.govbr-identity",
+      "title": "gov.br digital identity and login",
+      "domain": "digital_public_infrastructure",
+      "function": "Gives every citizen one federal login with three assurance levels (bronze, silver, gold), validated against federal databases, banks, the electoral biometric base, the national identity card or an ICP-Brasil certificate.",
+      "status": "deployed",
+      "statusSourceIds": [
+        "s3",
+        "s4"
+      ],
+      "organizations": [
+        {
+          "name": "Ministério da Gestão e da Inovação em Serviços Públicos",
+          "role": "owning ministry",
+          "country": "BRA",
+          "institutionId": "bra.federal.mgi"
+        },
+        {
+          "name": "Serpro",
+          "role": "develops, hosts and operates the platform, including facial recognition and liveness",
+          "country": "BRA",
+          "institutionId": "bra.federal.serpro"
+        },
+        {
+          "name": "Dataprev",
+          "role": "qualifies accounts against social security data",
+          "country": "BRA",
+          "institutionId": "bra.federal.dataprev"
+        }
+      ],
+      "stages": [
+        {
+          "stage": "research",
+          "control": "unknown",
+          "basis": "No fetched source settles who controls this stage.",
+          "sourceIds": []
+        },
+        {
+          "stage": "design_ip",
+          "control": "verified",
+          "basis": "Serpro develops the login for the ministry, and its centre of excellence develops the facial recognition and liveness services.",
+          "sourceIds": [
+            "s2",
+            "s5"
+          ]
+        },
+        {
+          "stage": "components",
+          "control": "unknown",
+          "basis": "No fetched source settles who controls this stage.",
+          "sourceIds": []
+        },
+        {
+          "stage": "production",
+          "control": "verified",
+          "basis": "Serpro and Dataprev unified the access platform in 2019: Serpro runs authentication and Dataprev qualifies accounts.",
+          "sourceIds": [
+            "s6"
+          ]
+        },
+        {
+          "stage": "deployment",
+          "control": "verified",
+          "basis": "The levels are validated against Brazilian bases: Receita Federal, the driving licence register, the electoral biometric base, the national identity card and ICP-Brasil certificates.",
+          "sourceIds": [
+            "s1"
+          ]
+        },
+        {
+          "stage": "operation",
+          "control": "verified",
+          "basis": "Serpro develops, hosts, manages and processes all operations of the platform; no fetched source documents a foreign input at this stage.",
+          "sourceIds": [
+            "s3"
+          ]
+        },
+        {
+          "stage": "maintenance",
+          "control": "verified",
+          "basis": "Serpro maintains the platform.",
+          "sourceIds": [
+            "s3"
+          ]
+        },
+        {
+          "stage": "governance",
+          "control": "verified",
+          "basis": "The ministry owns the platform and its rules.",
+          "sourceIds": [
+            "s2",
+            "s4"
+          ]
+        }
+      ],
+      "dependencies": [],
+      "constraints": "One state company develops, hosts and runs the platform for 175 million users, so the capability is domestic and concentrated in a single operator.",
+      "counterevidence": [
+        {
+          "claim": "The TCU found that the gov.br authentication systems hold mostly public data and are therefore not the main object of the government cloud, so the sovereignty rules keyed to confidentiality do not clearly cover them.",
+          "sourceIds": [
+            "s7"
+          ]
+        }
+      ],
+      "uncertainty": "Research and components are unknown: no fetched source names the software stack, the biometric engine's origin or the hardware, so \"verified\" at operation rests on Serpro's statement and the absence of a documented foreign input, not on an inventory. The governing decrees were not fetched (planalto.gov.br blocked).",
+      "challengesNarrative": false,
+      "sources": [
+        {
+          "id": "s1",
+          "url": "https://www.gov.br/governodigital/pt-br/identidade/conta-gov-br/niveis-da-conta-govbr",
+          "publisher": "Governo Digital",
+          "title": "Níveis da conta gov.br",
+          "published": null,
+          "accessed": "2026-10-31",
+          "access": "fetched",
+          "quote": "Validação dos seus dados com Certificado Digital de pessoa física compatível com ICP-Brasil."
+        },
+        {
+          "id": "s2",
+          "url": "https://serpro.gov.br/menu/noticias/noticias-2024/serpro-future-of-government",
+          "publisher": "Serpro",
+          "title": "Serpro no Future of Government",
+          "published": 2024,
+          "accessed": "2026-10-31",
+          "access": "fetched",
+          "quote": "A tecnologia envolvida em ambas as soluções é desenvolvida pelo Serpro para o MGI."
+        },
+        {
+          "id": "s3",
+          "url": "https://www.serpro.gov.br/menu/noticias/noticias-2025/recorde-usuarios-ouro-gov.br",
+          "publisher": "Serpro",
+          "title": "Recorde de usuários ouro no gov.br",
+          "published": 2025,
+          "accessed": "2026-10-31",
+          "access": "fetched",
+          "quote": "desenvolvimento, hospedagem, gestão e processamento de todas as operações da plataforma"
+        },
+        {
+          "id": "s4",
+          "url": "https://www.mobiletime.com.br/noticias/24/03/2026/govbr-175-milhoes/",
+          "publisher": "Mobile Time",
+          "title": "gov.br chega a 175 milhões de usuários",
+          "published": 2026,
+          "accessed": "2026-10-31",
+          "access": "fetched",
+          "quote": "alcançar a marca de 175 milhões de usuários cadastrados"
+        },
+        {
+          "id": "s5",
+          "url": "https://serpro.gov.br/menu/noticias/noticias-2023/prova-de-vida-e-reconhecimento-facial",
+          "publisher": "Serpro",
+          "title": "Prova de vida e reconhecimento facial",
+          "published": 2023,
+          "accessed": "2026-10-31",
+          "access": "fetched",
+          "quote": "O Gov.br utiliza a biometria facial em diversas etapas, como cadastro, login e atualização dos selos."
+        },
+        {
+          "id": "s6",
+          "url": "https://brasilpaisdigital.com.br/?p=6676",
+          "publisher": "Brasil País Digital",
+          "title": "Serpro e Dataprev unificam acesso ao gov.br",
+          "published": 2019,
+          "accessed": "2026-10-31",
+          "access": "fetched",
+          "quote": "o Serpro passa a sustentar a plataforma de autenticação"
+        },
+        {
+          "id": "s7",
+          "url": "https://static.poder360.com.br/uploads/2026/06/Acordao-1380-de-2026-Plenario.pdf",
+          "publisher": "Tribunal de Contas da União (copy hosted by Poder360)",
+          "title": "Acórdão nº 1380/2026 – TCU – Plenário (TC 008.857/2025-3)",
+          "published": 2026,
+          "accessed": "2026-10-31",
+          "access": "fetched",
+          "quote": "não sendo, portanto, objeto principal da nuvem de governo"
+        },
+        {
+          "id": "s8",
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2021/decreto/D10900.htm",
+          "publisher": "Presidência da República",
+          "title": "Decreto nº 10.900/2021",
+          "published": 2021,
+          "accessed": "2026-10-31",
+          "access": "blocked",
+          "note": "Request blocked on 2026-10-31."
+        }
+      ],
+      "reviewedAt": "2026-10-31"
+    },
+    {
+      "id": "bra.sov.government-cloud",
+      "title": "Federal government cloud (Nuvem de Governo)",
+      "domain": "ai_cloud",
+      "function": "Hosts federal agencies' workloads, including restricted-access data, on hyperscaler cloud equipment installed in Serpro and Dataprev data centres in Brazil and operated by those state companies.",
+      "status": "deployed",
+      "statusSourceIds": [
+        "s1",
+        "s4",
+        "s8"
+      ],
+      "organizations": [
+        {
+          "name": "Secretaria de Governo Digital (MGI)",
+          "role": "normative coordinator; sets prices and requires agencies to prioritise the government cloud",
+          "country": "BRA",
+          "institutionId": "bra.federal.mgi"
+        },
+        {
+          "name": "Serpro",
+          "role": "provider and operator (AWS Outposts, Google Distributed Cloud, Huawei Cloud Stack, Oracle)",
+          "country": "BRA",
+          "institutionId": "bra.federal.serpro"
+        },
+        {
+          "name": "Dataprev",
+          "role": "provider and operator (AWS Outposts, Huawei Cloud Stack, Oracle Dedicated Region)",
+          "country": "BRA",
+          "institutionId": "bra.federal.dataprev"
+        },
+        {
+          "name": "Tribunal de Contas da União",
+          "role": "audit",
+          "country": "BRA"
+        },
+        {
+          "name": "Amazon Web Services, Google, Oracle",
+          "role": "platform vendors",
+          "country": "USA"
+        },
+        {
+          "name": "Huawei",
+          "role": "platform vendor",
+          "country": "CHN"
+        }
+      ],
+      "stages": [
+        {
+          "stage": "research",
+          "control": "unknown",
+          "basis": "No fetched source settles who controls this stage.",
+          "sourceIds": []
+        },
+        {
+          "stage": "design_ip",
+          "control": "foreign_provision",
+          "basis": "Every platform is a foreign vendor's product: AWS Outposts, Google Distributed Cloud Hosted, Huawei Cloud Stack and Oracle Dedicated Region Cloud@Customer.",
+          "sourceIds": [
+            "s1"
+          ]
+        },
+        {
+          "stage": "components",
+          "control": "foreign_provision",
+          "basis": "The equipment in the state companies' data centres belongs to the vendors.",
+          "sourceIds": [
+            "s1"
+          ]
+        },
+        {
+          "stage": "production",
+          "control": "foreign_provision",
+          "basis": "The platforms are built and supplied by the vendors and installed in the state companies' facilities.",
+          "sourceIds": [
+            "s1",
+            "s2"
+          ]
+        },
+        {
+          "stage": "deployment",
+          "control": "foreign_dependent_operation",
+          "basis": "Installed in Serpro and Dataprev data centres in Brazil, but most vendors sit at one site each: AWS, Huawei and Google only in Brasília at Serpro, Huawei and AWS only in São Paulo at Dataprev.",
+          "sourceIds": [
+            "s1",
+            "s3"
+          ]
+        },
+        {
+          "stage": "operation",
+          "control": "foreign_dependent_operation",
+          "basis": "The state companies custody and manage the equipment, but the TCU found AWS Outposts and Google Distributed Cloud depend on continuous connectivity and send metadata to public regions.",
+          "sourceIds": [
+            "s1",
+            "s5"
+          ]
+        },
+        {
+          "stage": "maintenance",
+          "control": "foreign_dependent_operation",
+          "basis": "The state companies call on the vendors for technical support and component updates.",
+          "sourceIds": [
+            "s1"
+          ]
+        },
+        {
+          "stage": "governance",
+          "control": "partial",
+          "basis": "Portaria SGD/MGI 5.950/2023 requires storage in Brazil and keeps classified data off public cloud, but the AWS contracts' confidentiality exceptions admit disclosure under foreign orders such as the US CLOUD Act, and the TCU ordered them amended.",
+          "sourceIds": [
+            "s1",
+            "s3",
+            "s4"
+          ]
+        }
+      ],
+      "dependencies": [
+        {
+          "kind": "foreign_jurisdiction",
+          "stage": "governance",
+          "item": "Disclosure under foreign government orders (US CLOUD Act) through the AWS contract clause",
+          "supplier": "Amazon Web Services",
+          "jurisdiction": "USA",
+          "substitutes": "Contract amendment ordered by the TCU.",
+          "switching": "unknown: no fetched source shows the clause amended.",
+          "sourceIds": [
+            "s1",
+            "s3"
+          ]
+        },
+        {
+          "kind": "foreign_service",
+          "stage": "operation",
+          "item": "Control planes and telemetry for AWS Outposts and Google Distributed Cloud",
+          "supplier": "Amazon Web Services, Google",
+          "jurisdiction": "USA",
+          "substitutes": "Huawei Cloud Stack, which the TCU found can operate locally.",
+          "switching": "unknown",
+          "sourceIds": [
+            "s1"
+          ]
+        },
+        {
+          "kind": "single_vendor",
+          "stage": "deployment",
+          "item": "One physical site per vendor at each state company",
+          "supplier": "Serpro and Dataprev, per vendor",
+          "jurisdiction": "BRA",
+          "substitutes": "A second site per vendor.",
+          "switching": "The TCU gave 180 days for a plan for at least two geographically distinct data centres per vendor.",
+          "sourceIds": [
+            "s1"
+          ]
+        },
+        {
+          "kind": "imported_input",
+          "stage": "components",
+          "item": "Cloud hardware and software stacks",
+          "supplier": "AWS, Google, Oracle, Huawei",
+          "jurisdiction": "multiple",
+          "substitutes": "No domestic stack documented.",
+          "switching": "unknown",
+          "sourceIds": [
+            "s1",
+            "s6"
+          ]
+        }
+      ],
+      "constraints": "Residency is domestic and operation is by state staff; the technology, the updates and for two vendors the control plane are foreign. The only alternative the TCU rated as most sovereign is a Chinese vendor's stack.",
+      "counterevidence": [
+        {
+          "claim": "Serpro describes the knowledge to manage and operate the infrastructure as 100 percent national and the administration of resources as exclusively Serpro's.",
+          "sourceIds": [
+            "s5"
+          ]
+        },
+        {
+          "claim": "Dataprev's then president said the cloud uses Chinese and American technology, so its sovereignty is relative.",
+          "sourceIds": [
+            "s6"
+          ]
+        },
+        {
+          "claim": "Serpro's 2026 strategy report shows zero of a target of three AI services delivered on the government cloud in the first quarter.",
+          "sourceIds": [
+            "s8"
+          ]
+        },
+        {
+          "claim": "The TCU found the government cloud does not clearly cover critical services such as gov.br that hold mostly public data.",
+          "sourceIds": [
+            "s1"
+          ]
+        },
+        {
+          "claim": "The government states the cloud runs in two Serpro-owned data centres in Brasília and São Paulo and keeps classified data under Brazilian jurisdiction.",
+          "sourceIds": [
+            "s7"
+          ]
+        }
+      ],
+      "uncertainty": "The TCU text gives the session as 27 May 2026 and the press reports approval on 10 June 2026. Microsoft's participation and any amendment of the AWS clause since the ruling are unknown. The full text of Portaria 5.950 did not load and is cited through the TCU and Serpro. Research is unknown.",
+      "challengesNarrative": true,
+      "sources": [
+        {
+          "id": "s1",
+          "url": "https://static.poder360.com.br/uploads/2026/06/Acordao-1380-de-2026-Plenario.pdf",
+          "publisher": "Tribunal de Contas da União (copy hosted by Poder360)",
+          "title": "Acórdão nº 1380/2026 – TCU – Plenário (TC 008.857/2025-3)",
+          "published": 2026,
+          "accessed": "2026-10-31",
+          "access": "fetched",
+          "quote": "Tal redação permite interpretações que admitam a submissão a ordens de autoridades estrangeiras sob legislações como o CLOUD Act dos Estados Unidos",
+          "note": "TCU authenticity code on the PDF."
+        },
+        {
+          "id": "s2",
+          "url": "https://convergenciadigital.com.br/governo/governo-lanca-nuvem-soberana-com-serpro-e-dataprev-sem-abrir-mao-das-big-techs/",
+          "publisher": "Convergência Digital",
+          "title": "Governo lança nuvem soberana com Serpro e Dataprev sem abrir mão das big techs",
+          "published": 2025,
+          "accessed": "2026-10-31",
+          "access": "fetched",
+          "quote": "os órgãos públicos devem priorizar essa solução"
+        },
+        {
+          "id": "s3",
+          "url": "https://www.poder360.com.br/poder-tech/tcu-manda-rever-contrato-de-estatais-com-a-amazon-por-risco-a-dados/",
+          "publisher": "Poder360",
+          "title": "TCU manda rever contrato de estatais com a Amazon por risco a dados",
+          "published": 2026,
+          "accessed": "2026-10-31",
+          "access": "fetched",
+          "quote": "deve ser aditada para excluir a possibilidade de acesso decorrente do cumprimento de ordens estrangeiras"
+        },
+        {
+          "id": "s4",
+          "url": "https://serpro.gov.br/menu/noticias/noticias-2023/serpro-lanca-nuvem-de-governo",
+          "publisher": "Serpro",
+          "title": "Serpro lança Nuvem de Governo",
+          "published": 2023,
+          "accessed": "2026-10-31",
+          "access": "fetched",
+          "quote": "os dados tratados em ambiente de nuvem devem ser armazenados em data centers localizados em território brasileiro"
+        },
+        {
+          "id": "s5",
+          "url": "https://serpro.gov.br/menu/noticias/Tema-edicao-239/soberania-ja",
+          "publisher": "Serpro (Revista Tema 239)",
+          "title": "Soberania já",
+          "published": 2025,
+          "accessed": "2026-10-31",
+          "access": "fetched",
+          "quote": "o conhecimento para gerenciar e operar essa infraestrutura é 100% nacional"
+        },
+        {
+          "id": "s6",
+          "url": "https://www.baguete.com.br/noticias/nuvem-soberana-e-soberana-mesmo",
+          "publisher": "Baguete",
+          "title": "Nuvem soberana é soberana mesmo?",
+          "published": 2024,
+          "accessed": "2026-10-31",
+          "access": "fetched",
+          "quote": "Mas estamos usando tecnologia chinesa, estamos usando tecnologia americana"
+        },
+        {
+          "id": "s7",
+          "url": "https://agenciagov.ebc.com.br/noticias/202608/nuvem-de-governo-do-serpro-mantem-dados-sigilosos-sob-jurisdicao-brasileira",
+          "publisher": "Agência Gov (EBC)",
+          "title": "Nuvem de Governo do Serpro mantém dados sigilosos sob jurisdição brasileira",
+          "published": 2026,
+          "accessed": "2026-10-31",
+          "access": "fetched",
+          "quote": "A infraestrutura está em operação em dois datacenters próprios do Serpro em Brasília e São Paulo."
+        },
+        {
+          "id": "s8",
+          "url": "https://www.transparencia.serpro.gov.br/governanca/estrategia-institucional/desempenho-estrategia-1tri-2026.pdf",
+          "publisher": "Serpro",
+          "title": "Estratégia Institucional, Boletim de Desempenho, 1º trimestre/2026",
+          "published": 2026,
+          "accessed": "2026-10-31",
+          "access": "fetched",
+          "quote": "KRTI2.3. Entregar 3 serviços de IA na Nuvem de Governo"
+        },
+        {
+          "id": "s9",
+          "url": "https://cogead.fiocruz.br/files/2023_10_31_PORTARIA_SGD_MGI_5950.pdf",
+          "publisher": "MGI (copy hosted by Fiocruz)",
+          "title": "Portaria SGD/MGI nº 5.950/2023",
+          "published": 2023,
+          "accessed": "2026-10-31",
+          "access": "blocked",
+          "note": "HTTP 503 on 2026-10-31."
+        }
+      ],
+      "reviewedAt": "2026-10-31"
+    },
+    {
+      "id": "bra.sov.e2-jets",
+      "title": "Embraer E-Jets E2 commercial aircraft",
+      "domain": "aerospace",
+      "function": "Designs, integrates and sells a family of 80 to 146 seat commercial jets (E175-E2, E190-E2, E195-E2) flown by airlines.",
+      "status": "deployed",
+      "statusSourceIds": [
+        "s4"
+      ],
+      "organizations": [
+        {
+          "name": "Embraer",
+          "role": "airframe designer, integrator and programme owner",
+          "country": "BRA"
+        },
+        {
+          "name": "Pratt & Whitney",
+          "role": "exclusive engine and APU supplier",
+          "country": "USA"
+        },
+        {
+          "name": "Honeywell",
+          "role": "avionics supplier (Primus Epic 2)",
+          "country": "USA"
+        }
+      ],
+      "stages": [
+        {
+          "stage": "research",
+          "control": "unknown",
+          "basis": "No fetched source settles who controls this stage.",
+          "sourceIds": []
+        },
+        {
+          "stage": "design_ip",
+          "control": "partial",
+          "basis": "Embraer specifies the aircraft and chose its suppliers; the engine and avionics designs, which the aircraft cannot change on its own, are Pratt & Whitney and Honeywell IP.",
+          "sourceIds": [
+            "s1",
+            "s2",
+            "s3"
+          ]
+        },
+        {
+          "stage": "components",
+          "control": "foreign_provision",
+          "basis": "The PW1900G engines are supplied exclusively by Pratt & Whitney and assembled in Connecticut; the APU is also Pratt & Whitney and the avionics Honeywell.",
+          "sourceIds": [
+            "s1",
+            "s2",
+            "s3"
+          ]
+        },
+        {
+          "stage": "production",
+          "control": "unknown",
+          "basis": "No fetched source settles who controls this stage.",
+          "sourceIds": []
+        },
+        {
+          "stage": "deployment",
+          "control": "unknown",
+          "basis": "No fetched source settles who controls this stage.",
+          "sourceIds": []
+        },
+        {
+          "stage": "operation",
+          "control": "unknown",
+          "basis": "No fetched source settles who controls this stage.",
+          "sourceIds": []
+        },
+        {
+          "stage": "maintenance",
+          "control": "foreign_dependent_operation",
+          "basis": "The GTF powder-metal defect grounded up to 22 percent of the E2 fleet in March 2025; recovery depended on the engine maker's inspection and repair capacity.",
+          "sourceIds": [
+            "s4"
+          ]
+        },
+        {
+          "stage": "governance",
+          "control": "unknown",
+          "basis": "No fetched source shows whether US export control applies to E2 sales; the documented case (2006) concerns a military aircraft. Recorded as a dependency, not a classification.",
+          "sourceIds": []
+        }
+      ],
+      "dependencies": [
+        {
+          "kind": "single_vendor",
+          "stage": "components",
+          "item": "PW1900G turbofan engines",
+          "supplier": "Pratt & Whitney",
+          "jurisdiction": "USA",
+          "substitutes": "None documented: the engine is exclusive on the E2.",
+          "switching": "Re-engining a type is a new certification programme; no time estimate found.",
+          "sourceIds": [
+            "s1",
+            "s2"
+          ]
+        },
+        {
+          "kind": "imported_input",
+          "stage": "components",
+          "item": "Primus Epic 2 avionics",
+          "supplier": "Honeywell",
+          "jurisdiction": "USA",
+          "substitutes": "None documented.",
+          "switching": "unknown",
+          "sourceIds": [
+            "s3"
+          ]
+        },
+        {
+          "kind": "foreign_jurisdiction",
+          "stage": "governance",
+          "item": "US authorisation to re-export aircraft with US-origin components",
+          "supplier": "US Department of Commerce or State",
+          "jurisdiction": "USA",
+          "substitutes": "None documented.",
+          "switching": "In 2006 Embraer said replacing US components on the Super Tucano would mean redesigning the system, with large cost and delay. Not shown for the E2.",
+          "sourceIds": [
+            "s5"
+          ]
+        }
+      ],
+      "constraints": "Brazilian design and integration rest on a foreign propulsion and avionics supply chain. Final assembly location and the Brazilian share of the aircraft value are not on any fetched source.",
+      "counterevidence": [
+        {
+          "claim": "The 2006 export block concerned a military aircraft sold to Venezuela, not the E2, so it shows the mechanism and not that it binds the E2.",
+          "sourceIds": [
+            "s5"
+          ]
+        },
+        {
+          "claim": "Embraer reports the GTF availability problem as largely resolved by mid-2026, with engine-related groundings near 1 percent.",
+          "sourceIds": [
+            "s4"
+          ]
+        }
+      ],
+      "uncertainty": "Research, production, deployment and operation are unknown for want of a fetched source: no Embraer page on final assembly loaded (404). The fly-by-wire supplier and the Brazilian value share are unverified.",
+      "challengesNarrative": true,
+      "sources": [
+        {
+          "id": "s1",
+          "url": "https://prnewswire.com/news-releases/pratt--whitney-purepower-engine-for-embraer-e-jets-e2-begins-flight-test-program-300171326.html",
+          "publisher": "Pratt & Whitney (PR Newswire)",
+          "title": "Pratt & Whitney PurePower Engine for Embraer E-Jets E2 Begins Flight Test Program",
+          "published": 2015,
+          "accessed": "2026-10-31",
+          "access": "fetched",
+          "quote": "which was assembled at Pratt & Whitney's Middletown Engine Center in Connecticut"
+        },
+        {
+          "id": "s2",
+          "url": "https://prnewswire.com/news-releases/pratt--whitney-to-provide-fuel-efficient-purepower-engines-on-international-lease-finance-corporation-order-for-up-to-100-embraer-e-jets-e2-aircraft-212118381.html",
+          "publisher": "Pratt & Whitney (PR Newswire)",
+          "title": "Pratt & Whitney to Provide Fuel-Efficient PurePower Engines on ILFC Order for up to 100 Embraer E-Jets E2",
+          "published": 2013,
+          "accessed": "2026-10-31",
+          "access": "fetched",
+          "quote": "Pratt & Whitney will provide exclusive power for up to 100 Embraer E-Jets E2 aircraft"
+        },
+        {
+          "id": "s3",
+          "url": "https://ainonline.com/aviation-news/air-transport/2013-02-04/embraer-chooses-avionics-new-e-jets",
+          "publisher": "AIN Online",
+          "title": "Embraer Chooses Avionics for New E-Jets",
+          "published": 2013,
+          "accessed": "2026-10-31",
+          "access": "fetched",
+          "quote": "Embraer has opted to retain Honeywell as the avionics supplier for its second-generation E-Jets"
+        },
+        {
+          "id": "s4",
+          "url": "https://www.airdatanews.com/embraer-says-e2-engine-issues-have-largely-been-resolved/",
+          "publisher": "AirData News",
+          "title": "Embraer says E2 engine issues have largely been resolved",
+          "published": 2026,
+          "accessed": "2026-10-31",
+          "access": "fetched",
+          "quote": "the aircraft-on-ground (AOG) rate for the E2 family has fallen sharply from a peak of 22% recorded in March 2025."
+        },
+        {
+          "id": "s5",
+          "url": "https://memoria.ebc.com.br/agenciabrasil//noticia/2006-01-20/embraer-comments-impasse-blocking-sale-airplanes-venezuela",
+          "publisher": "Agência Brasil (EBC)",
+          "title": "Embraer comments on impasse blocking sale of airplanes to Venezuela",
+          "published": 2006,
+          "accessed": "2026-10-31",
+          "access": "fetched",
+          "quote": "their sale must be authorized by the US Commerce or State Department."
+        },
+        {
+          "id": "s6",
+          "url": "https://www.embraer.com/commercial-aviation/en/commercial-jets/e195-e2-commercial-jet/",
+          "publisher": "Embraer",
+          "title": "E195-E2 product page",
+          "published": null,
+          "accessed": "2026-10-31",
+          "access": "blocked",
+          "note": "HTTP 404 on 2026-10-31."
+        }
+      ],
+      "reviewedAt": "2026-10-31"
+    },
+    {
+      "id": "bra.sov.sgdc-1",
+      "title": "SGDC-1 defence and strategic communications satellite",
+      "domain": "space",
+      "function": "Carries government networks and broadband in Ka band (operated by Telebras) and military communications in X band (Ministry of Defence) from geostationary orbit.",
+      "status": "deployed",
+      "statusSourceIds": [
+        "s3",
+        "s4"
+      ],
+      "organizations": [
+        {
+          "name": "Telebras",
+          "role": "operates the Ka band and contracts its commercial use",
+          "country": "BRA"
+        },
+        {
+          "name": "Ministério da Defesa",
+          "role": "exclusive user of the X band",
+          "country": "BRA",
+          "institutionId": "bra.federal.defesa"
+        },
+        {
+          "name": "Visiona Tecnologia Espacial",
+          "role": "space systems integrator, joint venture of Embraer Defesa & Segurança and Telebras",
+          "country": "BRA"
+        },
+        {
+          "name": "Thales Alenia Space",
+          "role": "designer and manufacturer",
+          "country": "FRA"
+        },
+        {
+          "name": "Viasat",
+          "role": "commercial operator of Ka capacity under revenue sharing",
+          "country": "USA"
+        }
+      ],
+      "stages": [
+        {
+          "stage": "research",
+          "control": "unknown",
+          "basis": "No fetched source settles who controls this stage.",
+          "sourceIds": []
+        },
+        {
+          "stage": "design_ip",
+          "control": "foreign_provision",
+          "basis": "Thales Alenia Space designed and built the satellite under an acquisition contract.",
+          "sourceIds": [
+            "s1",
+            "s3"
+          ]
+        },
+        {
+          "stage": "components",
+          "control": "foreign_provision",
+          "basis": "The spacecraft was bought from the French manufacturer; no fetched source names a Brazilian component.",
+          "sourceIds": [
+            "s3"
+          ]
+        },
+        {
+          "stage": "production",
+          "control": "foreign_provision",
+          "basis": "Built and shipped from Cannes; more than 30 Brazilians were trained there under the contract.",
+          "sourceIds": [
+            "s1"
+          ]
+        },
+        {
+          "stage": "deployment",
+          "control": "foreign_provision",
+          "basis": "Launched from the Guiana Space Centre at Kourou on 4 May 2017.",
+          "sourceIds": [
+            "s3"
+          ]
+        },
+        {
+          "stage": "operation",
+          "control": "partial",
+          "basis": "Telebras operates the Ka band and the Ministry of Defence the X band, but the commercial Ka capacity is exploited by Viasat, a US company, under a revenue-sharing contract the TCU cleared in 2019.",
+          "sourceIds": [
+            "s2",
+            "s3",
+            "s4"
+          ]
+        },
+        {
+          "stage": "maintenance",
+          "control": "unknown",
+          "basis": "No fetched source settles who controls this stage.",
+          "sourceIds": []
+        },
+        {
+          "stage": "governance",
+          "control": "verified",
+          "basis": "Use of the bands is set by a Defence and Telebras contract under Brazilian law, and the commercial contract was audited by the TCU.",
+          "sourceIds": [
+            "s2",
+            "s4"
+          ]
+        }
+      ],
+      "dependencies": [
+        {
+          "kind": "single_vendor",
+          "stage": "production",
+          "item": "Geostationary communications satellite",
+          "supplier": "Thales Alenia Space",
+          "jurisdiction": "FRA",
+          "substitutes": "No domestic geostationary satellite builder is documented.",
+          "switching": "unknown",
+          "sourceIds": [
+            "s1",
+            "s3"
+          ]
+        },
+        {
+          "kind": "foreign_service",
+          "stage": "deployment",
+          "item": "Launch to geostationary transfer orbit",
+          "supplier": "Arianespace from Kourou",
+          "jurisdiction": "FRA",
+          "substitutes": "No domestic launcher to geostationary orbit exists (see bra.sov.orbital-launch).",
+          "switching": "A replacement satellite would need a foreign launch.",
+          "sourceIds": [
+            "s3"
+          ]
+        },
+        {
+          "kind": "foreign_service",
+          "stage": "operation",
+          "item": "Commercial exploitation of Ka capacity",
+          "supplier": "Viasat",
+          "jurisdiction": "USA",
+          "substitutes": "Telebras operating the capacity itself, which it did before the contract.",
+          "switching": "unknown",
+          "sourceIds": [
+            "s4"
+          ]
+        }
+      ],
+      "constraints": "Brazil holds the spectrum, the contract and the operation, not the ability to build or launch a replacement. Technology transfer to Brazilian industry was a stated aim and is not measured by any fetched source.",
+      "counterevidence": [
+        {
+          "claim": "The contract foresaw technology transfer to Brazilian companies and trained over 30 Brazilian engineers, which is the case for reading design as partial over time.",
+          "sourceIds": [
+            "s1",
+            "s3"
+          ]
+        },
+        {
+          "claim": "A domestic integrator exists: Visiona was set up by Embraer and Telebras for space systems, though no fetched source shows it building a geostationary satellite.",
+          "sourceIds": [
+            "s5"
+          ]
+        }
+      ],
+      "uncertainty": "Status in 2026, ground-control location and maintenance arrangements are not on any fetched source. The launch vehicle (Ariane 5) appears only in pages that would not load. The rubric cannot separate a revenue-sharing commercial partner from a foreign operator from the contract summary alone.",
+      "challengesNarrative": true,
+      "sources": [
+        {
+          "id": "s1",
+          "url": "https://www.thalesaleniaspace.com/en/news/brazilian-defense-minister-visits-thales-alenia-space",
+          "publisher": "Thales Alenia Space",
+          "title": "Brazilian defense minister visits Thales Alenia Space",
+          "published": 2016,
+          "accessed": "2026-10-31",
+          "access": "fetched",
+          "quote": "Brazil's SGDC dual (civil & military) telecom satellite will be shipped from Cannes"
+        },
+        {
+          "id": "s2",
+          "url": "https://teletime.com.br/11/09/2014/contrato-com-telebras-garante-a-defesa-uso-da-banda-x-do-sgdc/",
+          "publisher": "Teletime",
+          "title": "Contrato com Telebras garante à Defesa uso da banda X do SGDC",
+          "published": 2014,
+          "accessed": "2026-10-31",
+          "access": "fetched",
+          "quote": "a banda Ka, que será operada pela Telebras para garantir a segurança das redes de governo"
+        },
+        {
+          "id": "s3",
+          "url": "https://revistapesquisa.fapesp.br/novo-satelite-para-o-sistema-de-comunicacao-do-brasil-e-lancado-ao-espaco/",
+          "publisher": "Revista Pesquisa FAPESP",
+          "title": "Novo satélite para o sistema de comunicação do Brasil é lançado ao espaço",
+          "published": 2017,
+          "accessed": "2026-10-31",
+          "access": "fetched",
+          "quote": "o contrato de aquisição do equipamento com a fabricante, a multinacional francesa Thales Alenia Space"
+        },
+        {
+          "id": "s4",
+          "url": "https://teletime.com.br/22/05/2019/tcu-libera-acordo-entre-viasat-e-telebras/",
+          "publisher": "Teletime",
+          "title": "TCU libera acordo entre Viasat e Telebras",
+          "published": 2019,
+          "accessed": "2026-10-31",
+          "access": "fetched",
+          "quote": "O acordo, fundamentado no modelo de compartilhamento de receitas entre as duas companhias"
+        },
+        {
+          "id": "s5",
+          "url": "https://visionaespacial.com/",
+          "publisher": "Visiona",
+          "title": "Visiona home page",
+          "published": null,
+          "accessed": "2026-10-31",
+          "access": "fetched",
+          "quote": "A Visiona é uma joint-venture entre a Embraer Defesa & Segurança e a Telebras voltada integralmente a área espacial."
+        },
+        {
+          "id": "s6",
+          "url": "https://newsroom.arianespace.com/?p=9902",
+          "publisher": "Arianespace",
+          "title": "Launch release",
+          "published": null,
+          "accessed": "2026-10-31",
+          "access": "blocked",
+          "note": "HTTP 404 on 2026-10-31."
+        },
+        {
+          "id": "s7",
+          "url": "https://www.nasaspaceflight.com/2017/05/ariane-5-sgdc-and-koreasat-7-launch/",
+          "publisher": "NASASpaceflight",
+          "title": "Ariane 5 SGDC and Koreasat 7 launch",
+          "published": 2017,
+          "accessed": "2026-10-31",
+          "access": "blocked",
+          "note": "HTTP 403 on 2026-10-31."
+        }
+      ],
+      "reviewedAt": "2026-10-31"
+    },
+    {
+      "id": "bra.sov.amazonia-1",
+      "title": "Amazonia-1 Earth observation satellite on the Multi-Mission Platform",
+      "domain": "space",
+      "function": "Images the Brazilian territory with a wide-field optical camera for deforestation and environmental monitoring, on a satellite bus designed by INPE.",
+      "status": "deployed",
+      "statusSourceIds": [
+        "s1",
+        "s3"
+      ],
+      "organizations": [
+        {
+          "name": "Instituto Nacional de Pesquisas Espaciais (INPE)",
+          "role": "designer, integrator, tester and operator",
+          "country": "BRA"
+        },
+        {
+          "name": "Equatorial Sistemas and Opto Eletrônica",
+          "role": "builders of the WFI camera",
+          "country": "BRA"
+        },
+        {
+          "name": "ISRO / NewSpace India Limited",
+          "role": "launch provider (PSLV-C51)",
+          "country": "IND"
+        }
+      ],
+      "stages": [
+        {
+          "stage": "research",
+          "control": "verified",
+          "basis": "INPE created the Multi-Mission Platform the satellite flies on.",
+          "sourceIds": [
+            "s2"
+          ]
+        },
+        {
+          "stage": "design_ip",
+          "control": "verified",
+          "basis": "The satellite was designed in Brazil by INPE.",
+          "sourceIds": [
+            "s2"
+          ]
+        },
+        {
+          "stage": "components",
+          "control": "partial",
+          "basis": "About 70 percent of the spend went to 10 Brazilian firms and the camera was built domestically; the share of imported electronic parts is not published.",
+          "sourceIds": [
+            "s2"
+          ]
+        },
+        {
+          "stage": "production",
+          "control": "verified",
+          "basis": "Integrated and tested at INPE.",
+          "sourceIds": [
+            "s2"
+          ]
+        },
+        {
+          "stage": "deployment",
+          "control": "foreign_provision",
+          "basis": "Launched on India's PSLV-C51 in February 2021; the successor Amazonia-1B is contracted on Europe's Vega-C.",
+          "sourceIds": [
+            "s1",
+            "s3"
+          ]
+        },
+        {
+          "stage": "operation",
+          "control": "verified",
+          "basis": "INPE operates the satellite, which passed its design life in 2025 and is still working.",
+          "sourceIds": [
+            "s2",
+            "s3"
+          ]
+        },
+        {
+          "stage": "maintenance",
+          "control": "verified",
+          "basis": "Amazonia-1B, the successor, is being integrated at INPE from Amazonia-1 spare equipment.",
+          "sourceIds": [
+            "s3"
+          ]
+        },
+        {
+          "stage": "governance",
+          "control": "unknown",
+          "basis": "No fetched source settles who controls this stage.",
+          "sourceIds": []
+        }
+      ],
+      "dependencies": [
+        {
+          "kind": "foreign_service",
+          "stage": "deployment",
+          "item": "Launch to low Earth orbit",
+          "supplier": "ISRO/NSIL (2021); Arianespace Vega-C (2027, contracted)",
+          "jurisdiction": "multiple",
+          "substitutes": "Two foreign launch providers in two jurisdictions have been used or contracted.",
+          "switching": "Switching between foreign launchers is shown; no domestic option exists.",
+          "sourceIds": [
+            "s1",
+            "s3"
+          ]
+        },
+        {
+          "kind": "imported_input",
+          "stage": "components",
+          "item": "Electronic parts not made in Brazil",
+          "supplier": "unknown",
+          "jurisdiction": "unknown",
+          "substitutes": "unknown",
+          "switching": "unknown",
+          "sourceIds": [
+            "s2"
+          ]
+        }
+      ],
+      "constraints": "The satellite can be designed, built and run at home; it cannot reach orbit from home. The solar panel structure and propulsion subsystem were made in Brazil for the first time on this satellite, so the supply base is young.",
+      "counterevidence": [
+        {
+          "claim": "On the earlier CBERS satellites the solar panel was supplied by China, which shows how recent the domestic components are.",
+          "sourceIds": [
+            "s2"
+          ]
+        }
+      ],
+      "uncertainty": "Governance is unknown: no fetched source covers the mission's data policy or legal basis. Foreign electronic parts and any export-control status are unknown. The Portal Amazônia page gives the platform class as 7500 kg, likely a typo for 750 kg; it is not used for any claim.",
+      "challengesNarrative": false,
+      "sources": [
+        {
+          "id": "s1",
+          "url": "https://www.isro.gov.in/mission_PSLV_C51.html",
+          "publisher": "ISRO",
+          "title": "PSLV-C51/Amazonia-1",
+          "published": 2021,
+          "accessed": "2026-10-31",
+          "access": "fetched",
+          "quote": "Amazonia-1 is the optical earth observation satellite of National Institute for Space Research (INPE)."
+        },
+        {
+          "id": "s2",
+          "url": "https://revistapesquisa.fapesp.br/amazonia-no-espaco/",
+          "publisher": "Revista Pesquisa FAPESP",
+          "title": "Amazônia no espaço",
+          "published": 2021,
+          "accessed": "2026-10-31",
+          "access": "fetched",
+          "quote": "completamente projetado, integrado, testado e operado pelo Brasil."
+        },
+        {
+          "id": "s3",
+          "url": "https://portalamazonia.com/amazonia/amazonia-1-completa-5-anos/",
+          "publisher": "Portal Amazônia",
+          "title": "Amazonia-1 completa 5 anos em órbita e consolida o desenvolvimento da Plataforma Multimissão",
+          "published": 2026,
+          "accessed": "2026-10-31",
+          "access": "fetched",
+          "quote": "faz uso de equipamentos reserva do satélite Amazonia-1"
+        },
+        {
+          "id": "s4",
+          "url": "https://www.nasaspaceflight.com/2021/02/amazonia-1-launch/",
+          "publisher": "NASASpaceflight",
+          "title": "Amazonia-1 launch",
+          "published": 2021,
+          "accessed": "2026-10-31",
+          "access": "blocked",
+          "note": "HTTP 403 on 2026-10-31."
+        }
+      ],
+      "reviewedAt": "2026-10-31"
+    },
+    {
+      "id": "bra.sov.orbital-launch",
+      "title": "Domestic orbital launch (VLM-1, MLBR microlauncher, Alcântara)",
+      "domain": "space",
+      "function": "Puts Brazilian satellites into orbit on a Brazilian launcher from Brazilian territory.",
+      "status": "proposed",
+      "statusSourceIds": [
+        "s1"
+      ],
+      "organizations": [
+        {
+          "name": "Força Aérea Brasileira",
+          "role": "runs the VLM-1 schedule and coordinates Alcântara launches; part of the Ministry of Defence, which has no separate node",
+          "country": "BRA"
+        },
+        {
+          "name": "Agência Espacial Brasileira",
+          "role": "coordinates the microlauncher programme",
+          "country": "BRA"
+        },
+        {
+          "name": "Finep",
+          "role": "funds the MLBR microlauncher (R$ 189 million)",
+          "country": "BRA",
+          "institutionId": "bra.federal.finep"
+        },
+        {
+          "name": "Avibras",
+          "role": "industrial partner whose recovery the VLM-1 schedule depends on",
+          "country": "BRA"
+        },
+        {
+          "name": "Innospace",
+          "role": "South Korean company whose HANBIT-Nano made the first commercial orbital attempt from Alcântara",
+          "country": "KOR"
+        }
+      ],
+      "stages": [
+        {
+          "stage": "research",
+          "control": "verified",
+          "basis": "A microlauncher is being developed by Brazilian companies with Finep funding, and the VLM-1 under the FAB.",
+          "sourceIds": [
+            "s1"
+          ]
+        },
+        {
+          "stage": "design_ip",
+          "control": "unknown",
+          "basis": "Design is under way at Brazilian firms but no vehicle has flown; under the framework a plan earns no classification past research.",
+          "sourceIds": [
+            "s1"
+          ]
+        },
+        {
+          "stage": "components",
+          "control": "unknown",
+          "basis": "No fetched source settles who controls this stage.",
+          "sourceIds": []
+        },
+        {
+          "stage": "production",
+          "control": "unknown",
+          "basis": "No fetched source settles who controls this stage.",
+          "sourceIds": []
+        },
+        {
+          "stage": "deployment",
+          "control": "unknown",
+          "basis": "No fetched source settles who controls this stage.",
+          "sourceIds": []
+        },
+        {
+          "stage": "operation",
+          "control": "unknown",
+          "basis": "No fetched source settles who controls this stage.",
+          "sourceIds": []
+        },
+        {
+          "stage": "maintenance",
+          "control": "unknown",
+          "basis": "No fetched source settles who controls this stage.",
+          "sourceIds": []
+        },
+        {
+          "stage": "governance",
+          "control": "partial",
+          "basis": "Alcântara is governed by Brazil under the 2019 Technology Safeguards Agreement with the United States, which limits access to US-authorised persons, bars launch revenue from funding MTCR Category I systems and restricts inflows from non-MTCR countries.",
+          "sourceIds": [
+            "s2"
+          ]
+        }
+      ],
+      "dependencies": [
+        {
+          "kind": "foreign_jurisdiction",
+          "stage": "governance",
+          "item": "Technology Safeguards Agreement terms at Alcântara",
+          "supplier": "United States government",
+          "jurisdiction": "USA",
+          "substitutes": "None while the agreement is in force.",
+          "switching": "Withdrawal from a treaty promulgated by decree; no estimate found.",
+          "sourceIds": [
+            "s2"
+          ]
+        },
+        {
+          "kind": "skills",
+          "stage": "production",
+          "item": "Industrial base for solid rocket motors",
+          "supplier": "Avibras",
+          "jurisdiction": "BRA",
+          "substitutes": "None named in the source.",
+          "switching": "The VLM-1 schedule depends on Avibras resuming activity.",
+          "sourceIds": [
+            "s1"
+          ]
+        }
+      ],
+      "constraints": "Every Brazilian satellite in this catalogue reached orbit on a foreign launcher. The VLS programme was abandoned after the 2003 explosion at Alcântara.",
+      "counterevidence": [
+        {
+          "claim": "The first commercial orbital attempt from Brazilian soil, in December 2025, used a South Korean rocket and failed 46 seconds after launch.",
+          "sourceIds": [
+            "s3"
+          ]
+        },
+        {
+          "claim": "Engineers quoted by FAPESP call the 2027 prototype target optimistic.",
+          "sourceIds": [
+            "s1"
+          ]
+        }
+      ],
+      "uncertainty": "The status enum has no value for a funded development with no flight: `proposed` understates it and `pilot` overstates it. Recorded as a rubric failure in FRAMEWORK.md. The cause of the HANBIT-Nano failure is not published.",
+      "challengesNarrative": true,
+      "sources": [
+        {
+          "id": "s1",
+          "url": "https://revistapesquisa.fapesp.br/brasil-desenvolve-foguete-para-colocar-pequenos-satelites-na-orbita-terrestre/",
+          "publisher": "Revista Pesquisa FAPESP",
+          "title": "Brasil desenvolve foguete para colocar pequenos satélites na órbita terrestre",
+          "published": 2026,
+          "accessed": "2026-10-31",
+          "access": "fetched",
+          "quote": "O cronograma definitivo depende diretamente da velocidade de retomada das atividades da Avibras"
+        },
+        {
+          "id": "s2",
+          "url": "https://www2.camara.leg.br/legin/fed/decret/2020/decreto-10220-5-fevereiro-2020-789729-publicacaooriginal-159928-pe.html",
+          "publisher": "Câmara dos Deputados",
+          "title": "Decreto nº 10.220, de 5 de fevereiro de 2020",
+          "published": 2020,
+          "accessed": "2026-10-31",
+          "access": "fetched",
+          "quote": "somente permitirá acesso a pessoas autorizadas pelo Governo dos Estados Unidos da América"
+        },
+        {
+          "id": "s3",
+          "url": "https://movimentoeconomico.com.br/tecnologia/2025/12/22/foguete-hanbit-nano-explode-em-lancamento-orbital-no-maranhao/",
+          "publisher": "Movimento Econômico",
+          "title": "Foguete HANBIT-Nano explode em lançamento orbital no Maranhão",
+          "published": 2025,
+          "accessed": "2026-10-31",
+          "access": "fetched",
+          "quote": "seria o primeiro lançamento orbital comercial realizado em solo brasileiro."
+        }
+      ],
+      "reviewedAt": "2026-10-31"
+    },
+    {
+      "id": "bra.sov.soy-nitrogen-fixation",
+      "title": "Biological nitrogen fixation in soybean (Embrapa Bradyrhizobium strains)",
+      "domain": "agriculture",
+      "function": "Supplies soybean's nitrogen through selected Bradyrhizobium strains in seed inoculants, so the crop needs no nitrogen fertiliser.",
+      "status": "deployed",
+      "statusSourceIds": [
+        "s1"
+      ],
+      "organizations": [
+        {
+          "name": "Embrapa (Soja, Cerrados)",
+          "role": "strain selection and cultivar breeding",
+          "country": "BRA",
+          "institutionId": "bra.federal.embrapa"
+        }
+      ],
+      "stages": [
+        {
+          "stage": "research",
+          "control": "verified",
+          "basis": "Embrapa selected the strains; the four from Embrapa Cerrados remain the only ones recommended for soybean in Brazil.",
+          "sourceIds": [
+            "s3"
+          ]
+        },
+        {
+          "stage": "design_ip",
+          "control": "verified",
+          "basis": "The strains are Embrapa selections and make up the commercial inoculants.",
+          "sourceIds": [
+            "s1",
+            "s3"
+          ]
+        },
+        {
+          "stage": "components",
+          "control": "unknown",
+          "basis": "No fetched source settles who controls this stage.",
+          "sourceIds": []
+        },
+        {
+          "stage": "production",
+          "control": "unknown",
+          "basis": "No fetched source settles who controls this stage.",
+          "sourceIds": []
+        },
+        {
+          "stage": "deployment",
+          "control": "verified",
+          "basis": "The practice, dating from 1964, covers about 33 million hectares, all the soybean area in the country.",
+          "sourceIds": [
+            "s1"
+          ]
+        },
+        {
+          "stage": "operation",
+          "control": "verified",
+          "basis": "Four Bradyrhizobium strains are on the market and are used across the national soybean crop.",
+          "sourceIds": [
+            "s1"
+          ]
+        },
+        {
+          "stage": "maintenance",
+          "control": "unknown",
+          "basis": "No fetched source settles who controls this stage.",
+          "sourceIds": []
+        },
+        {
+          "stage": "governance",
+          "control": "unknown",
+          "basis": "No fetched source settles who controls this stage.",
+          "sourceIds": []
+        }
+      ],
+      "dependencies": [],
+      "constraints": "The science and the strains are domestic; who manufactures the inoculants and how quality is controlled are not on any fetched source. The technology covers soybean, so nitrogen imports remain for other crops.",
+      "counterevidence": [
+        {
+          "claim": "Embrapa's share of the soybean seed market fell from 80 percent to 6 percent by 2012, and the cultivar market is held by chemical and seed multinationals; the sovereign part is the strain science, not the seed supply.",
+          "sourceIds": [
+            "s5",
+            "s6"
+          ]
+        },
+        {
+          "claim": "Embrapa itself publishes savings figures that differ by a factor of five (US$ 8 billion, US$ 15 billion, US$ 43 billion a year, R$ 38 billion in 2021), on different prices and areas.",
+          "sourceIds": [
+            "s1",
+            "s2",
+            "s3",
+            "s4"
+          ]
+        },
+        {
+          "claim": "Brazil imported a record 2.77 million tonnes of fertiliser in 2024, Embrapa notes, with significant import dependence.",
+          "sourceIds": [
+            "s4"
+          ]
+        }
+      ],
+      "uncertainty": "Components, production, maintenance and governance are unknown: inoculant makers, carrier materials, MAPA registration and strain re-selection are not on any fetched source (the Canal Rural page was blocked). The seed market shares are from 2012 and 2013.",
+      "challengesNarrative": false,
+      "sources": [
+        {
+          "id": "s1",
+          "url": "https://www.embrapa.br/en/busca-de-solucoes-tecnologicas/-/produto-servico/3780/fixacao-biologica-de-nitrogenio-em-soja",
+          "publisher": "Embrapa",
+          "title": "Fixação Biológica de Nitrogênio em Soja",
+          "published": null,
+          "accessed": "2026-10-31",
+          "access": "fetched",
+          "quote": "Quatro estirpes de Bradyrhizobium estão disponíveis no mercado para soja."
+        },
+        {
+          "id": "s2",
+          "url": "https://www.embrapa.br/en/50-anos/linha-do-tempo",
+          "publisher": "Embrapa",
+          "title": "Linha do Tempo (Embrapa 50 anos)",
+          "published": null,
+          "accessed": "2026-10-31",
+          "access": "fetched",
+          "quote": "A adoção da tecnologia nessa cultura gera uma economia anual de 15 bilhões de dólares"
+        },
+        {
+          "id": "s3",
+          "url": "https://www.embrapa.br/en/busca-de-noticias/-/noticia/80107209/embrapa-50-anos-a-ciencia-que-proporciona-economia-bilionaria-ao-agro-brasileiro",
+          "publisher": "Embrapa",
+          "title": "Embrapa 50 anos: a ciência que proporciona economia bilionária ao agro brasileiro",
+          "published": 2023,
+          "accessed": "2026-10-31",
+          "access": "fetched",
+          "quote": "permaneçam como as únicas recomendadas para a cultura da soja no Brasil"
+        },
+        {
+          "id": "s4",
+          "url": "https://www.embrapa.br/en/busca-de-noticias/-/noticia/98368676/ciencia-amplia-escopo-da-fixacao-biologica-de-nitrogenio-no-brasil",
+          "publisher": "Embrapa",
+          "title": "Ciência amplia escopo da fixação biológica de nitrogênio no Brasil",
+          "published": 2025,
+          "accessed": "2026-10-31",
+          "access": "fetched",
+          "quote": "volume recorde na importação de fertilizantes em 2024, com um total de 2,77 milhões de toneladas"
+        },
+        {
+          "id": "s5",
+          "url": "https://exame.com/revista-exame/embrapa-busca-inspiracao-capitalista-para-crescer",
+          "publisher": "Exame",
+          "title": "Embrapa busca inspiração capitalista para crescer",
+          "published": 2012,
+          "accessed": "2026-10-31",
+          "access": "fetched",
+          "quote": "que chegou a ser de 80%"
+        },
+        {
+          "id": "s6",
+          "url": "https://olhardireto.com.br/agro-e-negocios/noticias/embrapa-reage-as-multinacionais",
+          "publisher": "Olhar Direto",
+          "title": "Embrapa reage às multinacionais",
+          "published": 2013,
+          "accessed": "2026-10-31",
+          "access": "fetched",
+          "quote": "as empresas de químicos também dominam o mercado de sementes"
+        },
+        {
+          "id": "s7",
+          "url": "https://www.canalrural.com.br/agricultura/soja/soja-90-por-cento-inoculantes-biologicos-pais/",
+          "publisher": "Canal Rural",
+          "title": "Soja: 90% dos inoculantes biológicos do país",
+          "published": null,
+          "accessed": "2026-10-31",
+          "access": "blocked",
+          "note": "HTTP 403 on 2026-10-31."
+        }
+      ],
+      "reviewedAt": "2026-10-31"
+    },
+    {
+      "id": "bra.sov.fertilisers",
+      "title": "Mineral fertiliser supply (nitrogen, phosphate, potash)",
+      "domain": "agriculture",
+      "function": "Supplies nitrogen, phosphate and potash nutrients to Brazilian agriculture, from domestic plants and imports.",
+      "status": "deployed",
+      "statusSourceIds": [
+        "s4",
+        "s5"
+      ],
+      "organizations": [
+        {
+          "name": "Conselho Nacional de Fertilizantes e Nutrição de Plantas (CONFERT)",
+          "role": "governs the Plano Nacional de Fertilizantes",
+          "country": "BRA"
+        },
+        {
+          "name": "Ministério do Desenvolvimento, Indústria, Comércio e Serviços",
+          "role": "hosts CONFERT and the plan",
+          "country": "BRA",
+          "institutionId": "bra.federal.mdic"
+        },
+        {
+          "name": "Petrobras",
+          "role": "owner of the FAFEN and ANSA nitrogen plants",
+          "country": "BRA"
+        }
+      ],
+      "stages": [
+        {
+          "stage": "research",
+          "control": "unknown",
+          "basis": "No fetched source settles who controls this stage.",
+          "sourceIds": []
+        },
+        {
+          "stage": "design_ip",
+          "control": "unknown",
+          "basis": "No fetched source settles who controls this stage.",
+          "sourceIds": []
+        },
+        {
+          "stage": "components",
+          "control": "foreign_provision",
+          "basis": "More than 80 percent of the fertiliser used in Brazil is imported (85 percent in the plan's launch text), as is the sulphur for phosphate processing.",
+          "sourceIds": [
+            "s1",
+            "s3"
+          ]
+        },
+        {
+          "stage": "production",
+          "control": "foreign_provision",
+          "basis": "In 2020 domestic nitrogen output met 4.3 percent of demand, phosphate import dependence was 72 percent and potash 96.4 percent; the restarted nitrogen plants bring domestic urea to about 20 percent of demand.",
+          "sourceIds": [
+            "s3",
+            "s4",
+            "s5"
+          ]
+        },
+        {
+          "stage": "deployment",
+          "control": "unknown",
+          "basis": "No fetched source settles who controls this stage.",
+          "sourceIds": []
+        },
+        {
+          "stage": "operation",
+          "control": "partial",
+          "basis": "Petrobras restarted three idled nitrogen plants in 2026: FAFEN-SE from January, FAFEN-BA in commissioning, and ANSA in Paraná, idle since 2020, from April.",
+          "sourceIds": [
+            "s4",
+            "s5"
+          ]
+        },
+        {
+          "stage": "maintenance",
+          "control": "unknown",
+          "basis": "No fetched source settles who controls this stage.",
+          "sourceIds": []
+        },
+        {
+          "stage": "governance",
+          "control": "verified",
+          "basis": "The Plano Nacional de Fertilizantes, set by decree in 2022 and governed by CONFERT, targets cutting import dependence from 85 to 45 percent by 2050.",
+          "sourceIds": [
+            "s1",
+            "s2",
+            "s3"
+          ]
+        }
+      ],
+      "dependencies": [
+        {
+          "kind": "imported_input",
+          "stage": "components",
+          "item": "Potash (KCl)",
+          "supplier": "Belaruskali, Nutrien, Uralkali, Mosaic",
+          "jurisdiction": "multiple",
+          "substitutes": "None at scale: domestic potash met under 4 percent of demand in 2020.",
+          "switching": "The plan projects dependence of 62 percent by 2030 and 40 percent by 2052 in its scenario B.",
+          "sourceIds": [
+            "s3"
+          ]
+        },
+        {
+          "kind": "foreign_jurisdiction",
+          "stage": "components",
+          "item": "Fertiliser from sanctions-exposed origins (Russia, Belarus)",
+          "supplier": "Russian and Belarusian exporters",
+          "jurisdiction": "multiple",
+          "substitutes": "Other origins named in the plan: Canada, Morocco, China, Qatar, the United States.",
+          "switching": "The plan cites sanctions on Belarus and Chinese and Russian export limits in 2021 and 2022 as disruptions already felt.",
+          "sourceIds": [
+            "s3"
+          ]
+        },
+        {
+          "kind": "imported_input",
+          "stage": "components",
+          "item": "Nitrogen fertiliser",
+          "supplier": "multiple",
+          "jurisdiction": "multiple",
+          "substitutes": "Restarted Petrobras plants (about 20 percent of urea demand) and biological fixation in soybean (bra.sov.soy-nitrogen-fixation).",
+          "switching": "unknown",
+          "sourceIds": [
+            "s3",
+            "s4",
+            "s5"
+          ]
+        }
+      ],
+      "constraints": "The country that feeds much of the world imports most of the nutrients its crops need. Domestic nitrogen depends on natural gas and on Petrobras keeping plants it idled once.",
+      "counterevidence": [
+        {
+          "claim": "All three Petrobras nitrogen plants were idle or leased in 2023, and two later nitrogen projects were dropped in 2013 and 2016.",
+          "sourceIds": [
+            "s3"
+          ]
+        },
+        {
+          "claim": "Even with every restarted plant running, Petrobras puts domestic urea at about a fifth of national demand.",
+          "sourceIds": [
+            "s5"
+          ]
+        }
+      ],
+      "uncertainty": "No official progress figure against the 2050 target after 2023 was found, nor per-supplier import shares for 2024 and 2025. Research, design and maintenance are unknown. The label at production hides a split by nutrient that runs from about 20 percent domestic urea to under 4 percent domestic potash.",
+      "challengesNarrative": true,
+      "sources": [
+        {
+          "id": "s1",
+          "url": "https://www.gov.br/casacivil/pt-br/assuntos/noticias/2022/marco/lancado-o-plano-nacional-de-fertilizantes-governo-federal-lanca-medida-para-reduzir-importacao-de-insumos",
+          "publisher": "Casa Civil",
+          "title": "Lançado o Plano Nacional de Fertilizantes",
+          "published": 2022,
+          "accessed": "2026-10-31",
+          "access": "fetched",
+          "quote": "Pretende-se diminuir a dependência de importações, em 2050, de 85% para 45%, mesmo que dobre a demanda por fertilizantes."
+        },
+        {
+          "id": "s2",
+          "url": "https://www.gov.br/mdic/pt-br/assuntos/sdic/confert/pnf",
+          "publisher": "MDIC",
+          "title": "Plano Nacional de Fertilizantes",
+          "published": 2023,
+          "accessed": "2026-10-31",
+          "access": "fetched",
+          "quote": "diminuir a dependência externa quanto ao fornecimento de fertilizantes nitrogenados, fosfáticos e potássicos"
+        },
+        {
+          "id": "s3",
+          "url": "https://www.gov.br/mdic/pt-br/assuntos/sdic/confert/pnf/pnf-v-08-06-12-23.pdf",
+          "publisher": "Governo Federal / CONFERT",
+          "title": "Plano Nacional de Fertilizantes 2050",
+          "published": 2023,
+          "accessed": "2026-10-31",
+          "access": "fetched",
+          "quote": "O mercado é extremamente concentrado em quatro empresas: Belaruskali, Nutrien, Uralkali e Mosaic."
+        },
+        {
+          "id": "s4",
+          "url": "https://agencia.petrobras.com.br/w/negocio/petrobras-inicia-produ%C3%A7%C3%A3o-de-ureia-na-ansa-em-arauc%C3%A1ria-pr-",
+          "publisher": "Agência Petrobras",
+          "title": "Petrobras inicia produção de ureia na Ansa, em Araucária (PR)",
+          "published": 2026,
+          "accessed": "2026-10-31",
+          "access": "fetched",
+          "quote": "esteve hibernada desde 2020"
+        },
+        {
+          "id": "s5",
+          "url": "https://agencia.petrobras.com.br/w/fafens-bahia-e-sergipe-entram-em-opera%C3%A7%C3%A3o-e-refor%C3%A7am-produ%C3%A7%C3%A3o-nacional-de-fertilizantes",
+          "publisher": "Agência Petrobras",
+          "title": "FAFENs Bahia e Sergipe entram em operação e reforçam produção nacional de fertilizantes",
+          "published": 2026,
+          "accessed": "2026-10-31",
+          "access": "fetched",
+          "quote": "iniciou a produção de ureia em 3 de janeiro"
+        },
+        {
+          "id": "s6",
+          "url": "https://www.gov.br/planalto/pt-br/assuntos/assuntos-estrategicos/documentos/planos/plano-nacional-fertilizantes/@@download/file/Plano-Nacional-Fertilizantes.pdf",
+          "publisher": "Presidência da República",
+          "title": "Plano Nacional de Fertilizantes (Planalto copy)",
+          "published": 2022,
+          "accessed": "2026-10-31",
+          "access": "blocked",
+          "note": "CAPTCHA on 2026-10-31; not attempted. The MDIC copy (s3) was used."
+        }
+      ],
+      "reviewedAt": "2026-10-31"
+    },
+    {
+      "id": "bra.sov.uranium-enrichment",
+      "title": "Uranium enrichment at Resende",
+      "domain": "nuclear",
+      "function": "Enriches uranium hexafluoride to up to 5 percent U-235 for the fuel of the Angra 1 power reactor, in centrifuge cascades developed by the Brazilian Navy.",
+      "status": "deployed",
+      "statusSourceIds": [
+        "s2",
+        "s5"
+      ],
+      "organizations": [
+        {
+          "name": "Indústrias Nucleares do Brasil (INB)",
+          "role": "fuel cycle company, operator of the Resende plant",
+          "country": "BRA"
+        },
+        {
+          "name": "Centro Tecnológico da Marinha em São Paulo (CTMSP), with IPEN",
+          "role": "developer of the centrifuge technology",
+          "country": "BRA"
+        },
+        {
+          "name": "Amazul",
+          "role": "engineering of the second phase",
+          "country": "BRA"
+        },
+        {
+          "name": "Internexco GmbH (Rosatom group)",
+          "role": "contracted in 2025 for conversion and enrichment abroad",
+          "country": "RUS"
+        }
+      ],
+      "stages": [
+        {
+          "stage": "research",
+          "control": "verified",
+          "basis": "The centrifuge technology was developed by the Navy's technology centre in São Paulo with IPEN.",
+          "sourceIds": [
+            "s3",
+            "s5"
+          ]
+        },
+        {
+          "stage": "design_ip",
+          "control": "verified",
+          "basis": "The centrifuges are domestically developed.",
+          "sourceIds": [
+            "s1"
+          ]
+        },
+        {
+          "stage": "components",
+          "control": "foreign_provision",
+          "basis": "The feed is foreign: conversion of uranium concentrate to hexafluoride is the only fuel cycle stage INB does not perform, and in 2022 Brazil mined 43 tU against about 339 tU a year of need.",
+          "sourceIds": [
+            "s4"
+          ]
+        },
+        {
+          "stage": "production",
+          "control": "partial",
+          "basis": "Ten cascades cover about 70 percent of Angra 1's annual reload; the remainder, and all of Angra 2, are enriched abroad.",
+          "sourceIds": [
+            "s2",
+            "s5",
+            "s6"
+          ]
+        },
+        {
+          "stage": "deployment",
+          "control": "verified",
+          "basis": "The first phase, ten cascades, was completed at Resende at the end of 2022.",
+          "sourceIds": [
+            "s2"
+          ]
+        },
+        {
+          "stage": "operation",
+          "control": "verified",
+          "basis": "INB operates the cascades, licensed to enrich to 5 percent.",
+          "sourceIds": [
+            "s5"
+          ]
+        },
+        {
+          "stage": "maintenance",
+          "control": "verified",
+          "basis": "INB contracted Amazul, a Brazilian state company, for the engineering of the second phase, which targets fully national supply for Angra 1 and 2 by 2033.",
+          "sourceIds": [
+            "s2"
+          ]
+        },
+        {
+          "stage": "governance",
+          "control": "unknown",
+          "basis": "No fetched source settles who controls this stage.",
+          "sourceIds": []
+        }
+      ],
+      "dependencies": [
+        {
+          "kind": "foreign_service",
+          "stage": "components",
+          "item": "Conversion of U3O8 to UF6",
+          "supplier": "Internexco GmbH (Rosatom group); earlier, European suppliers",
+          "jurisdiction": "multiple",
+          "substitutes": "None domestic.",
+          "switching": "The 2025 contract returns converted and enriched product by December 2027.",
+          "sourceIds": [
+            "s4",
+            "s6"
+          ]
+        },
+        {
+          "kind": "foreign_service",
+          "stage": "production",
+          "item": "Enrichment of the share Resende does not cover",
+          "supplier": "Internexco GmbH (Rosatom group); historically Urenco in Europe",
+          "jurisdiction": "multiple",
+          "substitutes": "Resende phase 2 (no date in 2026).",
+          "switching": "Phase 2 is at the engineering stage.",
+          "sourceIds": [
+            "s1",
+            "s2",
+            "s4",
+            "s6"
+          ]
+        },
+        {
+          "kind": "imported_input",
+          "stage": "components",
+          "item": "Uranium beyond domestic mining",
+          "supplier": "unknown",
+          "jurisdiction": "unknown",
+          "substitutes": "Expansion of domestic mining at Caetité.",
+          "switching": "unknown",
+          "sourceIds": [
+            "s4"
+          ]
+        }
+      ],
+      "constraints": "A domestic enrichment technology covers most of one small reactor's reload; conversion and the rest of enrichment are bought abroad, most recently from a Russian state group.",
+      "counterevidence": [
+        {
+          "claim": "The 2016 target was 100 percent of Angra 1 at the end of phase 1; the outcome was 70 percent, and phase 2 has no date in 2026.",
+          "sourceIds": [
+            "s2",
+            "s3",
+            "s5"
+          ]
+        },
+        {
+          "claim": "World Nuclear News described the domestically developed centrifuges as very similar to Urenco technology.",
+          "sourceIds": [
+            "s1"
+          ]
+        },
+        {
+          "claim": "In 2025 INB contracted a Rosatom group company for conversion and enrichment of 275 t of Brazilian concentrate.",
+          "sourceIds": [
+            "s4",
+            "s6"
+          ]
+        }
+      ],
+      "uncertainty": "Centrifuge component manufacture and imported materials are unknown: the Navy page that covers it returned 403. Current enrichment capacity in SWU, safeguards arrangements and the current foreign enricher for Angra 2 are not on any fetched source. Governance is unknown. One source (s5) is trade press.",
+      "challengesNarrative": true,
+      "sources": [
+        {
+          "id": "s1",
+          "url": "https://www.world-nuclear-news.org/Articles/Brazil-increases-uranium-enrichment-capacity",
+          "publisher": "World Nuclear News",
+          "title": "Brazil increases uranium enrichment capacity",
+          "published": 2018,
+          "accessed": "2026-10-31",
+          "access": "fetched",
+          "quote": "domestically developed and very similar to Urenco technology"
+        },
+        {
+          "id": "s2",
+          "url": "https://world-nuclear-news.org/articles/inb-contracts-amazul-for-design-of-next-resende-ph",
+          "publisher": "World Nuclear News",
+          "title": "INB and Amazul sign contract for next Resende phase",
+          "published": 2023,
+          "accessed": "2026-10-31",
+          "access": "fetched",
+          "quote": "meet 70% of the demand of Angra 1"
+        },
+        {
+          "id": "s3",
+          "url": "https://world-nuclear-news.org/articles/brazil-to-export-enriched-uranium",
+          "publisher": "World Nuclear News",
+          "title": "Brazil to export enriched uranium",
+          "published": 2016,
+          "accessed": "2026-10-31",
+          "access": "fetched",
+          "quote": "provide about 40% of the enriched uranium needs of Angra 1"
+        },
+        {
+          "id": "s4",
+          "url": "https://world-nuclear-news.org/articles/brazils-inb-signs-contract-with-russia-for-conversion-and-enrichment-of-uranium",
+          "publisher": "World Nuclear News",
+          "title": "INB signs contract with Internexco GmbH for conversion and enrichment of uranium",
+          "published": 2025,
+          "accessed": "2026-10-31",
+          "access": "fetched",
+          "quote": "Conversion is the only stage of the nuclear fuel cycle that INB does not perform"
+        },
+        {
+          "id": "s5",
+          "url": "https://www.sociedademilitar.com.br/2026/08/uranio-enriquecido-marinha-inb-resende-labgene-ipero-2022j.html",
+          "publisher": "Sociedade Militar",
+          "title": "A tecnologia que enriquece o urânio queimado em Angra 1 foi desenvolvida pela Marinha",
+          "published": 2026,
+          "accessed": "2026-10-31",
+          "access": "fetched",
+          "quote": "já cobre cerca de 70% da recarga anual de Angra 1"
+        },
+        {
+          "id": "s6",
+          "url": "https://eixos.com.br/energia-eletrica/inb-contrata-empresa-da-rosatom-para-converter-e-enriquecer-uranio-extraido-na-bahia/",
+          "publisher": "eixos",
+          "title": "INB contrata empresa da Rosatom para converter e enriquecer urânio extraído na Bahia",
+          "published": 2025,
+          "accessed": "2026-10-31",
+          "access": "fetched",
+          "quote": "O volume passará por duas etapas de beneficiamento no exterior: conversão e enriquecimento."
+        },
+        {
+          "id": "s7",
+          "url": "https://www.marinha.mil.br/dgdntm/node/136",
+          "publisher": "Marinha do Brasil",
+          "title": "DGDNTM page on the CTMSP",
+          "published": null,
+          "accessed": "2026-10-31",
+          "access": "blocked",
+          "note": "HTTP 403 on 2026-10-31."
+        }
+      ],
+      "reviewedAt": "2026-10-31"
+    },
+    {
+      "id": "bra.sov.presalt-deepwater",
+      "title": "Deepwater pre-salt oil and gas production",
+      "domain": "energy",
+      "function": "Produces oil and gas from ultra-deep pre-salt reservoirs off Brazil's coast through floating production units (FPSOs), subsea systems and reservoir technology; about 80 percent of national output.",
+      "status": "deployed",
+      "statusSourceIds": [
+        "s1",
+        "s2"
+      ],
+      "organizations": [
+        {
+          "name": "Petrobras",
+          "role": "operator, owner of part of the fleet, research through CENPES",
+          "country": "BRA"
+        },
+        {
+          "name": "Agência Nacional do Petróleo (ANP)",
+          "role": "regulator; its R&D obligation funds test centres",
+          "country": "BRA"
+        },
+        {
+          "name": "Seatrium",
+          "role": "EPC contractor for owned FPSOs; owner of Brazilian module yards",
+          "country": "SGP"
+        },
+        {
+          "name": "SBM Offshore",
+          "role": "charterer and operator of leased FPSOs",
+          "country": "NLD"
+        },
+        {
+          "name": "TechnipFMC",
+          "role": "subsea EPCI contractor",
+          "country": "GBR"
+        }
+      ],
+      "stages": [
+        {
+          "stage": "research",
+          "control": "verified",
+          "basis": "Many pre-salt technologies were developed at Petrobras's CENPES research centre, and a semi-industrial test centre for pre-salt processes opened in Itajubá in 2026.",
+          "sourceIds": [
+            "s2",
+            "s6"
+          ]
+        },
+        {
+          "stage": "design_ip",
+          "control": "partial",
+          "basis": "Petrobras holds reservoir and process technology, including a patented subsea separation technology, while FPSOs are designed under EPC contracts with foreign builders.",
+          "sourceIds": [
+            "s2",
+            "s3"
+          ]
+        },
+        {
+          "stage": "components",
+          "control": "foreign_provision",
+          "basis": "Subsea equipment for the Mero 3 separation project is designed, built and installed by TechnipFMC.",
+          "sourceIds": [
+            "s5"
+          ]
+        },
+        {
+          "stage": "production",
+          "control": "foreign_provision",
+          "basis": "The P-78 hull was built in China and South Korea, and its topside modules, from Seatrium yards in Singapore, China and Brazil, were integrated in Singapore; P-80 and P-82 follow the same pattern.",
+          "sourceIds": [
+            "s3",
+            "s4",
+            "s7"
+          ]
+        },
+        {
+          "stage": "deployment",
+          "control": "verified",
+          "basis": "Petrobras places the units on its fields; P-78 reached Búzios in September 2025.",
+          "sourceIds": [
+            "s4"
+          ]
+        },
+        {
+          "stage": "operation",
+          "control": "partial",
+          "basis": "Petrobras operates its own units, while chartered units are operated by foreign firms: SBM holds a 26 year charter for FPSO Almirante Tamandaré, awarded directly as the only company able to meet the requirements.",
+          "sourceIds": [
+            "s4",
+            "s8"
+          ]
+        },
+        {
+          "stage": "maintenance",
+          "control": "unknown",
+          "basis": "No fetched source settles who controls this stage.",
+          "sourceIds": []
+        },
+        {
+          "stage": "governance",
+          "control": "verified",
+          "basis": "The ANP regulates the fields, and its R&D obligation on operators funds national test centres.",
+          "sourceIds": [
+            "s6"
+          ]
+        }
+      ],
+      "dependencies": [
+        {
+          "kind": "single_vendor",
+          "stage": "operation",
+          "item": "FPSO charter and operation",
+          "supplier": "SBM Offshore",
+          "jurisdiction": "unknown",
+          "substitutes": "Owned units built under EPC.",
+          "switching": "A direct award was justified because SBM was the only company able to meet the requirements.",
+          "sourceIds": [
+            "s8"
+          ]
+        },
+        {
+          "kind": "foreign_service",
+          "stage": "production",
+          "item": "FPSO hull construction and integration",
+          "supplier": "Seatrium, with Chinese and Korean yards",
+          "jurisdiction": "multiple",
+          "substitutes": "No fetched source shows a Brazilian yard building a whole FPSO recently.",
+          "switching": "unknown",
+          "sourceIds": [
+            "s3",
+            "s4",
+            "s7"
+          ]
+        },
+        {
+          "kind": "foreign_service",
+          "stage": "components",
+          "item": "Subsea production systems",
+          "supplier": "TechnipFMC",
+          "jurisdiction": "unknown",
+          "substitutes": "unknown",
+          "switching": "unknown",
+          "sourceIds": [
+            "s5"
+          ]
+        }
+      ],
+      "constraints": "Reservoir knowledge, field development and regulation are domestic; the steel, the integration yards and much of the subsea hardware are abroad, and the Brazilian module yards belong to a Singaporean group.",
+      "counterevidence": [
+        {
+          "claim": "The Itajubá test centre was co-funded by Petrobras's Libra partners, which include the Chinese state companies CNPC and CNOOC.",
+          "sourceIds": [
+            "s6"
+          ]
+        },
+        {
+          "claim": "Pre-salt was 79.63 percent of national oil and gas output in 2025.",
+          "sourceIds": [
+            "s1"
+          ]
+        }
+      ],
+      "uncertainty": "The shares of owned and chartered units in the operating fleet, verified local content per unit and MODEC's role are not on any fetched source. The attribution of the patent claim to the subsea separation technology rests on the fetch summary. Maintenance is unknown. Jurisdictions are given from the organisations' public domiciles, not from the fetched sources, and the dependency jurisdictions are left unknown for that reason.",
+      "challengesNarrative": true,
+      "sources": [
+        {
+          "id": "s1",
+          "url": "https://www.poder360.com.br/poder-energia/producao-de-petroleo-e-gas-cresce-13-no-brasil-em-2025/",
+          "publisher": "Poder360",
+          "title": "Produção de petróleo e gás cresce 13% no Brasil em 2025",
+          "published": 2026,
+          "accessed": "2026-10-31",
+          "access": "fetched",
+          "quote": "representam, em média, 79,63% da produção nacional, em óleo equivalente."
+        },
+        {
+          "id": "s2",
+          "url": "https://petrobras.com.br/pre-sal",
+          "publisher": "Petrobras",
+          "title": "Pré-sal: mergulhe nessa jornada ultraprofunda",
+          "published": null,
+          "accessed": "2026-10-31",
+          "access": "fetched",
+          "quote": "Muitas delas foram desenvolvidas dentro do nosso próprio centro de pesquisa, o CENPES."
+        },
+        {
+          "id": "s3",
+          "url": "https://www.worldoil.com/news/2025/7/16/seatrium-delivers-first-turnkey-fpso-to-petrobras-for-offshore-brazil",
+          "publisher": "World Oil",
+          "title": "Seatrium delivers first turnkey FPSO to Petrobras for offshore Brazil",
+          "published": 2025,
+          "accessed": "2026-10-31",
+          "access": "fetched",
+          "quote": "the integration and commissioning works of the P-78 FPSO in Singapore"
+        },
+        {
+          "id": "s4",
+          "url": "https://agencia.petrobras.com.br/en/w/fpso-p-78-chega-ao-campo-de-b%C3%BAzios",
+          "publisher": "Agência Petrobras",
+          "title": "FPSO P-78 arrives at Búzios field",
+          "published": 2025,
+          "accessed": "2026-10-31",
+          "access": "fetched",
+          "quote": "The hull was constructed at shipyards in Yantai and Hayang, China, and Ulsan, South Korea"
+        },
+        {
+          "id": "s5",
+          "url": "https://www.oilfieldtechnology.com/offshore-and-subsea/04012024/technipfmc-awarded-major-subsea-contract-by-petrobras/",
+          "publisher": "Oilfield Technology",
+          "title": "TechnipFMC awarded major subsea contract by Petrobras",
+          "published": 2024,
+          "accessed": "2026-10-31",
+          "access": "fetched",
+          "quote": "The contract covers the design, engineering, manufacture, and installation of subsea equipment,"
+        },
+        {
+          "id": "s6",
+          "url": "https://agencia.petrobras.com.br/w/regionais/petrobras-celebra-in%C3%ADcio-das-opera%C3%A7%C3%B5es-do-centro-tecnol%C3%B3gico-para-o-pr%C3%A9-sal-brasileiro-em-itajub%C3%A1-mg-",
+          "publisher": "Agência Petrobras",
+          "title": "Petrobras celebra início das operações do Centro Tecnológico para o Pré-Sal Brasileiro em Itajubá (MG)",
+          "published": 2026,
+          "accessed": "2026-10-31",
+          "access": "fetched",
+          "quote": "O CTPB é uma planta de processo em escala semi-industrial considerada uma das mais modernas do mundo em sua categoria"
+        },
+        {
+          "id": "s7",
+          "url": "https://eixos.com.br/petroleo-e-gas/petrobras-e-seatrium-batizam-plataformas-p-80-e-p-82-que-vao-atuar-no-campo-de-buzios/",
+          "publisher": "eixos",
+          "title": "Petrobras e Seatrium batizam plataformas P-80 e P-82 que vão atuar no campo de Búzios",
+          "published": 2026,
+          "accessed": "2026-10-31",
+          "access": "fetched",
+          "quote": "um novo ciclo de seis unidades de elevada capacidade de produção"
+        },
+        {
+          "id": "s8",
+          "url": "https://eixos.com.br/sbm-contratada-pela-petrobras-para-fornecer-maior-fpso-do-pais/",
+          "publisher": "eixos",
+          "title": "SBM contratada pela Petrobras para fornecer maior FPSO do país",
+          "published": 2021,
+          "accessed": "2026-10-31",
+          "access": "fetched",
+          "quote": "a empresa é a única com capacidade atender aos requisitos técnicos, operacionais e de disponibilidade da companhia"
+        }
+      ],
+      "reviewedAt": "2026-10-31"
+    },
+    {
+      "id": "bra.sov.covid-vaccines",
+      "title": "COVID-19 vaccine production at Fiocruz and Butantan",
+      "domain": "health_biotech",
+      "function": "Produces COVID-19 vaccine doses for the national immunisation programme, from imported or domestic active ingredient (IFA).",
+      "status": "demonstrated",
+      "statusSourceIds": [
+        "s1",
+        "s4"
+      ],
+      "organizations": [
+        {
+          "name": "Fundação Oswaldo Cruz (Bio-Manguinhos)",
+          "role": "AstraZeneca/Oxford vaccine producer; national IFA from 2021",
+          "country": "BRA",
+          "institutionId": "bra.federal.fiocruz"
+        },
+        {
+          "name": "Instituto Butantan",
+          "role": "CoronaVac fill and finish with Sinovac (São Paulo state)",
+          "country": "BRA"
+        },
+        {
+          "name": "Anvisa",
+          "role": "GMP certification and registration",
+          "country": "BRA",
+          "institutionId": "bra.federal.anvisa"
+        },
+        {
+          "name": "Ministério da Saúde",
+          "role": "buyer for the national immunisation programme",
+          "country": "BRA",
+          "institutionId": "bra.federal.ms"
+        },
+        {
+          "name": "Sinovac",
+          "role": "CoronaVac developer and raw material supplier",
+          "country": "CHN"
+        },
+        {
+          "name": "AstraZeneca",
+          "role": "vaccine developer, technology transfer partner",
+          "country": "GBR"
+        },
+        {
+          "name": "WuXi Biologics",
+          "role": "supplier of the AstraZeneca IFA before national IFA",
+          "country": "CHN"
+        }
+      ],
+      "stages": [
+        {
+          "stage": "research",
+          "control": "foreign_provision",
+          "basis": "Both vaccines were developed abroad and licensed: CoronaVac by Sinovac, the Fiocruz vaccine by AstraZeneca and Oxford.",
+          "sourceIds": [
+            "s2",
+            "s5"
+          ]
+        },
+        {
+          "stage": "design_ip",
+          "control": "partial",
+          "basis": "Fiocruz took the AstraZeneca vaccine under a technological order agreement and Anvisa recorded the technology transfer as concluded in January 2022; the Sinovac agreement left transfer optional.",
+          "sourceIds": [
+            "s1",
+            "s2",
+            "s5"
+          ]
+        },
+        {
+          "stage": "components",
+          "control": "partial",
+          "basis": "The IFA came from China (WuXi Biologics for Fiocruz, Sinovac for Butantan) until Anvisa approved Fiocruz's national IFA in January 2022; no source shows Butantan producing CoronaVac IFA.",
+          "sourceIds": [
+            "s1",
+            "s2",
+            "s3",
+            "s5"
+          ]
+        },
+        {
+          "stage": "production",
+          "control": "verified",
+          "basis": "Bio-Manguinhos had produced 65.9 million doses by July 2021 and Butantan formulated and filled CoronaVac at home.",
+          "sourceIds": [
+            "s2",
+            "s5"
+          ]
+        },
+        {
+          "stage": "deployment",
+          "control": "verified",
+          "basis": "Butantan delivered more than 110 million CoronaVac doses to the Ministry of Health.",
+          "sourceIds": [
+            "s4"
+          ]
+        },
+        {
+          "stage": "operation",
+          "control": "unknown",
+          "basis": "No fetched source settles who controls this stage.",
+          "sourceIds": []
+        },
+        {
+          "stage": "maintenance",
+          "control": "unknown",
+          "basis": "No fetched source settles who controls this stage.",
+          "sourceIds": []
+        },
+        {
+          "stage": "governance",
+          "control": "verified",
+          "basis": "Anvisa certified the national IFA's manufacturing practice in May 2021 and registered it in January 2022.",
+          "sourceIds": [
+            "s1"
+          ]
+        }
+      ],
+      "dependencies": [
+        {
+          "kind": "single_vendor",
+          "stage": "components",
+          "item": "AstraZeneca vaccine IFA",
+          "supplier": "WuXi Biologics",
+          "jurisdiction": "CHN",
+          "substitutes": "Fiocruz national IFA, approved January 2022.",
+          "switching": "Took from 2021 to January 2022; deliveries slipped to August 2021 for want of IFA shipments.",
+          "sourceIds": [
+            "s1",
+            "s5"
+          ]
+        },
+        {
+          "kind": "single_vendor",
+          "stage": "components",
+          "item": "CoronaVac raw material",
+          "supplier": "Sinovac",
+          "jurisdiction": "CHN",
+          "substitutes": "None documented: Butantan's IFA line had no start date in 2022.",
+          "switching": "unknown",
+          "sourceIds": [
+            "s2",
+            "s3"
+          ]
+        },
+        {
+          "kind": "imported_input",
+          "stage": "components",
+          "item": "Active pharmaceutical ingredients for medicines in general",
+          "supplier": "multiple",
+          "jurisdiction": "multiple",
+          "substitutes": "None at scale in the source.",
+          "switching": "unknown",
+          "sourceIds": [
+            "s6"
+          ]
+        }
+      ],
+      "constraints": "Domestic fill, finish and regulation held throughout; the active ingredient was the bottleneck. One product reached a fully domestic chain, as demand was falling.",
+      "counterevidence": [
+        {
+          "claim": "CoronaVac production stopped in Brazil in 2021, with no new contracts, for lack of demand and definitive registration.",
+          "sourceIds": [
+            "s4"
+          ]
+        },
+        {
+          "claim": "In 2022 Butantan's new plant still had no date for producing IFA.",
+          "sourceIds": [
+            "s3"
+          ]
+        },
+        {
+          "claim": "The health minister said in 2024 that over 90 percent of active pharmaceutical ingredients used in Brazil are imported; this is a press account of a speech, not an official dataset.",
+          "sourceIds": [
+            "s6"
+          ]
+        }
+      ],
+      "uncertainty": "Whether Fiocruz still produces COVID-19 IFA in 2026, and the operation and maintenance of either line now, are unknown. butantan.gov.br returned 403, so the Butantan side rests on an interview and the press. The Anvisa page text was read from a printout of the same page hosted by Poder360.",
+      "challengesNarrative": true,
+      "sources": [
+        {
+          "id": "s1",
+          "url": "https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa/2022/anvisa-aprova-o-registro-do-insumo-da-fiocruz-e-o-brasil-tera-vacina-100-nacional",
+          "publisher": "Anvisa",
+          "title": "Anvisa aprova o registro do insumo da Fiocruz e o Brasil terá vacina 100% nacional",
+          "published": 2022,
+          "accessed": "2026-10-31",
+          "access": "fetched",
+          "quote": "A decisão desta sexta-feira (7/1) conclui a transferência de tecnologia feita pela Fiocruz e que teve início ainda no ano passado.",
+          "note": "Full text read from the printout at https://static.poder360.com.br/2022/01/Anvisa-Fiocruz-Astrazeneca-7jan2022.pdf."
+        },
+        {
+          "id": "s2",
+          "url": "https://revistapesquisa.fapesp.br/dimas-covas-os-rumos-do-butantan/",
+          "publisher": "Revista Pesquisa FAPESP",
+          "title": "Dimas Covas: Os rumos do Butantan",
+          "published": 2021,
+          "accessed": "2026-10-31",
+          "access": "fetched",
+          "quote": "Hoje, cuidamos apenas do envase e de uma mudança de formulação."
+        },
+        {
+          "id": "s3",
+          "url": "https://exame.com/brasil/butantan-conclui-parte-de-nova-fabrica-de-vacinas-producao-comeca-em-2023/",
+          "publisher": "Exame",
+          "title": "Butantan conclui parte de nova fábrica de vacinas. Produção começa em 2023",
+          "published": 2022,
+          "accessed": "2026-10-31",
+          "access": "fetched",
+          "quote": "Na nova fábrica há essa possibilidade, mas ainda sem previsão de quando isso deve ocorrer."
+        },
+        {
+          "id": "s4",
+          "url": "https://amb.org.br/brasilia-urgente/sem-demanda-e-registro-definitivo-butantan-suspende-producao-de-coronavac/",
+          "publisher": "Associação Médica Brasileira",
+          "title": "Sem demanda e registro definitivo, Butantan suspende produção de CoronaVac",
+          "published": null,
+          "accessed": "2026-10-31",
+          "access": "fetched",
+          "quote": "não foi procurado para assinar novos contratos"
+        },
+        {
+          "id": "s5",
+          "url": "https://agenciabrasil.ebc.com.br/saude/noticia/2021-07/fiocruz-adia-para-agosto-meta-de-entrega-de-vacina",
+          "publisher": "Agência Brasil (EBC)",
+          "title": "Fiocruz adia para agosto meta de entrega de vacinas contra covid-19",
+          "published": 2021,
+          "accessed": "2026-10-31",
+          "access": "fetched",
+          "quote": "é produzido pelo laboratório chinês WuXi Biologics"
+        },
+        {
+          "id": "s6",
+          "url": "https://medicinasa.com.br/insumos-sus-vulneravel",
+          "publisher": "Medicina S/A",
+          "title": "Dependência de insumos importados torna o SUS vulnerável",
+          "published": 2024,
+          "accessed": "2026-10-31",
+          "access": "fetched",
+          "quote": "mais de 90% dos insumos farmacêuticos ativos (IFAs) usados no Brasil para produção de medicamentos são importados"
+        },
+        {
+          "id": "s7",
+          "url": "https://fiocruz.br/noticia/anvisa-aprova-registro-da-vacina-covid-19-100-nacional",
+          "publisher": "Fiocruz",
+          "title": "Anvisa aprova registro da vacina covid-19 100% nacional",
+          "published": null,
+          "accessed": "2026-10-31",
+          "access": "blocked",
+          "note": "HTTP 404 after redirect on 2026-10-31."
+        }
+      ],
+      "reviewedAt": "2026-10-31"
+    },
+    {
+      "id": "bra.sov.ceitec",
+      "title": "CEITEC integrated circuit design and fabrication",
+      "domain": "electronics",
+      "function": "Designs and fabricates mature-node integrated circuits and RFID tags in Porto Alegre, the only semiconductor fab the sources name in Brazil; a silicon carbide power line is being installed.",
+      "status": "demonstrated",
+      "statusSourceIds": [
+        "s3",
+        "s4"
+      ],
+      "organizations": [
+        {
+          "name": "CEITEC",
+          "role": "state semiconductor company",
+          "country": "BRA"
+        },
+        {
+          "name": "Ministério da Ciência, Tecnologia e Inovação",
+          "role": "sponsor ministry",
+          "country": "BRA",
+          "institutionId": "bra.federal.mcti"
+        },
+        {
+          "name": "Finep (FNDCT)",
+          "role": "R$ 220 million for the silicon carbide route",
+          "country": "BRA",
+          "institutionId": "bra.federal.finep"
+        },
+        {
+          "name": "Tribunal de Contas da União",
+          "role": "halted the liquidation",
+          "country": "BRA"
+        }
+      ],
+      "stages": [
+        {
+          "stage": "research",
+          "control": "unknown",
+          "basis": "No fetched source settles who controls this stage.",
+          "sourceIds": []
+        },
+        {
+          "stage": "design_ip",
+          "control": "verified",
+          "basis": "CEITEC designs and produces integrated circuits and RFID tags; the new silicon carbide route includes technology transfer from an unnamed partner.",
+          "sourceIds": [
+            "s1",
+            "s4"
+          ]
+        },
+        {
+          "stage": "components",
+          "control": "foreign_provision",
+          "basis": "Production equipment is imported: new machines arrived in mid-2026 and importing one key machine takes six months to two years.",
+          "sourceIds": [
+            "s3",
+            "s5"
+          ]
+        },
+        {
+          "stage": "production",
+          "control": "foreign_dependent_operation",
+          "basis": "The fab resumed producing and selling its earlier chips in 2024 on imported equipment, after standing idle during the 2020 to 2023 liquidation; the silicon carbide line is not yet producing.",
+          "sourceIds": [
+            "s2",
+            "s3",
+            "s4",
+            "s5"
+          ]
+        },
+        {
+          "stage": "deployment",
+          "control": "verified",
+          "basis": "Chips are sold to domestic buyers, including a public hospital group, though clients were lost during the shutdown.",
+          "sourceIds": [
+            "s3"
+          ]
+        },
+        {
+          "stage": "operation",
+          "control": "unknown",
+          "basis": "No fetched source settles who controls this stage.",
+          "sourceIds": []
+        },
+        {
+          "stage": "maintenance",
+          "control": "unknown",
+          "basis": "No fetched source settles who controls this stage.",
+          "sourceIds": []
+        },
+        {
+          "stage": "governance",
+          "control": "verified",
+          "basis": "The company's existence is set by Brazilian decree: liquidation was authorised in 2020, halted by the TCU, and reversed by Decree 11.768 in November 2023.",
+          "sourceIds": [
+            "s1"
+          ]
+        }
+      ],
+      "dependencies": [
+        {
+          "kind": "imported_input",
+          "stage": "components",
+          "item": "Semiconductor fabrication equipment",
+          "supplier": "unknown (not named in fetched sources)",
+          "jurisdiction": "unknown",
+          "substitutes": "None documented.",
+          "switching": "Six months to two years to import one key machine, per CEITEC's president.",
+          "sourceIds": [
+            "s3",
+            "s5"
+          ]
+        },
+        {
+          "kind": "imported_input",
+          "stage": "components",
+          "item": "Advanced logic and memory chips for the Brazilian electronics industry",
+          "supplier": "multiple",
+          "jurisdiction": "multiple",
+          "substitutes": "None: CEITEC makes mature-node and RFID chips only.",
+          "switching": "No domestic route documented.",
+          "sourceIds": [
+            "s6"
+          ]
+        },
+        {
+          "kind": "foreign_licence",
+          "stage": "design_ip",
+          "item": "Technology transfer for the silicon carbide process",
+          "supplier": "unknown",
+          "jurisdiction": "unknown",
+          "substitutes": "unknown",
+          "switching": "unknown",
+          "sourceIds": [
+            "s4"
+          ]
+        }
+      ],
+      "constraints": "A fab that stops loses its people and its clients: career staff fell from 180 to 67 during the liquidation, and funding since 2024 has covered equipment rather than running costs.",
+      "counterevidence": [
+        {
+          "claim": "In January 2023 CEITEC had 67 career staff, down from 180, and was not producing.",
+          "sourceIds": [
+            "s2"
+          ]
+        },
+        {
+          "claim": "Its president estimated in 2024 that the silicon carbide restart would take three to four years, against an official target of 2026.",
+          "sourceIds": [
+            "s3",
+            "s4"
+          ]
+        },
+        {
+          "claim": "Brazil imported US$ 6.31 billion of semiconductors in 2024, according to Abinee as reported in the press.",
+          "sourceIds": [
+            "s6"
+          ]
+        }
+      ],
+      "uncertainty": "Process node, wafer size, equipment vendors and the technology partner are not on any fetched source; ceitec-sa.com returned 503 and the 2026 article is paywalled after the lede. Research and operation are unknown.",
+      "challengesNarrative": true,
+      "sources": [
+        {
+          "id": "s1",
+          "url": "https://www.brasildefato.com.br/2023/11/07/decreto-autoriza-reversao-do-processo-de-liquidacao-e-estabelece-retomada-operacional-da-ceitec/",
+          "publisher": "Brasil de Fato",
+          "title": "Decreto autoriza reversão do processo de liquidação e estabelece retomada operacional da Ceitec",
+          "published": 2023,
+          "accessed": "2026-10-31",
+          "access": "fetched",
+          "quote": "O Decreto publicado hoje autoriza a reversão do processo de dissolução societária da empresa"
+        },
+        {
+          "id": "s2",
+          "url": "https://www.jornaldocomercio.com/colunas/mercado-digital/2023/01/879839-ceitec-esta-hibernando-mas-funcional.html",
+          "publisher": "Jornal do Comércio",
+          "title": "Ceitec está hibernando, mas funcional",
+          "published": 2023,
+          "accessed": "2026-10-31",
+          "access": "fetched",
+          "quote": "Hoje somos 67 funcionários de carreira, e a empresa não está em produção."
+        },
+        {
+          "id": "s3",
+          "url": "https://dplnews.com/?p=253809",
+          "publisher": "DPL News",
+          "title": "Cético ou realista? Presidente da Ceitec fala sobre retomada da estatal de chips",
+          "published": 2024,
+          "accessed": "2026-10-31",
+          "access": "fetched",
+          "quote": "estamos começando a produzir e vender novamente nossos produtos anteriores"
+        },
+        {
+          "id": "s4",
+          "url": "https://teletime.com.br/06/12/2024/ceitec-recebera-r-220-milhoes-para-producao-de-semicondutores/",
+          "publisher": "Teletime",
+          "title": "Ceitec receberá R$ 220 milhões para produção de semicondutores",
+          "published": 2024,
+          "accessed": "2026-10-31",
+          "access": "fetched",
+          "quote": "um investimento de R$ 220 milhões na Ceitec"
+        },
+        {
+          "id": "s5",
+          "url": "https://www.jornaldocomercio.com/economia/2026/07/1258045-reativacao-do-ceitec-avanca-com-a-chegada-de-novos-equipamentos.html",
+          "publisher": "Jornal do Comércio",
+          "title": "Reativação de fábrica de chips da Ceitec avança com novos equipamentos",
+          "published": 2026,
+          "accessed": "2026-10-31",
+          "access": "fetched",
+          "quote": "passa por um processo de reestruturação, iniciado em 2023.",
+          "note": "Paywalled after the lede; only the lede was read."
+        },
+        {
+          "id": "s6",
+          "url": "https://www.mobiletime.com.br/noticias/04/12/2025/mercado-brasil-memoria/",
+          "publisher": "Mobile Time",
+          "title": "Mercado brasileiro de celulares deve ser impactado por falta de memória ainda este ano, alerta Abinee",
+          "published": 2025,
+          "accessed": "2026-10-31",
+          "access": "fetched",
+          "quote": "US$ 6 bilhões em importação"
+        },
+        {
+          "id": "s7",
+          "url": "https://www.ceitec-sa.com/",
+          "publisher": "CEITEC",
+          "title": "CEITEC home page",
+          "published": null,
+          "accessed": "2026-10-31",
+          "access": "blocked",
+          "note": "HTTP 503 on 2026-10-31."
+        }
+      ],
+      "reviewedAt": "2026-10-31"
+    },
+    {
+      "id": "bra.sov.public-ai-compute",
+      "title": "Public AI and scientific supercomputing (Santos Dumont, PBIA)",
+      "domain": "ai_cloud",
+      "function": "Provides publicly owned high-performance computing for science and for training AI models, including Portuguese-language models, at LNCC under the Plano Brasileiro de Inteligência Artificial.",
+      "status": "deployed",
+      "statusSourceIds": [
+        "s1"
+      ],
+      "organizations": [
+        {
+          "name": "Laboratório Nacional de Computação Científica (LNCC)",
+          "role": "operator of Santos Dumont; executor of the planned Rio Grande do Norte machine",
+          "country": "BRA"
+        },
+        {
+          "name": "Ministério da Ciência, Tecnologia e Inovação",
+          "role": "owner of the PBIA",
+          "country": "BRA",
+          "institutionId": "bra.federal.mcti"
+        },
+        {
+          "name": "Petrobras",
+          "role": "funded the Santos Dumont upgrade (about R$ 100 million)",
+          "country": "BRA"
+        },
+        {
+          "name": "Eviden (Atos group)",
+          "role": "designer and integrator of the upgrade",
+          "country": "FRA"
+        },
+        {
+          "name": "Nvidia and AMD",
+          "role": "GPU and CPU suppliers",
+          "country": "USA"
+        }
+      ],
+      "stages": [
+        {
+          "stage": "research",
+          "control": "verified",
+          "basis": "LNCC runs research on the machine, including training Portuguese-language models.",
+          "sourceIds": [
+            "s8"
+          ]
+        },
+        {
+          "stage": "design_ip",
+          "control": "foreign_provision",
+          "basis": "Eviden, of the French Atos group, designed and integrated the upgrade on its BullSequana XH3000 platform.",
+          "sourceIds": [
+            "s1"
+          ]
+        },
+        {
+          "stage": "components",
+          "control": "foreign_provision",
+          "basis": "All compute silicon is foreign: Nvidia H100 and Grace Hopper, AMD EPYC and MI300A.",
+          "sourceIds": [
+            "s1"
+          ]
+        },
+        {
+          "stage": "production",
+          "control": "foreign_provision",
+          "basis": "The system was integrated by Eviden.",
+          "sourceIds": [
+            "s1"
+          ]
+        },
+        {
+          "stage": "deployment",
+          "control": "verified",
+          "basis": "Installed at LNCC, funded by Petrobras, and running at 18.85 petaflops.",
+          "sourceIds": [
+            "s1",
+            "s2"
+          ]
+        },
+        {
+          "stage": "operation",
+          "control": "verified",
+          "basis": "LNCC operates the machine.",
+          "sourceIds": [
+            "s1",
+            "s4"
+          ]
+        },
+        {
+          "stage": "maintenance",
+          "control": "foreign_dependent_operation",
+          "basis": "Upgrades come from the foreign integrator, and the next national machine was delayed: its tender slipped from October 2025 and LNCC's own site was ruled out for energy and grid limits.",
+          "sourceIds": [
+            "s1",
+            "s3"
+          ]
+        },
+        {
+          "stage": "governance",
+          "control": "verified",
+          "basis": "The programme is set by a Brazilian plan with a public budget, and the new machine's tender is to require technology transfer and Brazilian suppliers.",
+          "sourceIds": [
+            "s4",
+            "s8"
+          ]
+        }
+      ],
+      "dependencies": [
+        {
+          "kind": "single_vendor",
+          "stage": "production",
+          "item": "Supercomputer design and integration",
+          "supplier": "Eviden (Atos)",
+          "jurisdiction": "FRA",
+          "substitutes": "Petrobras bought from Atos too; other machines in Brazil use Nvidia and Dell.",
+          "switching": "A new tender, as the PBIA machine shows: more than a year.",
+          "sourceIds": [
+            "s1",
+            "s2",
+            "s3"
+          ]
+        },
+        {
+          "kind": "imported_input",
+          "stage": "components",
+          "item": "GPUs and CPUs",
+          "supplier": "Nvidia, AMD",
+          "jurisdiction": "USA",
+          "substitutes": "None domestic.",
+          "switching": "No domestic route.",
+          "sourceIds": [
+            "s1"
+          ]
+        },
+        {
+          "kind": "foreign_service",
+          "stage": "research",
+          "item": "Partners in the Rio de Janeiro PBIA project",
+          "supplier": "Huawei, iFlytek",
+          "jurisdiction": "CHN",
+          "substitutes": "unknown",
+          "switching": "unknown",
+          "sourceIds": [
+            "s4"
+          ]
+        }
+      ],
+      "constraints": "\"Sovereign\" compute here means Brazilian-owned and Brazilian-operated machines built from foreign silicon by a foreign integrator. Site power is itself a constraint.",
+      "counterevidence": [
+        {
+          "claim": "The headline PBIA supercomputer was still at tender stage in 2026, with operation expected at the end of 2027.",
+          "sourceIds": [
+            "s3",
+            "s4"
+          ]
+        },
+        {
+          "claim": "A year into the plan the press found no public indicators of its deliveries.",
+          "sourceIds": [
+            "s8"
+          ]
+        }
+      ],
+      "uncertainty": "Sources give R$ 1.8 billion both as the Santos Dumont expansion and as the new machine's cost; neither figure is used. No official PBIA document loaded (bot check on gov.br/mcti; 401 on the LNCC page).",
+      "challengesNarrative": true,
+      "sources": [
+        {
+          "id": "s1",
+          "url": "https://tecnoblog.net/noticias/supercomputador-brasileiro-santos-dumont-recebe-atualizacao-e-suporte-a-ia/",
+          "publisher": "Tecnoblog",
+          "title": "Supercomputador brasileiro Santos Dumont recebe atualização e suporte à IA",
+          "published": 2025,
+          "accessed": "2026-10-31",
+          "access": "fetched",
+          "quote": "O projeto de atualização foi desenvolvido e integrado pela Eviden (empresa do Grupo Atos)"
+        },
+        {
+          "id": "s2",
+          "url": "https://revistapesquisa.fapesp.br/brasil-aprimora-infraestrutura-de-supercomputadores/",
+          "publisher": "Revista Pesquisa FAPESP",
+          "title": "Brasil aprimora infraestrutura de supercomputadores",
+          "published": 2024,
+          "accessed": "2026-10-31",
+          "access": "fetched",
+          "quote": "A Petrobras será a responsável pelo investimento orçado em cerca de R$ 100 milhões para o upgrade do SDumont."
+        },
+        {
+          "id": "s3",
+          "url": "https://www.poder360.com.br/poder-tech/governo-atrasa-edital-para-compra-do-supercomputador-do-plano-de-ia/",
+          "publisher": "Poder360",
+          "title": "Governo atrasa edital para compra do supercomputador do plano de IA",
+          "published": 2026,
+          "accessed": "2026-10-31",
+          "access": "fetched",
+          "quote": "adiou o lançamento do edital para a compra do novo supercomputador nacional"
+        },
+        {
+          "id": "s4",
+          "url": "https://movimentoeconomico.com.br/tecnologia/2026/08/20/supercomputador-de-r-1-bi-no-rn-segue-plano-de-soberania-digital-e-ia-no-brasil/",
+          "publisher": "Movimento Econômico",
+          "title": "Supercomputador de R$ 1 bi no RN segue plano de soberania digital e IA no Brasil",
+          "published": 2026,
+          "accessed": "2026-10-31",
+          "access": "fetched",
+          "quote": "O edital deverá incluir exigências de transferência tecnológica,"
+        },
+        {
+          "id": "s8",
+          "url": "https://dplnews.com/um-ano-de-plano-brasileiro-de-inteligencia-artificial-o-que-esta-sendo-feito/",
+          "publisher": "DPL News",
+          "title": "Um ano de Plano Brasileiro de Inteligência Artificial: o que está sendo feito?",
+          "published": 2025,
+          "accessed": "2026-10-31",
+          "access": "fetched",
+          "quote": "R$ 23 bilhões em até 2028"
+        },
+        {
+          "id": "s9",
+          "url": "https://www.gov.br/lncc/pt-br/assuntos/noticias/ultimas-noticias-1/expansao-do-supercomputador-santos-dumont",
+          "publisher": "LNCC",
+          "title": "Expansão do supercomputador Santos Dumont",
+          "published": null,
+          "accessed": "2026-10-31",
+          "access": "blocked",
+          "note": "HTTP 401 on 2026-10-31."
+        },
+        {
+          "id": "s10",
+          "url": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/cct/documentacao/23072024.pdf",
+          "publisher": "MCTI",
+          "title": "PBIA document",
+          "published": 2024,
+          "accessed": "2026-10-31",
+          "access": "blocked",
+          "note": "Bot-verification page on 2026-10-31; not attempted."
+        }
+      ],
+      "reviewedAt": "2026-10-31"
+    },
+    {
+      "id": "bra.sov.msg-gov",
+      "title": "MSG GOV secure messaging for the intelligence system",
+      "domain": "secure_communications",
+      "function": "Carries encrypted messages between staff of the bodies in the Brazilian Intelligence System (Sisbin) on an institutional app using a state-owned cryptographic algorithm.",
+      "status": "deployed",
+      "statusSourceIds": [
+        "s1",
+        "s2"
+      ],
+      "organizations": [
+        {
+          "name": "Agência Brasileira de Inteligência (ABIN)",
+          "role": "regulator of the app; its CEPESC is reported to supply the cryptography",
+          "country": "BRA",
+          "institutionId": "bra.federal.abin"
+        },
+        {
+          "name": "Serpro",
+          "role": "developer, with Universidade Federal do Ceará, per the press",
+          "country": "BRA",
+          "institutionId": "bra.federal.serpro"
+        },
+        {
+          "name": "Universidade Federal do Ceará",
+          "role": "co-developer, per the press",
+          "country": "BRA"
+        },
+        {
+          "name": "Apple and Google app stores",
+          "role": "distribution and mobile operating systems",
+          "country": "USA"
+        }
+      ],
+      "stages": [
+        {
+          "stage": "research",
+          "control": "unknown",
+          "basis": "No fetched source settles who controls this stage.",
+          "sourceIds": []
+        },
+        {
+          "stage": "design_ip",
+          "control": "partial",
+          "basis": "The app rests on an algorithm the regulation defines as developed by the State for its exclusive use, alongside commercial technology whose owner is not named.",
+          "sourceIds": [
+            "s1",
+            "s2"
+          ]
+        },
+        {
+          "stage": "components",
+          "control": "foreign_dependent_operation",
+          "basis": "The app runs on commercial mobile operating systems and is installed from the ordinary app stores.",
+          "sourceIds": [
+            "s2"
+          ]
+        },
+        {
+          "stage": "production",
+          "control": "verified",
+          "basis": "Built by Serpro with the Universidade Federal do Ceará, according to the press; the regulation does not name the developer.",
+          "sourceIds": [
+            "s2"
+          ]
+        },
+        {
+          "stage": "deployment",
+          "control": "foreign_dependent_operation",
+          "basis": "Distributed through the Apple and Google stores to Sisbin bodies, on corporate devices unless otherwise authorised.",
+          "sourceIds": [
+            "s1",
+            "s2"
+          ]
+        },
+        {
+          "stage": "operation",
+          "control": "unknown",
+          "basis": "No fetched source settles who controls this stage.",
+          "sourceIds": []
+        },
+        {
+          "stage": "maintenance",
+          "control": "unknown",
+          "basis": "No fetched source settles who controls this stage.",
+          "sourceIds": []
+        },
+        {
+          "stage": "governance",
+          "control": "verified",
+          "basis": "ABIN Portaria 4.628 of 28 July 2026, published in the Diário Oficial on 8 September 2026, regulates its use.",
+          "sourceIds": [
+            "s1"
+          ]
+        }
+      ],
+      "dependencies": [
+        {
+          "kind": "foreign_service",
+          "stage": "deployment",
+          "item": "App distribution and mobile operating systems",
+          "supplier": "Apple, Google",
+          "jurisdiction": "USA",
+          "substitutes": "None documented.",
+          "switching": "unknown",
+          "sourceIds": [
+            "s2"
+          ]
+        },
+        {
+          "kind": "imported_input",
+          "stage": "design_ip",
+          "item": "Commercial cryptographic or messaging technology used beside the state algorithm",
+          "supplier": "unknown",
+          "jurisdiction": "unknown",
+          "substitutes": "unknown",
+          "switching": "unknown",
+          "sourceIds": [
+            "s2"
+          ]
+        }
+      ],
+      "constraints": "The cryptography is the state's; the phone, its operating system and the store it is installed from are not. Use is limited to Sisbin staff with clearance.",
+      "counterevidence": [
+        {
+          "claim": "Scope is the intelligence system, not the federal government: the regulation covers Sisbin bodies only.",
+          "sourceIds": [
+            "s1"
+          ]
+        },
+        {
+          "claim": "A 2013 order made Serpro's Expresso V3 secure email compulsory across the federal government; no fetched 2026 source shows whether it is still used, a reminder that a mandate is not an operating record.",
+          "sourceIds": [
+            "s4"
+          ]
+        },
+        {
+          "claim": "One press source reports that it runs on its own fully encrypted network, which would make operation domestic; not confirmed by the regulation.",
+          "sourceIds": [
+            "s3"
+          ]
+        }
+      ],
+      "uncertainty": "Server hosting, operation and maintenance are unknown. The claim that it runs on its own encrypted network comes from one minor press source (s3) and is not used for a classification. No adoption figures were found. A project called Bipe was searched for and no fetched page mentions it, so it has no record.",
+      "challengesNarrative": true,
+      "sources": [
+        {
+          "id": "s1",
+          "url": "https://static.poder360.com.br/uploads/2026/09/dou-aeroportos-8set2026.pdf",
+          "publisher": "Imprensa Nacional, Diário Oficial da União (copy hosted by Poder360)",
+          "title": "Portaria GAB/DG/ABIN/CC/PR nº 4.628, de 28 de julho de 2026",
+          "published": 2026,
+          "accessed": "2026-10-31",
+          "access": "fetched",
+          "quote": "O MSG GOV é recurso criptográfico baseado em algoritmo de Estado",
+          "note": "Signed DOU page, verification code 05152026090800004 at in.gov.br/autenticidade."
+        },
+        {
+          "id": "s2",
+          "url": "https://tecnoblog.net/noticias/abin-regulamenta-app-de-mensagens-para-substituir-whatsapp-em-orgaos-publicos/",
+          "publisher": "Tecnoblog",
+          "title": "Abin regulamenta app de mensagens que substitui WhatsApp em órgãos públicos",
+          "published": 2026,
+          "accessed": "2026-10-31",
+          "access": "fetched",
+          "quote": "desenvolvido pela Serpro em parceria com a Universidade Federal do Ceará (UFC)"
+        },
+        {
+          "id": "s3",
+          "url": "https://www.minhaoperadora.com.br/2026/09/msg-gov-saiba-como-vai-funcionar-o-whatsapp-do-governo.html",
+          "publisher": "Minha Operadora",
+          "title": "MSG Gov: saiba como vai funcionar o WhatsApp do governo",
+          "published": 2026,
+          "accessed": "2026-10-31",
+          "access": "fetched",
+          "quote": "funcionará em rede própria, totalmente criptografada."
+        },
+        {
+          "id": "s4",
+          "url": "https://serpro.gov.br/menu/noticias/noticias-antigas/uso-de-e-mail-seguro-torna-se-obrigatorio-em-todo-o-governo-federal",
+          "publisher": "Serpro",
+          "title": "Uso de e-mail seguro torna-se obrigatório em todo o Governo Federal",
+          "published": 2013,
+          "accessed": "2026-10-31",
+          "access": "fetched",
+          "quote": "A presidenta Dilma Rousseff determinou a todos os órgãos do Governo Federal a adoção do e-mail Expresso V3"
+        }
+      ],
+      "reviewedAt": "2026-10-31"
+    }
+  ]
+}

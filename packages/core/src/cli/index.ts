@@ -23,6 +23,7 @@ import { fetchGithubNewRepositories } from '../pipeline/adapters/github.js'
 import { probeSeries, registrySeries, searchCatalogue } from '../pipeline/probe.js'
 import { loadFitnessItems } from '../fitness/validate.js'
 import { loadSovereignty } from '../sovereignty/validate.js'
+import { renderSovereigntyCatalog } from '../sovereignty/catalog.js'
 import { estimateFitnessCost, FITNESS_PRICES_VERIFIED, FITNESS_SCOPES, FITNESS_TOKENS, measureFitnessTokens } from '../fitness/cost.js'
 import type { FitnessScope } from '../fitness/cost.js'
 import { FITNESS_MODELS } from '../fitness/roster.js'
@@ -870,7 +871,18 @@ async function sovereignty(args: Args): Promise<void> {
     if (problems.some((p) => p.severity === 'error')) process.exitCode = 1
     return
   }
-  console.log(`pnpm bench sovereignty validate   schema-check data/sovereignty, the evidence rules and institution ids`)
+  if (action === 'catalog') {
+    const { files, problems } = await loadSovereignty()
+    if (problems.some((p) => p.severity === 'error')) throw new Error('data/sovereignty has errors. Run `pnpm bench sovereignty validate`.')
+    for (const f of files) {
+      const path = resolve(ROOT, 'docs/research/sovereignty', `CATALOG-${f.iso3}.md`)
+      await writeFile(path, renderSovereigntyCatalog(f), 'utf8')
+      console.log(`sovereignty -> ${relative(ROOT, path)}`)
+    }
+    return
+  }
+  console.log(`pnpm bench sovereignty validate   schema-check data/sovereignty, the evidence rules and institution ids
+pnpm bench sovereignty catalog    render docs/research/sovereignty/CATALOG-{ISO3}.md from the records`)
 }
 
 /**
@@ -1652,7 +1664,7 @@ Start with file 1.
   pnpm bench probe     --series a,b[@db] [--from 2010] [--json]  test candidate World Bank series before wiring them
   pnpm bench fitness  validate | cost [--scope items|pilot|full] [--samples 3] | run [--models a,b] [--mode m] [--batch] [--mock] | grade [--run id] | report [--run id]
                                           public AI fitness (D168): check the item set, price a run, answer it, grade it, report it
-  pnpm bench sovereignty validate          check data/sovereignty: sovereign technology records, research only (D171)
+  pnpm bench sovereignty validate | catalog  check data/sovereignty, or render its catalogue: sovereign technology records, research only (D171)
   pnpm bench validate  [--fetch]          schema-check Delphi, evidence, institution and subnational data; --fetch live-checks evidence URLs
   pnpm bench report                       write the findings report
   pnpm bench agenda    [BRA IND ...] [--lang pt-BR]
