@@ -252,6 +252,24 @@ pnpm bench fitness cost       price a run: --scope items|pilot|full; input measu
 pnpm bench fitness run        answer: --mode grounded|closed --models a,b --samples 3 --batch --mock
 ```
 
+```
+pnpm bench fitness sources fetch   fetch and pin every fact item's sources: --item a,b --topic t --force
+```
+
+`sources fetch` writes the text a retrieval system would supply to
+`data/fitness/sources/{itemId}/{n}.txt` and records, in `pin.json` beside it,
+the final URL, the HTTP status, the date, a sha256 of the raw response and a
+sha256 of the text. An HTML page keeps its content region (the gov.br content
+core, else `main` or `article`) and drops navigation, headers, footers and
+scripts. A Câmara or Senado API is asked for JSON and supplied as indented
+JSON. A PDF, a failed fetch or fewer than 200 characters of text is reported
+and nothing is written: an empty bundle would grade the model on a fact it was
+never given. A page that cannot be extracted cleanly can be transcribed by
+hand into `{n}.txt`; the pin records it as `hand` and a refetch leaves it
+alone. A fetched text is kept on rerun unless `--force`, and `validate` warns
+when a fetched text no longer matches its pin, when a fact item has no
+bundle, and when a source has no text.
+
 `run` reads the pinned source text for `grounded` mode from
 `data/fitness/sources/{itemId}/{n}.txt` (or `.md`), n the 1-based index into
 the item's `sources`. A fact item with no bundle runs `closed` only and is

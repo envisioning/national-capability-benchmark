@@ -21,7 +21,8 @@ import type { Observation } from '../model/index.js'
 import { fetchOpenAlexCitationImpact } from '../pipeline/adapters/openalex.js'
 import { fetchGithubNewRepositories } from '../pipeline/adapters/github.js'
 import { probeSeries, registrySeries, searchCatalogue } from '../pipeline/probe.js'
-import { loadFitnessItems } from '../fitness/validate.js'
+import { bundleProblems, loadFitnessItems } from '../fitness/validate.js'
+import { fetchSourceBundles } from '../fitness/sources.js'
 import { estimateFitnessCost, FITNESS_PRICES_VERIFIED, FITNESS_SCOPES, FITNESS_TOKENS, measureFitnessTokens } from '../fitness/cost.js'
 import type { FitnessScope } from '../fitness/cost.js'
 import { FITNESS_MODELS } from '../fitness/roster.js'
@@ -859,8 +860,10 @@ async function fitness(args: Args): Promise<void> {
   if (action === 'validate') {
     const { items, files, problems } = await loadFitnessItems()
     const facts = items.filter((item) => item.kind === 'fact').length
-    console.log(`fitness     -> ${items.length} items in ${files} files (${facts} fact, ${items.length - facts} value)`)
-    for (const p of problems) console.log(`  ${p.file.padEnd(46)} ${p.problem}`)
+    const bundles = await bundleProblems(items)
+    const unbundled = bundles.filter((p) => p.problem.includes('no source bundle')).length
+    console.log(`fitness     -> ${items.length} items in ${files} files (${facts} fact, ${items.length - facts} value); ${facts - unbundled} of ${facts} fact items have a source bundle`)
+    for (const p of [...problems, ...bundles]) console.log(`  ${p.file.padEnd(46)} ${p.problem}`)
     if (problems.some((p) => p.severity === 'error')) process.exitCode = 1
     return
   }
@@ -900,6 +903,29 @@ async function fitness(args: Args): Promise<void> {
     }
     console.log(`Output is assumed: ${tokens.answerOutput} tokens per answer, thinking included.`)
     console.log(`Roster prices read from the gateway list on ${FITNESS_PRICES_VERIFIED}. The gateway may add margin.`)
+    return
+  }
+  if (action === 'sources') {
+    if (args._[2] !== 'fetch') throw new Error('Usage: pnpm bench fitness sources fetch [--item a,b] [--topic t] [--force]')
+    const { items, problems } = await loadFitnessItems()
+    if (problems.some((p) => p.severity === 'error')) throw new Error('The item set has errors. Run `pnpm bench fitness validate`.')
+    const ids = str(args, 'item', '').split(',').map((s) => s.trim()).filter(Boolean)
+    const topic = str(args, 'topic', '')
+    const chosen = items.filter((item) => (ids.length === 0 || ids.includes(item.id)) && (!topic || item.topic === topic))
+    const outcomes = await fetchSourceBundles({
+      items: chosen,
+      retrieved: new Date().toISOString().slice(0, 10),
+      force: bool(args, 'force'),
+      onProgress: (o) => {
+        if (o.status !== 'kept') console.log(`  ${o.status.padEnd(7)} ${o.itemId} [${o.n}] ${o.chars ?? ''} ${o.detail ?? ''} ${o.status === 'failed' ? o.url : ''}`.trimEnd())
+      },
+    })
+    const count = (s: string) => outcomes.filter((o) => o.status === s).length
+    console.log(`fitness sources -> ${count('written')} written, ${count('kept')} kept, ${count('hand')} hand-written, ${count('failed')} failed, over ${chosen.filter((i) => i.kind === 'fact').length} fact items`)
+    if (count('failed') > 0) {
+      console.log('A failed source has no text and is left out of its bundle. Fix the URL, or write the text by hand as {n}.txt and rerun to pin it.')
+      process.exitCode = 1
+    }
     return
   }
   if (action === 'run') {
@@ -975,6 +1001,8 @@ async function fitness(args: Args): Promise<void> {
     return
   }
   console.log(`pnpm bench fitness validate                      schema-check data/fitness/items
+pnpm bench fitness sources fetch [--item a,b] [--topic t] [--force]
+                                                  fetch and pin each fact item's sources into data/fitness/sources/<itemId>
 pnpm bench fitness cost [--scope items|pilot|full] [--samples 3]  price a run
 pnpm bench fitness run [--models a,b] [--mode grounded|closed] [--samples 3] [--batch] [--mock]
                                                   answer every item, write data/fitness/runs/<runId>.json
