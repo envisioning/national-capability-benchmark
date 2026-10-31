@@ -4,7 +4,8 @@
 score, a confidence, the frame, the panel or the viewer, and it publishes no
 index and no ranking. Records live in `data/sovereignty/{ISO3}.json`, are
 checked by `pnpm bench sovereignty validate`, and are read in
-[CATALOG-BRA.md](CATALOG-BRA.md).*
+[CATALOG-BRA.md](CATALOG-BRA.md), which `pnpm bench sovereignty catalog`
+generates from them.*
 
 The nine dimensions ask what a country can do. This layer asks a narrower
 question about one kind of thing a country can do: for a specific
@@ -138,11 +139,13 @@ fits is the classification.
    be sourced.
 
 5. **`verified`.** A named domestic institution performs the stage, a
-   fetched source documents it doing so, and either no foreign input at this
-   stage can stop it or every such input has a documented substitute that
-   is in use or has been exercised. `verified` is the hardest label to earn
-   and the one most likely to be challenged; every `verified` stage carries
-   at least one source.
+   fetched source documents it doing so, and no fetched source documents a
+   foreign input at this stage that lacks a substitute in use or already
+   exercised. Every `verified` stage carries at least one source. The test
+   is on the sources found, because nobody can source an absence: a stage
+   whose technology stack nobody has inventoried can read `verified` on
+   thin evidence, and its record's `uncertainty` must say so (see the gov.br
+   finding in section 6).
 
 The classifications describe a stage, never a sector. "Aerospace" has no
 classification. "The E2's engines at the components stage" has one.
@@ -287,7 +290,121 @@ built. The full records, with sources, are in `data/sovereignty/BRA.json`
 and summarised in [CATALOG-BRA.md](CATALOG-BRA.md). This section records
 what the test showed about the rubric, not about the cases.
 
-{{RUBRIC_TEST}}
+The rubric was applied to the four cases SOV-1 named. The records are
+`bra.sov.pix`, `bra.sov.e2-jets`, `bra.sov.government-cloud` and, for
+semiconductors, `bra.sov.ceitec` and `bra.sov.public-ai-compute`. What
+follows is what each case showed about the rubric.
+
+### Pix: the rubric works, and it rewards a well-documented system
+
+Pix reads `verified` at design, deployment, operation and governance: the
+central bank designs it, writes its rules under Lei 12.865/2013 and runs it
+from two active-active data centres. The classifications follow directly
+from the central bank's own disclosure, so two researchers with that
+document would agree.
+
+**Where it fails: open source.** The core runs on Red Hat OpenShift and AMQ
+Streams, commercial distributions of Kubernetes and Kafka. The tie-breaker
+in section 3 says open source is not a foreign dependency if the domestic
+side can fork, build and maintain it, and no source shows that it can. So
+components read `foreign_dependent_operation`, the same label a closed
+proprietary platform would get. The rubric cannot say "dependent on a
+support contract, substitutable in principle", which is the most common
+condition of public digital infrastructure. A future field for whether a
+substitution has been exercised would separate the two; until then the
+dependency entry carries it in `switching`.
+
+### Commercial aircraft: one component carries a stage
+
+The E2 is Brazilian-designed and integrated, but its engines are Pratt &
+Whitney's alone, and the 2025 groundings showed the fleet's availability
+resting on the engine maker's repairs. The rubric records that well:
+components are `foreign_provision`, maintenance `foreign_dependent_operation`.
+
+**Where it fails.**
+
+- **A stage label is set by its most critical component.** The airframe
+  structures may be largely Brazilian, and no fetched source says either
+  way. Which input is critical is a judgment, and the rubric gives no rule
+  for it. Two researchers could disagree on whether the engine or the
+  structure sets the label.
+- **Analogical evidence has no place.** US re-export control bound Embraer
+  in 2006 on a military aircraft. Whether it binds the E2 is unsourced, so
+  governance is `unknown`. The rule is right, and it leaves the most
+  important governance question about the aircraft open. The 2006 case is
+  recorded as a dependency so the mechanism stays visible.
+- **Half the stages are unknown** because the manufacturer's own product
+  page returned 404. The classification depends on which pages happen to
+  load.
+
+### Government cloud: residency is correctly not control
+
+Every platform in the federal government cloud is a foreign vendor's
+product on the vendor's equipment, installed in Serpro and Dataprev data
+centres in Brazil. The data-residency rule in section 1 did its job: the
+record reads `foreign_provision` or `foreign_dependent_operation` from
+design to maintenance, although the data never leaves the country, and the
+TCU's 2026 audit (Acórdão 1380/2026) reaches the same reading
+independently, down to the CLOUD Act clause in the AWS contracts.
+
+**Where it fails: one record holds four vendors.** The TCU found that Huawei
+Cloud Stack can run locally while AWS Outposts and Google Distributed
+Cloud need continuous connectivity and send metadata to public regions.
+One record gives one label per stage, so those differences flatten into
+`foreign_dependent_operation`. Splitting the record by platform would fix
+that, at the cost of four records that share every other fact.
+
+### Advanced semiconductors: the rubric cannot hold an absence
+
+Brazil has no domestic function in advanced logic or memory chips to
+classify. A case needs a function performed, built or attempted, so
+advanced semiconductors have no record. The dependence is recorded where it
+bites: as a dependency of `bra.sov.ceitec` (US$ 6.31 billion of
+semiconductor imports in 2024) and of `bra.sov.public-ai-compute` (every
+GPU and CPU in Santos Dumont is Nvidia or AMD). CEITEC itself is
+classifiable: it designs at home and fabricates on imported equipment after
+a liquidation that cost it most of its staff.
+
+**Where it fails.** A framework built on stages of a capability has nothing
+to say about a capability that does not exist, and that is often the most
+important fact. The workaround, recording the dependence on each user, makes
+the absence visible only as often as researchers record users.
+
+### Failures found across the catalogue
+
+- **`verified` rewards thin research.** gov.br reads `verified` at six
+  stages, more than Pix, mostly because no fetched source documents its
+  software or hardware stack. A stage nobody has inventoried and a stage
+  inventoried and found domestic get the same label. The definition in
+  section 3 now says the test is on the sources found, and the record's
+  `uncertainty` must say when no inventory exists. A field recording
+  whether a stack inventory was found is an open question below.
+- **Partial and foreign provision have no threshold.** Resende covers about
+  70 percent of one reactor's reload and reads `partial` at production;
+  domestic urea covers about 20 percent of demand and fertiliser production
+  reads `foreign_provision`. Both are defensible, and the rubric gives no
+  share that separates them. A provisional rule, `foreign_provision` when
+  the foreign route carries more than half of the national need, is an open
+  question below; it would likely move Resende, if a source confirms the
+  national share.
+- **One label hides a split by input.** Fertiliser production covers three
+  nutrients that run from about 20 percent domestic (urea) to under 4
+  percent (potash). The basis carries the numbers; the label cannot.
+- **The status list has no place for funded development.** Domestic orbital
+  launch has a funded microlauncher and a launcher in development but no
+  flight. `proposed` understates it and `pilot` overstates it. It is
+  recorded as `proposed`, and the record says why.
+- **Reproducibility is untested.** The records were drafted by one session
+  from four parallel source searches. No second researcher has applied the
+  rubric to the same source list.
+
+### What held
+
+The order of tests in section 3 settled every case where the sources were
+clear, and `unknown` (36 of 120 stages) did what it is for: it marks the
+research agenda rather than a guess. The rule that a blocked page supports
+nothing kept several official claims out (Butantan, the Navy, MCTI) and
+shows that the official sources are often the hardest to reach.
 
 ---
 
@@ -305,6 +422,16 @@ what the test showed about the rubric, not about the cases.
   decision.
 
 ## 8. Open questions for MZ
+
+- Whether to adopt a share threshold between `partial` and
+  `foreign_provision` (section 6 proposes more than half of the national
+  need), which would move some records.
+- Whether to add a field that records whether the stage's technology stack
+  was inventoried, so a `verified` on thin evidence can be told apart.
+- Whether to add a status for funded development without a working system,
+  or keep `proposed` and say so in the record.
+- Whether a record with several vendors, such as the government cloud,
+  splits into one record per platform.
 
 - Whether the first inter-researcher audit is done by a person or, as D154
   allowed for the foresight register, by a second model family from the
