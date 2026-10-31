@@ -32,10 +32,23 @@ test('entities decode, including accented Portuguese letters', () => {
   assert.equal(decodeEntities('a&ccedil;&atilde;o &eacute; &#233; &#xE9; &amp; &ordm;'), 'ação é é é & º')
 })
 
-test('a Câmara API response loses its paging links; a PDF is refused', () => {
-  const out = extractText(JSON.stringify({ dados: [{ voto: 'Sim' }], links: [{ rel: 'self' }] }), 'application/json')
-  assert.ok('text' in out && out.text.includes('"voto": "Sim"') && !out.text.includes('rel'))
+test('a Câmara API response loses its paging links, link fields and objetosPossiveis; a PDF is refused', () => {
+  const out = extractText(JSON.stringify({ dados: { descricao: 'Sim: 336; não: 142', uriOrgao: 'https://x', objetosPossiveis: [{ ementa: 'y' }] }, links: [{ rel: 'self' }] }), 'application/json')
+  assert.ok('text' in out && out.text.includes('Sim: 336') && !out.text.includes('rel') && !out.text.includes('uriOrgao') && !out.text.includes('ementa'))
   assert.ok('error' in extractText('%PDF-1.7 ...', 'application/pdf'))
+})
+
+test('a long vote list becomes one row per deputy', () => {
+  const votes = Array.from({ length: 25 }, (_, i) => ({
+    tipoVoto: i === 3 ? 'Não' : 'Sim',
+    deputado_: { id: i, uri: 'https://x', nome: `Deputada ${i}`, siglaPartido: 'PT', siglaUf: 'SP', email: 'a@b' },
+  }))
+  const out = extractText(JSON.stringify({ dados: votes, links: [] }), 'application/json')
+  assert.ok('text' in out)
+  const lines = out.text.split('\n')
+  assert.equal(lines[0], 'tipoVoto | deputado_.id | deputado_.nome | deputado_.siglaPartido | deputado_.siglaUf')
+  assert.equal(lines.length, 26)
+  assert.equal(lines[4], 'Não | 3 | Deputada 3 | PT | SP')
 })
 
 const item = (id: string, urls: string[]): FitnessItem => ({

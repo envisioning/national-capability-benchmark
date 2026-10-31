@@ -52,7 +52,7 @@ export const SourcePinFile = z.object({
 })
 export type SourcePinFile = z.infer<typeof SourcePinFile>
 
-export const EXTRACTOR_VERSION = 'fitness-extract-1'
+export const EXTRACTOR_VERSION = 'fitness-extract-2'
 
 const sha256 = (data: string | Uint8Array) => createHash('sha256').update(data).digest('hex')
 
@@ -148,11 +148,60 @@ function tidy(text: string): string {
  * model has no use for them.
  */
 export function extractJson(raw: string): string {
-  const data = JSON.parse(raw) as unknown
+  let data = JSON.parse(raw) as unknown
   if (data && typeof data === 'object' && !Array.isArray(data) && 'links' in data && 'dados' in data) {
-    return JSON.stringify((data as { dados: unknown }).dados, null, 2)
+    data = (data as { dados: unknown }).dados
   }
-  return JSON.stringify(data, null, 2)
+  const lean = prune(data)
+  if (isRecordList(lean)) return recordTable(lean)
+  return JSON.stringify(lean, null, 2)
+}
+
+/**
+ * Keys a model has no use for: links to other API resources and contact
+ * addresses, repeated on every record, and the Câmara's `objetosPossiveis`,
+ * which lists every proposal a vote could have concerned (several hundred,
+ * with their ementas) and buries the vote itself.
+ */
+const DROPPED_KEY = /^(uri|url)|^email$|^objetosPossiveis$/i
+
+function prune(value: unknown): unknown {
+  if (Array.isArray(value)) return value.map(prune)
+  if (value && typeof value === 'object') {
+    return Object.fromEntries(Object.entries(value).filter(([k]) => !DROPPED_KEY.test(k)).map(([k, v]) => [k, prune(v)]))
+  }
+  return value
+}
+
+/** A list long enough that one row per record reads better than indented JSON. */
+const TABLE_MIN_ROWS = 20
+
+type Leaf = string | number | boolean | null
+
+function leaves(value: unknown, prefix = '', out: Record<string, Leaf> = {}): Record<string, Leaf> {
+  if (value && typeof value === 'object' && !Array.isArray(value)) {
+    for (const [k, v] of Object.entries(value)) leaves(v, prefix ? `${prefix}.${k}` : k, out)
+  } else if (!Array.isArray(value)) {
+    out[prefix] = value as Leaf
+  }
+  return out
+}
+
+function isRecordList(value: unknown): value is Array<Record<string, unknown>> {
+  return Array.isArray(value) && value.length >= TABLE_MIN_ROWS && value.every((v) => v && typeof v === 'object' && !Array.isArray(v))
+}
+
+/**
+ * A vote list of 513 deputies as a table: a header of field paths, then one
+ * row per record. Nested lists inside a record are not carried; a list whose
+ * records hold one is left as JSON instead.
+ */
+function recordTable(records: Array<Record<string, unknown>>): string {
+  if (records.some((r) => Object.values(r).some((v) => Array.isArray(v)))) return JSON.stringify(records, null, 2)
+  const rows = records.map((r) => leaves(r))
+  const columns = [...new Set(rows.flatMap((r) => Object.keys(r)))]
+  const cell = (v: Leaf | undefined) => (v === null || v === undefined ? '' : String(v).replace(/\s*\n\s*/g, ' ').replace(/\|/g, '/'))
+  return [columns.join(' | '), ...rows.map((r) => columns.map((c) => cell(r[c])).join(' | '))].join('\n')
 }
 
 export type Extracted = { text: string; extractor: string } | { error: string }

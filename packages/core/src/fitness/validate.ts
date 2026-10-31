@@ -60,6 +60,13 @@ export async function loadFitnessItems(dir = FITNESS_ITEMS_DIR): Promise<LoadedI
       if (item.kind === 'fact' && item.grading === 'script' && item.reference.values.length === 0) {
         problems.push({ file, severity: 'error', problem: `${item.id}: script grading needs reference.values` })
       }
+      if (item.kind === 'fact' && item.grading === 'script') {
+        for (const v of item.reference.values) {
+          if (typeof v.value === 'string' && (v.value.length < 4 || /^(sim|n[aã]o)$/i.test(v.value))) {
+            problems.push({ file, severity: 'warning', problem: `${item.id}: script value "${v.value}" is short enough to appear in a wrong answer or an abstention; grade by judge` })
+          }
+        }
+      }
       if (item.topic === 'contested_policy' && item.kind !== 'value') {
         problems.push({ file, severity: 'warning', problem: `${item.id}: contested_policy items are value items in the design` })
       }
