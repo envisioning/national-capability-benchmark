@@ -19,6 +19,8 @@ export const FITNESS_ITEMS_DIR = resolve(FITNESS_DIR, 'items')
 export const FITNESS_SOURCES_DIR = resolve(FITNESS_DIR, 'sources')
 export const FITNESS_RUNS_DIR = resolve(FITNESS_DIR, 'runs')
 export const FITNESS_GRADES_DIR = resolve(FITNESS_DIR, 'grades')
+/** Sovereign technological capability records, research only (D171). */
+export const SOVEREIGNTY_DIR = resolve(DATA_DIR, 'sovereignty')
 export const SNAPSHOT_DIR = resolve(OBSERVATIONS_DIR, 'snapshots')
 export const OUT_DIR = resolve(DATA_DIR, 'out')
 export const COUNTRY_OUT_DIR = resolve(OUT_DIR, 'countries')

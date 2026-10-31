@@ -22,6 +22,7 @@ import { fetchOpenAlexCitationImpact } from '../pipeline/adapters/openalex.js'
 import { fetchGithubNewRepositories } from '../pipeline/adapters/github.js'
 import { probeSeries, registrySeries, searchCatalogue } from '../pipeline/probe.js'
 import { loadFitnessItems } from '../fitness/validate.js'
+import { loadSovereignty } from '../sovereignty/validate.js'
 import { estimateFitnessCost, FITNESS_PRICES_VERIFIED, FITNESS_SCOPES, FITNESS_TOKENS, measureFitnessTokens } from '../fitness/cost.js'
 import type { FitnessScope } from '../fitness/cost.js'
 import { FITNESS_MODELS } from '../fitness/roster.js'
@@ -850,6 +851,29 @@ function pickRoster<T extends { id: string; lab: string }>(roster: readonly T[],
 }
 
 /**
+ * Sovereign technological capability (D171): research records, never scored.
+ * `validate` checks every data/sovereignty/{ISO3}.json against the schema,
+ * the evidence rules and the institution map.
+ */
+async function sovereignty(args: Args): Promise<void> {
+  const action = args._[1] ?? 'help'
+  if (action === 'validate') {
+    const { files, problems } = await loadSovereignty()
+    for (const f of files) {
+      const domains = new Set(f.cases.map((c) => c.domain)).size
+      const unknown = f.cases.flatMap((c) => c.stages).filter((s) => s.control === 'unknown').length
+      const stages = f.cases.reduce((n, c) => n + c.stages.length, 0)
+      console.log(`sovereignty -> ${f.iso3}: ${f.cases.length} cases in ${domains} domains, ${unknown} of ${stages} stages unknown`)
+    }
+    if (files.length === 0 && problems.length === 0) console.log('sovereignty -> no files in data/sovereignty')
+    for (const p of problems) console.log(`  ${p.severity === 'error' ? 'error  ' : 'warning'} ${p.file}  ${p.problem}`)
+    if (problems.some((p) => p.severity === 'error')) process.exitCode = 1
+    return
+  }
+  console.log(`pnpm bench sovereignty validate   schema-check data/sovereignty, the evidence rules and institution ids`)
+}
+
+/**
  * Public AI fitness (D168): a separate instrument that never touches a score.
  * `validate` checks the item set, `cost` prices a run, `run` answers it,
  * `grade` judges it, `report` writes the profiles and the gate.
@@ -1100,6 +1124,10 @@ async function main() {
 
     case 'fitness':
       await fitness(args)
+      break
+
+    case 'sovereignty':
+      await sovereignty(args)
       break
 
     case 'agenda': {
@@ -1624,6 +1652,7 @@ Start with file 1.
   pnpm bench probe     --series a,b[@db] [--from 2010] [--json]  test candidate World Bank series before wiring them
   pnpm bench fitness  validate | cost [--scope items|pilot|full] [--samples 3] | run [--models a,b] [--mode m] [--batch] [--mock] | grade [--run id] | report [--run id]
                                           public AI fitness (D168): check the item set, price a run, answer it, grade it, report it
+  pnpm bench sovereignty validate          check data/sovereignty: sovereign technology records, research only (D171)
   pnpm bench validate  [--fetch]          schema-check Delphi, evidence, institution and subnational data; --fetch live-checks evidence URLs
   pnpm bench report                       write the findings report
   pnpm bench agenda    [BRA IND ...] [--lang pt-BR]
