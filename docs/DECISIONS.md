@@ -9432,3 +9432,66 @@ training cutoffs published by every lab on the roster, which would let the
 judge grade a `closed` abstention properly; or a deployment of a model to
 Brazilian citizens on contested policy that supplies retrieved positions,
 which would make a `grounded` value mode the honest one to gate.
+
+## D171 — Sovereign technological capability is a stage-by-stage research record, never a score
+
+*Recorded 2026-10-31. SOV-1 (#103) and SOV-2 (#104). Framework in
+`docs/research/sovereignty/FRAMEWORK.md`, schema and validator in
+`packages/core/src/sovereignty`, records in `data/sovereignty/{ISO3}.json`,
+catalogue generated into `docs/research/sovereignty/CATALOG-{ISO3}.md`.
+Applies D154 to every source. Distinct from the Exponential Leverage
+proposal (#12).*
+
+**Choice.** The project records where control of a nationally material
+technological function sits, as a descriptive research layer beside the
+benchmark and outside it.
+
+1. **The unit is one function at one lifecycle stage.** Every record
+   classifies eight stages (research, design and IP, components, production,
+   deployment, operation, maintenance, governance) as `verified`, `partial`,
+   `foreign_dependent_operation`, `foreign_provision` or `unknown`, tested in
+   the fixed order the framework gives. No label applies to a sector,
+   a domain or a country.
+2. **A classification other than `unknown` needs a page the researcher
+   opened.** A blocked page supports nothing. A `deployed` or `demonstrated`
+   status needs a fetched source, and a proposal earns `verified` at
+   research only. `pnpm bench sovereignty validate` enforces these, checks
+   every institution id against `data/institutions`, and warns when fewer
+   than one record in three challenges the sovereignty narrative.
+3. **Ownership, residency and nationality are not control.** Domestic
+   ownership, a data centre in Brazil or a Brazilian brand is recorded as a
+   fact at its stage and never earns `verified` alone.
+4. **Nothing in the layer adds up.** It feeds no score, confidence, frame,
+   panel, leverage output or viewer page, publishes no index and no
+   ranking, and its counts measure research effort. Publication in the
+   viewer needs a separate decision.
+
+**Why.** The nine dimensions ask what a country can do and cannot see who
+can stop it doing it. "Sovereign" is used in Brazilian policy for things as
+different as a satellite built and launched in France, a cloud of US and
+Chinese equipment in a state data centre, and a payment system the central
+bank designs and runs. A label per stage, carried by a source, is the
+smallest unit at which those claims can be checked and disagreed with. A
+whole-industry label would carry the narrative instead of the evidence.
+
+**Cost.** The first Brazil catalogue (15 records, 10 domains) shows the
+rubric's limits, set out in the framework's section 6. `verified` is tested
+on the sources found, so a stage nobody inventoried can read `verified` on
+thin evidence (gov.br reads `verified` at more stages than Pix). There is no
+share threshold between `partial` and `foreign_provision`. One label hides a
+split by input or by vendor. An absent capability, such as advanced
+semiconductors, has no record and shows only as a dependency of its users.
+Official Brazilian sources are often the hardest to reach (Butantan, the
+Navy, MCTI and planalto.gov.br were blocked), so press sources carry more of
+the record than an official inventory would. Reproducibility between two
+researchers is untested.
+
+**Overturned by.** A second researcher applying the rubric to the
+catalogue's source lists and disagreeing on more than one stage in five,
+which would mean the tests are not reproducible and need rewriting before
+more records are added. A stack inventory for gov.br or Pix that moves a
+`verified` stage to a dependent one, which would mean `verified` cannot
+stand on the sources found and needs an inventory field. Or a reader or
+publication using the stage labels as a sovereignty score or ranking,
+which would mean the catalogue's overview table comes off any public
+surface.
