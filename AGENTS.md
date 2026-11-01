@@ -31,6 +31,8 @@ pnpm bench fitness cost      price a fitness run: --scope items|pilot|full, --sa
 pnpm bench fitness run       answer every item with every roster model into data/fitness/runs/<runId>.json: --models, --mode, --samples 3, --batch, --mock
 pnpm bench fitness grade     judge a run under the no-own-lab rule into data/fitness/grades/<runId>.json, with judge alpha and the stop rule: --run <runId>, --batch, --mock
 pnpm bench fitness report    write data/out/fitness/<lab>/<model>.json profiles and gate.json from a graded run; refuses a mock unless --out <dir>
+pnpm bench sovereignty validate  schema-check data/sovereignty: stage-by-stage technology control records, research only (D171)
+pnpm bench sovereignty catalog   render docs/research/sovereignty/CATALOG-{ISO3}.md from those records
 pnpm bench all         ingest, score, diagnose, report, agenda, brief
 pnpm build             tsc for packages/core, then next build for apps/web
 pnpm typecheck         both packages
@@ -120,6 +122,11 @@ port 3888. That entry starts Next directly and does not use the proxy.
   `runs/{runId}.json` the answers and `grades/{runId}.json` the judge
   grades. Profiles and the gate go to `data/out/fitness`. Design:
   `docs/research/public-ai-fitness/DESIGN.md`. The gate fails closed: D170.
+- `data/sovereignty` — one file per country of sovereign technological
+  capability records (D171): for each nationally material function, who
+  controls each of eight lifecycle stages, with a fetched source per claim.
+  Framework in `docs/research/sovereignty/FRAMEWORK.md`; the catalogue beside
+  it is generated, never hand-edited.
 - `data/evidence` — evidence records: documented deliveries filed against
   indicators that have no dataset. Never scored. Inclusion rule and authoring
   guide in `docs/EVIDENCE.md`. See D20.
@@ -239,6 +246,12 @@ port 3888. That entry starts Next directly and does not use the proxy.
   `judgesFor` is the only place a judge is assigned: no judge grades an
   answer from its own lab. Results are a profile per model and a pass or fail
   per topic, never an overall score or an ordering of models. See D168.
+- **The sovereignty layer never touches the benchmark.** Nothing in
+  `packages/core/src/sovereignty` is read by scoring, confidence, the frame,
+  the panel, the leverage proposal or the viewer. A stage label is set per
+  function and per stage, never per sector or country, and no field adds
+  records up. A classification other than `unknown` cites a source the
+  researcher opened; a blocked page supports nothing. See D171.
 - An evidence record's `pattern` field is analysis, not data. Everything else in
   the record is sourced from a named publisher; the mechanism and preconditions
   are ours. Keep them in that field so the two are never confused. See D31.
