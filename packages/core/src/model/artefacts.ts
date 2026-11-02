@@ -43,7 +43,7 @@ export const ARTEFACT_SCOPES: readonly ArtefactScope[] = [
   {
     id: 'A9',
     dimensions: ['coordination'],
-    countries: ['SGP', 'CHN', 'ARE', 'RWA', 'LAO', 'TJK', 'BLR', 'AZE', 'EGY', 'RUS'],
+    countries: ['SGP', 'CHN', 'ARE', 'RWA', 'SWZ', 'LAO', 'TJK', 'BLR', 'AZE', 'EGY', 'RUS'],
   },
   { id: 'A10', dimensions: 'all' },
   { id: 'A11', dimensions: ['building'] },
@@ -51,7 +51,7 @@ export const ARTEFACT_SCOPES: readonly ArtefactScope[] = [
   { id: 'A13', dimensions: ['shared_purpose'] },
   { id: 'A14', dimensions: ['agency'] },
   { id: 'A15', dimensions: ['agency', 'shared_purpose'] },
-  /* The 15 countries whose Adaptability has no long-term unemployment share
+  /* The 17 countries whose Adaptability has no long-term unemployment share
    * to check the unemployment rate (D141, D149, D153), and Cuba, whose 2010
    * share is too old to count (D159). */
   {
@@ -59,7 +59,7 @@ export const ARTEFACT_SCOPES: readonly ArtefactScope[] = [
     dimensions: ['adaptability'],
     countries: [
       'KOR', 'IND', 'MEX', 'PER', 'URY', 'CHN', 'PHL', 'SLV', 'HTI',
-      'UZB', 'GIN', 'TJK', 'PNG', 'COG', 'TTO', 'CUB',
+      'UZB', 'GIN', 'TJK', 'PNG', 'COG', 'TTO', 'CAF', 'MRT', 'CUB',
     ],
   },
   /* Venezuela's manufacturing value added has no value: the publisher's
