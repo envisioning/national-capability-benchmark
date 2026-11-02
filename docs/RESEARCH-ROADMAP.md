@@ -59,8 +59,12 @@ anywhere, `docs/research/trust/SURVEY-COVERAGE-FOR-EXPANSION.md`); the rest is
 the IP office rows, the ILOSTAT row and the other thin columns. The survey
 part has no repair in view: Afrobarometer Round 8's trust item would have
 taken it to about 0.509, and pooling the D64 dual rows would have raised it to
-about 0.60, and both are closed under the open-data rule (D154). Watch for drift from 0.526 inside the 125, and read the next
-source's effect on it first. A source that only covers rich countries raises
+about 0.60, and both are closed under the open-data rule (D154). At 9.4.0 the
+guardrail reads 0.474 (n 123): it held at 0.526 to 0.527 through 9.3.0 and fell
+when D167 moved three Doing Business rows to B-READY, whose 74 countries spread
+evenly across income (recomputed 2026-11-02 from `data/out` at each release).
+Watch for drift from 0.474 inside the 125, and read the next source's effect on
+it first. A source that only covers rich countries raises
 O1 and breaks this.
 
 ### Where the objectives stand
@@ -209,7 +213,8 @@ Closed under the open-data rule (D154), not parked:
   registered GESIS microdata download. The hold stays. A pooling rule that
   works from the published release tables alone would still qualify.
 - **Afrobarometer Round 8 Q83** for A165 (#73): copyrighted and silent on
-  redistribution. Trust stays at 0.398 and the guardrail at about 0.526.
+  redistribution. Trust stayed at 0.398 and the guardrail at about 0.526
+  (9.0.0 figures).
   Latinobarómetro (forbids republishing), Arab Barometer (registration) and
   Asian Barometer (application) are out on the same rule.
 - **Enterprise Surveys microdata** for the customs firm base (#66): behind a
