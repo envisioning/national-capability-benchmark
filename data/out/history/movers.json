@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-02T19:59:13.209Z",
+  "generatedAt": "2026-11-02T20:42:07.994Z",
   "methodVersion": "movers/0.1-provisional",
   "datasetVersion": "10.0.0",
   "params": {
@@ -43,6 +43,7 @@
           },
           "m2": {
             "pairs": 1,
+            "excludedPairs": 0,
             "n": 129,
             "statistic": 0.097,
             "nullMean": 0.003,
@@ -60,7 +61,8 @@
           "coverage": {
             "entered": 129,
             "eligible": 133,
-            "rWithLogGdp": 0.194
+            "rWithLogGdp": 0.194,
+            "excludedPairs": 0
           },
           "countries": [
             {
@@ -982,7 +984,8 @@
           "coverage": {
             "entered": 0,
             "eligible": 133,
-            "rWithLogGdp": null
+            "rWithLogGdp": null,
+            "excludedPairs": 0
           },
           "countries": []
         },
@@ -1000,7 +1003,8 @@
           "coverage": {
             "entered": 0,
             "eligible": 133,
-            "rWithLogGdp": null
+            "rWithLogGdp": null,
+            "excludedPairs": 0
           },
           "countries": []
         },
@@ -1018,7 +1022,8 @@
           "coverage": {
             "entered": 0,
             "eligible": 133,
-            "rWithLogGdp": null
+            "rWithLogGdp": null,
+            "excludedPairs": 0
           },
           "countries": []
         },
@@ -1036,7 +1041,8 @@
           "coverage": {
             "entered": 0,
             "eligible": 133,
-            "rWithLogGdp": null
+            "rWithLogGdp": null,
+            "excludedPairs": 0
           },
           "countries": []
         },
@@ -1048,15 +1054,8 @@
             "r2": 0.056,
             "reading": "little"
           },
-          "m2": {
-            "pairs": 3,
-            "n": 269,
-            "statistic": 0.151,
-            "nullMean": 0,
-            "nullP95": 0.098,
-            "reading": "coherent"
-          },
-          "reading": "moves-apart",
+          "m2": null,
+          "reading": "unreadable",
           "d174": {
             "n": 133,
             "slope": 9.77,
@@ -1067,7 +1066,8 @@
           "coverage": {
             "entered": 85,
             "eligible": 133,
-            "rWithLogGdp": 0.391
+            "rWithLogGdp": 0.391,
+            "excludedPairs": 3
           },
           "countries": [
             {
@@ -1681,7 +1681,8 @@
           "coverage": {
             "entered": 0,
             "eligible": 133,
-            "rWithLogGdp": null
+            "rWithLogGdp": null,
+            "excludedPairs": 0
           },
           "countries": []
         },
@@ -1694,11 +1695,12 @@
             "reading": "little"
           },
           "m2": {
-            "pairs": 3,
-            "n": 359,
-            "statistic": 0.057,
+            "pairs": 2,
+            "excludedPairs": 1,
+            "n": 241,
+            "statistic": -0.013,
             "nullMean": 0,
-            "nullP95": 0.083,
+            "nullP95": 0.109,
             "reading": "noise"
           },
           "reading": "unreadable",
@@ -1712,7 +1714,8 @@
           "coverage": {
             "entered": 129,
             "eligible": 133,
-            "rWithLogGdp": 0.229
+            "rWithLogGdp": 0.229,
+            "excludedPairs": 1
           },
           "countries": [
             {
@@ -2630,6 +2633,7 @@
           },
           "m2": {
             "pairs": 1,
+            "excludedPairs": 0,
             "n": 82,
             "statistic": 0.148,
             "nullMean": -0.002,
@@ -2647,7 +2651,8 @@
           "coverage": {
             "entered": 82,
             "eligible": 133,
-            "rWithLogGdp": 0.331
+            "rWithLogGdp": 0.331,
+            "excludedPairs": 0
           },
           "countries": [
             {
@@ -3247,7 +3252,8 @@
           "coverage": {
             "entered": 0,
             "eligible": 133,
-            "rWithLogGdp": null
+            "rWithLogGdp": null,
+            "excludedPairs": 0
           },
           "countries": []
         },
@@ -3265,7 +3271,8 @@
           "coverage": {
             "entered": 0,
             "eligible": 133,
-            "rWithLogGdp": null
+            "rWithLogGdp": null,
+            "excludedPairs": 0
           },
           "countries": []
         },
@@ -3283,7 +3290,8 @@
           "coverage": {
             "entered": 0,
             "eligible": 133,
-            "rWithLogGdp": null
+            "rWithLogGdp": null,
+            "excludedPairs": 0
           },
           "countries": []
         },
@@ -3301,7 +3309,8 @@
           "coverage": {
             "entered": 0,
             "eligible": 133,
-            "rWithLogGdp": null
+            "rWithLogGdp": null,
+            "excludedPairs": 0
           },
           "countries": []
         },
@@ -3319,7 +3328,8 @@
           "coverage": {
             "entered": 0,
             "eligible": 133,
-            "rWithLogGdp": null
+            "rWithLogGdp": null,
+            "excludedPairs": 0
           },
           "countries": []
         },
@@ -3331,15 +3341,8 @@
             "r2": 0.288,
             "reading": "partly"
           },
-          "m2": {
-            "pairs": 3,
-            "n": 169,
-            "statistic": 0.195,
-            "nullMean": -0.002,
-            "nullP95": 0.128,
-            "reading": "coherent"
-          },
-          "reading": "moves-apart",
+          "m2": null,
+          "reading": "unreadable",
           "d174": {
             "n": 133,
             "slope": 18.48,
@@ -3350,7 +3353,8 @@
           "coverage": {
             "entered": 51,
             "eligible": 133,
-            "rWithLogGdp": 0.16
+            "rWithLogGdp": 0.16,
+            "excludedPairs": 3
           },
           "countries": [
             {
@@ -3726,7 +3730,8 @@
           "coverage": {
             "entered": 0,
             "eligible": 133,
-            "rWithLogGdp": null
+            "rWithLogGdp": null,
+            "excludedPairs": 0
           },
           "countries": []
         },
@@ -3744,7 +3749,8 @@
           "coverage": {
             "entered": 0,
             "eligible": 133,
-            "rWithLogGdp": null
+            "rWithLogGdp": null,
+            "excludedPairs": 0
           },
           "countries": []
         },
@@ -3758,6 +3764,7 @@
           },
           "m2": {
             "pairs": 1,
+            "excludedPairs": 0,
             "n": 65,
             "statistic": 0.129,
             "nullMean": -0.002,
@@ -3775,7 +3782,8 @@
           "coverage": {
             "entered": 65,
             "eligible": 133,
-            "rWithLogGdp": 0.401
+            "rWithLogGdp": 0.401,
+            "excludedPairs": 0
           },
           "countries": [
             {
@@ -4240,9 +4248,7 @@
   ],
   "verdict": {
     "span": 10,
-    "movesApart": [
-      "experimentation"
-    ],
+    "movesApart": [],
     "incomeLed": [],
     "unreadable": [
       "anticipation",
@@ -4250,6 +4256,7 @@
       "coordination",
       "trust",
       "learning",
+      "experimentation",
       "adaptability",
       "building",
       "shared_purpose"

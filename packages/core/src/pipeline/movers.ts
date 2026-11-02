@@ -40,8 +40,9 @@ import { loadObservations } from './store.js'
  * - (m1) fits that change on the change in log10 GDP per capita.
  * - (m2) asks whether what income leaves over is a real change or noise:
  *   the leftovers of different indicators of one dimension must move
- *   together across countries beyond a shuffle null. Publishers do not share
- *   measurement error, so noise cannot pass it.
+ *   together across countries beyond a shuffle null. A pair counts only
+ *   when the two rows share no primary data (D179), so shared measurement
+ *   error cannot pass it.
  * - The D174 estimate runs (m1) beside it as a check on the donor fill.
  *
  * Every reading rule is fixed in D175 before the first run. Nothing here
@@ -81,31 +82,49 @@ export function incomeFit(incomeChange: number[], change: number[]): MoversFit |
 /** One indicator's leftover change: what income change does not predict, per country. */
 export type Leftovers = Map<string, number>
 
-/**
- * (m2): the n-weighted mean correlation of leftovers over every indicator pair
- * with enough countries in common, against a null that shuffles one side of
- * each pair across its countries. Null when no pair has enough countries.
- */
-export function coherence(
-  indicators: Leftovers[],
-  { draws = DRAWS, seed = SEED }: { draws?: number; seed?: number } = {},
-): MoversCoherence | null {
+/** One indicator as (m2) sees it: its leftovers and what its error can share with another row. */
+export type MoversIndicator = { leftovers: Leftovers; origin: string; gdpRatio: boolean }
+
+/** D179: two rows share primary data when they have one origin or are both ratios to GDP. */
+export function sharesPrimaryData(a: MoversIndicator, b: MoversIndicator): boolean {
+  return a.origin === b.origin || (a.gdpRatio && b.gdpRatio)
+}
+
+/** Every pair with enough countries in common, split into those (m2) counts and those D179 leaves out. */
+export function pairUp(indicators: MoversIndicator[]): { pairs: Array<{ a: number[]; b: number[] }>; excludedPairs: number } {
   const pairs: Array<{ a: number[]; b: number[] }> = []
+  let excludedPairs = 0
   for (let i = 0; i < indicators.length; i++) {
     for (let j = i + 1; j < indicators.length; j++) {
-      const left = indicators[i] as Leftovers
-      const right = indicators[j] as Leftovers
+      const left = indicators[i] as MoversIndicator
+      const right = indicators[j] as MoversIndicator
       const a: number[] = []
       const b: number[] = []
-      for (const [iso3, v] of left) {
-        const w = right.get(iso3)
+      for (const [iso3, v] of left.leftovers) {
+        const w = right.leftovers.get(iso3)
         if (w === undefined) continue
         a.push(v)
         b.push(w)
       }
-      if (a.length >= MOVERS_MIN_COUNTRIES) pairs.push({ a, b })
+      if (a.length < MOVERS_MIN_COUNTRIES) continue
+      if (sharesPrimaryData(left, right)) excludedPairs += 1
+      else pairs.push({ a, b })
     }
   }
+  return { pairs, excludedPairs }
+}
+
+/**
+ * (m2): the n-weighted mean correlation of leftovers over every indicator pair
+ * with enough countries in common and no shared primary data (D179), against a
+ * null that shuffles one side of each pair across its countries. Null when no
+ * pair qualifies.
+ */
+export function coherence(
+  indicators: MoversIndicator[],
+  { draws = DRAWS, seed = SEED }: { draws?: number; seed?: number } = {},
+): MoversCoherence | null {
+  const { pairs, excludedPairs } = pairUp(indicators)
   if (pairs.length === 0) return null
 
   const weighted = (rs: number[]) => {
@@ -127,6 +146,7 @@ export function coherence(
   const p95 = quantile(nulls, 0.95)
   return {
     pairs: pairs.length,
+    excludedPairs,
     n: pairs.reduce((s, p) => s + p.a.length, 0),
     statistic: round(statistic, 3),
     nullMean: round(mean(nulls), 3),
@@ -154,6 +174,15 @@ export function moversVerdict(readings: Partial<Record<Dimension, MoversDimensio
   if (apart >= 2) return 'holds'
   if (apart === 0 && readable >= 5) return 'fails'
   return 'unreadable'
+}
+
+/** The registry unit of a ratio to GDP, the second clause of D179. */
+const GDP_RATIO_UNIT = '% of GDP'
+
+/** A scored row without an origin cannot be paired safely, so the command stops (D179). */
+function originOf(def: IndicatorDef): string {
+  if (!def.source.origin) throw new Error(`movers: ${def.id} has no source.origin in the registry; D179 needs one on every scored row.`)
+  return def.source.origin
 }
 
 /** Residuals of each value on income change, keyed by country. */
@@ -191,9 +220,11 @@ export function syntheticCheck(): MoversFile['synthetic'] {
     for (let k = 0; k < SYNTHETIC_DATASETS; k++) {
       const income = iso.map(() => 0.1 * gaussian(random))
       const shared = iso.map(() => common * gaussian(random))
-      const ls = [8, 15, 3].map((slope) =>
-        leftoversOf(iso.map((code, c) => ({ iso3: code, x: income[c] as number, y: slope * (income[c] as number) + (shared[c] as number) + gaussian(random) }))),
-      )
+      const ls = [8, 15, 3].map((slope, k) => ({
+        leftovers: leftoversOf(iso.map((code, c) => ({ iso3: code, x: income[c] as number, y: slope * (income[c] as number) + (shared[c] as number) + gaussian(random) }))),
+        origin: `synthetic ${k}`,
+        gdpRatio: false,
+      }))
       const c = coherence(ls, { draws: SYNTHETIC_DRAWS, seed: SEED + 10 + k }) as MoversCoherence
       if (c.reading === 'coherent') coherent += 1
     }
@@ -264,7 +295,7 @@ export function buildMovers(
 
       /* (m2): each indicator's own change on today's ruler, its leftover after income. */
       const defs = indicatorsFor(dimension).filter((d) => isScored(d) && frames.has(d.id))
-      const leftovers = defs.map((def: IndicatorDef) => {
+      const indicators = defs.map((def: IndicatorDef): MoversIndicator => {
         const frame = frames.get(def.id) as Frame
         const cells: Array<{ iso3: string; x: number; y: number }> = []
         for (const [iso3, x] of incomeChange) {
@@ -272,9 +303,14 @@ export function buildMovers(
           const now = normalizedAt(def, history, iso3, currentYear, MAX_AGE, frame)
           if (base && now) cells.push({ iso3, x, y: now.normalized - base.normalized })
         }
-        return cells.length >= MOVERS_MIN_COUNTRIES ? leftoversOf(cells) : new Map<string, number>()
+        return {
+          leftovers: cells.length >= MOVERS_MIN_COUNTRIES ? leftoversOf(cells) : new Map<string, number>(),
+          origin: originOf(def),
+          gdpRatio: def.unit === GDP_RATIO_UNIT,
+        }
       })
-      const m2 = coherence(leftovers.filter((l) => l.size > 0), { seed: SEED + span })
+      const usable = indicators.filter((x) => x.leftovers.size > 0)
+      const m2 = coherence(usable, { seed: SEED + span })
 
       /* The D174 estimate, full basket and filled, as a check on the fill. */
       let d174Fit: MoversFit | null = null
@@ -296,6 +332,7 @@ export function buildMovers(
           entered: rows.length,
           eligible: logBase.size,
           rWithLogGdp: entryCorrelation(new Set(rows.map((r) => r.iso3)), logBase),
+          excludedPairs: pairUp(usable).excludedPairs,
         },
         countries: rows.map((r, i) => ({
           iso3: r.iso3,

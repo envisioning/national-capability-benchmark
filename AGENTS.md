@@ -291,7 +291,11 @@ port 3888. That entry starts Next directly and does not use the proxy.
   is a rate over generated datasets (D177): if it misses a bound the command
   throws and writes nothing. `countries` rows are per-country changes after
   income and stay offline under D65: nothing in the viewer reads the file.
-  A rule change is a new decision made before its result is read.
+  (m2) never pairs two rows that share primary data: the same
+  `source.origin` or both `% of GDP` (D179). Every scored row in the
+  registry carries an origin from `ORIGIN` in `indicators.ts`; a new scored
+  row needs one, or `bench movers` stops. A rule change is a new decision
+  made before its result is read.
 - The wealth residual is never summed across dimensions. `ResidualFile` has no
   country-level field, `buildResidual` in
   `packages/core/src/pipeline/residual.ts` computes one fit per dimension, and

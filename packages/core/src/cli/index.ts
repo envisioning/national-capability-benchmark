@@ -1115,7 +1115,7 @@ async function main() {
         console.log(`  ${span.span}-year span, ${span.baseYear} to ${span.endYear}`)
         for (const [dimension, d] of Object.entries(span.dimensions) as Array<[string, MoversDimension]>) {
           const m1 = d.m1 ? `r2 ${d.m1.r2.toFixed(2)} n=${d.m1.n} ${d.m1.reading}` : 'm1 -'
-          const m2 = d.m2 ? `coh ${d.m2.statistic.toFixed(3)}/${d.m2.nullP95.toFixed(3)} pairs=${d.m2.pairs} ${d.m2.reading}` : 'm2 -'
+          const m2 = d.m2 ? `coh ${d.m2.statistic.toFixed(3)}/${d.m2.nullP95.toFixed(3)} pairs=${d.m2.pairs}-${d.m2.excludedPairs} ${d.m2.reading}` : 'm2 -'
           const fill = d.d174 ? `d174 r2 ${d.d174.r2.toFixed(2)}` : 'd174 -'
           const cov = d.coverage.rWithLogGdp === null ? '-' : d.coverage.rWithLogGdp.toFixed(2)
           console.log(`    ${dimension.padEnd(16)} ${d.reading.padEnd(11)} ${m1.padEnd(30)} ${m2.padEnd(38)} ${fill.padEnd(12)} entry~gdp ${cov}`)

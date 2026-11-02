@@ -63,6 +63,13 @@ export const IndicatorSource = z.object({
   publisher: z.string(),
   /** Series or dataset identifier at the publisher, e.g. a World Bank series code. */
   series: z.string().optional(),
+  /**
+   * The body or system that collects the observations, which is often not the
+   * publisher that distributes them. Two rows with one origin can share
+   * measurement error, so the movers test never pairs them. Required on every
+   * scored row; the movers command fails without it. See D179.
+   */
+  origin: z.string().optional(),
   /** Stable id of a reproducible non-World-Bank adapter, where one exists. */
   adapter: z.string().optional(),
   url: z.string().url().optional(),
@@ -741,6 +748,8 @@ export type MoversFit = z.infer<typeof MoversFit>
 export const MoversCoherence = z.object({
   /** Indicator pairs with at least the minimum number of countries in common. */
   pairs: z.number().int(),
+  /** Pairs with enough countries that D179 left out because the rows share primary data. */
+  excludedPairs: z.number().int(),
   /** Country rows summed over those pairs, the weight of the statistic. */
   n: z.number().int(),
   /** Mean pairwise correlation of the leftovers, weighted by n. */
@@ -779,6 +788,8 @@ export const MoversDimension = z.object({
     eligible: z.number().int(),
     /** Correlation of entry (1 or 0) with log10 GDP per capita at the base year. */
     rWithLogGdp: z.number().nullable(),
+    /** Pairs D179 left out, kept here because `m2` is null when it leaves out every pair. */
+    excludedPairs: z.number().int(),
   }),
   countries: z.array(MoversCountryRow),
 })
