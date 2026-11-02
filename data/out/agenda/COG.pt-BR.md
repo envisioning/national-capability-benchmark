@@ -13,7 +13,7 @@ A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 | Coordenação | 66,1 | 0,4 (fraca) | sem tendência comparável |
 | Confiança | 43 | 0,34 (fraca) | sem tendência comparável |
 | Aprendizagem | 28,2 | 0,55 (utilizável) | sem tendência comparável |
-| Experimentação | sem pontuação | 0,09 (muito fraca) | sem tendência comparável |
+| Experimentação | 4,8 | 0,18 (muito fraca) | sem tendência comparável |
 | Adaptação | 10,5 | 0,46 (utilizável) | sem tendência comparável |
 | Construção | 26,1 | 0,57 (utilizável) | +1,6 em 10 anos, com base em 2 indicadores |
 | Propósito compartilhado | 22,6 | 0,13 (muito fraca) | sem tendência comparável |
@@ -73,14 +73,6 @@ Com que eficácia o país adquire, distribui e atualiza conhecimento?
 
 A solidez da evidência está abaixo da faixa utilizável, de modo que a pontuação diz pouco sobre o país enquanto faltarem dados.
 
-### Experimentação: solidez 0,09, muito fraca
-
-Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e melhoradas?
-
-- A pontuação se apoia em um indicador observado.
-- Lacunas declaradas: Operações de capital de risco, Empresas em sandboxes regulatórios, Empresas derivadas de pesquisa universitária.
-- Bases rejeitadas: Parcela empresarial do P&D.
-
 ### Propósito compartilhado: solidez 0,13, muito fraca
 
 Até que ponto as pessoas conseguem se ver como participantes de um projeto comum?
@@ -88,6 +80,14 @@ Até que ponto as pessoas conseguem se ver como participantes de um projeto comu
 - A pontuação se apoia em 2 indicadores observados.
 - Lacunas declaradas: Sentimento de pertencimento nacional, Voluntariado, Polarização política.
 - Bases rejeitadas: Voz e prestação de contas.
+
+### Experimentação: solidez 0,18, muito fraca
+
+Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e melhoradas?
+
+- A pontuação se apoia em 2 indicadores observados.
+- Lacunas declaradas: Operações de capital de risco, Empresas em sandboxes regulatórios, Empresas derivadas de pesquisa universitária.
+- Bases rejeitadas: Parcela empresarial do P&D.
 
 ### Confiança: solidez 0,34, fraca
 

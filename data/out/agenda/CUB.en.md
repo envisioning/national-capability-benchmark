@@ -13,7 +13,7 @@ The frame includes 125 countries. Each dimension is scored from 0 to 100, with n
 | Coordination | not scored | 0.1 (very thin) | no trend |
 | Trust | not scored | 0.07 (very thin) | no trend |
 | Learning | not scored | 0.16 (very thin) | no trend |
-| Experimentation | 2.5 | 0.32 (thin) | +0.6 over 10 years using 3 indicators |
+| Experimentation | 2.5 | 0.28 (thin) | +0.6 over 10 years using 3 indicators |
 | Adaptability | 55.8 | 0.46 (usable) | no trend |
 | Building | 20.8 | 0.29 (thin) | -27.5 over 10 years using 2 indicators |
 | Shared Purpose | not scored | 0.02 (very thin) | no trend |
@@ -68,6 +68,14 @@ How capable is the country of identifying and preparing for emerging change?
 - Uses one observed indicator.
 - Missing indicators: Government foresight capacity, Long-horizon research commitments.
 
+### Experimentation: confidence 0.28, thin
+
+How easily can new approaches be attempted, tested, abandoned, and improved?
+
+- Uses 3 observed indicators.
+- Missing indicators: Venture deals, Firms through regulatory sandboxes, University spinouts.
+- Rejected datasets: Business share of R&D.
+
 ### Building: confidence 0.29, thin
 
 How capable is the country of turning plans and knowledge into functioning systems?
@@ -75,14 +83,6 @@ How capable is the country of turning plans and knowledge into functioning syste
 - Uses 2 observed indicators.
 - Missing indicators: Large project delivery, Firm scale-up rate.
 - Rejected datasets: Logistics infrastructure quality, Electricity connection speed.
-
-### Experimentation: confidence 0.32, thin
-
-How easily can new approaches be attempted, tested, abandoned, and improved?
-
-- Uses 3 observed indicators.
-- Missing indicators: Venture deals, Firms through regulatory sandboxes, University spinouts.
-- Rejected datasets: Business share of R&D.
 
 ## What to keep watching
 

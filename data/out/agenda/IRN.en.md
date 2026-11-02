@@ -13,7 +13,7 @@ The frame includes 125 countries. Each dimension is scored from 0 to 100, with n
 | Coordination | not scored | 0.1 (very thin) | no trend |
 | Trust | 26.7 | 0.28 (thin) | no trend |
 | Learning | 37 | 0.32 (thin) | no trend |
-| Experimentation | 39.8 | 0.41 (thin) | -25.9 over 10 years using 3 indicators |
+| Experimentation | 39.8 | 0.37 (thin) | -25.9 over 10 years using 3 indicators |
 | Adaptability | 72.4 | 0.53 (usable) | no trend |
 | Building | 30.4 | 0.29 (thin) | +10.8 over 10 years using 2 indicators |
 | Shared Purpose | 72.1 | 0.26 (thin) | no trend |
@@ -74,6 +74,14 @@ How effectively does the country acquire, distribute, and update knowledge?
 - Uses 2 observed indicators.
 - Missing indicators: Adult learning participation.
 
+### Experimentation: confidence 0.37, thin
+
+How easily can new approaches be attempted, tested, abandoned, and improved?
+
+- Uses 4 observed indicators.
+- Missing indicators: Venture deals, Firms through regulatory sandboxes, University spinouts.
+- Rejected datasets: Business share of R&D.
+
 ### Agency: confidence 0.38, thin
 
 How able are individuals and organizations to turn an intention into action?
@@ -81,14 +89,6 @@ How able are individuals and organizations to turn an intention into action?
 - Uses 3 observed indicators.
 - Missing indicators: Adults doing digital tasks.
 - Rejected datasets: Time to start a business.
-
-### Experimentation: confidence 0.41, thin
-
-How easily can new approaches be attempted, tested, abandoned, and improved?
-
-- Uses 4 observed indicators.
-- Missing indicators: Venture deals, Firms through regulatory sandboxes, University spinouts.
-- Rejected datasets: Business share of R&D.
 
 ## What to keep watching
 

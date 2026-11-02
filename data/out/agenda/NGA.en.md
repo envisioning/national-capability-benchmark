@@ -13,7 +13,7 @@ The frame includes 125 countries. Each dimension is scored from 0 to 100, with n
 | Coordination | 39.3 | 0.29 (thin) | no trend |
 | Trust | 34.4 | 0.41 (thin) | no trend |
 | Learning | 24.3 | 0.55 (usable) | no trend |
-| Experimentation | 2.9 | 0.3 (thin) | no trend |
+| Experimentation | 2.9 | 0.27 (thin) | no trend |
 | Adaptability | 44 | 0.62 (usable) | no trend |
 | Building | 9.1 | 0.48 (usable) | -0.6 over 10 years using 3 indicators |
 | Shared Purpose | 49 | 0.4 (thin) | +6.7 over 10 years using 2 indicators |
@@ -63,6 +63,14 @@ How effectively can the system respond when circumstances change?
 
 The evidence is too thin to manage these dimensions confidently.
 
+### Experimentation: confidence 0.27, thin
+
+How easily can new approaches be attempted, tested, abandoned, and improved?
+
+- Uses 4 observed indicators.
+- Missing indicators: Venture deals, Firms through regulatory sandboxes, University spinouts.
+- Rejected datasets: Business share of R&D.
+
 ### Coordination: confidence 0.29, thin
 
 How effectively can independent actors organize around shared objectives?
@@ -70,14 +78,6 @@ How effectively can independent actors organize around shared objectives?
 - Uses 2 observed indicators.
 - Missing indicators: University-industry collaboration, Public-private collaboration.
 - Rejected datasets: Government effectiveness, Regulatory quality, Logistics performance, Border compliance time to export.
-
-### Experimentation: confidence 0.3, thin
-
-How easily can new approaches be attempted, tested, abandoned, and improved?
-
-- Uses 4 observed indicators.
-- Missing indicators: Venture deals, Firms through regulatory sandboxes, University spinouts.
-- Rejected datasets: Business share of R&D.
 
 ### Shared Purpose: confidence 0.4, thin
 

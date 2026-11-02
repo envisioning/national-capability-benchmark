@@ -13,7 +13,7 @@ The frame includes 125 countries. Each dimension is scored from 0 to 100, with n
 | Coordination | 72.4 | 0.45 (usable) | no trend |
 | Trust | 26.4 | 0.55 (usable) | no trend |
 | Learning | 46.5 | 0.55 (usable) | no trend |
-| Experimentation | 9.8 | 0.41 (thin) | +1 over 10 years using 3 indicators |
+| Experimentation | 13.4 | 0.47 (usable) | +1 over 10 years using 3 indicators |
 | Adaptability | 64.7 | 0.62 (usable) | no trend |
 | Building | 27.4 | 0.63 (usable) | -1 over 10 years using 3 indicators |
 | Shared Purpose | 39.1 | 0.41 (thin) | -3.3 over 10 years using 2 indicators |
@@ -21,6 +21,16 @@ The frame includes 125 countries. Each dimension is scored from 0 to 100, with n
 ## What to raise
 
 These are the lowest scores with usable evidence. Thin evidence appears below.
+
+### Experimentation: 13.4, confidence usable
+
+How easily can new approaches be attempted, tested, abandoned, and improved?
+
+- Uses 5 observed indicators.
+- Highest usable scores: South Korea 75, United Kingdom 70, Switzerland 68.8.
+- Related deliveries in other countries: The FCA regulatory sandbox (United Kingdom); Yozma, the venture capital catalyst (Israel); Korean regulatory-sandbox system across eight sectors (South Korea); MAS FinTech Regulatory Sandbox variants (Singapore); British Patient Capital, a public venture-capital catalyst (United Kingdom); ICURe, from university research to spinouts (United Kingdom); Portugal Ventures, a public venture-capital bridge (Portugal); Rede Nacional de Test Beds for company experimentation (Portugal); Zonas Livres Tecnológicas, regulator-supervised experimentation zones (Portugal); Banco Central regulatory sandbox, first cycle (Brazil); Reserve Bank of India regulatory sandbox (India); Capital Markets Authority regulatory sandbox (Kenya); SEC Nigeria Regulatory Incubation Program (Nigeria); ADGM RegLab, the first fintech sandbox in the region (United Arab Emirates); OJK regulatory sandbox for financial-sector technological innovation (Indonesia); Bank Negara Malaysia Fintech Regulatory Sandbox (Malaysia); Bank of Thailand regulatory sandbox (Thailand); Sandbox financiero (Ley 7/2020), and the fall in applications (Spain); IFWG Regulatory Sandbox (South Africa); Project-based regulatory sandbox (new technology demonstration scheme) (Japan); CFPB Compliance Assistance Sandbox, rescinded in 2022 and withdrawn again in 2025 (United States); CSA Regulatory Sandbox, succeeded by the Financial Innovation Hub (Canada); ASIC enhanced regulatory sandbox (Australia); SINTEG-Verordnung, the energy-transition experimentation clause (Germany); Experimenten Elektriciteitswet 2015-2018, and its erosion (Netherlands); Bac à sable réglementaire in the energy sector (France); Italy's FinTech regulatory sandbox, and its contraction (Italy); Bank of Ghana Regulatory Sandbox (Ghana); AFSA FinTech Lab at the Astana International Financial Centre (Kazakhstan); Banque Centrale de Tunisie regulatory sandbox, first cohort (Tunisia); Sandbox Regulatório do Banco de Moçambique (Mozambique); Regulatory Sandbox Licence of the Economic Development Board (Mauritius); Bank of Uganda regulatory sandbox (Uganda); Regulatory Sandbox Framework for Capital Markets, first cohort (Zambia); Securities and Exchange Commission of Zimbabwe regulatory sandbox (Zimbabwe); FMA Regulatory Sandbox (Austria); Regulatorisk sandkasse for AI (Datatilsynet and Digitaliseringsstyrelsen) (Denmark); Datatilsynet's regulatory sandbox for privacy-friendly innovation (Norway); Bank of Lithuania regulatory sandbox, with one test in seven years (Lithuania); Narodna banka Slovenska regulatory sandbox (Slovakia); Sandbox for AI and blockchain products, Ministry of Digital Transformation and Ukrainian Startup Fund (Ukraine); Bank of Russia regulatory sandbox (regulativnaya pesochnitsa) (Russia); JoRegBox, the Central Bank of Jordan regulatory sandbox (Jordan); Special regulatory regimes (spetsialnye regulyativnye rezhimy) of the National Bank of the Kyrgyz Republic (Kyrgyzstan); SECP Regulatory Sandbox, four cohorts and an open window (Pakistan); Bank of Jamaica FinTech Regulatory Sandbox (Jamaica); Financial Regulatory Commission sandbox regulatory environment (Mongolia); NAMFISA Regulatory Sandbox, microlending cohort (Namibia); Central Bank of Azerbaijan regulatory sandbox (Azerbaijan); FRA Sandbox of the Financial Regulatory Authority (Egypt); Mohit-e azmoon-e tanzimgari (regulatory sandbox) of the Central Bank of the Islamic Republic of Iran (Iran); Regulatory sandbox (special legal regime) in the capital market of the National Agency of Perspective Projects (Uzbekistan); BRUGEL derogation framework for innovative energy projects (projets innovants) (Belgium); FMA regulatory sandbox pilot (New Zealand); Regulatory Laboratory (regulatory sandbox) of the National Bank of Georgia (Georgia); Energy Sandbox (spatii de testare inovativa in domeniul energiei) (Moldova).
+- Missing indicators: Venture deals, Firms through regulatory sandboxes, University spinouts.
+- Rejected datasets: Business share of R&D.
 
 ### Trust: 26.4, confidence usable
 
@@ -81,14 +91,6 @@ To what extent can people imagine themselves as participants in a common project
 - Uses 3 observed indicators.
 - Missing indicators: Sense of national belonging, Volunteering, Political polarisation.
 - Rejected datasets: Voice and accountability.
-
-### Experimentation: confidence 0.41, thin
-
-How easily can new approaches be attempted, tested, abandoned, and improved?
-
-- Uses 4 observed indicators.
-- Missing indicators: Venture deals, Firms through regulatory sandboxes, University spinouts.
-- Rejected datasets: Business share of R&D.
 
 ## What to keep watching
 

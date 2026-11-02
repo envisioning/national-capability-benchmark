@@ -13,7 +13,7 @@ The frame includes 125 countries. Each dimension is scored from 0 to 100, with n
 | Coordination | 96.9 | 0.29 (thin) | no trend |
 | Trust | 90.3 | 0.55 (usable) | no trend |
 | Learning | 79.5 | 0.55 (usable) | no trend |
-| Experimentation | 47.7 | 0.41 (thin) | -8.5 over 10 years using 3 indicators |
+| Experimentation | 56.9 | 0.47 (usable) | -8.5 over 10 years using 3 indicators |
 | Adaptability | 68.8 | 0.62 (usable) | no trend |
 | Building | 38.6 | 0.63 (usable) | -2.6 over 10 years using 3 indicators |
 | Shared Purpose | 72.7 | 0.42 (thin) | -1.2 over 10 years using 2 indicators |
@@ -44,14 +44,6 @@ How effectively can independent actors organize around shared objectives?
 - Missing indicators: University-industry collaboration, Public-private collaboration.
 - Rejected datasets: Government effectiveness, Regulatory quality, Logistics performance, Border compliance time to export.
 
-### Experimentation: confidence 0.41, thin
-
-How easily can new approaches be attempted, tested, abandoned, and improved?
-
-- Uses 4 observed indicators.
-- Missing indicators: Venture deals, Firms through regulatory sandboxes, University spinouts.
-- Rejected datasets: Business share of R&D.
-
 ### Shared Purpose: confidence 0.42, thin
 
 To what extent can people imagine themselves as participants in a common project?
@@ -69,6 +61,7 @@ These dimensions score at least 50 with usable evidence.
 - Learning: 79.5, confidence usable
 - Adaptability: 68.8, confidence usable
 - Agency: 65.3, confidence usable
+- Experimentation: 56.9, confidence usable
 
 ## What Sweden has to work with
 

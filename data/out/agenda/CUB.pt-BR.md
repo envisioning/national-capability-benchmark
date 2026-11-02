@@ -13,7 +13,7 @@ A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 | Coordenação | sem pontuação | 0,1 (muito fraca) | sem tendência comparável |
 | Confiança | sem pontuação | 0,07 (muito fraca) | sem tendência comparável |
 | Aprendizagem | sem pontuação | 0,16 (muito fraca) | sem tendência comparável |
-| Experimentação | 2,5 | 0,32 (fraca) | +0,6 em 10 anos, com base em 3 indicadores |
+| Experimentação | 2,5 | 0,28 (fraca) | +0,6 em 10 anos, com base em 3 indicadores |
 | Adaptação | 55,8 | 0,46 (utilizável) | sem tendência comparável |
 | Construção | 20,8 | 0,29 (fraca) | -27,5 em 10 anos, com base em 2 indicadores |
 | Propósito compartilhado | sem pontuação | 0,02 (muito fraca) | sem tendência comparável |
@@ -68,6 +68,14 @@ Em que medida o país consegue identificar mudanças emergentes e se preparar pa
 - A pontuação se apoia em um indicador observado.
 - Lacunas declaradas: Capacidade governamental de prospecção, Compromissos de pesquisa de longo prazo.
 
+### Experimentação: solidez 0,28, fraca
+
+Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e melhoradas?
+
+- A pontuação se apoia em 3 indicadores observados.
+- Lacunas declaradas: Operações de capital de risco, Empresas em sandboxes regulatórios, Empresas derivadas de pesquisa universitária.
+- Bases rejeitadas: Parcela empresarial do P&D.
+
 ### Construção: solidez 0,29, fraca
 
 Em que medida o país consegue transformar planos e conhecimento em sistemas que funcionam?
@@ -75,14 +83,6 @@ Em que medida o país consegue transformar planos e conhecimento em sistemas que
 - A pontuação se apoia em 2 indicadores observados.
 - Lacunas declaradas: Entrega de grandes projetos, Empresas jovens que ganham escala.
 - Bases rejeitadas: Qualidade da infraestrutura logística, Tempo de conexão à rede elétrica.
-
-### Experimentação: solidez 0,32, fraca
-
-Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e melhoradas?
-
-- A pontuação se apoia em 3 indicadores observados.
-- Lacunas declaradas: Operações de capital de risco, Empresas em sandboxes regulatórios, Empresas derivadas de pesquisa universitária.
-- Bases rejeitadas: Parcela empresarial do P&D.
 
 ## Dimensões com as pontuações mais altas
 

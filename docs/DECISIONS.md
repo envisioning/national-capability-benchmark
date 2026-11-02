@@ -9524,3 +9524,64 @@ differs from a later World Bank value for the same year by more than five
 points of GDP, which would show the two definitions do not meet for that
 country; or a regional co-publisher stating ownership of GRS values in the
 dataflow metadata.
+
+## D173 — Experimentation scores B-READY insolvency efficiency, with zero as a value
+
+*Recorded 2026-11-02. Owner ruling of 2026-11-02 on #111. Applies D118 and
+D167's pillar rule. Memos: `docs/research/experimentation/SWEEP-2026-11.md`
+and `docs/research/B-READY-PILLAR-MAP.md`, section 4.6. Dataset 9.6.0.*
+
+**Decision.** Experimentation scores `insolvency_efficiency`: World Bank
+`IC.BRE.BI.P3`, the third pillar of B-READY business insolvency, the time
+and cost of in-court liquidation and reorganisation. It is class `C`,
+`higher_better`, and it does not carry `zeroIsMissing`: a published 0 is a
+value.
+
+**Why.** Experimentation asks whether a country tries many things and
+tolerates failure. The registry's `failure_tolerance` row reads fear of
+failure as an attitude, for 16 countries, and its note named the cost and
+time of exit through the courts as the observable substitute. This pillar is
+that substitute, measured in practice: how cheaply a failed venture can
+close. It is an institutional outcome, not a stock money buys. Trust was the
+other home, because these are court proceedings, but the pillar prices the
+exit of a debtor, not the enforcement of a contract. mz ruled for
+Experimentation.
+
+**The zero.** The B-READY handbook gives an economy a "no practice" mark and
+a zero on the time and cost indicators of a proceeding when no case of it
+closed in the past three years. A pillar of exactly 0 means neither
+liquidation nor reorganisation closed a case, so the formal exit is not in
+use. That is an observation inside the construct, unlike the placeholder
+zeros D157 drops. Eight countries read 0: Angola, Azerbaijan, the Democratic
+Republic of the Congo, Laos, Lesotho, Nepal, the Philippines and El
+Salvador. The handbook removes "no practice" economies before it sets its
+scoring bounds, so a zero does not compress the other scores. A country with
+one proceeding at zero scores at most 50, and the published series does not
+show which; the row note says so.
+
+**Probe.** World Development Indicators, database 2, 2026-11-02: 74 of 125
+at 2025, by income quartile 16, 19, 21 and 18, poorest first, CC BY 4.0.
+Correlation with log GDP per capita 0.504 with the zeros and 0.420 without
+(n 66). The highest correlation with an Experimentation row is 0.182, with
+resident trademarks.
+
+**Result.** Experimentation's mean confidence moves from 0.391 to 0.409 and
+meets O1. Mali, Burkina Faso and the Republic of the Congo reach two rows and
+publish a score, so all 125 do. The correlation of the dimension with log GDP
+moves from 0.739 to 0.751. The guardrail falls from 0.436 to 0.414. The
+shared factor reads 0.501 of the variance over 115 complete countries, r
+0.828 with income (0.488 and 0.830 over 112 on 9.5.0).
+
+**Cost.** Brazil and the other 50 countries B-READY has not reached gain no
+row and their coverage denominator grows, so their Experimentation
+confidence falls: Brazil from 0.60 to 0.54, its score unchanged at 31.9.
+Part of the guardrail fall is this loss in uncovered rich countries, not a
+gain in poorer ones. This is the fifth B-READY row on the same 74 countries
+(A6), so confidence comes to follow membership in one survey round more
+closely. Under D160 no Experimentation panel cell carries.
+
+**Overturned by.** A later B-READY round that changes the "no practice" rule
+so a zero no longer means no closed case; evidence that the pillar's cost
+term mostly reads fixed court fees set by statute rather than the time of the
+process; or the 2026 round leaving the 74 countries' coverage under the
+half-frame gate.

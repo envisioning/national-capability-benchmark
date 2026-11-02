@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-02T15:31:40.418Z",
+  "generatedAt": "2026-11-02T16:13:53.226Z",
   "iso3": "ISR",
   "country": "Israel",
   "dimensions": [
@@ -2557,10 +2557,10 @@
     },
     {
       "dimension": "experimentation",
-      "kind": "measure",
-      "score": 43.7,
-      "confidence": 0.411,
-      "band": "thin",
+      "kind": "raise",
+      "score": 45,
+      "confidence": 0.465,
+      "band": "usable",
       "trend": {
         "spanYears": 10,
         "delta": -16.8,
@@ -2571,7 +2571,8 @@
         "resident_patents_per_million",
         "resident_trademarks_per_million",
         "resident_industrial_designs_per_million",
-        "new_repositories_per_million"
+        "new_repositories_per_million",
+        "insolvency_efficiency"
       ],
       "gaps": [
         "venture_capital_gdp",
@@ -2585,20 +2586,20 @@
         {
           "iso3": "KOR",
           "country": "South Korea",
-          "score": 73.5,
-          "confidence": 0.6
+          "score": 75,
+          "confidence": 0.635
+        },
+        {
+          "iso3": "GBR",
+          "country": "United Kingdom",
+          "score": 70,
+          "confidence": 0.465
         },
         {
           "iso3": "CHE",
           "country": "Switzerland",
           "score": 68.8,
-          "confidence": 0.6
-        },
-        {
-          "iso3": "USA",
-          "country": "United States",
-          "score": 51.3,
-          "confidence": 0.6
+          "confidence": 0.54
         }
       ],
       "evidenceElsewhere": [

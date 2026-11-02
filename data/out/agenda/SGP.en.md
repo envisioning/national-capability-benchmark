@@ -13,7 +13,7 @@ The frame includes 125 countries. Each dimension is scored from 0 to 100, with n
 | Coordination | 70.9 | 0.47 (usable) | no trend |
 | Trust | 67.2 | 0.54 (usable) | no trend |
 | Learning | 84.2 | 0.54 (usable) | no trend |
-| Experimentation | 60.9 | 0.43 (thin) | +0.1 over 10 years using 3 indicators |
+| Experimentation | 63.4 | 0.48 (usable) | +0.1 over 10 years using 3 indicators |
 | Adaptability | 72.6 | 0.62 (usable) | no trend |
 | Building | 76.1 | 0.63 (usable) | +6.5 over 10 years using 3 indicators |
 | Shared Purpose | 32.3 | 0.28 (thin) | no trend |
@@ -30,14 +30,6 @@ To what extent can people imagine themselves as participants in a common project
 - Missing indicators: Sense of national belonging, Volunteering, Political polarisation.
 - Rejected datasets: Voice and accountability.
 
-### Experimentation: confidence 0.43, thin
-
-How easily can new approaches be attempted, tested, abandoned, and improved?
-
-- Uses 6 observed indicators.
-- Missing indicators: Venture deals, Firms through regulatory sandboxes, University spinouts.
-- Rejected datasets: Business share of R&D.
-
 ## What to keep watching
 
 These dimensions score at least 50 with usable evidence.
@@ -49,6 +41,7 @@ These dimensions score at least 50 with usable evidence.
 - Adaptability: 72.6, confidence usable
 - Coordination: 70.9, confidence usable
 - Trust: 67.2, confidence usable
+- Experimentation: 63.4, confidence usable
 
 ## What Singapore has to work with
 

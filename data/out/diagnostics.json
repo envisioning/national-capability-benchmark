@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-02T15:31:32.245Z",
+  "generatedAt": "2026-11-02T16:13:44.392Z",
   "gdpSeries": "NY.GDP.PCAP.PP.KD",
   "income": [
     {
@@ -651,9 +651,9 @@
     },
     {
       "dimension": "experimentation",
-      "pearson": 0.739,
-      "spearman": 0.874,
-      "n": 120
+      "pearson": 0.751,
+      "spearman": 0.847,
+      "n": 123
     },
     {
       "dimension": "adaptability",
@@ -677,27 +677,27 @@
   "dimensionPairs": [
     {
       "a": "anticipation",
+      "b": "experimentation",
+      "r": 0.776,
+      "n": 124
+    },
+    {
+      "a": "anticipation",
       "b": "learning",
       "r": 0.759,
       "n": 123
     },
     {
-      "a": "anticipation",
-      "b": "experimentation",
-      "r": 0.745,
-      "n": 121
-    },
-    {
       "a": "learning",
       "b": "experimentation",
-      "r": 0.674,
-      "n": 120
+      "r": 0.707,
+      "n": 123
     },
     {
       "a": "experimentation",
       "b": "building",
-      "r": 0.645,
-      "n": 121
+      "r": 0.673,
+      "n": 124
     },
     {
       "a": "anticipation",
@@ -754,6 +754,12 @@
       "n": 120
     },
     {
+      "a": "agency",
+      "b": "experimentation",
+      "r": 0.495,
+      "n": 121
+    },
+    {
       "a": "learning",
       "b": "building",
       "r": 0.481,
@@ -766,34 +772,28 @@
       "n": 120
     },
     {
+      "a": "experimentation",
+      "b": "adaptability",
+      "r": 0.438,
+      "n": 125
+    },
+    {
       "a": "anticipation",
       "b": "shared_purpose",
       "r": 0.437,
       "n": 121
     },
     {
-      "a": "experimentation",
-      "b": "adaptability",
-      "r": 0.431,
-      "n": 122
-    },
-    {
-      "a": "agency",
-      "b": "experimentation",
-      "r": 0.425,
-      "n": 118
-    },
-    {
       "a": "coordination",
       "b": "experimentation",
-      "r": 0.41,
-      "n": 117
+      "r": 0.434,
+      "n": 120
     },
     {
       "a": "trust",
       "b": "experimentation",
-      "r": 0.385,
-      "n": 119
+      "r": 0.427,
+      "n": 122
     },
     {
       "a": "learning",
@@ -862,6 +862,12 @@
       "n": 121
     },
     {
+      "a": "experimentation",
+      "b": "shared_purpose",
+      "r": 0.242,
+      "n": 121
+    },
+    {
       "a": "trust",
       "b": "adaptability",
       "r": 0.215,
@@ -872,12 +878,6 @@
       "b": "adaptability",
       "r": 0.21,
       "n": 121
-    },
-    {
-      "a": "experimentation",
-      "b": "shared_purpose",
-      "r": 0.198,
-      "n": 118
     },
     {
       "a": "agency",
@@ -908,25 +908,13 @@
         "building",
         "shared_purpose"
       ],
-      "countries": 112,
+      "countries": 115,
       "dropped": [
         {
           "iso3": "ARE",
           "missing": [
             "coordination",
             "trust"
-          ]
-        },
-        {
-          "iso3": "BFA",
-          "missing": [
-            "experimentation"
-          ]
-        },
-        {
-          "iso3": "COG",
-          "missing": [
-            "experimentation"
           ]
         },
         {
@@ -958,12 +946,6 @@
           "iso3": "IRN",
           "missing": [
             "coordination"
-          ]
-        },
-        {
-          "iso3": "MLI",
-          "missing": [
-            "experimentation"
           ]
         },
         {
@@ -1000,45 +982,45 @@
         }
       ],
       "eigenvalues": [
-        4.391,
-        1.169,
-        0.911,
-        0.872,
-        0.472,
-        0.414,
-        0.368,
-        0.242,
-        0.161
+        4.512,
+        1.127,
+        0.91,
+        0.851,
+        0.46,
+        0.419,
+        0.354,
+        0.212,
+        0.155
       ],
-      "firstFactorShare": 0.488,
+      "firstFactorShare": 0.501,
       "loadings": [
         {
           "dimension": "anticipation",
-          "loading": 0.92
+          "loading": 0.921
         },
         {
           "dimension": "agency",
-          "loading": 0.565
+          "loading": 0.588
         },
         {
           "dimension": "coordination",
-          "loading": 0.648
+          "loading": 0.641
         },
         {
           "dimension": "trust",
-          "loading": 0.653
+          "loading": 0.652
         },
         {
           "dimension": "learning",
-          "loading": 0.865
+          "loading": 0.866
         },
         {
           "dimension": "experimentation",
-          "loading": 0.815
+          "loading": 0.849
         },
         {
           "dimension": "adaptability",
-          "loading": 0.539
+          "loading": 0.563
         },
         {
           "dimension": "building",
@@ -1046,122 +1028,122 @@
         },
         {
           "dimension": "shared_purpose",
-          "loading": 0.46
+          "loading": 0.476
         }
       ],
       "income": {
-        "r": 0.83,
-        "rSquared": 0.69,
-        "n": 112
+        "r": 0.828,
+        "rSquared": 0.686,
+        "n": 115
       },
       "chance": {
         "draws": 2000,
         "seed": 20261001,
-        "mean": 0.162,
-        "p95": 0.178
+        "mean": 0.161,
+        "p95": 0.177
       }
     },
     "nearFull": null
   },
   "residualStructure": {
-    "completeCases": 112,
-    "excluded": 13,
+    "completeCases": 115,
+    "excluded": 10,
     "structure": {
-      "countries": 112,
+      "countries": 115,
       "eigenvalues": [
-        2.644,
-        1.478,
-        1.16,
-        1.084,
-        0.649,
-        0.558,
-        0.534,
-        0.497,
-        0.395
+        2.749,
+        1.425,
+        1.162,
+        1.107,
+        0.625,
+        0.565,
+        0.543,
+        0.439,
+        0.384
       ],
-      "firstFactorShare": 0.294,
+      "firstFactorShare": 0.305,
       "loadings": [
         {
           "dimension": "anticipation",
-          "loading": 0.801
+          "loading": 0.799
         },
         {
           "dimension": "agency",
-          "loading": 0.286
+          "loading": 0.347
         },
         {
           "dimension": "coordination",
-          "loading": 0.645
+          "loading": 0.613
         },
         {
           "dimension": "trust",
-          "loading": 0.651
+          "loading": 0.63
         },
         {
           "dimension": "learning",
-          "loading": 0.747
+          "loading": 0.737
         },
         {
           "dimension": "experimentation",
-          "loading": 0.469
+          "loading": 0.588
         },
         {
           "dimension": "adaptability",
-          "loading": 0.144
+          "loading": 0.156
         },
         {
           "dimension": "building",
-          "loading": 0.226
+          "loading": 0.236
         },
         {
           "dimension": "shared_purpose",
-          "loading": 0.482
+          "loading": 0.498
         }
       ],
       "chance": {
         "draws": 2000,
         "seed": 20261001,
         "mean": 0.162,
-        "p95": 0.179
+        "p95": 0.177
       },
       "permutation": {
         "draws": 2000,
         "seed": 20261002,
-        "mean": 0.162,
-        "p95": 0.178
+        "mean": 0.161,
+        "p95": 0.177
       },
       "reading": "structure"
     },
     "peers": {
-      "countries": 112,
+      "countries": 115,
       "peerCount": 10,
-      "observedMean": 1.434,
+      "observedMean": 1.403,
       "incomeNull": {
         "draws": 2000,
         "seed": 20261004,
-        "mean": 1.469,
-        "p5": 1.426,
-        "p95": 1.51
+        "mean": 1.442,
+        "p5": 1.397,
+        "p95": 1.482
       },
-      "shapeShare": 0.233,
+      "shapeShare": 0.224,
       "shapeNull": {
         "draws": 2000,
         "seed": 20261003,
         "mean": 0.176,
         "p5": 0.161,
-        "p95": 0.194
+        "p95": 0.192
       },
       "noiseFloor": {
         "draws": 2000,
         "seed": 20261003,
-        "mean": 1.778,
-        "p5": 1.712,
-        "p95": 1.839
+        "mean": 1.779,
+        "p5": 1.716,
+        "p95": 1.84
       },
-      "shareBeyond": 0.027,
+      "shareBeyond": 0.026,
       "shareNull": {
         "mean": 0.05,
-        "p95": 0.08
+        "p95": 0.078
       },
       "reading": "differ"
     },
@@ -1202,9 +1184,10 @@
           "9.2.0",
           "9.3.0",
           "9.4.0",
-          "9.5.0"
+          "9.5.0",
+          "9.6.0"
         ],
-        "pairs": 31,
+        "pairs": 32,
         "perDimension": [
           {
             "dimension": "anticipation",
@@ -1243,10 +1226,10 @@
           },
           {
             "dimension": "experimentation",
-            "pairs": 6,
-            "mean": 0.966,
-            "min": 0.912,
-            "minCountries": 50
+            "pairs": 7,
+            "mean": 0.958,
+            "min": 0.907,
+            "minCountries": 120
           },
           {
             "dimension": "adaptability",
@@ -1306,9 +1289,9 @@
           },
           {
             "dimension": "experimentation",
-            "n": 120,
-            "maxSlopeShiftSe": 0.316,
-            "maxResidualShiftSd": 0.083
+            "n": 123,
+            "maxSlopeShiftSe": 0.309,
+            "maxResidualShiftSd": 0.072
           },
           {
             "dimension": "adaptability",
@@ -1333,10 +1316,10 @@
       }
     },
     "incomeShare": {
-      "countries": 112,
-      "mean": 0.273,
-      "median": 0.288,
-      "pooled": 0.399,
+      "countries": 115,
+      "mean": 0.267,
+      "median": 0.346,
+      "pooled": 0.405,
       "reading": "part"
     },
     "weakClaim": "holds"
@@ -1436,6 +1419,14 @@
       "measurementClass": "O",
       "r": 0.533,
       "wealthProxyPrior": 0.5,
+      "flaggedAsWealthProxy": false
+    },
+    {
+      "indicatorId": "insolvency_efficiency",
+      "dimension": "experimentation",
+      "measurementClass": "C",
+      "r": 0.504,
+      "wealthProxyPrior": 0.2,
       "flaggedAsWealthProxy": false
     },
     {
@@ -1689,9 +1680,9 @@
     {
       "indicatorId": "new_repositories_per_million",
       "dimension": "experimentation",
-      "dimensionR": 0.745,
-      "dimensionRWithout": 0.666,
-      "delta": 0.08
+      "dimensionR": 0.751,
+      "dimensionRWithout": 0.675,
+      "delta": 0.076
     },
     {
       "indicatorId": "dispute_resolution_efficiency",
@@ -1738,8 +1729,8 @@
     {
       "indicatorId": "resident_patents_per_million",
       "dimension": "experimentation",
-      "dimensionR": 0.745,
-      "dimensionRWithout": 0.728,
+      "dimensionR": 0.751,
+      "dimensionRWithout": 0.733,
       "delta": 0.018
     },
     {
@@ -1759,9 +1750,9 @@
     {
       "indicatorId": "resident_trademarks_per_million",
       "dimension": "experimentation",
-      "dimensionR": 0.745,
-      "dimensionRWithout": 0.73,
-      "delta": 0.015
+      "dimensionR": 0.751,
+      "dimensionRWithout": 0.735,
+      "delta": 0.016
     },
     {
       "indicatorId": "budget_execution_fidelity",
@@ -1773,9 +1764,16 @@
     {
       "indicatorId": "early_stage_entrepreneurial_activity",
       "dimension": "experimentation",
-      "dimensionR": 0.745,
-      "dimensionRWithout": 0.736,
+      "dimensionR": 0.751,
+      "dimensionRWithout": 0.742,
       "delta": 0.009
+    },
+    {
+      "indicatorId": "insolvency_efficiency",
+      "dimension": "experimentation",
+      "dimensionR": 0.751,
+      "dimensionRWithout": 0.745,
+      "delta": 0.005
     },
     {
       "indicatorId": "perceived_control",
@@ -1787,8 +1785,8 @@
     {
       "indicatorId": "failure_tolerance",
       "dimension": "experimentation",
-      "dimensionR": 0.745,
-      "dimensionRWithout": 0.745,
+      "dimensionR": 0.751,
+      "dimensionRWithout": 0.751,
       "delta": 0
     },
     {
@@ -1815,9 +1813,9 @@
     {
       "indicatorId": "resident_industrial_designs_per_million",
       "dimension": "experimentation",
-      "dimensionR": 0.745,
-      "dimensionRWithout": 0.783,
-      "delta": -0.038
+      "dimensionR": 0.751,
+      "dimensionRWithout": 0.782,
+      "delta": -0.031
     },
     {
       "indicatorId": "unemployment_rate",
@@ -1919,13 +1917,13 @@
       },
       {
         "dimension": "experimentation",
-        "panelR": 0.784,
-        "panelSpearman": 0.856,
-        "panelN": 123,
-        "indicatorR": 0.739,
-        "indicatorN": 120,
-        "delta": 0.045,
-        "flaggedAsWealthProxy": true,
+        "panelR": null,
+        "panelSpearman": null,
+        "panelN": 0,
+        "indicatorR": null,
+        "indicatorN": 0,
+        "delta": null,
+        "flaggedAsWealthProxy": false,
         "backfillCandidate": false
       },
       {
@@ -1964,11 +1962,11 @@
     ]
   },
   "delphiApplication": {
-    "datasetVersion": "9.5.0",
+    "datasetVersion": "9.6.0",
     "sourceDatasetVersion": "9.4.0",
     "mode": "carried",
     "cells": 1125,
-    "carried": 990,
+    "carried": 865,
     "dropped": [
       {
         "iso3": "AGO",
@@ -2596,6 +2594,631 @@
         "reason": "brief_changed"
       },
       {
+        "iso3": "AGO",
+        "dimension": "experimentation",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "ALB",
+        "dimension": "experimentation",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "ARE",
+        "dimension": "experimentation",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "ARG",
+        "dimension": "experimentation",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "ARM",
+        "dimension": "experimentation",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "AUS",
+        "dimension": "experimentation",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "AUT",
+        "dimension": "experimentation",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "AZE",
+        "dimension": "experimentation",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "BDI",
+        "dimension": "experimentation",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "BEL",
+        "dimension": "experimentation",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "BFA",
+        "dimension": "experimentation",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "BGD",
+        "dimension": "experimentation",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "BGR",
+        "dimension": "experimentation",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "BIH",
+        "dimension": "experimentation",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "BLR",
+        "dimension": "experimentation",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "BOL",
+        "dimension": "experimentation",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "BRA",
+        "dimension": "experimentation",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "BWA",
+        "dimension": "experimentation",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "CAN",
+        "dimension": "experimentation",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "CHE",
+        "dimension": "experimentation",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "CHL",
+        "dimension": "experimentation",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "CHN",
+        "dimension": "experimentation",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "CIV",
+        "dimension": "experimentation",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "COD",
+        "dimension": "experimentation",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "COG",
+        "dimension": "experimentation",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "COL",
+        "dimension": "experimentation",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "CRI",
+        "dimension": "experimentation",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "CUB",
+        "dimension": "experimentation",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "CYP",
+        "dimension": "experimentation",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "CZE",
+        "dimension": "experimentation",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "DEU",
+        "dimension": "experimentation",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "DNK",
+        "dimension": "experimentation",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "DOM",
+        "dimension": "experimentation",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "ECU",
+        "dimension": "experimentation",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "EGY",
+        "dimension": "experimentation",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "ESP",
+        "dimension": "experimentation",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "EST",
+        "dimension": "experimentation",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "ETH",
+        "dimension": "experimentation",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "FIN",
+        "dimension": "experimentation",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "FRA",
+        "dimension": "experimentation",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "GBR",
+        "dimension": "experimentation",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "GEO",
+        "dimension": "experimentation",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "GHA",
+        "dimension": "experimentation",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "GIN",
+        "dimension": "experimentation",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "GMB",
+        "dimension": "experimentation",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "GNB",
+        "dimension": "experimentation",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "GRC",
+        "dimension": "experimentation",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "GTM",
+        "dimension": "experimentation",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "HND",
+        "dimension": "experimentation",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "HRV",
+        "dimension": "experimentation",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "HTI",
+        "dimension": "experimentation",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "HUN",
+        "dimension": "experimentation",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "IDN",
+        "dimension": "experimentation",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "IND",
+        "dimension": "experimentation",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "IRL",
+        "dimension": "experimentation",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "IRN",
+        "dimension": "experimentation",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "IRQ",
+        "dimension": "experimentation",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "ISR",
+        "dimension": "experimentation",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "ITA",
+        "dimension": "experimentation",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "JAM",
+        "dimension": "experimentation",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "JOR",
+        "dimension": "experimentation",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "JPN",
+        "dimension": "experimentation",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "KAZ",
+        "dimension": "experimentation",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "KEN",
+        "dimension": "experimentation",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "KGZ",
+        "dimension": "experimentation",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "KOR",
+        "dimension": "experimentation",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "LAO",
+        "dimension": "experimentation",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "LBN",
+        "dimension": "experimentation",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "LKA",
+        "dimension": "experimentation",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "LSO",
+        "dimension": "experimentation",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "LTU",
+        "dimension": "experimentation",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "LVA",
+        "dimension": "experimentation",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "MAR",
+        "dimension": "experimentation",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "MDA",
+        "dimension": "experimentation",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "MDG",
+        "dimension": "experimentation",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "MEX",
+        "dimension": "experimentation",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "MKD",
+        "dimension": "experimentation",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "MLI",
+        "dimension": "experimentation",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "MMR",
+        "dimension": "experimentation",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "MNG",
+        "dimension": "experimentation",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "MOZ",
+        "dimension": "experimentation",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "MUS",
+        "dimension": "experimentation",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "MWI",
+        "dimension": "experimentation",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "MYS",
+        "dimension": "experimentation",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "NAM",
+        "dimension": "experimentation",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "NGA",
+        "dimension": "experimentation",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "NIC",
+        "dimension": "experimentation",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "NLD",
+        "dimension": "experimentation",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "NOR",
+        "dimension": "experimentation",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "NPL",
+        "dimension": "experimentation",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "NZL",
+        "dimension": "experimentation",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "PAK",
+        "dimension": "experimentation",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "PAN",
+        "dimension": "experimentation",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "PER",
+        "dimension": "experimentation",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "PHL",
+        "dimension": "experimentation",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "PNG",
+        "dimension": "experimentation",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "POL",
+        "dimension": "experimentation",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "PRT",
+        "dimension": "experimentation",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "PRY",
+        "dimension": "experimentation",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "ROU",
+        "dimension": "experimentation",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "RUS",
+        "dimension": "experimentation",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "RWA",
+        "dimension": "experimentation",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "SDN",
+        "dimension": "experimentation",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "SGP",
+        "dimension": "experimentation",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "SLV",
+        "dimension": "experimentation",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "SRB",
+        "dimension": "experimentation",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "SVK",
+        "dimension": "experimentation",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "SVN",
+        "dimension": "experimentation",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "SWE",
+        "dimension": "experimentation",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "THA",
+        "dimension": "experimentation",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "TJK",
+        "dimension": "experimentation",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "TTO",
+        "dimension": "experimentation",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "TUN",
+        "dimension": "experimentation",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "TUR",
+        "dimension": "experimentation",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "TZA",
+        "dimension": "experimentation",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "UGA",
+        "dimension": "experimentation",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "UKR",
+        "dimension": "experimentation",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "URY",
+        "dimension": "experimentation",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "USA",
+        "dimension": "experimentation",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "UZB",
+        "dimension": "experimentation",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "VEN",
+        "dimension": "experimentation",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "VNM",
+        "dimension": "experimentation",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "ZAF",
+        "dimension": "experimentation",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "ZMB",
+        "dimension": "experimentation",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "ZWE",
+        "dimension": "experimentation",
+        "reason": "brief_changed"
+      },
+      {
         "iso3": "BOL",
         "dimension": "shared_purpose",
         "reason": "brief_changed"
@@ -2646,8 +3269,8 @@
         "reason": "brief_changed"
       }
     ],
-    "judgementsCarried": 150,
-    "judgementsDropped": 42
+    "judgementsCarried": 120,
+    "judgementsDropped": 72
   },
   "redundantIndicatorPairs": [],
   "measurability": [
@@ -2733,19 +3356,19 @@
     },
     {
       "dimension": "experimentation",
-      "indicatorsDefined": 10,
-      "indicatorsObserved": 6,
+      "indicatorsDefined": 11,
+      "indicatorsObserved": 7,
       "gaps": 3,
       "retired": 1,
-      "meanCoverage": 0.446,
-      "meanConfidence": 0.391,
+      "meanCoverage": 0.461,
+      "meanConfidence": 0.409,
       "classMix": {
-        "C": 4,
+        "C": 5,
         "I": 1,
         "O": 4,
         "P": 1
       },
-      "subjectivityShare": 0.5
+      "subjectivityShare": 0.455
     },
     {
       "dimension": "adaptability",
@@ -3449,6 +4072,22 @@
         "lowDiscrimination": false
       },
       {
+        "indicatorId": "insolvency_efficiency",
+        "dimension": "experimentation",
+        "countries": 0,
+        "years": 0,
+        "firstYear": null,
+        "lastYear": null,
+        "firstSpread": null,
+        "lastSpread": null,
+        "changeShare": null,
+        "spearman": null,
+        "carriedForwardCells": 0,
+        "clampedCells": 0,
+        "fading": false,
+        "lowDiscrimination": false
+      },
+      {
         "indicatorId": "long_term_unemployment_share",
         "dimension": "adaptability",
         "countries": 0,
@@ -3611,7 +4250,7 @@
       },
       {
         "dimension": "experimentation",
-        "meanAbsShift": 3.32
+        "meanAbsShift": 3.07
       },
       {
         "dimension": "adaptability",
@@ -3635,7 +4274,7 @@
       {
         "iso3": "USA",
         "country": "United States",
-        "meanAbsShift": 0.42
+        "meanAbsShift": 0.46
       },
       {
         "iso3": "NLD",
@@ -3650,17 +4289,17 @@
       {
         "iso3": "SGP",
         "country": "Singapore",
-        "meanAbsShift": 1.96
+        "meanAbsShift": 1.75
       },
       {
         "iso3": "KOR",
         "country": "South Korea",
-        "meanAbsShift": 2.91
+        "meanAbsShift": 2.81
       },
       {
         "iso3": "EST",
         "country": "Estonia",
-        "meanAbsShift": 1.95
+        "meanAbsShift": 1.6
       },
       {
         "iso3": "IND",
@@ -3680,7 +4319,7 @@
       {
         "iso3": "MEX",
         "country": "Mexico",
-        "meanAbsShift": 0.98
+        "meanAbsShift": 0.88
       },
       {
         "iso3": "ARG",
@@ -3695,17 +4334,17 @@
       {
         "iso3": "PER",
         "country": "Peru",
-        "meanAbsShift": 0.05
+        "meanAbsShift": 0.11
       },
       {
         "iso3": "URY",
         "country": "Uruguay",
-        "meanAbsShift": 0.66
+        "meanAbsShift": 0.7
       },
       {
         "iso3": "CRI",
         "country": "Costa Rica",
-        "meanAbsShift": 0.87
+        "meanAbsShift": 0.81
       },
       {
         "iso3": "DEU",
@@ -3720,27 +4359,27 @@
       {
         "iso3": "GBR",
         "country": "United Kingdom",
-        "meanAbsShift": 1.79
+        "meanAbsShift": 1.36
       },
       {
         "iso3": "ESP",
         "country": "Spain",
-        "meanAbsShift": 0.75
+        "meanAbsShift": 0.73
       },
       {
         "iso3": "PRT",
         "country": "Portugal",
-        "meanAbsShift": 1.14
+        "meanAbsShift": 1.29
       },
       {
         "iso3": "POL",
         "country": "Poland",
-        "meanAbsShift": 1.99
+        "meanAbsShift": 2.14
       },
       {
         "iso3": "SWE",
         "country": "Sweden",
-        "meanAbsShift": 0.4
+        "meanAbsShift": 0.58
       },
       {
         "iso3": "FIN",
@@ -3750,12 +4389,12 @@
       {
         "iso3": "IRL",
         "country": "Ireland",
-        "meanAbsShift": 2.38
+        "meanAbsShift": 0.94
       },
       {
         "iso3": "CAN",
         "country": "Canada",
-        "meanAbsShift": 1.27
+        "meanAbsShift": 0.75
       },
       {
         "iso3": "AUS",
@@ -3775,22 +4414,22 @@
       {
         "iso3": "IDN",
         "country": "Indonesia",
-        "meanAbsShift": 1.16
+        "meanAbsShift": 1.05
       },
       {
         "iso3": "VNM",
         "country": "Vietnam",
-        "meanAbsShift": 1.86
+        "meanAbsShift": 1.6
       },
       {
         "iso3": "PHL",
         "country": "Philippines",
-        "meanAbsShift": 0.8
+        "meanAbsShift": 0.76
       },
       {
         "iso3": "MYS",
         "country": "Malaysia",
-        "meanAbsShift": 0.25
+        "meanAbsShift": 0.24
       },
       {
         "iso3": "THA",
@@ -3800,12 +4439,12 @@
       {
         "iso3": "TUR",
         "country": "Turkey",
-        "meanAbsShift": 3.66
+        "meanAbsShift": 3.03
       },
       {
         "iso3": "ISR",
         "country": "Israel",
-        "meanAbsShift": 2.09
+        "meanAbsShift": 1.9
       },
       {
         "iso3": "ARE",
@@ -3825,7 +4464,7 @@
       {
         "iso3": "RWA",
         "country": "Rwanda",
-        "meanAbsShift": 1.94
+        "meanAbsShift": 1.68
       },
       {
         "iso3": "ETH",
@@ -3840,12 +4479,12 @@
       {
         "iso3": "PRY",
         "country": "Paraguay",
-        "meanAbsShift": 0.55
+        "meanAbsShift": 0.59
       },
       {
         "iso3": "ECU",
         "country": "Ecuador",
-        "meanAbsShift": 0.65
+        "meanAbsShift": 0.41
       },
       {
         "iso3": "VEN",
@@ -3870,7 +4509,7 @@
       {
         "iso3": "SLV",
         "country": "El Salvador",
-        "meanAbsShift": 1.05
+        "meanAbsShift": 1.02
       },
       {
         "iso3": "NIC",
@@ -3895,12 +4534,12 @@
       {
         "iso3": "PAK",
         "country": "Pakistan",
-        "meanAbsShift": 0.88
+        "meanAbsShift": 0.79
       },
       {
         "iso3": "BGD",
         "country": "Bangladesh",
-        "meanAbsShift": 0.41
+        "meanAbsShift": 0.3
       },
       {
         "iso3": "RUS",
@@ -3915,7 +4554,7 @@
       {
         "iso3": "COD",
         "country": "Democratic Republic of the Congo",
-        "meanAbsShift": 0.8
+        "meanAbsShift": 0.81
       },
       {
         "iso3": "IRN",
@@ -3925,12 +4564,12 @@
       {
         "iso3": "TZA",
         "country": "Tanzania",
-        "meanAbsShift": 1.27
+        "meanAbsShift": 1.42
       },
       {
         "iso3": "ITA",
         "country": "Italy",
-        "meanAbsShift": 2.22
+        "meanAbsShift": 1.63
       },
       {
         "iso3": "MMR",
@@ -3965,12 +4604,12 @@
       {
         "iso3": "MAR",
         "country": "Morocco",
-        "meanAbsShift": 0.94
+        "meanAbsShift": 0.96
       },
       {
         "iso3": "UZB",
         "country": "Uzbekistan",
-        "meanAbsShift": 1.98
+        "meanAbsShift": 1.84
       },
       {
         "iso3": "MOZ",
@@ -3980,22 +4619,22 @@
       {
         "iso3": "GHA",
         "country": "Ghana",
-        "meanAbsShift": 1.92
+        "meanAbsShift": 1.71
       },
       {
         "iso3": "MDG",
         "country": "Madagascar",
-        "meanAbsShift": 0.56
+        "meanAbsShift": 0.93
       },
       {
         "iso3": "CIV",
         "country": "Côte d'Ivoire",
-        "meanAbsShift": 0.69
+        "meanAbsShift": 1.36
       },
       {
         "iso3": "NPL",
         "country": "Nepal",
-        "meanAbsShift": 1.05
+        "meanAbsShift": 0.95
       },
       {
         "iso3": "MLI",
@@ -4025,12 +4664,12 @@
       {
         "iso3": "KAZ",
         "country": "Kazakhstan",
-        "meanAbsShift": 1.6
+        "meanAbsShift": 1.69
       },
       {
         "iso3": "ROU",
         "country": "Romania",
-        "meanAbsShift": 0.77
+        "meanAbsShift": 0.89
       },
       {
         "iso3": "ZWE",
@@ -4050,47 +4689,47 @@
       {
         "iso3": "TUN",
         "country": "Tunisia",
-        "meanAbsShift": 0.49
+        "meanAbsShift": 0.31
       },
       {
         "iso3": "BEL",
         "country": "Belgium",
-        "meanAbsShift": 0.06
+        "meanAbsShift": 1.7
       },
       {
         "iso3": "JOR",
         "country": "Jordan",
-        "meanAbsShift": 0.65
+        "meanAbsShift": 0.41
       },
       {
         "iso3": "CZE",
         "country": "Czechia",
-        "meanAbsShift": 0.38
+        "meanAbsShift": 0.1
       },
       {
         "iso3": "TJK",
         "country": "Tajikistan",
-        "meanAbsShift": 0.7
+        "meanAbsShift": 0.79
       },
       {
         "iso3": "PNG",
         "country": "Papua New Guinea",
-        "meanAbsShift": 3.21
+        "meanAbsShift": 3.33
       },
       {
         "iso3": "GRC",
         "country": "Greece",
-        "meanAbsShift": 1.53
+        "meanAbsShift": 1.7
       },
       {
         "iso3": "AZE",
         "country": "Azerbaijan",
-        "meanAbsShift": 0.81
+        "meanAbsShift": 0.83
       },
       {
         "iso3": "HUN",
         "country": "Hungary",
-        "meanAbsShift": 0.98
+        "meanAbsShift": 1.17
       },
       {
         "iso3": "AUT",
@@ -4110,12 +4749,12 @@
       {
         "iso3": "KGZ",
         "country": "Kyrgyzstan",
-        "meanAbsShift": 1.55
+        "meanAbsShift": 1.44
       },
       {
         "iso3": "SRB",
         "country": "Serbia",
-        "meanAbsShift": 1.85
+        "meanAbsShift": 1.69
       },
       {
         "iso3": "COG",
@@ -4125,7 +4764,7 @@
       {
         "iso3": "BGR",
         "country": "Bulgaria",
-        "meanAbsShift": 1.48
+        "meanAbsShift": 1.46
       },
       {
         "iso3": "DNK",
@@ -4145,22 +4784,22 @@
       {
         "iso3": "SVK",
         "country": "Slovakia",
-        "meanAbsShift": 0.52
+        "meanAbsShift": 0.65
       },
       {
         "iso3": "NZL",
         "country": "New Zealand",
-        "meanAbsShift": 0.33
+        "meanAbsShift": 0.19
       },
       {
         "iso3": "GEO",
         "country": "Georgia",
-        "meanAbsShift": 0.4
+        "meanAbsShift": 0.32
       },
       {
         "iso3": "HRV",
         "country": "Croatia",
-        "meanAbsShift": 1.6
+        "meanAbsShift": 1.45
       },
       {
         "iso3": "MNG",
@@ -4170,17 +4809,17 @@
       {
         "iso3": "BIH",
         "country": "Bosnia and Herzegovina",
-        "meanAbsShift": 0.94
+        "meanAbsShift": 1.02
       },
       {
         "iso3": "NAM",
         "country": "Namibia",
-        "meanAbsShift": 1.98
+        "meanAbsShift": 1.96
       },
       {
         "iso3": "ARM",
         "country": "Armenia",
-        "meanAbsShift": 0.91
+        "meanAbsShift": 0.83
       },
       {
         "iso3": "LTU",
@@ -4190,27 +4829,27 @@
       {
         "iso3": "JAM",
         "country": "Jamaica",
-        "meanAbsShift": 0.1
+        "meanAbsShift": 0.29
       },
       {
         "iso3": "GMB",
         "country": "Gambia",
-        "meanAbsShift": 1.28
+        "meanAbsShift": 2.08
       },
       {
         "iso3": "BWA",
         "country": "Botswana",
-        "meanAbsShift": 1.25
+        "meanAbsShift": 1.51
       },
       {
         "iso3": "LSO",
         "country": "Lesotho",
-        "meanAbsShift": 1.4
+        "meanAbsShift": 1.32
       },
       {
         "iso3": "MDA",
         "country": "Moldova",
-        "meanAbsShift": 1.65
+        "meanAbsShift": 1.5
       },
       {
         "iso3": "ALB",
@@ -4225,32 +4864,32 @@
       {
         "iso3": "SVN",
         "country": "Slovenia",
-        "meanAbsShift": 1.01
+        "meanAbsShift": 1.26
       },
       {
         "iso3": "LVA",
         "country": "Latvia",
-        "meanAbsShift": 3.19
+        "meanAbsShift": 2.4
       },
       {
         "iso3": "MKD",
         "country": "North Macedonia",
-        "meanAbsShift": 0.23
+        "meanAbsShift": 0.16
       },
       {
         "iso3": "CYP",
         "country": "Cyprus",
-        "meanAbsShift": 1.74
+        "meanAbsShift": 1.32
       },
       {
         "iso3": "TTO",
         "country": "Trinidad and Tobago",
-        "meanAbsShift": 0.73
+        "meanAbsShift": 0.7
       },
       {
         "iso3": "MUS",
         "country": "Mauritius",
-        "meanAbsShift": 0.57
+        "meanAbsShift": 0.8
       }
     ],
     "rankChanges": [
@@ -4276,7 +4915,7 @@
       },
       {
         "dimension": "experimentation",
-        "changedPositions": 111
+        "changedPositions": 117
       },
       {
         "dimension": "adaptability",
@@ -4543,7 +5182,7 @@
     }
   ],
   "outOfFrame": {
-    "observedCells": 3515,
+    "observedCells": 3589,
     "clampedCells": 0,
     "share": 0,
     "perCountry": []

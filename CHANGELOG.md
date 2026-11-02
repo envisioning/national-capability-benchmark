@@ -9,6 +9,33 @@ The entries before App 1.0.0 are retrospective, high-level summaries
 reconstructed from the repository history. They document explicit version bumps
 and may skip versions that were never committed.
 
+## App 1.33.3 — 2026-11-02
+
+- Publishes dataset 9.6.0.
+
+## Dataset 9.6.0 — 2026-11-02
+
+- **Experimentation now reads how cheaply a failed firm can close.**
+  Insolvency efficiency is the World Bank's B-READY score for the time and
+  cost of liquidating or reorganizing a firm in court. It covers 74 of the
+  125 countries, at 2025. Decision D173.
+- **A score of zero counts.** The World Bank gives zero when no liquidation
+  and no reorganization closed in three years. Eight countries read zero:
+  Angola, Azerbaijan, the Democratic Republic of the Congo, Laos, Lesotho,
+  Nepal, the Philippines and El Salvador.
+- **Experimentation reaches the evidence objective.** Mean confidence moves
+  from 0.391 to 0.409. Mali, Burkina Faso and the Republic of the Congo now
+  publish an Experimentation score, so all 125 countries do.
+- **Countries outside the B-READY round lose some confidence.** Brazil's
+  Experimentation score stays at 31.9, and its confidence falls from 0.60
+  to 0.54.
+- **The amount of evidence tracks income less.** Mean confidence across the
+  nine capabilities correlates with log GDP per head at 0.414, down from
+  0.436.
+- **865 of the 1,125 panel cells apply.** The cells for Building and
+  Experimentation, and 10 for Shared Purpose, drop because the evidence
+  behind them changed.
+
 ## App 1.33.2 — 2026-11-02
 
 - Publishes dataset 9.5.0.

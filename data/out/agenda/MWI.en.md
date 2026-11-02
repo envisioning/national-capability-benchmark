@@ -13,7 +13,7 @@ The frame includes 125 countries. Each dimension is scored from 0 to 100, with n
 | Coordination | 89.8 | 0.28 (thin) | no trend |
 | Trust | 65.7 | 0.21 (very thin) | no trend |
 | Learning | 47.1 | 0.55 (usable) | no trend |
-| Experimentation | 0.4 | 0.23 (very thin) | no trend |
+| Experimentation | 0.4 | 0.21 (very thin) | no trend |
 | Adaptability | 49.6 | 0.48 (usable) | no trend |
 | Building | 10.8 | 0.48 (usable) | -0.6 over 10 years using 2 indicators |
 | Shared Purpose | 50 | 0.25 (thin) | no trend |
@@ -71,6 +71,14 @@ How able are individuals and organizations to turn an intention into action?
 - Missing indicators: Adults doing digital tasks.
 - Rejected datasets: Time to start a business.
 
+### Experimentation: confidence 0.21, very thin
+
+How easily can new approaches be attempted, tested, abandoned, and improved?
+
+- Uses 3 observed indicators.
+- Missing indicators: Venture deals, Firms through regulatory sandboxes, University spinouts.
+- Rejected datasets: Business share of R&D.
+
 ### Trust: confidence 0.21, very thin
 
 How much cooperation is possible beyond immediate personal networks?
@@ -78,14 +86,6 @@ How much cooperation is possible beyond immediate personal networks?
 - Uses 2 observed indicators.
 - Missing indicators: Trust in public institutions, Court case clearance rate.
 - Rejected datasets: Rule of law, Control of corruption, Time to enforce a contract, Intentional homicide rate.
-
-### Experimentation: confidence 0.23, very thin
-
-How easily can new approaches be attempted, tested, abandoned, and improved?
-
-- Uses 3 observed indicators.
-- Missing indicators: Venture deals, Firms through regulatory sandboxes, University spinouts.
-- Rejected datasets: Business share of R&D.
 
 ### Shared Purpose: confidence 0.25, thin
 

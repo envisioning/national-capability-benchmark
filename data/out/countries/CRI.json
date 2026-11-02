@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-02T15:31:15.704Z",
-  "version": "9.5.0",
+  "generatedAt": "2026-11-02T16:13:26.679Z",
+  "version": "9.6.0",
   "country": {
     "country": "Costa Rica",
     "iso3": "CRI",
@@ -1472,82 +1472,21 @@
         ]
       },
       "experimentation": {
-        "score": 24.4,
-        "observedIndicators": 6,
+        "score": 26.6,
+        "observedIndicators": 7,
         "belowCoverageFloor": false,
-        "confidence": 0.6,
+        "confidence": 0.635,
         "confidenceParts": {
-          "coverage": 0.667,
+          "coverage": 0.7,
           "recency": 1,
-          "sourceQuality": 0.9
+          "sourceQuality": 0.907
         },
-        "delphiScore": 30,
-        "delphiIqr": 1.5,
+        "delphiScore": null,
+        "delphiIqr": null,
         "delphiDissent": false,
-        "blendedScore": 24.4,
+        "blendedScore": 26.6,
         "blendedFrom": "indicators",
-        "momentum": [
-          {
-            "baseYear": 2016,
-            "currentYear": 2026,
-            "baseScore": 10,
-            "currentScore": 14.7,
-            "delta": 4.7,
-            "matchedIndicators": 3,
-            "basket": [
-              "resident_patents_per_million",
-              "resident_trademarks_per_million",
-              "resident_industrial_designs_per_million"
-            ],
-            "clamped": 0,
-            "series": [
-              {
-                "year": 2016,
-                "score": 10
-              },
-              {
-                "year": 2017,
-                "score": 11.4
-              },
-              {
-                "year": 2018,
-                "score": 9.8
-              },
-              {
-                "year": 2019,
-                "score": 12.5
-              },
-              {
-                "year": 2020,
-                "score": 11.7
-              },
-              {
-                "year": 2021,
-                "score": 12.2
-              },
-              {
-                "year": 2022,
-                "score": 11.2
-              },
-              {
-                "year": 2023,
-                "score": 18.4
-              },
-              {
-                "year": 2024,
-                "score": 14.7
-              },
-              {
-                "year": 2025,
-                "score": 14.7
-              },
-              {
-                "year": 2026,
-                "score": 14.7
-              }
-            ]
-          }
-        ],
+        "momentum": [],
         "indicators": [
           {
             "indicatorId": "resident_patents_per_million",
@@ -2141,6 +2080,29 @@
                 "raw": 55.9,
                 "normalized": 51.3,
                 "tier": "academic_survey"
+              }
+            ],
+            "status": "observed",
+            "staleExcluded": null
+          },
+          {
+            "indicatorId": "insolvency_efficiency",
+            "name": "Insolvency efficiency",
+            "measurementClass": "C",
+            "raw": 39.27,
+            "transformed": 39.27,
+            "normalized": 39.8,
+            "year": 2025,
+            "source": "World Bank (IC.BRE.BI.P3)",
+            "sourceTier": "international_organization",
+            "winsorized": false,
+            "outOfFrame": false,
+            "series": [
+              {
+                "year": 2025,
+                "raw": 39.27,
+                "normalized": 39.8,
+                "tier": "international_organization"
               }
             ],
             "status": "observed",

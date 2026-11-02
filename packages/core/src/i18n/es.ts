@@ -279,6 +279,7 @@ export const ES: Lexicon = {
     venture_capital_gdp: 'Operaciones de capital de riesgo',
     early_stage_entrepreneurial_activity: 'Actividad emprendedora en etapa inicial',
     failure_tolerance: 'Tolerancia al fracaso emprendedor',
+    insolvency_efficiency: 'Eficiencia en la insolvencia',
     regulatory_sandbox_activity: 'Empresas en espacios controlados de prueba',
     university_spinouts: 'Empresas surgidas de universidades',
     business_rd_share: 'I+D ejecutada por empresas',
@@ -418,6 +419,8 @@ export const ES: Lexicon = {
       'Adultos que inician o dirigen una empresa de menos de 42 meses.',
     failure_tolerance:
       'Proporción de adultos que ven buenas oportunidades y dicen que el miedo a fracasar no les impediría emprender.',
+    insolvency_efficiency:
+      'Puntuación B-READY del tiempo y el costo de la liquidación y la reorganización judicial de una empresa que fracasó.',
     labor_force_participation: 'Proporción de la población en edad de trabajar que está en la fuerza laboral.',
     unemployment_rate: 'Desempleados como proporción de la fuerza laboral, estimación modelada de la OIT.',
     electricity_transmission_losses:

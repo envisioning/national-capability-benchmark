@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-02T15:31:40.418Z",
+  "generatedAt": "2026-11-02T16:13:53.226Z",
   "iso3": "PER",
   "country": "Peru",
   "dimensions": [
@@ -2562,22 +2562,18 @@
     {
       "dimension": "experimentation",
       "kind": "raise",
-      "score": 18.6,
-      "confidence": 0.6,
+      "score": 23.5,
+      "confidence": 0.635,
       "band": "usable",
-      "trend": {
-        "spanYears": 10,
-        "delta": 3.2,
-        "basket": 3,
-        "clamped": 0
-      },
+      "trend": null,
       "scoredOn": [
         "resident_patents_per_million",
         "resident_trademarks_per_million",
         "resident_industrial_designs_per_million",
         "new_repositories_per_million",
         "early_stage_entrepreneurial_activity",
-        "failure_tolerance"
+        "failure_tolerance",
+        "insolvency_efficiency"
       ],
       "gaps": [
         "venture_capital_gdp",
@@ -2591,20 +2587,20 @@
         {
           "iso3": "KOR",
           "country": "South Korea",
-          "score": 73.5,
-          "confidence": 0.6
+          "score": 75,
+          "confidence": 0.635
+        },
+        {
+          "iso3": "GBR",
+          "country": "United Kingdom",
+          "score": 70,
+          "confidence": 0.465
         },
         {
           "iso3": "CHE",
           "country": "Switzerland",
           "score": 68.8,
-          "confidence": 0.6
-        },
-        {
-          "iso3": "USA",
-          "country": "United States",
-          "score": 51.3,
-          "confidence": 0.6
+          "confidence": 0.54
         }
       ],
       "evidenceElsewhere": [

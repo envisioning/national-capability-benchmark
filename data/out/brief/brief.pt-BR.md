@@ -1,6 +1,6 @@
 # O NCB em duas páginas
 
-*Versão dos dados 9.5.0, gerada em 2026-11-02*
+*Versão dos dados 9.6.0, gerada em 2026-11-02*
 
 ## 1. A afirmação em teste
 
@@ -10,31 +10,31 @@ O NCB testa uma afirmação em duas versões. A versão forte diz que capacidade
 
 ## 2. O teste e o que ele mostra hoje
 
-Entre os 112 países com as nove capacidades pontuadas, um único fator comum responde por 48,8% da variação. O mesmo número de capacidades sem relação entre si, medidas nos mesmos 112 países, daria 16,2% por acaso, e até 17,8% em 19 de cada 20 sorteios. As capacidades, portanto, andam juntas, e 51,2% da variação fica fora desse fator. Nos 112 desses países com dado de renda, o fator comum tem correlação de 0,83 com o logaritmo do PIB per capita, de modo que a renda responde por 69% dele. O fator comum se parece com a renda. O que o NCB acrescenta além da renda está nos outros 51,2% da variação e na diferença entre as capacidades de um mesmo país.
+Entre os 115 países com as nove capacidades pontuadas, um único fator comum responde por 50,1% da variação. O mesmo número de capacidades sem relação entre si, medidas nos mesmos 115 países, daria 16,1% por acaso, e até 17,7% em 19 de cada 20 sorteios. As capacidades, portanto, andam juntas, e 49,9% da variação fica fora desse fator. Nos 115 desses países com dado de renda, o fator comum tem correlação de 0,83 com o logaritmo do PIB per capita, de modo que a renda responde por 69% dele. O fator comum se parece com a renda. O que o NCB acrescenta além da renda está nos outros 49,9% da variação e na diferença entre as capacidades de um mesmo país.
 
-Ao longo de 35 versões dos dados, a parcela do fator comum foi de 47,7% a 70,4%. A maior mudança entre duas versões veio na versão 7.0.0, de 60,4% em 33 países para 49,8% em 33.
+Ao longo de 36 versões dos dados, a parcela do fator comum foi de 47,7% a 70,4%. A maior mudança entre duas versões veio na versão 7.0.0, de 60,4% em 33 países para 49,8% em 33.
 
-Retirada de cada capacidade a parte que a renda prevê, o que sobra ainda anda junto. Nos 112 países com as nove capacidades, um fator responde por 29,4% do que sobra, quando sobras sem relação entre si dariam 16,2% por acaso, e 17,9% em 19 de cada 20 sorteios.
+Retirada de cada capacidade a parte que a renda prevê, o que sobra ainda anda junto. Nos 115 países com as nove capacidades, um fator responde por 30,5% do que sobra, quando sobras sem relação entre si dariam 16,2% por acaso, e 17,7% em 19 de cada 20 sorteios.
 
-A versão forte não se sustenta para o que as nove capacidades têm em comum: essa parte comum é, sobretudo, renda. A versão fraca se sustenta nestes dados. Países com a mesma renda têm perfis de capacidade diferentes, e esses perfis se organizam além do que o acaso produziria, de modo que o perfil de capacidades traz informação que a renda não traz. A ordem do que sobra depois da renda se mantém, em geral, quando os indicadores mudam, então os perfis não são apenas produto da escolha dos indicadores. A margem sobre o acaso é estreita, 23,3% contra 19,4%, e por isso este é o resultado com mais chance de mudar quando países forem acrescentados.
+A versão forte não se sustenta para o que as nove capacidades têm em comum: essa parte comum é, sobretudo, renda. A versão fraca se sustenta nestes dados. Países com a mesma renda têm perfis de capacidade diferentes, e esses perfis se organizam além do que o acaso produziria, de modo que o perfil de capacidades traz informação que a renda não traz. A ordem do que sobra depois da renda se mantém, em geral, quando os indicadores mudam, então os perfis não são apenas produto da escolha dos indicadores. A margem sobre o acaso é estreita, 22,4% contra 19,2%, e por isso este é o resultado com mais chance de mudar quando países forem acrescentados.
 
-Para o país típico, a renda responde por 28,8% da distância entre o seu perfil e o perfil médio, e por 27,3% na média dos 112 países, puxada para baixo por países dos quais a linha de renda se afasta mais do que o perfil médio. A renda é parte de um perfil de capacidades, e a maior parte dele é outra coisa.
+Para o país típico, a renda responde por 34,6% da distância entre o seu perfil e o perfil médio, e por 26,7% na média dos 115 países, puxada para baixo por países dos quais a linha de renda se afasta mais do que o perfil médio. A renda é parte de um perfil de capacidades, e a maior parte dele é outra coisa.
 
-Tudo isso se apoia em 112 países com as nove capacidades pontuadas. Com esse número, poucos países podem mover qualquer um destes resultados, e cada um é um indício que um conjunto maior de países pode derrubar. O que sobra depois da renda em cada país não é publicado enquanto essa camada estiver em revisão.
+Tudo isso se apoia em 115 países com as nove capacidades pontuadas. Com esse número, poucos países podem mover qualquer um destes resultados, e cada um é um indício que um conjunto maior de países pode derrubar. O que sobra depois da renda em cada país não é publicado enquanto essa camada estiver em revisão.
 
 ## 3. O que é o instrumento
 
 O NCB dá pontuações a 125 países em nove capacidades: Antecipação, Agência, Coordenação, Confiança, Aprendizagem, Experimentação, Adaptação, Construção e Propósito compartilhado. Cada pontuação vai de 0 a 100, numa escala que os 125 países definem juntos. Ao lado dela fica a solidez da evidência, de 0 a 1, que diz em quanta evidência a pontuação se apoia, e as duas nunca se combinam. As nove nunca se somam: não há pontuação geral nem classificação. Confiança é uma das nove capacidades, e não a solidez da evidência.
 
-As pontuações se apoiam em 34 indicadores de fontes públicas, e outros 18 são lacunas declaradas: o que o NCB pretende medir e nenhuma base aberta cobre ainda. Cada observação traz fonte, ano e endereço. Os dados publicados estão sob a licença CC BY 4.0 e o código sob a licença MIT, e cada escolha de método está registrada com o que a derrubaria.
+As pontuações se apoiam em 35 indicadores de fontes públicas, e outros 18 são lacunas declaradas: o que o NCB pretende medir e nenhuma base aberta cobre ainda. Cada observação traz fonte, ano e endereço. Os dados publicados estão sob a licença CC BY 4.0 e o código sob a licença MIT, e cada escolha de método está registrada com o que a derrubaria.
 
 ## 4. Para que serve, e para que não serve
 
 O NCB serve para descrever: as nove pontuações de um país lidas ao lado das dos países de renda mais próxima, cada uma com a evidência que a sustenta. Não classifica países, não fixa metas e não dá recomendações de política. Uma pontuação alta não é um modelo a copiar, porque os mecanismos dependem das condições locais.
 
-Três das nove acompanham a renda com correlação de 0,70 ou mais: Antecipação (0,86), Experimentação (0,74) e Aprendizagem (0,71). Nelas, a pontuação diz muito do que o PIB per capita já diz, e o NCB publica isso ao lado do número.
+Três das nove acompanham a renda com correlação de 0,70 ou mais: Antecipação (0,86), Experimentação (0,75) e Aprendizagem (0,71). Nelas, a pontuação diz muito do que o PIB per capita já diz, e o NCB publica isso ao lado do número.
 
-Quatro das nove se apoiam em evidência fraca, na média dos países: Coordenação (0,36), Confiança (0,39), Experimentação (0,39) e Propósito compartilhado (0,33). Isso é um resultado sobre o que os dados públicos conseguem ver, e não uma falha a esconder; essas pontuações se leem com cuidado.
+Quatro das nove se apoiam em evidência fraca, na média dos países: Coordenação (0,36), Confiança (0,39), Experimentação (0,41) e Propósito compartilhado (0,33). Isso é um resultado sobre o que os dados públicos conseguem ver, e não uma falha a esconder; essas pontuações se leem com cuidado.
 
 ## 5. Onde está e do que precisa
 
@@ -54,4 +54,4 @@ Precisa também de parceiros de dados abertos. As 18 lacunas declaradas, e a gra
 
 ---
 
-*Calculado a partir da versão dos dados 9.5.0: data/out/diagnostics.json (diagnostics.factorStructure, diagnostics.residualStructure) e data/out/factor-history.json. As leituras são as decisões D137 e D138; o resumo, a D163.*
+*Calculado a partir da versão dos dados 9.6.0: data/out/diagnostics.json (diagnostics.factorStructure, diagnostics.residualStructure) e data/out/factor-history.json. As leituras são as decisões D137 e D138; o resumo, a D163.*

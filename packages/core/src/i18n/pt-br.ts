@@ -335,6 +335,7 @@ export const PT_BR: Lexicon = {
     venture_capital_gdp: 'Operações de capital de risco',
     early_stage_entrepreneurial_activity: 'Atividade empreendedora em estágio inicial',
     failure_tolerance: 'Tolerância ao fracasso empreendedor',
+    insolvency_efficiency: 'Eficiência na insolvência',
     regulatory_sandbox_activity: 'Empresas em sandboxes regulatórios',
     university_spinouts: 'Empresas derivadas de pesquisa universitária',
     business_rd_share: 'Parcela empresarial do P&D',
@@ -506,6 +507,8 @@ export const PT_BR: Lexicon = {
       'Adultos que estão abrindo ou dirigindo um negócio com menos de 42 meses de existência.',
     failure_tolerance:
       'Parcela de adultos que veem boas oportunidades e dizem que o medo de fracassar não os impediria de abrir um negócio.',
+    insolvency_efficiency:
+      'Pontuação B-READY do tempo e do custo da liquidação e da recuperação judicial de uma empresa que fracassou.',
     regulatory_sandbox_activity:
       'Empresas admitidas no ano em um sandbox regulatório ou regime de teste controlado, e empresas que o concluíram, por milhão de pessoas, somadas entre todos os reguladores do país.',
     university_spinouts:

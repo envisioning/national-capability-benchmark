@@ -187,6 +187,8 @@ export const PT_PT = withOverride(PT_BR, {
       'Adultos que estão a criar ou a dirigir um negócio com menos de 42 meses de existência.',
     failure_tolerance:
       'Proporção de adultos que veem boas oportunidades e dizem que o medo de falhar não os impediria de criar um negócio.',
+    insolvency_efficiency:
+      'Pontuação B-READY do tempo e do custo da liquidação e da recuperação em tribunal de uma empresa que fracassou.',
     regulatory_sandbox_activity:
       'Empresas admitidas no ano num ambiente de teste regulatório ou regime de experimentação controlada, e empresas que o concluíram, por milhão de pessoas, somadas entre todos os reguladores do país.',
     university_spinouts:

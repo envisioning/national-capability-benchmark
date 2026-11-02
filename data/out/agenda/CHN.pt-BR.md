@@ -13,7 +13,7 @@ A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 | Coordenação | 55,7 | 0,29 (fraca) | sem tendência comparável |
 | Confiança | 49,5 | 0,41 (fraca) | sem tendência comparável |
 | Aprendizagem | 76 | 0,55 (utilizável) | sem tendência comparável |
-| Experimentação | 98 | 0,32 (fraca) | +14,8 em 10 anos, com base em 3 indicadores |
+| Experimentação | 98 | 0,28 (fraca) | +14,8 em 10 anos, com base em 3 indicadores |
 | Adaptação | 79,6 | 0,46 (utilizável) | sem tendência comparável |
 | Construção | 72 | 0,48 (utilizável) | -5,1 em 10 anos, com base em 3 indicadores |
 | Propósito compartilhado | 29,4 | 0,41 (fraca) | +0,7 em 10 anos, com base em 2 indicadores |
@@ -35,6 +35,14 @@ Em que medida o país consegue identificar mudanças emergentes e se preparar pa
 
 A solidez da evidência está abaixo da faixa utilizável, de modo que a pontuação diz pouco sobre o país enquanto faltarem dados.
 
+### Experimentação: solidez 0,28, fraca
+
+Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e melhoradas?
+
+- A pontuação se apoia em 3 indicadores observados.
+- Lacunas declaradas: Operações de capital de risco, Empresas em sandboxes regulatórios, Empresas derivadas de pesquisa universitária.
+- Bases rejeitadas: Parcela empresarial do P&D.
+
 ### Coordenação: solidez 0,29, fraca
 
 Com que eficácia atores independentes conseguem se organizar em torno de objetivos comuns?
@@ -42,14 +50,6 @@ Com que eficácia atores independentes conseguem se organizar em torno de objeti
 - A pontuação se apoia em 2 indicadores observados.
 - Lacunas declaradas: Colaboração universidade-empresa, Colaboração público-privada.
 - Bases rejeitadas: Efetividade governamental, Qualidade regulatória, Desempenho logístico, Tempo de exportação na fronteira.
-
-### Experimentação: solidez 0,32, fraca
-
-Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e melhoradas?
-
-- A pontuação se apoia em 3 indicadores observados.
-- Lacunas declaradas: Operações de capital de risco, Empresas em sandboxes regulatórios, Empresas derivadas de pesquisa universitária.
-- Bases rejeitadas: Parcela empresarial do P&D.
 
 ### Propósito compartilhado: solidez 0,41, fraca
 

@@ -13,7 +13,7 @@ La comparación incluye 125 países. Cada dimensión recibe una puntuación de 0
 | Coordinación | 15.2 | 0.25 (débil) | sin base de tendencia |
 | Confianza | 23.6 | 0.34 (débil) | sin base de tendencia |
 | Aprendizaje | 39.4 | 0.4 (débil) | sin base de tendencia |
-| Experimentación | 2.3 | 0.14 (muy débil) | sin base de tendencia |
+| Experimentación | 2.3 | 0.13 (muy débil) | sin base de tendencia |
 | Adaptación | 67.7 | 0.48 (utilizable) | sin base de tendencia |
 | Ejecución | 12.2 | 0.48 (utilizable) | -1.7 en 10 años, con 3 indicadores |
 | Propósito compartido | 47.9 | 0.31 (débil) | sin base de tendencia |
@@ -45,7 +45,7 @@ Estas son las puntuaciones más bajas con evidencia utilizable. Las dimensiones 
 
 La solidez de la evidencia está por debajo de la franja utilizable, así que la puntuación se apoya en poca evidencia.
 
-### Experimentación: solidez 0.14, evidencia muy débil
+### Experimentación: solidez 0.13, evidencia muy débil
 
 ¿Con qué facilidad se pueden intentar, probar, abandonar y mejorar enfoques nuevos?
 

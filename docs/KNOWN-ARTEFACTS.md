@@ -12,10 +12,10 @@ has three panelists and was made on dataset 9.0.1. A9 says how much of it
 applies to 9.4.0. A panel estimate is made on the release it names, so a gap
 between one and a current score is not a finding.
 
-Every entry is on dataset 9.5.0, the 125-country frame of D153, except where
-it names another run. 9.5.0 restated Building and Shared Purpose only, so
-entries on other dimensions still name 9.4.0 or 9.3.0 where they quote a
-figure. A figure that came from a counterfactual rescore or a
+Every entry is on dataset 9.6.0, the 125-country frame of D153, except where
+it names another run. 9.5.0 restated Building and Shared Purpose and 9.6.0
+restated Experimentation, so entries on other dimensions still name 9.4.0 or
+9.3.0 where they quote a figure. A figure that came from a counterfactual rescore or a
 count the published files do not carry keeps the run it comes from: the
 scored-row counterfactual in A13 and the question-format split in A15, which
 were made on the 53 countries of the 8.x frame. The B-READY counts in A6 and
@@ -33,62 +33,62 @@ not the scale in use.
 
 **Severity: medium.**
 
-Five of ten indicators are observed for most countries: resident patents,
+The figures in this entry are from dataset 9.6.0.
+
+Six of eleven indicators are observed for most countries: resident patents,
 trademarks and industrial designs per head (D126), new public software
-repositories per head (D145), and, for the 16 countries GEM covered first,
-early-stage entrepreneurial activity and fear of failure. Venture deals,
-firms through regulatory sandboxes and university spinouts are still gaps
-(since D152 the first two count deals and firms, where they used to read
-money and regimes). Business R&D
-share is retired: its only working source reads the make-up of a spending
-stock, and state enterprises count as business (D142). Mean confidence is
-0.391, under the 0.40 objective; the filing rows reach 2024 in most
-countries, which lifted it from 0.317 on 9.3.0. Of the 125 countries, 90 are
-scored on the three filing rows and the repository row, 15 add the two GEM
-rows, and 20 rest on fewer. Three are scored on the filing rows alone: China,
-Cuba and Belarus, which the repository row's access gate holds out. Three
-sit on two rows at the coverage floor, at confidence 0.110 to 0.200:
-Belgium, Guinea and Côte d'Ivoire. GEM's
-later reports are held out because, on the 53 countries of dataset 7.2.0, the
-14 that GEM skips are mostly lower-income and the gain would sit where income
-already is (D125); those reports were not read for the 72 countries D153
-added. See D21.
+repositories per head (D145), B-READY insolvency efficiency for the 74
+countries the 2025 round reached (D173), and, for the 16 countries GEM
+covered first, early-stage entrepreneurial activity and fear of failure.
+Venture deals, firms through regulatory sandboxes and university spinouts
+are still gaps (since D152 the first two count deals and firms, where they
+used to read money and regimes). Business R&D share is retired: its only
+working source reads the make-up of a spending stock, and state enterprises
+count as business (D142). Mean confidence is 0.409, over the 0.40 objective
+since the insolvency row; it was 0.391 on 9.5.0 and 0.317 on 9.3.0. All 125
+countries publish a score. Four sit on two rows at the coverage floor, at
+confidence 0.099 to 0.180: Guinea, Mali, Burkina Faso and the Republic of
+the Congo. GEM's later reports are held out because, on the 53 countries of
+dataset 7.2.0, the 14 that GEM skips are mostly lower-income and the gain
+would sit where income already is (D125); those reports were not read for
+the 72 countries D153 added. See D21.
 
-Resident patents and resident trademarks per head measure formalised, completed,
-defensible invention, which is close to the opposite of the many-cheap-
-experiments construct the dimension is supposed to capture. The repository
-row is the one cheap attempt the dimension observes, and it sees one platform:
-public GitHub work, located by IP address, so VPN users are misplaced and
-Singapore reads high partly as a regional hub. It tracks income (r 0.716 on the
-normalized row), and Experimentation's correlation with log GDP per capita is
-0.739 (n 120).
+Resident patents and resident trademarks per head measure formalised,
+completed, defensible invention, which is close to the opposite of the
+many-cheap-experiments construct the dimension is supposed to capture. The
+repository row is the one cheap attempt the dimension observes, and it sees
+one platform: public GitHub work, located by IP address, so VPN users are
+misplaced and Singapore reads high partly as a regional hub. The insolvency
+row reads the other end, how cheaply a failed venture can close in court,
+and it reads an institution rather than the attempts themselves. A zero on
+it means no liquidation and no reorganisation closed in three years (eight
+countries), and it counts as a value (D173). Experimentation's correlation
+with log GDP per capita is 0.751 (n 123).
 
-The Netherlands scores 52.6, 12th of 122. That is not a
-finding about Dutch innovation: its trademark and design rows are missing,
-venture capital is a gap, and the score rests on resident patents, the two GEM
-rows and new repositories. Belgium has the same two rows missing and no GEM
-rows, and scores 29.3 on patents and repositories alone. Uruguay scores 29.7,
-37th, having legalised and regulated a national cannabis market and run a
-fintech sandbox. Argentina scores 23.5, 49th, having produced more technology
-firms of scale per head than anywhere else in the region.
+Belgium scores 52.9, 12th of 125, and the Netherlands 52.6, 15th. Neither is
+a finding about innovation in the Low Countries: both miss the trademark and
+design rows, venture capital is a gap, and Belgium's score rests on patents,
+repositories and insolvency. Uruguay scores 32.2, 40th, having legalised and
+regulated a national cannabis market and run a fintech sandbox. Argentina
+scores 23.5, 55th, having produced more technology firms of scale per head
+than anywhere else in the region.
 
 The filing rows count filings at a national office, so a country whose
 residents file at a regional office reads thin or stale. The Netherlands and
 Belgium file trademarks and designs at the Benelux office. Six members of
 OAPI, the regional office for francophone Africa, are in the frame, and the
 national series they do have are old. A value more than 15 years old does
-not count (D159), so Mali's patent row (one filing in
-1981), the Republic of the Congo's (1988) and Burkina Faso's patent and
-design rows (2010) are set aside, and each of the three keeps one scored row
-and publishes no Experimentation score. That leaves 122 of 125 scored. Côte d'Ivoire's patent row is from
-2012 and still counts, at the recency floor.
-At the other end China scores 98.0, first of 122, on the three filing rows
-alone: each sits at the top of its frame, the filings were subsidised (D126),
-and the repository row that would temper them is held by the access gate.
+not count (D159), so Mali's patent row (one filing in 1981), the Republic of
+the Congo's (1988) and Burkina Faso's patent and design rows (2010) are set
+aside. Each of the three now publishes on one filing row and the insolvency
+row. At the other end China scores 98.0, first of 125, on the three filing
+rows alone: each sits at the top of its frame, the filings were subsidised
+(D126), and the repository row that would temper them is held by the access
+gate, and B-READY has not reached China.
 
-No panel figure is quoted here. The run on 9.0.1 carries three
-Experimentation cells to 9.4.0, because the evidence moved under the rest
-(D160), and no panel run is on 9.4.0 (D139, D153).
+No panel figure is quoted here. Under D160 no panel cell for Experimentation
+carries to 9.6.0, because the evidence changed, and no panel run is on 9.6.0
+(D139, D153).
 
 **Fix.** A venture deal count is still missing: first rounds per million
 people, counted by deal and not by amount (D152). The only inspectable
@@ -105,7 +105,7 @@ reports.
 
 **Severity: medium.**
 
-India scores 16.1 on Experimentation, 60th of 122. It comes
+India scores 16.1 on Experimentation, 70th of 125 on dataset 9.6.0. It comes
 from dividing absolute counts by 1.4 billion people. The arithmetic is correct
 and the result is not informative: it says India files few patents per head,
 which was never the question. Counted whole, India is third of 125 on
@@ -284,7 +284,8 @@ B-READY counts no procedures. The recency term marks it down, and D159's
 
 The cost is coverage. B-READY's 2025 round reaches 74 of the 125, and the 51
 it has not reached lose a row in Agency, Coordination, Trust and Building.
-Brazil is one of them. Eight scores fall under the coverage floor: Agency
+Brazil is one of them. Insolvency efficiency in Experimentation (D173) is a
+fifth B-READY row on the same 74 countries. Eight scores fall under the coverage floor: Agency
 for Haiti, Sudan and Malawi, Coordination for the United Arab Emirates,
 Venezuela, Iran and Denmark, Trust for the United Arab Emirates and Haiti,
 and Building for Venezuela (A17). The World Bank lists 36 more frame

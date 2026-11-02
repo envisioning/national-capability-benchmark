@@ -13,7 +13,7 @@ A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 | Coordenação | 69,8 | 0,48 (utilizável) | sem tendência comparável |
 | Confiança | 82 | 0,33 (fraca) | sem tendência comparável |
 | Aprendizagem | 24,7 | 0,54 (utilizável) | sem tendência comparável |
-| Experimentação | 5,3 | 0,23 (muito fraca) | sem tendência comparável |
+| Experimentação | 4,2 | 0,3 (fraca) | sem tendência comparável |
 | Adaptação | 57 | 0,53 (utilizável) | sem tendência comparável |
 | Construção | 17,3 | 0,61 (utilizável) | 0 em 10 anos, com base em 3 indicadores |
 | Propósito compartilhado | 59,4 | 0,28 (fraca) | +26,5 em 20 anos, com base em 2 indicadores |
@@ -54,14 +54,6 @@ Com que eficácia o país adquire, distribui e atualiza conhecimento?
 
 A solidez da evidência está abaixo da faixa utilizável, de modo que a pontuação diz pouco sobre o país enquanto faltarem dados.
 
-### Experimentação: solidez 0,23, muito fraca
-
-Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e melhoradas?
-
-- A pontuação se apoia em 4 indicadores observados.
-- Lacunas declaradas: Operações de capital de risco, Empresas em sandboxes regulatórios, Empresas derivadas de pesquisa universitária.
-- Bases rejeitadas: Parcela empresarial do P&D.
-
 ### Propósito compartilhado: solidez 0,28, fraca
 
 Até que ponto as pessoas conseguem se ver como participantes de um projeto comum?
@@ -69,6 +61,14 @@ Até que ponto as pessoas conseguem se ver como participantes de um projeto comu
 - A pontuação se apoia em 2 indicadores observados.
 - Lacunas declaradas: Sentimento de pertencimento nacional, Voluntariado, Polarização política.
 - Bases rejeitadas: Voz e prestação de contas.
+
+### Experimentação: solidez 0,3, fraca
+
+Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e melhoradas?
+
+- A pontuação se apoia em 5 indicadores observados.
+- Lacunas declaradas: Operações de capital de risco, Empresas em sandboxes regulatórios, Empresas derivadas de pesquisa universitária.
+- Bases rejeitadas: Parcela empresarial do P&D.
 
 ### Confiança: solidez 0,33, fraca
 

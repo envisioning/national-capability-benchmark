@@ -13,7 +13,7 @@ La comparación incluye 125 países. Cada dimensión recibe una puntuación de 0
 | Coordinación | 52.5 | 0.25 (débil) | sin base de tendencia |
 | Confianza | 54.1 | 0.41 (débil) | sin base de tendencia |
 | Aprendizaje | 47.8 | 0.55 (utilizable) | sin base de tendencia |
-| Experimentación | 4.6 | 0.41 (débil) | -3.1 en 10 años, con 2 indicadores |
+| Experimentación | 4.6 | 0.37 (débil) | -3.1 en 10 años, con 2 indicadores |
 | Adaptación | 72.3 | 0.62 (utilizable) | sin base de tendencia |
 | Ejecución | 16.2 | 0.48 (utilizable) | -1.1 en 10 años, con 3 indicadores |
 | Propósito compartido | 48.7 | 0.42 (débil) | +6 en 10 años, con 2 indicadores |
@@ -62,7 +62,7 @@ La solidez de la evidencia está por debajo de la franja utilizable, así que la
 - Vacíos declarados: Colaboración universidad-empresa, Colaboración público-privada.
 - Series descartadas: Efectividad del gobierno, Calidad regulatoria, Desempeño logístico, Tiempo de exportación en frontera.
 
-### Experimentación: solidez 0.41, evidencia débil
+### Experimentación: solidez 0.37, evidencia débil
 
 ¿Con qué facilidad se pueden intentar, probar, abandonar y mejorar enfoques nuevos?
 

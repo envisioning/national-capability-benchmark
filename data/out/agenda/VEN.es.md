@@ -13,7 +13,7 @@ La comparación incluye 125 países. Cada dimensión recibe una puntuación de 0
 | Coordinación | sin puntuación | 0.1 (muy débil) | sin base de tendencia |
 | Confianza | 10.4 | 0.28 (débil) | sin base de tendencia |
 | Aprendizaje | sin puntuación | 0.16 (muy débil) | sin base de tendencia |
-| Experimentación | 2.9 | 0.41 (débil) | -2.1 en 10 años, con 2 indicadores |
+| Experimentación | 2.9 | 0.37 (débil) | -2.1 en 10 años, con 2 indicadores |
 | Adaptación | 48.7 | 0.53 (utilizable) | sin base de tendencia |
 | Ejecución | sin puntuación | 0.16 (muy débil) | sin base de tendencia |
 | Propósito compartido | 26.9 | 0.16 (muy débil) | sin base de tendencia |
@@ -91,7 +91,7 @@ La solidez de la evidencia está por debajo de la franja utilizable, así que la
 - Vacíos declarados: Confianza en las instituciones públicas, Tasa de resolución de casos judiciales.
 - Series descartadas: Estado de derecho, Control de la corrupción, Tiempo para hacer cumplir un contrato, Tasa de homicidios intencionales.
 
-### Experimentación: solidez 0.41, evidencia débil
+### Experimentación: solidez 0.37, evidencia débil
 
 ¿Con qué facilidad se pueden intentar, probar, abandonar y mejorar enfoques nuevos?
 

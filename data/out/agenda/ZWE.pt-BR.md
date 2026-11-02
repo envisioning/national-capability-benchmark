@@ -13,7 +13,7 @@ A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 | Coordenação | 58,1 | 0,25 (fraca) | sem tendência comparável |
 | Confiança | 16,7 | 0,41 (fraca) | sem tendência comparável |
 | Aprendizagem | 37,2 | 0,55 (utilizável) | sem tendência comparável |
-| Experimentação | 1,5 | 0,41 (fraca) | +0,5 em 10 anos, com base em 2 indicadores |
+| Experimentação | 1,5 | 0,37 (fraca) | +0,5 em 10 anos, com base em 2 indicadores |
 | Adaptação | 45,6 | 0,62 (utilizável) | sem tendência comparável |
 | Construção | 15,7 | 0,48 (utilizável) | +2,2 em 10 anos, com base em 3 indicadores |
 | Propósito compartilhado | 35,5 | 0,29 (fraca) | sem tendência comparável |
@@ -79,7 +79,7 @@ Até que ponto as pessoas conseguem se ver como participantes de um projeto comu
 - Lacunas declaradas: Sentimento de pertencimento nacional, Voluntariado, Polarização política.
 - Bases rejeitadas: Voz e prestação de contas.
 
-### Experimentação: solidez 0,41, fraca
+### Experimentação: solidez 0,37, fraca
 
 Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e melhoradas?
 

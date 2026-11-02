@@ -13,7 +13,7 @@ A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 | Coordenação | 70,9 | 0,29 (fraca) | sem tendência comparável |
 | Confiança | 33,1 | 0,41 (fraca) | sem tendência comparável |
 | Aprendizagem | 45,5 | 0,55 (utilizável) | sem tendência comparável |
-| Experimentação | 8 | 0,41 (fraca) | +1,7 em 10 anos, com base em 3 indicadores |
+| Experimentação | 8 | 0,37 (fraca) | +1,7 em 10 anos, com base em 3 indicadores |
 | Adaptação | 58,7 | 0,58 (utilizável) | sem tendência comparável |
 | Construção | 8,5 | 0,48 (utilizável) | -4,7 em 10 anos, com base em 3 indicadores |
 | Propósito compartilhado | 65,2 | 0,4 (fraca) | +1,9 em 10 anos, com base em 2 indicadores |
@@ -62,6 +62,14 @@ Com que eficácia atores independentes conseguem se organizar em torno de objeti
 - Lacunas declaradas: Colaboração universidade-empresa, Colaboração público-privada.
 - Bases rejeitadas: Efetividade governamental, Qualidade regulatória, Desempenho logístico, Tempo de exportação na fronteira.
 
+### Experimentação: solidez 0,37, fraca
+
+Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e melhoradas?
+
+- A pontuação se apoia em 4 indicadores observados.
+- Lacunas declaradas: Operações de capital de risco, Empresas em sandboxes regulatórios, Empresas derivadas de pesquisa universitária.
+- Bases rejeitadas: Parcela empresarial do P&D.
+
 ### Propósito compartilhado: solidez 0,4, fraca
 
 Até que ponto as pessoas conseguem se ver como participantes de um projeto comum?
@@ -69,14 +77,6 @@ Até que ponto as pessoas conseguem se ver como participantes de um projeto comu
 - A pontuação se apoia em 3 indicadores observados.
 - Lacunas declaradas: Sentimento de pertencimento nacional, Voluntariado, Polarização política.
 - Bases rejeitadas: Voz e prestação de contas.
-
-### Experimentação: solidez 0,41, fraca
-
-Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e melhoradas?
-
-- A pontuação se apoia em 4 indicadores observados.
-- Lacunas declaradas: Operações de capital de risco, Empresas em sandboxes regulatórios, Empresas derivadas de pesquisa universitária.
-- Bases rejeitadas: Parcela empresarial do P&D.
 
 ### Confiança: solidez 0,41, fraca
 

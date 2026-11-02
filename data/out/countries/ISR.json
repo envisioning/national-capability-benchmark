@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-02T15:31:15.704Z",
-  "version": "9.5.0",
+  "generatedAt": "2026-11-02T16:13:26.679Z",
+  "version": "9.6.0",
   "country": {
     "country": "Israel",
     "iso3": "ISR",
@@ -1405,19 +1405,19 @@
         ]
       },
       "experimentation": {
-        "score": 43.7,
-        "observedIndicators": 4,
+        "score": 45,
+        "observedIndicators": 5,
         "belowCoverageFloor": false,
-        "confidence": 0.411,
+        "confidence": 0.465,
         "confidenceParts": {
-          "coverage": 0.444,
+          "coverage": 0.5,
           "recency": 1,
-          "sourceQuality": 0.925
+          "sourceQuality": 0.93
         },
-        "delphiScore": 76,
-        "delphiIqr": 1,
+        "delphiScore": null,
+        "delphiIqr": null,
         "delphiDissent": false,
-        "blendedScore": 43.7,
+        "blendedScore": 45,
         "blendedFrom": "indicators",
         "momentum": [
           {
@@ -1577,145 +1577,6 @@
               {
                 "year": 2026,
                 "score": 39
-              }
-            ]
-          },
-          {
-            "baseYear": 1996,
-            "currentYear": 2026,
-            "baseScore": 100,
-            "currentScore": 54.9,
-            "delta": -45.1,
-            "matchedIndicators": 2,
-            "basket": [
-              "resident_patents_per_million",
-              "resident_industrial_designs_per_million"
-            ],
-            "clamped": 0,
-            "series": [
-              {
-                "year": 1996,
-                "score": 100
-              },
-              {
-                "year": 1997,
-                "score": 100
-              },
-              {
-                "year": 1998,
-                "score": 100
-              },
-              {
-                "year": 1999,
-                "score": 100
-              },
-              {
-                "year": 2000,
-                "score": 100
-              },
-              {
-                "year": 2001,
-                "score": 94.8
-              },
-              {
-                "year": 2002,
-                "score": 88.1
-              },
-              {
-                "year": 2003,
-                "score": 87.4
-              },
-              {
-                "year": 2004,
-                "score": 88.9
-              },
-              {
-                "year": 2005,
-                "score": 88.3
-              },
-              {
-                "year": 2006,
-                "score": 92.2
-              },
-              {
-                "year": 2007,
-                "score": 91.4
-              },
-              {
-                "year": 2008,
-                "score": 94.8
-              },
-              {
-                "year": 2009,
-                "score": 93.7
-              },
-              {
-                "year": 2010,
-                "score": 89.3
-              },
-              {
-                "year": 2011,
-                "score": 83.1
-              },
-              {
-                "year": 2012,
-                "score": 81.4
-              },
-              {
-                "year": 2013,
-                "score": 70.9
-              },
-              {
-                "year": 2014,
-                "score": 68.7
-              },
-              {
-                "year": 2015,
-                "score": 76.8
-              },
-              {
-                "year": 2016,
-                "score": 79.7
-              },
-              {
-                "year": 2017,
-                "score": 79.8
-              },
-              {
-                "year": 2018,
-                "score": 77.5
-              },
-              {
-                "year": 2019,
-                "score": 67.5
-              },
-              {
-                "year": 2020,
-                "score": 70.2
-              },
-              {
-                "year": 2021,
-                "score": 66.7
-              },
-              {
-                "year": 2022,
-                "score": 62.6
-              },
-              {
-                "year": 2023,
-                "score": 57.6
-              },
-              {
-                "year": 2024,
-                "score": 55.5
-              },
-              {
-                "year": 2025,
-                "score": 54.9
-              },
-              {
-                "year": 2026,
-                "score": 54.9
               }
             ]
           }
@@ -2476,6 +2337,29 @@
             "outOfFrame": false,
             "series": [],
             "status": "missing",
+            "staleExcluded": null
+          },
+          {
+            "indicatorId": "insolvency_efficiency",
+            "name": "Insolvency efficiency",
+            "measurementClass": "C",
+            "raw": 49.596,
+            "transformed": 49.596,
+            "normalized": 50.3,
+            "year": 2025,
+            "source": "World Bank (IC.BRE.BI.P3)",
+            "sourceTier": "international_organization",
+            "winsorized": false,
+            "outOfFrame": false,
+            "series": [
+              {
+                "year": 2025,
+                "raw": 49.596,
+                "normalized": 50.3,
+                "tier": "international_organization"
+              }
+            ],
+            "status": "observed",
             "staleExcluded": null
           },
           {

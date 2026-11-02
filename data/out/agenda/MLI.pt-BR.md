@@ -13,7 +13,7 @@ A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 | Coordenação | 61,7 | 0,4 (fraca) | sem tendência comparável |
 | Confiança | 61 | 0,34 (fraca) | sem tendência comparável |
 | Aprendizagem | 24,5 | 0,55 (utilizável) | sem tendência comparável |
-| Experimentação | sem pontuação | 0,09 (muito fraca) | sem tendência comparável |
+| Experimentação | 17,4 | 0,18 (muito fraca) | sem tendência comparável |
 | Adaptação | 26,9 | 0,6 (utilizável) | sem tendência comparável |
 | Construção | 13 | 0,62 (utilizável) | -1,5 em 10 anos, com base em 3 indicadores |
 | Propósito compartilhado | 48,7 | 0,22 (muito fraca) | sem tendência comparável |
@@ -63,11 +63,11 @@ Com que eficácia o sistema responde quando as circunstâncias mudam?
 
 A solidez da evidência está abaixo da faixa utilizável, de modo que a pontuação diz pouco sobre o país enquanto faltarem dados.
 
-### Experimentação: solidez 0,09, muito fraca
+### Experimentação: solidez 0,18, muito fraca
 
 Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e melhoradas?
 
-- A pontuação se apoia em um indicador observado.
+- A pontuação se apoia em 2 indicadores observados.
 - Lacunas declaradas: Operações de capital de risco, Empresas em sandboxes regulatórios, Empresas derivadas de pesquisa universitária.
 - Bases rejeitadas: Parcela empresarial do P&D.
 

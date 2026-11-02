@@ -13,7 +13,7 @@ A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 | Coordenação | 39,3 | 0,29 (fraca) | sem tendência comparável |
 | Confiança | 34,4 | 0,41 (fraca) | sem tendência comparável |
 | Aprendizagem | 24,3 | 0,55 (utilizável) | sem tendência comparável |
-| Experimentação | 2,9 | 0,3 (fraca) | sem tendência comparável |
+| Experimentação | 2,9 | 0,27 (fraca) | sem tendência comparável |
 | Adaptação | 44 | 0,62 (utilizável) | sem tendência comparável |
 | Construção | 9,1 | 0,48 (utilizável) | -0,6 em 10 anos, com base em 3 indicadores |
 | Propósito compartilhado | 49 | 0,4 (fraca) | +6,7 em 10 anos, com base em 2 indicadores |
@@ -63,6 +63,14 @@ Com que eficácia o sistema responde quando as circunstâncias mudam?
 
 A solidez da evidência está abaixo da faixa utilizável, de modo que a pontuação diz pouco sobre o país enquanto faltarem dados.
 
+### Experimentação: solidez 0,27, fraca
+
+Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e melhoradas?
+
+- A pontuação se apoia em 4 indicadores observados.
+- Lacunas declaradas: Operações de capital de risco, Empresas em sandboxes regulatórios, Empresas derivadas de pesquisa universitária.
+- Bases rejeitadas: Parcela empresarial do P&D.
+
 ### Coordenação: solidez 0,29, fraca
 
 Com que eficácia atores independentes conseguem se organizar em torno de objetivos comuns?
@@ -70,14 +78,6 @@ Com que eficácia atores independentes conseguem se organizar em torno de objeti
 - A pontuação se apoia em 2 indicadores observados.
 - Lacunas declaradas: Colaboração universidade-empresa, Colaboração público-privada.
 - Bases rejeitadas: Efetividade governamental, Qualidade regulatória, Desempenho logístico, Tempo de exportação na fronteira.
-
-### Experimentação: solidez 0,3, fraca
-
-Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e melhoradas?
-
-- A pontuação se apoia em 4 indicadores observados.
-- Lacunas declaradas: Operações de capital de risco, Empresas em sandboxes regulatórios, Empresas derivadas de pesquisa universitária.
-- Bases rejeitadas: Parcela empresarial do P&D.
 
 ### Propósito compartilhado: solidez 0,4, fraca
 

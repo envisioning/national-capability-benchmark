@@ -13,7 +13,7 @@ A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 | Coordenação | 79,2 | 0,47 (utilizável) | sem tendência comparável |
 | Confiança | 66,4 | 0,55 (utilizável) | sem tendência comparável |
 | Aprendizagem | 52,1 | 0,55 (utilizável) | sem tendência comparável |
-| Experimentação | 73,5 | 0,6 (utilizável) | +10,1 em 10 anos, com base em 3 indicadores, 1 limitados à borda da escala |
+| Experimentação | 75 | 0,64 (utilizável) | sem tendência comparável |
 | Adaptação | 73 | 0,46 (utilizável) | sem tendência comparável |
 | Construção | 85 | 0,63 (utilizável) | +3,1 em 10 anos, com base em 3 indicadores |
 | Propósito compartilhado | 40,1 | 0,4 (fraca) | +3,2 em 10 anos, com base em 2 indicadores |
@@ -36,8 +36,8 @@ Estas dimensões têm pontuação de pelo menos 50, com evidência utilizável.
 
 - Construção: 85, solidez utilizável
 - Coordenação: 79,2, solidez utilizável
+- Experimentação: 75, solidez utilizável
 - Antecipação: 74,4, solidez utilizável
-- Experimentação: 73,5, solidez utilizável
 - Adaptação: 73, solidez utilizável
 - Confiança: 66,4, solidez utilizável
 - Agência: 63,7, solidez utilizável

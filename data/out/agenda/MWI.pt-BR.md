@@ -13,7 +13,7 @@ A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 | Coordenação | 89,8 | 0,28 (fraca) | sem tendência comparável |
 | Confiança | 65,7 | 0,21 (muito fraca) | sem tendência comparável |
 | Aprendizagem | 47,1 | 0,55 (utilizável) | sem tendência comparável |
-| Experimentação | 0,4 | 0,23 (muito fraca) | sem tendência comparável |
+| Experimentação | 0,4 | 0,21 (muito fraca) | sem tendência comparável |
 | Adaptação | 49,6 | 0,48 (utilizável) | sem tendência comparável |
 | Construção | 10,8 | 0,48 (utilizável) | -0,6 em 10 anos, com base em 2 indicadores |
 | Propósito compartilhado | 50 | 0,25 (fraca) | sem tendência comparável |
@@ -71,6 +71,14 @@ Em que medida pessoas e organizações conseguem transformar intenção em açã
 - Lacunas declaradas: Adultos que realizam tarefas digitais.
 - Bases rejeitadas: Tempo para abrir uma empresa.
 
+### Experimentação: solidez 0,21, muito fraca
+
+Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e melhoradas?
+
+- A pontuação se apoia em 3 indicadores observados.
+- Lacunas declaradas: Operações de capital de risco, Empresas em sandboxes regulatórios, Empresas derivadas de pesquisa universitária.
+- Bases rejeitadas: Parcela empresarial do P&D.
+
 ### Confiança: solidez 0,21, muito fraca
 
 Quanta cooperação é possível para além do círculo pessoal mais próximo?
@@ -78,14 +86,6 @@ Quanta cooperação é possível para além do círculo pessoal mais próximo?
 - A pontuação se apoia em 2 indicadores observados.
 - Lacunas declaradas: Confiança nas instituições públicas, Taxa de resolução de processos judiciais.
 - Bases rejeitadas: Estado de direito, Controle da corrupção, Tempo para executar um contrato, Taxa de homicídios dolosos.
-
-### Experimentação: solidez 0,23, muito fraca
-
-Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e melhoradas?
-
-- A pontuação se apoia em 3 indicadores observados.
-- Lacunas declaradas: Operações de capital de risco, Empresas em sandboxes regulatórios, Empresas derivadas de pesquisa universitária.
-- Bases rejeitadas: Parcela empresarial do P&D.
 
 ### Propósito compartilhado: solidez 0,25, fraca
 

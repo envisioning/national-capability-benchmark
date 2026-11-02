@@ -13,7 +13,7 @@ A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 | Coordenação | sem pontuação | 0,1 (muito fraca) | sem tendência comparável |
 | Confiança | 10,4 | 0,28 (fraca) | sem tendência comparável |
 | Aprendizagem | sem pontuação | 0,16 (muito fraca) | sem tendência comparável |
-| Experimentação | 2,9 | 0,41 (fraca) | -2,1 em 10 anos, com base em 2 indicadores |
+| Experimentação | 2,9 | 0,37 (fraca) | -2,1 em 10 anos, com base em 2 indicadores |
 | Adaptação | 48,7 | 0,53 (utilizável) | sem tendência comparável |
 | Construção | sem pontuação | 0,16 (muito fraca) | sem tendência comparável |
 | Propósito compartilhado | 26,9 | 0,16 (muito fraca) | sem tendência comparável |
@@ -91,7 +91,7 @@ Quanta cooperação é possível para além do círculo pessoal mais próximo?
 - Lacunas declaradas: Confiança nas instituições públicas, Taxa de resolução de processos judiciais.
 - Bases rejeitadas: Estado de direito, Controle da corrupção, Tempo para executar um contrato, Taxa de homicídios dolosos.
 
-### Experimentação: solidez 0,41, fraca
+### Experimentação: solidez 0,37, fraca
 
 Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e melhoradas?
 

@@ -13,7 +13,7 @@ La comparación incluye 125 países. Cada dimensión recibe una puntuación de 0
 | Coordinación | 87.4 | 0.25 (débil) | sin base de tendencia |
 | Confianza | 81.8 | 0.14 (muy débil) | sin base de tendencia |
 | Aprendizaje | 35.3 | 0.4 (débil) | sin base de tendencia |
-| Experimentación | 2.9 | 0.34 (débil) | +0.3 en 10 años, con 2 indicadores |
+| Experimentación | 2.9 | 0.31 (débil) | +0.3 en 10 años, con 2 indicadores |
 | Adaptación | 64.1 | 0.62 (utilizable) | sin base de tendencia |
 | Ejecución | 16.7 | 0.48 (utilizable) | -1.7 en 10 años, con 3 indicadores |
 | Propósito compartido | 39.3 | 0.26 (débil) | sin base de tendencia |
@@ -77,7 +77,7 @@ La solidez de la evidencia está por debajo de la franja utilizable, así que la
 - Vacíos declarados: Adultos que realizan tareas digitales.
 - Series descartadas: Tiempo para abrir una empresa.
 
-### Experimentación: solidez 0.34, evidencia débil
+### Experimentación: solidez 0.31, evidencia débil
 
 ¿Con qué facilidad se pueden intentar, probar, abandonar y mejorar enfoques nuevos?
 

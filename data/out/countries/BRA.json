@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-02T15:31:15.704Z",
-  "version": "9.5.0",
+  "generatedAt": "2026-11-02T16:13:26.679Z",
+  "version": "9.6.0",
   "country": {
     "country": "Brazil",
     "iso3": "BRA",
@@ -1463,14 +1463,14 @@
         "score": 31.9,
         "observedIndicators": 6,
         "belowCoverageFloor": false,
-        "confidence": 0.6,
+        "confidence": 0.54,
         "confidenceParts": {
-          "coverage": 0.667,
+          "coverage": 0.6,
           "recency": 1,
           "sourceQuality": 0.9
         },
-        "delphiScore": 42,
-        "delphiIqr": 1.5,
+        "delphiScore": null,
+        "delphiIqr": null,
         "delphiDissent": false,
         "blendedScore": 31.9,
         "blendedFrom": "indicators",
@@ -2430,6 +2430,22 @@
               }
             ],
             "status": "observed",
+            "staleExcluded": null
+          },
+          {
+            "indicatorId": "insolvency_efficiency",
+            "name": "Insolvency efficiency",
+            "measurementClass": "C",
+            "raw": null,
+            "transformed": null,
+            "normalized": null,
+            "year": null,
+            "source": "World Bank (IC.BRE.BI.P3)",
+            "sourceTier": null,
+            "winsorized": false,
+            "outOfFrame": false,
+            "series": [],
+            "status": "missing",
             "staleExcluded": null
           },
           {

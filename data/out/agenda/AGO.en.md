@@ -13,7 +13,7 @@ The frame includes 125 countries. Each dimension is scored from 0 to 100, with n
 | Coordination | 27.7 | 0.47 (usable) | no trend |
 | Trust | 43.4 | 0.34 (thin) | no trend |
 | Learning | 21.8 | 0.55 (usable) | no trend |
-| Experimentation | 0.9 | 0.35 (thin) | no trend |
+| Experimentation | 0.7 | 0.41 (thin) | no trend |
 | Adaptability | 17.3 | 0.62 (usable) | no trend |
 | Building | 24.6 | 0.63 (usable) | +4 over 10 years using 3 indicators |
 | Shared Purpose | 20.8 | 0.24 (very thin) | no trend |
@@ -89,11 +89,11 @@ How much cooperation is possible beyond immediate personal networks?
 - Missing indicators: Trust in public institutions, Court case clearance rate.
 - Rejected datasets: Rule of law, Control of corruption, Time to enforce a contract, Intentional homicide rate.
 
-### Experimentation: confidence 0.35, thin
+### Experimentation: confidence 0.41, thin
 
 How easily can new approaches be attempted, tested, abandoned, and improved?
 
-- Uses 4 observed indicators.
+- Uses 5 observed indicators.
 - Missing indicators: Venture deals, Firms through regulatory sandboxes, University spinouts.
 - Rejected datasets: Business share of R&D.
 

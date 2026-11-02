@@ -13,7 +13,7 @@ The frame includes 125 countries. Each dimension is scored from 0 to 100, with n
 | Coordination | 82.9 | 0.45 (usable) | no trend |
 | Trust | 62.9 | 0.55 (usable) | no trend |
 | Learning | 66.7 | 0.55 (usable) | no trend |
-| Experimentation | 59.9 | 0.41 (thin) | +3.1 over 10 years using 3 indicators |
+| Experimentation | 55.5 | 0.47 (usable) | +3.1 over 10 years using 3 indicators |
 | Adaptability | 64.2 | 0.62 (usable) | no trend |
 | Building | 60.9 | 0.63 (usable) | +2.3 over 10 years using 3 indicators |
 | Shared Purpose | 51 | 0.42 (thin) | +2 over 10 years using 2 indicators |
@@ -21,14 +21,6 @@ The frame includes 125 countries. Each dimension is scored from 0 to 100, with n
 ## What to measure first
 
 The evidence is too thin to manage these dimensions confidently.
-
-### Experimentation: confidence 0.41, thin
-
-How easily can new approaches be attempted, tested, abandoned, and improved?
-
-- Uses 4 observed indicators.
-- Missing indicators: Venture deals, Firms through regulatory sandboxes, University spinouts.
-- Rejected datasets: Business share of R&D.
 
 ### Shared Purpose: confidence 0.42, thin
 
@@ -48,6 +40,7 @@ These dimensions score at least 50 with usable evidence.
 - Adaptability: 64.2, confidence usable
 - Trust: 62.9, confidence usable
 - Building: 60.9, confidence usable
+- Experimentation: 55.5, confidence usable
 - Agency: 53.1, confidence usable
 
 ## What Italy has to work with

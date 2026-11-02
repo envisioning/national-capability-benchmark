@@ -13,7 +13,7 @@ A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 | Coordenação | 96,9 | 0,29 (fraca) | sem tendência comparável |
 | Confiança | 90,3 | 0,55 (utilizável) | sem tendência comparável |
 | Aprendizagem | 79,5 | 0,55 (utilizável) | sem tendência comparável |
-| Experimentação | 47,7 | 0,41 (fraca) | -8,5 em 10 anos, com base em 3 indicadores |
+| Experimentação | 56,9 | 0,47 (utilizável) | -8,5 em 10 anos, com base em 3 indicadores |
 | Adaptação | 68,8 | 0,62 (utilizável) | sem tendência comparável |
 | Construção | 38,6 | 0,63 (utilizável) | -2,6 em 10 anos, com base em 3 indicadores |
 | Propósito compartilhado | 72,7 | 0,42 (fraca) | -1,2 em 10 anos, com base em 2 indicadores |
@@ -44,14 +44,6 @@ Com que eficácia atores independentes conseguem se organizar em torno de objeti
 - Lacunas declaradas: Colaboração universidade-empresa, Colaboração público-privada.
 - Bases rejeitadas: Efetividade governamental, Qualidade regulatória, Desempenho logístico, Tempo de exportação na fronteira.
 
-### Experimentação: solidez 0,41, fraca
-
-Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e melhoradas?
-
-- A pontuação se apoia em 4 indicadores observados.
-- Lacunas declaradas: Operações de capital de risco, Empresas em sandboxes regulatórios, Empresas derivadas de pesquisa universitária.
-- Bases rejeitadas: Parcela empresarial do P&D.
-
 ### Propósito compartilhado: solidez 0,42, fraca
 
 Até que ponto as pessoas conseguem se ver como participantes de um projeto comum?
@@ -69,6 +61,7 @@ Estas dimensões têm pontuação de pelo menos 50, com evidência utilizável.
 - Aprendizagem: 79,5, solidez utilizável
 - Adaptação: 68,8, solidez utilizável
 - Agência: 65,3, solidez utilizável
+- Experimentação: 56,9, solidez utilizável
 
 ## Com o que a Suécia conta
 

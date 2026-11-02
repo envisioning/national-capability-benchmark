@@ -13,7 +13,7 @@ A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 | Coordenação | 34,8 | 0,27 (fraca) | sem tendência comparável |
 | Confiança | 41,8 | 0,12 (muito fraca) | sem tendência comparável |
 | Aprendizagem | 14,5 | 0,36 (fraca) | sem tendência comparável |
-| Experimentação | 1,1 | 0,31 (fraca) | sem tendência comparável |
+| Experimentação | 1,1 | 0,28 (fraca) | sem tendência comparável |
 | Adaptação | 35,7 | 0,57 (utilizável) | sem tendência comparável |
 | Construção | 2,1 | 0,24 (muito fraca) | sem tendência comparável |
 | Propósito compartilhado | 44,2 | 0,08 (muito fraca) | sem tendência comparável |
@@ -84,7 +84,7 @@ Com que eficácia atores independentes conseguem se organizar em torno de objeti
 - Lacunas declaradas: Colaboração universidade-empresa, Colaboração público-privada.
 - Bases rejeitadas: Efetividade governamental, Qualidade regulatória, Desempenho logístico, Tempo de exportação na fronteira.
 
-### Experimentação: solidez 0,31, fraca
+### Experimentação: solidez 0,28, fraca
 
 Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e melhoradas?
 

@@ -13,7 +13,7 @@ A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 | Coordenação | sem pontuação | 0,1 (muito fraca) | sem tendência comparável |
 | Confiança | 26,7 | 0,28 (fraca) | sem tendência comparável |
 | Aprendizagem | 37 | 0,32 (fraca) | sem tendência comparável |
-| Experimentação | 39,8 | 0,41 (fraca) | -25,9 em 10 anos, com base em 3 indicadores |
+| Experimentação | 39,8 | 0,37 (fraca) | -25,9 em 10 anos, com base em 3 indicadores |
 | Adaptação | 72,4 | 0,53 (utilizável) | sem tendência comparável |
 | Construção | 30,4 | 0,29 (fraca) | +10,8 em 10 anos, com base em 2 indicadores |
 | Propósito compartilhado | 72,1 | 0,26 (fraca) | sem tendência comparável |
@@ -74,6 +74,14 @@ Com que eficácia o país adquire, distribui e atualiza conhecimento?
 - A pontuação se apoia em 2 indicadores observados.
 - Lacunas declaradas: Participação de adultos em aprendizagem.
 
+### Experimentação: solidez 0,37, fraca
+
+Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e melhoradas?
+
+- A pontuação se apoia em 4 indicadores observados.
+- Lacunas declaradas: Operações de capital de risco, Empresas em sandboxes regulatórios, Empresas derivadas de pesquisa universitária.
+- Bases rejeitadas: Parcela empresarial do P&D.
+
 ### Agência: solidez 0,38, fraca
 
 Em que medida pessoas e organizações conseguem transformar intenção em ação?
@@ -81,14 +89,6 @@ Em que medida pessoas e organizações conseguem transformar intenção em açã
 - A pontuação se apoia em 3 indicadores observados.
 - Lacunas declaradas: Adultos que realizam tarefas digitais.
 - Bases rejeitadas: Tempo para abrir uma empresa.
-
-### Experimentação: solidez 0,41, fraca
-
-Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e melhoradas?
-
-- A pontuação se apoia em 4 indicadores observados.
-- Lacunas declaradas: Operações de capital de risco, Empresas em sandboxes regulatórios, Empresas derivadas de pesquisa universitária.
-- Bases rejeitadas: Parcela empresarial do P&D.
 
 ## Dimensões com as pontuações mais altas
 

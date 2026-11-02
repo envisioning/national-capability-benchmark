@@ -13,7 +13,7 @@ The frame includes 125 countries. Each dimension is scored from 0 to 100, with n
 | Coordination | 46.1 | 0.44 (thin) | no trend |
 | Trust | 56 | 0.33 (thin) | no trend |
 | Learning | 37.6 | 0.54 (usable) | no trend |
-| Experimentation | 2.9 | 0.3 (thin) | no trend |
+| Experimentation | 22.7 | 0.36 (thin) | no trend |
 | Adaptability | 57.9 | 0.62 (usable) | no trend |
 | Building | 7.3 | 0.63 (usable) | -2.5 over 10 years using 3 indicators, with 1 at the frame edge |
 | Shared Purpose | 43.6 | 0.26 (thin) | no trend |
@@ -72,14 +72,6 @@ To what extent can people imagine themselves as participants in a common project
 - Missing indicators: Sense of national belonging, Volunteering, Political polarisation.
 - Rejected datasets: Voice and accountability.
 
-### Experimentation: confidence 0.3, thin
-
-How easily can new approaches be attempted, tested, abandoned, and improved?
-
-- Uses 3 observed indicators.
-- Missing indicators: Venture deals, Firms through regulatory sandboxes, University spinouts.
-- Rejected datasets: Business share of R&D.
-
 ### Trust: confidence 0.33, thin
 
 How much cooperation is possible beyond immediate personal networks?
@@ -87,6 +79,14 @@ How much cooperation is possible beyond immediate personal networks?
 - Uses 3 observed indicators.
 - Missing indicators: Trust in public institutions, Court case clearance rate.
 - Rejected datasets: Rule of law, Control of corruption, Time to enforce a contract, Intentional homicide rate.
+
+### Experimentation: confidence 0.36, thin
+
+How easily can new approaches be attempted, tested, abandoned, and improved?
+
+- Uses 4 observed indicators.
+- Missing indicators: Venture deals, Firms through regulatory sandboxes, University spinouts.
+- Rejected datasets: Business share of R&D.
 
 ### Coordination: confidence 0.44, thin
 

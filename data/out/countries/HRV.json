@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-02T15:31:15.704Z",
-  "version": "9.5.0",
+  "generatedAt": "2026-11-02T16:13:26.679Z",
+  "version": "9.6.0",
   "country": {
     "country": "Croatia",
     "iso3": "HRV",
@@ -1571,19 +1571,19 @@
         ]
       },
       "experimentation": {
-        "score": 19.4,
-        "observedIndicators": 4,
+        "score": 25.9,
+        "observedIndicators": 5,
         "belowCoverageFloor": false,
-        "confidence": 0.411,
+        "confidence": 0.465,
         "confidenceParts": {
-          "coverage": 0.444,
+          "coverage": 0.5,
           "recency": 1,
-          "sourceQuality": 0.925
+          "sourceQuality": 0.93
         },
-        "delphiScore": 26,
-        "delphiIqr": 2.5,
+        "delphiScore": null,
+        "delphiIqr": null,
         "delphiDissent": false,
-        "blendedScore": 19.4,
+        "blendedScore": 25.9,
         "blendedFrom": "indicators",
         "momentum": [
           {
@@ -1643,105 +1643,6 @@
               {
                 "year": 2026,
                 "score": 17.8
-              }
-            ]
-          },
-          {
-            "baseYear": 2006,
-            "currentYear": 2026,
-            "baseScore": 30.7,
-            "currentScore": 13.6,
-            "delta": -17.1,
-            "matchedIndicators": 2,
-            "basket": [
-              "resident_patents_per_million",
-              "resident_trademarks_per_million"
-            ],
-            "clamped": 0,
-            "series": [
-              {
-                "year": 2006,
-                "score": 30.7
-              },
-              {
-                "year": 2007,
-                "score": 34.4
-              },
-              {
-                "year": 2008,
-                "score": 35.9
-              },
-              {
-                "year": 2009,
-                "score": 27
-              },
-              {
-                "year": 2010,
-                "score": 30.2
-              },
-              {
-                "year": 2011,
-                "score": 26.9
-              },
-              {
-                "year": 2012,
-                "score": 25.2
-              },
-              {
-                "year": 2013,
-                "score": 25.9
-              },
-              {
-                "year": 2014,
-                "score": 22.6
-              },
-              {
-                "year": 2015,
-                "score": 21.6
-              },
-              {
-                "year": 2016,
-                "score": 22.9
-              },
-              {
-                "year": 2017,
-                "score": 21.3
-              },
-              {
-                "year": 2018,
-                "score": 17.1
-              },
-              {
-                "year": 2019,
-                "score": 28.9
-              },
-              {
-                "year": 2020,
-                "score": 20.8
-              },
-              {
-                "year": 2021,
-                "score": 14.3
-              },
-              {
-                "year": 2022,
-                "score": 19.3
-              },
-              {
-                "year": 2023,
-                "score": 20.1
-              },
-              {
-                "year": 2024,
-                "score": 13.7
-              },
-              {
-                "year": 2025,
-                "score": 13.6
-              },
-              {
-                "year": 2026,
-                "score": 13.6
               }
             ]
           }
@@ -2286,6 +2187,29 @@
             "outOfFrame": false,
             "series": [],
             "status": "missing",
+            "staleExcluded": null
+          },
+          {
+            "indicatorId": "insolvency_efficiency",
+            "name": "Insolvency efficiency",
+            "measurementClass": "C",
+            "raw": 51.18,
+            "transformed": 51.18,
+            "normalized": 51.9,
+            "year": 2025,
+            "source": "World Bank (IC.BRE.BI.P3)",
+            "sourceTier": "international_organization",
+            "winsorized": false,
+            "outOfFrame": false,
+            "series": [
+              {
+                "year": 2025,
+                "raw": 51.18,
+                "normalized": 51.9,
+                "tier": "international_organization"
+              }
+            ],
+            "status": "observed",
             "staleExcluded": null
           },
           {

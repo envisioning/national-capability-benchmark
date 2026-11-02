@@ -13,7 +13,7 @@ The frame includes 125 countries. Each dimension is scored from 0 to 100, with n
 | Coordination | 49.9 | 0.28 (thin) | no trend |
 | Trust | 46.5 | 0.21 (very thin) | no trend |
 | Learning | 24.6 | 0.55 (usable) | no trend |
-| Experimentation | 0.2 | 0.38 (thin) | no trend |
+| Experimentation | 0.2 | 0.34 (thin) | no trend |
 | Adaptability | 37.4 | 0.49 (usable) | no trend |
 | Building | 12.8 | 0.46 (usable) | -0.2 over 10 years using 3 indicators |
 | Shared Purpose | 47.2 | 0.22 (very thin) | no trend |
@@ -95,7 +95,7 @@ How able are individuals and organizations to turn an intention into action?
 - Missing indicators: Adults doing digital tasks.
 - Rejected datasets: Time to start a business.
 
-### Experimentation: confidence 0.38, thin
+### Experimentation: confidence 0.34, thin
 
 How easily can new approaches be attempted, tested, abandoned, and improved?
 

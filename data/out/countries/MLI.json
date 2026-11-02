@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-02T15:31:15.704Z",
-  "version": "9.5.0",
+  "generatedAt": "2026-11-02T16:13:26.679Z",
+  "version": "9.6.0",
   "country": {
     "country": "Mali",
     "iso3": "MLI",
@@ -1466,20 +1466,20 @@
         ]
       },
       "experimentation": {
-        "score": null,
-        "observedIndicators": 1,
-        "belowCoverageFloor": true,
-        "confidence": 0.094,
+        "score": 17.4,
+        "observedIndicators": 2,
+        "belowCoverageFloor": false,
+        "confidence": 0.18,
         "confidenceParts": {
-          "coverage": 0.111,
+          "coverage": 0.2,
           "recency": 1,
-          "sourceQuality": 0.85
+          "sourceQuality": 0.9
         },
-        "delphiScore": 5,
-        "delphiIqr": 3.5,
+        "delphiScore": null,
+        "delphiIqr": null,
         "delphiDissent": false,
-        "blendedScore": null,
-        "blendedFrom": "none",
+        "blendedScore": 17.4,
+        "blendedFrom": "indicators",
         "momentum": [],
         "indicators": [
           {
@@ -1602,6 +1602,29 @@
             "outOfFrame": false,
             "series": [],
             "status": "missing",
+            "staleExcluded": null
+          },
+          {
+            "indicatorId": "insolvency_efficiency",
+            "name": "Insolvency efficiency",
+            "measurementClass": "C",
+            "raw": 34.13,
+            "transformed": 34.13,
+            "normalized": 34.6,
+            "year": 2025,
+            "source": "World Bank (IC.BRE.BI.P3)",
+            "sourceTier": "international_organization",
+            "winsorized": false,
+            "outOfFrame": false,
+            "series": [
+              {
+                "year": 2025,
+                "raw": 34.13,
+                "normalized": 34.6,
+                "tier": "international_organization"
+              }
+            ],
+            "status": "observed",
             "staleExcluded": null
           },
           {

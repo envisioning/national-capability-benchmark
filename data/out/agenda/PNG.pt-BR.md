@@ -13,7 +13,7 @@ A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 | Coordenação | 56,4 | 0,43 (fraca) | sem tendência comparável |
 | Confiança | 50,4 | 0,34 (fraca) | sem tendência comparável |
 | Aprendizagem | 64,9 | 0,55 (utilizável) | sem tendência comparável |
-| Experimentação | 0,1 | 0,34 (fraca) | 0 em 10 anos, com base em 2 indicadores |
+| Experimentação | 3,1 | 0,4 (fraca) | 0 em 10 anos, com base em 2 indicadores |
 | Adaptação | 52,2 | 0,46 (utilizável) | sem tendência comparável |
 | Construção | 11,7 | 0,62 (utilizável) | +3,2 em 10 anos, com base em 3 indicadores |
 | Propósito compartilhado | sem pontuação | 0,16 (muito fraca) | sem tendência comparável |
@@ -53,14 +53,6 @@ Até que ponto as pessoas conseguem se ver como participantes de um projeto comu
 - Lacunas declaradas: Sentimento de pertencimento nacional, Voluntariado, Polarização política.
 - Bases rejeitadas: Voz e prestação de contas.
 
-### Experimentação: solidez 0,34, fraca
-
-Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e melhoradas?
-
-- A pontuação se apoia em 4 indicadores observados.
-- Lacunas declaradas: Operações de capital de risco, Empresas em sandboxes regulatórios, Empresas derivadas de pesquisa universitária.
-- Bases rejeitadas: Parcela empresarial do P&D.
-
 ### Confiança: solidez 0,34, fraca
 
 Quanta cooperação é possível para além do círculo pessoal mais próximo?
@@ -68,6 +60,14 @@ Quanta cooperação é possível para além do círculo pessoal mais próximo?
 - A pontuação se apoia em 3 indicadores observados.
 - Lacunas declaradas: Confiança nas instituições públicas, Taxa de resolução de processos judiciais.
 - Bases rejeitadas: Estado de direito, Controle da corrupção, Tempo para executar um contrato, Taxa de homicídios dolosos.
+
+### Experimentação: solidez 0,4, fraca
+
+Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e melhoradas?
+
+- A pontuação se apoia em 5 indicadores observados.
+- Lacunas declaradas: Operações de capital de risco, Empresas em sandboxes regulatórios, Empresas derivadas de pesquisa universitária.
+- Bases rejeitadas: Parcela empresarial do P&D.
 
 ### Agência: solidez 0,43, fraca
 

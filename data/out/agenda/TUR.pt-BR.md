@@ -13,7 +13,7 @@ A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 | Coordenação | 52,3 | 0,45 (utilizável) | sem tendência comparável |
 | Confiança | 41,5 | 0,55 (utilizável) | sem tendência comparável |
 | Aprendizagem | 35 | 0,55 (utilizável) | sem tendência comparável |
-| Experimentação | 66,8 | 0,41 (fraca) | +19,3 em 10 anos, com base em 3 indicadores |
+| Experimentação | 63,5 | 0,47 (utilizável) | +19,3 em 10 anos, com base em 3 indicadores |
 | Adaptação | 80,3 | 0,62 (utilizável) | sem tendência comparável |
 | Construção | 51,3 | 0,63 (utilizável) | +5 em 10 anos, com base em 3 indicadores |
 | Propósito compartilhado | 35,4 | 0,42 (fraca) | -3,5 em 10 anos, com base em 2 indicadores |
@@ -64,14 +64,6 @@ Em que medida pessoas e organizações conseguem transformar intenção em açã
 
 A solidez da evidência está abaixo da faixa utilizável, de modo que a pontuação diz pouco sobre o país enquanto faltarem dados.
 
-### Experimentação: solidez 0,41, fraca
-
-Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e melhoradas?
-
-- A pontuação se apoia em 4 indicadores observados.
-- Lacunas declaradas: Operações de capital de risco, Empresas em sandboxes regulatórios, Empresas derivadas de pesquisa universitária.
-- Bases rejeitadas: Parcela empresarial do P&D.
-
 ### Propósito compartilhado: solidez 0,42, fraca
 
 Até que ponto as pessoas conseguem se ver como participantes de um projeto comum?
@@ -85,6 +77,7 @@ Até que ponto as pessoas conseguem se ver como participantes de um projeto comu
 Estas dimensões têm pontuação de pelo menos 50, com evidência utilizável.
 
 - Adaptação: 80,3, solidez utilizável
+- Experimentação: 63,5, solidez utilizável
 - Coordenação: 52,3, solidez utilizável
 - Construção: 51,3, solidez utilizável
 

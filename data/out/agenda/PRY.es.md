@@ -13,7 +13,7 @@ La comparación incluye 125 países. Cada dimensión recibe una puntuación de 0
 | Coordinación | 49.4 | 0.44 (débil) | sin base de tendencia |
 | Confianza | 49.2 | 0.33 (débil) | sin base de tendencia |
 | Aprendizaje | 30.9 | 0.54 (utilizable) | sin base de tendencia |
-| Experimentación | 12.1 | 0.41 (débil) | -8.9 en 20 años, con 3 indicadores |
+| Experimentación | 14.5 | 0.47 (utilizable) | -8.9 en 20 años, con 3 indicadores |
 | Adaptación | 65.2 | 0.62 (utilizable) | sin base de tendencia |
 | Ejecución | 36.7 | 0.63 (utilizable) | +2 en 10 años, con 3 indicadores |
 | Propósito compartido | 36 | 0.32 (débil) | +7.7 en 10 años, con 2 indicadores |
@@ -21,6 +21,16 @@ La comparación incluye 125 países. Cada dimensión recibe una puntuación de 0
 ## Puntuaciones bajas con evidencia utilizable
 
 Estas son las puntuaciones más bajas con evidencia utilizable. Las dimensiones con evidencia débil aparecen más abajo.
+
+### Experimentación: 14.5, evidencia utilizable
+
+¿Con qué facilidad se pueden intentar, probar, abandonar y mejorar enfoques nuevos?
+
+- Basada en 5 indicadores observados.
+- Puntuaciones más altas en esta dimensión, entre las que tienen evidencia utilizable: Corea del Sur 75, Reino Unido 70, Suiza 68.8.
+- Casos documentados en otros países: The FCA regulatory sandbox (Reino Unido); Yozma, the venture capital catalyst (Israel); Korean regulatory-sandbox system across eight sectors (Corea del Sur); MAS FinTech Regulatory Sandbox variants (Singapur); British Patient Capital, a public venture-capital catalyst (Reino Unido); ICURe, from university research to spinouts (Reino Unido); Portugal Ventures, a public venture-capital bridge (Portugal); Rede Nacional de Test Beds for company experimentation (Portugal); Zonas Livres Tecnológicas, regulator-supervised experimentation zones (Portugal); Banco Central regulatory sandbox, first cycle (Brasil); Reserve Bank of India regulatory sandbox (India); Capital Markets Authority regulatory sandbox (Kenia); SEC Nigeria Regulatory Incubation Program (Nigeria); ADGM RegLab, the first fintech sandbox in the region (Emiratos Árabes Unidos); OJK regulatory sandbox for financial-sector technological innovation (Indonesia); Bank Negara Malaysia Fintech Regulatory Sandbox (Malasia); Bank of Thailand regulatory sandbox (Tailandia); Sandbox financiero (Ley 7/2020), and the fall in applications (España); IFWG Regulatory Sandbox (Sudáfrica); Project-based regulatory sandbox (new technology demonstration scheme) (Japón); CFPB Compliance Assistance Sandbox, rescinded in 2022 and withdrawn again in 2025 (Estados Unidos); CSA Regulatory Sandbox, succeeded by the Financial Innovation Hub (Canadá); ASIC enhanced regulatory sandbox (Australia); SINTEG-Verordnung, the energy-transition experimentation clause (Alemania); Experimenten Elektriciteitswet 2015-2018, and its erosion (Países Bajos); Bac à sable réglementaire in the energy sector (Francia); Italy's FinTech regulatory sandbox, and its contraction (Italia); Bank of Ghana Regulatory Sandbox (Ghana); AFSA FinTech Lab at the Astana International Financial Centre (Kazajistán); Banque Centrale de Tunisie regulatory sandbox, first cohort (Túnez); Sandbox Regulatório do Banco de Moçambique (Mozambique); Regulatory Sandbox Licence of the Economic Development Board (Mauricio); Bank of Uganda regulatory sandbox (Uganda); Regulatory Sandbox Framework for Capital Markets, first cohort (Zambia); Securities and Exchange Commission of Zimbabwe regulatory sandbox (Zimbabue); FMA Regulatory Sandbox (Austria); Regulatorisk sandkasse for AI (Datatilsynet and Digitaliseringsstyrelsen) (Dinamarca); Datatilsynet's regulatory sandbox for privacy-friendly innovation (Noruega); Bank of Lithuania regulatory sandbox, with one test in seven years (Lituania); Narodna banka Slovenska regulatory sandbox (Eslovaquia); Sandbox for AI and blockchain products, Ministry of Digital Transformation and Ukrainian Startup Fund (Ucrania); Bank of Russia regulatory sandbox (regulativnaya pesochnitsa) (Rusia); JoRegBox, the Central Bank of Jordan regulatory sandbox (Jordania); Special regulatory regimes (spetsialnye regulyativnye rezhimy) of the National Bank of the Kyrgyz Republic (Kirguistán); SECP Regulatory Sandbox, four cohorts and an open window (Pakistán); Bank of Jamaica FinTech Regulatory Sandbox (Jamaica); Financial Regulatory Commission sandbox regulatory environment (Mongolia); NAMFISA Regulatory Sandbox, microlending cohort (Namibia); Central Bank of Azerbaijan regulatory sandbox (Azerbaiyán); FRA Sandbox of the Financial Regulatory Authority (Egipto); Mohit-e azmoon-e tanzimgari (regulatory sandbox) of the Central Bank of the Islamic Republic of Iran (Irán); Regulatory sandbox (special legal regime) in the capital market of the National Agency of Perspective Projects (Uzbekistán); BRUGEL derogation framework for innovative energy projects (projets innovants) (Bélgica); FMA regulatory sandbox pilot (Nueva Zelanda); Regulatory Laboratory (regulatory sandbox) of the National Bank of Georgia (Georgia); Energy Sandbox (spatii de testare inovativa in domeniul energiei) (Moldavia).
+- Vacíos declarados: Operaciones de capital de riesgo, Empresas en espacios controlados de prueba, Empresas surgidas de universidades.
+- Series descartadas: I+D ejecutada por empresas.
 
 ### Aprendizaje: 30.9, evidencia utilizable
 
@@ -79,14 +89,6 @@ La solidez de la evidencia está por debajo de la franja utilizable, así que la
 - Basada en 3 indicadores observados.
 - Vacíos declarados: Confianza en las instituciones públicas, Tasa de resolución de casos judiciales.
 - Series descartadas: Estado de derecho, Control de la corrupción, Tiempo para hacer cumplir un contrato, Tasa de homicidios intencionales.
-
-### Experimentación: solidez 0.41, evidencia débil
-
-¿Con qué facilidad se pueden intentar, probar, abandonar y mejorar enfoques nuevos?
-
-- Basada en 4 indicadores observados.
-- Vacíos declarados: Operaciones de capital de riesgo, Empresas en espacios controlados de prueba, Empresas surgidas de universidades.
-- Series descartadas: I+D ejecutada por empresas.
 
 ### Coordinación: solidez 0.44, evidencia débil
 

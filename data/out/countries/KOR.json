@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-02T15:31:15.704Z",
-  "version": "9.5.0",
+  "generatedAt": "2026-11-02T16:13:26.679Z",
+  "version": "9.6.0",
   "country": {
     "country": "South Korea",
     "iso3": "KOR",
@@ -1433,182 +1433,21 @@
         ]
       },
       "experimentation": {
-        "score": 73.5,
-        "observedIndicators": 6,
+        "score": 75,
+        "observedIndicators": 7,
         "belowCoverageFloor": false,
-        "confidence": 0.6,
+        "confidence": 0.635,
         "confidenceParts": {
-          "coverage": 0.667,
+          "coverage": 0.7,
           "recency": 1,
-          "sourceQuality": 0.9
+          "sourceQuality": 0.907
         },
-        "delphiScore": 68,
-        "delphiIqr": 2.5,
+        "delphiScore": null,
+        "delphiIqr": null,
         "delphiDissent": false,
-        "blendedScore": 73.5,
+        "blendedScore": 75,
         "blendedFrom": "indicators",
-        "momentum": [
-          {
-            "baseYear": 2016,
-            "currentYear": 2026,
-            "baseScore": 89.9,
-            "currentScore": 100,
-            "delta": 10.1,
-            "matchedIndicators": 3,
-            "basket": [
-              "resident_patents_per_million",
-              "resident_trademarks_per_million",
-              "resident_industrial_designs_per_million"
-            ],
-            "clamped": 1,
-            "series": [
-              {
-                "year": 2016,
-                "score": 89.9
-              },
-              {
-                "year": 2017,
-                "score": 89.6
-              },
-              {
-                "year": 2018,
-                "score": 92.8
-              },
-              {
-                "year": 2019,
-                "score": 95.3
-              },
-              {
-                "year": 2020,
-                "score": 100
-              },
-              {
-                "year": 2021,
-                "score": 100
-              },
-              {
-                "year": 2022,
-                "score": 100
-              },
-              {
-                "year": 2023,
-                "score": 99.9
-              },
-              {
-                "year": 2024,
-                "score": 100
-              },
-              {
-                "year": 2025,
-                "score": 100
-              },
-              {
-                "year": 2026,
-                "score": 100
-              }
-            ]
-          },
-          {
-            "baseYear": 2006,
-            "currentYear": 2026,
-            "baseScore": 85,
-            "currentScore": 100,
-            "delta": 15,
-            "matchedIndicators": 3,
-            "basket": [
-              "resident_patents_per_million",
-              "resident_trademarks_per_million",
-              "resident_industrial_designs_per_million"
-            ],
-            "clamped": 1,
-            "series": [
-              {
-                "year": 2006,
-                "score": 85
-              },
-              {
-                "year": 2007,
-                "score": 86.3
-              },
-              {
-                "year": 2008,
-                "score": 85.8
-              },
-              {
-                "year": 2009,
-                "score": 84.3
-              },
-              {
-                "year": 2010,
-                "score": 83.7
-              },
-              {
-                "year": 2011,
-                "score": 83.9
-              },
-              {
-                "year": 2012,
-                "score": 84.9
-              },
-              {
-                "year": 2013,
-                "score": 87
-              },
-              {
-                "year": 2014,
-                "score": 87.7
-              },
-              {
-                "year": 2015,
-                "score": 91
-              },
-              {
-                "year": 2016,
-                "score": 89.9
-              },
-              {
-                "year": 2017,
-                "score": 89.6
-              },
-              {
-                "year": 2018,
-                "score": 92.8
-              },
-              {
-                "year": 2019,
-                "score": 95.3
-              },
-              {
-                "year": 2020,
-                "score": 100
-              },
-              {
-                "year": 2021,
-                "score": 100
-              },
-              {
-                "year": 2022,
-                "score": 100
-              },
-              {
-                "year": 2023,
-                "score": 99.9
-              },
-              {
-                "year": 2024,
-                "score": 100
-              },
-              {
-                "year": 2025,
-                "score": 100
-              },
-              {
-                "year": 2026,
-                "score": 100
-              }
-            ]
-          }
-        ],
+        "momentum": [],
         "indicators": [
           {
             "indicatorId": "resident_patents_per_million",
@@ -2292,6 +2131,29 @@
                 "raw": 73,
                 "normalized": 100,
                 "tier": "academic_survey"
+              }
+            ],
+            "status": "observed",
+            "staleExcluded": null
+          },
+          {
+            "indicatorId": "insolvency_efficiency",
+            "name": "Insolvency efficiency",
+            "measurementClass": "C",
+            "raw": 82.826,
+            "transformed": 82.826,
+            "normalized": 84,
+            "year": 2025,
+            "source": "World Bank (IC.BRE.BI.P3)",
+            "sourceTier": "international_organization",
+            "winsorized": false,
+            "outOfFrame": false,
+            "series": [
+              {
+                "year": 2025,
+                "raw": 82.826,
+                "normalized": 84,
+                "tier": "international_organization"
               }
             ],
             "status": "observed",

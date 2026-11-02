@@ -13,7 +13,7 @@ A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 | Coordenação | 84 | 0,29 (fraca) | sem tendência comparável |
 | Confiança | 86,4 | 0,34 (fraca) | sem tendência comparável |
 | Aprendizagem | 80,3 | 0,55 (utilizável) | sem tendência comparável |
-| Experimentação | 70,7 | 0,41 (fraca) | +16,9 em 10 anos, com base em 3 indicadores |
+| Experimentação | 70 | 0,47 (utilizável) | +16,9 em 10 anos, com base em 3 indicadores |
 | Adaptação | 70,5 | 0,62 (utilizável) | sem tendência comparável |
 | Construção | 58,2 | 0,63 (utilizável) | +0,3 em 10 anos, com base em 3 indicadores |
 | Propósito compartilhado | 74,7 | 0,28 (fraca) | +3,3 em 10 anos, com base em 2 indicadores |
@@ -46,14 +46,6 @@ Quanta cooperação é possível para além do círculo pessoal mais próximo?
 - Lacunas declaradas: Confiança nas instituições públicas, Taxa de resolução de processos judiciais.
 - Bases rejeitadas: Estado de direito, Controle da corrupção, Tempo para executar um contrato, Taxa de homicídios dolosos.
 
-### Experimentação: solidez 0,41, fraca
-
-Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e melhoradas?
-
-- A pontuação se apoia em 4 indicadores observados.
-- Lacunas declaradas: Operações de capital de risco, Empresas em sandboxes regulatórios, Empresas derivadas de pesquisa universitária.
-- Bases rejeitadas: Parcela empresarial do P&D.
-
 ## Dimensões com as pontuações mais altas
 
 Estas dimensões têm pontuação de pelo menos 50, com evidência utilizável.
@@ -62,6 +54,7 @@ Estas dimensões têm pontuação de pelo menos 50, com evidência utilizável.
 - Aprendizagem: 80,3, solidez utilizável
 - Antecipação: 71,8, solidez utilizável
 - Adaptação: 70,5, solidez utilizável
+- Experimentação: 70, solidez utilizável
 - Construção: 58,2, solidez utilizável
 
 ## Com o que o Reino Unido conta

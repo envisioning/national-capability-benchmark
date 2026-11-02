@@ -13,7 +13,7 @@ A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 | Coordenação | 96 | 0,27 (fraca) | sem tendência comparável |
 | Confiança | 92,1 | 0,21 (muito fraca) | sem tendência comparável |
 | Aprendizagem | 66,2 | 0,55 (utilizável) | sem tendência comparável |
-| Experimentação | 70,8 | 0,41 (fraca) | +1,1 em 10 anos, com base em 3 indicadores |
+| Experimentação | 70,8 | 0,37 (fraca) | +1,1 em 10 anos, com base em 3 indicadores |
 | Adaptação | 74,3 | 0,62 (utilizável) | sem tendência comparável |
 | Construção | 60 | 0,48 (utilizável) | -3 em 10 anos, com base em 3 indicadores |
 | Propósito compartilhado | 49,9 | 0,29 (fraca) | -4,7 em 10 anos, com base em 2 indicadores |
@@ -54,7 +54,7 @@ Em que medida pessoas e organizações conseguem transformar intenção em açã
 - Lacunas declaradas: Adultos que realizam tarefas digitais.
 - Bases rejeitadas: Tempo para abrir uma empresa.
 
-### Experimentação: solidez 0,41, fraca
+### Experimentação: solidez 0,37, fraca
 
 Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e melhoradas?
 

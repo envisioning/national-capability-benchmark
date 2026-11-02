@@ -623,9 +623,11 @@ unknown, so a stalled request and a dead code never read the same.
 `IC.BRE.*`, B-READY, is the Doing Business successor and it is in World
 Development Indicators, database 2. Its 2025 round covers 74 of the 125.
 D167 and D171 score the third pillar of four topics (`IC.BRE.BE.P3`,
-`IT.P3`, `DR.P3`, `US.P3`) in place of four Doing Business rows. Every
-B-READY series is a 0 to 100 score: there is no day, hour or procedure
-count, so `business_start_procedures` has no successor.
+`IT.P3`, `DR.P3`, `US.P3`) in place of four Doing Business rows, and D173
+adds `BI.P3` to Experimentation as a new row. Every B-READY series is a
+0 to 100 score: there is no day, hour or procedure count, so
+`business_start_procedures` has no successor. `BI.P3` keeps its zeros: a 0
+there is the handbook's "no practice" mark, a value, not a placeholder.
 
 Other traps found the hard way:
 

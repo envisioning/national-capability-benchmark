@@ -13,7 +13,7 @@ A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 | Coordenação | 82,9 | 0,45 (utilizável) | sem tendência comparável |
 | Confiança | 62,9 | 0,55 (utilizável) | sem tendência comparável |
 | Aprendizagem | 66,7 | 0,55 (utilizável) | sem tendência comparável |
-| Experimentação | 59,9 | 0,41 (fraca) | +3,1 em 10 anos, com base em 3 indicadores |
+| Experimentação | 55,5 | 0,47 (utilizável) | +3,1 em 10 anos, com base em 3 indicadores |
 | Adaptação | 64,2 | 0,62 (utilizável) | sem tendência comparável |
 | Construção | 60,9 | 0,63 (utilizável) | +2,3 em 10 anos, com base em 3 indicadores |
 | Propósito compartilhado | 51 | 0,42 (fraca) | +2 em 10 anos, com base em 2 indicadores |
@@ -21,14 +21,6 @@ A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 ## Dimensões com evidência fraca
 
 A solidez da evidência está abaixo da faixa utilizável, de modo que a pontuação diz pouco sobre o país enquanto faltarem dados.
-
-### Experimentação: solidez 0,41, fraca
-
-Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e melhoradas?
-
-- A pontuação se apoia em 4 indicadores observados.
-- Lacunas declaradas: Operações de capital de risco, Empresas em sandboxes regulatórios, Empresas derivadas de pesquisa universitária.
-- Bases rejeitadas: Parcela empresarial do P&D.
 
 ### Propósito compartilhado: solidez 0,42, fraca
 
@@ -48,6 +40,7 @@ Estas dimensões têm pontuação de pelo menos 50, com evidência utilizável.
 - Adaptação: 64,2, solidez utilizável
 - Confiança: 62,9, solidez utilizável
 - Construção: 60,9, solidez utilizável
+- Experimentação: 55,5, solidez utilizável
 - Agência: 53,1, solidez utilizável
 
 ## Com o que a Itália conta
