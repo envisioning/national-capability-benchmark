@@ -769,10 +769,12 @@ the report and the viewer both refuse to present them as evidence.
 Do not add a cheap model to widen the panel. `pnpm bench cost` puts a full run in
 single-digit dollars, so cost is not the constraint — see D13.
 
-The repository contains old in-session one-panelist artifacts, including the
-run pointed to by `data/delphi/latest.json`. They are useful research notes, but
-they are not a current panel for dataset 6.1.0. Replace them with a reviewed
-gateway run covering the current country set before publishing anything.
+`data/delphi/latest.json` points at a one-vendor in-session panel on dataset
+10.0.0 (D154, D155), three Claude panelists over all 1,215 cells. A
+multi-vendor or gateway run on the same dataset supersedes it. The older files
+in `data/delphi` are anchored to older frames and stay research notes. When
+you run a panel in session, check each batch for missingEvidence lists copied
+across countries before you merge it: see `docs/PANELIST-BRIEF.md`.
 
 ## Brand
 

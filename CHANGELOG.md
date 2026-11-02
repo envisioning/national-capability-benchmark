@@ -9,6 +9,26 @@ The entries before App 1.0.0 are retrospective, high-level summaries
 reconstructed from the repository history. They document explicit version bumps
 and may skip versions that were never committed.
 
+## App 1.36.0 — 2026-11-02
+
+- **Model panel estimates are back, on all 135 countries.** Three Claude
+  panelists scored all 1,215 country and capability cells of dataset
+  10.0.0 over two rounds. Each argued from one fixed stance in its own
+  working context. A panel estimate is shown beside a score and never
+  enters it.
+- **The panelists agree closely, and with one vendor that agreement
+  understates the uncertainty.** After round two the median interquartile
+  range is 1.5 points and the widest is 9.5. No cell reaches the 25-point
+  line the project counts as dissent. All three panelists are Claude models,
+  so they share blind spots that a narrow spread cannot show (decision D155).
+- **The panel tracks income more closely than the indicators do.** On every
+  capability, the panel median correlates more strongly with log GDP per
+  head than the indicator score does. The difference ranges from 0.007 on
+  Anticipation to 0.30 on Shared purpose.
+- **The known artefacts quote the panel again.** It ranks Singapore 9th of
+  135 on Coordination, where the indicators rank it 67th of 130, and it
+  lifts India and Korea in the entries that discuss them.
+
 ## App 1.35.0 — 2026-11-02
 
 - **Country pages show each capability since 2000.** Every capability on a

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-02T16:44:19.137Z",
+  "generatedAt": "2026-11-02T19:37:30.756Z",
   "gdpSeries": "NY.GDP.PCAP.PP.KD",
   "income": [
     {
@@ -1904,8 +1904,124 @@
       "delta": -0.192
     }
   ],
-  "panelVsGdp": null,
-  "delphiApplication": null,
+  "panelVsGdp": {
+    "runId": "2026-11-02T19-36-46-976Z-in_session",
+    "provenance": "in_session",
+    "panelists": 3,
+    "evidential": true,
+    "hasDistribution": true,
+    "perDimension": [
+      {
+        "dimension": "anticipation",
+        "panelR": 0.873,
+        "panelSpearman": 0.896,
+        "panelN": 133,
+        "indicatorR": 0.866,
+        "indicatorN": 133,
+        "delta": 0.007,
+        "flaggedAsWealthProxy": true,
+        "backfillCandidate": false
+      },
+      {
+        "dimension": "agency",
+        "panelR": 0.757,
+        "panelSpearman": 0.757,
+        "panelN": 133,
+        "indicatorR": 0.492,
+        "indicatorN": 130,
+        "delta": 0.265,
+        "flaggedAsWealthProxy": true,
+        "backfillCandidate": false
+      },
+      {
+        "dimension": "coordination",
+        "panelR": 0.738,
+        "panelSpearman": 0.753,
+        "panelN": 133,
+        "indicatorR": 0.439,
+        "indicatorN": 130,
+        "delta": 0.299,
+        "flaggedAsWealthProxy": true,
+        "backfillCandidate": false
+      },
+      {
+        "dimension": "trust",
+        "panelR": 0.639,
+        "panelSpearman": 0.635,
+        "panelN": 133,
+        "indicatorR": 0.426,
+        "indicatorN": 131,
+        "delta": 0.213,
+        "flaggedAsWealthProxy": false,
+        "backfillCandidate": false
+      },
+      {
+        "dimension": "learning",
+        "panelR": 0.834,
+        "panelSpearman": 0.873,
+        "panelN": 133,
+        "indicatorR": 0.713,
+        "indicatorN": 133,
+        "delta": 0.121,
+        "flaggedAsWealthProxy": true,
+        "backfillCandidate": false
+      },
+      {
+        "dimension": "experimentation",
+        "panelR": 0.8,
+        "panelSpearman": 0.858,
+        "panelN": 133,
+        "indicatorR": 0.739,
+        "indicatorN": 133,
+        "delta": 0.06,
+        "flaggedAsWealthProxy": true,
+        "backfillCandidate": false
+      },
+      {
+        "dimension": "adaptability",
+        "panelR": 0.774,
+        "panelSpearman": 0.788,
+        "panelN": 133,
+        "indicatorR": 0.536,
+        "indicatorN": 133,
+        "delta": 0.238,
+        "flaggedAsWealthProxy": true,
+        "backfillCandidate": false
+      },
+      {
+        "dimension": "building",
+        "panelR": 0.775,
+        "panelSpearman": 0.815,
+        "panelN": 133,
+        "indicatorR": 0.629,
+        "indicatorN": 133,
+        "delta": 0.146,
+        "flaggedAsWealthProxy": true,
+        "backfillCandidate": false
+      },
+      {
+        "dimension": "shared_purpose",
+        "panelR": 0.564,
+        "panelSpearman": 0.562,
+        "panelN": 133,
+        "indicatorR": 0.262,
+        "indicatorN": 130,
+        "delta": 0.301,
+        "flaggedAsWealthProxy": false,
+        "backfillCandidate": false
+      }
+    ]
+  },
+  "delphiApplication": {
+    "datasetVersion": "10.0.0",
+    "sourceDatasetVersion": "10.0.0",
+    "mode": "exact",
+    "cells": 1215,
+    "carried": 1215,
+    "dropped": [],
+    "judgementsCarried": 198,
+    "judgementsDropped": 0
+  },
   "redundantIndicatorPairs": [],
   "measurability": [
     {

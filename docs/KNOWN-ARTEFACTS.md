@@ -6,11 +6,15 @@ what it was told. They are failures of measurement, and anyone building on this
 needs to know them before quoting a score.
 
 Evidence for each is a diagnostic in `data/out/diagnostics.json` or a figure
-from the published output. The older in-session panel runs in `data/delphi` are
-one panelist each and carry no dataset version. The run `latest.json` points at
-has three panelists and was made on dataset 9.0.1. A9 says why none of it
-applies to 10.0.0. A panel estimate is made on the release it names, so a gap
-between one and a current score is not a finding.
+from the published output. The run `data/delphi/latest.json` points at is an
+in-session panel on dataset 10.0.0: three Claude panelists, one vendor, two
+rounds over all 1,215 cells (D155). Its estimates are `delphiScore` and never
+`score`. Under D155 its spread measures stance and not vendor, so a narrow IQR
+is a floor on the real uncertainty. A panel figure quoted below is a second
+opinion beside the indicators, and the panel median tracks income more closely
+than the indicator score on every dimension (`panelVsGdp` in the
+diagnostics), so a panel figure that lifts a country is never evidence on its
+own.
 
 Every entry below is on dataset 10.0.0, the 135-country frame of D176,
 except where it names another run. A figure that came from a counterfactual
@@ -26,8 +30,8 @@ electoral democracy correlation read the 2025 rows of the V-Dem v16
 country-year file for the 125 of D153, and A10's democracy share is counted
 on the same 125; neither covers the ten countries D176 added. A10's counts
 of the economies outside the frame come from the frame expansion memo of
-2026-11, which counted them on the 9.6.0 registry. No entry quotes a panel
-figure (D139, D160). Where a figure predates the current frame, the scale it
+2026-11, which counted them on the 9.6.0 registry. Panel figures come from
+the 10.0.0 run named above (D139, D160). Where a figure predates the current frame, the scale it
 was measured on is not the scale in use.
 
 ---
@@ -93,9 +97,9 @@ top of its frame, the filings were subsidised (D126), and the repository row
 that would temper them is held by the access gate, and B-READY has not
 reached China.
 
-No panel figure is quoted here. Under D160 no panel cell carries to 10.0.0,
-because a panel cell never carries across a major version, and no panel run
-is on 10.0.0 (D139, D176).
+The panel agrees on the order: its Experimentation ranks correlate with the
+indicator ranks at 0.95 (Spearman, 135 countries). It reads the top lower,
+with China first at 75 against 98.0, and lifts India from 74th to 43rd.
 
 **Fix.** A venture deal count is still missing: first rounds per million
 people, counted by deal and not by amount (D152). The only inspectable
@@ -119,8 +123,9 @@ which was never the question. Counted whole, India is third of 135 on
 scientific articles, fifth of 119 on resident patents and first of 132 on new
 public repositories. Anticipation reads 34.5, 74th of 134, on articles
 per head and statistical performance; the per-head stocks of researchers and
-research spending are conditions beside it and do not enter it (D122). No
-panel figure is quoted here, for the reason A9 gives.
+research spending are conditions beside it and do not enter it (D122). The
+panel reads both higher: Experimentation 36, 43rd of 135, and Anticipation 43,
+55th, with IQRs of 3.5 and 1.5.
 
 **Fix.** Per-capita is right for most indicators and wrong where capability is
 concentrated in institutions rather than spread across a population. Consider a
@@ -257,7 +262,9 @@ two rows it has. Volunteering, national belonging and
 polarization are gaps. National belonging has no usable series: its only
 cross-national item, national pride, is not belonging and fails the regime
 test A13 describes, so it is not wired, and the gap counts against confidence
-(D151). No panel figure is quoted here, for the reason A9 gives.
+(D151). The panel puts Singapore 18th of 135 on Shared purpose, at 58 with an
+IQR of 4, and Shared purpose is where panel and indicator ranks agree least,
+at 0.65.
 
 V-Dem's polarization item brings the Singapore question back from the other
 side: a regime with no organised opposition can read as calm, as the United
@@ -316,8 +323,9 @@ On dataset 10.0.0 Korea scores 52.4, 36th of 133, and Japan 52.6, 35th,
 although their Human Capital Index rows are third and second of 131. The
 other two rows pull them down: Korea reads 17.4 on firm training and 53.5 on
 citation impact, and Japan 40 and 30.4, against 52.5 and 100 for Singapore,
-which scores 84.2, third behind Norway (85.4) and New Zealand (84.4). No
-panel figure is quoted here, for the reason A9 gives.
+which scores 84.2, third behind Norway (85.4) and New Zealand (84.4). The
+panel lifts both: Korea to 60, 27th of 135, and Japan to 58, 30th, and it
+puts Singapore first at 85.
 
 **Fix.** A learning-outcomes series (PISA or PIAAC) would resolve most of this.
 It is a gap because coverage across the country set is uneven, not because the
@@ -418,19 +426,21 @@ defensible, since D83 admits the row for the coordination a state does with
 society. The part that is wrong is reading its absence as an absence of
 coordination among institutions.
 
-**The panel gap is not evidence here.** The run `data/delphi/latest.json`
-points at has three panelists on one vendor (D155), so `isPanel` is true, and
-its provenance is `in_session`, so `isEvidential` passes. It was made on
-dataset 9.0.1. Under D160 a cell never carries across a major version, so
-none of its Coordination cells carries to 10.0.0. A carried estimate was made on an earlier release, and D139 keeps
-panel figures off any comparison with the indicators, so none is quoted here.
+**The panel reads Singapore the other way.** On the 10.0.0 panel Singapore
+is 9th of 135 on Coordination, at 81 with an IQR of 4.5, against 67th of 130
+on the indicators. Coordination is where panel and indicator ranks agree
+second least, at 0.72, and the panel reads it 16.4 points below the
+indicators on average. It does not lift the executive-led states as a group:
+Egypt is 100th at 43, Russia 102nd at 42, and the United Arab Emirates,
+which has no indicator score, 69th at 55. The panel is one vendor and tracks
+income more closely than the indicators do, so this is a second opinion and
+does not correct the score.
 
 **Fix.** Cross-agency delivery records, a declared gap, would measure the
 construct directly and would let civil-society strength sit in a family of
-its own beside them, the way D57 splits Trust. A reviewed panel on the 10.0.0
-frame, from the gateway or in session under D154, would make the panel
-comparison readable again. Until one exists,
-no panel figure belongs in this entry.
+its own beside them, the way D57 splits Trust. A multi-vendor or gateway
+panel on the 10.0.0 frame would test whether the Singapore reading is the
+model family's or the construct's.
 
 ---
 ## A10 — The frame is every measurable country of a million people, and that is not the world

@@ -1,6 +1,6 @@
 # National Capability Benchmark, prototype v0
 
-*Generated 2026-11-02T16:44:19.137Z*
+*Generated 2026-11-02T19:37:30.756Z*
 
 This run covers 135 countries and nine dimensions. Indicators carry equal weight within each dimension, and the benchmark has no headline ranking.
 
@@ -1177,6 +1177,114 @@ These rows remain in the registry and lower confidence like gaps. The project re
 **Shared Purpose**
 
 - Voice and accountability: Retired 2026-08-26. Artefact A5: it measures the democratic channel while Shared Purpose asks whether people can see themselves in a common project. Singapore scored 20.9 while being one of the most effective collective actors in the set. Volunteering and civic participation are the observable replacements and are declared gaps; voter turnout is published beside Shared Purpose as a check, because it reads the same democratic channel and compulsory voting (D129). See D23 and A5.
+
+## A panel scored the same cells
+
+Run 2026-11-02T19-36-46-976Z-in_session, provenance `in_session`, 2 round(s), panel: Institutionalist (claude-opus-5-5), Bottom-up analyst (claude-opus-5-5), Wealth sceptic (claude-sonnet-5-5).
+
+> In-session one-vendor panel under D154(b) as amended by D155, run on 2026-11-02 by a Claude Code orchestrating session (Claude Opus 5.5) on dataset 10.0.0, after D176. Three panelists, each stance a separate set of contexts: institutionalist on claude-opus-5-5, bottom_up on claude-opus-5-5, wealth_sceptic on claude-sonnet-5-5, all Anthropic, each through Claude Code subagents. Each panelist answered in batches of ten countries, one fresh context per batch and per round, and the indicator audit in one context per stance, so no context held two stances and none saw another panelist's text except the anonymised round-1 summary the round-2 prompt carries. Two rounds plus the indicator audit, at maxCoverage 1: all nine dimensions for all 135 countries, 1215 country-dimension cells. Prompts are byte-identical to a gateway run's, built by pnpm bench delphi --in-session with the current prompt version; the system rules were given as a file each panelist read first. Quality control by the orchestrator: twelve round-1 wealth_sceptic batches and one round-2 wealth_sceptic batch were discarded and rerun from scratch in fresh contexts, because their missingEvidence lists were copied across countries or restated brief gaps; the discarded answers never entered this run. Several batches in every stance skipped boilerplate NO DATA and NOT SCORED lines after checking that they repeat word for word across countries, and read every country-specific line; some missingEvidence items recur across countries where the briefs declare the same gap. Panelists drew on their own knowledge where the system rules allow it, and those claims are unverified. No call in this run failed and none was rerun into it except the quality reruns named here. One vendor means the spread measures stance, not vendor, and shared model-family blind spots are hidden by a narrow IQR, which is a floor on real uncertainty (D155). A multi-vendor or gateway run on the same dataset supersedes this one. This is an interpretation layer: its estimates reach only delphiScore and delphiIqr, and blendedScore only where a dimension has no observed indicator; they never enter score.
+
+Convergence: 1031 of 1215 cells narrowed between rounds.
+
+### Panel disagreement remains visible
+
+No cell has an interquartile range above 25 points.
+
+### Where the panel and indicators differ most
+
+| Country | Dimension | Indicator score | Panel median | Difference |
+| --- | --- | --- | --- | --- |
+| Liberia | Coordination | 94.1 | 43 | -51.1 |
+| Honduras | Trust | 81.8 | 32 | -49.8 |
+| Myanmar | Adaptability | 82.1 | 36 | -46.1 |
+| Lebanon | Coordination | 85.7 | 40 | -45.7 |
+| Malawi | Coordination | 89.9 | 45 | -44.9 |
+| Mozambique | Coordination | 84.7 | 40 | -44.7 |
+| Honduras | Coordination | 87.4 | 43 | -44.4 |
+| Tanzania | Trust | 87.7 | 46 | -41.7 |
+| Papua New Guinea | Learning | 66.2 | 25 | -41.2 |
+| Iran | Shared Purpose | 72.1 | 31 | -41.1 |
+| Nicaragua | Agency | 79.9 | 40 | -39.9 |
+| Democratic Republic of the Congo | Coordination | 67.8 | 28 | -39.8 |
+| South Africa | Trust | 89.3 | 50 | -39.3 |
+| Bosnia and Herzegovina | Coordination | 77.9 | 40 | -37.9 |
+| Uganda | Coordination | 83.6 | 46 | -37.6 |
+| Haiti | Coordination | 50.3 | 13 | -37.3 |
+| Ethiopia | Coordination | 80 | 43 | -37 |
+| Zambia | Coordination | 85 | 50 | -35 |
+| Panama | Trust | 78.1 | 44 | -34.1 |
+| Dominican Republic | Trust | 77.5 | 44 | -33.5 |
+
+### The panel takes the same income test
+
+A panel is not independent evidence: it reads the same published record as the indicators. An unmeasured dimension can return a panel number that restates income per head. Here the panel column is correlated with log GDP per capita, with the same-country indicator score beside it. Every dimension of the panel column except Trust and Shared Purpose reaches 0.7 or above.
+
+| Dimension | Panel r vs log GDP pc | Spearman | Indicator r, same countries | Difference | Panel n | Indicator n |
+| --- | --- | --- | --- | --- | --- | --- |
+| Anticipation | 0.873 | 0.896 | 0.866 | 0.007 | 133 | 133 |
+| Learning | 0.834 | 0.873 | 0.713 | 0.121 | 133 | 133 |
+| Experimentation | 0.8 | 0.858 | 0.739 | 0.06 | 133 | 133 |
+| Building | 0.775 | 0.815 | 0.629 | 0.146 | 133 | 133 |
+| Adaptability | 0.774 | 0.788 | 0.536 | 0.238 | 133 | 133 |
+| Agency | 0.757 | 0.757 | 0.492 | 0.265 | 133 | 130 |
+| Coordination | 0.738 | 0.753 | 0.439 | 0.299 | 133 | 130 |
+| Trust | 0.639 | 0.635 | 0.426 | 0.213 | 133 | 131 |
+| Shared Purpose | 0.564 | 0.562 | 0.262 | 0.301 | 133 | 130 |
+
+### Indicators the panel rates weakest
+
+| Indicator | Registry class | Panel class | Construct validity | Wealth proxy risk | Prior |
+| --- | --- | --- | --- | --- | --- |
+| Intentional homicide rate | O | O | 0.2 | 0.7 | 0.35 |
+| Business share of R&D | I | I | 0.22 | 0.62 | 0.7 |
+| Unemployment rate | O | O | 0.23 | 0.33 | 0.25 |
+| Voice and accountability | P | P | 0.25 | 0.75 | 0.35 |
+| Income inequality | O | I (reclassified) | 0.27 | 0.35 | 0.2 |
+| Logistics performance | P | P | 0.28 | 0.77 | 0.5 |
+| High-technology exports | O | O | 0.28 | 0.47 | 0.4 |
+| Regulatory quality | P | P | 0.3 | 0.9 | 0.6 |
+| Export diversification | C | O (reclassified) | 0.3 | 0.5 | 0.3 |
+| Manufacturing value added | O | O | 0.3 | 0.35 | 0.2 |
+| Scientific articles | O | O | 0.32 | 0.8 | 0.4 |
+| Logistics infrastructure quality | P | P | 0.32 | 0.8 | 0.5 |
+| Trust in public institutions | P | P | 0.33 | 0.37 | 0.2 |
+| University-industry collaboration | C | P (reclassified) | 0.35 | 0.7 | 0.4 |
+| Control of corruption | P | P | 0.37 | 0.87 | 0.55 |
+| Tax revenue | O | O | 0.37 | 0.63 | 0.3 |
+| Adults doing digital tasks | C | O (reclassified) | 0.38 | 0.73 | 0.4 |
+| Resident patent applications | O | O | 0.38 | 0.75 | 0.45 |
+| Resident industrial design applications | O | O | 0.38 | 0.6 | 0.3 |
+| Procedures to start a business | C | I (reclassified) | 0.4 | 0.32 | 0.15 |
+
+### Evidence the panel requested
+
+| Evidence | Mentions | Dimensions |
+| --- | --- | --- |
+| adult learning participation | 37 | 1 |
+| court case clearance rate | 34 | 1 |
+| court case clearance rates | 32 | 1 |
+| human capital index update after 2020 | 29 | 1 |
+| public-private collaboration measure | 28 | 1 |
+| institutional responsiveness timestamps | 28 | 1 |
+| firm scale-up rate | 25 | 1 |
+| cross-agency delivery records | 20 | 1 |
+| updated human capital index after 2020 | 19 | 1 |
+| sense of national belonging item | 18 | 1 |
+| volunteering rates | 12 | 1 |
+| long-term unemployment share | 11 | 1 |
+| venture first-round counts | 11 | 1 |
+| utility connection efficiency from b-ready | 10 | 1 |
+| court clearance rates | 10 | 1 |
+| gem aps tea rate | 9 | 2 |
+| updated hci after 2020 | 9 | 1 |
+| volunteering data | 9 | 1 |
+| volunteering rate on an inspectable source | 9 | 1 |
+| a human capital index update after 2020 | 9 | 1 |
+| afrobarometer national versus ethnic identity item | 8 | 1 |
+| dispute resolution efficiency from b-ready | 8 | 1 |
+| disaster preparedness and recovery record | 8 | 1 |
+| hostile polarisation measure | 8 | 1 |
+| adults doing digital tasks | 8 | 1 |
 
 ## Assumptions to challenge
 
