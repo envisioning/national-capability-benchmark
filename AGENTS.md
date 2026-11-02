@@ -622,9 +622,9 @@ unknown, so a stalled request and a dead code never read the same.
 Development Indicators, database 2. Its 2025 round covers 74 of the 125.
 D167 scores the third pillar of three topics (`IC.BRE.BE.P3`, `IT.P3`,
 `DR.P3`) in place of three Doing Business rows. Every B-READY series is a
-0 to 100 score: there is no day, hour or procedure count, and utility
-services reach the API only as the topic score `IC.BRE.US.OS`, with no
-pillars.
+0 to 100 score: there is no day, hour or procedure count. Utility services
+now publish all three pillars (`IC.BRE.US.P1` to `P3`); D167 was written
+when only the topic score `IC.BRE.US.OS` was visible (#116).
 
 Other traps found the hard way:
 
