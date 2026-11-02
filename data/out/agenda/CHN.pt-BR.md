@@ -1,6 +1,6 @@
 # Agenda de capacidades: China
 
-*Gerada em 2026-10-17*
+*Gerada em 2026-11-02*
 
 A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, sem classificação geral, e cada pontuação traz ao lado a solidez da evidência. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma pontuação.
 
@@ -15,7 +15,7 @@ A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 | Aprendizagem | 76 | 0,55 (utilizável) | sem tendência comparável |
 | Experimentação | 98 | 0,32 (fraca) | +14,8 em 10 anos, com base em 3 indicadores |
 | Adaptação | 79,6 | 0,46 (utilizável) | sem tendência comparável |
-| Construção | 77,5 | 0,57 (utilizável) | -5,1 em 10 anos, com base em 3 indicadores |
+| Construção | 72 | 0,48 (utilizável) | -5,1 em 10 anos, com base em 3 indicadores |
 | Propósito compartilhado | 29,4 | 0,41 (fraca) | +0,7 em 10 anos, com base em 2 indicadores |
 
 ## Dimensões com as pontuações mais baixas
@@ -80,8 +80,8 @@ Em que medida pessoas e organizações conseguem transformar intenção em açã
 Estas dimensões têm pontuação de pelo menos 50, com evidência utilizável.
 
 - Adaptação: 79,6, solidez utilizável
-- Construção: 77,5, solidez utilizável
 - Aprendizagem: 76, solidez utilizável
+- Construção: 72, solidez utilizável
 
 ## Com o que a China conta
 

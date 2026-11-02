@@ -1,6 +1,6 @@
 # Agenda de capacidades: Países Baixos
 
-*Gerada em 2026-10-17*
+*Gerada em 2026-11-02*
 
 A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, sem classificação geral, e cada pontuação traz ao lado a solidez da evidência. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma pontuação.
 
@@ -15,7 +15,7 @@ A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 | Aprendizagem | 76,2 | 0,55 (utilizável) | sem tendência comparável |
 | Experimentação | 52,6 | 0,39 (fraca) | sem tendência comparável |
 | Adaptação | 82,1 | 0,62 (utilizável) | sem tendência comparável |
-| Construção | 57,3 | 0,57 (utilizável) | -0,5 em 10 anos, com base em 3 indicadores |
+| Construção | 55,2 | 0,48 (utilizável) | -0,5 em 10 anos, com base em 3 indicadores |
 | Propósito compartilhado | 81,7 | 0,28 (fraca) | +7,7 em 10 anos, com base em 2 indicadores |
 
 ## Dimensões com evidência fraca
@@ -69,7 +69,7 @@ Estas dimensões têm pontuação de pelo menos 50, com evidência utilizável.
 - Adaptação: 82,1, solidez utilizável
 - Aprendizagem: 76,2, solidez utilizável
 - Antecipação: 76,1, solidez utilizável
-- Construção: 57,3, solidez utilizável
+- Construção: 55,2, solidez utilizável
 
 ## Com o que os Países Baixos conta
 

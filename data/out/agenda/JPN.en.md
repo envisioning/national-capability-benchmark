@@ -1,6 +1,6 @@
 # Capability agenda: Japan
 
-*Generated 2026-10-17*
+*Generated 2026-11-02*
 
 The frame includes 125 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
@@ -15,20 +15,12 @@ The frame includes 125 countries. Each dimension is scored from 0 to 100, with n
 | Learning | 52.4 | 0.55 (usable) | no trend |
 | Experimentation | 63.5 | 0.41 (thin) | -11.5 over 10 years using 3 indicators |
 | Adaptability | 66.4 | 0.53 (usable) | no trend |
-| Building | 63.9 | 0.57 (usable) | -1.3 over 10 years using 3 indicators |
-| Shared Purpose | 40.8 | 0.23 (very thin) | no trend |
+| Building | 61 | 0.48 (usable) | -1.3 over 10 years using 3 indicators |
+| Shared Purpose | 38.9 | 0.38 (thin) | no trend |
 
 ## What to measure first
 
 The evidence is too thin to manage these dimensions confidently.
-
-### Shared Purpose: confidence 0.23, very thin
-
-To what extent can people imagine themselves as participants in a common project?
-
-- Uses 2 observed indicators.
-- Missing indicators: Sense of national belonging, Volunteering, Political polarisation.
-- Rejected datasets: Voice and accountability.
 
 ### Coordination: confidence 0.27, thin
 
@@ -37,6 +29,14 @@ How effectively can independent actors organize around shared objectives?
 - Uses 2 observed indicators.
 - Missing indicators: University-industry collaboration, Public-private collaboration.
 - Rejected datasets: Government effectiveness, Regulatory quality, Logistics performance, Border compliance time to export.
+
+### Shared Purpose: confidence 0.38, thin
+
+To what extent can people imagine themselves as participants in a common project?
+
+- Uses 3 observed indicators.
+- Missing indicators: Sense of national belonging, Volunteering, Political polarisation.
+- Rejected datasets: Voice and accountability.
 
 ### Experimentation: confidence 0.41, thin
 
@@ -67,8 +67,8 @@ How able are individuals and organizations to turn an intention into action?
 These dimensions score at least 50 with usable evidence.
 
 - Adaptability: 66.4, confidence usable
-- Building: 63.9, confidence usable
 - Anticipation: 62.2, confidence usable
+- Building: 61, confidence usable
 - Learning: 52.4, confidence usable
 
 ## What Japan has to work with

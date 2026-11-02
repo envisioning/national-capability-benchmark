@@ -9,6 +9,36 @@ The entries before App 1.0.0 are retrospective, high-level summaries
 reconstructed from the repository history. They document explicit version bumps
 and may skip versions that were never committed.
 
+## App 1.33.2 — 2026-11-02
+
+- Publishes dataset 9.5.0.
+
+## Dataset 9.5.0 — 2026-11-02
+
+- **Electricity connection speed moves to B-READY.** The Doing Business
+  row stopped in 2019. Building now reads utility connection efficiency,
+  the World Bank's B-READY score for how long a business waits for
+  electricity, water and internet connections and how reliable the supply
+  is. The old row stays in the registry as retired. Decision D171.
+- **The new row covers 74 of the 125 countries**, at 2025. Brazil is not
+  yet in the B-READY round, so its Building score rests on three rows and
+  moves from 37.7 to 33.0, at confidence 0.475 instead of 0.568. Venezuela
+  no longer publishes a Building score, because economic fitness is the only
+  row left.
+- **Tax revenue fills 10 countries from OECD figures.** Where the World Bank
+  has no tax revenue figure from the last 15 years, the OECD's Global
+  Revenue Statistics supply central government tax on the same definition:
+  Bolivia, Cuba, Guinea, the Gambia, Indonesia, Japan, Nigeria, Pakistan,
+  Venezuela and Vietnam. Each value names the OECD as its source. Shared
+  Purpose now publishes for Guinea, the Gambia and Venezuela, 121 of 125
+  countries in all. Decision D172.
+- **The amount of evidence tracks income less.** Mean confidence across
+  the nine capabilities correlates with log GDP per head at 0.436, down
+  from 0.474.
+- **990 of the 1,125 panel cells apply.** All 125 Building cells and the
+  10 Shared Purpose cells for the filled countries drop, because the
+  evidence behind them changed.
+
 ## App 1.33.1 — 2026-10-17
 
 - **A design for testing language models on Brazil's public life.** A new

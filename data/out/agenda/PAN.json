@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-17T14:25:47.941Z",
+  "generatedAt": "2026-11-02T15:31:40.418Z",
   "iso3": "PAN",
   "country": "Panama",
   "dimensions": [
@@ -4965,8 +4965,8 @@
     {
       "dimension": "building",
       "kind": "raise",
-      "score": 27.1,
-      "confidence": 0.568,
+      "score": 5.2,
+      "confidence": 0.475,
       "band": "usable",
       "trend": {
         "spanYears": 10,
@@ -4977,7 +4977,6 @@
       "scoredOn": [
         "manufacturing_value_added",
         "high_tech_exports_share",
-        "electricity_connection_speed",
         "economic_complexity"
       ],
       "gaps": [
@@ -4985,26 +4984,27 @@
         "firm_scale_up_rate"
       ],
       "retired": [
-        "logistics_infrastructure"
+        "logistics_infrastructure",
+        "electricity_connection_speed"
       ],
       "exemplars": [
         {
           "iso3": "KOR",
           "country": "South Korea",
-          "score": 85.2,
-          "confidence": 0.568
+          "score": 85,
+          "confidence": 0.634
         },
         {
           "iso3": "IRL",
           "country": "Ireland",
-          "score": 80.5,
-          "confidence": 0.568
+          "score": 76.2,
+          "confidence": 0.634
         },
         {
-          "iso3": "CHN",
-          "country": "China",
-          "score": 77.5,
-          "confidence": 0.568
+          "iso3": "SGP",
+          "country": "Singapore",
+          "score": 76.1,
+          "confidence": 0.634
         }
       ],
       "evidenceElsewhere": [

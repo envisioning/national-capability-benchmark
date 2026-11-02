@@ -1,6 +1,6 @@
 # Agenda de capacidades: Iraque
 
-*Gerada em 2026-10-17*
+*Gerada em 2026-11-02*
 
 A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, sem classificação geral, e cada pontuação traz ao lado a solidez da evidência. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma pontuação.
 
@@ -15,7 +15,7 @@ A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 | Aprendizagem | 17,6 | 0,52 (utilizável) | sem tendência comparável |
 | Experimentação | 2,8 | 0,4 (fraca) | +0,7 em 10 anos, com base em 2 indicadores |
 | Adaptação | 25,4 | 0,58 (utilizável) | sem tendência comparável |
-| Construção | 31,5 | 0,41 (fraca) | +2,9 em 10 anos, com base em 2 indicadores |
+| Construção | 4,4 | 0,32 (fraca) | +2,9 em 10 anos, com base em 2 indicadores |
 | Propósito compartilhado | 49,4 | 0,36 (fraca) | sem tendência comparável |
 
 ## Dimensões com as pontuações mais baixas
@@ -61,6 +61,14 @@ Com que eficácia atores independentes conseguem se organizar em torno de objeti
 - Lacunas declaradas: Colaboração universidade-empresa, Colaboração público-privada.
 - Bases rejeitadas: Efetividade governamental, Qualidade regulatória, Desempenho logístico, Tempo de exportação na fronteira.
 
+### Construção: solidez 0,32, fraca
+
+Em que medida o país consegue transformar planos e conhecimento em sistemas que funcionam?
+
+- A pontuação se apoia em 2 indicadores observados.
+- Lacunas declaradas: Entrega de grandes projetos, Empresas jovens que ganham escala.
+- Bases rejeitadas: Qualidade da infraestrutura logística, Tempo de conexão à rede elétrica.
+
 ### Propósito compartilhado: solidez 0,36, fraca
 
 Até que ponto as pessoas conseguem se ver como participantes de um projeto comum?
@@ -84,14 +92,6 @@ Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e 
 - A pontuação se apoia em 4 indicadores observados.
 - Lacunas declaradas: Operações de capital de risco, Empresas em sandboxes regulatórios, Empresas derivadas de pesquisa universitária.
 - Bases rejeitadas: Parcela empresarial do P&D.
-
-### Construção: solidez 0,41, fraca
-
-Em que medida o país consegue transformar planos e conhecimento em sistemas que funcionam?
-
-- A pontuação se apoia em 3 indicadores observados.
-- Lacunas declaradas: Entrega de grandes projetos, Empresas jovens que ganham escala.
-- Bases rejeitadas: Qualidade da infraestrutura logística.
 
 ### Agência: solidez 0,41, fraca
 

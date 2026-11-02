@@ -1,6 +1,6 @@
 # Agenda de capacidades: Indonésia
 
-*Gerada em 2026-10-17*
+*Gerada em 2026-11-02*
 
 A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, sem classificação geral, e cada pontuação traz ao lado a solidez da evidência. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma pontuação.
 
@@ -15,8 +15,8 @@ A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 | Aprendizagem | 24,5 | 0,54 (utilizável) | sem tendência comparável |
 | Experimentação | 9,4 | 0,41 (fraca) | +4 em 10 anos, com base em 3 indicadores |
 | Adaptação | 75,1 | 0,6 (utilizável) | sem tendência comparável |
-| Construção | 55,1 | 0,57 (utilizável) | +0,2 em 10 anos, com base em 3 indicadores |
-| Propósito compartilhado | 83,6 | 0,28 (fraca) | sem tendência comparável |
+| Construção | 54,4 | 0,63 (utilizável) | +0,2 em 10 anos, com base em 3 indicadores |
+| Propósito compartilhado | 64,7 | 0,43 (fraca) | +3,1 em 10 anos, com base em 2 indicadores |
 
 ## Dimensões com as pontuações mais baixas
 
@@ -64,14 +64,6 @@ Em que medida pessoas e organizações conseguem transformar intenção em açã
 
 A solidez da evidência está abaixo da faixa utilizável, de modo que a pontuação diz pouco sobre o país enquanto faltarem dados.
 
-### Propósito compartilhado: solidez 0,28, fraca
-
-Até que ponto as pessoas conseguem se ver como participantes de um projeto comum?
-
-- A pontuação se apoia em 2 indicadores observados.
-- Lacunas declaradas: Sentimento de pertencimento nacional, Voluntariado, Polarização política.
-- Bases rejeitadas: Voz e prestação de contas.
-
 ### Experimentação: solidez 0,41, fraca
 
 Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e melhoradas?
@@ -80,13 +72,21 @@ Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e 
 - Lacunas declaradas: Operações de capital de risco, Empresas em sandboxes regulatórios, Empresas derivadas de pesquisa universitária.
 - Bases rejeitadas: Parcela empresarial do P&D.
 
+### Propósito compartilhado: solidez 0,43, fraca
+
+Até que ponto as pessoas conseguem se ver como participantes de um projeto comum?
+
+- A pontuação se apoia em 3 indicadores observados.
+- Lacunas declaradas: Sentimento de pertencimento nacional, Voluntariado, Polarização política.
+- Bases rejeitadas: Voz e prestação de contas.
+
 ## Dimensões com as pontuações mais altas
 
 Estas dimensões têm pontuação de pelo menos 50, com evidência utilizável.
 
 - Adaptação: 75,1, solidez utilizável
 - Coordenação: 69,3, solidez utilizável
-- Construção: 55,1, solidez utilizável
+- Construção: 54,4, solidez utilizável
 
 ## Com o que a Indonésia conta
 

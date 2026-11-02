@@ -1,6 +1,6 @@
 # Capability agenda: Turkey
 
-*Generated 2026-10-17*
+*Generated 2026-11-02*
 
 The frame includes 125 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
@@ -15,7 +15,7 @@ The frame includes 125 countries. Each dimension is scored from 0 to 100, with n
 | Learning | 35 | 0.55 (usable) | no trend |
 | Experimentation | 66.8 | 0.41 (thin) | +19.3 over 10 years using 3 indicators |
 | Adaptability | 80.3 | 0.62 (usable) | no trend |
-| Building | 52.3 | 0.57 (usable) | +5 over 10 years using 3 indicators |
+| Building | 51.3 | 0.63 (usable) | +5 over 10 years using 3 indicators |
 | Shared Purpose | 35.4 | 0.42 (thin) | -3.5 over 10 years using 2 indicators |
 
 ## What to raise
@@ -86,7 +86,7 @@ These dimensions score at least 50 with usable evidence.
 
 - Adaptability: 80.3, confidence usable
 - Coordination: 52.3, confidence usable
-- Building: 52.3, confidence usable
+- Building: 51.3, confidence usable
 
 ## What Turkey has to work with
 

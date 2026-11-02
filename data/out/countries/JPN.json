@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-17T14:25:02.975Z",
-  "version": "9.4.0",
+  "generatedAt": "2026-11-02T15:31:15.704Z",
+  "version": "9.5.0",
   "country": {
     "country": "Japan",
     "iso3": "JPN",
@@ -2917,19 +2917,19 @@
         ]
       },
       "building": {
-        "score": 63.9,
-        "observedIndicators": 4,
+        "score": 61,
+        "observedIndicators": 3,
         "belowCoverageFloor": false,
-        "confidence": 0.568,
+        "confidence": 0.475,
         "confidenceParts": {
-          "coverage": 0.667,
-          "recency": 0.896,
+          "coverage": 0.5,
+          "recency": 1,
           "sourceQuality": 0.95
         },
-        "delphiScore": 80,
-        "delphiIqr": 2,
+        "delphiScore": null,
+        "delphiIqr": null,
         "delphiDissent": false,
-        "blendedScore": 63.9,
+        "blendedScore": 61,
         "blendedFrom": "indicators",
         "momentum": [
           {
@@ -3342,59 +3342,32 @@
             "indicatorId": "electricity_connection_speed",
             "name": "Electricity connection speed",
             "measurementClass": "C",
-            "raw": 72.652,
-            "transformed": 72.652,
-            "normalized": 72.7,
-            "year": 2019,
+            "raw": null,
+            "transformed": null,
+            "normalized": null,
+            "year": null,
             "source": "World Bank (IC.ELC.TIME.DFRN)",
-            "sourceTier": "international_organization",
+            "sourceTier": null,
             "winsorized": false,
             "outOfFrame": false,
-            "series": [
-              {
-                "year": 2013,
-                "raw": 72.217,
-                "normalized": 72.2,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2014,
-                "raw": 72.217,
-                "normalized": 72.2,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2015,
-                "raw": 72.217,
-                "normalized": 72.2,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2016,
-                "raw": 72.37,
-                "normalized": 72.4,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2017,
-                "raw": 72.652,
-                "normalized": 72.7,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2018,
-                "raw": 72.652,
-                "normalized": 72.7,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2019,
-                "raw": 72.652,
-                "normalized": 72.7,
-                "tier": "international_organization"
-              }
-            ],
-            "status": "observed",
+            "series": [],
+            "status": "retired",
+            "staleExcluded": null
+          },
+          {
+            "indicatorId": "utility_connection_efficiency",
+            "name": "Utility connection efficiency",
+            "measurementClass": "C",
+            "raw": null,
+            "transformed": null,
+            "normalized": null,
+            "year": null,
+            "source": "World Bank (IC.BRE.US.P3)",
+            "sourceTier": null,
+            "winsorized": false,
+            "outOfFrame": false,
+            "series": [],
+            "status": "missing",
             "staleExcluded": null
           },
           {
@@ -3575,19 +3548,19 @@
         ]
       },
       "shared_purpose": {
-        "score": 40.8,
-        "observedIndicators": 2,
+        "score": 38.9,
+        "observedIndicators": 3,
         "belowCoverageFloor": false,
-        "confidence": 0.225,
+        "confidence": 0.382,
         "confidenceParts": {
-          "coverage": 0.333,
-          "recency": 0.75,
-          "sourceQuality": 0.9
+          "coverage": 0.5,
+          "recency": 0.833,
+          "sourceQuality": 0.917
         },
-        "delphiScore": 48,
-        "delphiIqr": 1.5,
+        "delphiScore": null,
+        "delphiIqr": null,
         "delphiDissent": false,
-        "blendedScore": 40.8,
+        "blendedScore": 38.9,
         "blendedFrom": "indicators",
         "momentum": [],
         "indicators": [
@@ -3611,12 +3584,12 @@
             "indicatorId": "tax_revenue_gdp",
             "name": "Tax revenue",
             "measurementClass": "O",
-            "raw": null,
-            "transformed": null,
-            "normalized": null,
-            "year": null,
+            "raw": 12.857,
+            "transformed": 12.857,
+            "normalized": 35.1,
+            "year": 2024,
             "source": "World Bank (GC.TAX.TOTL.GD.ZS)",
-            "sourceTier": null,
+            "sourceTier": "international_organization",
             "winsorized": false,
             "outOfFrame": false,
             "series": [
@@ -3637,13 +3610,94 @@
                 "raw": 11.145,
                 "normalized": 30.2,
                 "tier": "international_organization"
+              },
+              {
+                "year": 2011,
+                "raw": 9.034,
+                "normalized": 24.1,
+                "tier": "international_organization"
+              },
+              {
+                "year": 2012,
+                "raw": 9.421,
+                "normalized": 25.2,
+                "tier": "international_organization"
+              },
+              {
+                "year": 2013,
+                "raw": 9.992,
+                "normalized": 26.9,
+                "tier": "international_organization"
+              },
+              {
+                "year": 2014,
+                "raw": 11.052,
+                "normalized": 29.9,
+                "tier": "international_organization"
+              },
+              {
+                "year": 2015,
+                "raw": 11.09,
+                "normalized": 30,
+                "tier": "international_organization"
+              },
+              {
+                "year": 2016,
+                "raw": 10.821,
+                "normalized": 29.3,
+                "tier": "international_organization"
+              },
+              {
+                "year": 2017,
+                "raw": 11.568,
+                "normalized": 31.4,
+                "tier": "international_organization"
+              },
+              {
+                "year": 2018,
+                "raw": 11.539,
+                "normalized": 31.3,
+                "tier": "international_organization"
+              },
+              {
+                "year": 2019,
+                "raw": 11.166,
+                "normalized": 30.2,
+                "tier": "international_organization"
+              },
+              {
+                "year": 2020,
+                "raw": 12.052,
+                "normalized": 32.8,
+                "tier": "international_organization"
+              },
+              {
+                "year": 2021,
+                "raw": 12.954,
+                "normalized": 35.4,
+                "tier": "international_organization"
+              },
+              {
+                "year": 2022,
+                "raw": 13.461,
+                "normalized": 36.9,
+                "tier": "international_organization"
+              },
+              {
+                "year": 2023,
+                "raw": 13.03,
+                "normalized": 35.6,
+                "tier": "international_organization"
+              },
+              {
+                "year": 2024,
+                "raw": 12.857,
+                "normalized": 35.1,
+                "tier": "international_organization"
               }
             ],
-            "status": "missing",
-            "staleExcluded": {
-              "year": 1993,
-              "raw": 11.145
-            }
+            "status": "observed",
+            "staleExcluded": null
           },
           {
             "indicatorId": "income_inequality",

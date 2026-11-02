@@ -1,6 +1,6 @@
 # Capability agenda: Haiti
 
-*Generated 2026-10-17*
+*Generated 2026-11-02*
 
 The frame includes 125 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
@@ -15,7 +15,7 @@ The frame includes 125 countries. Each dimension is scored from 0 to 100, with n
 | Learning | 35.5 | 0.32 (thin) | no trend |
 | Experimentation | 1 | 0.14 (very thin) | no trend |
 | Adaptability | 27.2 | 0.46 (usable) | no trend |
-| Building | 46.8 | 0.41 (thin) | +6 over 10 years using 2 indicators |
+| Building | 29.3 | 0.32 (thin) | +6 over 10 years using 2 indicators |
 | Shared Purpose | not scored | 0.02 (very thin) | no trend |
 
 ## What to raise
@@ -84,20 +84,20 @@ How effectively can independent actors organize around shared objectives?
 - Missing indicators: University-industry collaboration, Public-private collaboration.
 - Rejected datasets: Government effectiveness, Regulatory quality, Logistics performance, Border compliance time to export.
 
+### Building: confidence 0.32, thin
+
+How capable is the country of turning plans and knowledge into functioning systems?
+
+- Uses 2 observed indicators.
+- Missing indicators: Large project delivery, Firm scale-up rate.
+- Rejected datasets: Logistics infrastructure quality, Electricity connection speed.
+
 ### Learning: confidence 0.32, thin
 
 How effectively does the country acquire, distribute, and update knowledge?
 
 - Uses 2 observed indicators.
 - Missing indicators: Adult learning participation.
-
-### Building: confidence 0.41, thin
-
-How capable is the country of turning plans and knowledge into functioning systems?
-
-- Uses 3 observed indicators.
-- Missing indicators: Large project delivery, Firm scale-up rate.
-- Rejected datasets: Logistics infrastructure quality.
 
 ## What Haiti has to work with
 

@@ -1,6 +1,6 @@
 # Capability agenda: Iran
 
-*Generated 2026-10-17*
+*Generated 2026-11-02*
 
 The frame includes 125 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
@@ -15,7 +15,7 @@ The frame includes 125 countries. Each dimension is scored from 0 to 100, with n
 | Learning | 37 | 0.32 (thin) | no trend |
 | Experimentation | 39.8 | 0.41 (thin) | -25.9 over 10 years using 3 indicators |
 | Adaptability | 72.4 | 0.53 (usable) | no trend |
-| Building | 45.1 | 0.38 (thin) | +10.8 over 10 years using 2 indicators |
+| Building | 30.4 | 0.29 (thin) | +10.8 over 10 years using 2 indicators |
 | Shared Purpose | 72.1 | 0.26 (thin) | no trend |
 
 ## What to raise
@@ -59,6 +59,14 @@ How much cooperation is possible beyond immediate personal networks?
 - Missing indicators: Trust in public institutions, Court case clearance rate.
 - Rejected datasets: Rule of law, Control of corruption, Time to enforce a contract, Intentional homicide rate.
 
+### Building: confidence 0.29, thin
+
+How capable is the country of turning plans and knowledge into functioning systems?
+
+- Uses 2 observed indicators.
+- Missing indicators: Large project delivery, Firm scale-up rate.
+- Rejected datasets: Logistics infrastructure quality, Electricity connection speed.
+
 ### Learning: confidence 0.32, thin
 
 How effectively does the country acquire, distribute, and update knowledge?
@@ -73,14 +81,6 @@ How able are individuals and organizations to turn an intention into action?
 - Uses 3 observed indicators.
 - Missing indicators: Adults doing digital tasks.
 - Rejected datasets: Time to start a business.
-
-### Building: confidence 0.38, thin
-
-How capable is the country of turning plans and knowledge into functioning systems?
-
-- Uses 3 observed indicators.
-- Missing indicators: Large project delivery, Firm scale-up rate.
-- Rejected datasets: Logistics infrastructure quality.
 
 ### Experimentation: confidence 0.41, thin
 

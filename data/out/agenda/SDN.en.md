@@ -1,6 +1,6 @@
 # Capability agenda: Sudan
 
-*Generated 2026-10-17*
+*Generated 2026-11-02*
 
 The frame includes 125 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
@@ -15,7 +15,7 @@ The frame includes 125 countries. Each dimension is scored from 0 to 100, with n
 | Learning | 14.5 | 0.36 (thin) | no trend |
 | Experimentation | 1.1 | 0.31 (thin) | no trend |
 | Adaptability | 35.7 | 0.57 (usable) | no trend |
-| Building | 27.2 | 0.33 (thin) | no trend |
+| Building | 2.1 | 0.24 (very thin) | no trend |
 | Shared Purpose | 44.2 | 0.08 (very thin) | no trend |
 
 ## What to raise
@@ -68,6 +68,14 @@ How much cooperation is possible beyond immediate personal networks?
 - Missing indicators: Trust in public institutions, Court case clearance rate.
 - Rejected datasets: Rule of law, Control of corruption, Time to enforce a contract, Intentional homicide rate.
 
+### Building: confidence 0.24, very thin
+
+How capable is the country of turning plans and knowledge into functioning systems?
+
+- Uses 2 observed indicators.
+- Missing indicators: Large project delivery, Firm scale-up rate.
+- Rejected datasets: Logistics infrastructure quality, Electricity connection speed.
+
 ### Coordination: confidence 0.27, thin
 
 How effectively can independent actors organize around shared objectives?
@@ -83,14 +91,6 @@ How easily can new approaches be attempted, tested, abandoned, and improved?
 - Uses 4 observed indicators.
 - Missing indicators: Venture deals, Firms through regulatory sandboxes, University spinouts.
 - Rejected datasets: Business share of R&D.
-
-### Building: confidence 0.33, thin
-
-How capable is the country of turning plans and knowledge into functioning systems?
-
-- Uses 3 observed indicators.
-- Missing indicators: Large project delivery, Firm scale-up rate.
-- Rejected datasets: Logistics infrastructure quality.
 
 ### Learning: confidence 0.36, thin
 

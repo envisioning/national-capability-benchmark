@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-17T14:25:02.975Z",
-  "version": "9.4.0",
+  "generatedAt": "2026-11-02T15:31:15.704Z",
+  "version": "9.5.0",
   "country": {
     "country": "Cuba",
     "iso3": "CUB",
@@ -2410,8 +2410,8 @@
           "recency": 0.917,
           "sourceQuality": 0.95
         },
-        "delphiScore": 17,
-        "delphiIqr": 1,
+        "delphiScore": null,
+        "delphiIqr": null,
         "delphiDissent": false,
         "blendedScore": 20.8,
         "blendedFrom": "indicators",
@@ -2912,6 +2912,22 @@
             "winsorized": false,
             "outOfFrame": false,
             "series": [],
+            "status": "retired",
+            "staleExcluded": null
+          },
+          {
+            "indicatorId": "utility_connection_efficiency",
+            "name": "Utility connection efficiency",
+            "measurementClass": "C",
+            "raw": null,
+            "transformed": null,
+            "normalized": null,
+            "year": null,
+            "source": "World Bank (IC.BRE.US.P3)",
+            "sourceTier": null,
+            "winsorized": false,
+            "outOfFrame": false,
+            "series": [],
             "status": "missing",
             "staleExcluded": null
           },
@@ -2985,19 +3001,19 @@
       },
       "shared_purpose": {
         "score": null,
-        "observedIndicators": 0,
+        "observedIndicators": 1,
         "belowCoverageFloor": true,
-        "confidence": 0,
+        "confidence": 0.016,
         "confidenceParts": {
-          "coverage": 0,
-          "recency": 0,
-          "sourceQuality": 0
+          "coverage": 0.167,
+          "recency": 0.1,
+          "sourceQuality": 0.95
         },
-        "delphiScore": 24,
-        "delphiIqr": 3,
+        "delphiScore": null,
+        "delphiIqr": null,
         "delphiDissent": false,
-        "blendedScore": 24,
-        "blendedFrom": "delphi",
+        "blendedScore": null,
+        "blendedFrom": "none",
         "momentum": [],
         "indicators": [
           {
@@ -3020,16 +3036,29 @@
             "indicatorId": "tax_revenue_gdp",
             "name": "Tax revenue",
             "measurementClass": "O",
-            "raw": null,
-            "transformed": null,
-            "normalized": null,
-            "year": null,
+            "raw": 15.936,
+            "transformed": 15.936,
+            "normalized": 44,
+            "year": 2012,
             "source": "World Bank (GC.TAX.TOTL.GD.ZS)",
-            "sourceTier": null,
+            "sourceTier": "international_organization",
             "winsorized": false,
             "outOfFrame": false,
-            "series": [],
-            "status": "missing",
+            "series": [
+              {
+                "year": 2011,
+                "raw": 14.88,
+                "normalized": 40.9,
+                "tier": "international_organization"
+              },
+              {
+                "year": 2012,
+                "raw": 15.936,
+                "normalized": 44,
+                "tier": "international_organization"
+              }
+            ],
+            "status": "observed",
             "staleExcluded": null
           },
           {

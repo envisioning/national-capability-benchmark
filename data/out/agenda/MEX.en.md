@@ -1,6 +1,6 @@
 # Capability agenda: Mexico
 
-*Generated 2026-10-17*
+*Generated 2026-11-02*
 
 The frame includes 125 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
@@ -15,7 +15,7 @@ The frame includes 125 countries. Each dimension is scored from 0 to 100, with n
 | Learning | 42.5 | 0.54 (usable) | no trend |
 | Experimentation | 26.3 | 0.6 (usable) | +1.3 over 10 years using 3 indicators |
 | Adaptability | 65.4 | 0.46 (usable) | no trend |
-| Building | 55 | 0.57 (usable) | +2.5 over 10 years using 3 indicators |
+| Building | 61 | 0.63 (usable) | +2.5 over 10 years using 3 indicators |
 | Shared Purpose | 44.8 | 0.43 (thin) | +8.4 over 10 years using 2 indicators |
 
 ## What to raise
@@ -85,8 +85,8 @@ How effectively can independent actors organize around shared objectives?
 These dimensions score at least 50 with usable evidence.
 
 - Adaptability: 65.4, confidence usable
+- Building: 61, confidence usable
 - Agency: 56.3, confidence usable
-- Building: 55, confidence usable
 
 ## What Mexico has to work with
 

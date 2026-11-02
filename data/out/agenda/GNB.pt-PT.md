@@ -1,6 +1,6 @@
 # Agenda de capacidades: Guiné-Bissau
 
-*Gerada em 2026-10-17*
+*Gerada em 2026-11-02*
 
 A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, sem classificação geral, e cada pontuação traz ao lado a solidez da evidência. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma pontuação.
 
@@ -15,7 +15,7 @@ A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 | Aprendizagem | 41,4 | 0,39 (fraca) | sem tendência comparável |
 | Experimentação | 0,8 | 0,12 (muito fraca) | sem tendência comparável |
 | Adaptação | 42 | 0,59 (utilizável) | sem tendência comparável |
-| Construção | 7,9 | 0,45 (fraca) | 0 em 10 anos, com base em 2 indicadores |
+| Construção | 10,6 | 0,36 (fraca) | 0 em 10 anos, com base em 2 indicadores |
 | Propósito partilhado | 46,6 | 0,28 (fraca) | sem tendência comparável |
 
 ## Dimensões com as pontuações mais baixas
@@ -84,20 +84,20 @@ Em que medida pessoas e organizações conseguem transformar intenção em açã
 - Lacunas declaradas: Adultos que realizam tarefas digitais.
 - Bases rejeitadas: Tempo para criar uma empresa.
 
+### Construção: solidez 0,36, fraca
+
+Em que medida o país consegue transformar planos e conhecimento em sistemas que funcionam?
+
+- A pontuação assenta em 3 indicadores observados.
+- Lacunas declaradas: Execução de grandes projetos, Empresas jovens que ganham escala.
+- Bases rejeitadas: Qualidade da infraestrutura logística, Tempo de ligação à rede elétrica.
+
 ### Aprendizagem: solidez 0,39, fraca
 
 Com que eficácia o país adquire, distribui e atualiza conhecimento?
 
 - A pontuação assenta em 2 indicadores observados.
 - Lacunas declaradas: Participação de adultos em aprendizagem.
-
-### Construção: solidez 0,45, fraca
-
-Em que medida o país consegue transformar planos e conhecimento em sistemas que funcionam?
-
-- A pontuação assenta em 4 indicadores observados.
-- Lacunas declaradas: Execução de grandes projetos, Empresas jovens que ganham escala.
-- Bases rejeitadas: Qualidade da infraestrutura logística.
 
 ## Com o que a Guiné-Bissau conta
 

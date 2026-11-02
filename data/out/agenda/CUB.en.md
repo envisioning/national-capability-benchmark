@@ -1,6 +1,6 @@
 # Capability agenda: Cuba
 
-*Generated 2026-10-17*
+*Generated 2026-11-02*
 
 The frame includes 125 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
@@ -16,7 +16,7 @@ The frame includes 125 countries. Each dimension is scored from 0 to 100, with n
 | Experimentation | 2.5 | 0.32 (thin) | +0.6 over 10 years using 3 indicators |
 | Adaptability | 55.8 | 0.46 (usable) | no trend |
 | Building | 20.8 | 0.29 (thin) | -27.5 over 10 years using 2 indicators |
-| Shared Purpose | not scored | 0 (very thin) | no trend |
+| Shared Purpose | not scored | 0.02 (very thin) | no trend |
 
 ## What to measure first
 
@@ -30,11 +30,11 @@ How able are individuals and organizations to turn an intention into action?
 - Missing indicators: Adults doing digital tasks.
 - Rejected datasets: Time to start a business.
 
-### Shared Purpose: confidence 0, very thin
+### Shared Purpose: confidence 0.02, very thin
 
 To what extent can people imagine themselves as participants in a common project?
 
-- Uses 0 observed indicators.
+- Uses one observed indicator.
 - Missing indicators: Sense of national belonging, Volunteering, Political polarisation.
 - Rejected datasets: Voice and accountability.
 
@@ -74,7 +74,7 @@ How capable is the country of turning plans and knowledge into functioning syste
 
 - Uses 2 observed indicators.
 - Missing indicators: Large project delivery, Firm scale-up rate.
-- Rejected datasets: Logistics infrastructure quality.
+- Rejected datasets: Logistics infrastructure quality, Electricity connection speed.
 
 ### Experimentation: confidence 0.32, thin
 

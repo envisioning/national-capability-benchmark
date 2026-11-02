@@ -1,6 +1,6 @@
 # Capability agenda: Guinea-Bissau
 
-*Generated 2026-10-17*
+*Generated 2026-11-02*
 
 The frame includes 125 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
@@ -15,7 +15,7 @@ The frame includes 125 countries. Each dimension is scored from 0 to 100, with n
 | Learning | 41.4 | 0.39 (thin) | no trend |
 | Experimentation | 0.8 | 0.12 (very thin) | no trend |
 | Adaptability | 42 | 0.59 (usable) | no trend |
-| Building | 7.9 | 0.45 (thin) | 0 over 10 years using 2 indicators |
+| Building | 10.6 | 0.36 (thin) | 0 over 10 years using 2 indicators |
 | Shared Purpose | 46.6 | 0.28 (thin) | no trend |
 
 ## What to raise
@@ -84,20 +84,20 @@ How able are individuals and organizations to turn an intention into action?
 - Missing indicators: Adults doing digital tasks.
 - Rejected datasets: Time to start a business.
 
+### Building: confidence 0.36, thin
+
+How capable is the country of turning plans and knowledge into functioning systems?
+
+- Uses 3 observed indicators.
+- Missing indicators: Large project delivery, Firm scale-up rate.
+- Rejected datasets: Logistics infrastructure quality, Electricity connection speed.
+
 ### Learning: confidence 0.39, thin
 
 How effectively does the country acquire, distribute, and update knowledge?
 
 - Uses 2 observed indicators.
 - Missing indicators: Adult learning participation.
-
-### Building: confidence 0.45, thin
-
-How capable is the country of turning plans and knowledge into functioning systems?
-
-- Uses 4 observed indicators.
-- Missing indicators: Large project delivery, Firm scale-up rate.
-- Rejected datasets: Logistics infrastructure quality.
 
 ## What Guinea-Bissau has to work with
 

@@ -1,6 +1,6 @@
 # Agenda de capacidades: Malásia
 
-*Gerada em 2026-10-17*
+*Gerada em 2026-11-02*
 
 A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, sem classificação geral, e cada pontuação traz ao lado a solidez da evidência. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma pontuação.
 
@@ -15,7 +15,7 @@ A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 | Aprendizagem | 50,9 | 0,55 (utilizável) | sem tendência comparável |
 | Experimentação | 12,5 | 0,41 (fraca) | -3,2 em 10 anos, com base em 3 indicadores |
 | Adaptação | 77,9 | 0,59 (utilizável) | sem tendência comparável |
-| Construção | 74,3 | 0,57 (utilizável) | +6,3 em 10 anos, com base em 3 indicadores |
+| Construção | 70,2 | 0,63 (utilizável) | +6,3 em 10 anos, com base em 3 indicadores |
 | Propósito compartilhado | 55,3 | 0,4 (fraca) | -1,1 em 10 anos, com base em 2 indicadores |
 
 ## Dimensões com evidência fraca
@@ -44,7 +44,7 @@ Estas dimensões têm pontuação de pelo menos 50, com evidência utilizável.
 
 - Adaptação: 77,9, solidez utilizável
 - Coordenação: 76,1, solidez utilizável
-- Construção: 74,3, solidez utilizável
+- Construção: 70,2, solidez utilizável
 - Confiança: 56,6, solidez utilizável
 - Agência: 55,9, solidez utilizável
 - Antecipação: 54,4, solidez utilizável

@@ -1,6 +1,6 @@
 # Capability agenda: South Korea
 
-*Generated 2026-10-17*
+*Generated 2026-11-02*
 
 The frame includes 125 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
@@ -15,7 +15,7 @@ The frame includes 125 countries. Each dimension is scored from 0 to 100, with n
 | Learning | 52.1 | 0.55 (usable) | no trend |
 | Experimentation | 73.5 | 0.6 (usable) | +10.1 over 10 years using 3 indicators, with 1 at the frame edge |
 | Adaptability | 73 | 0.46 (usable) | no trend |
-| Building | 85.2 | 0.57 (usable) | +3.1 over 10 years using 3 indicators |
+| Building | 85 | 0.63 (usable) | +3.1 over 10 years using 3 indicators |
 | Shared Purpose | 40.1 | 0.4 (thin) | +3.2 over 10 years using 2 indicators |
 
 ## What to measure first
@@ -34,7 +34,7 @@ To what extent can people imagine themselves as participants in a common project
 
 These dimensions score at least 50 with usable evidence.
 
-- Building: 85.2, confidence usable
+- Building: 85, confidence usable
 - Coordination: 79.2, confidence usable
 - Anticipation: 74.4, confidence usable
 - Experimentation: 73.5, confidence usable

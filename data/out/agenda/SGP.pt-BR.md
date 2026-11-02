@@ -1,6 +1,6 @@
 # Agenda de capacidades: Singapura
 
-*Gerada em 2026-10-17*
+*Gerada em 2026-11-02*
 
 A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, sem classificação geral, e cada pontuação traz ao lado a solidez da evidência. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma pontuação.
 
@@ -15,7 +15,7 @@ A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 | Aprendizagem | 84,2 | 0,54 (utilizável) | sem tendência comparável |
 | Experimentação | 60,9 | 0,43 (fraca) | +0,1 em 10 anos, com base em 3 indicadores |
 | Adaptação | 72,6 | 0,62 (utilizável) | sem tendência comparável |
-| Construção | 75,2 | 0,57 (utilizável) | +6,5 em 10 anos, com base em 3 indicadores |
+| Construção | 76,1 | 0,63 (utilizável) | +6,5 em 10 anos, com base em 3 indicadores |
 | Propósito compartilhado | 32,3 | 0,28 (fraca) | sem tendência comparável |
 
 ## Dimensões com evidência fraca
@@ -44,7 +44,7 @@ Estas dimensões têm pontuação de pelo menos 50, com evidência utilizável.
 
 - Aprendizagem: 84,2, solidez utilizável
 - Antecipação: 82,2, solidez utilizável
-- Construção: 75,2, solidez utilizável
+- Construção: 76,1, solidez utilizável
 - Agência: 74,9, solidez utilizável
 - Adaptação: 72,6, solidez utilizável
 - Coordenação: 70,9, solidez utilizável

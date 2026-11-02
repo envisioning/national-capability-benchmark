@@ -1,6 +1,6 @@
 # Capability agenda: India
 
-*Generated 2026-10-17*
+*Generated 2026-11-02*
 
 The frame includes 125 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
@@ -15,7 +15,7 @@ The frame includes 125 countries. Each dimension is scored from 0 to 100, with n
 | Learning | 21.7 | 0.55 (usable) | no trend |
 | Experimentation | 16.1 | 0.6 (usable) | +10.9 over 10 years using 3 indicators |
 | Adaptability | 82.4 | 0.46 (usable) | no trend |
-| Building | 62.2 | 0.57 (usable) | +8 over 10 years using 3 indicators |
+| Building | 54.7 | 0.48 (usable) | +8 over 10 years using 3 indicators |
 | Shared Purpose | 64.8 | 0.4 (thin) | +1.9 over 10 years using 2 indicators |
 
 ## What to raise
@@ -91,7 +91,7 @@ How able are individuals and organizations to turn an intention into action?
 These dimensions score at least 50 with usable evidence.
 
 - Adaptability: 82.4, confidence usable
-- Building: 62.2, confidence usable
+- Building: 54.7, confidence usable
 
 ## What India has to work with
 

@@ -1,6 +1,6 @@
 # Capability agenda: Czechia
 
-*Generated 2026-10-17*
+*Generated 2026-11-02*
 
 The frame includes 125 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
@@ -15,7 +15,7 @@ The frame includes 125 countries. Each dimension is scored from 0 to 100, with n
 | Learning | 76.3 | 0.55 (usable) | no trend |
 | Experimentation | 27.5 | 0.41 (thin) | -15.9 over 10 years using 3 indicators |
 | Adaptability | 75.5 | 0.62 (usable) | no trend |
-| Building | 53.7 | 0.57 (usable) | -0.6 over 10 years using 3 indicators |
+| Building | 50.5 | 0.63 (usable) | -0.6 over 10 years using 3 indicators |
 | Shared Purpose | 72.1 | 0.3 (thin) | -1.9 over 10 years using 2 indicators |
 
 ## What to measure first
@@ -55,7 +55,7 @@ These dimensions score at least 50 with usable evidence.
 - Adaptability: 75.5, confidence usable
 - Anticipation: 67.3, confidence usable
 - Agency: 55.1, confidence usable
-- Building: 53.7, confidence usable
+- Building: 50.5, confidence usable
 
 ## What Czechia has to work with
 

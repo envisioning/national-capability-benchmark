@@ -1,6 +1,6 @@
 # Agenda de capacidades: Venezuela
 
-*Generado el 2026-10-17*
+*Generado el 2026-11-02*
 
 La comparación incluye 125 países. Cada dimensión recibe una puntuación de 0 a 100, sin clasificación general, y cada puntuación muestra a su lado la solidez de la evidencia. Antes de citar una puntuación, lea [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md).
 
@@ -15,8 +15,8 @@ La comparación incluye 125 países. Cada dimensión recibe una puntuación de 0
 | Aprendizaje | sin puntuación | 0.16 (muy débil) | sin base de tendencia |
 | Experimentación | 2.9 | 0.41 (débil) | -2.1 en 10 años, con 2 indicadores |
 | Adaptación | 48.7 | 0.53 (utilizable) | sin base de tendencia |
-| Ejecución | 8.9 | 0.25 (débil) | sin base de tendencia |
-| Propósito compartido | sin puntuación | 0.12 (muy débil) | sin base de tendencia |
+| Ejecución | sin puntuación | 0.16 (muy débil) | sin base de tendencia |
+| Propósito compartido | 26.9 | 0.16 (muy débil) | sin base de tendencia |
 
 ## Puntuaciones bajas con evidencia utilizable
 
@@ -52,14 +52,6 @@ La solidez de la evidencia está por debajo de la franja utilizable, así que la
 - Vacíos declarados: Colaboración universidad-empresa, Colaboración público-privada.
 - Series descartadas: Efectividad del gobierno, Calidad regulatoria, Desempeño logístico, Tiempo de exportación en frontera.
 
-### Propósito compartido: solidez 0.12, evidencia muy débil
-
-¿Hasta qué punto las personas logran verse como parte de un proyecto común?
-
-- Basada en un indicador observado.
-- Vacíos declarados: Sentido de pertenencia nacional, Voluntariado, Polarización política.
-- Series descartadas: Voz y rendición de cuentas.
-
 ### Aprendizaje: solidez 0.16, evidencia muy débil
 
 ¿Con qué eficacia adquiere, distribuye y actualiza conocimiento el país?
@@ -67,13 +59,21 @@ La solidez de la evidencia está por debajo de la franja utilizable, así que la
 - Basada en un indicador observado.
 - Vacíos declarados: Participación de adultos en aprendizaje.
 
-### Ejecución: solidez 0.25, evidencia débil
+### Ejecución: solidez 0.16, evidencia muy débil
 
 ¿En qué medida es capaz el país de convertir planes y conocimiento en sistemas que funcionan?
 
-- Basada en 2 indicadores observados.
+- Basada en un indicador observado.
 - Vacíos declarados: Ejecución de grandes proyectos, Empresas jóvenes que ganan escala.
-- Series descartadas: Calidad de la infraestructura logística.
+- Series descartadas: Calidad de la infraestructura logística, Tiempo de conexión a la red eléctrica.
+
+### Propósito compartido: solidez 0.16, evidencia muy débil
+
+¿Hasta qué punto las personas logran verse como parte de un proyecto común?
+
+- Basada en 2 indicadores observados.
+- Vacíos declarados: Sentido de pertenencia nacional, Voluntariado, Polarización política.
+- Series descartadas: Voz y rendición de cuentas.
 
 ### Iniciativa: solidez 0.26, evidencia débil
 

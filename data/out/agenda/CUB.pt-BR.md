@@ -1,6 +1,6 @@
 # Agenda de capacidades: Cuba
 
-*Gerada em 2026-10-17*
+*Gerada em 2026-11-02*
 
 A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, sem classificação geral, e cada pontuação traz ao lado a solidez da evidência. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma pontuação.
 
@@ -16,7 +16,7 @@ A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 | Experimentação | 2,5 | 0,32 (fraca) | +0,6 em 10 anos, com base em 3 indicadores |
 | Adaptação | 55,8 | 0,46 (utilizável) | sem tendência comparável |
 | Construção | 20,8 | 0,29 (fraca) | -27,5 em 10 anos, com base em 2 indicadores |
-| Propósito compartilhado | sem pontuação | 0 (muito fraca) | sem tendência comparável |
+| Propósito compartilhado | sem pontuação | 0,02 (muito fraca) | sem tendência comparável |
 
 ## Dimensões com evidência fraca
 
@@ -30,11 +30,11 @@ Em que medida pessoas e organizações conseguem transformar intenção em açã
 - Lacunas declaradas: Adultos que realizam tarefas digitais.
 - Bases rejeitadas: Tempo para abrir uma empresa.
 
-### Propósito compartilhado: solidez 0, muito fraca
+### Propósito compartilhado: solidez 0,02, muito fraca
 
 Até que ponto as pessoas conseguem se ver como participantes de um projeto comum?
 
-- A pontuação se apoia em 0 indicadores observados.
+- A pontuação se apoia em um indicador observado.
 - Lacunas declaradas: Sentimento de pertencimento nacional, Voluntariado, Polarização política.
 - Bases rejeitadas: Voz e prestação de contas.
 
@@ -74,7 +74,7 @@ Em que medida o país consegue transformar planos e conhecimento em sistemas que
 
 - A pontuação se apoia em 2 indicadores observados.
 - Lacunas declaradas: Entrega de grandes projetos, Empresas jovens que ganham escala.
-- Bases rejeitadas: Qualidade da infraestrutura logística.
+- Bases rejeitadas: Qualidade da infraestrutura logística, Tempo de conexão à rede elétrica.
 
 ### Experimentação: solidez 0,32, fraca
 

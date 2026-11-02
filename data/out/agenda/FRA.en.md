@@ -1,6 +1,6 @@
 # Capability agenda: France
 
-*Generated 2026-10-17*
+*Generated 2026-11-02*
 
 The frame includes 125 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
@@ -15,7 +15,7 @@ The frame includes 125 countries. Each dimension is scored from 0 to 100, with n
 | Learning | 69.5 | 0.55 (usable) | no trend |
 | Experimentation | 74 | 0.41 (thin) | -2.6 over 10 years using 3 indicators |
 | Adaptability | 72 | 0.62 (usable) | no trend |
-| Building | 62 | 0.57 (usable) | -3.4 over 10 years using 3 indicators |
+| Building | 54.4 | 0.48 (usable) | -3.4 over 10 years using 3 indicators |
 | Shared Purpose | 52.3 | 0.42 (thin) | -0.4 over 10 years using 2 indicators |
 
 ## What to measure first
@@ -69,7 +69,7 @@ These dimensions score at least 50 with usable evidence.
 - Adaptability: 72, confidence usable
 - Learning: 69.5, confidence usable
 - Anticipation: 62.2, confidence usable
-- Building: 62, confidence usable
+- Building: 54.4, confidence usable
 
 ## What France has to work with
 

@@ -1,6 +1,6 @@
 # Agenda de capacidades: Irlanda
 
-*Gerada em 2026-10-17*
+*Gerada em 2026-11-02*
 
 A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, sem classificação geral, e cada pontuação traz ao lado a solidez da evidência. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma pontuação.
 
@@ -15,7 +15,7 @@ A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 | Aprendizagem | 82 | 0,55 (utilizável) | sem tendência comparável |
 | Experimentação | 25,1 | 0,31 (fraca) | -4 em 10 anos, com base em 2 indicadores |
 | Adaptação | 60,4 | 0,62 (utilizável) | sem tendência comparável |
-| Construção | 80,5 | 0,57 (utilizável) | +15 em 10 anos, com base em 3 indicadores |
+| Construção | 76,2 | 0,63 (utilizável) | +15 em 10 anos, com base em 3 indicadores |
 | Propósito compartilhado | 66,6 | 0,3 (fraca) | +4,3 em 10 anos, com base em 2 indicadores |
 
 ## Dimensões com evidência fraca
@@ -52,7 +52,7 @@ Estas dimensões têm pontuação de pelo menos 50, com evidência utilizável.
 
 - Coordenação: 91,1, solidez utilizável
 - Aprendizagem: 82, solidez utilizável
-- Construção: 80,5, solidez utilizável
+- Construção: 76,2, solidez utilizável
 - Antecipação: 75,3, solidez utilizável
 - Agência: 68,5, solidez utilizável
 - Adaptação: 60,4, solidez utilizável

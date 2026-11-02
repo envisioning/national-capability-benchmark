@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-17T14:25:02.975Z",
-  "version": "9.4.0",
+  "generatedAt": "2026-11-02T15:31:15.704Z",
+  "version": "9.5.0",
   "country": {
     "country": "Bangladesh",
     "iso3": "BGD",
@@ -3023,19 +3023,19 @@
         ]
       },
       "building": {
-        "score": 32.9,
+        "score": 35.7,
         "observedIndicators": 4,
         "belowCoverageFloor": false,
-        "confidence": 0.489,
+        "confidence": 0.554,
         "confidenceParts": {
           "coverage": 0.667,
-          "recency": 0.771,
+          "recency": 0.875,
           "sourceQuality": 0.95
         },
-        "delphiScore": 42,
-        "delphiIqr": 1,
+        "delphiScore": null,
+        "delphiIqr": null,
         "delphiDissent": false,
-        "blendedScore": 32.9,
+        "blendedScore": 35.7,
         "blendedFrom": "indicators",
         "momentum": [
           {
@@ -3609,55 +3609,35 @@
             "indicatorId": "electricity_connection_speed",
             "name": "Electricity connection speed",
             "measurementClass": "C",
-            "raw": 53.713,
-            "transformed": 53.713,
-            "normalized": 53.7,
-            "year": 2019,
+            "raw": null,
+            "transformed": null,
+            "normalized": null,
+            "year": null,
             "source": "World Bank (IC.ELC.TIME.DFRN)",
+            "sourceTier": null,
+            "winsorized": false,
+            "outOfFrame": false,
+            "series": [],
+            "status": "retired",
+            "staleExcluded": null
+          },
+          {
+            "indicatorId": "utility_connection_efficiency",
+            "name": "Utility connection efficiency",
+            "measurementClass": "C",
+            "raw": 72.898,
+            "transformed": 72.898,
+            "normalized": 64.9,
+            "year": 2025,
+            "source": "World Bank (IC.BRE.US.P3)",
             "sourceTier": "international_organization",
             "winsorized": false,
             "outOfFrame": false,
             "series": [
               {
-                "year": 2013,
-                "raw": 0,
-                "normalized": 0,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2014,
-                "raw": 0,
-                "normalized": 0,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2015,
-                "raw": 0,
-                "normalized": 0,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2016,
-                "raw": 0,
-                "normalized": 0,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2017,
-                "raw": 10.852,
-                "normalized": 10.9,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2018,
-                "raw": 42.522,
-                "normalized": 42.5,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2019,
-                "raw": 53.713,
-                "normalized": 53.7,
+                "year": 2025,
+                "raw": 72.898,
+                "normalized": 64.9,
                 "tier": "international_organization"
               }
             ],

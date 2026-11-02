@@ -51,6 +51,29 @@ export const UNCTAD_EXPORTS_FLOW = '02'
 export const UNCTAD_LICENCE = 'CC BY 3.0 IGO'
 
 /**
+ * OECD Global Revenue Statistics, central government tax revenue as a share of
+ * GDP, read through the OECD SDMX API. A fill-only second source for
+ * `tax_revenue_gdp`: it supplies values only after a country's last World Bank
+ * year, and only where the World Bank has none inside the D159 window. The
+ * dataflow carries `NonProductionDataflow: true`, so the version is pinned in
+ * the URL and the pin is the SHA-256 of the CSV: a publisher refresh fails the
+ * fetch until the new file is reviewed and re-pinned here. See D172.
+ */
+export const OECD_GRS_PUBLISHER = 'OECD'
+export const OECD_GRS_DATASET = 'Global Revenue Statistics Database (DSD_REV_COMP_GLOBAL@DF_RSGLOBAL 2.1)'
+export const OECD_GRS_PAGE_URL =
+  'https://data-explorer.oecd.org/vis?df[ds]=dsDisseminateFinalDMZ&df[id]=DSD_REV_COMP_GLOBAL%40DF_RSGLOBAL&df[ag]=OECD.CTP.TPS'
+/** Tax revenue (`TAX_REV`), central government (`S1311`), total and social security contributions, % of GDP, annual. */
+export const OECD_GRS_URL =
+  'https://sdmx.oecd.org/public/rest/data/OECD.CTP.TPS,DSD_REV_COMP_GLOBAL@DF_RSGLOBAL,2.1/.TAX_REV.S1311._T+T_2000..PT_B1GQ.A?startPeriod=2000&format=csvfilewithlabels'
+/** The retrieval date of the pinned response; the database page gave a last update of 5 May 2026. */
+export const OECD_GRS_RELEASE = '2026-11-02'
+export const OECD_GRS_CSV_SHA256 =
+  '8b8c707bbc8a53cb24e419f2c515437a2ac1c2e79f04b7fae7817219921e1d89'
+export const OECD_GRS_LICENCE =
+  'OECD Terms and Conditions, Data: reuse for any purpose with credit (https://www.oecd.org/en/about/terms-conditions.html)'
+
+/**
  * ILOSTAT unemployment by sex, age and duration (thousands), read through the
  * ILO SDMX API. The long-term share is derived from it, see D120. ILOSTAT is a
  * live database rather than a versioned release, so the dataflow version and

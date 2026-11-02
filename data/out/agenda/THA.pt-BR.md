@@ -1,6 +1,6 @@
 # Agenda de capacidades: Tailândia
 
-*Gerada em 2026-10-17*
+*Gerada em 2026-11-02*
 
 A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, sem classificação geral, e cada pontuação traz ao lado a solidez da evidência. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma pontuação.
 
@@ -15,7 +15,7 @@ A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 | Aprendizagem | 42,4 | 0,55 (utilizável) | sem tendência comparável |
 | Experimentação | 15,7 | 0,41 (fraca) | +1,1 em 10 anos, com base em 3 indicadores |
 | Adaptação | 87,6 | 0,62 (utilizável) | sem tendência comparável |
-| Construção | 64,9 | 0,57 (utilizável) | -0,4 em 10 anos, com base em 3 indicadores |
+| Construção | 54,9 | 0,48 (utilizável) | -0,4 em 10 anos, com base em 3 indicadores |
 | Propósito compartilhado | 64,8 | 0,43 (fraca) | +3,4 em 10 anos, com base em 2 indicadores |
 
 ## Dimensões com as pontuações mais baixas
@@ -89,7 +89,7 @@ Em que medida pessoas e organizações conseguem transformar intenção em açã
 Estas dimensões têm pontuação de pelo menos 50, com evidência utilizável.
 
 - Adaptação: 87,6, solidez utilizável
-- Construção: 64,9, solidez utilizável
+- Construção: 54,9, solidez utilizável
 
 ## Com o que a Tailândia conta
 

@@ -1,6 +1,6 @@
 # Agenda de capacidades: Venezuela
 
-*Gerada em 2026-10-17*
+*Gerada em 2026-11-02*
 
 A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, sem classificação geral, e cada pontuação traz ao lado a solidez da evidência. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma pontuação.
 
@@ -15,8 +15,8 @@ A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 | Aprendizagem | sem pontuação | 0,16 (muito fraca) | sem tendência comparável |
 | Experimentação | 2,9 | 0,41 (fraca) | -2,1 em 10 anos, com base em 2 indicadores |
 | Adaptação | 48,7 | 0,53 (utilizável) | sem tendência comparável |
-| Construção | 8,9 | 0,25 (fraca) | sem tendência comparável |
-| Propósito compartilhado | sem pontuação | 0,12 (muito fraca) | sem tendência comparável |
+| Construção | sem pontuação | 0,16 (muito fraca) | sem tendência comparável |
+| Propósito compartilhado | 26,9 | 0,16 (muito fraca) | sem tendência comparável |
 
 ## Dimensões com as pontuações mais baixas
 
@@ -52,14 +52,6 @@ Com que eficácia atores independentes conseguem se organizar em torno de objeti
 - Lacunas declaradas: Colaboração universidade-empresa, Colaboração público-privada.
 - Bases rejeitadas: Efetividade governamental, Qualidade regulatória, Desempenho logístico, Tempo de exportação na fronteira.
 
-### Propósito compartilhado: solidez 0,12, muito fraca
-
-Até que ponto as pessoas conseguem se ver como participantes de um projeto comum?
-
-- A pontuação se apoia em um indicador observado.
-- Lacunas declaradas: Sentimento de pertencimento nacional, Voluntariado, Polarização política.
-- Bases rejeitadas: Voz e prestação de contas.
-
 ### Aprendizagem: solidez 0,16, muito fraca
 
 Com que eficácia o país adquire, distribui e atualiza conhecimento?
@@ -67,13 +59,21 @@ Com que eficácia o país adquire, distribui e atualiza conhecimento?
 - A pontuação se apoia em um indicador observado.
 - Lacunas declaradas: Participação de adultos em aprendizagem.
 
-### Construção: solidez 0,25, fraca
+### Construção: solidez 0,16, muito fraca
 
 Em que medida o país consegue transformar planos e conhecimento em sistemas que funcionam?
 
-- A pontuação se apoia em 2 indicadores observados.
+- A pontuação se apoia em um indicador observado.
 - Lacunas declaradas: Entrega de grandes projetos, Empresas jovens que ganham escala.
-- Bases rejeitadas: Qualidade da infraestrutura logística.
+- Bases rejeitadas: Qualidade da infraestrutura logística, Tempo de conexão à rede elétrica.
+
+### Propósito compartilhado: solidez 0,16, muito fraca
+
+Até que ponto as pessoas conseguem se ver como participantes de um projeto comum?
+
+- A pontuação se apoia em 2 indicadores observados.
+- Lacunas declaradas: Sentimento de pertencimento nacional, Voluntariado, Polarização política.
+- Bases rejeitadas: Voz e prestação de contas.
 
 ### Agência: solidez 0,26, fraca
 

@@ -1,6 +1,6 @@
 # Agenda de capacidades: Itália
 
-*Gerada em 2026-10-17*
+*Gerada em 2026-11-02*
 
 A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, sem classificação geral, e cada pontuação traz ao lado a solidez da evidência. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma pontuação.
 
@@ -15,7 +15,7 @@ A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 | Aprendizagem | 66,7 | 0,55 (utilizável) | sem tendência comparável |
 | Experimentação | 59,9 | 0,41 (fraca) | +3,1 em 10 anos, com base em 3 indicadores |
 | Adaptação | 64,2 | 0,62 (utilizável) | sem tendência comparável |
-| Construção | 59,3 | 0,57 (utilizável) | +2,3 em 10 anos, com base em 3 indicadores |
+| Construção | 60,9 | 0,63 (utilizável) | +2,3 em 10 anos, com base em 3 indicadores |
 | Propósito compartilhado | 51 | 0,42 (fraca) | +2 em 10 anos, com base em 2 indicadores |
 
 ## Dimensões com evidência fraca
@@ -47,7 +47,7 @@ Estas dimensões têm pontuação de pelo menos 50, com evidência utilizável.
 - Aprendizagem: 66,7, solidez utilizável
 - Adaptação: 64,2, solidez utilizável
 - Confiança: 62,9, solidez utilizável
-- Construção: 59,3, solidez utilizável
+- Construção: 60,9, solidez utilizável
 - Agência: 53,1, solidez utilizável
 
 ## Com o que a Itália conta

@@ -15,6 +15,7 @@ import { ingestWorldBank, recordRevisions } from '../pipeline/ingest.js'
 import { fetchJointEvsWvs } from '../pipeline/adapters/joint-evs-wvs.js'
 import { fetchVdem } from '../pipeline/adapters/vdem.js'
 import { fetchUnctadExportConcentration } from '../pipeline/adapters/unctad.js'
+import { fetchOecdGrsFill } from '../pipeline/adapters/oecd-grs.js'
 import { fetchIlostatInformalEmployment, fetchIlostatLongTermUnemployment } from '../pipeline/adapters/ilostat.js'
 import { fetchAtlasNewExportProducts } from '../pipeline/adapters/atlas.js'
 import type { Observation } from '../model/index.js'
@@ -534,6 +535,53 @@ async function vdem(args: Args): Promise<void> {
     console.log(`  ${indicatorId}: ${count}/${COUNTRY_ISO3.length}`)
   }
   console.log(`vdem data   -> ${FILES.vdem}`)
+  console.log(
+    `revisions   -> ${revisions.changed} changed, ${revisions.added} added, ${revisions.removed} removed in ${FILES.revisions}`,
+  )
+}
+
+/**
+ * OECD Global Revenue Statistics as a fill-only second source for
+ * `tax_revenue_gdp`. It reads the World Bank file first, because which
+ * countries GRS may fill depends on what the World Bank serves. Run it after
+ * `bench ingest`. See D172.
+ */
+async function grs(args: Args): Promise<void> {
+  const action = args._[1] ?? 'fetch'
+  if (action !== 'fetch') {
+    throw new Error(`Unknown GRS action "${action}". Use pnpm bench grs fetch.`)
+  }
+  const worldBank = ObservationFile.parse(JSON.parse(await readFile(FILES.worldBank, 'utf8')))
+  const worldBankLatestYear = new Map<string, number>()
+  for (const o of worldBank.observations) {
+    if (o.indicatorId !== 'tax_revenue_gdp' || o.geometry !== 'national') continue
+    worldBankLatestYear.set(o.iso3, Math.max(worldBankLatestYear.get(o.iso3) ?? 0, o.year))
+  }
+  const retrievedAt = new Date().toISOString()
+  const result = await fetchOecdGrsFill({ worldBankLatestYear, referenceYear: CURRENT_YEAR, retrievedAt })
+  let existing: unknown | null = null
+  try {
+    existing = JSON.parse(await readFile(FILES.oecdGrs, 'utf8'))
+  } catch (error) {
+    if ((error as NodeJS.ErrnoException).code !== 'ENOENT') {
+      throw new Error(`Cannot read existing GRS observations: ${String(error)}`)
+    }
+  }
+  const parsedExisting = existing ? ObservationFile.safeParse(existing) : null
+  if (existing && !parsedExisting?.success) {
+    throw new Error(`Existing GRS observations failed schema validation: ${FILES.oecdGrs}`)
+  }
+  const before = parsedExisting?.success ? parsedExisting.data.observations : []
+  const previousRetrievedAt = parsedExisting?.success ? parsedExisting.data.generatedAt : null
+  await writeOut(FILES.oecdGrs, `${JSON.stringify({ generatedAt: retrievedAt, observations: result.observations }, null, 2)}\n`)
+  const revisions = await recordRevisions(before, previousRetrievedAt, result.observations, retrievedAt)
+
+  console.log(`OECD GRS ${result.release}: ${result.emittedCountries.length} countries filled, ${result.observations.length} values`)
+  console.log(`  filled: ${result.emittedCountries.join(' ')}`)
+  console.log(`  served by the World Bank, not read: ${result.servedByWorldBank.length}/${COUNTRY_ISO3.length}`)
+  if (result.heldCountries.length > 0) console.log(`  held, no value inside the window: ${result.heldCountries.join(' ')}`)
+  if (result.noSocialSecurityLine.length > 0) console.log(`  no social security line, total stands: ${result.noSocialSecurityLine.join(', ')}`)
+  console.log(`grs data    -> ${FILES.oecdGrs}`)
   console.log(
     `revisions   -> ${revisions.changed} changed, ${revisions.added} added, ${revisions.removed} removed in ${FILES.revisions}`,
   )
@@ -1081,6 +1129,9 @@ async function main() {
     case 'unctad':
       await unctad(args)
       break
+    case 'grs':
+      await grs(args)
+      break
     case 'ilostat':
       await ilostat(args)
       break
@@ -1604,6 +1655,7 @@ Start with file 1.
   pnpm bench evs      fetch                fetch the Joint EVS/WVS items: A165 trust, A173 control, A080_01 charitable membership, G007_34_B trust in strangers, E069_17 court confidence check (alias: trust)
   pnpm bench vdem     fetch                fetch and parse V-Dem v16 civil society, court compliance and the polarization and turnout checks
   pnpm bench unctad   fetch                fetch and parse the pinned UNCTADstat export concentration index
+  pnpm bench grs      fetch                fill tax revenue from the pinned OECD Global Revenue Statistics where the World Bank has no value (run after ingest)
   pnpm bench ilostat  fetch [--only ltu|informality]  ILOSTAT: long-term unemployment share behind its gate, and the informal employment rate (a condition)
   pnpm bench atlas    fetch                new export products rate from the pinned Growth Lab HS92 4-digit file (about 450 MB)
   pnpm bench openalex fetch [--mailto a@b] count the OpenAlex top 10% cited share, pin counts and requests

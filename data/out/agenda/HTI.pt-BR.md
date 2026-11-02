@@ -1,6 +1,6 @@
 # Agenda de capacidades: Haiti
 
-*Gerada em 2026-10-17*
+*Gerada em 2026-11-02*
 
 A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, sem classificação geral, e cada pontuação traz ao lado a solidez da evidência. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma pontuação.
 
@@ -15,7 +15,7 @@ A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 | Aprendizagem | 35,5 | 0,32 (fraca) | sem tendência comparável |
 | Experimentação | 1 | 0,14 (muito fraca) | sem tendência comparável |
 | Adaptação | 27,2 | 0,46 (utilizável) | sem tendência comparável |
-| Construção | 46,8 | 0,41 (fraca) | +6 em 10 anos, com base em 2 indicadores |
+| Construção | 29,3 | 0,32 (fraca) | +6 em 10 anos, com base em 2 indicadores |
 | Propósito compartilhado | sem pontuação | 0,02 (muito fraca) | sem tendência comparável |
 
 ## Dimensões com as pontuações mais baixas
@@ -84,20 +84,20 @@ Com que eficácia atores independentes conseguem se organizar em torno de objeti
 - Lacunas declaradas: Colaboração universidade-empresa, Colaboração público-privada.
 - Bases rejeitadas: Efetividade governamental, Qualidade regulatória, Desempenho logístico, Tempo de exportação na fronteira.
 
+### Construção: solidez 0,32, fraca
+
+Em que medida o país consegue transformar planos e conhecimento em sistemas que funcionam?
+
+- A pontuação se apoia em 2 indicadores observados.
+- Lacunas declaradas: Entrega de grandes projetos, Empresas jovens que ganham escala.
+- Bases rejeitadas: Qualidade da infraestrutura logística, Tempo de conexão à rede elétrica.
+
 ### Aprendizagem: solidez 0,32, fraca
 
 Com que eficácia o país adquire, distribui e atualiza conhecimento?
 
 - A pontuação se apoia em 2 indicadores observados.
 - Lacunas declaradas: Participação de adultos em aprendizagem.
-
-### Construção: solidez 0,41, fraca
-
-Em que medida o país consegue transformar planos e conhecimento em sistemas que funcionam?
-
-- A pontuação se apoia em 3 indicadores observados.
-- Lacunas declaradas: Entrega de grandes projetos, Empresas jovens que ganham escala.
-- Bases rejeitadas: Qualidade da infraestrutura logística.
 
 ## Com o que o Haiti conta
 

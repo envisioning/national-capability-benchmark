@@ -1,6 +1,6 @@
 # Capability agenda: Netherlands
 
-*Generated 2026-10-17*
+*Generated 2026-11-02*
 
 The frame includes 125 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
@@ -15,7 +15,7 @@ The frame includes 125 countries. Each dimension is scored from 0 to 100, with n
 | Learning | 76.2 | 0.55 (usable) | no trend |
 | Experimentation | 52.6 | 0.39 (thin) | no trend |
 | Adaptability | 82.1 | 0.62 (usable) | no trend |
-| Building | 57.3 | 0.57 (usable) | -0.5 over 10 years using 3 indicators |
+| Building | 55.2 | 0.48 (usable) | -0.5 over 10 years using 3 indicators |
 | Shared Purpose | 81.7 | 0.28 (thin) | +7.7 over 10 years using 2 indicators |
 
 ## What to measure first
@@ -69,7 +69,7 @@ These dimensions score at least 50 with usable evidence.
 - Adaptability: 82.1, confidence usable
 - Learning: 76.2, confidence usable
 - Anticipation: 76.1, confidence usable
-- Building: 57.3, confidence usable
+- Building: 55.2, confidence usable
 
 ## What the Netherlands has to work with
 

@@ -93,6 +93,7 @@ export const PT_PT = withOverride(PT_BR, {
     manufacturing_value_added: 'Valor acrescentado da indústria transformadora',
     labour_productivity: 'Produto por pessoa empregada',
     electricity_connection_speed: 'Tempo de ligação à rede elétrica',
+    utility_connection_efficiency: 'Eficiência nas ligações de serviços públicos',
     economic_complexity: 'Aptidão económica',
     large_project_delivery: 'Execução de grandes projetos',
     tax_revenue_gdp: 'Receita fiscal',
@@ -211,6 +212,8 @@ export const PT_PT = withOverride(PT_BR, {
     labour_productivity: 'PIB por pessoa empregada, em paridade de poder de compra constante.',
     electricity_connection_speed:
       'Pontuação do Doing Business para os dias que uma empresa espera por uma ligação elétrica definitiva.',
+    utility_connection_efficiency:
+      'Pontuação B-READY do tempo para obter ligações de eletricidade, água e internet e da fiabilidade do fornecimento.',
     large_project_delivery:
       'Desempenho em custo e prazo dos grandes projetos públicos de infraestrutura.',
     firm_scale_up_rate:

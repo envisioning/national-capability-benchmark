@@ -1,6 +1,6 @@
 # Capability agenda: Thailand
 
-*Generated 2026-10-17*
+*Generated 2026-11-02*
 
 The frame includes 125 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
@@ -15,7 +15,7 @@ The frame includes 125 countries. Each dimension is scored from 0 to 100, with n
 | Learning | 42.4 | 0.55 (usable) | no trend |
 | Experimentation | 15.7 | 0.41 (thin) | +1.1 over 10 years using 3 indicators |
 | Adaptability | 87.6 | 0.62 (usable) | no trend |
-| Building | 64.9 | 0.57 (usable) | -0.4 over 10 years using 3 indicators |
+| Building | 54.9 | 0.48 (usable) | -0.4 over 10 years using 3 indicators |
 | Shared Purpose | 64.8 | 0.43 (thin) | +3.4 over 10 years using 2 indicators |
 
 ## What to raise
@@ -89,7 +89,7 @@ How able are individuals and organizations to turn an intention into action?
 These dimensions score at least 50 with usable evidence.
 
 - Adaptability: 87.6, confidence usable
-- Building: 64.9, confidence usable
+- Building: 54.9, confidence usable
 
 ## What Thailand has to work with
 

@@ -1,6 +1,6 @@
 # Agenda de capacidades: Índia
 
-*Gerada em 2026-10-17*
+*Gerada em 2026-11-02*
 
 A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, sem classificação geral, e cada pontuação traz ao lado a solidez da evidência. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma pontuação.
 
@@ -15,7 +15,7 @@ A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 | Aprendizagem | 21,7 | 0,55 (utilizável) | sem tendência comparável |
 | Experimentação | 16,1 | 0,6 (utilizável) | +10,9 em 10 anos, com base em 3 indicadores |
 | Adaptação | 82,4 | 0,46 (utilizável) | sem tendência comparável |
-| Construção | 62,2 | 0,57 (utilizável) | +8 em 10 anos, com base em 3 indicadores |
+| Construção | 54,7 | 0,48 (utilizável) | +8 em 10 anos, com base em 3 indicadores |
 | Propósito compartilhado | 64,8 | 0,4 (fraca) | +1,9 em 10 anos, com base em 2 indicadores |
 
 ## Dimensões com as pontuações mais baixas
@@ -91,7 +91,7 @@ Em que medida pessoas e organizações conseguem transformar intenção em açã
 Estas dimensões têm pontuação de pelo menos 50, com evidência utilizável.
 
 - Adaptação: 82,4, solidez utilizável
-- Construção: 62,2, solidez utilizável
+- Construção: 54,7, solidez utilizável
 
 ## Com o que a Índia conta
 

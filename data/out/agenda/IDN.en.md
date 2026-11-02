@@ -1,6 +1,6 @@
 # Capability agenda: Indonesia
 
-*Generated 2026-10-17*
+*Generated 2026-11-02*
 
 The frame includes 125 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
@@ -15,8 +15,8 @@ The frame includes 125 countries. Each dimension is scored from 0 to 100, with n
 | Learning | 24.5 | 0.54 (usable) | no trend |
 | Experimentation | 9.4 | 0.41 (thin) | +4 over 10 years using 3 indicators |
 | Adaptability | 75.1 | 0.6 (usable) | no trend |
-| Building | 55.1 | 0.57 (usable) | +0.2 over 10 years using 3 indicators |
-| Shared Purpose | 83.6 | 0.28 (thin) | no trend |
+| Building | 54.4 | 0.63 (usable) | +0.2 over 10 years using 3 indicators |
+| Shared Purpose | 64.7 | 0.43 (thin) | +3.1 over 10 years using 2 indicators |
 
 ## What to raise
 
@@ -64,14 +64,6 @@ How able are individuals and organizations to turn an intention into action?
 
 The evidence is too thin to manage these dimensions confidently.
 
-### Shared Purpose: confidence 0.28, thin
-
-To what extent can people imagine themselves as participants in a common project?
-
-- Uses 2 observed indicators.
-- Missing indicators: Sense of national belonging, Volunteering, Political polarisation.
-- Rejected datasets: Voice and accountability.
-
 ### Experimentation: confidence 0.41, thin
 
 How easily can new approaches be attempted, tested, abandoned, and improved?
@@ -80,13 +72,21 @@ How easily can new approaches be attempted, tested, abandoned, and improved?
 - Missing indicators: Venture deals, Firms through regulatory sandboxes, University spinouts.
 - Rejected datasets: Business share of R&D.
 
+### Shared Purpose: confidence 0.43, thin
+
+To what extent can people imagine themselves as participants in a common project?
+
+- Uses 3 observed indicators.
+- Missing indicators: Sense of national belonging, Volunteering, Political polarisation.
+- Rejected datasets: Voice and accountability.
+
 ## What to keep watching
 
 These dimensions score at least 50 with usable evidence.
 
 - Adaptability: 75.1, confidence usable
 - Coordination: 69.3, confidence usable
-- Building: 55.1, confidence usable
+- Building: 54.4, confidence usable
 
 ## What Indonesia has to work with
 

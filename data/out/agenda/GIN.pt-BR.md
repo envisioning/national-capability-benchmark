@@ -1,6 +1,6 @@
 # Agenda de capacidades: Guiné
 
-*Gerada em 2026-10-17*
+*Gerada em 2026-11-02*
 
 A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, sem classificação geral, e cada pontuação traz ao lado a solidez da evidência. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma pontuação.
 
@@ -15,8 +15,8 @@ A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 | Aprendizagem | 17,7 | 0,55 (utilizável) | sem tendência comparável |
 | Experimentação | 0,3 | 0,11 (muito fraca) | sem tendência comparável |
 | Adaptação | 39,6 | 0,46 (utilizável) | sem tendência comparável |
-| Construção | 28,6 | 0,44 (fraca) | +2,9 em 10 anos, com base em 2 indicadores |
-| Propósito compartilhado | sem pontuação | 0,08 (muito fraca) | sem tendência comparável |
+| Construção | 12,2 | 0,34 (fraca) | +2,9 em 10 anos, com base em 2 indicadores |
+| Propósito compartilhado | 58,3 | 0,24 (muito fraca) | sem tendência comparável |
 
 ## Dimensões com as pontuações mais baixas
 
@@ -53,14 +53,6 @@ Com que eficácia o sistema responde quando as circunstâncias mudam?
 
 A solidez da evidência está abaixo da faixa utilizável, de modo que a pontuação diz pouco sobre o país enquanto faltarem dados.
 
-### Propósito compartilhado: solidez 0,08, muito fraca
-
-Até que ponto as pessoas conseguem se ver como participantes de um projeto comum?
-
-- A pontuação se apoia em um indicador observado.
-- Lacunas declaradas: Sentimento de pertencimento nacional, Voluntariado, Polarização política.
-- Bases rejeitadas: Voz e prestação de contas.
-
 ### Experimentação: solidez 0,11, muito fraca
 
 Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e melhoradas?
@@ -85,6 +77,14 @@ Quanta cooperação é possível para além do círculo pessoal mais próximo?
 - Lacunas declaradas: Confiança nas instituições públicas, Taxa de resolução de processos judiciais.
 - Bases rejeitadas: Estado de direito, Controle da corrupção, Tempo para executar um contrato, Taxa de homicídios dolosos.
 
+### Propósito compartilhado: solidez 0,24, muito fraca
+
+Até que ponto as pessoas conseguem se ver como participantes de um projeto comum?
+
+- A pontuação se apoia em 2 indicadores observados.
+- Lacunas declaradas: Sentimento de pertencimento nacional, Voluntariado, Polarização política.
+- Bases rejeitadas: Voz e prestação de contas.
+
 ### Agência: solidez 0,3, fraca
 
 Em que medida pessoas e organizações conseguem transformar intenção em ação?
@@ -93,13 +93,13 @@ Em que medida pessoas e organizações conseguem transformar intenção em açã
 - Lacunas declaradas: Adultos que realizam tarefas digitais.
 - Bases rejeitadas: Tempo para abrir uma empresa.
 
-### Construção: solidez 0,44, fraca
+### Construção: solidez 0,34, fraca
 
 Em que medida o país consegue transformar planos e conhecimento em sistemas que funcionam?
 
-- A pontuação se apoia em 4 indicadores observados.
+- A pontuação se apoia em 3 indicadores observados.
 - Lacunas declaradas: Entrega de grandes projetos, Empresas jovens que ganham escala.
-- Bases rejeitadas: Qualidade da infraestrutura logística.
+- Bases rejeitadas: Qualidade da infraestrutura logística, Tempo de conexão à rede elétrica.
 
 ## Com o que a Guiné conta
 

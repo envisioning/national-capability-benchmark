@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-17T14:25:02.975Z",
-  "version": "9.4.0",
+  "generatedAt": "2026-11-02T15:31:15.704Z",
+  "version": "9.5.0",
   "country": {
     "country": "Slovenia",
     "iso3": "SVN",
@@ -2613,19 +2613,19 @@
         ]
       },
       "building": {
-        "score": 41.9,
+        "score": 30.3,
         "observedIndicators": 4,
         "belowCoverageFloor": false,
-        "confidence": 0.568,
+        "confidence": 0.634,
         "confidenceParts": {
           "coverage": 0.667,
-          "recency": 0.896,
+          "recency": 1,
           "sourceQuality": 0.95
         },
-        "delphiScore": 48,
-        "delphiIqr": 1,
+        "delphiScore": null,
+        "delphiIqr": null,
         "delphiDissent": false,
-        "blendedScore": 41.9,
+        "blendedScore": 30.3,
         "blendedFrom": "indicators",
         "momentum": [
           {
@@ -3038,79 +3038,35 @@
             "indicatorId": "electricity_connection_speed",
             "name": "Electricity connection speed",
             "measurementClass": "C",
-            "raw": 91.304,
-            "transformed": 91.304,
-            "normalized": 91.3,
-            "year": 2019,
+            "raw": null,
+            "transformed": null,
+            "normalized": null,
+            "year": null,
             "source": "World Bank (IC.ELC.TIME.DFRN)",
+            "sourceTier": null,
+            "winsorized": false,
+            "outOfFrame": false,
+            "series": [],
+            "status": "retired",
+            "staleExcluded": null
+          },
+          {
+            "indicatorId": "utility_connection_efficiency",
+            "name": "Utility connection efficiency",
+            "measurementClass": "C",
+            "raw": 58.703,
+            "transformed": 58.703,
+            "normalized": 45,
+            "year": 2025,
+            "source": "World Bank (IC.BRE.US.P3)",
             "sourceTier": "international_organization",
             "winsorized": false,
             "outOfFrame": false,
             "series": [
               {
-                "year": 2009,
-                "raw": 91.304,
-                "normalized": 91.3,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2010,
-                "raw": 91.304,
-                "normalized": 91.3,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2011,
-                "raw": 91.304,
-                "normalized": 91.3,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2012,
-                "raw": 91.304,
-                "normalized": 91.3,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2013,
-                "raw": 91.304,
-                "normalized": 91.3,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2014,
-                "raw": 91.304,
-                "normalized": 91.3,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2015,
-                "raw": 91.304,
-                "normalized": 91.3,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2016,
-                "raw": 91.304,
-                "normalized": 91.3,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2017,
-                "raw": 91.304,
-                "normalized": 91.3,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2018,
-                "raw": 91.304,
-                "normalized": 91.3,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2019,
-                "raw": 91.304,
-                "normalized": 91.3,
+                "year": 2025,
+                "raw": 58.703,
+                "normalized": 45,
                 "tier": "international_organization"
               }
             ],

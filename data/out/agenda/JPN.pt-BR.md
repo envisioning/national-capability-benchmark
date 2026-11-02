@@ -1,6 +1,6 @@
 # Agenda de capacidades: Japão
 
-*Gerada em 2026-10-17*
+*Gerada em 2026-11-02*
 
 A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, sem classificação geral, e cada pontuação traz ao lado a solidez da evidência. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma pontuação.
 
@@ -15,20 +15,12 @@ A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 | Aprendizagem | 52,4 | 0,55 (utilizável) | sem tendência comparável |
 | Experimentação | 63,5 | 0,41 (fraca) | -11,5 em 10 anos, com base em 3 indicadores |
 | Adaptação | 66,4 | 0,53 (utilizável) | sem tendência comparável |
-| Construção | 63,9 | 0,57 (utilizável) | -1,3 em 10 anos, com base em 3 indicadores |
-| Propósito compartilhado | 40,8 | 0,23 (muito fraca) | sem tendência comparável |
+| Construção | 61 | 0,48 (utilizável) | -1,3 em 10 anos, com base em 3 indicadores |
+| Propósito compartilhado | 38,9 | 0,38 (fraca) | sem tendência comparável |
 
 ## Dimensões com evidência fraca
 
 A solidez da evidência está abaixo da faixa utilizável, de modo que a pontuação diz pouco sobre o país enquanto faltarem dados.
-
-### Propósito compartilhado: solidez 0,23, muito fraca
-
-Até que ponto as pessoas conseguem se ver como participantes de um projeto comum?
-
-- A pontuação se apoia em 2 indicadores observados.
-- Lacunas declaradas: Sentimento de pertencimento nacional, Voluntariado, Polarização política.
-- Bases rejeitadas: Voz e prestação de contas.
 
 ### Coordenação: solidez 0,27, fraca
 
@@ -37,6 +29,14 @@ Com que eficácia atores independentes conseguem se organizar em torno de objeti
 - A pontuação se apoia em 2 indicadores observados.
 - Lacunas declaradas: Colaboração universidade-empresa, Colaboração público-privada.
 - Bases rejeitadas: Efetividade governamental, Qualidade regulatória, Desempenho logístico, Tempo de exportação na fronteira.
+
+### Propósito compartilhado: solidez 0,38, fraca
+
+Até que ponto as pessoas conseguem se ver como participantes de um projeto comum?
+
+- A pontuação se apoia em 3 indicadores observados.
+- Lacunas declaradas: Sentimento de pertencimento nacional, Voluntariado, Polarização política.
+- Bases rejeitadas: Voz e prestação de contas.
 
 ### Experimentação: solidez 0,41, fraca
 
@@ -67,8 +67,8 @@ Em que medida pessoas e organizações conseguem transformar intenção em açã
 Estas dimensões têm pontuação de pelo menos 50, com evidência utilizável.
 
 - Adaptação: 66,4, solidez utilizável
-- Construção: 63,9, solidez utilizável
 - Antecipação: 62,2, solidez utilizável
+- Construção: 61, solidez utilizável
 - Aprendizagem: 52,4, solidez utilizável
 
 ## Com o que o Japão conta

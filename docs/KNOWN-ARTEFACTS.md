@@ -12,9 +12,10 @@ has three panelists and was made on dataset 9.0.1. A9 says how much of it
 applies to 9.4.0. A panel estimate is made on the release it names, so a gap
 between one and a current score is not a finding.
 
-Every entry is on dataset 9.4.0, the 125-country frame of D153, except where
-it names another run. Entries on dimensions 9.4.0 did not restate still name
-9.3.0 where they quote a figure. A figure that came from a counterfactual rescore or a
+Every entry is on dataset 9.5.0, the 125-country frame of D153, except where
+it names another run. 9.5.0 restated Building and Shared Purpose only, so
+entries on other dimensions still name 9.4.0 or 9.3.0 where they quote a
+figure. A figure that came from a counterfactual rescore or a
 count the published files do not carry keeps the run it comes from: the
 scored-row counterfactual in A13 and the question-format split in A15, which
 were made on the 53 countries of the 8.x frame. The B-READY counts in A6 and
@@ -239,12 +240,14 @@ effective collective actors in the set.
 The spec is explicit that political uniformity is not a capability, so the fix is
 not simply to raise Singapore.
 
-Voice and accountability is retired. On dataset 9.3.0 Shared Purpose rests on
+Voice and accountability is retired. On dataset 9.5.0 Shared Purpose rests on
 three rows, tax revenue, income inequality and EVS/WVS civic participation
-(D128, read through A15), at mean confidence 0.317, under the 0.40 objective,
-and it publishes a score for 118 of 125 countries. Its correlation with log
-GDP per capita is 0.250 (n 118), the lowest of the nine dimensions. Singapore
-scores 32.3, 111th of 118, on the two rows it has. Volunteering, national belonging and
+(D128, read through A15), at mean confidence 0.329, under the 0.40 objective,
+and it publishes a score for 121 of 125 countries. Tax revenue takes OECD
+Global Revenue Statistics values for 10 countries the World Bank does not
+serve (D172). Its correlation with log GDP per capita is 0.261 (n 120), the
+lowest of the nine dimensions. Singapore scores 32.3, 113th of 121, on the
+two rows it has. Volunteering, national belonging and
 polarization are gaps. National belonging has no usable series: its only
 cross-national item, national pride, is not belonging and fails the regime
 test A13 describes, so it is not wired, and the gap counts against confidence
@@ -261,32 +264,33 @@ democratic channel as well as compulsory voting and managed mobilisation. See
 D129.
 
 ---
-## A6 — Two Doing Business indicators are frozen at 2019, and B-READY reaches 74 countries
+## A6 — One Doing Business indicator is frozen at 2019, and B-READY reaches 74 countries
 
 **Severity: medium.**
 
-The discontinued Doing Business programme supplied five scored rows. D167
-retired three of them for their B-READY successors, the third pillar of each
-topic, which scores the time and cost of the transaction: business entry
-efficiency in Agency, trade compliance efficiency in Coordination and dispute
-resolution efficiency in Trust. B-READY publishes scores, so these rows no
-longer count days or hours, and they add cost and, for trade, imports and
-firms' own reports.
+The discontinued Doing Business programme supplied five scored rows. Four
+are now read from their B-READY successors, the third pillar of each topic,
+which scores the transaction itself: business entry efficiency in Agency,
+trade compliance efficiency in Coordination and dispute resolution
+efficiency in Trust (D167), and utility connection efficiency in Building
+(D171). B-READY publishes scores, so these rows no longer count days or
+hours, and each adds something the old row did not read: cost, imports and
+firms' own reports for trade, and water, internet and the reliability of
+supply for utilities.
 
-Two rows have no successor and stay at 2019: procedures to start a business,
-because B-READY counts no procedures, and electricity connection speed,
-because B-READY publishes utility services only as one topic score that mixes
-rules with delivery. The recency term marks them down, and D159's 15-year
-limit sets them aside in the 2035 release.
+Procedures to start a business has no successor and stays at 2019, because
+B-READY counts no procedures. The recency term marks it down, and D159's
+15-year limit sets it aside in the 2035 release.
 
-The cost is coverage. B-READY's 2025 round reaches 74 of the 125 (probe,
-2026-10-17), and the 51 it has not reached lose a row in Agency,
-Coordination and Trust. Seven of them fall under the coverage floor: Agency
+The cost is coverage. B-READY's 2025 round reaches 74 of the 125, and the 51
+it has not reached lose a row in Agency, Coordination, Trust and Building.
+Brazil is one of them. Eight scores fall under the coverage floor: Agency
 for Haiti, Sudan and Malawi, Coordination for the United Arab Emirates,
-Venezuela, Iran and Denmark, and Trust for the United Arab Emirates and
-Haiti. The World Bank lists more of the frame for its 2026 round. Until that
-round reaches the API, the rows are recent where they exist and absent
-elsewhere. See A12 and A14.
+Venezuela, Iran and Denmark, Trust for the United Arab Emirates and Haiti,
+and Building for Venezuela (A17). The World Bank lists 36 more frame
+countries, Brazil among them, for its 2026 round. Until that round reaches
+the API, the rows are recent where they exist and absent elsewhere. See A12
+and A14.
 
 ---
 ## A7 — Learning understates Korea and Japan
@@ -476,13 +480,13 @@ count.
 
 Building asks whether a country can build and deliver. Its four measured
 indicators are manufacturing value added, high-technology export share,
-electricity connection speed and economic complexity. Output per worker sits
+utility connection efficiency and economic complexity. Output per worker sits
 beside them as a condition (D122). All four describe industrial output. Nothing
 in the measured set can see a national programme that was specified, funded and
 delivered.
 
-On dataset 9.3.0 Brazil scores 37.7, 43rd of 125, at confidence 0.568, its
-second best evidenced dimension after Adaptability. The score is a correct statement about Brazilian industrial output
+On dataset 9.5.0 Brazil scores 33.0, 45th of 124, at confidence 0.475. B-READY
+has not yet reached Brazil, so the score rests on three of the four rows (A6). The score is a correct statement about Brazilian industrial output
 and it is read as a statement about Brazilian delivery capacity, which is a
 different construct. In the same decade Brazil built and ran Pix, which settled
 7.98 billion transactions in July 2026, and GOV.BR, which reports 175 million
@@ -511,14 +515,14 @@ here, and the benchmark currently has no way to say so.
 
 **Severity: high. Trust is partly measured and Coordination remains narrow.**
 
-The figures in this entry are from dataset 9.4.0 unless they name another
+The figures in this entry are from dataset 9.5.0 unless they name another
 run.
 
 | Dimension | Observed indicators | Confidence | What is left | Publishes a score |
 | --- | ---: | ---: | --- | --- |
 | Coordination | 3 of 5 for 67 countries | 0.100 to 0.480, mean 0.361 | B-READY trade compliance efficiency at 2025 for 74 countries, budget execution from 2016 to 2024 and V-Dem civil-society strength at 2025 | 120 of 125 |
 | Trust | 5 of 7 for 41 countries | 0.072 to 0.546, mean 0.392 | B-READY dispute resolution efficiency at 2025 for 74 countries, bribery incidence from 2014 to 2025, V-Dem court compliance at 2025, and EVS/WVS A165 and trust in strangers at 2022; court clearance and institutional trust remain gaps | 122 of 125 |
-| Shared Purpose | 3 of 6 for 60 countries | 0.000 to 0.433, mean 0.317 | Tax revenue, income inequality, EVS/WVS civic participation; national belonging, volunteering and polarization remain gaps | 118 of 125 |
+| Shared Purpose | 3 of 6 for 66 countries | 0.016 to 0.433, mean 0.329 | Tax revenue (World Bank, with an OECD fill for 10 countries), income inequality, EVS/WVS civic participation; national belonging, volunteering and polarization remain gaps | 121 of 125 |
 
 Coordination remains a narrow operational proxy: budget alignment, border
 processing and civil-society judgements do not show whether several
@@ -847,20 +851,21 @@ neither has a source.
 
 **Severity: low.**
 
-The figures in this entry are from dataset 9.3.0.
+The figures in this entry are from dataset 9.5.0.
 
 The World Bank publishes Venezuela's manufacturing value added
 (`NV.IND.MANF.ZS`) as exactly 0% of GDP for every year from 1991 to 2011,
 its last year. The ingest drops those zeros as placeholders (D157), and the
 one value before them, 14.2% in 1990, is more than 15 years old and does not
 count (D159). So the row a reader would most expect to describe a
-petro-state's industrial base is empty, and Venezuela's Building, 8.9 and
-124th of 125 at confidence 0.251, rests on two rows: the 2019 Doing Business
-electricity connection score (A6) and economic fitness.
+petro-state's industrial base is empty. B-READY has not reached Venezuela,
+so the utility connection row is empty too (A6), and Building rests on
+economic fitness alone, at confidence 0.159. One row is under the coverage
+floor, and Venezuela publishes no Building score.
 
 Nothing in the frame's sources says what Venezuela's manufacturing share is
-today. The score reads low on the two rows it has, and the coverage part of
-its confidence says how much is missing.
+today. The confidence still publishes, and its coverage part says how much is
+missing.
 
 **Fix.** A national or regional source for Venezuela's manufacturing value
 added, published and comparable with the World Bank series.

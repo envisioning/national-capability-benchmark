@@ -1,6 +1,6 @@
 # Agenda de capacidades: Vietnã
 
-*Gerada em 2026-10-17*
+*Gerada em 2026-11-02*
 
 A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, sem classificação geral, e cada pontuação traz ao lado a solidez da evidência. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma pontuação.
 
@@ -15,8 +15,8 @@ A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 | Aprendizagem | 43,6 | 0,54 (utilizável) | sem tendência comparável |
 | Experimentação | 15,2 | 0,41 (fraca) | +3,1 em 10 anos, com base em 3 indicadores |
 | Adaptação | 88,1 | 0,62 (utilizável) | sem tendência comparável |
-| Construção | 76 | 0,55 (utilizável) | +16 em 10 anos, com base em 3 indicadores |
-| Propósito compartilhado | 43,6 | 0,25 (fraca) | sem tendência comparável |
+| Construção | 74,2 | 0,62 (utilizável) | +16 em 10 anos, com base em 3 indicadores |
+| Propósito compartilhado | 40 | 0,41 (fraca) | -3,7 em 10 anos, com base em 2 indicadores |
 
 ## Dimensões com as pontuações mais baixas
 
@@ -54,11 +54,11 @@ Com que eficácia o país adquire, distribui e atualiza conhecimento?
 
 A solidez da evidência está abaixo da faixa utilizável, de modo que a pontuação diz pouco sobre o país enquanto faltarem dados.
 
-### Propósito compartilhado: solidez 0,25, fraca
+### Propósito compartilhado: solidez 0,41, fraca
 
 Até que ponto as pessoas conseguem se ver como participantes de um projeto comum?
 
-- A pontuação se apoia em 2 indicadores observados.
+- A pontuação se apoia em 3 indicadores observados.
 - Lacunas declaradas: Sentimento de pertencimento nacional, Voluntariado, Polarização política.
 - Bases rejeitadas: Voz e prestação de contas.
 
@@ -76,7 +76,7 @@ Estas dimensões têm pontuação de pelo menos 50, com evidência utilizável.
 
 - Adaptação: 88,1, solidez utilizável
 - Coordenação: 81,4, solidez utilizável
-- Construção: 76, solidez utilizável
+- Construção: 74,2, solidez utilizável
 - Agência: 63,5, solidez utilizável
 
 ## Com o que o Vietnã conta

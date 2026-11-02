@@ -1,6 +1,6 @@
 # Agenda de capacidades: México
 
-*Generado el 2026-10-17*
+*Generado el 2026-11-02*
 
 La comparación incluye 125 países. Cada dimensión recibe una puntuación de 0 a 100, sin clasificación general, y cada puntuación muestra a su lado la solidez de la evidencia. Antes de citar una puntuación, lea [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md).
 
@@ -15,7 +15,7 @@ La comparación incluye 125 países. Cada dimensión recibe una puntuación de 0
 | Aprendizaje | 42.5 | 0.54 (utilizable) | sin base de tendencia |
 | Experimentación | 26.3 | 0.6 (utilizable) | +1.3 en 10 años, con 3 indicadores |
 | Adaptación | 65.4 | 0.46 (utilizable) | sin base de tendencia |
-| Ejecución | 55 | 0.57 (utilizable) | +2.5 en 10 años, con 3 indicadores |
+| Ejecución | 61 | 0.63 (utilizable) | +2.5 en 10 años, con 3 indicadores |
 | Propósito compartido | 44.8 | 0.43 (débil) | +8.4 en 10 años, con 2 indicadores |
 
 ## Puntuaciones bajas con evidencia utilizable
@@ -85,8 +85,8 @@ La solidez de la evidencia está por debajo de la franja utilizable, así que la
 Estas dimensiones tienen una puntuación de al menos 50, con evidencia utilizable.
 
 - Adaptación: 65.4, evidencia utilizable
+- Ejecución: 61, evidencia utilizable
 - Iniciativa: 56.3, evidencia utilizable
-- Ejecución: 55, evidencia utilizable
 
 ## ¿Con qué cuenta México?
 

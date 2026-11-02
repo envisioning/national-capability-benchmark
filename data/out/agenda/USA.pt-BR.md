@@ -1,6 +1,6 @@
 # Agenda de capacidades: Estados Unidos
 
-*Gerada em 2026-10-17*
+*Gerada em 2026-11-02*
 
 A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, sem classificação geral, e cada pontuação traz ao lado a solidez da evidência. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma pontuação.
 
@@ -15,7 +15,7 @@ A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 | Aprendizagem | 61,6 | 0,55 (utilizável) | sem tendência comparável |
 | Experimentação | 51,3 | 0,6 (utilizável) | -0,9 em 10 anos, com base em 3 indicadores |
 | Adaptação | 72,8 | 0,62 (utilizável) | sem tendência comparável |
-| Construção | 59,3 | 0,53 (utilizável) | +0,4 em 10 anos, com base em 3 indicadores |
+| Construção | 62,5 | 0,59 (utilizável) | +0,4 em 10 anos, com base em 3 indicadores |
 | Propósito compartilhado | 53,9 | 0,43 (fraca) | -0,8 em 10 anos, com base em 2 indicadores |
 
 ## Dimensões com evidência fraca
@@ -53,8 +53,8 @@ Estas dimensões têm pontuação de pelo menos 50, com evidência utilizável.
 - Adaptação: 72,8, solidez utilizável
 - Antecipação: 70,6, solidez utilizável
 - Confiança: 70,4, solidez utilizável
+- Construção: 62,5, solidez utilizável
 - Aprendizagem: 61,6, solidez utilizável
-- Construção: 59,3, solidez utilizável
 - Experimentação: 51,3, solidez utilizável
 
 ## Com o que os Estados Unidos conta

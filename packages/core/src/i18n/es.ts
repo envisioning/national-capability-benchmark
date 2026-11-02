@@ -297,6 +297,7 @@ export const ES: Lexicon = {
     labour_productivity: 'Producto por trabajador',
     logistics_infrastructure: 'Calidad de la infraestructura logística',
     electricity_connection_speed: 'Tiempo de conexión a la red eléctrica',
+    utility_connection_efficiency: 'Eficiencia en las conexiones de servicios públicos',
     economic_complexity: 'Aptitud económica',
     large_project_delivery: 'Ejecución de grandes proyectos',
     firm_scale_up_rate: 'Empresas jóvenes que ganan escala',
@@ -429,6 +430,8 @@ export const ES: Lexicon = {
       'Componente del Índice de Desempeño Logístico sobre la calidad de la infraestructura de comercio y transporte.',
     electricity_connection_speed:
       'Puntuación de Doing Business sobre los días que una empresa espera una conexión eléctrica permanente.',
+    utility_connection_efficiency:
+      'Puntuación B-READY del tiempo para obtener conexiones de electricidad, agua e internet y de la fiabilidad del suministro.',
     economic_complexity:
       'Sofisticación de la canasta exportadora, ajustada por diversidad y ubicuidad.',
     voice_and_accountability:

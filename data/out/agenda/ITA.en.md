@@ -1,6 +1,6 @@
 # Capability agenda: Italy
 
-*Generated 2026-10-17*
+*Generated 2026-11-02*
 
 The frame includes 125 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
@@ -15,7 +15,7 @@ The frame includes 125 countries. Each dimension is scored from 0 to 100, with n
 | Learning | 66.7 | 0.55 (usable) | no trend |
 | Experimentation | 59.9 | 0.41 (thin) | +3.1 over 10 years using 3 indicators |
 | Adaptability | 64.2 | 0.62 (usable) | no trend |
-| Building | 59.3 | 0.57 (usable) | +2.3 over 10 years using 3 indicators |
+| Building | 60.9 | 0.63 (usable) | +2.3 over 10 years using 3 indicators |
 | Shared Purpose | 51 | 0.42 (thin) | +2 over 10 years using 2 indicators |
 
 ## What to measure first
@@ -47,7 +47,7 @@ These dimensions score at least 50 with usable evidence.
 - Learning: 66.7, confidence usable
 - Adaptability: 64.2, confidence usable
 - Trust: 62.9, confidence usable
-- Building: 59.3, confidence usable
+- Building: 60.9, confidence usable
 - Agency: 53.1, confidence usable
 
 ## What Italy has to work with

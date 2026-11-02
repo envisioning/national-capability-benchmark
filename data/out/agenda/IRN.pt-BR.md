@@ -1,6 +1,6 @@
 # Agenda de capacidades: Irã
 
-*Gerada em 2026-10-17*
+*Gerada em 2026-11-02*
 
 A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, sem classificação geral, e cada pontuação traz ao lado a solidez da evidência. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma pontuação.
 
@@ -15,7 +15,7 @@ A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 | Aprendizagem | 37 | 0,32 (fraca) | sem tendência comparável |
 | Experimentação | 39,8 | 0,41 (fraca) | -25,9 em 10 anos, com base em 3 indicadores |
 | Adaptação | 72,4 | 0,53 (utilizável) | sem tendência comparável |
-| Construção | 45,1 | 0,38 (fraca) | +10,8 em 10 anos, com base em 2 indicadores |
+| Construção | 30,4 | 0,29 (fraca) | +10,8 em 10 anos, com base em 2 indicadores |
 | Propósito compartilhado | 72,1 | 0,26 (fraca) | sem tendência comparável |
 
 ## Dimensões com as pontuações mais baixas
@@ -59,6 +59,14 @@ Quanta cooperação é possível para além do círculo pessoal mais próximo?
 - Lacunas declaradas: Confiança nas instituições públicas, Taxa de resolução de processos judiciais.
 - Bases rejeitadas: Estado de direito, Controle da corrupção, Tempo para executar um contrato, Taxa de homicídios dolosos.
 
+### Construção: solidez 0,29, fraca
+
+Em que medida o país consegue transformar planos e conhecimento em sistemas que funcionam?
+
+- A pontuação se apoia em 2 indicadores observados.
+- Lacunas declaradas: Entrega de grandes projetos, Empresas jovens que ganham escala.
+- Bases rejeitadas: Qualidade da infraestrutura logística, Tempo de conexão à rede elétrica.
+
 ### Aprendizagem: solidez 0,32, fraca
 
 Com que eficácia o país adquire, distribui e atualiza conhecimento?
@@ -73,14 +81,6 @@ Em que medida pessoas e organizações conseguem transformar intenção em açã
 - A pontuação se apoia em 3 indicadores observados.
 - Lacunas declaradas: Adultos que realizam tarefas digitais.
 - Bases rejeitadas: Tempo para abrir uma empresa.
-
-### Construção: solidez 0,38, fraca
-
-Em que medida o país consegue transformar planos e conhecimento em sistemas que funcionam?
-
-- A pontuação se apoia em 3 indicadores observados.
-- Lacunas declaradas: Entrega de grandes projetos, Empresas jovens que ganham escala.
-- Bases rejeitadas: Qualidade da infraestrutura logística.
 
 ### Experimentação: solidez 0,41, fraca
 

@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-17T14:25:02.975Z",
-  "version": "9.4.0",
+  "generatedAt": "2026-11-02T15:31:15.704Z",
+  "version": "9.5.0",
   "country": {
     "country": "Iran",
     "iso3": "IRN",
@@ -2334,19 +2334,19 @@
         ]
       },
       "building": {
-        "score": 45.1,
-        "observedIndicators": 3,
+        "score": 30.4,
+        "observedIndicators": 2,
         "belowCoverageFloor": false,
-        "confidence": 0.383,
+        "confidence": 0.29,
         "confidenceParts": {
-          "coverage": 0.5,
-          "recency": 0.806,
+          "coverage": 0.333,
+          "recency": 0.917,
           "sourceQuality": 0.95
         },
-        "delphiScore": 44,
-        "delphiIqr": 2,
+        "delphiScore": null,
+        "delphiIqr": null,
         "delphiDissent": false,
-        "blendedScore": 45.1,
+        "blendedScore": 30.4,
         "blendedFrom": "indicators",
         "momentum": [
           {
@@ -2920,83 +2920,32 @@
             "indicatorId": "electricity_connection_speed",
             "name": "Electricity connection speed",
             "measurementClass": "C",
-            "raw": 74.348,
-            "transformed": 74.348,
-            "normalized": 74.3,
-            "year": 2019,
+            "raw": null,
+            "transformed": null,
+            "normalized": null,
+            "year": null,
             "source": "World Bank (IC.ELC.TIME.DFRN)",
-            "sourceTier": "international_organization",
+            "sourceTier": null,
             "winsorized": false,
             "outOfFrame": false,
-            "series": [
-              {
-                "year": 2009,
-                "raw": 60,
-                "normalized": 60,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2010,
-                "raw": 60,
-                "normalized": 60,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2011,
-                "raw": 60,
-                "normalized": 60,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2012,
-                "raw": 60,
-                "normalized": 60,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2013,
-                "raw": 60,
-                "normalized": 60,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2014,
-                "raw": 60,
-                "normalized": 60,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2015,
-                "raw": 74.348,
-                "normalized": 74.3,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2016,
-                "raw": 74.348,
-                "normalized": 74.3,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2017,
-                "raw": 74.348,
-                "normalized": 74.3,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2018,
-                "raw": 74.348,
-                "normalized": 74.3,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2019,
-                "raw": 74.348,
-                "normalized": 74.3,
-                "tier": "international_organization"
-              }
-            ],
-            "status": "observed",
+            "series": [],
+            "status": "retired",
+            "staleExcluded": null
+          },
+          {
+            "indicatorId": "utility_connection_efficiency",
+            "name": "Utility connection efficiency",
+            "measurementClass": "C",
+            "raw": null,
+            "transformed": null,
+            "normalized": null,
+            "year": null,
+            "source": "World Bank (IC.BRE.US.P3)",
+            "sourceTier": null,
+            "winsorized": false,
+            "outOfFrame": false,
+            "series": [],
+            "status": "missing",
             "staleExcluded": null
           },
           {

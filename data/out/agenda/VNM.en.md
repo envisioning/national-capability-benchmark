@@ -1,6 +1,6 @@
 # Capability agenda: Vietnam
 
-*Generated 2026-10-17*
+*Generated 2026-11-02*
 
 The frame includes 125 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
@@ -15,8 +15,8 @@ The frame includes 125 countries. Each dimension is scored from 0 to 100, with n
 | Learning | 43.6 | 0.54 (usable) | no trend |
 | Experimentation | 15.2 | 0.41 (thin) | +3.1 over 10 years using 3 indicators |
 | Adaptability | 88.1 | 0.62 (usable) | no trend |
-| Building | 76 | 0.55 (usable) | +16 over 10 years using 3 indicators |
-| Shared Purpose | 43.6 | 0.25 (thin) | no trend |
+| Building | 74.2 | 0.62 (usable) | +16 over 10 years using 3 indicators |
+| Shared Purpose | 40 | 0.41 (thin) | -3.7 over 10 years using 2 indicators |
 
 ## What to raise
 
@@ -54,11 +54,11 @@ How effectively does the country acquire, distribute, and update knowledge?
 
 The evidence is too thin to manage these dimensions confidently.
 
-### Shared Purpose: confidence 0.25, thin
+### Shared Purpose: confidence 0.41, thin
 
 To what extent can people imagine themselves as participants in a common project?
 
-- Uses 2 observed indicators.
+- Uses 3 observed indicators.
 - Missing indicators: Sense of national belonging, Volunteering, Political polarisation.
 - Rejected datasets: Voice and accountability.
 
@@ -76,7 +76,7 @@ These dimensions score at least 50 with usable evidence.
 
 - Adaptability: 88.1, confidence usable
 - Coordination: 81.4, confidence usable
-- Building: 76, confidence usable
+- Building: 74.2, confidence usable
 - Agency: 63.5, confidence usable
 
 ## What Vietnam has to work with

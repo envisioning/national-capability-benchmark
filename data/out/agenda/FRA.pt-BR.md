@@ -1,6 +1,6 @@
 # Agenda de capacidades: França
 
-*Gerada em 2026-10-17*
+*Gerada em 2026-11-02*
 
 A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, sem classificação geral, e cada pontuação traz ao lado a solidez da evidência. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma pontuação.
 
@@ -15,7 +15,7 @@ A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 | Aprendizagem | 69,5 | 0,55 (utilizável) | sem tendência comparável |
 | Experimentação | 74 | 0,41 (fraca) | -2,6 em 10 anos, com base em 3 indicadores |
 | Adaptação | 72 | 0,62 (utilizável) | sem tendência comparável |
-| Construção | 62 | 0,57 (utilizável) | -3,4 em 10 anos, com base em 3 indicadores |
+| Construção | 54,4 | 0,48 (utilizável) | -3,4 em 10 anos, com base em 3 indicadores |
 | Propósito compartilhado | 52,3 | 0,42 (fraca) | -0,4 em 10 anos, com base em 2 indicadores |
 
 ## Dimensões com evidência fraca
@@ -69,7 +69,7 @@ Estas dimensões têm pontuação de pelo menos 50, com evidência utilizável.
 - Adaptação: 72, solidez utilizável
 - Aprendizagem: 69,5, solidez utilizável
 - Antecipação: 62,2, solidez utilizável
-- Construção: 62, solidez utilizável
+- Construção: 54,4, solidez utilizável
 
 ## Com o que a França conta
 

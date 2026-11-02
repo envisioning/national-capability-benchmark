@@ -1,6 +1,6 @@
 # Capability agenda: Iraq
 
-*Generated 2026-10-17*
+*Generated 2026-11-02*
 
 The frame includes 125 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
@@ -15,7 +15,7 @@ The frame includes 125 countries. Each dimension is scored from 0 to 100, with n
 | Learning | 17.6 | 0.52 (usable) | no trend |
 | Experimentation | 2.8 | 0.4 (thin) | +0.7 over 10 years using 2 indicators |
 | Adaptability | 25.4 | 0.58 (usable) | no trend |
-| Building | 31.5 | 0.41 (thin) | +2.9 over 10 years using 2 indicators |
+| Building | 4.4 | 0.32 (thin) | +2.9 over 10 years using 2 indicators |
 | Shared Purpose | 49.4 | 0.36 (thin) | no trend |
 
 ## What to raise
@@ -61,6 +61,14 @@ How effectively can independent actors organize around shared objectives?
 - Missing indicators: University-industry collaboration, Public-private collaboration.
 - Rejected datasets: Government effectiveness, Regulatory quality, Logistics performance, Border compliance time to export.
 
+### Building: confidence 0.32, thin
+
+How capable is the country of turning plans and knowledge into functioning systems?
+
+- Uses 2 observed indicators.
+- Missing indicators: Large project delivery, Firm scale-up rate.
+- Rejected datasets: Logistics infrastructure quality, Electricity connection speed.
+
 ### Shared Purpose: confidence 0.36, thin
 
 To what extent can people imagine themselves as participants in a common project?
@@ -84,14 +92,6 @@ How easily can new approaches be attempted, tested, abandoned, and improved?
 - Uses 4 observed indicators.
 - Missing indicators: Venture deals, Firms through regulatory sandboxes, University spinouts.
 - Rejected datasets: Business share of R&D.
-
-### Building: confidence 0.41, thin
-
-How capable is the country of turning plans and knowledge into functioning systems?
-
-- Uses 3 observed indicators.
-- Missing indicators: Large project delivery, Firm scale-up rate.
-- Rejected datasets: Logistics infrastructure quality.
 
 ### Agency: confidence 0.41, thin
 

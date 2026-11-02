@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-17T14:25:02.975Z",
-  "version": "9.4.0",
+  "generatedAt": "2026-11-02T15:31:15.704Z",
+  "version": "9.5.0",
   "country": {
     "country": "Venezuela",
     "iso3": "VEN",
@@ -2372,20 +2372,20 @@
         ]
       },
       "building": {
-        "score": 8.9,
-        "observedIndicators": 2,
-        "belowCoverageFloor": false,
-        "confidence": 0.251,
+        "score": null,
+        "observedIndicators": 1,
+        "belowCoverageFloor": true,
+        "confidence": 0.159,
         "confidenceParts": {
-          "coverage": 0.333,
-          "recency": 0.792,
+          "coverage": 0.167,
+          "recency": 1,
           "sourceQuality": 0.95
         },
-        "delphiScore": 8,
-        "delphiIqr": 0.5,
+        "delphiScore": null,
+        "delphiIqr": null,
         "delphiDissent": false,
-        "blendedScore": 8.9,
-        "blendedFrom": "indicators",
+        "blendedScore": null,
+        "blendedFrom": "none",
         "momentum": [],
         "indicators": [
           {
@@ -2582,83 +2582,32 @@
             "indicatorId": "electricity_connection_speed",
             "name": "Electricity connection speed",
             "measurementClass": "C",
-            "raw": 17.391,
-            "transformed": 17.391,
-            "normalized": 17.4,
-            "year": 2019,
+            "raw": null,
+            "transformed": null,
+            "normalized": null,
+            "year": null,
             "source": "World Bank (IC.ELC.TIME.DFRN)",
-            "sourceTier": "international_organization",
+            "sourceTier": null,
             "winsorized": false,
             "outOfFrame": false,
-            "series": [
-              {
-                "year": 2009,
-                "raw": 39.13,
-                "normalized": 39.1,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2010,
-                "raw": 39.13,
-                "normalized": 39.1,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2011,
-                "raw": 39.13,
-                "normalized": 39.1,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2012,
-                "raw": 39.13,
-                "normalized": 39.1,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2013,
-                "raw": 39.13,
-                "normalized": 39.1,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2014,
-                "raw": 30.435,
-                "normalized": 30.4,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2015,
-                "raw": 30.435,
-                "normalized": 30.4,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2016,
-                "raw": 17.391,
-                "normalized": 17.4,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2017,
-                "raw": 17.391,
-                "normalized": 17.4,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2018,
-                "raw": 17.391,
-                "normalized": 17.4,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2019,
-                "raw": 17.391,
-                "normalized": 17.4,
-                "tier": "international_organization"
-              }
-            ],
-            "status": "observed",
+            "series": [],
+            "status": "retired",
+            "staleExcluded": null
+          },
+          {
+            "indicatorId": "utility_connection_efficiency",
+            "name": "Utility connection efficiency",
+            "measurementClass": "C",
+            "raw": null,
+            "transformed": null,
+            "normalized": null,
+            "year": null,
+            "source": "World Bank (IC.BRE.US.P3)",
+            "sourceTier": null,
+            "winsorized": false,
+            "outOfFrame": false,
+            "series": [],
+            "status": "missing",
             "staleExcluded": null
           },
           {
@@ -2839,20 +2788,20 @@
         ]
       },
       "shared_purpose": {
-        "score": null,
-        "observedIndicators": 1,
-        "belowCoverageFloor": true,
-        "confidence": 0.118,
+        "score": 26.9,
+        "observedIndicators": 2,
+        "belowCoverageFloor": false,
+        "confidence": 0.162,
         "confidenceParts": {
-          "coverage": 0.167,
-          "recency": 0.833,
-          "sourceQuality": 0.85
+          "coverage": 0.333,
+          "recency": 0.542,
+          "sourceQuality": 0.9
         },
-        "delphiScore": 16,
-        "delphiIqr": 1.5,
+        "delphiScore": null,
+        "delphiIqr": null,
         "delphiDissent": false,
-        "blendedScore": null,
-        "blendedFrom": "none",
+        "blendedScore": 26.9,
+        "blendedFrom": "indicators",
         "momentum": [],
         "indicators": [
           {
@@ -2875,16 +2824,47 @@
             "indicatorId": "tax_revenue_gdp",
             "name": "Tax revenue",
             "measurementClass": "O",
-            "raw": null,
-            "transformed": null,
-            "normalized": null,
-            "year": null,
+            "raw": 15.133,
+            "transformed": 15.133,
+            "normalized": 41.7,
+            "year": 2015,
             "source": "World Bank (GC.TAX.TOTL.GD.ZS)",
-            "sourceTier": null,
+            "sourceTier": "international_organization",
             "winsorized": false,
             "outOfFrame": false,
-            "series": [],
-            "status": "missing",
+            "series": [
+              {
+                "year": 2011,
+                "raw": 12.494,
+                "normalized": 34.1,
+                "tier": "international_organization"
+              },
+              {
+                "year": 2012,
+                "raw": 13.158,
+                "normalized": 36,
+                "tier": "international_organization"
+              },
+              {
+                "year": 2013,
+                "raw": 13.47,
+                "normalized": 36.9,
+                "tier": "international_organization"
+              },
+              {
+                "year": 2014,
+                "raw": 17.912,
+                "normalized": 49.7,
+                "tier": "international_organization"
+              },
+              {
+                "year": 2015,
+                "raw": 15.133,
+                "normalized": 41.7,
+                "tier": "international_organization"
+              }
+            ],
+            "status": "observed",
             "staleExcluded": null
           },
           {

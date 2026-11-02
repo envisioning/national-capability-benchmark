@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-17T14:25:02.975Z",
-  "version": "9.4.0",
+  "generatedAt": "2026-11-02T15:31:15.704Z",
+  "version": "9.5.0",
   "country": {
     "country": "Bolivia",
     "iso3": "BOL",
@@ -2300,19 +2300,19 @@
         ]
       },
       "building": {
-        "score": 36.1,
-        "observedIndicators": 4,
+        "score": 17.4,
+        "observedIndicators": 3,
         "belowCoverageFloor": false,
-        "confidence": 0.568,
+        "confidence": 0.475,
         "confidenceParts": {
-          "coverage": 0.667,
-          "recency": 0.896,
+          "coverage": 0.5,
+          "recency": 1,
           "sourceQuality": 0.95
         },
-        "delphiScore": 24,
-        "delphiIqr": 1.5,
+        "delphiScore": null,
+        "delphiIqr": null,
         "delphiDissent": false,
-        "blendedScore": 36.1,
+        "blendedScore": 17.4,
         "blendedFrom": "indicators",
         "momentum": [
           {
@@ -2869,83 +2869,32 @@
             "indicatorId": "electricity_connection_speed",
             "name": "Electricity connection speed",
             "measurementClass": "C",
-            "raw": 92.174,
-            "transformed": 92.174,
-            "normalized": 92.2,
-            "year": 2019,
+            "raw": null,
+            "transformed": null,
+            "normalized": null,
+            "year": null,
             "source": "World Bank (IC.ELC.TIME.DFRN)",
-            "sourceTier": "international_organization",
+            "sourceTier": null,
             "winsorized": false,
             "outOfFrame": false,
-            "series": [
-              {
-                "year": 2009,
-                "raw": 89.565,
-                "normalized": 89.6,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2010,
-                "raw": 89.565,
-                "normalized": 89.6,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2011,
-                "raw": 89.565,
-                "normalized": 89.6,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2012,
-                "raw": 89.565,
-                "normalized": 89.6,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2013,
-                "raw": 89.565,
-                "normalized": 89.6,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2014,
-                "raw": 89.565,
-                "normalized": 89.6,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2015,
-                "raw": 89.565,
-                "normalized": 89.6,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2016,
-                "raw": 89.565,
-                "normalized": 89.6,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2017,
-                "raw": 89.565,
-                "normalized": 89.6,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2018,
-                "raw": 90.435,
-                "normalized": 90.4,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2019,
-                "raw": 92.174,
-                "normalized": 92.2,
-                "tier": "international_organization"
-              }
-            ],
-            "status": "observed",
+            "series": [],
+            "status": "retired",
+            "staleExcluded": null
+          },
+          {
+            "indicatorId": "utility_connection_efficiency",
+            "name": "Utility connection efficiency",
+            "measurementClass": "C",
+            "raw": null,
+            "transformed": null,
+            "normalized": null,
+            "year": null,
+            "source": "World Bank (IC.BRE.US.P3)",
+            "sourceTier": null,
+            "winsorized": false,
+            "outOfFrame": false,
+            "series": [],
+            "status": "missing",
             "staleExcluded": null
           },
           {
@@ -3127,20 +3076,318 @@
       },
       "shared_purpose": {
         "score": 46.2,
-        "observedIndicators": 2,
+        "observedIndicators": 3,
         "belowCoverageFloor": false,
-        "confidence": 0.275,
+        "confidence": 0.433,
         "confidenceParts": {
-          "coverage": 0.333,
-          "recency": 0.917,
-          "sourceQuality": 0.9
+          "coverage": 0.5,
+          "recency": 0.944,
+          "sourceQuality": 0.917
         },
-        "delphiScore": 38,
-        "delphiIqr": 4,
+        "delphiScore": null,
+        "delphiIqr": null,
         "delphiDissent": false,
         "blendedScore": 46.2,
         "blendedFrom": "indicators",
-        "momentum": [],
+        "momentum": [
+          {
+            "baseYear": 2016,
+            "currentYear": 2026,
+            "baseScore": 47.5,
+            "currentScore": 48.3,
+            "delta": 0.8,
+            "matchedIndicators": 2,
+            "basket": [
+              "tax_revenue_gdp",
+              "income_inequality"
+            ],
+            "clamped": 0,
+            "series": [
+              {
+                "year": 2016,
+                "score": 47.5
+              },
+              {
+                "year": 2017,
+                "score": 45.5
+              },
+              {
+                "year": 2018,
+                "score": 47.3
+              },
+              {
+                "year": 2019,
+                "score": 48.3
+              },
+              {
+                "year": 2020,
+                "score": 41.5
+              },
+              {
+                "year": 2021,
+                "score": 46.7
+              },
+              {
+                "year": 2022,
+                "score": 48.2
+              },
+              {
+                "year": 2023,
+                "score": 47.1
+              },
+              {
+                "year": 2024,
+                "score": 48.3
+              },
+              {
+                "year": 2025,
+                "score": 48.3
+              },
+              {
+                "year": 2026,
+                "score": 48.3
+              }
+            ]
+          },
+          {
+            "baseYear": 2006,
+            "currentYear": 2026,
+            "baseScore": 26.6,
+            "currentScore": 48.3,
+            "delta": 21.7,
+            "matchedIndicators": 2,
+            "basket": [
+              "tax_revenue_gdp",
+              "income_inequality"
+            ],
+            "clamped": 0,
+            "series": [
+              {
+                "year": 2006,
+                "score": 26.6
+              },
+              {
+                "year": 2007,
+                "score": 29.8
+              },
+              {
+                "year": 2008,
+                "score": 35
+              },
+              {
+                "year": 2009,
+                "score": 37.2
+              },
+              {
+                "year": 2010,
+                "score": 37.2
+              },
+              {
+                "year": 2011,
+                "score": 45.2
+              },
+              {
+                "year": 2012,
+                "score": 45.2
+              },
+              {
+                "year": 2013,
+                "score": 45.1
+              },
+              {
+                "year": 2014,
+                "score": 45.5
+              },
+              {
+                "year": 2015,
+                "score": 48.1
+              },
+              {
+                "year": 2016,
+                "score": 47.5
+              },
+              {
+                "year": 2017,
+                "score": 45.5
+              },
+              {
+                "year": 2018,
+                "score": 47.3
+              },
+              {
+                "year": 2019,
+                "score": 48.3
+              },
+              {
+                "year": 2020,
+                "score": 41.5
+              },
+              {
+                "year": 2021,
+                "score": 46.7
+              },
+              {
+                "year": 2022,
+                "score": 48.2
+              },
+              {
+                "year": 2023,
+                "score": 47.1
+              },
+              {
+                "year": 2024,
+                "score": 48.3
+              },
+              {
+                "year": 2025,
+                "score": 48.3
+              },
+              {
+                "year": 2026,
+                "score": 48.3
+              }
+            ]
+          },
+          {
+            "baseYear": 1996,
+            "currentYear": 2026,
+            "baseScore": 30.6,
+            "currentScore": 48.3,
+            "delta": 17.7,
+            "matchedIndicators": 2,
+            "basket": [
+              "tax_revenue_gdp",
+              "income_inequality"
+            ],
+            "clamped": 0,
+            "series": [
+              {
+                "year": 1996,
+                "score": 30.6
+              },
+              {
+                "year": 1997,
+                "score": 18.6
+              },
+              {
+                "year": 1998,
+                "score": 19.9
+              },
+              {
+                "year": 1999,
+                "score": 17.9
+              },
+              {
+                "year": 2000,
+                "score": 16.8
+              },
+              {
+                "year": 2001,
+                "score": 18.4
+              },
+              {
+                "year": 2002,
+                "score": 18
+              },
+              {
+                "year": 2003,
+                "score": 17.7
+              },
+              {
+                "year": 2004,
+                "score": 26.3
+              },
+              {
+                "year": 2005,
+                "score": 23.2
+              },
+              {
+                "year": 2006,
+                "score": 26.6
+              },
+              {
+                "year": 2007,
+                "score": 29.8
+              },
+              {
+                "year": 2008,
+                "score": 35
+              },
+              {
+                "year": 2009,
+                "score": 37.2
+              },
+              {
+                "year": 2010,
+                "score": 37.2
+              },
+              {
+                "year": 2011,
+                "score": 45.2
+              },
+              {
+                "year": 2012,
+                "score": 45.2
+              },
+              {
+                "year": 2013,
+                "score": 45.1
+              },
+              {
+                "year": 2014,
+                "score": 45.5
+              },
+              {
+                "year": 2015,
+                "score": 48.1
+              },
+              {
+                "year": 2016,
+                "score": 47.5
+              },
+              {
+                "year": 2017,
+                "score": 45.5
+              },
+              {
+                "year": 2018,
+                "score": 47.3
+              },
+              {
+                "year": 2019,
+                "score": 48.3
+              },
+              {
+                "year": 2020,
+                "score": 41.5
+              },
+              {
+                "year": 2021,
+                "score": 46.7
+              },
+              {
+                "year": 2022,
+                "score": 48.2
+              },
+              {
+                "year": 2023,
+                "score": 47.1
+              },
+              {
+                "year": 2024,
+                "score": 48.3
+              },
+              {
+                "year": 2025,
+                "score": 48.3
+              },
+              {
+                "year": 2026,
+                "score": 48.3
+              }
+            ]
+          }
+        ],
         "indicators": [
           {
             "indicatorId": "voice_and_accountability",
@@ -3162,12 +3409,12 @@
             "indicatorId": "tax_revenue_gdp",
             "name": "Tax revenue",
             "measurementClass": "O",
-            "raw": null,
-            "transformed": null,
-            "normalized": null,
-            "year": null,
+            "raw": 16.71,
+            "transformed": 16.71,
+            "normalized": 46.2,
+            "year": 2024,
             "source": "World Bank (GC.TAX.TOTL.GD.ZS)",
-            "sourceTier": null,
+            "sourceTier": "international_organization",
             "winsorized": false,
             "outOfFrame": false,
             "series": [
@@ -3308,13 +3555,94 @@
                 "raw": 16.965,
                 "normalized": 46.9,
                 "tier": "international_organization"
+              },
+              {
+                "year": 2011,
+                "raw": 19.583,
+                "normalized": 54.5,
+                "tier": "international_organization"
+              },
+              {
+                "year": 2012,
+                "raw": 20.071,
+                "normalized": 55.9,
+                "tier": "international_organization"
+              },
+              {
+                "year": 2013,
+                "raw": 20.929,
+                "normalized": 58.3,
+                "tier": "international_organization"
+              },
+              {
+                "year": 2014,
+                "raw": 21.425,
+                "normalized": 59.8,
+                "tier": "international_organization"
+              },
+              {
+                "year": 2015,
+                "raw": 22.121,
+                "normalized": 61.8,
+                "tier": "international_organization"
+              },
+              {
+                "year": 2016,
+                "raw": 20.292,
+                "normalized": 56.5,
+                "tier": "international_organization"
+              },
+              {
+                "year": 2017,
+                "raw": 18.296,
+                "normalized": 50.8,
+                "tier": "international_organization"
+              },
+              {
+                "year": 2018,
+                "raw": 17.676,
+                "normalized": 49,
+                "tier": "international_organization"
+              },
+              {
+                "year": 2019,
+                "raw": 17.369,
+                "normalized": 48.1,
+                "tier": "international_organization"
+              },
+              {
+                "year": 2020,
+                "raw": 14.57,
+                "normalized": 40,
+                "tier": "international_organization"
+              },
+              {
+                "year": 2021,
+                "raw": 15.606,
+                "normalized": 43,
+                "tier": "international_organization"
+              },
+              {
+                "year": 2022,
+                "raw": 16.934,
+                "normalized": 46.8,
+                "tier": "international_organization"
+              },
+              {
+                "year": 2023,
+                "raw": 17.036,
+                "normalized": 47.1,
+                "tier": "international_organization"
+              },
+              {
+                "year": 2024,
+                "raw": 16.71,
+                "normalized": 46.2,
+                "tier": "international_organization"
               }
             ],
-            "status": "missing",
-            "staleExcluded": {
-              "year": 2007,
-              "raw": 16.965
-            }
+            "status": "observed",
+            "staleExcluded": null
           },
           {
             "indicatorId": "income_inequality",

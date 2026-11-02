@@ -1,6 +1,6 @@
 # Capability agenda: Guinea
 
-*Generated 2026-10-17*
+*Generated 2026-11-02*
 
 The frame includes 125 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
@@ -15,8 +15,8 @@ The frame includes 125 countries. Each dimension is scored from 0 to 100, with n
 | Learning | 17.7 | 0.55 (usable) | no trend |
 | Experimentation | 0.3 | 0.11 (very thin) | no trend |
 | Adaptability | 39.6 | 0.46 (usable) | no trend |
-| Building | 28.6 | 0.44 (thin) | +2.9 over 10 years using 2 indicators |
-| Shared Purpose | not scored | 0.08 (very thin) | no trend |
+| Building | 12.2 | 0.34 (thin) | +2.9 over 10 years using 2 indicators |
+| Shared Purpose | 58.3 | 0.24 (very thin) | no trend |
 
 ## What to raise
 
@@ -53,14 +53,6 @@ How effectively can the system respond when circumstances change?
 
 The evidence is too thin to manage these dimensions confidently.
 
-### Shared Purpose: confidence 0.08, very thin
-
-To what extent can people imagine themselves as participants in a common project?
-
-- Uses one observed indicator.
-- Missing indicators: Sense of national belonging, Volunteering, Political polarisation.
-- Rejected datasets: Voice and accountability.
-
 ### Experimentation: confidence 0.11, very thin
 
 How easily can new approaches be attempted, tested, abandoned, and improved?
@@ -85,6 +77,14 @@ How much cooperation is possible beyond immediate personal networks?
 - Missing indicators: Trust in public institutions, Court case clearance rate.
 - Rejected datasets: Rule of law, Control of corruption, Time to enforce a contract, Intentional homicide rate.
 
+### Shared Purpose: confidence 0.24, very thin
+
+To what extent can people imagine themselves as participants in a common project?
+
+- Uses 2 observed indicators.
+- Missing indicators: Sense of national belonging, Volunteering, Political polarisation.
+- Rejected datasets: Voice and accountability.
+
 ### Agency: confidence 0.3, thin
 
 How able are individuals and organizations to turn an intention into action?
@@ -93,13 +93,13 @@ How able are individuals and organizations to turn an intention into action?
 - Missing indicators: Adults doing digital tasks.
 - Rejected datasets: Time to start a business.
 
-### Building: confidence 0.44, thin
+### Building: confidence 0.34, thin
 
 How capable is the country of turning plans and knowledge into functioning systems?
 
-- Uses 4 observed indicators.
+- Uses 3 observed indicators.
 - Missing indicators: Large project delivery, Firm scale-up rate.
-- Rejected datasets: Logistics infrastructure quality.
+- Rejected datasets: Logistics infrastructure quality, Electricity connection speed.
 
 ## What Guinea has to work with
 

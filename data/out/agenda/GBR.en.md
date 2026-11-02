@@ -1,6 +1,6 @@
 # Capability agenda: United Kingdom
 
-*Generated 2026-10-17*
+*Generated 2026-11-02*
 
 The frame includes 125 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
@@ -15,7 +15,7 @@ The frame includes 125 countries. Each dimension is scored from 0 to 100, with n
 | Learning | 80.3 | 0.55 (usable) | no trend |
 | Experimentation | 70.7 | 0.41 (thin) | +16.9 over 10 years using 3 indicators |
 | Adaptability | 70.5 | 0.62 (usable) | no trend |
-| Building | 62.9 | 0.57 (usable) | +0.3 over 10 years using 3 indicators |
+| Building | 58.2 | 0.63 (usable) | +0.3 over 10 years using 3 indicators |
 | Shared Purpose | 74.7 | 0.28 (thin) | +3.3 over 10 years using 2 indicators |
 
 ## What to measure first
@@ -62,7 +62,7 @@ These dimensions score at least 50 with usable evidence.
 - Learning: 80.3, confidence usable
 - Anticipation: 71.8, confidence usable
 - Adaptability: 70.5, confidence usable
-- Building: 62.9, confidence usable
+- Building: 58.2, confidence usable
 
 ## What the United Kingdom has to work with
 

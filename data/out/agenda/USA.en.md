@@ -1,6 +1,6 @@
 # Capability agenda: United States
 
-*Generated 2026-10-17*
+*Generated 2026-11-02*
 
 The frame includes 125 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
@@ -15,7 +15,7 @@ The frame includes 125 countries. Each dimension is scored from 0 to 100, with n
 | Learning | 61.6 | 0.55 (usable) | no trend |
 | Experimentation | 51.3 | 0.6 (usable) | -0.9 over 10 years using 3 indicators |
 | Adaptability | 72.8 | 0.62 (usable) | no trend |
-| Building | 59.3 | 0.53 (usable) | +0.4 over 10 years using 3 indicators |
+| Building | 62.5 | 0.59 (usable) | +0.4 over 10 years using 3 indicators |
 | Shared Purpose | 53.9 | 0.43 (thin) | -0.8 over 10 years using 2 indicators |
 
 ## What to measure first
@@ -53,8 +53,8 @@ These dimensions score at least 50 with usable evidence.
 - Adaptability: 72.8, confidence usable
 - Anticipation: 70.6, confidence usable
 - Trust: 70.4, confidence usable
+- Building: 62.5, confidence usable
 - Learning: 61.6, confidence usable
-- Building: 59.3, confidence usable
 - Experimentation: 51.3, confidence usable
 
 ## What the United States has to work with

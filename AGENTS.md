@@ -12,6 +12,7 @@ pnpm bench ingest      fetch World Bank series from 1990 into data/observations/
 pnpm bench evs fetch   import the pinned Joint EVS/WVS items (A165 trust, A173 perceived control, A080_01 charitable membership, and the E069_17 court confidence check) into data/observations/joint-evs-wvs.json; `trust fetch` is an alias
 pnpm bench vdem fetch  import the pinned V-Dem civil-society and court-compliance series and the polarization and turnout checks into data/observations/vdem-cy-core.json
 pnpm bench unctad fetch import the pinned UNCTADstat export concentration index into data/observations/unctad-concentration.json (needs bsdtar)
+pnpm bench grs fetch   fill tax revenue from the pinned OECD Global Revenue Statistics into data/observations/oecd-grs-tax-fill.json, only where the World Bank has no value inside the D159 window; run it after `bench ingest`, because it reads worldbank.json (D172)
 pnpm bench ilostat fetch derive and gate the ILOSTAT long-term unemployment share into data/observations/ilostat-ltu.json, and read the informal employment rate (a condition) into data/observations/ilostat-informality.json; --only ltu|informality runs one
 pnpm bench atlas fetch  count new export products from the pinned Growth Lab HS92 4-digit file (about 450 MB, checksum-checked) into data/observations/atlas-new-export-products.json, with the pin and every count under `atlas`
 pnpm bench openalex fetch count the OpenAlex top 10% cited share and pin requests and counts into data/observations/openalex-citation-impact.json (set OPENALEX_MAILTO; OPENALEX_API_KEY optional)
@@ -92,7 +93,8 @@ port 3888. That entry starts Next directly and does not use the proxy.
 - `data/observations` — raw values with source and year. `worldbank.json` holds
   the World Bank series, `joint-evs-wvs.json` holds the pinned Joint EVS/WVS adapter
   output, `vdem-cy-core.json` holds the pinned V-Dem adapter output,
-  `unctad-concentration.json` holds the pinned UNCTADstat adapter output and
+  `unctad-concentration.json` holds the pinned UNCTADstat adapter output,
+  `oecd-grs-tax-fill.json` holds the OECD tax revenue fill (D172), and
   `ilostat-ltu.json` holds the ILOSTAT long-term unemployment share, after
   the plausibility gate D120 applies to every country.
   `openalex-citation-impact.json` holds the OpenAlex research citation
@@ -620,11 +622,10 @@ unknown, so a stalled request and a dead code never read the same.
 
 `IC.BRE.*`, B-READY, is the Doing Business successor and it is in World
 Development Indicators, database 2. Its 2025 round covers 74 of the 125.
-D167 scores the third pillar of three topics (`IC.BRE.BE.P3`, `IT.P3`,
-`DR.P3`) in place of three Doing Business rows. Every B-READY series is a
-0 to 100 score: there is no day, hour or procedure count. Utility services
-now publish all three pillars (`IC.BRE.US.P1` to `P3`); D167 was written
-when only the topic score `IC.BRE.US.OS` was visible (#116).
+D167 and D171 score the third pillar of four topics (`IC.BRE.BE.P3`,
+`IT.P3`, `DR.P3`, `US.P3`) in place of four Doing Business rows. Every
+B-READY series is a 0 to 100 score: there is no day, hour or procedure
+count, so `business_start_procedures` has no successor.
 
 Other traps found the hard way:
 

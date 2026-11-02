@@ -1,6 +1,6 @@
 # Agenda de capacidades: Coreia do Sul
 
-*Gerada em 2026-10-17*
+*Gerada em 2026-11-02*
 
 A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, sem classificação geral, e cada pontuação traz ao lado a solidez da evidência. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma pontuação.
 
@@ -15,7 +15,7 @@ A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 | Aprendizagem | 52,1 | 0,55 (utilizável) | sem tendência comparável |
 | Experimentação | 73,5 | 0,6 (utilizável) | +10,1 em 10 anos, com base em 3 indicadores, 1 limitados à borda da escala |
 | Adaptação | 73 | 0,46 (utilizável) | sem tendência comparável |
-| Construção | 85,2 | 0,57 (utilizável) | +3,1 em 10 anos, com base em 3 indicadores |
+| Construção | 85 | 0,63 (utilizável) | +3,1 em 10 anos, com base em 3 indicadores |
 | Propósito compartilhado | 40,1 | 0,4 (fraca) | +3,2 em 10 anos, com base em 2 indicadores |
 
 ## Dimensões com evidência fraca
@@ -34,7 +34,7 @@ Até que ponto as pessoas conseguem se ver como participantes de um projeto comu
 
 Estas dimensões têm pontuação de pelo menos 50, com evidência utilizável.
 
-- Construção: 85,2, solidez utilizável
+- Construção: 85, solidez utilizável
 - Coordenação: 79,2, solidez utilizável
 - Antecipação: 74,4, solidez utilizável
 - Experimentação: 73,5, solidez utilizável

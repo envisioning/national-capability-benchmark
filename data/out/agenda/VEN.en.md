@@ -1,6 +1,6 @@
 # Capability agenda: Venezuela
 
-*Generated 2026-10-17*
+*Generated 2026-11-02*
 
 The frame includes 125 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
@@ -15,8 +15,8 @@ The frame includes 125 countries. Each dimension is scored from 0 to 100, with n
 | Learning | not scored | 0.16 (very thin) | no trend |
 | Experimentation | 2.9 | 0.41 (thin) | -2.1 over 10 years using 2 indicators |
 | Adaptability | 48.7 | 0.53 (usable) | no trend |
-| Building | 8.9 | 0.25 (thin) | no trend |
-| Shared Purpose | not scored | 0.12 (very thin) | no trend |
+| Building | not scored | 0.16 (very thin) | no trend |
+| Shared Purpose | 26.9 | 0.16 (very thin) | no trend |
 
 ## What to raise
 
@@ -52,14 +52,6 @@ How effectively can independent actors organize around shared objectives?
 - Missing indicators: University-industry collaboration, Public-private collaboration.
 - Rejected datasets: Government effectiveness, Regulatory quality, Logistics performance, Border compliance time to export.
 
-### Shared Purpose: confidence 0.12, very thin
-
-To what extent can people imagine themselves as participants in a common project?
-
-- Uses one observed indicator.
-- Missing indicators: Sense of national belonging, Volunteering, Political polarisation.
-- Rejected datasets: Voice and accountability.
-
 ### Learning: confidence 0.16, very thin
 
 How effectively does the country acquire, distribute, and update knowledge?
@@ -67,13 +59,21 @@ How effectively does the country acquire, distribute, and update knowledge?
 - Uses one observed indicator.
 - Missing indicators: Adult learning participation.
 
-### Building: confidence 0.25, thin
+### Building: confidence 0.16, very thin
 
 How capable is the country of turning plans and knowledge into functioning systems?
 
-- Uses 2 observed indicators.
+- Uses one observed indicator.
 - Missing indicators: Large project delivery, Firm scale-up rate.
-- Rejected datasets: Logistics infrastructure quality.
+- Rejected datasets: Logistics infrastructure quality, Electricity connection speed.
+
+### Shared Purpose: confidence 0.16, very thin
+
+To what extent can people imagine themselves as participants in a common project?
+
+- Uses 2 observed indicators.
+- Missing indicators: Sense of national belonging, Volunteering, Political polarisation.
+- Rejected datasets: Voice and accountability.
 
 ### Agency: confidence 0.26, thin
 

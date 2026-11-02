@@ -1,6 +1,6 @@
 # Capability agenda: China
 
-*Generated 2026-10-17*
+*Generated 2026-11-02*
 
 The frame includes 125 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
@@ -15,7 +15,7 @@ The frame includes 125 countries. Each dimension is scored from 0 to 100, with n
 | Learning | 76 | 0.55 (usable) | no trend |
 | Experimentation | 98 | 0.32 (thin) | +14.8 over 10 years using 3 indicators |
 | Adaptability | 79.6 | 0.46 (usable) | no trend |
-| Building | 77.5 | 0.57 (usable) | -5.1 over 10 years using 3 indicators |
+| Building | 72 | 0.48 (usable) | -5.1 over 10 years using 3 indicators |
 | Shared Purpose | 29.4 | 0.41 (thin) | +0.7 over 10 years using 2 indicators |
 
 ## What to raise
@@ -80,8 +80,8 @@ How able are individuals and organizations to turn an intention into action?
 These dimensions score at least 50 with usable evidence.
 
 - Adaptability: 79.6, confidence usable
-- Building: 77.5, confidence usable
 - Learning: 76, confidence usable
+- Building: 72, confidence usable
 
 ## What China has to work with
 

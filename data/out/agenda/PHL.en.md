@@ -1,6 +1,6 @@
 # Capability agenda: Philippines
 
-*Generated 2026-10-17*
+*Generated 2026-11-02*
 
 The frame includes 125 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
@@ -15,7 +15,7 @@ The frame includes 125 countries. Each dimension is scored from 0 to 100, with n
 | Learning | 42.7 | 0.54 (usable) | no trend |
 | Experimentation | 7.9 | 0.41 (thin) | +1.7 over 10 years using 3 indicators |
 | Adaptability | 70.5 | 0.46 (usable) | no trend |
-| Building | 62.4 | 0.57 (usable) | -5.2 over 10 years using 2 indicators |
+| Building | 53 | 0.63 (usable) | -5.2 over 10 years using 2 indicators |
 | Shared Purpose | 52 | 0.42 (thin) | +9.2 over 10 years using 2 indicators |
 
 ## What to raise
@@ -93,7 +93,7 @@ To what extent can people imagine themselves as participants in a common project
 These dimensions score at least 50 with usable evidence.
 
 - Adaptability: 70.5, confidence usable
-- Building: 62.4, confidence usable
+- Building: 53, confidence usable
 
 ## What the Philippines has to work with
 

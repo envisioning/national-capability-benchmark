@@ -1,6 +1,6 @@
 # Agenda de capacidades: Filipinas
 
-*Gerada em 2026-10-17*
+*Gerada em 2026-11-02*
 
 A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, sem classificação geral, e cada pontuação traz ao lado a solidez da evidência. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma pontuação.
 
@@ -15,7 +15,7 @@ A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 | Aprendizagem | 42,7 | 0,54 (utilizável) | sem tendência comparável |
 | Experimentação | 7,9 | 0,41 (fraca) | +1,7 em 10 anos, com base em 3 indicadores |
 | Adaptação | 70,5 | 0,46 (utilizável) | sem tendência comparável |
-| Construção | 62,4 | 0,57 (utilizável) | -5,2 em 10 anos, com base em 2 indicadores |
+| Construção | 53 | 0,63 (utilizável) | -5,2 em 10 anos, com base em 2 indicadores |
 | Propósito compartilhado | 52 | 0,42 (fraca) | +9,2 em 10 anos, com base em 2 indicadores |
 
 ## Dimensões com as pontuações mais baixas
@@ -93,7 +93,7 @@ Até que ponto as pessoas conseguem se ver como participantes de um projeto comu
 Estas dimensões têm pontuação de pelo menos 50, com evidência utilizável.
 
 - Adaptação: 70,5, solidez utilizável
-- Construção: 62,4, solidez utilizável
+- Construção: 53, solidez utilizável
 
 ## Com o que as Filipinas conta
 

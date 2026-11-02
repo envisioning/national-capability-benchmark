@@ -1,6 +1,6 @@
 # Agenda de capacidades: Sudão
 
-*Gerada em 2026-10-17*
+*Gerada em 2026-11-02*
 
 A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, sem classificação geral, e cada pontuação traz ao lado a solidez da evidência. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma pontuação.
 
@@ -15,7 +15,7 @@ A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 | Aprendizagem | 14,5 | 0,36 (fraca) | sem tendência comparável |
 | Experimentação | 1,1 | 0,31 (fraca) | sem tendência comparável |
 | Adaptação | 35,7 | 0,57 (utilizável) | sem tendência comparável |
-| Construção | 27,2 | 0,33 (fraca) | sem tendência comparável |
+| Construção | 2,1 | 0,24 (muito fraca) | sem tendência comparável |
 | Propósito compartilhado | 44,2 | 0,08 (muito fraca) | sem tendência comparável |
 
 ## Dimensões com as pontuações mais baixas
@@ -68,6 +68,14 @@ Quanta cooperação é possível para além do círculo pessoal mais próximo?
 - Lacunas declaradas: Confiança nas instituições públicas, Taxa de resolução de processos judiciais.
 - Bases rejeitadas: Estado de direito, Controle da corrupção, Tempo para executar um contrato, Taxa de homicídios dolosos.
 
+### Construção: solidez 0,24, muito fraca
+
+Em que medida o país consegue transformar planos e conhecimento em sistemas que funcionam?
+
+- A pontuação se apoia em 2 indicadores observados.
+- Lacunas declaradas: Entrega de grandes projetos, Empresas jovens que ganham escala.
+- Bases rejeitadas: Qualidade da infraestrutura logística, Tempo de conexão à rede elétrica.
+
 ### Coordenação: solidez 0,27, fraca
 
 Com que eficácia atores independentes conseguem se organizar em torno de objetivos comuns?
@@ -83,14 +91,6 @@ Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e 
 - A pontuação se apoia em 4 indicadores observados.
 - Lacunas declaradas: Operações de capital de risco, Empresas em sandboxes regulatórios, Empresas derivadas de pesquisa universitária.
 - Bases rejeitadas: Parcela empresarial do P&D.
-
-### Construção: solidez 0,33, fraca
-
-Em que medida o país consegue transformar planos e conhecimento em sistemas que funcionam?
-
-- A pontuação se apoia em 3 indicadores observados.
-- Lacunas declaradas: Entrega de grandes projetos, Empresas jovens que ganham escala.
-- Bases rejeitadas: Qualidade da infraestrutura logística.
 
 ### Aprendizagem: solidez 0,36, fraca
 

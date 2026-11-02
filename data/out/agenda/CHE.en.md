@@ -1,6 +1,6 @@
 # Capability agenda: Switzerland
 
-*Generated 2026-10-17*
+*Generated 2026-11-02*
 
 The frame includes 125 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
@@ -15,7 +15,7 @@ The frame includes 125 countries. Each dimension is scored from 0 to 100, with n
 | Learning | 80 | 0.55 (usable) | no trend |
 | Experimentation | 68.8 | 0.6 (usable) | -6.2 over 10 years using 3 indicators |
 | Adaptability | 55.6 | 0.62 (usable) | no trend |
-| Building | 72.8 | 0.57 (usable) | +1 over 10 years using 3 indicators |
+| Building | 66.8 | 0.48 (usable) | +1 over 10 years using 3 indicators |
 | Shared Purpose | 47.1 | 0.42 (thin) | -0.4 over 10 years using 2 indicators |
 
 ## What to measure first
@@ -60,8 +60,8 @@ These dimensions score at least 50 with usable evidence.
 
 - Anticipation: 93.4, confidence usable
 - Learning: 80, confidence usable
-- Building: 72.8, confidence usable
 - Experimentation: 68.8, confidence usable
+- Building: 66.8, confidence usable
 - Adaptability: 55.6, confidence usable
 
 ## What Switzerland has to work with

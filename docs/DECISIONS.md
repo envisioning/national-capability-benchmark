@@ -9432,3 +9432,95 @@ training cutoffs published by every lab on the roster, which would let the
 judge grade a `closed` abstention properly; or a deployment of a model to
 Brazilian citizens on contested policy that supplies retrieved positions,
 which would make a `grounded` value mode the honest one to gate.
+
+## D171 — Electricity connection speed moves to B-READY utility connection efficiency
+
+*Recorded 2026-11-02. Supersedes D167 for `electricity_connection_speed`.
+Applies D23, D100 and D118. Issue #116. Dataset 9.5.0.*
+
+**Decision.** `electricity_connection_speed` (Doing Business
+`IC.ELC.TIME.DFRN`, frozen at 2019) is retired. Building scores
+`utility_connection_efficiency` in its place: World Bank `IC.BRE.US.P3`, the
+third pillar of B-READY utility services, operational efficiency of utility
+service provision.
+
+**Why.** D167 kept the electricity row because utility services reached the
+API only as a topic score, and it named the publication of the utility
+pillars as the evidence that would overturn that. On 2026-11-02 World
+Development Indicators serve `IC.BRE.US.P1` to `P3`. D167's rule picks the
+successor: the third pillar observes the transaction, and the first two read
+the statute book and service design. The World Bank defines `US.P3` as the
+time to obtain electricity, water and internet connections and the
+reliability of their supply. It keeps the old row's construct, the time to
+connect a business, and widens it to water, internet and reliability, in the
+same way `IT.P3` widened border time. The series was chosen on that reading,
+before its correlation was computed.
+
+**Probe.** World Development Indicators, database 2, 2026-11-02: 74 of 125 at
+2025, by income quartile 16, 18, 22 and 18, poorest first, no zero values,
+CC BY 4.0 in the series metadata. Correlation with log GDP per capita 0.550,
+against 0.214 for the frozen row and 0.735 for the topic score D167 rejected.
+
+**Cost.** The 51 countries B-READY has not reached lose a Building row. Brazil
+is one of them: its Building confidence falls from 0.568 to 0.475 and its
+score from 37.7 to 33.0. Venezuela falls under the coverage floor and
+publishes no Building score, because its manufacturing row is also empty
+(A17). Building's mean confidence moves from 0.548 to 0.550, because a 2025
+value outweighs the lost coverage under the recency term. Its correlation
+with log GDP moves from 0.571 to 0.614. The guardrail falls from 0.474 to
+0.445 with this change alone. Under D160, panel cells for Building drop.
+
+**Overturned by.** The World Bank revising the utility services pillar 3
+weights so that perceived obstacles or adoption outweigh connection time and
+reliability, which would make the row a reading of opinion; or a B-READY
+round that drops a third of the 74 countries, which would put the row under
+the half-frame gate.
+
+## D172 — Tax revenue takes OECD Global Revenue Statistics as a fill-only second source
+
+*Recorded 2026-11-02. Applies D118, D154 and D159. Issue #114. Memo:
+`docs/research/shared-purpose/SWEEP-2026-11.md`. Dataset 9.5.0.*
+
+**Decision.** `tax_revenue_gdp` stays a World Bank row
+(`GC.TAX.TOTL.GD.ZS`). Where the World Bank has no value inside the D159
+window, the OECD Global Revenue Statistics database supplies the years after
+the country's last World Bank year: central government (`S1311`) tax revenue
+less social security contributions (`T_2000`), as a share of GDP, which is
+the World Bank's own definition. A country the World Bank serves inside the
+window is never read from GRS, and no country holds the same year from both
+publishers. Every filled value names its publisher in its note. The adapter
+pins dataflow version 2.1 and the SHA-256 of the response, because the
+dataflow carries `NonProductionDataflow: true`; a publisher refresh fails the
+fetch until the new file is reviewed.
+
+**Why.** Shared Purpose is the dimension furthest from O1, and no open source
+adds a new row to it (sweep of 2026-11-02). GRS observes the same construct as
+the scored row, so the fill adds evidence without a new construct question.
+D154 passes: the OECD terms, read on the live page on 2026-11-02, allow
+reuse "for any purpose, even for commercial use" with credit, and the
+dataflow metadata names no restriction and no third-party owner; for each
+filled country the data source is the national ministry, revenue authority
+or statistics office. On 83 overlapping country-years the GRS figure matches
+the World Bank at r 0.922, median difference 0.0.
+
+**Result.** 10 countries filled with 118 values: Bolivia, Cuba, Guinea, the
+Gambia, Indonesia, Japan, Nigeria, Pakistan, Venezuela and Vietnam. Guinea,
+the Gambia and some Japanese and Venezuelan years have no social security
+line at central level, so the published total stands. Shared Purpose mean
+confidence moves from 0.318 to 0.329, and it now publishes for 121 of 125
+countries, adding Guinea, the Gambia and Venezuela. The guardrail falls from
+0.474 to 0.464 with this change alone, because most filled countries are in
+the two poorer income quartiles.
+
+**Cost.** One row now joins two publishers. Their sector allocation differs
+in a few countries the fill does not touch: France and Sweden book in social
+security funds or local government what the World Bank books centrally. A
+filled country is read on the OECD's allocation and a served one on the
+World Bank's. The refresh of 19 older World Bank values that the memo also
+simulated is not taken.
+
+**Overturned by.** A filled country whose GRS central government figure
+differs from a later World Bank value for the same year by more than five
+points of GDP, which would show the two definitions do not meet for that
+country; or a regional co-publisher stating ownership of GRS values in the
+dataflow metadata.
