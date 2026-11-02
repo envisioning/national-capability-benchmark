@@ -9648,3 +9648,116 @@ misled. Nothing in the viewer reads these files.
 a holdout where the donor rule stops beating the flat comparison; or enough
 published history that the modelled share of the 2006 baskets falls below a
 quarter, at which point the replay alone can carry the cohort deltas.
+
+---
+
+## D175 — Movers: capability change is read against income change, on observed baskets, in aggregate
+
+*Recorded 2026-11-02. Builds on D22 and D174. Respects D65 and D68: no
+country's change after income reaches a page, a feed or a published file.
+The reading rules below were written before any of the tests was run on the
+data. No command yet. Changes no score, confidence, frame or dataset
+version.*
+
+**Decision.** A movers analysis asks one question: did a country's capability
+on a dimension change by more or less than the change in its own income
+predicts? D137 and D138 read levels across countries at one moment. This
+analysis reads change inside each country over time, so a country is compared
+with its own past and a fixed national trait cancels out.
+
+The unit is a country, a dimension and a span of 10 or 20 years ending at the
+latest year, the spans of D22 and `HISTORY_SPANS`.
+
+1. **Capability change is observed, never filled.** The change is the D22
+   matched-basket momentum: only indicators observed at both ends, on today's
+   ruler. A country and dimension enter only where D22 reports a trend. From
+   each change, subtract the median change of every country on that dimension
+   and span, as D174's `relative` does, so diffusion that lifts every country
+   does not count as movement.
+2. **Income change** is the change in log10 GDP per capita at PPP
+   (`NY.GDP.PCAP.PP.KD`) over the same span, read with D174's `gdpAt` rule. A
+   country without GDP at both ends drops out.
+3. **(m1) Does income growth explain capability change?** Per dimension and
+   span: the ordinary least squares fit of capability change on income change,
+   with slope, r, r² and n. *Reading:* r² of 0.5 or more reads
+   **income-led**; 0.25 or more reads **partly**; below reads **little**.
+4. **(m2) Is what is left after income a real change, or noise?** A low r² in
+   (m1) also comes from noise, so (m1) alone cannot fail in the direction the
+   claim needs. For every pair of indicators in one dimension that are
+   observed at both ends for a country, take each indicator's own change on
+   today's ruler, minus what income change predicts for it, and correlate the
+   two across the countries that have both. The statistic is the mean of
+   these pairwise correlations, weighted by n. The null shuffles one
+   indicator's leftover change across countries in each pair (2000 draws,
+   seed 20261103). *Reading:* above the null 95th percentile reads
+   **coherent**: the indicators of one dimension move together beyond income,
+   so the leftover change is the dimension moving. At or below reads
+   **noise**.
+5. **Per-dimension reading.** A dimension reads **moves apart from income**
+   when (m2) reads coherent and (m1) reads little or partly. It reads
+   **income-led** when (m1) reads income-led. It reads **unreadable** when
+   (m2) reads noise, when (m1) has fewer than 20 countries, or when no
+   indicator pair has 20 countries.
+6. **Verdict.** Read on the 10-year span, with the 20-year span published
+   beside it. The movers claim, that a dimension can rise without income
+   rising first, **holds** when two or more dimensions read moves apart from
+   income. It **fails** when no dimension reads moves apart and five or more
+   are readable. Otherwise it reads **unreadable**.
+7. **D174 as a check, not a source.** (m1) is also run on the D174 estimate
+   with its full basket, and published beside the observed reading. The
+   donor fill pulls a country toward the path of countries at its level, so
+   that run is expected to read more income-led. The gap between the two
+   readings measures how far the fill shrinks movers.
+8. **Coverage is published as a finding.** For each dimension and span, the
+   correlation of entry into the test with log GDP per capita at the start
+   year. Countries with long series are richer, so this tells the reader whom
+   the verdict describes.
+
+Aggregates go to an offline file beside the D174 history. Per-country
+changes after income stay in the same offline file, never named on a page,
+until a later decision under D65 promotes them. A sentence on `/thesis` that
+states the verdict needs its own decision and is a template chosen by the
+computed reading, as D138 requires.
+
+**Why.** The strong claim reads that what the nine dimensions share is mostly
+income (D137), and the weaker claim holds narrowly (D138). Both read levels at
+one moment. The claim the benchmark exists for is about change: that a country
+can build capability on purpose without first getting richer. Levels across
+countries cannot test it, because a country's level carries its whole history.
+Change inside one country, read against its own income change, can.
+
+D174 has every country on every dimension in every year, but its estimate
+cannot carry this test. A modelled cell copies the median change of the 25
+countries nearest on that indicator, and that level tracks income. The fill
+therefore gives a mover its peers' path, which is the signal this test looks
+for. A modelled cell four or more years from its anchor errs by 10 to 11
+points, the size of most changes. The D22 baskets are thin but observed, so
+they carry the test, and D174 measures its own bias beside it.
+
+(m2) exists because a test that reads only (m1) passes on noise. Indicators
+measured by different publishers do not share measurement error. If their
+leftover changes move together across countries, the leftover is a real
+change.
+
+**Cost.**
+
+- D22 baskets are small. Brazil has a 10-year trend on four of nine
+  dimensions. Many dimensions will read unreadable at first, and an
+  unreadable verdict is a likely first result.
+- The countries with series at both ends are not the frame. Item 8 shows
+  this, but it does not repair it. A verdict that holds on rich countries
+  only says nothing about the others.
+- Income change on the right-hand side is not a cause. A country can grow
+  richer because capability rose. The test reads co-movement, never
+  direction.
+- Doing Business rows froze at 2019 and drop out of any basket whose end year
+  is more than five years later. B-READY has one round and enters no span.
+- The thresholds in (m1) and the 20-country minimum are choices. They are
+  fixed here so a result cannot move them.
+
+**Overturned by.** A fill rule that keeps a country's own path and beats the
+D174 donor rule on the same holdout, at which point the estimate can carry
+(m1) and (m2) on the full basket; a synthetic check in which (m2) reads
+coherent on pure noise or noise on a planted common change; or enough history
+that D22 reports a trend on seven or more dimensions for most of the frame,
+at which point the 20-country minimum is restated.
