@@ -25,6 +25,7 @@ pnpm bench brief       write the two-page brief from the release files: data/out
 pnpm bench cost        measure the panel prompts and price a run before making it
 pnpm bench residual    write the provisional wealth-residual fixture, one number per dimension
 pnpm bench history     write the provisional reconstructed history: replay, fill, holdout test, cohorts (D174)
+pnpm bench movers      read capability change against income change, in aggregate, into data/out/history/movers.json (D175, D177); run `bench history` first for the D174 check
 pnpm bench institutions project the institution map into the explorer feed: one JSON per lexicon
 pnpm bench probe       test candidate World Bank series before wiring them: --series a,b[@db]
 pnpm bench validate    schema-check data/delphi and data/evidence; add --fetch to live-check evidence source URLs
@@ -281,6 +282,15 @@ port 3888. That entry starts Next directly and does not use the proxy.
   rule changes only when it beats the current one on the holdout in
   `index.json`, and the flat comparison stays published. Nothing in the viewer
   reads these files. See D174.
+- **The movers analysis is offline and reads only what was observed.**
+  `buildMovers` in `packages/core/src/pipeline/movers.ts` writes
+  `data/out/history/movers.json`. Change is the D22 matched basket from
+  `momentumFor`, never the D174 estimate, which runs beside it only as a
+  check on the fill. The reading rules are D175's and the synthetic check
+  is a rate over generated datasets (D177): if it misses a bound the command
+  throws and writes nothing. `countries` rows are per-country changes after
+  income and stay offline under D65: nothing in the viewer reads the file.
+  A rule change is a new decision made before its result is read.
 - The wealth residual is never summed across dimensions. `ResidualFile` has no
   country-level field, `buildResidual` in
   `packages/core/src/pipeline/residual.ts` computes one fit per dimension, and

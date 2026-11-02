@@ -727,6 +727,105 @@ export const HistoryIndexFile = z.object({
 })
 export type HistoryIndexFile = z.infer<typeof HistoryIndexFile>
 
+/** (m1) of D175: one fit of capability change on income change. */
+export const MoversFit = z.object({
+  n: z.number().int(),
+  slope: z.number(),
+  r: z.number(),
+  r2: z.number(),
+  reading: z.enum(['income-led', 'partly', 'little']),
+})
+export type MoversFit = z.infer<typeof MoversFit>
+
+/** (m2) of D175: do one dimension's indicators move together beyond income? */
+export const MoversCoherence = z.object({
+  /** Indicator pairs with at least the minimum number of countries in common. */
+  pairs: z.number().int(),
+  /** Country rows summed over those pairs, the weight of the statistic. */
+  n: z.number().int(),
+  /** Mean pairwise correlation of the leftovers, weighted by n. */
+  statistic: z.number(),
+  nullMean: z.number(),
+  nullP95: z.number(),
+  reading: z.enum(['coherent', 'noise']),
+})
+export type MoversCoherence = z.infer<typeof MoversCoherence>
+
+export const MoversDimensionReading = z.enum(['moves-apart', 'income-led', 'unreadable'])
+export type MoversDimensionReading = z.infer<typeof MoversDimensionReading>
+
+/** One country's change after income. Offline: never named on a page (D65, D175). */
+export const MoversCountryRow = z.object({
+  iso3: z.string().length(3),
+  /** Basket change minus the median change of every country. */
+  change: z.number(),
+  /** Change in log10 GDP per capita at PPP over the same span. */
+  incomeChange: z.number(),
+  /** `change` minus what the (m1) fit predicts from `incomeChange`. */
+  leftover: z.number(),
+  basket: z.number().int(),
+})
+
+export const MoversDimension = z.object({
+  m1: MoversFit.nullable(),
+  m2: MoversCoherence.nullable(),
+  reading: MoversDimensionReading,
+  /** (m1) on the D174 estimate, full basket and filled. A check on the fill, never the source. */
+  d174: MoversFit.nullable(),
+  coverage: z.object({
+    /** Countries in (m1). */
+    entered: z.number().int(),
+    /** Countries with GDP per capita at the base year. */
+    eligible: z.number().int(),
+    /** Correlation of entry (1 or 0) with log10 GDP per capita at the base year. */
+    rWithLogGdp: z.number().nullable(),
+  }),
+  countries: z.array(MoversCountryRow),
+})
+export type MoversDimension = z.infer<typeof MoversDimension>
+
+/** One synthetic case: how often (m2) reads coherent over many generated datasets, against its bound. */
+export const MoversSyntheticCase = z.object({
+  datasets: z.number().int(),
+  coherentRate: z.number(),
+  /** Noise passes at or below this rate; planted passes at or above it. */
+  bound: z.number(),
+  passed: z.boolean(),
+})
+
+/** The movers analysis of D175, written by `bench movers`. Provisional and offline. */
+export const MoversFile = z.object({
+  generatedAt: z.string(),
+  methodVersion: z.literal('movers/0.1-provisional'),
+  datasetVersion: z.string(),
+  params: z.object({
+    endYear: z.number().int(),
+    spans: z.array(z.number().int()),
+    verdictSpan: z.number().int(),
+    minCountries: z.number().int(),
+    draws: z.number().int(),
+    seed: z.number().int(),
+  }),
+  /** (m2) on data built to read noise and on data with a planted common change, as rates. Both must pass (D177). */
+  synthetic: z.object({ noise: MoversSyntheticCase, planted: MoversSyntheticCase }),
+  spans: z.array(
+    z.object({
+      span: z.number().int(),
+      baseYear: z.number().int(),
+      endYear: z.number().int(),
+      dimensions: z.partialRecord(DimensionEnum, MoversDimension),
+    }),
+  ),
+  verdict: z.object({
+    span: z.number().int(),
+    movesApart: z.array(DimensionEnum),
+    incomeLed: z.array(DimensionEnum),
+    unreadable: z.array(DimensionEnum),
+    reading: z.enum(['holds', 'fails', 'unreadable']),
+  }),
+})
+export type MoversFile = z.infer<typeof MoversFile>
+
 /** One provisional leverage input and its placeholder weighted-sum result. */
 export const LeverageCell = z.object({
   value: z.number().min(0).max(100).nullable(),

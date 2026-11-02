@@ -79,6 +79,7 @@ The CLI lives in packages/core and is available through pnpm bench.
 | pnpm bench research inventory | Build the deterministic country × gap research queue and corpus balance report. |
 | pnpm bench research scout | Ask the AI research scout for bounded, unpublished leads; add `--mock` or `--prompt-only` for offline work. |
 | pnpm bench research critique --in FILE | Red-team a scout run; it cannot approve publication. |
+| pnpm bench movers | Read capability change against income change over 10 and 20 years, in aggregate and offline (D175, D177). |
 | pnpm bench validate [--fetch] | Schema-check Delphi, evidence and institutional data. --fetch checks evidence URLs too. |
 | pnpm test | Run the core pipeline and adapter regression tests. |
 | pnpm bench all | Run ingest, score, diagnose, report and agenda in order. |

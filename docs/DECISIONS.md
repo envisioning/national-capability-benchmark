@@ -9841,3 +9841,65 @@ is a separate question.
 remove the ten members that fail it; or a B-READY or source change that drops
 one of the ten under the rule at the next named rebase, which would leave it
 in under reading 2 and so show the cost of that reading.
+
+---
+
+## D177 — The movers synthetic check is a rate, and the first run is unreadable
+
+*Recorded 2026-11-02. Amends how D175 runs its synthetic check; leaves every
+D175 reading rule as written. New command `bench movers`, new file
+`data/out/history/movers.json`. Changes no score, confidence, frame or dataset
+version.*
+
+**Decision.** The synthetic check of (m2) is read as a rate over many
+generated datasets, not on one. Each case has 200 datasets of three indicators
+and 120 countries; each indicator is a slope on income change plus its own
+noise. The noise case passes when (m2) reads coherent on at most 0.08 of them:
+the nominal 0.05 plus two standard errors at 200. The planted case adds one
+shared change per country at half the noise, a correlation near 0.2 between
+indicators, and passes when (m2) reads coherent on at least 0.8. If either
+case misses its bound, `bench movers` writes no file.
+
+**Why.** D175 named the check but not its form. Built on one dataset, it failed
+on the first run: the noise case read coherent. A 95th percentile null reads
+coherent on one noise dataset in 20 by construction, so a one-dataset check
+fails one time in 20 with nothing wrong. On 400 noise datasets the unchanged
+(m2) read coherent on 0.050 with three indicators, 0.052 with two and 0.063
+with five: it holds its nominal rate. On dataset 10.0.0 the rate check reads
+0.045 on noise and 0.965 on the planted change.
+
+**The first run, dataset 10.0.0, spans ending 2026.** The 10-year verdict is
+**unreadable**. One dimension reads moves apart from income, Experimentation,
+and no other dimension is readable.
+
+- Agency, Coordination, Trust, Learning and Adaptability have no D22 trend in
+  any country over 10 years. Their current baskets lean on rows with no
+  history, such as B-READY and the survey items, and D22's half-coverage rule
+  removes them. Brazil's published momentum has the same four dimensions.
+- Anticipation, Building and Shared purpose enter with 82 to 129 countries.
+  Income change explains little of their change (r² 0.00 to 0.02), and (m2)
+  reads noise. Anticipation and Shared purpose have one indicator pair each.
+- The D174 check reads r² 0.00 to 0.06 on every dimension at 10 years. D175
+  expected the donor fill to read more income-led; it does not, on this run.
+- Entry tracks income: the correlation of entry with log GDP per capita is
+  0.19 to 0.39 where countries enter.
+
+**Experimentation's reading is not evidence for the claim.** Its three pairs
+are the World Bank series `IP.PAT.RESD`, `IP.TMK.RSCT` and `IP.IDS.RSCT`, and
+the World Bank compiles all three from WIPO statistics, which national IP
+offices report. (m2) rests on the premise that the indicators do not share
+measurement error. These three do not meet it: a change in how one office
+counts or reports moves all three at once. So the coherence is as likely the
+office as the country. The reading stays as D175 computed it, because a rule
+changed after its result is read is the move D175 exists to prevent. A rule
+that counts only pairs from different sources needs its own decision.
+
+**Cost.** The rate bounds and the planted strength are choices. A planted
+change of half the noise is a modest effect; a weaker one would fail more
+often. The synthetic data have three indicators and 120 countries, more than
+most real pairs have.
+
+**Overturned by.** A synthetic design closer to the data, with real pair sizes
+and two-indicator dimensions, on which (m2) misses either bound; or a pair
+rule restricted to different sources, decided before its result is read,
+which then replaces this reading of Experimentation.

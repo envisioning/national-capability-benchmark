@@ -223,7 +223,7 @@ function holdout(g: Grid, outFrom: number): { rows: HistoryValidationRow[]; sd: 
 }
 
 /** GDP per capita in force at a year: the latest at or before it, else the earliest within five years after. */
-function gdpAt(observations: Observation[], year: number): Map<string, number> {
+export function gdpAt(observations: Observation[], year: number): Map<string, number> {
   const id = `${CONTEXT_PREFIX}${GDP_PER_CAPITA_CODE}`
   const best = new Map<string, { year: number; value: number }>()
   for (const o of observations) {

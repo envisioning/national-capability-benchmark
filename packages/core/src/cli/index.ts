@@ -63,10 +63,12 @@ import { buildReport } from '../pipeline/report.js'
 import { BRIEF_LANGS, buildBrief, renderBriefMarkdown } from '../pipeline/brief.js'
 import type { Diagnostics } from '../pipeline/diagnostics.js'
 import { FactorHistoryFile, IndexFile } from '../model/index.js'
+import type { MoversDimension } from '../model/index.js'
 import { writeVelocity } from '../pipeline/velocity.js'
 import { writeLeverage } from '../pipeline/leverage.js'
 import { writeResidual } from '../pipeline/residual.js'
 import { writeHistory } from '../pipeline/history.js'
+import { writeMovers } from '../pipeline/movers.js'
 import { writeSubnationalOutputs } from '../pipeline/br-subnational.js'
 import { writeInstitutionExplorer } from '../pipeline/institution-explorer-out.js'
 import {
@@ -1104,6 +1106,26 @@ async function main() {
       break
     }
 
+    case 'movers': {
+      const output = await writeMovers(CURRENT_YEAR)
+      const s = output.synthetic
+      console.log(`movers     -> ${FILES.movers} (dataset ${output.datasetVersion}, spans ${output.params.spans.join(' and ')} years to ${output.params.endYear})`)
+      console.log(`  synthetic: noise reads coherent in ${s.noise.coherentRate} of ${s.noise.datasets} (bound ${s.noise.bound}), planted in ${s.planted.coherentRate} (bound ${s.planted.bound})`)
+      for (const span of output.spans) {
+        console.log(`  ${span.span}-year span, ${span.baseYear} to ${span.endYear}`)
+        for (const [dimension, d] of Object.entries(span.dimensions) as Array<[string, MoversDimension]>) {
+          const m1 = d.m1 ? `r2 ${d.m1.r2.toFixed(2)} n=${d.m1.n} ${d.m1.reading}` : 'm1 -'
+          const m2 = d.m2 ? `coh ${d.m2.statistic.toFixed(3)}/${d.m2.nullP95.toFixed(3)} pairs=${d.m2.pairs} ${d.m2.reading}` : 'm2 -'
+          const fill = d.d174 ? `d174 r2 ${d.d174.r2.toFixed(2)}` : 'd174 -'
+          const cov = d.coverage.rWithLogGdp === null ? '-' : d.coverage.rWithLogGdp.toFixed(2)
+          console.log(`    ${dimension.padEnd(16)} ${d.reading.padEnd(11)} ${m1.padEnd(30)} ${m2.padEnd(38)} ${fill.padEnd(12)} entry~gdp ${cov}`)
+        }
+      }
+      const v = output.verdict
+      console.log(`  verdict (${v.span}-year): ${v.reading}; moves apart: ${v.movesApart.join(', ') || 'none'}; income-led: ${v.incomeLed.join(', ') || 'none'}`)
+      break
+    }
+
     case 'residual': {
       const output = await writeResidual()
       const weak = output.fits.filter((fit) => fit.fitStrength === 'weak')
@@ -1664,6 +1686,7 @@ Start with file 1.
   pnpm bench leverage                     write the provisional leverage fixture
   pnpm bench residual                     write the provisional wealth-residual fixture
   pnpm bench history                      write the provisional reconstructed history: replay, fill, holdout test, cohorts
+  pnpm bench movers                       read capability change against income change, in aggregate, offline (D175)
   pnpm bench br-subnational [--year 2024]          fetch the registered Brazil subnational series
   pnpm bench institutions [--country BRA]  project the institution map into the explorer feed, one file per lexicon
   pnpm bench evs      fetch                fetch the Joint EVS/WVS items: A165 trust, A173 control, A080_01 charitable membership, G007_34_B trust in strangers, E069_17 court confidence check (alias: trust)

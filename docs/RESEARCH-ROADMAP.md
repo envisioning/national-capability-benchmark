@@ -160,7 +160,7 @@ passes triage runs to its gate. One that fails triage costs one paragraph.
 | Q7 | OpenAlex research impact | Learning | OpenAlex API, full frame. Memo on #23 recommends the share of works in the top 10% for their field, as a ratio to world | Wired as `research_citation_impact` (D124), 53 / 53 |
 | Q8 | IDEA voter turnout | O1: Shared purpose | IDEA open data, full frame | Triage note, including the compulsory-voting rule |
 | Q9 | Full Delphi rerun (TRUST-5, #33) | Reading, not measurement | In-session multi-vendor panel under D154 (Claude subagents and the codex CLI); a gateway run if `AI_GATEWAY_API_KEY` exists | A reviewed run on dataset 9.0.0 |
-| Q10 | Movers analysis (MOVERS-0) | The claim test, not O1 | D175: D22 observed baskets against change in log GDP per capita, D174 as a bias check | Offline aggregates and a verdict on the 10-year span |
+| Q10 | Movers analysis (MOVERS-0) | The claim test, not O1 | D175: D22 observed baskets against change in log GDP per capita, D174 as a bias check | Built (D177): the 10-year verdict on 10.0.0 is unreadable |
 
 **Q2 status (2026-10-02): triaged, nothing scored.** Memo:
 `docs/research/adaptability/DISASTER-PREPAREDNESS.md`. Eleven sources; ten
@@ -694,14 +694,18 @@ cover states only.
 countries: can a dimension rise more than the country's own income growth
 predicts?
 
-**Status:** method fixed in D175, not built. No command, no output.
+**Status:** built. `pnpm bench movers` writes `data/out/history/movers.json`.
+On dataset 10.0.0 the 10-year verdict is unreadable: five dimensions have no
+D22 trend in any country, three read noise, and Experimentation reads moves
+apart on three IP office series that share one source (D177).
 
-**Read:** D22, D138, D174 and D175.
+**Read:** D22, D138, D174, D175 and D177.
 
-**Open:** build the offline file beside `data/out/history`, with (m1), (m2),
-the D174 check and the coverage correlation, then a synthetic check of (m2) on
-pure noise and on a planted common change before the first run on data. A
-`/thesis` sentence needs its own decision.
+**Open:** what moves the verdict is history, not method. A dimension becomes
+readable when two of its rows have values at both ends of the span in 20 or
+more countries, so a source with a back series is worth more here than one
+with a wider current round. A pair rule restricted to different sources needs
+a decision before it is run. A `/thesis` sentence needs its own decision.
 
 ## Country-set changes are a separate project
 

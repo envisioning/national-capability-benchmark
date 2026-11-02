@@ -66,6 +66,8 @@ export const FILES = {
   residual: resolve(OUT_DIR, 'residual.json'),
   /** Cohort aggregates and the holdout test of the reconstructed history. See D174. */
   historyIndex: resolve(HISTORY_OUT_DIR, 'index.json'),
+  /** Capability change read against income change, in aggregate. See D175. */
+  movers: resolve(HISTORY_OUT_DIR, 'movers.json'),
   datapackage: resolve(OUT_DIR, 'datapackage.json'),
   subnationalIndex: resolve(SUBNATIONAL_OUT_DIR, 'index.json'),
 }
