@@ -2,20 +2,20 @@
 
 *Gerada em 2026-11-02*
 
-A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, sem classificação geral, e cada pontuação traz ao lado a solidez da evidência. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma pontuação.
+A escala reúne 135 países. Cada dimensão recebe uma pontuação de 0 a 100, sem classificação geral, e cada pontuação traz ao lado a solidez da evidência. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma pontuação.
 
 ## Onde a Itália está
 
 | Dimensão | Pontuação | Solidez | Tendência |
 | --- | --- | --- | --- |
 | Antecipação | 74,1 | 0,46 (utilizável) | +6,9 em 10 anos, com base em 2 indicadores |
-| Agência | 53,1 | 0,63 (utilizável) | sem tendência comparável |
-| Coordenação | 82,9 | 0,45 (utilizável) | sem tendência comparável |
+| Agência | 53,4 | 0,63 (utilizável) | sem tendência comparável |
+| Coordenação | 83,1 | 0,45 (utilizável) | sem tendência comparável |
 | Confiança | 62,9 | 0,55 (utilizável) | sem tendência comparável |
-| Aprendizagem | 66,7 | 0,55 (utilizável) | sem tendência comparável |
-| Experimentação | 55,5 | 0,47 (utilizável) | +3,1 em 10 anos, com base em 3 indicadores |
-| Adaptação | 64,2 | 0,62 (utilizável) | sem tendência comparável |
-| Construção | 60,9 | 0,63 (utilizável) | +2,3 em 10 anos, com base em 3 indicadores |
+| Aprendizagem | 66,4 | 0,55 (utilizável) | sem tendência comparável |
+| Experimentação | 55,6 | 0,47 (utilizável) | +3,1 em 10 anos, com base em 3 indicadores |
+| Adaptação | 64,1 | 0,62 (utilizável) | sem tendência comparável |
+| Construção | 60,8 | 0,63 (utilizável) | +2,4 em 10 anos, com base em 3 indicadores |
 | Propósito compartilhado | 51 | 0,42 (fraca) | +2 em 10 anos, com base em 2 indicadores |
 
 ## Dimensões com evidência fraca
@@ -34,14 +34,14 @@ Até que ponto as pessoas conseguem se ver como participantes de um projeto comu
 
 Estas dimensões têm pontuação de pelo menos 50, com evidência utilizável.
 
-- Coordenação: 82,9, solidez utilizável
+- Coordenação: 83,1, solidez utilizável
 - Antecipação: 74,1, solidez utilizável
-- Aprendizagem: 66,7, solidez utilizável
-- Adaptação: 64,2, solidez utilizável
+- Aprendizagem: 66,4, solidez utilizável
+- Adaptação: 64,1, solidez utilizável
 - Confiança: 62,9, solidez utilizável
-- Construção: 60,9, solidez utilizável
-- Experimentação: 55,5, solidez utilizável
-- Agência: 53,1, solidez utilizável
+- Construção: 60,8, solidez utilizável
+- Experimentação: 55,6, solidez utilizável
+- Agência: 53,4, solidez utilizável
 
 ## Com o que a Itália conta
 
@@ -49,20 +49,20 @@ As condições descrevem com o que um país conta: infraestrutura, acesso, dinhe
 
 | Dimensão | Condição | Valor | Ano | Posição |
 | --- | --- | --- | --- | --- |
-| Antecipação | Dispêndio em P&D | 1,4 % do PIB | 2023 | 32º de 118 |
-| Antecipação | Pesquisadores em P&D | 2.855,1 por milhão de pessoas | 2023 | 30º de 114 |
-| Antecipação | Servidores de internet seguros | 30.647,2 por milhão de pessoas | 2024 | 27º de 125 |
-| Agência | Pessoas que usam a internet | 89,2 % da população | 2024 | 45º de 125 |
-| Agência | Adultos com conta financeira | 86 % das pessoas com 15 anos ou mais | 2024 | 46º de 122 |
-| Agência | Crédito ao setor privado | 60,3 % do PIB | 2024 | 41º de 124 |
-| Aprendizagem | Matrícula no ensino superior | 76 % (taxa bruta) | 2023 | 34º de 124 |
-| Aprendizagem | Dispêndio público em educação | 4,1 % do PIB | 2022 | 65º de 125 |
-| Aprendizagem | Educação profissional no ensino secundário | 33,1 % das matrículas no ensino secundário | 2018 | 15º de 125 |
-| Adaptação | Participação na força de trabalho | 66,6 % das pessoas com 15 anos ou mais | 2025 | 83º de 125 |
-| Adaptação | Assinaturas de banda larga fixa | 31,8 por 100 pessoas | 2024 | 35º de 125 |
-| Adaptação | Perdas na transmissão de eletricidade | 6,9 % da produção | 2025 | 39º de 117 |
-| Adaptação | Emprego informal | 8,4 % do emprego | 2025 | 25º de 102 |
-| Construção | Produto por pessoa ocupada | 131.480,6 dólares PPC constantes de 2021 | 2025 | 8º de 123 |
+| Antecipação | Dispêndio em P&D | 1,4 % do PIB | 2023 | 32º de 123 |
+| Antecipação | Pesquisadores em P&D | 2.855,1 por milhão de pessoas | 2023 | 30º de 118 |
+| Antecipação | Servidores de internet seguros | 30.647,2 por milhão de pessoas | 2024 | 27º de 135 |
+| Agência | Pessoas que usam a internet | 89,2 % da população | 2024 | 45º de 135 |
+| Agência | Adultos com conta financeira | 86 % das pessoas com 15 anos ou mais | 2024 | 46º de 131 |
+| Agência | Crédito ao setor privado | 60,3 % do PIB | 2024 | 41º de 134 |
+| Aprendizagem | Matrícula no ensino superior | 76 % (taxa bruta) | 2023 | 34º de 134 |
+| Aprendizagem | Dispêndio público em educação | 4,1 % do PIB | 2022 | 70º de 135 |
+| Aprendizagem | Educação profissional no ensino secundário | 33,1 % das matrículas no ensino secundário | 2018 | 15º de 135 |
+| Adaptação | Participação na força de trabalho | 66,6 % das pessoas com 15 anos ou mais | 2025 | 86º de 135 |
+| Adaptação | Assinaturas de banda larga fixa | 31,8 por 100 pessoas | 2024 | 35º de 135 |
+| Adaptação | Perdas na transmissão de eletricidade | 6,9 % da produção | 2025 | 39º de 122 |
+| Adaptação | Emprego informal | 8,4 % do emprego | 2025 | 25º de 111 |
+| Construção | Produto por pessoa ocupada | 131.480,6 dólares PPC constantes de 2021 | 2025 | 8º de 133 |
 
 ## Agenda de medição
 

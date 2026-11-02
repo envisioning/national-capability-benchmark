@@ -2,32 +2,32 @@
 
 *Generated 2026-11-02*
 
-The frame includes 125 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
+The frame includes 135 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
 ## Where Turkey stands
 
 | Dimension | Score | Confidence | Trend |
 | --- | --- | --- | --- |
 | Anticipation | 47.9 | 0.46 (usable) | +9.1 over 10 years using 2 indicators |
-| Agency | 49.4 | 0.63 (usable) | no trend |
-| Coordination | 52.3 | 0.45 (usable) | no trend |
+| Agency | 49.6 | 0.63 (usable) | no trend |
+| Coordination | 52.5 | 0.45 (usable) | no trend |
 | Trust | 41.5 | 0.55 (usable) | no trend |
-| Learning | 35 | 0.55 (usable) | no trend |
-| Experimentation | 63.5 | 0.47 (usable) | +19.3 over 10 years using 3 indicators |
-| Adaptability | 80.3 | 0.62 (usable) | no trend |
-| Building | 51.3 | 0.63 (usable) | +5 over 10 years using 3 indicators |
+| Learning | 36.2 | 0.55 (usable) | no trend |
+| Experimentation | 63.6 | 0.47 (usable) | +19.4 over 10 years using 3 indicators |
+| Adaptability | 79.9 | 0.62 (usable) | no trend |
+| Building | 54.5 | 0.63 (usable) | +5.9 over 10 years using 3 indicators |
 | Shared Purpose | 35.4 | 0.42 (thin) | -3.5 over 10 years using 2 indicators |
 
 ## What to raise
 
 These are the lowest scores with usable evidence. Thin evidence appears below.
 
-### Learning: 35, confidence usable
+### Learning: 36.2, confidence usable
 
 How effectively does the country acquire, distribute, and update knowledge?
 
 - Uses 3 observed indicators.
-- Highest usable scores: Singapore 84.2, Norway 83.4, New Zealand 83.
+- Highest usable scores: Norway 85.4, New Zealand 84.4, Singapore 84.2.
 - Related deliveries in other countries: SkillsFuture Credit (Singapore); The public library system (Finland); CAPES, federal postgraduate funding (Brazil); Kartu Prakerja, a national lifelong-learning delivery system (Indonesia); Compte personnel de formation (France); Programa Qualifica and Portugal's adult-learning network (Portugal); Novas Oportunidades, and the qualification-policy interruption (Portugal); SWAYAM national online-course platform (India); SETAs and workplace-based learning delivery (South Africa); Kenya's adult education centres, and their halving (Kenya); Rwanda's adult literacy centres, and their decline (Rwanda); Integrated Functional Adult Education, and its erosion (Ethiopia); Instituto Técnico de Capacitación y Productividad (INTECAP) (Guatemala); INFOTEP national technical and vocational training (Dominican Republic); Campaña Nacional de Alfabetización (Cuba); VET FEE-HELP, and its abolition (Australia); Adult education allowance (aikuiskoulutustuki), and its abolition (Finland); INEFOP, the tripartite national training institute (Uruguay); Franquicia Tributaria SENCE, and its erosion (Chile); Employer and in-work training under Employment Insurance, and its erosion (South Korea); TESDA technical-vocational training at national scale (Philippines); INADEH national vocational training (Panama); Yo, sí puedo national literacy campaign and post-literacy programme (Bolivia); Project 1956 vocational training for rural workers (Vietnam); Bildungsprämie training voucher, and its end (Germany); Aufstiegs-BAföG, upgrading training support (Germany); Formación programada por las empresas (FUNDAE training credit) (Spain); Community Education and Training colleges, and their erosion (South Africa); SENA complementary training (formación complementaria) (Colombia); Vocational skills upgrading action, 2019-2021 (China); INA national vocational training, and its contraction (Costa Rica); Kunskapslyftet adult education initiative (Sweden); Springboard+ upskilling programme (Ireland); State-administered adult education under the Adult Education and Family Literacy Act, and its erosion (United States); STAP-budget training grant, abolished in 2024 (Netherlands); INEA adult basic education (Mexico); Hello Training, public vocational training (Japan); Educação de Jovens e Adultos (EJA), and its erosion (Brazil); Government-funded adult further education in England, and its erosion (United Kingdom); Educación Básica Alternativa (EBA), and its erosion (Peru); Upper secondary education for adults in non-stationary study (Estonia); Department of Skill Development skill-upgrading training (Thailand); Adult literacy education under the National Commission for Mass Literacy, Adult and Non-Formal Education (Nigeria); Skills Development under the Labour Market Development Agreements, and its 2024-25 funding cut (Canada); Instituto Nacional de Formación Profesional (INFOP) (Honduras); Ministry of Labour Vocational Training Division adult courses (Israel); Educación Permanente para personas jóvenes y adultas (MEC) (Paraguay); National literacy campaigns, 2010-2015 (Haiti); County and city general secondary schools for adults (licea ogólnokształcące dla dorosłych) (Poland); Kolej Komuniti part-time and lifelong-learning (Pembelajaran Sepanjang Hayat) courses (Malaysia); Fondo nuove competenze (Italy); National adult literacy projects of the Bureau of Non-Formal Education, and their erosion (Bangladesh); Functional Adult Literacy programme, and its decline (Uganda); Integrated Community-Based Adult Education (MEMKWA), and its decline (Tanzania); National Functional Literacy Programme, and its erosion (Ghana); Centres d'alphabétisation, and their erosion (Côte d'Ivoire); Adult literacy centres financed through FONAENF, and their erosion (Burkina Faso); National Adult Literacy Programme (Malawi); Mauritius Institute of Training and Development part-time training (Mauritius); NAMCOL secondary education programme for out-of-school learners (Namibia); Alfabetização e Educação de Adultos (public adult literacy and adult primary education), and its decline (Mozambique); Sistema Nacional de Formação Profissional under INEFOP (Angola); Institut National de Préparation Professionnelle (INPP) (Democratic Republic of the Congo); AMS training measures (Schulungen) for jobseekers (Austria); Human Resource Development Authority (HRDA) subsidised training programmes (Cyprus); Arbejdsmarkedsuddannelser (AMU), adult vocational training courses, and their decline (Denmark); Vaučeri za obrazovanje, training vouchers of the Croatian Employment Service (Croatia); Mācības pieaugušajiem, the ESF training programme for employed adults 2017 to 2023 (Latvia); Grunnskoleopplæring for voksne, municipal primary and lower secondary education for adults (Norway); Zručnosti pre trh práce, retraining and training contributions of the labour offices (Slovakia); Upper secondary education for adults (srednješolsko izobraževanje odraslih) (Slovenia); Public vocational training centres of the National Agency for Employment and Skills (Albania); Employment Agency adult training, including the DI-GI digital skills vouchers (Bulgaria); ANOFM voucher-based vocational training for the unemployed (Moldova); ANOFM national vocational training plan, and its fall after 2023 (Romania); National Employment Service labour market training, and its 2025 non-delivery (Serbia); Programme national d'enseignement des adultes (national adult education programme) (Tunisia); Agence Nationale de Lutte contre l'Analphabetisme literacy and post-literacy programmes (Morocco); Federal project Sodeystvie zanyatosti (Employment Promotion) vocational training of adults (Russia); Short-term vocational training of the unemployed in monocentres and district vocational training centres (Uzbekistan); Self-Employment Program business training (Azerbaijan); HEART/NSTA Trust training enrolment (Jamaica); Enhanced Vocational Education and Training (EVENT II) short-term training (Nepal); Adult and community education at tertiary providers, and its halving (New Zealand); NCHD Adult Literacy Programme, and its collapse after 2013 (Pakistan); Youth Training and Employment Partnership Programme (YTEPP), and its shrinking enrolment (Trinidad and Tobago); Bildungskarenz with Weiterbildungsgeld, and its abolition (Austria); State Employment Service vocational training (Ukraine); Labour Office retraining (rekvalifikace) (Czechia); DYPA digital and green skills training for the unemployed (Greece); Individual learning accounts (Kursuok) (Lithuania); Non-day enrolment in vocational and technical schools (Hungary); Skills Enbek online vocational training platform (Kazakhstan); Vocational training of the unemployed under the State Programme Labour Market and Employment Promotion (Belarus); SESA vocational training and retraining programme for jobseekers (Georgia); Vocational training of the unemployed through the state employment service (Kyrgyzstan); Adult learning centres of the Agency of Labour and Employment (Tajikistan); Vocational Training Corporation continuing training (Jordan); Vocational Training Authority of Sri Lanka (Sri Lanka); Non-formal education in Zimbabwe's schools (Zimbabwe); Fonds Malgache de Formation Professionnelle (Madagascar); FAFPA informal economy training, and its erosion (Mali); National adult literacy classes (Egypt); Technical and Vocational Training Organization public centres (Iran); Government vocational and development training centres (Iraq); TEVET Fund training for MSMEs and the informal sector (Zambia); Flexible Open and Distance Education (FODE) secondary programme (Papua New Guinea).
 - Missing indicators: Adult learning participation.
 
@@ -50,12 +50,12 @@ How capable is the country of identifying and preparing for emerging change?
 - Related deliveries in other countries: Embrapa, a fifty-year bet on tropical agriculture (Brazil); The Delta Programme and its fund (Netherlands); Lei de Informática, a sectoral industrial policy (Brazil); CGEE, the strategic studies center (Brazil); Centre for Strategic Futures, foresight inside government (Singapore); Legally binding carbon budgets (United Kingdom); Fukushima decommissioning roadmap, a 30–40-year risk-reduction horizon (Japan); National basic-research funding allocation (China); PLANAPP and REPLAN, a centre-of-government foresight network (Portugal); Labour Market Intelligence Programme and forward skills planning (South Africa); Government Report on the Future and the parliamentary Committee for the Future (Finland); Foresight Centre at the Riigikogu (Arenguseire Keskus) (Estonia); Office of Technology Assessment, defunded and closed in 1995 (United States); Rządowe Centrum Studiów Strategicznych, liquidated in 2006 (Poland); Office of Technology Assessment at the German Bundestag (TAB) (Germany); National Assembly Futures Institute (South Korea); Federal Chancellery situation and environment analysis (Perspektivstab) (Switzerland); Senate foresight delegation (Délégation sénatoriale à la prospective) (France); Senate Commission on Future Challenges, Science, Technology and Innovation (Chile); Policy Horizons Canada, the federal foresight unit, and its 2024 disruption scan (Canada); Framtidskommissionen, the Prime Minister's time-limited future commission (Sweden); National Planning Commission foresight work for Malawi 2063 (Malawi); Bureau National de la Prospective et de la Veille Stratégique and the national prospective studies (Côte d'Ivoire); Teknologiraadet, the Norwegian Board of Technology (Norway); Teknologiraadet, the Danish Board of Technology, abolished in 2012 (Denmark); Bureau federal du Plan (Belgium); Special Secretariat of Foresight (now of Long-term Planning) (Greece); STRATA foresight for the Lietuva 2050 state progress strategy (Lithuania); Institut Royal des Etudes Stratégiques (IRES) (Morocco); Long-term Insights Briefings under the Public Service Act 2020 (New Zealand); Foresight und Technikfolgenabschätzung für das österreichische Parlament (Austria); Latvija 2050 long-term scenario framework for the State Chancellery (Latvia); Natsionalnyi instytut stratehichnykh doslidzhen, and its falling staff ceiling (Ukraine); Prognoz nauchno-tekhnologicheskogo razvitiya Rossiyskoy Federatsii na period do 2030 goda (Russia); Agency for Strategic Planning, merged into a ministry in 2002 (Kazakhstan); Institut Tunisien des Études Stratégiques (ITES) (Tunisia); Cabinet Information and Decision Support Center (IDSC), Afaq Mostaqbaliya (Egypt); Center for the Islamic Iranian Model of Progress (Markaz-e Olgu) (Iran).
 - Missing indicators: Government foresight capacity, Long-horizon research commitments.
 
-### Agency: 49.4, confidence usable
+### Agency: 49.6, confidence usable
 
 How able are individuals and organizations to turn an intention into action?
 
 - Uses 4 observed indicators.
-- Highest usable scores: United Kingdom 94.7, New Zealand 91.4, Mauritius 85.5.
+- Highest usable scores: United Kingdom 94.7, New Zealand 92.7, Mauritius 87.
 - Related deliveries in other countries: Singapore's national ICT-skills measurement and baseline (Singapore); e.escola, a national laptop-and-broadband push (Portugal); Pradhan Mantri Gramin Digital Saksharta Abhiyan (India); Puntos México Conectado, national digital learning centres (Mexico).
 - Missing indicators: Adults doing digital tasks.
 - Rejected datasets: Time to start a business.
@@ -76,10 +76,10 @@ To what extent can people imagine themselves as participants in a common project
 
 These dimensions score at least 50 with usable evidence.
 
-- Adaptability: 80.3, confidence usable
-- Experimentation: 63.5, confidence usable
-- Coordination: 52.3, confidence usable
-- Building: 51.3, confidence usable
+- Adaptability: 79.9, confidence usable
+- Experimentation: 63.6, confidence usable
+- Building: 54.5, confidence usable
+- Coordination: 52.5, confidence usable
 
 ## What Turkey has to work with
 
@@ -87,20 +87,20 @@ Conditions describe what a country has to work with: infrastructure, access, mon
 
 | Dimension | Condition | Value | Year | Rank |
 | --- | --- | --- | --- | --- |
-| Anticipation | R&D expenditure | 1.4 % of GDP | 2023 | 30 of 118 |
-| Anticipation | Researchers in R&D | 2,644.7 per million people | 2023 | 32 of 114 |
-| Anticipation | Secure internet servers | 11,103.4 per million people | 2024 | 43 of 125 |
-| Agency | Individuals using the internet | 89.8 % of population | 2025 | 41 of 125 |
-| Agency | Financial account ownership | 81.6 % aged 15+ | 2024 | 54 of 122 |
-| Agency | Credit to the private sector | 45.8 % of GDP | 2025 | 62 of 124 |
-| Learning | Tertiary enrolment | 105.9 % gross | 2023 | 8 of 124 |
-| Learning | Public education expenditure | 3.1 % of GDP | 2022 | 93 of 125 |
-| Learning | Vocational share of secondary | 23.2 % of secondary | 2018 | 30 of 125 |
-| Adaptability | Labour force participation | 60.8 % aged 15+ | 2025 | 102 of 125 |
-| Adaptability | Fixed broadband subscriptions | 23.4 per 100 people | 2024 | 55 of 125 |
-| Adaptability | Electricity transmission losses | 7.8 % of output | 2025 | 46 of 117 |
-| Adaptability | Informal employment | 26.6 % of employment | 2025 | 36 of 102 |
-| Building | Output per worker | 94,942 constant 2021 PPP $ | 2025 | 28 of 123 |
+| Anticipation | R&D expenditure | 1.4 % of GDP | 2023 | 30 of 123 |
+| Anticipation | Researchers in R&D | 2,644.7 per million people | 2023 | 32 of 118 |
+| Anticipation | Secure internet servers | 11,103.4 per million people | 2024 | 43 of 135 |
+| Agency | Individuals using the internet | 89.8 % of population | 2025 | 41 of 135 |
+| Agency | Financial account ownership | 81.6 % aged 15+ | 2024 | 54 of 131 |
+| Agency | Credit to the private sector | 45.8 % of GDP | 2025 | 62 of 134 |
+| Learning | Tertiary enrolment | 105.9 % gross | 2023 | 8 of 134 |
+| Learning | Public education expenditure | 3.1 % of GDP | 2022 | 99 of 135 |
+| Learning | Vocational share of secondary | 23.2 % of secondary | 2018 | 30 of 135 |
+| Adaptability | Labour force participation | 60.8 % aged 15+ | 2025 | 106 of 135 |
+| Adaptability | Fixed broadband subscriptions | 23.4 per 100 people | 2024 | 55 of 135 |
+| Adaptability | Electricity transmission losses | 7.8 % of output | 2025 | 46 of 122 |
+| Adaptability | Informal employment | 26.6 % of employment | 2025 | 36 of 111 |
+| Building | Output per worker | 94,942 constant 2021 PPP $ | 2025 | 28 of 133 |
 
 ## Missing data
 

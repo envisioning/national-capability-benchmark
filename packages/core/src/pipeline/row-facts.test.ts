@@ -61,7 +61,7 @@ test('the table restates the pinned ILOSTAT release', () => {
   const ltu = COUNTRY_ROW_FACTS.filter((f) => f.indicatorId === 'long_term_unemployment_share')
   const kindOf = new Map(ltu.map((f) => [f.iso3, f]))
 
-  const household = new Set(['household_survey', 'household_survey_unreliable'])
+  const household = new Set(['household_survey', 'household_survey_unnamed', 'household_survey_unreliable'])
   const unreliable = new Set(['household_survey_unreliable', 'urban_survey_unreliable', 'flagged_unreliable'])
   for (const [iso3, note] of notes) {
     const fact = kindOf.get(iso3)

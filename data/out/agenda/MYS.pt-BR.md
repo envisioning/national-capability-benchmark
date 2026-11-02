@@ -2,32 +2,32 @@
 
 *Gerada em 2026-11-02*
 
-A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, sem classificação geral, e cada pontuação traz ao lado a solidez da evidência. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma pontuação.
+A escala reúne 135 países. Cada dimensão recebe uma pontuação de 0 a 100, sem classificação geral, e cada pontuação traz ao lado a solidez da evidência. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma pontuação.
 
 ## Onde a Malásia está
 
 | Dimensão | Pontuação | Solidez | Tendência |
 | --- | --- | --- | --- |
 | Antecipação | 54,4 | 0,46 (utilizável) | +23,2 em 10 anos, com base em 2 indicadores |
-| Agência | 55,9 | 0,63 (utilizável) | sem tendência comparável |
+| Agência | 56,1 | 0,63 (utilizável) | sem tendência comparável |
 | Coordenação | 76,1 | 0,48 (utilizável) | sem tendência comparável |
 | Confiança | 56,6 | 0,55 (utilizável) | sem tendência comparável |
-| Aprendizagem | 50,9 | 0,55 (utilizável) | sem tendência comparável |
-| Experimentação | 21,9 | 0,47 (utilizável) | -3,2 em 10 anos, com base em 3 indicadores |
-| Adaptação | 77,9 | 0,59 (utilizável) | sem tendência comparável |
-| Construção | 70,2 | 0,63 (utilizável) | +6,3 em 10 anos, com base em 3 indicadores |
+| Aprendizagem | 51,7 | 0,55 (utilizável) | sem tendência comparável |
+| Experimentação | 22 | 0,47 (utilizável) | -3,3 em 10 anos, com base em 3 indicadores |
+| Adaptação | 77,3 | 0,59 (utilizável) | sem tendência comparável |
+| Construção | 72,2 | 0,63 (utilizável) | +6,4 em 10 anos, com base em 3 indicadores |
 | Propósito compartilhado | 55,3 | 0,4 (fraca) | -1,1 em 10 anos, com base em 2 indicadores |
 
 ## Dimensões com as pontuações mais baixas
 
 São as pontuações mais baixas entre as dimensões com evidência utilizável. As dimensões com evidência fraca aparecem na seção seguinte.
 
-### Experimentação: 21,9, solidez utilizável
+### Experimentação: 22, solidez utilizável
 
 Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e melhoradas?
 
 - A pontuação se apoia em 5 indicadores observados.
-- No topo da escala, entre as pontuações com evidência utilizável: Coreia do Sul 75, Reino Unido 70, Suíça 68,8.
+- No topo da escala, entre as pontuações com evidência utilizável: Coreia do Sul 75,1, Reino Unido 70,1, Suíça 68,9.
 - Registros de evidência desta dimensão em outros países, com êxitos e retrocessos, que não entram em nenhuma pontuação: The FCA regulatory sandbox (Reino Unido); Yozma, the venture capital catalyst (Israel); Korean regulatory-sandbox system across eight sectors (Coreia do Sul); MAS FinTech Regulatory Sandbox variants (Singapura); British Patient Capital, a public venture-capital catalyst (Reino Unido); ICURe, from university research to spinouts (Reino Unido); Portugal Ventures, a public venture-capital bridge (Portugal); Rede Nacional de Test Beds for company experimentation (Portugal); Zonas Livres Tecnológicas, regulator-supervised experimentation zones (Portugal); Sandbox regulatório do Banco Central, primeiro ciclo (Brasil); Reserve Bank of India regulatory sandbox (Índia); Capital Markets Authority regulatory sandbox (Quênia); SEC Nigeria Regulatory Incubation Program (Nigéria); ADGM RegLab, the first fintech sandbox in the region (Emirados Árabes Unidos); OJK regulatory sandbox for financial-sector technological innovation (Indonésia); Bank of Thailand regulatory sandbox (Tailândia); Sandbox financiero (Ley 7/2020), and the fall in applications (Espanha); IFWG Regulatory Sandbox (África do Sul); Project-based regulatory sandbox (new technology demonstration scheme) (Japão); CFPB Compliance Assistance Sandbox, rescinded in 2022 and withdrawn again in 2025 (Estados Unidos); CSA Regulatory Sandbox, succeeded by the Financial Innovation Hub (Canadá); ASIC enhanced regulatory sandbox (Austrália); SINTEG-Verordnung, the energy-transition experimentation clause (Alemanha); Experimenten Elektriciteitswet 2015-2018, and its erosion (Países Baixos); Bac à sable réglementaire in the energy sector (França); Italy's FinTech regulatory sandbox, and its contraction (Itália); Bank of Ghana Regulatory Sandbox (Gana); AFSA FinTech Lab at the Astana International Financial Centre (Cazaquistão); Banque Centrale de Tunisie regulatory sandbox, first cohort (Tunísia); Sandbox Regulatório do Banco de Moçambique (Moçambique); Regulatory Sandbox Licence of the Economic Development Board (Maurício); Bank of Uganda regulatory sandbox (Uganda); Regulatory Sandbox Framework for Capital Markets, first cohort (Zâmbia); Securities and Exchange Commission of Zimbabwe regulatory sandbox (Zimbábue); FMA Regulatory Sandbox (Áustria); Regulatorisk sandkasse for AI (Datatilsynet and Digitaliseringsstyrelsen) (Dinamarca); Datatilsynet's regulatory sandbox for privacy-friendly innovation (Noruega); Bank of Lithuania regulatory sandbox, with one test in seven years (Lituânia); Narodna banka Slovenska regulatory sandbox (Eslováquia); Sandbox for AI and blockchain products, Ministry of Digital Transformation and Ukrainian Startup Fund (Ucrânia); Bank of Russia regulatory sandbox (regulativnaya pesochnitsa) (Rússia); JoRegBox, the Central Bank of Jordan regulatory sandbox (Jordânia); Special regulatory regimes (spetsialnye regulyativnye rezhimy) of the National Bank of the Kyrgyz Republic (Quirguistão); SECP Regulatory Sandbox, four cohorts and an open window (Paquistão); Bank of Jamaica FinTech Regulatory Sandbox (Jamaica); Financial Regulatory Commission sandbox regulatory environment (Mongólia); NAMFISA Regulatory Sandbox, microlending cohort (Namíbia); Central Bank of Azerbaijan regulatory sandbox (Azerbaijão); FRA Sandbox of the Financial Regulatory Authority (Egito); Mohit-e azmoon-e tanzimgari (regulatory sandbox) of the Central Bank of the Islamic Republic of Iran (Irã); Regulatory sandbox (special legal regime) in the capital market of the National Agency of Perspective Projects (Uzbequistão); BRUGEL derogation framework for innovative energy projects (projets innovants) (Bélgica); FMA regulatory sandbox pilot (Nova Zelândia); Regulatory Laboratory (regulatory sandbox) of the National Bank of Georgia (Geórgia); Energy Sandbox (spatii de testare inovativa in domeniul energiei) (Moldávia).
 - Lacunas declaradas: Operações de capital de risco, Empresas em sandboxes regulatórios, Empresas derivadas de pesquisa universitária.
 - Bases rejeitadas: Parcela empresarial do P&D.
@@ -48,13 +48,13 @@ Até que ponto as pessoas conseguem se ver como participantes de um projeto comu
 
 Estas dimensões têm pontuação de pelo menos 50, com evidência utilizável.
 
-- Adaptação: 77,9, solidez utilizável
+- Adaptação: 77,3, solidez utilizável
 - Coordenação: 76,1, solidez utilizável
-- Construção: 70,2, solidez utilizável
+- Construção: 72,2, solidez utilizável
 - Confiança: 56,6, solidez utilizável
-- Agência: 55,9, solidez utilizável
+- Agência: 56,1, solidez utilizável
 - Antecipação: 54,4, solidez utilizável
-- Aprendizagem: 50,9, solidez utilizável
+- Aprendizagem: 51,7, solidez utilizável
 
 ## Com o que a Malásia conta
 
@@ -62,19 +62,19 @@ As condições descrevem com o que um país conta: infraestrutura, acesso, dinhe
 
 | Dimensão | Condição | Valor | Ano | Posição |
 | --- | --- | --- | --- | --- |
-| Antecipação | Dispêndio em P&D | 1 % do PIB | 2022 | 38º de 118 |
-| Antecipação | Pesquisadores em P&D | 1.218,3 por milhão de pessoas | 2022 | 48º de 114 |
-| Antecipação | Servidores de internet seguros | 7.475,5 por milhão de pessoas | 2024 | 45º de 125 |
-| Agência | Pessoas que usam a internet | 98 % da população | 2024 | 4º de 125 |
-| Agência | Adultos com conta financeira | 88,7 % das pessoas com 15 anos ou mais | 2024 | 38º de 122 |
-| Agência | Crédito ao setor privado | 117,9 % do PIB | 2025 | 15º de 124 |
-| Aprendizagem | Matrícula no ensino superior | 38,5 % (taxa bruta) | 2024 | 75º de 124 |
-| Aprendizagem | Dispêndio público em educação | 3,5 % do PIB | 2023 | 81º de 125 |
-| Aprendizagem | Educação profissional no ensino secundário | 10,3 % das matrículas no ensino secundário | 2019 | 66º de 125 |
-| Adaptação | Participação na força de trabalho | 70,7 % das pessoas com 15 anos ou mais | 2025 | 63º de 125 |
-| Adaptação | Assinaturas de banda larga fixa | 13,5 por 100 pessoas | 2024 | 70º de 125 |
-| Adaptação | Perdas na transmissão de eletricidade | 6,9 % da produção | 2024 | 38º de 117 |
-| Construção | Produto por pessoa ocupada | 70.821,2 dólares PPC constantes de 2021 | 2025 | 42º de 123 |
+| Antecipação | Dispêndio em P&D | 1 % do PIB | 2022 | 38º de 123 |
+| Antecipação | Pesquisadores em P&D | 1.218,3 por milhão de pessoas | 2022 | 48º de 118 |
+| Antecipação | Servidores de internet seguros | 7.475,5 por milhão de pessoas | 2024 | 45º de 135 |
+| Agência | Pessoas que usam a internet | 98 % da população | 2024 | 4º de 135 |
+| Agência | Adultos com conta financeira | 88,7 % das pessoas com 15 anos ou mais | 2024 | 38º de 131 |
+| Agência | Crédito ao setor privado | 117,9 % do PIB | 2025 | 15º de 134 |
+| Aprendizagem | Matrícula no ensino superior | 38,5 % (taxa bruta) | 2024 | 75º de 134 |
+| Aprendizagem | Dispêndio público em educação | 3,5 % do PIB | 2023 | 86º de 135 |
+| Aprendizagem | Educação profissional no ensino secundário | 10,3 % das matrículas no ensino secundário | 2019 | 68º de 135 |
+| Adaptação | Participação na força de trabalho | 70,7 % das pessoas com 15 anos ou mais | 2025 | 65º de 135 |
+| Adaptação | Assinaturas de banda larga fixa | 13,5 por 100 pessoas | 2024 | 70º de 135 |
+| Adaptação | Perdas na transmissão de eletricidade | 6,9 % da produção | 2024 | 38º de 122 |
+| Construção | Produto por pessoa ocupada | 70.821,2 dólares PPC constantes de 2021 | 2025 | 42º de 133 |
 
 ## Agenda de medição
 

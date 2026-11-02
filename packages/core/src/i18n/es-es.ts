@@ -93,6 +93,7 @@ export const ES_ES = withOverride(ES, {
       },
     },
     rowFacts: {
+      household_survey_unnamed: 'Para {countryTopic}, la serie de ILOSTAT procede de una encuesta de hogares.',
       household_survey_unreliable:
         'Para {countryTopic}, la serie de ILOSTAT procede de una encuesta de hogares, y la OIT marca el valor como poco fiable.',
       urban_survey_unreliable:

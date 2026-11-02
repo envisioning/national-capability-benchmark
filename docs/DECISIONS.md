@@ -9761,3 +9761,83 @@ D174 donor rule on the same holdout, at which point the estimate can carry
 coherent on pure noise or noise on a planted common change; or enough history
 that D22 reports a trend on seven or more dimensions for most of the frame,
 at which point the 20-country minimum is restated.
+
+## D176 — The frame takes the ten economies the D153 rule now admits
+
+*Recorded 2026-11-02. Owner ruling of 2026-11-02. Applies D153 and D47: a
+major version. Memo: `docs/research/FRAME-EXPANSION-2026-11.md`. Dataset
+10.0.0. Re-pins UNCTAD (supersedes D119's pin, #120).*
+
+**Choice.** The benchmark holds 135 countries: the 125 of 9.6.0 and the ten
+economies of a million people or more that the D153 rule admits on the 9.6.0
+registry. In population order: Cameroon, Chad, Senegal, Sierra Leone, Togo,
+Liberia, the Central African Republic, Mauritania, Timor-Leste and Eswatini.
+Each carries one shared reason that names the rule.
+
+**Why.** D153 chose the frame by rule so that no country is chosen by its
+case. The rule did not change; the registry did. Insolvency efficiency (D173)
+lifted seven of the ten in Experimentation, and the OECD tax revenue fill
+(D172) lifted four in Shared purpose. Leaving them out after the rule admits
+them would be a selection, and choosing the frame by what it does to a
+result is what D118 and D51 forbid.
+
+**Three readings of the rule, taken as defaults.** mz can overrule each.
+
+1. The rule is re-applied at named rebases, not at every registry change.
+   This is the second application.
+2. The rule admits; it does not expel. Ten members fail it on 9.6.0 (Cuba,
+   Haiti, Venezuela, the United Arab Emirates, Denmark, Iran, Malawi, Sudan,
+   Papua New Guinea, and Trinidad and Tobago), mostly because B-READY has not
+   reached them. They stay. An exit rule would make the frame move with one
+   publisher's survey round.
+3. A pass that rests on an insolvency zero counts, because D173 makes the
+   zero a value. Chad, the Central African Republic and Timor-Leste pass
+   Experimentation that way.
+
+**UNCTAD re-pin.** UNCTADstat republished its concentration file on
+2026-10-23, so the 2026-06-24 checksum no longer matched and the ten could
+not be read from the pinned release. The new file keeps 2025 as its latest
+year and all 125 countries. Its values correlate 0.990 with the old ones,
+median change 0.00002; 94 of 125 differ, the largest Venezuela (0.762 to
+0.619), Nepal, Kazakhstan and Guatemala. The pin moves to the new file
+(SHA-256 `ad6f7219…`) for all 135, so one release serves every country.
+
+**OpenAlex.** The release re-fetched OpenAlex for all 135, because the API
+has no versions (D124) and the ten need the same snapshot and world baseline
+as the rest. OpenAlex had re-indexed: the 2019 to 2021 works counted for
+Thailand rose from 64,506 to 108,101, and its citation impact fell from 1.011
+to 0.637. Across the 125 the new values correlate 0.987 with the old, median
+change −0.006. ILOSTAT moved Jamaica, Nigeria, Uganda and South Africa to a
+later survey year.
+
+**Result.** All ten publish all nine dimensions. Complete cases rise from 115
+to 125. The guardrail rises from 0.414 to 0.455 (n 133), because the ten are
+thin where the world's measurement is thin: Liberia and Mauritania are
+outside B-READY, and Chad and the Central African Republic have no IP office
+rows. This is the new baseline, as D153 set 0.526. Experimentation falls back
+under O1, 0.409 to 0.394; Trust (0.386) and Shared purpose (0.322) fall
+further under it. The shared factor reads 0.506 of the variance, r 0.831 with
+income (0.501 and 0.828 on 9.6.0).
+
+**The weaker claim now reads "fails".** Under D138's fixed rules, income
+peers' leftover shapes are more alike than random dealing: mean peer distance
+1.389 against a 5th percentile of 1.399 (9.6.0: 1.403 against 1.397). The
+peer test reads "alike", and the rule turns that into "fails". The margin is
+0.01 on a statistic whose 5th and 95th percentiles sit 0.08 apart, and the
+shape share still beats chance (0.222 against a 95th percentile of 0.189). The
+verdict is published as the rule computes it; changing the rule after seeing
+this would be the post-hoc choice D138 exists to prevent.
+
+**Cost.** Every score restates; 10.0.0 numbers do not compare with 9.x. No
+panel cell carries across a major version (D160), so no panel estimate
+publishes until a run on 10.0.0. The figures in `docs/KNOWN-ARTEFACTS.md` stay
+on 9.6.0 and name that run until they are refreshed. Several passes rest on
+one row near its D159 limit: Timor-Leste's Gini (2014) leaves in 2030,
+Liberia's and Eswatini's (2016) in 2032. No country layer is added:
+Timor-Leste is Portuguese-speaking, and whether it joins D165's lusophone set
+is a separate question.
+
+**Overturned by.** An owner ruling that the rule also expels, which would
+remove the ten members that fail it; or a B-READY or source change that drops
+one of the ten under the rule at the next named rebase, which would leave it
+in under reading 2 and so show the cost of that reading.

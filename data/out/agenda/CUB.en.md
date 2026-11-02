@@ -2,7 +2,7 @@
 
 *Generated 2026-11-02*
 
-The frame includes 125 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
+The frame includes 135 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
 ## Where Cuba stands
 
@@ -15,7 +15,7 @@ The frame includes 125 countries. Each dimension is scored from 0 to 100, with n
 | Learning | not scored | 0.16 (very thin) | no trend |
 | Experimentation | 2.5 | 0.28 (thin) | +0.6 over 10 years using 3 indicators |
 | Adaptability | 55.8 | 0.46 (usable) | no trend |
-| Building | 20.8 | 0.29 (thin) | -27.5 over 10 years using 2 indicators |
+| Building | 20.7 | 0.29 (thin) | -27.4 over 10 years using 2 indicators |
 | Shared Purpose | not scored | 0.02 (very thin) | no trend |
 
 ## What to measure first
@@ -96,16 +96,16 @@ Conditions describe what a country has to work with: infrastructure, access, mon
 
 | Dimension | Condition | Value | Year | Rank |
 | --- | --- | --- | --- | --- |
-| Anticipation | R&D expenditure | 0.4 % of GDP | 2024 | 60 of 118 |
-| Anticipation | Researchers in R&D | 2,171.3 per million people | 2024 | 39 of 114 |
-| Anticipation | Secure internet servers | 192.5 per million people | 2024 | 88 of 125 |
-| Agency | Individuals using the internet | 70.5 % of population | 2024 | 85 of 125 |
-| Learning | Tertiary enrolment | 43.1 % gross | 2024 | 73 of 124 |
-| Learning | Public education expenditure | 8.4 % of GDP | 2022 | 2 of 125 |
-| Learning | Vocational share of secondary | 27.4 % of secondary | 2019 | 25 of 125 |
-| Adaptability | Labour force participation | 63.8 % aged 15+ | 2025 | 92 of 125 |
-| Adaptability | Fixed broadband subscriptions | 3.1 per 100 people | 2024 | 94 of 125 |
-| Adaptability | Electricity transmission losses | 16.2 % of output | 2024 | 93 of 117 |
+| Anticipation | R&D expenditure | 0.4 % of GDP | 2024 | 61 of 123 |
+| Anticipation | Researchers in R&D | 2,171.3 per million people | 2024 | 39 of 118 |
+| Anticipation | Secure internet servers | 192.5 per million people | 2024 | 89 of 135 |
+| Agency | Individuals using the internet | 70.5 % of population | 2024 | 85 of 135 |
+| Learning | Tertiary enrolment | 43.1 % gross | 2024 | 73 of 134 |
+| Learning | Public education expenditure | 8.4 % of GDP | 2022 | 2 of 135 |
+| Learning | Vocational share of secondary | 27.4 % of secondary | 2019 | 25 of 135 |
+| Adaptability | Labour force participation | 63.8 % aged 15+ | 2025 | 96 of 135 |
+| Adaptability | Fixed broadband subscriptions | 3.1 per 100 people | 2024 | 95 of 135 |
+| Adaptability | Electricity transmission losses | 16.2 % of output | 2024 | 93 of 122 |
 
 ## Missing data
 

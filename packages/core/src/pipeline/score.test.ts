@@ -58,12 +58,17 @@ for (const d of learningScored) {
 /*
  * `(i * m) % N` runs through every residue exactly when m and N share no
  * factor, so each row's multiplier must be coprime with the country count.
- * A prime count satisfied this trivially; 125 is 5 cubed, so it is checked.
+ * Row j takes the j-th prime from 7 up that does not divide the count: a
+ * product like (j + 1) * 7 fails once the count has a small factor (135 is
+ * 3 cubed times 5), so the multipliers are primes, and the check stays.
  */
 const gcd = (a: number, b: number): number => (b === 0 ? a : gcd(b, a % b))
+const isPrime = (n: number): boolean => n > 1 && [...Array(Math.floor(Math.sqrt(n)) - 1)].every((_, k) => n % (k + 2) !== 0)
+const multipliers: number[] = []
+for (let p = 7; multipliers.length < learningScored.length; p++) if (isPrime(p) && N % p !== 0) multipliers.push(p)
 assert.ok(N >= 10, 'the permutation fixture needs at least ten countries')
 learningScored.forEach((_, j) =>
-  assert.equal(gcd((j + 1) * 7, N), 1, `row ${j}'s multiplier must be coprime with the country count`),
+  assert.equal(gcd(multipliers[j]!, N), 1, `row ${j}'s multiplier must be coprime with the country count`),
 )
 
 /*
@@ -71,7 +76,7 @@ learningScored.forEach((_, j) =>
  * each row, so a mean over a subset differs from a mean over all rows and from
  * any imputed value. Every row spans 0..N-1, so each normalizes to v / (N-1).
  */
-const value = (i: number, j: number): number => (i * (j + 1) * 7) % N
+const value = (i: number, j: number): number => (i * multipliers[j]!) % N
 const expectedNormalized = (i: number, j: number): number => (value(i, j) / (N - 1)) * 100
 
 function learningObservations(skip: (i: number, j: number) => boolean = () => false): Observation[] {

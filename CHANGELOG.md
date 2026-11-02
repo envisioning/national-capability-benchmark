@@ -9,6 +9,38 @@ The entries before App 1.0.0 are retrospective, high-level summaries
 reconstructed from the repository history. They document explicit version bumps
 and may skip versions that were never committed.
 
+## App 1.34.0 — 2026-11-02
+
+- **Ten more country pages.** Cameroon, Chad, Senegal, Sierra Leone, Togo,
+  Liberia, the Central African Republic, Mauritania, Timor-Leste and
+  Eswatini each have a profile, an agenda and a capability map in English.
+  Publishes dataset 10.0.0.
+
+## Dataset 10.0.0 — 2026-11-02
+
+- **The benchmark now covers 135 countries.** The rule that set the frame in
+  9.0.0 takes every country of a million people or more that has enough
+  evidence in all nine capabilities. Applied again to today's sources, it
+  admits ten more: Cameroon, Chad, Senegal, Sierra Leone, Togo, Liberia, the
+  Central African Republic, Mauritania, Timor-Leste and Eswatini. Decision
+  D176.
+- **Every score is restated.** Adding countries moves each indicator's
+  endpoints, so 10.0.0 numbers do not compare with 9.x numbers.
+- **The test of the weaker claim now fails, by a narrow margin.** Countries
+  at the same income now have leftover shapes slightly more alike than
+  countries picked at random, and the rule fixed before the first run reads
+  that as a failure. The margin is small and the shapes still line up beyond
+  chance. The thesis page prints the result.
+- **The amount of evidence tracks income more.** Mean confidence across the
+  nine capabilities correlates with log GDP per head at 0.455, up from
+  0.414, because the new countries have thin records in most sources.
+  Experimentation falls back under the 0.40 confidence objective, at 0.394.
+- **UNCTAD and OpenAlex values are refreshed.** UNCTAD republished its export
+  concentration file in October, and 94 values moved slightly. OpenAlex
+  re-indexed its works: Thailand's research citation impact falls from 1.01
+  to 0.64, and most other countries move by about 0.01.
+- **No model panel estimates publish** until a panel runs on 10.0.0.
+
 ## App 1.33.3 — 2026-11-02
 
 - Publishes dataset 9.6.0.

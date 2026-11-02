@@ -2,20 +2,20 @@
 
 *Generated 2026-11-02*
 
-The frame includes 125 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
+The frame includes 135 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
 ## Where Singapore stands
 
 | Dimension | Score | Confidence | Trend |
 | --- | --- | --- | --- |
 | Anticipation | 82.2 | 0.46 (usable) | +17 over 10 years using 2 indicators |
-| Agency | 74.9 | 0.63 (usable) | no trend |
-| Coordination | 70.9 | 0.47 (usable) | no trend |
+| Agency | 75.8 | 0.63 (usable) | no trend |
+| Coordination | 71 | 0.47 (usable) | no trend |
 | Trust | 67.2 | 0.54 (usable) | no trend |
 | Learning | 84.2 | 0.54 (usable) | no trend |
-| Experimentation | 63.4 | 0.48 (usable) | +0.1 over 10 years using 3 indicators |
-| Adaptability | 72.6 | 0.62 (usable) | no trend |
-| Building | 76.1 | 0.63 (usable) | +6.5 over 10 years using 3 indicators |
+| Experimentation | 63.6 | 0.48 (usable) | -0.1 over 10 years using 3 indicators |
+| Adaptability | 72.1 | 0.62 (usable) | no trend |
+| Building | 79.2 | 0.63 (usable) | +7 over 10 years using 3 indicators |
 | Shared Purpose | 32.3 | 0.28 (thin) | no trend |
 
 ## What to measure first
@@ -36,12 +36,12 @@ These dimensions score at least 50 with usable evidence.
 
 - Learning: 84.2, confidence usable
 - Anticipation: 82.2, confidence usable
-- Building: 76.1, confidence usable
-- Agency: 74.9, confidence usable
-- Adaptability: 72.6, confidence usable
-- Coordination: 70.9, confidence usable
+- Building: 79.2, confidence usable
+- Agency: 75.8, confidence usable
+- Adaptability: 72.1, confidence usable
+- Coordination: 71, confidence usable
 - Trust: 67.2, confidence usable
-- Experimentation: 63.4, confidence usable
+- Experimentation: 63.6, confidence usable
 
 ## What Singapore has to work with
 
@@ -49,19 +49,19 @@ Conditions describe what a country has to work with: infrastructure, access, mon
 
 | Dimension | Condition | Value | Year | Rank |
 | --- | --- | --- | --- | --- |
-| Anticipation | R&D expenditure | 1.8 % of GDP | 2022 | 21 of 118 |
-| Anticipation | Researchers in R&D | 8,781.7 per million people | 2022 | 4 of 114 |
-| Anticipation | Secure internet servers | 209,665.5 per million people | 2024 | 3 of 125 |
-| Agency | Individuals using the internet | 94.4 % of population | 2024 | 17 of 125 |
-| Agency | Financial account ownership | 98 % aged 15+ | 2024 | 21 of 122 |
-| Agency | Credit to the private sector | 128.4 % of GDP | 2020 | 10 of 124 |
-| Learning | Tertiary enrolment | 97.3 % gross | 2023 | 9 of 124 |
-| Learning | Public education expenditure | 2.2 % of GDP | 2024 | 111 of 125 |
-| Learning | Vocational share of secondary | 11.6 % of secondary | 2009 | 61 of 125 |
-| Adaptability | Labour force participation | 77 % aged 15+ | 2025 | 33 of 125 |
-| Adaptability | Fixed broadband subscriptions | 27.8 per 100 people | 2024 | 45 of 125 |
-| Adaptability | Electricity transmission losses | 0.2 % of output | 2024 | 1 of 117 |
-| Building | Output per worker | 233,454.4 constant 2021 PPP $ | 2025 | 2 of 123 |
+| Anticipation | R&D expenditure | 1.8 % of GDP | 2022 | 21 of 123 |
+| Anticipation | Researchers in R&D | 8,781.7 per million people | 2022 | 4 of 118 |
+| Anticipation | Secure internet servers | 209,665.5 per million people | 2024 | 3 of 135 |
+| Agency | Individuals using the internet | 94.4 % of population | 2024 | 17 of 135 |
+| Agency | Financial account ownership | 98 % aged 15+ | 2024 | 21 of 131 |
+| Agency | Credit to the private sector | 128.4 % of GDP | 2020 | 10 of 134 |
+| Learning | Tertiary enrolment | 97.3 % gross | 2023 | 9 of 134 |
+| Learning | Public education expenditure | 2.2 % of GDP | 2024 | 120 of 135 |
+| Learning | Vocational share of secondary | 11.6 % of secondary | 2009 | 63 of 135 |
+| Adaptability | Labour force participation | 77 % aged 15+ | 2025 | 34 of 135 |
+| Adaptability | Fixed broadband subscriptions | 27.8 per 100 people | 2024 | 45 of 135 |
+| Adaptability | Electricity transmission losses | 0.2 % of output | 2024 | 1 of 122 |
+| Building | Output per worker | 233,454.4 constant 2021 PPP $ | 2025 | 2 of 133 |
 
 ## Missing data
 

@@ -173,6 +173,16 @@ export const PT_BR: Lexicon = {
     CYP: 'Chipre',
     TTO: 'Trinidad e Tobago',
     MUS: 'Maurício',
+    CMR: 'Camarões',
+    TCD: 'Chade',
+    SEN: 'Senegal',
+    SLE: 'Serra Leoa',
+    TGO: 'Togo',
+    LBR: 'Libéria',
+    CAF: 'República Centro-Africana',
+    MRT: 'Mauritânia',
+    TLS: 'Timor-Leste',
+    SWZ: 'Essuatíni',
   },
   countryArticles: {
     BRA: 'o',
@@ -283,6 +293,15 @@ export const PT_BR: Lexicon = {
     SVN: 'a',
     LVA: 'a',
     MKD: 'a',
+    CMR: 'os',
+    TCD: 'o',
+    SEN: 'o',
+    SLE: 'a',
+    TGO: 'o',
+    LBR: 'a',
+    CAF: 'a',
+    MRT: 'a',
+    SWZ: 'o',
   },
   indicators: {
     rd_expenditure_gdp: 'Dispêndio em P&D',
@@ -885,6 +904,7 @@ export const PT_BR: Lexicon = {
      * no modelo (D136). */
     rowFacts: {
       household_survey: 'Para {countryTopic}, a série do ILOSTAT vem da {survey}, uma pesquisa domiciliar.',
+      household_survey_unnamed: 'Para {countryTopic}, a série do ILOSTAT vem de uma pesquisa domiciliar.',
       household_survey_unreliable:
         'Para {countryTopic}, a série do ILOSTAT vem de uma pesquisa domiciliar, e a OIT marca o valor como pouco confiável.',
       urban_survey_unreliable:

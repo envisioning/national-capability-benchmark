@@ -19,6 +19,15 @@
 const COMPLETION_REASON =
   'Added in the 9.0.0 completion, which takes every country of a million people or more that is measurable in all nine capabilities'
 
+/**
+ * The shared reason of every country the 10.0.0 rebase added: the D153 rule
+ * re-applied on the 9.6.0 registry, where the B-READY insolvency row (D173)
+ * and the OECD tax revenue fill (D172) lifted ten economies to all nine
+ * capabilities. See D176.
+ */
+const REBASE_10_REASON =
+  'Added in the 10.0.0 rebase, which re-applied the rule of the 9.0.0 completion to the 9.6.0 registry'
+
 export const COUNTRIES = [
   { iso3: 'BRA', iso2: 'BR', name: 'Brazil', reason: 'Primary reference case; large, diverse upper-middle-income democracy' },
   { iso3: 'USA', iso2: 'US', name: 'United States', reason: 'High innovation and agency; large-scale institutional complexity' },
@@ -155,6 +164,16 @@ export const COUNTRIES = [
   { iso3: 'CYP', iso2: 'CY', name: 'Cyprus', reason: COMPLETION_REASON },
   { iso3: 'TTO', iso2: 'TT', name: 'Trinidad and Tobago', reason: COMPLETION_REASON },
   { iso3: 'MUS', iso2: 'MU', name: 'Mauritius', reason: COMPLETION_REASON },
+  { iso3: 'CMR', iso2: 'CM', name: 'Cameroon', reason: REBASE_10_REASON },
+  { iso3: 'TCD', iso2: 'TD', name: 'Chad', reason: REBASE_10_REASON },
+  { iso3: 'SEN', iso2: 'SN', name: 'Senegal', reason: REBASE_10_REASON },
+  { iso3: 'SLE', iso2: 'SL', name: 'Sierra Leone', reason: REBASE_10_REASON },
+  { iso3: 'TGO', iso2: 'TG', name: 'Togo', reason: REBASE_10_REASON },
+  { iso3: 'LBR', iso2: 'LR', name: 'Liberia', reason: REBASE_10_REASON },
+  { iso3: 'CAF', iso2: 'CF', name: 'Central African Republic', reason: REBASE_10_REASON },
+  { iso3: 'MRT', iso2: 'MR', name: 'Mauritania', reason: REBASE_10_REASON },
+  { iso3: 'TLS', iso2: 'TL', name: 'Timor-Leste', reason: REBASE_10_REASON },
+  { iso3: 'SWZ', iso2: 'SZ', name: 'Eswatini', reason: REBASE_10_REASON },
 ] as const
 
 export type CountryIso3 = (typeof COUNTRIES)[number]['iso3']

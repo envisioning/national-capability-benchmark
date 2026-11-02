@@ -2,32 +2,32 @@
 
 *Generated 2026-11-02*
 
-The frame includes 125 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
+The frame includes 135 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
 ## Where Spain stands
 
 | Dimension | Score | Confidence | Trend |
 | --- | --- | --- | --- |
 | Anticipation | 71.4 | 0.46 (usable) | +6.3 over 10 years using 2 indicators |
-| Agency | 56.3 | 0.63 (usable) | no trend |
-| Coordination | 86.2 | 0.45 (usable) | no trend |
+| Agency | 56.6 | 0.63 (usable) | no trend |
+| Coordination | 86.3 | 0.45 (usable) | no trend |
 | Trust | 75.4 | 0.55 (usable) | no trend |
-| Learning | 76.6 | 0.55 (usable) | no trend |
-| Experimentation | 46.8 | 0.47 (usable) | -7.3 over 10 years using 3 indicators |
-| Adaptability | 71.3 | 0.62 (usable) | no trend |
-| Building | 52.4 | 0.63 (usable) | +4.3 over 10 years using 3 indicators |
+| Learning | 77.8 | 0.55 (usable) | no trend |
+| Experimentation | 46.9 | 0.47 (usable) | -7.2 over 10 years using 3 indicators |
+| Adaptability | 71 | 0.62 (usable) | no trend |
+| Building | 55 | 0.63 (usable) | +2.1 over 10 years using 3 indicators |
 | Shared Purpose | 44.1 | 0.42 (thin) | +5.1 over 10 years using 2 indicators |
 
 ## What to raise
 
 These are the lowest scores with usable evidence. Thin evidence appears below.
 
-### Experimentation: 46.8, confidence usable
+### Experimentation: 46.9, confidence usable
 
 How easily can new approaches be attempted, tested, abandoned, and improved?
 
 - Uses 5 observed indicators.
-- Highest usable scores: South Korea 75, United Kingdom 70, Switzerland 68.8.
+- Highest usable scores: South Korea 75.1, United Kingdom 70.1, Switzerland 68.9.
 - Related deliveries in other countries: The FCA regulatory sandbox (United Kingdom); Yozma, the venture capital catalyst (Israel); Korean regulatory-sandbox system across eight sectors (South Korea); MAS FinTech Regulatory Sandbox variants (Singapore); British Patient Capital, a public venture-capital catalyst (United Kingdom); ICURe, from university research to spinouts (United Kingdom); Portugal Ventures, a public venture-capital bridge (Portugal); Rede Nacional de Test Beds for company experimentation (Portugal); Zonas Livres Tecnológicas, regulator-supervised experimentation zones (Portugal); Banco Central regulatory sandbox, first cycle (Brazil); Reserve Bank of India regulatory sandbox (India); Capital Markets Authority regulatory sandbox (Kenya); SEC Nigeria Regulatory Incubation Program (Nigeria); ADGM RegLab, the first fintech sandbox in the region (United Arab Emirates); OJK regulatory sandbox for financial-sector technological innovation (Indonesia); Bank Negara Malaysia Fintech Regulatory Sandbox (Malaysia); Bank of Thailand regulatory sandbox (Thailand); IFWG Regulatory Sandbox (South Africa); Project-based regulatory sandbox (new technology demonstration scheme) (Japan); CFPB Compliance Assistance Sandbox, rescinded in 2022 and withdrawn again in 2025 (United States); CSA Regulatory Sandbox, succeeded by the Financial Innovation Hub (Canada); ASIC enhanced regulatory sandbox (Australia); SINTEG-Verordnung, the energy-transition experimentation clause (Germany); Experimenten Elektriciteitswet 2015-2018, and its erosion (Netherlands); Bac à sable réglementaire in the energy sector (France); Italy's FinTech regulatory sandbox, and its contraction (Italy); Bank of Ghana Regulatory Sandbox (Ghana); AFSA FinTech Lab at the Astana International Financial Centre (Kazakhstan); Banque Centrale de Tunisie regulatory sandbox, first cohort (Tunisia); Sandbox Regulatório do Banco de Moçambique (Mozambique); Regulatory Sandbox Licence of the Economic Development Board (Mauritius); Bank of Uganda regulatory sandbox (Uganda); Regulatory Sandbox Framework for Capital Markets, first cohort (Zambia); Securities and Exchange Commission of Zimbabwe regulatory sandbox (Zimbabwe); FMA Regulatory Sandbox (Austria); Regulatorisk sandkasse for AI (Datatilsynet and Digitaliseringsstyrelsen) (Denmark); Datatilsynet's regulatory sandbox for privacy-friendly innovation (Norway); Bank of Lithuania regulatory sandbox, with one test in seven years (Lithuania); Narodna banka Slovenska regulatory sandbox (Slovakia); Sandbox for AI and blockchain products, Ministry of Digital Transformation and Ukrainian Startup Fund (Ukraine); Bank of Russia regulatory sandbox (regulativnaya pesochnitsa) (Russia); JoRegBox, the Central Bank of Jordan regulatory sandbox (Jordan); Special regulatory regimes (spetsialnye regulyativnye rezhimy) of the National Bank of the Kyrgyz Republic (Kyrgyzstan); SECP Regulatory Sandbox, four cohorts and an open window (Pakistan); Bank of Jamaica FinTech Regulatory Sandbox (Jamaica); Financial Regulatory Commission sandbox regulatory environment (Mongolia); NAMFISA Regulatory Sandbox, microlending cohort (Namibia); Central Bank of Azerbaijan regulatory sandbox (Azerbaijan); FRA Sandbox of the Financial Regulatory Authority (Egypt); Mohit-e azmoon-e tanzimgari (regulatory sandbox) of the Central Bank of the Islamic Republic of Iran (Iran); Regulatory sandbox (special legal regime) in the capital market of the National Agency of Perspective Projects (Uzbekistan); BRUGEL derogation framework for innovative energy projects (projets innovants) (Belgium); FMA regulatory sandbox pilot (New Zealand); Regulatory Laboratory (regulatory sandbox) of the National Bank of Georgia (Georgia); Energy Sandbox (spatii de testare inovativa in domeniul energiei) (Moldova).
 - Missing indicators: Venture deals, Firms through regulatory sandboxes, University spinouts.
 - Rejected datasets: Business share of R&D.
@@ -48,13 +48,13 @@ To what extent can people imagine themselves as participants in a common project
 
 These dimensions score at least 50 with usable evidence.
 
-- Coordination: 86.2, confidence usable
-- Learning: 76.6, confidence usable
+- Coordination: 86.3, confidence usable
+- Learning: 77.8, confidence usable
 - Trust: 75.4, confidence usable
 - Anticipation: 71.4, confidence usable
-- Adaptability: 71.3, confidence usable
-- Agency: 56.3, confidence usable
-- Building: 52.4, confidence usable
+- Adaptability: 71, confidence usable
+- Agency: 56.6, confidence usable
+- Building: 55, confidence usable
 
 ## What Spain has to work with
 
@@ -62,20 +62,20 @@ Conditions describe what a country has to work with: infrastructure, access, mon
 
 | Dimension | Condition | Value | Year | Rank |
 | --- | --- | --- | --- | --- |
-| Anticipation | R&D expenditure | 1.5 % of GDP | 2023 | 29 of 118 |
-| Anticipation | Researchers in R&D | 3,653.8 per million people | 2023 | 28 of 114 |
-| Anticipation | Secure internet servers | 29,986.4 per million people | 2024 | 28 of 125 |
-| Agency | Individuals using the internet | 95.8 % of population | 2024 | 12 of 125 |
-| Agency | Financial account ownership | 98.4 % aged 15+ | 2024 | 15 of 122 |
-| Agency | Credit to the private sector | 74.2 % of GDP | 2024 | 31 of 124 |
-| Learning | Tertiary enrolment | 93.8 % gross | 2024 | 11 of 124 |
-| Learning | Public education expenditure | 4.6 % of GDP | 2022 | 49 of 125 |
-| Learning | Vocational share of secondary | 18.8 % of secondary | 2018 | 41 of 125 |
-| Adaptability | Labour force participation | 75 % aged 15+ | 2025 | 42 of 125 |
-| Adaptability | Fixed broadband subscriptions | 39.2 per 100 people | 2024 | 16 of 125 |
-| Adaptability | Electricity transmission losses | 7.8 % of output | 2025 | 47 of 117 |
-| Adaptability | Informal employment | 3.8 % of employment | 2025 | 16 of 102 |
-| Building | Output per worker | 109,693.1 constant 2021 PPP $ | 2025 | 18 of 123 |
+| Anticipation | R&D expenditure | 1.5 % of GDP | 2023 | 29 of 123 |
+| Anticipation | Researchers in R&D | 3,653.8 per million people | 2023 | 28 of 118 |
+| Anticipation | Secure internet servers | 29,986.4 per million people | 2024 | 28 of 135 |
+| Agency | Individuals using the internet | 95.8 % of population | 2024 | 12 of 135 |
+| Agency | Financial account ownership | 98.4 % aged 15+ | 2024 | 15 of 131 |
+| Agency | Credit to the private sector | 74.2 % of GDP | 2024 | 31 of 134 |
+| Learning | Tertiary enrolment | 93.8 % gross | 2024 | 11 of 134 |
+| Learning | Public education expenditure | 4.6 % of GDP | 2022 | 53 of 135 |
+| Learning | Vocational share of secondary | 18.8 % of secondary | 2018 | 42 of 135 |
+| Adaptability | Labour force participation | 75 % aged 15+ | 2025 | 43 of 135 |
+| Adaptability | Fixed broadband subscriptions | 39.2 per 100 people | 2024 | 16 of 135 |
+| Adaptability | Electricity transmission losses | 7.8 % of output | 2025 | 47 of 122 |
+| Adaptability | Informal employment | 3.8 % of employment | 2025 | 16 of 111 |
+| Building | Output per worker | 109,693.1 constant 2021 PPP $ | 2025 | 18 of 133 |
 
 ## Missing data
 

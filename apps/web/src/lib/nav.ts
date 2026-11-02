@@ -44,7 +44,7 @@ import { mapCounterparts } from '@/lib/map-reading'
  *
  * The tree is data, not a promise that every level gets its own horizontal
  * row. The sections occupy the global header, and the contextual levels plus
- * the deepest page set share one subnav band. Countries has 125 children and no
+ * the deepest page set share one subnav band. Countries has 135 children and no
  * control can show them, so its child is resolved from the path: the context
  * names the one country you are in. A country layer is a reading of that
  * country, beside the English one rather than under its pages. See D69 and
@@ -249,7 +249,7 @@ export const NAV_TREE: NavNode[] = [
       nodeOwns({ href: compareBaseHref, label: '' }, pathname) ||
       nodeOwns({ href: agendasIndexHref, label: '' }, pathname),
     /* The row under Countries answers "which country". Once the path names one,
-       that country is the row, because 125 of them will not fit in a control.
+       that country is the row, because 135 of them will not fit in a control.
        Before it does, the row offers the readings that take the whole set. See
        D73 and D80. */
     resolveChildren: (pathname) => {

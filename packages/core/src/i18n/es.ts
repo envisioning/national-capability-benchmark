@@ -217,6 +217,16 @@ export const ES: Lexicon = {
     CYP: 'Chipre',
     TTO: 'Trinidad y Tobago',
     MUS: 'Mauricio',
+    CMR: 'Camerún',
+    TCD: 'Chad',
+    SEN: 'Senegal',
+    SLE: 'Sierra Leona',
+    TGO: 'Togo',
+    LBR: 'Liberia',
+    CAF: 'República Centroafricana',
+    MRT: 'Mauritania',
+    TLS: 'Timor Oriental',
+    SWZ: 'Esuatini',
   },
   /* The article prose puts before a layer country. "La República
    * Dominicana" takes one always, and "el Perú" is the form the country uses
@@ -828,6 +838,7 @@ export const ES: Lexicon = {
      * COUNTRY_ROW_FACTS en el modelo (D136). */
     rowFacts: {
       household_survey: 'Para {countryTopic}, la serie de ILOSTAT viene de la {survey}, una encuesta de hogares.',
+      household_survey_unnamed: 'Para {countryTopic}, la serie de ILOSTAT viene de una encuesta de hogares.',
       household_survey_unreliable:
         'Para {countryTopic}, la serie de ILOSTAT viene de una encuesta de hogares, y la OIT marca el valor como poco confiable.',
       urban_survey_unreliable:

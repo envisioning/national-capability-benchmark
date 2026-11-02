@@ -51,6 +51,8 @@ export const UNCTAD_M49: Readonly<Record<string, string>> = {
   SWE: '752', THA: '764', TJK: '762', TTO: '780', TUN: '788', TUR: '792',
   TZA: '834', UGA: '800', UKR: '804', URY: '858', USA: '840', UZB: '860',
   VEN: '862', VNM: '704', ZAF: '710', ZMB: '894', ZWE: '716',
+  CMR: '120', TCD: '148', SEN: '686', SLE: '694', TGO: '768', LBR: '430',
+  CAF: '140', MRT: '478', TLS: '626', SWZ: '748',
 }
 
 const REQUIRED = ['Year', 'Economy', 'Flow', 'Concentration Index', 'Concentration Index Footnote']

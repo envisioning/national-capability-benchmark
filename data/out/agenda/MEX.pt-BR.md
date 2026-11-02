@@ -2,32 +2,32 @@
 
 *Gerada em 2026-11-02*
 
-A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, sem classificação geral, e cada pontuação traz ao lado a solidez da evidência. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma pontuação.
+A escala reúne 135 países. Cada dimensão recebe uma pontuação de 0 a 100, sem classificação geral, e cada pontuação traz ao lado a solidez da evidência. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma pontuação.
 
 ## Onde o México está
 
 | Dimensão | Pontuação | Solidez | Tendência |
 | --- | --- | --- | --- |
 | Antecipação | 49,9 | 0,46 (utilizável) | +10,7 em 10 anos, com base em 2 indicadores |
-| Agência | 56,3 | 0,63 (utilizável) | sem tendência comparável |
-| Coordenação | 57 | 0,44 (fraca) | sem tendência comparável |
+| Agência | 56,4 | 0,63 (utilizável) | sem tendência comparável |
+| Coordenação | 57,1 | 0,44 (fraca) | sem tendência comparável |
 | Confiança | 35,5 | 0,54 (utilizável) | sem tendência comparável |
-| Aprendizagem | 42,5 | 0,54 (utilizável) | sem tendência comparável |
-| Experimentação | 24,5 | 0,64 (utilizável) | sem tendência comparável |
-| Adaptação | 65,4 | 0,46 (utilizável) | sem tendência comparável |
-| Construção | 61 | 0,63 (utilizável) | +2,5 em 10 anos, com base em 3 indicadores |
+| Aprendizagem | 43 | 0,54 (utilizável) | sem tendência comparável |
+| Experimentação | 24,6 | 0,64 (utilizável) | sem tendência comparável |
+| Adaptação | 65,7 | 0,46 (utilizável) | sem tendência comparável |
+| Construção | 64,6 | 0,63 (utilizável) | +3,2 em 10 anos, com base em 3 indicadores |
 | Propósito compartilhado | 44,8 | 0,43 (fraca) | +8,4 em 10 anos, com base em 2 indicadores |
 
 ## Dimensões com as pontuações mais baixas
 
 São as pontuações mais baixas entre as dimensões com evidência utilizável. As dimensões com evidência fraca aparecem na seção seguinte.
 
-### Experimentação: 24,5, solidez utilizável
+### Experimentação: 24,6, solidez utilizável
 
 Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e melhoradas?
 
 - A pontuação se apoia em 7 indicadores observados.
-- No topo da escala, entre as pontuações com evidência utilizável: Coreia do Sul 75, Reino Unido 70, Suíça 68,8.
+- No topo da escala, entre as pontuações com evidência utilizável: Coreia do Sul 75,1, Reino Unido 70,1, Suíça 68,9.
 - Registros de evidência desta dimensão em outros países, com êxitos e retrocessos, que não entram em nenhuma pontuação: The FCA regulatory sandbox (Reino Unido); Yozma, the venture capital catalyst (Israel); Korean regulatory-sandbox system across eight sectors (Coreia do Sul); MAS FinTech Regulatory Sandbox variants (Singapura); British Patient Capital, a public venture-capital catalyst (Reino Unido); ICURe, from university research to spinouts (Reino Unido); Portugal Ventures, a public venture-capital bridge (Portugal); Rede Nacional de Test Beds for company experimentation (Portugal); Zonas Livres Tecnológicas, regulator-supervised experimentation zones (Portugal); Sandbox regulatório do Banco Central, primeiro ciclo (Brasil); Reserve Bank of India regulatory sandbox (Índia); Capital Markets Authority regulatory sandbox (Quênia); SEC Nigeria Regulatory Incubation Program (Nigéria); ADGM RegLab, the first fintech sandbox in the region (Emirados Árabes Unidos); OJK regulatory sandbox for financial-sector technological innovation (Indonésia); Bank Negara Malaysia Fintech Regulatory Sandbox (Malásia); Bank of Thailand regulatory sandbox (Tailândia); Sandbox financiero (Ley 7/2020), and the fall in applications (Espanha); IFWG Regulatory Sandbox (África do Sul); Project-based regulatory sandbox (new technology demonstration scheme) (Japão); CFPB Compliance Assistance Sandbox, rescinded in 2022 and withdrawn again in 2025 (Estados Unidos); CSA Regulatory Sandbox, succeeded by the Financial Innovation Hub (Canadá); ASIC enhanced regulatory sandbox (Austrália); SINTEG-Verordnung, the energy-transition experimentation clause (Alemanha); Experimenten Elektriciteitswet 2015-2018, and its erosion (Países Baixos); Bac à sable réglementaire in the energy sector (França); Italy's FinTech regulatory sandbox, and its contraction (Itália); Bank of Ghana Regulatory Sandbox (Gana); AFSA FinTech Lab at the Astana International Financial Centre (Cazaquistão); Banque Centrale de Tunisie regulatory sandbox, first cohort (Tunísia); Sandbox Regulatório do Banco de Moçambique (Moçambique); Regulatory Sandbox Licence of the Economic Development Board (Maurício); Bank of Uganda regulatory sandbox (Uganda); Regulatory Sandbox Framework for Capital Markets, first cohort (Zâmbia); Securities and Exchange Commission of Zimbabwe regulatory sandbox (Zimbábue); FMA Regulatory Sandbox (Áustria); Regulatorisk sandkasse for AI (Datatilsynet and Digitaliseringsstyrelsen) (Dinamarca); Datatilsynet's regulatory sandbox for privacy-friendly innovation (Noruega); Bank of Lithuania regulatory sandbox, with one test in seven years (Lituânia); Narodna banka Slovenska regulatory sandbox (Eslováquia); Sandbox for AI and blockchain products, Ministry of Digital Transformation and Ukrainian Startup Fund (Ucrânia); Bank of Russia regulatory sandbox (regulativnaya pesochnitsa) (Rússia); JoRegBox, the Central Bank of Jordan regulatory sandbox (Jordânia); Special regulatory regimes (spetsialnye regulyativnye rezhimy) of the National Bank of the Kyrgyz Republic (Quirguistão); SECP Regulatory Sandbox, four cohorts and an open window (Paquistão); Bank of Jamaica FinTech Regulatory Sandbox (Jamaica); Financial Regulatory Commission sandbox regulatory environment (Mongólia); NAMFISA Regulatory Sandbox, microlending cohort (Namíbia); Central Bank of Azerbaijan regulatory sandbox (Azerbaijão); FRA Sandbox of the Financial Regulatory Authority (Egito); Mohit-e azmoon-e tanzimgari (regulatory sandbox) of the Central Bank of the Islamic Republic of Iran (Irã); Regulatory sandbox (special legal regime) in the capital market of the National Agency of Perspective Projects (Uzbequistão); BRUGEL derogation framework for innovative energy projects (projets innovants) (Bélgica); FMA regulatory sandbox pilot (Nova Zelândia); Regulatory Laboratory (regulatory sandbox) of the National Bank of Georgia (Geórgia); Energy Sandbox (spatii de testare inovativa in domeniul energiei) (Moldávia).
 - Lacunas declaradas: Operações de capital de risco, Empresas em sandboxes regulatórios, Empresas derivadas de pesquisa universitária.
 - Bases rejeitadas: Parcela empresarial do P&D.
@@ -42,12 +42,12 @@ Quanta cooperação é possível para além do círculo pessoal mais próximo?
 - Lacunas declaradas: Confiança nas instituições públicas, Taxa de resolução de processos judiciais.
 - Bases rejeitadas: Estado de direito, Controle da corrupção, Tempo para executar um contrato, Taxa de homicídios dolosos.
 
-### Aprendizagem: 42,5, solidez utilizável
+### Aprendizagem: 43, solidez utilizável
 
 Com que eficácia o país adquire, distribui e atualiza conhecimento?
 
 - A pontuação se apoia em 3 indicadores observados.
-- No topo da escala, entre as pontuações com evidência utilizável: Singapura 84,2, Noruega 83,4, Nova Zelândia 83.
+- No topo da escala, entre as pontuações com evidência utilizável: Noruega 85,4, Nova Zelândia 84,4, Singapura 84,2.
 - Registros de evidência desta dimensão em outros países, com êxitos e retrocessos, que não entram em nenhuma pontuação: SkillsFuture Credit (Singapura); The public library system (Finlândia); CAPES, o financiamento federal da pós-graduação (Brasil); Kartu Prakerja, a national lifelong-learning delivery system (Indonésia); Compte personnel de formation (França); Programa Qualifica and Portugal's adult-learning network (Portugal); Novas Oportunidades, and the qualification-policy interruption (Portugal); SWAYAM national online-course platform (Índia); SETAs and workplace-based learning delivery (África do Sul); MEB public lifelong-learning network (Turquia); Kenya's adult education centres, and their halving (Quênia); Rwanda's adult literacy centres, and their decline (Ruanda); Integrated Functional Adult Education, and its erosion (Etiópia); Instituto Técnico de Capacitación y Productividad (INTECAP) (Guatemala); INFOTEP national technical and vocational training (República Dominicana); Campaña Nacional de Alfabetización (Cuba); VET FEE-HELP, and its abolition (Austrália); Adult education allowance (aikuiskoulutustuki), and its abolition (Finlândia); INEFOP, the tripartite national training institute (Uruguai); Franquicia Tributaria SENCE, and its erosion (Chile); Employer and in-work training under Employment Insurance, and its erosion (Coreia do Sul); TESDA technical-vocational training at national scale (Filipinas); INADEH national vocational training (Panamá); Yo, sí puedo national literacy campaign and post-literacy programme (Bolívia); Project 1956 vocational training for rural workers (Vietnã); Bildungsprämie training voucher, and its end (Alemanha); Aufstiegs-BAföG, upgrading training support (Alemanha); Formación programada por las empresas (FUNDAE training credit) (Espanha); Community Education and Training colleges, and their erosion (África do Sul); SENA complementary training (formación complementaria) (Colômbia); Vocational skills upgrading action, 2019-2021 (China); INA national vocational training, and its contraction (Costa Rica); Kunskapslyftet adult education initiative (Suécia); Springboard+ upskilling programme (Irlanda); State-administered adult education under the Adult Education and Family Literacy Act, and its erosion (Estados Unidos); STAP-budget training grant, abolished in 2024 (Países Baixos); Hello Training, public vocational training (Japão); Educação de Jovens e Adultos (EJA) e sua erosão (Brasil); Government-funded adult further education in England, and its erosion (Reino Unido); Educación Básica Alternativa (EBA), and its erosion (Peru); Upper secondary education for adults in non-stationary study (Estônia); Department of Skill Development skill-upgrading training (Tailândia); Adult literacy education under the National Commission for Mass Literacy, Adult and Non-Formal Education (Nigéria); Skills Development under the Labour Market Development Agreements, and its 2024-25 funding cut (Canadá); Instituto Nacional de Formación Profesional (INFOP) (Honduras); Ministry of Labour Vocational Training Division adult courses (Israel); Educación Permanente para personas jóvenes y adultas (MEC) (Paraguai); National literacy campaigns, 2010-2015 (Haiti); County and city general secondary schools for adults (licea ogólnokształcące dla dorosłych) (Polônia); Kolej Komuniti part-time and lifelong-learning (Pembelajaran Sepanjang Hayat) courses (Malásia); Fondo nuove competenze (Itália); National adult literacy projects of the Bureau of Non-Formal Education, and their erosion (Bangladesh); Functional Adult Literacy programme, and its decline (Uganda); Integrated Community-Based Adult Education (MEMKWA), and its decline (Tanzânia); National Functional Literacy Programme, and its erosion (Gana); Centres d'alphabétisation, and their erosion (Costa do Marfim); Adult literacy centres financed through FONAENF, and their erosion (Burkina Faso); National Adult Literacy Programme (Malawi); Mauritius Institute of Training and Development part-time training (Maurício); NAMCOL secondary education programme for out-of-school learners (Namíbia); Alfabetização e Educação de Adultos (public adult literacy and adult primary education), and its decline (Moçambique); Sistema Nacional de Formação Profissional under INEFOP (Angola); Institut National de Préparation Professionnelle (INPP) (República Democrática do Congo); AMS training measures (Schulungen) for jobseekers (Áustria); Human Resource Development Authority (HRDA) subsidised training programmes (Chipre); Arbejdsmarkedsuddannelser (AMU), adult vocational training courses, and their decline (Dinamarca); Vaučeri za obrazovanje, training vouchers of the Croatian Employment Service (Croácia); Mācības pieaugušajiem, the ESF training programme for employed adults 2017 to 2023 (Letônia); Grunnskoleopplæring for voksne, municipal primary and lower secondary education for adults (Noruega); Zručnosti pre trh práce, retraining and training contributions of the labour offices (Eslováquia); Upper secondary education for adults (srednješolsko izobraževanje odraslih) (Eslovênia); Public vocational training centres of the National Agency for Employment and Skills (Albânia); Employment Agency adult training, including the DI-GI digital skills vouchers (Bulgária); ANOFM voucher-based vocational training for the unemployed (Moldávia); ANOFM national vocational training plan, and its fall after 2023 (Romênia); National Employment Service labour market training, and its 2025 non-delivery (Sérvia); Programme national d'enseignement des adultes (national adult education programme) (Tunísia); Agence Nationale de Lutte contre l'Analphabetisme literacy and post-literacy programmes (Marrocos); Federal project Sodeystvie zanyatosti (Employment Promotion) vocational training of adults (Rússia); Short-term vocational training of the unemployed in monocentres and district vocational training centres (Uzbequistão); Self-Employment Program business training (Azerbaijão); HEART/NSTA Trust training enrolment (Jamaica); Enhanced Vocational Education and Training (EVENT II) short-term training (Nepal); Adult and community education at tertiary providers, and its halving (Nova Zelândia); NCHD Adult Literacy Programme, and its collapse after 2013 (Paquistão); Youth Training and Employment Partnership Programme (YTEPP), and its shrinking enrolment (Trinidad e Tobago); Bildungskarenz with Weiterbildungsgeld, and its abolition (Áustria); State Employment Service vocational training (Ucrânia); Labour Office retraining (rekvalifikace) (Tchéquia); DYPA digital and green skills training for the unemployed (Grécia); Individual learning accounts (Kursuok) (Lituânia); Non-day enrolment in vocational and technical schools (Hungria); Skills Enbek online vocational training platform (Cazaquistão); Vocational training of the unemployed under the State Programme Labour Market and Employment Promotion (Belarus); SESA vocational training and retraining programme for jobseekers (Geórgia); Vocational training of the unemployed through the state employment service (Quirguistão); Adult learning centres of the Agency of Labour and Employment (Tajiquistão); Vocational Training Corporation continuing training (Jordânia); Vocational Training Authority of Sri Lanka (Sri Lanka); Non-formal education in Zimbabwe's schools (Zimbábue); Fonds Malgache de Formation Professionnelle (Madagascar); FAFPA informal economy training, and its erosion (Mali); National adult literacy classes (Egito); Technical and Vocational Training Organization public centres (Irã); Government vocational and development training centres (Iraque); TEVET Fund training for MSMEs and the informal sector (Zâmbia); Flexible Open and Distance Education (FODE) secondary programme (Papua-Nova Guiné).
 - Lacunas declaradas: Participação de adultos em aprendizagem.
 
@@ -84,9 +84,9 @@ Com que eficácia atores independentes conseguem se organizar em torno de objeti
 
 Estas dimensões têm pontuação de pelo menos 50, com evidência utilizável.
 
-- Adaptação: 65,4, solidez utilizável
-- Construção: 61, solidez utilizável
-- Agência: 56,3, solidez utilizável
+- Adaptação: 65,7, solidez utilizável
+- Construção: 64,6, solidez utilizável
+- Agência: 56,4, solidez utilizável
 
 ## Com o que o México conta
 
@@ -94,20 +94,20 @@ As condições descrevem com o que um país conta: infraestrutura, acesso, dinhe
 
 | Dimensão | Condição | Valor | Ano | Posição |
 | --- | --- | --- | --- | --- |
-| Antecipação | Dispêndio em P&D | 0,3 % do PIB | 2024 | 83º de 118 |
-| Antecipação | Pesquisadores em P&D | 438,2 por milhão de pessoas | 2024 | 70º de 114 |
-| Antecipação | Servidores de internet seguros | 531,7 por milhão de pessoas | 2024 | 75º de 125 |
-| Agência | Pessoas que usam a internet | 83,1 % da população | 2024 | 64º de 125 |
-| Agência | Adultos com conta financeira | 53 % das pessoas com 15 anos ou mais | 2024 | 93º de 122 |
-| Agência | Crédito ao setor privado | 35,5 % do PIB | 2025 | 72º de 124 |
-| Aprendizagem | Matrícula no ensino superior | 48,2 % (taxa bruta) | 2024 | 67º de 124 |
-| Aprendizagem | Dispêndio público em educação | 4,1 % do PIB | 2022 | 66º de 125 |
-| Aprendizagem | Educação profissional no ensino secundário | 27,7 % das matrículas no ensino secundário | 2018 | 23º de 125 |
-| Adaptação | Participação na força de trabalho | 66,3 % das pessoas com 15 anos ou mais | 2025 | 84º de 125 |
-| Adaptação | Assinaturas de banda larga fixa | 21,7 por 100 pessoas | 2024 | 58º de 125 |
-| Adaptação | Perdas na transmissão de eletricidade | 11,3 % da produção | 2025 | 72º de 117 |
-| Adaptação | Emprego informal | 56,9 % do emprego | 2025 | 53º de 102 |
-| Construção | Produto por pessoa ocupada | 48.140,6 dólares PPC constantes de 2021 | 2025 | 61º de 123 |
+| Antecipação | Dispêndio em P&D | 0,3 % do PIB | 2024 | 85º de 123 |
+| Antecipação | Pesquisadores em P&D | 438,2 por milhão de pessoas | 2024 | 71º de 118 |
+| Antecipação | Servidores de internet seguros | 531,7 por milhão de pessoas | 2024 | 75º de 135 |
+| Agência | Pessoas que usam a internet | 83,1 % da população | 2024 | 64º de 135 |
+| Agência | Adultos com conta financeira | 53 % das pessoas com 15 anos ou mais | 2024 | 97º de 131 |
+| Agência | Crédito ao setor privado | 35,5 % do PIB | 2025 | 73º de 134 |
+| Aprendizagem | Matrícula no ensino superior | 48,2 % (taxa bruta) | 2024 | 67º de 134 |
+| Aprendizagem | Dispêndio público em educação | 4,1 % do PIB | 2022 | 71º de 135 |
+| Aprendizagem | Educação profissional no ensino secundário | 27,7 % das matrículas no ensino secundário | 2018 | 23º de 135 |
+| Adaptação | Participação na força de trabalho | 66,3 % das pessoas com 15 anos ou mais | 2025 | 87º de 135 |
+| Adaptação | Assinaturas de banda larga fixa | 21,7 por 100 pessoas | 2024 | 58º de 135 |
+| Adaptação | Perdas na transmissão de eletricidade | 11,3 % da produção | 2025 | 72º de 122 |
+| Adaptação | Emprego informal | 56,9 % do emprego | 2025 | 52º de 111 |
+| Construção | Produto por pessoa ocupada | 48.140,6 dólares PPC constantes de 2021 | 2025 | 61º de 133 |
 
 ## Agenda de medição
 

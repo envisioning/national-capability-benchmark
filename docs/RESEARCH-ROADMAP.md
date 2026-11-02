@@ -36,7 +36,7 @@ exists to run.
 **What it serves next.** The next real use is a report on Brazil's
 adaptability, which maps what produces adaptability rather than scoring
 institutions. Adaptability is first in the queue. Every source is still tested
-against every country in the frame, 125 since D153.
+against every country in the frame, 125 since D153 and 135 since D176.
 
 **O1. Informative.** Every dimension carries enough evidence to read. Target: mean
 confidence of at least 0.40 in every dimension.
@@ -66,27 +66,29 @@ evenly across income, to 0.436 at 9.5.0: the B-READY utility row (D171) took
 it to 0.445 on its own and the OECD tax fill (D172) to 0.464 on its own; and to
 0.414 at 9.6.0 (n 123) with insolvency efficiency (D173). Part of each B-READY
 fall is rich countries outside the round losing coverage, not poorer countries
-gaining it (`docs/research/B-READY-PILLAR-MAP.md`). Watch for drift from 0.414
-inside the 125, and read the next source's effect on it first. A source that only covers rich countries raises
+gaining it (`docs/research/B-READY-PILLAR-MAP.md`). D176 widened the frame to
+135 and set a new baseline: 0.455 at 10.0.0 (n 133), because the ten added
+countries are thin where the world's measurement is thin. Watch for drift
+from 0.455 inside the 135, and read the next source's effect on it first. A source that only covers rich countries raises
 O1 and breaks this.
 
 ### Where the objectives stand
 
-Dataset 9.6.0, 125 countries (D153). Recompute from `data/out/diagnostics.json` and
+Dataset 10.0.0, 135 countries (D153, D176). Recompute from `data/out/diagnostics.json` and
 `data/out/index.json` after any rescore; never carry these figures forward by
 hand.
 
 | Dimension | Mean confidence | Observed rows (mean) | r with log GDP | Reading |
 | --- | ---: | ---: | ---: | --- |
-| Trust | 0.39 | 3.7 | 0.42 (n 121) | misses O1 at 0.392; survey rows and B-READY each reach about 72 countries |
-| Experimentation | 0.41 | 4.6 | 0.75 (n 123) | meets O1 since insolvency efficiency (D173); tracks income; GEM covers 16 (D125) |
-| Shared purpose | 0.33 | 2.5 | 0.26 (n 120) | misses O1; OECD fill for tax revenue (D172) |
-| Coordination | 0.36 | 2.5 | 0.43 (n 120) | misses O1; B-READY reaches 74 (D167) |
+| Trust | 0.39 | 3.6 | 0.43 | misses O1 at 0.386; survey rows reach about 72 countries, B-READY 82 |
+| Experimentation | 0.39 | 4.4 | 0.74 | misses O1 at 0.394 since the D176 rebase; 0.409 on the 125 (D173); tracks income; GEM covers 16 (D125) |
+| Shared purpose | 0.32 | 2.5 | 0.26 | misses O1; OECD fill for tax revenue (D172) |
+| Coordination | 0.36 | 2.5 | 0.44 | misses O1; B-READY reaches 82 (D167) |
 | Learning | 0.52 | 2.9 | 0.71 | tracks income |
-| Agency | 0.47 | 3.1 | 0.48 (n 120) | |
-| Anticipation | 0.45 | 2.0 | 0.86 | tracks income |
-| Building | 0.55 | 3.5 | 0.61 | utility connection moved to B-READY (D171), 74 countries |
-| Adaptability | 0.58 | 3.9 | 0.53 | 15 countries without a long-term share (A16) |
+| Agency | 0.47 | 3.1 | 0.49 | |
+| Anticipation | 0.45 | 2.0 | 0.87 | tracks income |
+| Building | 0.55 | 3.5 | 0.63 | utility connection on B-READY (D171), 82 countries |
+| Adaptability | 0.58 | 3.9 | 0.54 | countries without a long-term share (A16) |
 
 Ten bought conditions left the scores at 7.0.0 and are published beside their
 dimensions (D122): research spending, researchers and secure servers beside
@@ -120,7 +122,16 @@ residual by more than 0.11 of the spread around its line (Anticipation), and
 income accounts for 32% of the typical country's distance from the average
 profile (mean 23%, reading "little"). The release test compares releases on
 the same country set, so its reading (mixed, lowest rank r 0.72 on Trust) is
-the history of the 53 and restarts with the next release on 125. The objective
+the history of the 53 and restarts with the next release on 125.
+
+At 10.0.0 (D176, 125 complete cases of 135) the verdict changes: income peers
+are now more alike than random dealing (mean peer distance 1.389 against a
+5th percentile of 1.399), so the peer test reads "alike" and the
+pre-registered rule reads the weaker claim as failing. The margin is 0.01, and
+the shapes still line up beyond random dealing (0.222 against a 95th of
+0.189). The 9.6.0 run read 1.403 against 1.397 and held. Both sit inside the
+noise of one draw; the rule decides, and changing it after this reading would
+be post hoc. The objective
 this serves is to deepen Trust and Coordination, the two dimensions whose
 leftovers moved most when indicators changed.
 

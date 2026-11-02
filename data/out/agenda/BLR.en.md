@@ -2,20 +2,20 @@
 
 *Generated 2026-11-02*
 
-The frame includes 125 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
+The frame includes 135 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
 ## Where Belarus stands
 
 | Dimension | Score | Confidence | Trend |
 | --- | --- | --- | --- |
 | Anticipation | 37.7 | 0.46 (usable) | +10.7 over 10 years using 2 indicators |
-| Agency | 47.8 | 0.41 (thin) | no trend |
-| Coordination | 45.1 | 0.27 (thin) | no trend |
+| Agency | 47.9 | 0.41 (thin) | no trend |
+| Coordination | 45.2 | 0.27 (thin) | no trend |
 | Trust | 42.3 | 0.36 (thin) | no trend |
-| Learning | 38.2 | 0.44 (thin) | no trend |
-| Experimentation | 12.1 | 0.28 (thin) | -4.1 over 10 years using 3 indicators |
-| Adaptability | 76.5 | 0.62 (usable) | no trend |
-| Building | 24.7 | 0.44 (thin) | +0.4 over 10 years using 3 indicators |
+| Learning | 37.7 | 0.44 (thin) | no trend |
+| Experimentation | 12.2 | 0.28 (thin) | -4.1 over 10 years using 3 indicators |
+| Adaptability | 76.4 | 0.62 (usable) | no trend |
+| Building | 24.9 | 0.44 (thin) | +0.4 over 10 years using 3 indicators |
 | Shared Purpose | 45.2 | 0.38 (thin) | no trend |
 
 ## What to raise
@@ -94,7 +94,7 @@ How effectively does the country acquire, distribute, and update knowledge?
 
 These dimensions score at least 50 with usable evidence.
 
-- Adaptability: 76.5, confidence usable
+- Adaptability: 76.4, confidence usable
 
 ## What Belarus has to work with
 
@@ -102,19 +102,19 @@ Conditions describe what a country has to work with: infrastructure, access, mon
 
 | Dimension | Condition | Value | Year | Rank |
 | --- | --- | --- | --- | --- |
-| Anticipation | R&D expenditure | 0.6 % of GDP | 2024 | 56 of 118 |
-| Anticipation | Researchers in R&D | 1,567.8 per million people | 2024 | 46 of 114 |
-| Anticipation | Secure internet servers | 12,729.5 per million people | 2024 | 39 of 125 |
-| Agency | Individuals using the internet | 94.3 % of population | 2024 | 20 of 125 |
-| Agency | Financial account ownership | 81.2 % aged 15+ | 2017 | 56 of 122 |
-| Agency | Credit to the private sector | 29.2 % of GDP | 2021 | 86 of 124 |
-| Learning | Tertiary enrolment | 70.1 % gross | 2024 | 41 of 124 |
-| Learning | Public education expenditure | 5 % of GDP | 2024 | 39 of 125 |
-| Learning | Vocational share of secondary | 12.7 % of secondary | 2018 | 57 of 125 |
-| Adaptability | Labour force participation | 79.6 % aged 15+ | 2025 | 18 of 125 |
-| Adaptability | Fixed broadband subscriptions | 36.3 per 100 people | 2024 | 26 of 125 |
-| Adaptability | Electricity transmission losses | 6.6 % of output | 2024 | 34 of 117 |
-| Building | Output per worker | 58,176.8 constant 2021 PPP $ | 2025 | 52 of 123 |
+| Anticipation | R&D expenditure | 0.6 % of GDP | 2024 | 56 of 123 |
+| Anticipation | Researchers in R&D | 1,567.8 per million people | 2024 | 46 of 118 |
+| Anticipation | Secure internet servers | 12,729.5 per million people | 2024 | 39 of 135 |
+| Agency | Individuals using the internet | 94.3 % of population | 2024 | 20 of 135 |
+| Agency | Financial account ownership | 81.2 % aged 15+ | 2017 | 56 of 131 |
+| Agency | Credit to the private sector | 29.2 % of GDP | 2021 | 88 of 134 |
+| Learning | Tertiary enrolment | 70.1 % gross | 2024 | 41 of 134 |
+| Learning | Public education expenditure | 5 % of GDP | 2024 | 43 of 135 |
+| Learning | Vocational share of secondary | 12.7 % of secondary | 2018 | 59 of 135 |
+| Adaptability | Labour force participation | 79.6 % aged 15+ | 2025 | 18 of 135 |
+| Adaptability | Fixed broadband subscriptions | 36.3 per 100 people | 2024 | 26 of 135 |
+| Adaptability | Electricity transmission losses | 6.6 % of output | 2024 | 34 of 122 |
+| Building | Output per worker | 58,176.8 constant 2021 PPP $ | 2025 | 52 of 133 |
 
 ## Missing data
 

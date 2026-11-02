@@ -2,20 +2,20 @@
 
 *Generated 2026-11-02*
 
-The frame includes 125 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
+The frame includes 135 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
 ## Where Iran stands
 
 | Dimension | Score | Confidence | Trend |
 | --- | --- | --- | --- |
 | Anticipation | 33.8 | 0.46 (usable) | +14.7 over 10 years using 2 indicators |
-| Agency | 33 | 0.38 (thin) | no trend |
+| Agency | 33.1 | 0.38 (thin) | no trend |
 | Coordination | not scored | 0.1 (very thin) | no trend |
 | Trust | 26.7 | 0.28 (thin) | no trend |
-| Learning | 37 | 0.32 (thin) | no trend |
-| Experimentation | 39.8 | 0.37 (thin) | -25.9 over 10 years using 3 indicators |
-| Adaptability | 72.4 | 0.53 (usable) | no trend |
-| Building | 30.4 | 0.29 (thin) | +10.8 over 10 years using 2 indicators |
+| Learning | 37.9 | 0.32 (thin) | no trend |
+| Experimentation | 40.1 | 0.37 (thin) | -26.3 over 10 years using 3 indicators |
+| Adaptability | 71.8 | 0.53 (usable) | no trend |
+| Building | 30.1 | 0.29 (thin) | +10.7 over 10 years using 2 indicators |
 | Shared Purpose | 72.1 | 0.26 (thin) | no trend |
 
 ## What to raise
@@ -94,7 +94,7 @@ How able are individuals and organizations to turn an intention into action?
 
 These dimensions score at least 50 with usable evidence.
 
-- Adaptability: 72.4, confidence usable
+- Adaptability: 71.8, confidence usable
 
 ## What Iran has to work with
 
@@ -102,19 +102,19 @@ Conditions describe what a country has to work with: infrastructure, access, mon
 
 | Dimension | Condition | Value | Year | Rank |
 | --- | --- | --- | --- | --- |
-| Anticipation | R&D expenditure | 0.7 % of GDP | 2021 | 47 of 118 |
-| Anticipation | Researchers in R&D | 2,239.7 per million people | 2021 | 37 of 114 |
-| Anticipation | Secure internet servers | 7,225.7 per million people | 2024 | 46 of 125 |
-| Agency | Individuals using the internet | 85.3 % of population | 2024 | 58 of 125 |
-| Agency | Financial account ownership | 91.1 % aged 15+ | 2024 | 32 of 122 |
-| Agency | Credit to the private sector | 57.8 % of GDP | 2016 | 44 of 124 |
-| Learning | Tertiary enrolment | 58.7 % gross | 2022 | 54 of 124 |
-| Learning | Public education expenditure | 2.8 % of GDP | 2023 | 102 of 125 |
-| Learning | Vocational share of secondary | 13.4 % of secondary | 2017 | 55 of 125 |
-| Adaptability | Labour force participation | 45 % aged 15+ | 2025 | 120 of 125 |
-| Adaptability | Fixed broadband subscriptions | 12.1 per 100 people | 2024 | 75 of 125 |
-| Adaptability | Electricity transmission losses | 10.1 % of output | 2024 | 69 of 117 |
-| Building | Output per worker | 57,467.8 constant 2021 PPP $ | 2025 | 53 of 123 |
+| Anticipation | R&D expenditure | 0.7 % of GDP | 2021 | 47 of 123 |
+| Anticipation | Researchers in R&D | 2,239.7 per million people | 2021 | 37 of 118 |
+| Anticipation | Secure internet servers | 7,225.7 per million people | 2024 | 46 of 135 |
+| Agency | Individuals using the internet | 85.3 % of population | 2024 | 58 of 135 |
+| Agency | Financial account ownership | 91.1 % aged 15+ | 2024 | 32 of 131 |
+| Agency | Credit to the private sector | 57.8 % of GDP | 2016 | 44 of 134 |
+| Learning | Tertiary enrolment | 58.7 % gross | 2022 | 54 of 134 |
+| Learning | Public education expenditure | 2.8 % of GDP | 2023 | 109 of 135 |
+| Learning | Vocational share of secondary | 13.4 % of secondary | 2017 | 57 of 135 |
+| Adaptability | Labour force participation | 45 % aged 15+ | 2025 | 129 of 135 |
+| Adaptability | Fixed broadband subscriptions | 12.1 per 100 people | 2024 | 75 of 135 |
+| Adaptability | Electricity transmission losses | 10.1 % of output | 2024 | 69 of 122 |
+| Building | Output per worker | 57,467.8 constant 2021 PPP $ | 2025 | 53 of 133 |
 
 ## Missing data
 

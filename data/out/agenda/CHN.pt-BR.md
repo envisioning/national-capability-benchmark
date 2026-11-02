@@ -2,20 +2,20 @@
 
 *Gerada em 2026-11-02*
 
-A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, sem classificação geral, e cada pontuação traz ao lado a solidez da evidência. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma pontuação.
+A escala reúne 135 países. Cada dimensão recebe uma pontuação de 0 a 100, sem classificação geral, e cada pontuação traz ao lado a solidez da evidência. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma pontuação.
 
 ## Onde a China está
 
 | Dimensão | Pontuação | Solidez | Tendência |
 | --- | --- | --- | --- |
 | Antecipação | 30,1 | 0,46 (utilizável) | +10,7 em 10 anos, com base em 2 indicadores |
-| Agência | 72,5 | 0,44 (fraca) | sem tendência comparável |
-| Coordenação | 55,7 | 0,29 (fraca) | sem tendência comparável |
+| Agência | 74,1 | 0,44 (fraca) | sem tendência comparável |
+| Coordenação | 55,8 | 0,29 (fraca) | sem tendência comparável |
 | Confiança | 49,5 | 0,41 (fraca) | sem tendência comparável |
-| Aprendizagem | 76 | 0,55 (utilizável) | sem tendência comparável |
+| Aprendizagem | 76,3 | 0,55 (utilizável) | sem tendência comparável |
 | Experimentação | 98 | 0,28 (fraca) | +14,8 em 10 anos, com base em 3 indicadores |
-| Adaptação | 79,6 | 0,46 (utilizável) | sem tendência comparável |
-| Construção | 72 | 0,48 (utilizável) | -5,1 em 10 anos, com base em 3 indicadores |
+| Adaptação | 80,2 | 0,46 (utilizável) | sem tendência comparável |
+| Construção | 71,7 | 0,48 (utilizável) | -5,1 em 10 anos, com base em 3 indicadores |
 | Propósito compartilhado | 29,4 | 0,41 (fraca) | +0,7 em 10 anos, com base em 2 indicadores |
 
 ## Dimensões com as pontuações mais baixas
@@ -79,9 +79,9 @@ Em que medida pessoas e organizações conseguem transformar intenção em açã
 
 Estas dimensões têm pontuação de pelo menos 50, com evidência utilizável.
 
-- Adaptação: 79,6, solidez utilizável
-- Aprendizagem: 76, solidez utilizável
-- Construção: 72, solidez utilizável
+- Adaptação: 80,2, solidez utilizável
+- Aprendizagem: 76,3, solidez utilizável
+- Construção: 71,7, solidez utilizável
 
 ## Com o que a China conta
 
@@ -89,19 +89,19 @@ As condições descrevem com o que um país conta: infraestrutura, acesso, dinhe
 
 | Dimensão | Condição | Valor | Ano | Posição |
 | --- | --- | --- | --- | --- |
-| Antecipação | Dispêndio em P&D | 2,6 % do PIB | 2023 | 13º de 118 |
-| Antecipação | Pesquisadores em P&D | 2.107,3 por milhão de pessoas | 2023 | 40º de 114 |
-| Antecipação | Servidores de internet seguros | 1.413,3 por milhão de pessoas | 2024 | 64º de 125 |
-| Agência | Pessoas que usam a internet | 91,6 % da população | 2025 | 32º de 125 |
-| Agência | Adultos com conta financeira | 89,4 % das pessoas com 15 anos ou mais | 2024 | 35º de 122 |
-| Agência | Crédito ao setor privado | 194,3 % do PIB | 2024 | 2º de 124 |
-| Aprendizagem | Matrícula no ensino superior | 76,9 % (taxa bruta) | 2024 | 31º de 124 |
-| Aprendizagem | Dispêndio público em educação | 3,9 % do PIB | 2023 | 70º de 125 |
-| Aprendizagem | Educação profissional no ensino secundário | 18,1 % das matrículas no ensino secundário | 2019 | 42º de 125 |
-| Adaptação | Participação na força de trabalho | 74 % das pessoas com 15 anos ou mais | 2025 | 47º de 125 |
-| Adaptação | Assinaturas de banda larga fixa | 47,2 por 100 pessoas | 2024 | 3º de 125 |
-| Adaptação | Perdas na transmissão de eletricidade | 3,1 % da produção | 2024 | 4º de 117 |
-| Construção | Produto por pessoa ocupada | 48.125,8 dólares PPC constantes de 2021 | 2025 | 62º de 123 |
+| Antecipação | Dispêndio em P&D | 2,6 % do PIB | 2023 | 13º de 123 |
+| Antecipação | Pesquisadores em P&D | 2.107,3 por milhão de pessoas | 2023 | 40º de 118 |
+| Antecipação | Servidores de internet seguros | 1.413,3 por milhão de pessoas | 2024 | 64º de 135 |
+| Agência | Pessoas que usam a internet | 91,6 % da população | 2025 | 32º de 135 |
+| Agência | Adultos com conta financeira | 89,4 % das pessoas com 15 anos ou mais | 2024 | 35º de 131 |
+| Agência | Crédito ao setor privado | 194,3 % do PIB | 2024 | 2º de 134 |
+| Aprendizagem | Matrícula no ensino superior | 76,9 % (taxa bruta) | 2024 | 31º de 134 |
+| Aprendizagem | Dispêndio público em educação | 3,9 % do PIB | 2023 | 75º de 135 |
+| Aprendizagem | Educação profissional no ensino secundário | 18,1 % das matrículas no ensino secundário | 2019 | 43º de 135 |
+| Adaptação | Participação na força de trabalho | 74 % das pessoas com 15 anos ou mais | 2025 | 48º de 135 |
+| Adaptação | Assinaturas de banda larga fixa | 47,2 por 100 pessoas | 2024 | 3º de 135 |
+| Adaptação | Perdas na transmissão de eletricidade | 3,1 % da produção | 2024 | 4º de 122 |
+| Construção | Produto por pessoa ocupada | 48.125,8 dólares PPC constantes de 2021 | 2025 | 62º de 133 |
 
 ## Agenda de medição
 

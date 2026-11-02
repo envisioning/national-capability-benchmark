@@ -2,7 +2,7 @@
 
 *Gerada em 2026-11-02*
 
-A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, sem classificação geral, e cada pontuação traz ao lado a solidez da evidência. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma pontuação.
+A escala reúne 135 países. Cada dimensão recebe uma pontuação de 0 a 100, sem classificação geral, e cada pontuação traz ao lado a solidez da evidência. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma pontuação.
 
 ## Onde Cuba está
 
@@ -15,7 +15,7 @@ A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 | Aprendizagem | sem pontuação | 0,16 (muito fraca) | sem tendência comparável |
 | Experimentação | 2,5 | 0,28 (fraca) | +0,6 em 10 anos, com base em 3 indicadores |
 | Adaptação | 55,8 | 0,46 (utilizável) | sem tendência comparável |
-| Construção | 20,8 | 0,29 (fraca) | -27,5 em 10 anos, com base em 2 indicadores |
+| Construção | 20,7 | 0,29 (fraca) | -27,4 em 10 anos, com base em 2 indicadores |
 | Propósito compartilhado | sem pontuação | 0,02 (muito fraca) | sem tendência comparável |
 
 ## Dimensões com evidência fraca
@@ -96,16 +96,16 @@ As condições descrevem com o que um país conta: infraestrutura, acesso, dinhe
 
 | Dimensão | Condição | Valor | Ano | Posição |
 | --- | --- | --- | --- | --- |
-| Antecipação | Dispêndio em P&D | 0,4 % do PIB | 2024 | 60º de 118 |
-| Antecipação | Pesquisadores em P&D | 2.171,3 por milhão de pessoas | 2024 | 39º de 114 |
-| Antecipação | Servidores de internet seguros | 192,5 por milhão de pessoas | 2024 | 88º de 125 |
-| Agência | Pessoas que usam a internet | 70,5 % da população | 2024 | 85º de 125 |
-| Aprendizagem | Matrícula no ensino superior | 43,1 % (taxa bruta) | 2024 | 73º de 124 |
-| Aprendizagem | Dispêndio público em educação | 8,4 % do PIB | 2022 | 2º de 125 |
-| Aprendizagem | Educação profissional no ensino secundário | 27,4 % das matrículas no ensino secundário | 2019 | 25º de 125 |
-| Adaptação | Participação na força de trabalho | 63,8 % das pessoas com 15 anos ou mais | 2025 | 92º de 125 |
-| Adaptação | Assinaturas de banda larga fixa | 3,1 por 100 pessoas | 2024 | 94º de 125 |
-| Adaptação | Perdas na transmissão de eletricidade | 16,2 % da produção | 2024 | 93º de 117 |
+| Antecipação | Dispêndio em P&D | 0,4 % do PIB | 2024 | 61º de 123 |
+| Antecipação | Pesquisadores em P&D | 2.171,3 por milhão de pessoas | 2024 | 39º de 118 |
+| Antecipação | Servidores de internet seguros | 192,5 por milhão de pessoas | 2024 | 89º de 135 |
+| Agência | Pessoas que usam a internet | 70,5 % da população | 2024 | 85º de 135 |
+| Aprendizagem | Matrícula no ensino superior | 43,1 % (taxa bruta) | 2024 | 73º de 134 |
+| Aprendizagem | Dispêndio público em educação | 8,4 % do PIB | 2022 | 2º de 135 |
+| Aprendizagem | Educação profissional no ensino secundário | 27,4 % das matrículas no ensino secundário | 2019 | 25º de 135 |
+| Adaptação | Participação na força de trabalho | 63,8 % das pessoas com 15 anos ou mais | 2025 | 96º de 135 |
+| Adaptação | Assinaturas de banda larga fixa | 3,1 por 100 pessoas | 2024 | 95º de 135 |
+| Adaptação | Perdas na transmissão de eletricidade | 16,2 % da produção | 2024 | 93º de 122 |
 
 ## Agenda de medição
 

@@ -2,20 +2,20 @@
 
 *Generated 2026-11-02*
 
-The frame includes 125 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
+The frame includes 135 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
 ## Where Germany stands
 
 | Dimension | Score | Confidence | Trend |
 | --- | --- | --- | --- |
 | Anticipation | 71.4 | 0.46 (usable) | +4.3 over 10 years using 2 indicators |
-| Agency | 32.9 | 0.3 (thin) | no trend |
+| Agency | 33.1 | 0.3 (thin) | no trend |
 | Coordination | 96 | 0.27 (thin) | no trend |
 | Trust | 92.1 | 0.21 (very thin) | no trend |
-| Learning | 66.2 | 0.55 (usable) | no trend |
+| Learning | 66.6 | 0.55 (usable) | no trend |
 | Experimentation | 70.8 | 0.37 (thin) | +1.1 over 10 years using 3 indicators |
-| Adaptability | 74.3 | 0.62 (usable) | no trend |
-| Building | 60 | 0.48 (usable) | -3 over 10 years using 3 indicators |
+| Adaptability | 73.9 | 0.62 (usable) | no trend |
+| Building | 59.8 | 0.48 (usable) | -3 over 10 years using 3 indicators |
 | Shared Purpose | 49.9 | 0.29 (thin) | -4.7 over 10 years using 2 indicators |
 
 ## What to measure first
@@ -66,10 +66,10 @@ How easily can new approaches be attempted, tested, abandoned, and improved?
 
 These dimensions score at least 50 with usable evidence.
 
-- Adaptability: 74.3, confidence usable
+- Adaptability: 73.9, confidence usable
 - Anticipation: 71.4, confidence usable
-- Learning: 66.2, confidence usable
-- Building: 60, confidence usable
+- Learning: 66.6, confidence usable
+- Building: 59.8, confidence usable
 
 ## What Germany has to work with
 
@@ -77,20 +77,20 @@ Conditions describe what a country has to work with: infrastructure, access, mon
 
 | Dimension | Condition | Value | Year | Rank |
 | --- | --- | --- | --- | --- |
-| Anticipation | R&D expenditure | 3.2 % of GDP | 2023 | 9 of 118 |
-| Anticipation | Researchers in R&D | 5,926.1 per million people | 2023 | 12 of 114 |
-| Anticipation | Secure internet servers | 152,113.8 per million people | 2024 | 8 of 125 |
-| Agency | Individuals using the internet | 93.5 % of population | 2024 | 24 of 125 |
-| Agency | Financial account ownership | 98.3 % aged 15+ | 2024 | 16 of 122 |
-| Agency | Credit to the private sector | 77.3 % of GDP | 2023 | 27 of 124 |
-| Learning | Tertiary enrolment | 76.7 % gross | 2024 | 32 of 124 |
-| Learning | Public education expenditure | 5.2 % of GDP | 2022 | 32 of 125 |
-| Learning | Vocational share of secondary | 19.2 % of secondary | 2018 | 39 of 125 |
-| Adaptability | Labour force participation | 80 % aged 15+ | 2025 | 16 of 125 |
-| Adaptability | Fixed broadband subscriptions | 45.6 per 100 people | 2024 | 5 of 125 |
-| Adaptability | Electricity transmission losses | 5.3 % of output | 2025 | 20 of 117 |
-| Adaptability | Informal employment | 3.9 % of employment | 2022 | 17 of 102 |
-| Building | Output per worker | 125,086.3 constant 2021 PPP $ | 2025 | 13 of 123 |
+| Anticipation | R&D expenditure | 3.2 % of GDP | 2023 | 9 of 123 |
+| Anticipation | Researchers in R&D | 5,926.1 per million people | 2023 | 12 of 118 |
+| Anticipation | Secure internet servers | 152,113.8 per million people | 2024 | 8 of 135 |
+| Agency | Individuals using the internet | 93.5 % of population | 2024 | 24 of 135 |
+| Agency | Financial account ownership | 98.3 % aged 15+ | 2024 | 16 of 131 |
+| Agency | Credit to the private sector | 77.3 % of GDP | 2023 | 27 of 134 |
+| Learning | Tertiary enrolment | 76.7 % gross | 2024 | 32 of 134 |
+| Learning | Public education expenditure | 5.2 % of GDP | 2022 | 36 of 135 |
+| Learning | Vocational share of secondary | 19.2 % of secondary | 2018 | 40 of 135 |
+| Adaptability | Labour force participation | 80 % aged 15+ | 2025 | 16 of 135 |
+| Adaptability | Fixed broadband subscriptions | 45.6 per 100 people | 2024 | 5 of 135 |
+| Adaptability | Electricity transmission losses | 5.3 % of output | 2025 | 20 of 122 |
+| Adaptability | Informal employment | 3.9 % of employment | 2022 | 17 of 111 |
+| Building | Output per worker | 125,086.3 constant 2021 PPP $ | 2025 | 13 of 133 |
 
 ## Missing data
 

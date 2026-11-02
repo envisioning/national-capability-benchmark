@@ -2,20 +2,20 @@
 
 *Gerada em 2026-11-02*
 
-A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, sem classificação geral, e cada pontuação traz ao lado a solidez da evidência. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma pontuação.
+A escala reúne 135 países. Cada dimensão recebe uma pontuação de 0 a 100, sem classificação geral, e cada pontuação traz ao lado a solidez da evidência. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma pontuação.
 
 ## Onde Belarus está
 
 | Dimensão | Pontuação | Solidez | Tendência |
 | --- | --- | --- | --- |
 | Antecipação | 37,7 | 0,46 (utilizável) | +10,7 em 10 anos, com base em 2 indicadores |
-| Agência | 47,8 | 0,41 (fraca) | sem tendência comparável |
-| Coordenação | 45,1 | 0,27 (fraca) | sem tendência comparável |
+| Agência | 47,9 | 0,41 (fraca) | sem tendência comparável |
+| Coordenação | 45,2 | 0,27 (fraca) | sem tendência comparável |
 | Confiança | 42,3 | 0,36 (fraca) | sem tendência comparável |
-| Aprendizagem | 38,2 | 0,44 (fraca) | sem tendência comparável |
-| Experimentação | 12,1 | 0,28 (fraca) | -4,1 em 10 anos, com base em 3 indicadores |
-| Adaptação | 76,5 | 0,62 (utilizável) | sem tendência comparável |
-| Construção | 24,7 | 0,44 (fraca) | +0,4 em 10 anos, com base em 3 indicadores |
+| Aprendizagem | 37,7 | 0,44 (fraca) | sem tendência comparável |
+| Experimentação | 12,2 | 0,28 (fraca) | -4,1 em 10 anos, com base em 3 indicadores |
+| Adaptação | 76,4 | 0,62 (utilizável) | sem tendência comparável |
+| Construção | 24,9 | 0,44 (fraca) | +0,4 em 10 anos, com base em 3 indicadores |
 | Propósito compartilhado | 45,2 | 0,38 (fraca) | sem tendência comparável |
 
 ## Dimensões com as pontuações mais baixas
@@ -94,7 +94,7 @@ Com que eficácia o país adquire, distribui e atualiza conhecimento?
 
 Estas dimensões têm pontuação de pelo menos 50, com evidência utilizável.
 
-- Adaptação: 76,5, solidez utilizável
+- Adaptação: 76,4, solidez utilizável
 
 ## Com o que Belarus conta
 
@@ -102,19 +102,19 @@ As condições descrevem com o que um país conta: infraestrutura, acesso, dinhe
 
 | Dimensão | Condição | Valor | Ano | Posição |
 | --- | --- | --- | --- | --- |
-| Antecipação | Dispêndio em P&D | 0,6 % do PIB | 2024 | 56º de 118 |
-| Antecipação | Pesquisadores em P&D | 1.567,8 por milhão de pessoas | 2024 | 46º de 114 |
-| Antecipação | Servidores de internet seguros | 12.729,5 por milhão de pessoas | 2024 | 39º de 125 |
-| Agência | Pessoas que usam a internet | 94,3 % da população | 2024 | 20º de 125 |
-| Agência | Adultos com conta financeira | 81,2 % das pessoas com 15 anos ou mais | 2017 | 56º de 122 |
-| Agência | Crédito ao setor privado | 29,2 % do PIB | 2021 | 86º de 124 |
-| Aprendizagem | Matrícula no ensino superior | 70,1 % (taxa bruta) | 2024 | 41º de 124 |
-| Aprendizagem | Dispêndio público em educação | 5 % do PIB | 2024 | 39º de 125 |
-| Aprendizagem | Educação profissional no ensino secundário | 12,7 % das matrículas no ensino secundário | 2018 | 57º de 125 |
-| Adaptação | Participação na força de trabalho | 79,6 % das pessoas com 15 anos ou mais | 2025 | 18º de 125 |
-| Adaptação | Assinaturas de banda larga fixa | 36,3 por 100 pessoas | 2024 | 26º de 125 |
-| Adaptação | Perdas na transmissão de eletricidade | 6,6 % da produção | 2024 | 34º de 117 |
-| Construção | Produto por pessoa ocupada | 58.176,8 dólares PPC constantes de 2021 | 2025 | 52º de 123 |
+| Antecipação | Dispêndio em P&D | 0,6 % do PIB | 2024 | 56º de 123 |
+| Antecipação | Pesquisadores em P&D | 1.567,8 por milhão de pessoas | 2024 | 46º de 118 |
+| Antecipação | Servidores de internet seguros | 12.729,5 por milhão de pessoas | 2024 | 39º de 135 |
+| Agência | Pessoas que usam a internet | 94,3 % da população | 2024 | 20º de 135 |
+| Agência | Adultos com conta financeira | 81,2 % das pessoas com 15 anos ou mais | 2017 | 56º de 131 |
+| Agência | Crédito ao setor privado | 29,2 % do PIB | 2021 | 88º de 134 |
+| Aprendizagem | Matrícula no ensino superior | 70,1 % (taxa bruta) | 2024 | 41º de 134 |
+| Aprendizagem | Dispêndio público em educação | 5 % do PIB | 2024 | 43º de 135 |
+| Aprendizagem | Educação profissional no ensino secundário | 12,7 % das matrículas no ensino secundário | 2018 | 59º de 135 |
+| Adaptação | Participação na força de trabalho | 79,6 % das pessoas com 15 anos ou mais | 2025 | 18º de 135 |
+| Adaptação | Assinaturas de banda larga fixa | 36,3 por 100 pessoas | 2024 | 26º de 135 |
+| Adaptação | Perdas na transmissão de eletricidade | 6,6 % da produção | 2024 | 34º de 122 |
+| Construção | Produto por pessoa ocupada | 58.176,8 dólares PPC constantes de 2021 | 2025 | 52º de 133 |
 
 ## Agenda de medição
 

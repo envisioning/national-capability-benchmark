@@ -42,9 +42,9 @@ export const UNCTAD_CONCENTRATION_URL =
   'https://unctadstat-api.unctad.org/bulkdownload/US.ConcentDiversIndices/US_ConcentDiversIndices'
 export const UNCTAD_CONCENTRATION_CSV = 'US_ConcentDiversIndices.csv'
 /** The date stamped on the CSV inside the archive. */
-export const UNCTAD_CONCENTRATION_RELEASE = '2026-06-24'
+export const UNCTAD_CONCENTRATION_RELEASE = '2026-10-23'
 export const UNCTAD_CONCENTRATION_CSV_SHA256 =
-  'f3d5bd01e4c7b2a090f4ccd97002c8e6359a675f19ad0794a009db7756f0f86e'
+  'ad6f72192ff20fb47d7575813097e968db6d12404ea787591f4a4558d219a57c'
 export const UNCTAD_CONCENTRATION_YEAR = 2025
 /** UNCTADstat flow code for exports. Imports are `01`. */
 export const UNCTAD_EXPORTS_FLOW = '02'

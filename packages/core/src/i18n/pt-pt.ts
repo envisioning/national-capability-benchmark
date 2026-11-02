@@ -319,6 +319,8 @@ export const PT_PT = withOverride(PT_BR, {
     rowFacts: {
       household_survey:
         'Para {countryTopic}, a série do ILOSTAT tem origem num inquérito aos agregados familiares: {survey}.',
+      household_survey_unnamed:
+        'Para {countryTopic}, a série do ILOSTAT tem origem num inquérito aos agregados familiares.',
       household_survey_unreliable:
         'Para {countryTopic}, a série do ILOSTAT tem origem num inquérito aos agregados familiares, e a OIT assinala o valor como pouco fiável.',
       urban_survey_unreliable:

@@ -2,20 +2,20 @@
 
 *Gerada em 2026-11-02*
 
-A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, sem classificação geral, e cada pontuação traz ao lado a solidez da evidência. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma pontuação.
+A escala reúne 135 países. Cada dimensão recebe uma pontuação de 0 a 100, sem classificação geral, e cada pontuação traz ao lado a solidez da evidência. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma pontuação.
 
 ## Onde o Irã está
 
 | Dimensão | Pontuação | Solidez | Tendência |
 | --- | --- | --- | --- |
 | Antecipação | 33,8 | 0,46 (utilizável) | +14,7 em 10 anos, com base em 2 indicadores |
-| Agência | 33 | 0,38 (fraca) | sem tendência comparável |
+| Agência | 33,1 | 0,38 (fraca) | sem tendência comparável |
 | Coordenação | sem pontuação | 0,1 (muito fraca) | sem tendência comparável |
 | Confiança | 26,7 | 0,28 (fraca) | sem tendência comparável |
-| Aprendizagem | 37 | 0,32 (fraca) | sem tendência comparável |
-| Experimentação | 39,8 | 0,37 (fraca) | -25,9 em 10 anos, com base em 3 indicadores |
-| Adaptação | 72,4 | 0,53 (utilizável) | sem tendência comparável |
-| Construção | 30,4 | 0,29 (fraca) | +10,8 em 10 anos, com base em 2 indicadores |
+| Aprendizagem | 37,9 | 0,32 (fraca) | sem tendência comparável |
+| Experimentação | 40,1 | 0,37 (fraca) | -26,3 em 10 anos, com base em 3 indicadores |
+| Adaptação | 71,8 | 0,53 (utilizável) | sem tendência comparável |
+| Construção | 30,1 | 0,29 (fraca) | +10,7 em 10 anos, com base em 2 indicadores |
 | Propósito compartilhado | 72,1 | 0,26 (fraca) | sem tendência comparável |
 
 ## Dimensões com as pontuações mais baixas
@@ -94,7 +94,7 @@ Em que medida pessoas e organizações conseguem transformar intenção em açã
 
 Estas dimensões têm pontuação de pelo menos 50, com evidência utilizável.
 
-- Adaptação: 72,4, solidez utilizável
+- Adaptação: 71,8, solidez utilizável
 
 ## Com o que o Irã conta
 
@@ -102,19 +102,19 @@ As condições descrevem com o que um país conta: infraestrutura, acesso, dinhe
 
 | Dimensão | Condição | Valor | Ano | Posição |
 | --- | --- | --- | --- | --- |
-| Antecipação | Dispêndio em P&D | 0,7 % do PIB | 2021 | 47º de 118 |
-| Antecipação | Pesquisadores em P&D | 2.239,7 por milhão de pessoas | 2021 | 37º de 114 |
-| Antecipação | Servidores de internet seguros | 7.225,7 por milhão de pessoas | 2024 | 46º de 125 |
-| Agência | Pessoas que usam a internet | 85,3 % da população | 2024 | 58º de 125 |
-| Agência | Adultos com conta financeira | 91,1 % das pessoas com 15 anos ou mais | 2024 | 32º de 122 |
-| Agência | Crédito ao setor privado | 57,8 % do PIB | 2016 | 44º de 124 |
-| Aprendizagem | Matrícula no ensino superior | 58,7 % (taxa bruta) | 2022 | 54º de 124 |
-| Aprendizagem | Dispêndio público em educação | 2,8 % do PIB | 2023 | 102º de 125 |
-| Aprendizagem | Educação profissional no ensino secundário | 13,4 % das matrículas no ensino secundário | 2017 | 55º de 125 |
-| Adaptação | Participação na força de trabalho | 45 % das pessoas com 15 anos ou mais | 2025 | 120º de 125 |
-| Adaptação | Assinaturas de banda larga fixa | 12,1 por 100 pessoas | 2024 | 75º de 125 |
-| Adaptação | Perdas na transmissão de eletricidade | 10,1 % da produção | 2024 | 69º de 117 |
-| Construção | Produto por pessoa ocupada | 57.467,8 dólares PPC constantes de 2021 | 2025 | 53º de 123 |
+| Antecipação | Dispêndio em P&D | 0,7 % do PIB | 2021 | 47º de 123 |
+| Antecipação | Pesquisadores em P&D | 2.239,7 por milhão de pessoas | 2021 | 37º de 118 |
+| Antecipação | Servidores de internet seguros | 7.225,7 por milhão de pessoas | 2024 | 46º de 135 |
+| Agência | Pessoas que usam a internet | 85,3 % da população | 2024 | 58º de 135 |
+| Agência | Adultos com conta financeira | 91,1 % das pessoas com 15 anos ou mais | 2024 | 32º de 131 |
+| Agência | Crédito ao setor privado | 57,8 % do PIB | 2016 | 44º de 134 |
+| Aprendizagem | Matrícula no ensino superior | 58,7 % (taxa bruta) | 2022 | 54º de 134 |
+| Aprendizagem | Dispêndio público em educação | 2,8 % do PIB | 2023 | 109º de 135 |
+| Aprendizagem | Educação profissional no ensino secundário | 13,4 % das matrículas no ensino secundário | 2017 | 57º de 135 |
+| Adaptação | Participação na força de trabalho | 45 % das pessoas com 15 anos ou mais | 2025 | 129º de 135 |
+| Adaptação | Assinaturas de banda larga fixa | 12,1 por 100 pessoas | 2024 | 75º de 135 |
+| Adaptação | Perdas na transmissão de eletricidade | 10,1 % da produção | 2024 | 69º de 122 |
+| Construção | Produto por pessoa ocupada | 57.467,8 dólares PPC constantes de 2021 | 2025 | 53º de 133 |
 
 ## Agenda de medição
 

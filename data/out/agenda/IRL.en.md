@@ -2,20 +2,20 @@
 
 *Generated 2026-11-02*
 
-The frame includes 125 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
+The frame includes 135 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
 ## Where Ireland stands
 
 | Dimension | Score | Confidence | Trend |
 | --- | --- | --- | --- |
 | Anticipation | 75.3 | 0.46 (usable) | +5.8 over 10 years using 2 indicators |
-| Agency | 68.5 | 0.49 (usable) | no trend |
-| Coordination | 91.1 | 0.45 (usable) | no trend |
+| Agency | 69.3 | 0.49 (usable) | no trend |
+| Coordination | 91.2 | 0.45 (usable) | no trend |
 | Trust | 90.2 | 0.34 (thin) | no trend |
-| Learning | 82 | 0.55 (usable) | no trend |
-| Experimentation | 42 | 0.37 (thin) | -4 over 10 years using 2 indicators |
-| Adaptability | 60.4 | 0.62 (usable) | no trend |
-| Building | 76.2 | 0.63 (usable) | +15 over 10 years using 3 indicators |
+| Learning | 82.8 | 0.55 (usable) | no trend |
+| Experimentation | 42.1 | 0.37 (thin) | -4.1 over 10 years using 2 indicators |
+| Adaptability | 59.9 | 0.62 (usable) | no trend |
+| Building | 79.7 | 0.63 (usable) | +16 over 10 years using 3 indicators |
 | Shared Purpose | 66.6 | 0.3 (thin) | +4.3 over 10 years using 2 indicators |
 
 ## What to measure first
@@ -50,12 +50,12 @@ How easily can new approaches be attempted, tested, abandoned, and improved?
 
 These dimensions score at least 50 with usable evidence.
 
-- Coordination: 91.1, confidence usable
-- Learning: 82, confidence usable
-- Building: 76.2, confidence usable
+- Coordination: 91.2, confidence usable
+- Learning: 82.8, confidence usable
+- Building: 79.7, confidence usable
 - Anticipation: 75.3, confidence usable
-- Agency: 68.5, confidence usable
-- Adaptability: 60.4, confidence usable
+- Agency: 69.3, confidence usable
+- Adaptability: 59.9, confidence usable
 
 ## What Ireland has to work with
 
@@ -63,20 +63,20 @@ Conditions describe what a country has to work with: infrastructure, access, mon
 
 | Dimension | Condition | Value | Year | Rank |
 | --- | --- | --- | --- | --- |
-| Anticipation | R&D expenditure | 1.6 % of GDP | 2023 | 24 of 118 |
-| Anticipation | Researchers in R&D | 5,752.8 per million people | 2023 | 13 of 114 |
-| Anticipation | Secure internet servers | 121,467.8 per million people | 2024 | 10 of 125 |
-| Agency | Individuals using the internet | 97.2 % of population | 2024 | 7 of 125 |
-| Agency | Financial account ownership | 98.3 % aged 15+ | 2024 | 17 of 122 |
-| Agency | Credit to the private sector | 23.8 % of GDP | 2024 | 93 of 124 |
-| Learning | Tertiary enrolment | 77.6 % gross | 2022 | 29 of 124 |
-| Learning | Public education expenditure | 2.9 % of GDP | 2021 | 98 of 125 |
-| Learning | Vocational share of secondary | 26.6 % of secondary | 2018 | 26 of 125 |
-| Adaptability | Labour force participation | 77.2 % aged 15+ | 2025 | 30 of 125 |
-| Adaptability | Fixed broadband subscriptions | 32.3 per 100 people | 2024 | 34 of 125 |
-| Adaptability | Electricity transmission losses | 7.2 % of output | 2025 | 43 of 117 |
-| Adaptability | Informal employment | 3.4 % of employment | 2025 | 13 of 102 |
-| Building | Output per worker | 259,304.4 constant 2021 PPP $ | 2025 | 1 of 123 |
+| Anticipation | R&D expenditure | 1.6 % of GDP | 2023 | 24 of 123 |
+| Anticipation | Researchers in R&D | 5,752.8 per million people | 2023 | 13 of 118 |
+| Anticipation | Secure internet servers | 121,467.8 per million people | 2024 | 10 of 135 |
+| Agency | Individuals using the internet | 97.2 % of population | 2024 | 7 of 135 |
+| Agency | Financial account ownership | 98.3 % aged 15+ | 2024 | 17 of 131 |
+| Agency | Credit to the private sector | 23.8 % of GDP | 2024 | 95 of 134 |
+| Learning | Tertiary enrolment | 77.6 % gross | 2022 | 29 of 134 |
+| Learning | Public education expenditure | 2.9 % of GDP | 2021 | 104 of 135 |
+| Learning | Vocational share of secondary | 26.6 % of secondary | 2018 | 26 of 135 |
+| Adaptability | Labour force participation | 77.2 % aged 15+ | 2025 | 31 of 135 |
+| Adaptability | Fixed broadband subscriptions | 32.3 per 100 people | 2024 | 34 of 135 |
+| Adaptability | Electricity transmission losses | 7.2 % of output | 2025 | 43 of 122 |
+| Adaptability | Informal employment | 3.4 % of employment | 2025 | 13 of 111 |
+| Building | Output per worker | 259,304.4 constant 2021 PPP $ | 2025 | 1 of 133 |
 
 ## Missing data
 

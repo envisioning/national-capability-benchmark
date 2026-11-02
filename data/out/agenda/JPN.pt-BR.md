@@ -2,7 +2,7 @@
 
 *Gerada em 2026-11-02*
 
-A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, sem classificação geral, e cada pontuação traz ao lado a solidez da evidência. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma pontuação.
+A escala reúne 135 países. Cada dimensão recebe uma pontuação de 0 a 100, sem classificação geral, e cada pontuação traz ao lado a solidez da evidência. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma pontuação.
 
 ## Onde o Japão está
 
@@ -10,12 +10,12 @@ A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 | --- | --- | --- | --- |
 | Antecipação | 62,2 | 0,46 (utilizável) | +13,2 em 10 anos, com base em 2 indicadores |
 | Agência | 23,5 | 0,44 (fraca) | sem tendência comparável |
-| Coordenação | 59,2 | 0,27 (fraca) | sem tendência comparável |
+| Coordenação | 59,7 | 0,27 (fraca) | sem tendência comparável |
 | Confiança | 58,7 | 0,41 (fraca) | sem tendência comparável |
-| Aprendizagem | 52,4 | 0,55 (utilizável) | sem tendência comparável |
-| Experimentação | 63,5 | 0,37 (fraca) | -11,5 em 10 anos, com base em 3 indicadores |
-| Adaptação | 66,4 | 0,53 (utilizável) | sem tendência comparável |
-| Construção | 61 | 0,48 (utilizável) | -1,3 em 10 anos, com base em 3 indicadores |
+| Aprendizagem | 52,6 | 0,55 (utilizável) | sem tendência comparável |
+| Experimentação | 64,1 | 0,37 (fraca) | -11,6 em 10 anos, com base em 3 indicadores |
+| Adaptação | 66,1 | 0,53 (utilizável) | sem tendência comparável |
+| Construção | 60,8 | 0,48 (utilizável) | -1,3 em 10 anos, com base em 3 indicadores |
 | Propósito compartilhado | 38,9 | 0,38 (fraca) | sem tendência comparável |
 
 ## Dimensões com evidência fraca
@@ -66,10 +66,10 @@ Em que medida pessoas e organizações conseguem transformar intenção em açã
 
 Estas dimensões têm pontuação de pelo menos 50, com evidência utilizável.
 
-- Adaptação: 66,4, solidez utilizável
+- Adaptação: 66,1, solidez utilizável
 - Antecipação: 62,2, solidez utilizável
-- Construção: 61, solidez utilizável
-- Aprendizagem: 52,4, solidez utilizável
+- Construção: 60,8, solidez utilizável
+- Aprendizagem: 52,6, solidez utilizável
 
 ## Com o que o Japão conta
 
@@ -77,19 +77,19 @@ As condições descrevem com o que um país conta: infraestrutura, acesso, dinhe
 
 | Dimensão | Condição | Valor | Ano | Posição |
 | --- | --- | --- | --- | --- |
-| Antecipação | Dispêndio em P&D | 3,4 % do PIB | 2023 | 5º de 118 |
-| Antecipação | Pesquisadores em P&D | 5.608,6 por milhão de pessoas | 2023 | 16º de 114 |
-| Antecipação | Servidores de internet seguros | 32.928,8 por milhão de pessoas | 2024 | 26º de 125 |
-| Agência | Pessoas que usam a internet | 85,5 % da população | 2024 | 57º de 125 |
-| Agência | Adultos com conta financeira | 98,5 % das pessoas com 15 anos ou mais | 2024 | 12º de 122 |
-| Agência | Crédito ao setor privado | 188,7 % do PIB | 2025 | 3º de 124 |
-| Aprendizagem | Matrícula no ensino superior | 64,5 % (taxa bruta) | 2023 | 48º de 124 |
-| Aprendizagem | Dispêndio público em educação | 3,3 % do PIB | 2021 | 85º de 125 |
-| Aprendizagem | Educação profissional no ensino secundário | 11,4 % das matrículas no ensino secundário | 2018 | 62º de 125 |
-| Adaptação | Participação na força de trabalho | 82,3 % das pessoas com 15 anos ou mais | 2025 | 8º de 125 |
-| Adaptação | Assinaturas de banda larga fixa | 38,6 por 100 pessoas | 2023 | 19º de 125 |
-| Adaptação | Perdas na transmissão de eletricidade | 4,6 % da produção | 2025 | 15º de 117 |
-| Construção | Produto por pessoa ocupada | 87.888,3 dólares PPC constantes de 2021 | 2025 | 32º de 123 |
+| Antecipação | Dispêndio em P&D | 3,4 % do PIB | 2023 | 5º de 123 |
+| Antecipação | Pesquisadores em P&D | 5.608,6 por milhão de pessoas | 2023 | 16º de 118 |
+| Antecipação | Servidores de internet seguros | 32.928,8 por milhão de pessoas | 2024 | 26º de 135 |
+| Agência | Pessoas que usam a internet | 85,5 % da população | 2024 | 57º de 135 |
+| Agência | Adultos com conta financeira | 98,5 % das pessoas com 15 anos ou mais | 2024 | 12º de 131 |
+| Agência | Crédito ao setor privado | 188,7 % do PIB | 2025 | 3º de 134 |
+| Aprendizagem | Matrícula no ensino superior | 64,5 % (taxa bruta) | 2023 | 48º de 134 |
+| Aprendizagem | Dispêndio público em educação | 3,3 % do PIB | 2021 | 90º de 135 |
+| Aprendizagem | Educação profissional no ensino secundário | 11,4 % das matrículas no ensino secundário | 2018 | 64º de 135 |
+| Adaptação | Participação na força de trabalho | 82,3 % das pessoas com 15 anos ou mais | 2025 | 8º de 135 |
+| Adaptação | Assinaturas de banda larga fixa | 38,6 por 100 pessoas | 2023 | 19º de 135 |
+| Adaptação | Perdas na transmissão de eletricidade | 4,6 % da produção | 2025 | 15º de 122 |
+| Construção | Produto por pessoa ocupada | 87.888,3 dólares PPC constantes de 2021 | 2025 | 32º de 133 |
 
 ## Agenda de medição
 

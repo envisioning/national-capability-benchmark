@@ -12,8 +12,10 @@ has three panelists and was made on dataset 9.0.1. A9 says how much of it
 applies to 9.4.0. A panel estimate is made on the release it names, so a gap
 between one and a current score is not a finding.
 
-Every entry is on dataset 9.6.0, the 125-country frame of D153, except where
-it names another run. 9.5.0 restated Building and Shared Purpose and 9.6.0
+The current dataset is 10.0.0, the 135-country frame of D176, which restated
+every score. The entries below have not been refreshed on it yet: every figure
+in them is from dataset 9.6.0, on the 125 countries of D153, except where an
+entry names an older run. 9.5.0 restated Building and Shared Purpose and 9.6.0
 restated Experimentation, so entries on other dimensions still name 9.4.0 or
 9.3.0 where they quote a figure. A figure that came from a counterfactual rescore or a
 count the published files do not carry keeps the run it comes from: the

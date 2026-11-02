@@ -2,7 +2,7 @@
 
 *Gerada em 2026-11-02*
 
-A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, sem classificação geral, e cada pontuação traz ao lado a solidez da evidência. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma pontuação.
+A escala reúne 135 países. Cada dimensão recebe uma pontuação de 0 a 100, sem classificação geral, e cada pontuação traz ao lado a solidez da evidência. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma pontuação.
 
 ## Onde o Reino Unido está
 
@@ -12,10 +12,10 @@ A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 | Agência | 94,7 | 0,49 (utilizável) | sem tendência comparável |
 | Coordenação | 84 | 0,29 (fraca) | sem tendência comparável |
 | Confiança | 86,4 | 0,34 (fraca) | sem tendência comparável |
-| Aprendizagem | 80,3 | 0,55 (utilizável) | sem tendência comparável |
-| Experimentação | 70 | 0,47 (utilizável) | +16,9 em 10 anos, com base em 3 indicadores |
-| Adaptação | 70,5 | 0,62 (utilizável) | sem tendência comparável |
-| Construção | 58,2 | 0,63 (utilizável) | +0,3 em 10 anos, com base em 3 indicadores |
+| Aprendizagem | 81,4 | 0,55 (utilizável) | sem tendência comparável |
+| Experimentação | 70,1 | 0,47 (utilizável) | +16,4 em 10 anos, com base em 3 indicadores |
+| Adaptação | 70,2 | 0,62 (utilizável) | sem tendência comparável |
+| Construção | 59,1 | 0,63 (utilizável) | +1,7 em 10 anos, com base em 3 indicadores |
 | Propósito compartilhado | 74,7 | 0,28 (fraca) | +3,3 em 10 anos, com base em 2 indicadores |
 
 ## Dimensões com evidência fraca
@@ -51,11 +51,11 @@ Quanta cooperação é possível para além do círculo pessoal mais próximo?
 Estas dimensões têm pontuação de pelo menos 50, com evidência utilizável.
 
 - Agência: 94,7, solidez utilizável
-- Aprendizagem: 80,3, solidez utilizável
+- Aprendizagem: 81,4, solidez utilizável
 - Antecipação: 71,8, solidez utilizável
-- Adaptação: 70,5, solidez utilizável
-- Experimentação: 70, solidez utilizável
-- Construção: 58,2, solidez utilizável
+- Adaptação: 70,2, solidez utilizável
+- Experimentação: 70,1, solidez utilizável
+- Construção: 59,1, solidez utilizável
 
 ## Com o que o Reino Unido conta
 
@@ -63,20 +63,20 @@ As condições descrevem com o que um país conta: infraestrutura, acesso, dinhe
 
 | Dimensão | Condição | Valor | Ano | Posição |
 | --- | --- | --- | --- | --- |
-| Antecipação | Dispêndio em P&D | 2,7 % do PIB | 2023 | 12º de 118 |
-| Antecipação | Pesquisadores em P&D | 4.472,7 por milhão de pessoas | 2017 | 25º de 114 |
-| Antecipação | Servidores de internet seguros | 68.394,9 por milhão de pessoas | 2024 | 14º de 125 |
-| Agência | Pessoas que usam a internet | 95,5 % da população | 2024 | 15º de 125 |
-| Agência | Adultos com conta financeira | 99,3 % das pessoas com 15 anos ou mais | 2024 | 3º de 122 |
-| Agência | Crédito ao setor privado | 112,4 % do PIB | 2024 | 16º de 124 |
-| Aprendizagem | Matrícula no ensino superior | 80,4 % (taxa bruta) | 2023 | 22º de 124 |
-| Aprendizagem | Dispêndio público em educação | 5,9 % do PIB | 2021 | 18º de 125 |
-| Aprendizagem | Educação profissional no ensino secundário | 31,8 % das matrículas no ensino secundário | 2018 | 16º de 125 |
-| Adaptação | Participação na força de trabalho | 76,7 % das pessoas com 15 anos ou mais | 2025 | 35º de 125 |
-| Adaptação | Assinaturas de banda larga fixa | 42,2 por 100 pessoas | 2024 | 13º de 125 |
-| Adaptação | Perdas na transmissão de eletricidade | 9,6 % da produção | 2025 | 62º de 117 |
-| Adaptação | Emprego informal | 19,8 % do emprego | 2018 | 33º de 102 |
-| Construção | Produto por pessoa ocupada | 111.234,5 dólares PPC constantes de 2021 | 2025 | 17º de 123 |
+| Antecipação | Dispêndio em P&D | 2,7 % do PIB | 2023 | 12º de 123 |
+| Antecipação | Pesquisadores em P&D | 4.472,7 por milhão de pessoas | 2017 | 25º de 118 |
+| Antecipação | Servidores de internet seguros | 68.394,9 por milhão de pessoas | 2024 | 14º de 135 |
+| Agência | Pessoas que usam a internet | 95,5 % da população | 2024 | 15º de 135 |
+| Agência | Adultos com conta financeira | 99,3 % das pessoas com 15 anos ou mais | 2024 | 3º de 131 |
+| Agência | Crédito ao setor privado | 112,4 % do PIB | 2024 | 16º de 134 |
+| Aprendizagem | Matrícula no ensino superior | 80,4 % (taxa bruta) | 2023 | 22º de 134 |
+| Aprendizagem | Dispêndio público em educação | 5,9 % do PIB | 2021 | 21º de 135 |
+| Aprendizagem | Educação profissional no ensino secundário | 31,8 % das matrículas no ensino secundário | 2018 | 16º de 135 |
+| Adaptação | Participação na força de trabalho | 76,7 % das pessoas com 15 anos ou mais | 2025 | 36º de 135 |
+| Adaptação | Assinaturas de banda larga fixa | 42,2 por 100 pessoas | 2024 | 13º de 135 |
+| Adaptação | Perdas na transmissão de eletricidade | 9,6 % da produção | 2025 | 62º de 122 |
+| Adaptação | Emprego informal | 19,8 % do emprego | 2018 | 33º de 111 |
+| Construção | Produto por pessoa ocupada | 111.234,5 dólares PPC constantes de 2021 | 2025 | 17º de 133 |
 
 ## Agenda de medição
 

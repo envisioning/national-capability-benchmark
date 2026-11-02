@@ -335,6 +335,7 @@ export const EN: Lexicon = {
      * COUNTRY_ROW_FACTS in the model (D136). */
     rowFacts: {
       household_survey: 'For {countryTopic}, the ILOSTAT series comes from {survey}, a household survey.',
+      household_survey_unnamed: 'For {countryTopic}, the ILOSTAT series comes from a household survey.',
       household_survey_unreliable:
         'For {countryTopic}, the ILOSTAT series comes from a household survey, and the ILO flags the value unreliable.',
       urban_survey_unreliable:

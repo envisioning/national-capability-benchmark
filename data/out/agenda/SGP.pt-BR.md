@@ -2,20 +2,20 @@
 
 *Gerada em 2026-11-02*
 
-A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, sem classificação geral, e cada pontuação traz ao lado a solidez da evidência. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma pontuação.
+A escala reúne 135 países. Cada dimensão recebe uma pontuação de 0 a 100, sem classificação geral, e cada pontuação traz ao lado a solidez da evidência. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma pontuação.
 
 ## Onde Singapura está
 
 | Dimensão | Pontuação | Solidez | Tendência |
 | --- | --- | --- | --- |
 | Antecipação | 82,2 | 0,46 (utilizável) | +17 em 10 anos, com base em 2 indicadores |
-| Agência | 74,9 | 0,63 (utilizável) | sem tendência comparável |
-| Coordenação | 70,9 | 0,47 (utilizável) | sem tendência comparável |
+| Agência | 75,8 | 0,63 (utilizável) | sem tendência comparável |
+| Coordenação | 71 | 0,47 (utilizável) | sem tendência comparável |
 | Confiança | 67,2 | 0,54 (utilizável) | sem tendência comparável |
 | Aprendizagem | 84,2 | 0,54 (utilizável) | sem tendência comparável |
-| Experimentação | 63,4 | 0,48 (utilizável) | +0,1 em 10 anos, com base em 3 indicadores |
-| Adaptação | 72,6 | 0,62 (utilizável) | sem tendência comparável |
-| Construção | 76,1 | 0,63 (utilizável) | +6,5 em 10 anos, com base em 3 indicadores |
+| Experimentação | 63,6 | 0,48 (utilizável) | -0,1 em 10 anos, com base em 3 indicadores |
+| Adaptação | 72,1 | 0,62 (utilizável) | sem tendência comparável |
+| Construção | 79,2 | 0,63 (utilizável) | +7 em 10 anos, com base em 3 indicadores |
 | Propósito compartilhado | 32,3 | 0,28 (fraca) | sem tendência comparável |
 
 ## Dimensões com evidência fraca
@@ -36,12 +36,12 @@ Estas dimensões têm pontuação de pelo menos 50, com evidência utilizável.
 
 - Aprendizagem: 84,2, solidez utilizável
 - Antecipação: 82,2, solidez utilizável
-- Construção: 76,1, solidez utilizável
-- Agência: 74,9, solidez utilizável
-- Adaptação: 72,6, solidez utilizável
-- Coordenação: 70,9, solidez utilizável
+- Construção: 79,2, solidez utilizável
+- Agência: 75,8, solidez utilizável
+- Adaptação: 72,1, solidez utilizável
+- Coordenação: 71, solidez utilizável
 - Confiança: 67,2, solidez utilizável
-- Experimentação: 63,4, solidez utilizável
+- Experimentação: 63,6, solidez utilizável
 
 ## Com o que Singapura conta
 
@@ -49,19 +49,19 @@ As condições descrevem com o que um país conta: infraestrutura, acesso, dinhe
 
 | Dimensão | Condição | Valor | Ano | Posição |
 | --- | --- | --- | --- | --- |
-| Antecipação | Dispêndio em P&D | 1,8 % do PIB | 2022 | 21º de 118 |
-| Antecipação | Pesquisadores em P&D | 8.781,7 por milhão de pessoas | 2022 | 4º de 114 |
-| Antecipação | Servidores de internet seguros | 209.665,5 por milhão de pessoas | 2024 | 3º de 125 |
-| Agência | Pessoas que usam a internet | 94,4 % da população | 2024 | 17º de 125 |
-| Agência | Adultos com conta financeira | 98 % das pessoas com 15 anos ou mais | 2024 | 21º de 122 |
-| Agência | Crédito ao setor privado | 128,4 % do PIB | 2020 | 10º de 124 |
-| Aprendizagem | Matrícula no ensino superior | 97,3 % (taxa bruta) | 2023 | 9º de 124 |
-| Aprendizagem | Dispêndio público em educação | 2,2 % do PIB | 2024 | 111º de 125 |
-| Aprendizagem | Educação profissional no ensino secundário | 11,6 % das matrículas no ensino secundário | 2009 | 61º de 125 |
-| Adaptação | Participação na força de trabalho | 77 % das pessoas com 15 anos ou mais | 2025 | 33º de 125 |
-| Adaptação | Assinaturas de banda larga fixa | 27,8 por 100 pessoas | 2024 | 45º de 125 |
-| Adaptação | Perdas na transmissão de eletricidade | 0,2 % da produção | 2024 | 1º de 117 |
-| Construção | Produto por pessoa ocupada | 233.454,4 dólares PPC constantes de 2021 | 2025 | 2º de 123 |
+| Antecipação | Dispêndio em P&D | 1,8 % do PIB | 2022 | 21º de 123 |
+| Antecipação | Pesquisadores em P&D | 8.781,7 por milhão de pessoas | 2022 | 4º de 118 |
+| Antecipação | Servidores de internet seguros | 209.665,5 por milhão de pessoas | 2024 | 3º de 135 |
+| Agência | Pessoas que usam a internet | 94,4 % da população | 2024 | 17º de 135 |
+| Agência | Adultos com conta financeira | 98 % das pessoas com 15 anos ou mais | 2024 | 21º de 131 |
+| Agência | Crédito ao setor privado | 128,4 % do PIB | 2020 | 10º de 134 |
+| Aprendizagem | Matrícula no ensino superior | 97,3 % (taxa bruta) | 2023 | 9º de 134 |
+| Aprendizagem | Dispêndio público em educação | 2,2 % do PIB | 2024 | 120º de 135 |
+| Aprendizagem | Educação profissional no ensino secundário | 11,6 % das matrículas no ensino secundário | 2009 | 63º de 135 |
+| Adaptação | Participação na força de trabalho | 77 % das pessoas com 15 anos ou mais | 2025 | 34º de 135 |
+| Adaptação | Assinaturas de banda larga fixa | 27,8 por 100 pessoas | 2024 | 45º de 135 |
+| Adaptação | Perdas na transmissão de eletricidade | 0,2 % da produção | 2024 | 1º de 122 |
+| Construção | Produto por pessoa ocupada | 233.454,4 dólares PPC constantes de 2021 | 2025 | 2º de 133 |
 
 ## Agenda de medição
 

@@ -2,20 +2,20 @@
 
 *Gerada em 2026-11-02*
 
-A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, sem classificação geral, e cada pontuação traz ao lado a solidez da evidência. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma pontuação.
+A escala reúne 135 países. Cada dimensão recebe uma pontuação de 0 a 100, sem classificação geral, e cada pontuação traz ao lado a solidez da evidência. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma pontuação.
 
 ## Onde a Bélgica está
 
 | Dimensão | Pontuação | Solidez | Tendência |
 | --- | --- | --- | --- |
 | Antecipação | 70,9 | 0,46 (utilizável) | +10,1 em 10 anos, com base em 2 indicadores |
-| Agência | 65,8 | 0,48 (utilizável) | sem tendência comparável |
-| Coordenação | 93,2 | 0,45 (utilizável) | sem tendência comparável |
+| Agência | 66,3 | 0,48 (utilizável) | sem tendência comparável |
+| Coordenação | 93,3 | 0,45 (utilizável) | sem tendência comparável |
 | Confiança | 79,7 | 0,34 (fraca) | sem tendência comparável |
-| Aprendizagem | 79,6 | 0,55 (utilizável) | sem tendência comparável |
-| Experimentação | 52,9 | 0,28 (fraca) | sem tendência comparável |
-| Adaptação | 70,6 | 0,62 (utilizável) | sem tendência comparável |
-| Construção | 50,5 | 0,63 (utilizável) | +0,1 em 10 anos, com base em 3 indicadores |
+| Aprendizagem | 80,4 | 0,55 (utilizável) | sem tendência comparável |
+| Experimentação | 53 | 0,28 (fraca) | sem tendência comparável |
+| Adaptação | 70,3 | 0,62 (utilizável) | sem tendência comparável |
+| Construção | 52,8 | 0,63 (utilizável) | +2,4 em 10 anos, com base em 3 indicadores |
 | Propósito compartilhado | 76,8 | 0,3 (fraca) | +1,2 em 10 anos, com base em 2 indicadores |
 
 ## Dimensões com evidência fraca
@@ -50,12 +50,12 @@ Quanta cooperação é possível para além do círculo pessoal mais próximo?
 
 Estas dimensões têm pontuação de pelo menos 50, com evidência utilizável.
 
-- Coordenação: 93,2, solidez utilizável
-- Aprendizagem: 79,6, solidez utilizável
+- Coordenação: 93,3, solidez utilizável
+- Aprendizagem: 80,4, solidez utilizável
 - Antecipação: 70,9, solidez utilizável
-- Adaptação: 70,6, solidez utilizável
-- Agência: 65,8, solidez utilizável
-- Construção: 50,5, solidez utilizável
+- Adaptação: 70,3, solidez utilizável
+- Agência: 66,3, solidez utilizável
+- Construção: 52,8, solidez utilizável
 
 ## Com o que a Bélgica conta
 
@@ -63,20 +63,20 @@ As condições descrevem com o que um país conta: infraestrutura, acesso, dinhe
 
 | Dimensão | Condição | Valor | Ano | Posição |
 | --- | --- | --- | --- | --- |
-| Antecipação | Dispêndio em P&D | 3,3 % do PIB | 2023 | 6º de 118 |
-| Antecipação | Pesquisadores em P&D | 5.990,1 por milhão de pessoas | 2023 | 10º de 114 |
-| Antecipação | Servidores de internet seguros | 36.731,9 por milhão de pessoas | 2024 | 24º de 125 |
-| Agência | Pessoas que usam a internet | 95,8 % da população | 2024 | 10º de 125 |
-| Agência | Adultos com conta financeira | 98,2 % das pessoas com 15 anos ou mais | 2024 | 19º de 122 |
-| Agência | Crédito ao setor privado | 68,1 % do PIB | 2024 | 37º de 124 |
-| Aprendizagem | Matrícula no ensino superior | 82,1 % (taxa bruta) | 2023 | 19º de 124 |
-| Aprendizagem | Dispêndio público em educação | 6,3 % do PIB | 2022 | 13º de 125 |
-| Aprendizagem | Educação profissional no ensino secundário | 43,3 % das matrículas no ensino secundário | 2018 | 4º de 125 |
-| Adaptação | Participação na força de trabalho | 71 % das pessoas com 15 anos ou mais | 2025 | 58º de 125 |
-| Adaptação | Assinaturas de banda larga fixa | 44,2 por 100 pessoas | 2024 | 9º de 125 |
-| Adaptação | Perdas na transmissão de eletricidade | 4,5 % da produção | 2025 | 13º de 117 |
-| Adaptação | Emprego informal | 2,4 % do emprego | 2025 | 6º de 102 |
-| Construção | Produto por pessoa ocupada | 147.481,6 dólares PPC constantes de 2021 | 2025 | 6º de 123 |
+| Antecipação | Dispêndio em P&D | 3,3 % do PIB | 2023 | 6º de 123 |
+| Antecipação | Pesquisadores em P&D | 5.990,1 por milhão de pessoas | 2023 | 10º de 118 |
+| Antecipação | Servidores de internet seguros | 36.731,9 por milhão de pessoas | 2024 | 24º de 135 |
+| Agência | Pessoas que usam a internet | 95,8 % da população | 2024 | 10º de 135 |
+| Agência | Adultos com conta financeira | 98,2 % das pessoas com 15 anos ou mais | 2024 | 19º de 131 |
+| Agência | Crédito ao setor privado | 68,1 % do PIB | 2024 | 37º de 134 |
+| Aprendizagem | Matrícula no ensino superior | 82,1 % (taxa bruta) | 2023 | 19º de 134 |
+| Aprendizagem | Dispêndio público em educação | 6,3 % do PIB | 2022 | 14º de 135 |
+| Aprendizagem | Educação profissional no ensino secundário | 43,3 % das matrículas no ensino secundário | 2018 | 4º de 135 |
+| Adaptação | Participação na força de trabalho | 71 % das pessoas com 15 anos ou mais | 2025 | 60º de 135 |
+| Adaptação | Assinaturas de banda larga fixa | 44,2 por 100 pessoas | 2024 | 9º de 135 |
+| Adaptação | Perdas na transmissão de eletricidade | 4,5 % da produção | 2025 | 13º de 122 |
+| Adaptação | Emprego informal | 2,4 % do emprego | 2025 | 6º de 111 |
+| Construção | Produto por pessoa ocupada | 147.481,6 dólares PPC constantes de 2021 | 2025 | 6º de 133 |
 
 ## Agenda de medição
 

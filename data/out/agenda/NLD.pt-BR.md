@@ -2,20 +2,20 @@
 
 *Gerada em 2026-11-02*
 
-A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, sem classificação geral, e cada pontuação traz ao lado a solidez da evidência. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma pontuação.
+A escala reúne 135 países. Cada dimensão recebe uma pontuação de 0 a 100, sem classificação geral, e cada pontuação traz ao lado a solidez da evidência. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma pontuação.
 
 ## Onde os Países Baixos está
 
 | Dimensão | Pontuação | Solidez | Tendência |
 | --- | --- | --- | --- |
 | Antecipação | 76,1 | 0,46 (utilizável) | +9 em 10 anos, com base em 2 indicadores |
-| Agência | 51,6 | 0,27 (fraca) | sem tendência comparável |
-| Coordenação | 89,7 | 0,27 (fraca) | sem tendência comparável |
+| Agência | 52,2 | 0,27 (fraca) | sem tendência comparável |
+| Coordenação | 89,8 | 0,27 (fraca) | sem tendência comparável |
 | Confiança | 89 | 0,21 (muito fraca) | sem tendência comparável |
-| Aprendizagem | 76,2 | 0,55 (utilizável) | sem tendência comparável |
+| Aprendizagem | 77,6 | 0,55 (utilizável) | sem tendência comparável |
 | Experimentação | 52,6 | 0,35 (fraca) | sem tendência comparável |
-| Adaptação | 82,1 | 0,62 (utilizável) | sem tendência comparável |
-| Construção | 55,2 | 0,48 (utilizável) | -0,5 em 10 anos, com base em 3 indicadores |
+| Adaptação | 81,6 | 0,62 (utilizável) | sem tendência comparável |
+| Construção | 55,1 | 0,48 (utilizável) | -0,5 em 10 anos, com base em 3 indicadores |
 | Propósito compartilhado | 81,7 | 0,28 (fraca) | +7,7 em 10 anos, com base em 2 indicadores |
 
 ## Dimensões com evidência fraca
@@ -66,10 +66,10 @@ Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e 
 
 Estas dimensões têm pontuação de pelo menos 50, com evidência utilizável.
 
-- Adaptação: 82,1, solidez utilizável
-- Aprendizagem: 76,2, solidez utilizável
+- Adaptação: 81,6, solidez utilizável
+- Aprendizagem: 77,6, solidez utilizável
 - Antecipação: 76,1, solidez utilizável
-- Construção: 55,2, solidez utilizável
+- Construção: 55,1, solidez utilizável
 
 ## Com o que os Países Baixos conta
 
@@ -77,20 +77,20 @@ As condições descrevem com o que um país conta: infraestrutura, acesso, dinhe
 
 | Dimensão | Condição | Valor | Ano | Posição |
 | --- | --- | --- | --- | --- |
-| Antecipação | Dispêndio em P&D | 2,3 % do PIB | 2023 | 14º de 118 |
-| Antecipação | Pesquisadores em P&D | 6.563,3 por milhão de pessoas | 2023 | 8º de 114 |
-| Antecipação | Servidores de internet seguros | 198.682,4 por milhão de pessoas | 2024 | 4º de 125 |
-| Agência | Pessoas que usam a internet | 97 % da população | 2024 | 8º de 125 |
-| Agência | Adultos com conta financeira | 99,2 % das pessoas com 15 anos ou mais | 2024 | 5º de 122 |
-| Agência | Crédito ao setor privado | 82,4 % do PIB | 2024 | 23º de 124 |
-| Aprendizagem | Matrícula no ensino superior | 86,6 % (taxa bruta) | 2023 | 15º de 124 |
-| Aprendizagem | Dispêndio público em educação | 5,2 % do PIB | 2022 | 36º de 125 |
-| Aprendizagem | Educação profissional no ensino secundário | 37,4 % das matrículas no ensino secundário | 2018 | 7º de 125 |
-| Adaptação | Participação na força de trabalho | 85,6 % das pessoas com 15 anos ou mais | 2025 | 2º de 125 |
-| Adaptação | Assinaturas de banda larga fixa | 43 por 100 pessoas | 2024 | 11º de 125 |
-| Adaptação | Perdas na transmissão de eletricidade | 3,5 % da produção | 2025 | 5º de 117 |
-| Adaptação | Emprego informal | 5,1 % do emprego | 2025 | 21º de 102 |
-| Construção | Produto por pessoa ocupada | 129.804,6 dólares PPC constantes de 2021 | 2025 | 10º de 123 |
+| Antecipação | Dispêndio em P&D | 2,3 % do PIB | 2023 | 14º de 123 |
+| Antecipação | Pesquisadores em P&D | 6.563,3 por milhão de pessoas | 2023 | 8º de 118 |
+| Antecipação | Servidores de internet seguros | 198.682,4 por milhão de pessoas | 2024 | 4º de 135 |
+| Agência | Pessoas que usam a internet | 97 % da população | 2024 | 8º de 135 |
+| Agência | Adultos com conta financeira | 99,2 % das pessoas com 15 anos ou mais | 2024 | 5º de 131 |
+| Agência | Crédito ao setor privado | 82,4 % do PIB | 2024 | 23º de 134 |
+| Aprendizagem | Matrícula no ensino superior | 86,6 % (taxa bruta) | 2023 | 15º de 134 |
+| Aprendizagem | Dispêndio público em educação | 5,2 % do PIB | 2022 | 40º de 135 |
+| Aprendizagem | Educação profissional no ensino secundário | 37,4 % das matrículas no ensino secundário | 2018 | 7º de 135 |
+| Adaptação | Participação na força de trabalho | 85,6 % das pessoas com 15 anos ou mais | 2025 | 2º de 135 |
+| Adaptação | Assinaturas de banda larga fixa | 43 por 100 pessoas | 2024 | 11º de 135 |
+| Adaptação | Perdas na transmissão de eletricidade | 3,5 % da produção | 2025 | 5º de 122 |
+| Adaptação | Emprego informal | 5,1 % do emprego | 2025 | 21º de 111 |
+| Construção | Produto por pessoa ocupada | 129.804,6 dólares PPC constantes de 2021 | 2025 | 10º de 133 |
 
 ## Agenda de medição
 

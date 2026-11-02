@@ -205,7 +205,7 @@ const RAW: Raw[] = [
     direction: 'higher_better',
     source: WB('IC.BRE.BE.P3'),
     ingest: 'worldbank',
-    notes: 'Activation energy, measured directly: the third pillar of B-READY business entry, which replaces time to start a business (D167). The World Bank publishes a score, not days, and the score adds the registration cost and the route for a foreign firm, so a cheap but slow registration and a fast but costly one can score alike. B-READY covered 74 of 125 countries in the 2025 round, and the countries it has not reached have no value.',
+    notes: 'Activation energy, measured directly: the third pillar of B-READY business entry, which replaces time to start a business (D167). The World Bank publishes a score, not days, and the score adds the registration cost and the route for a foreign firm, so a cheap but slow registration and a fast but costly one can score alike. B-READY covered 82 of 135 countries in the 2025 round, and the countries it has not reached have no value.',
     wealthProxyPrior: 0.2,
   },
   {
@@ -372,7 +372,7 @@ const RAW: Raw[] = [
     direction: 'higher_better',
     source: WB('IC.BRE.IT.P3'),
     ingest: 'worldbank',
-    notes: 'Observable throughput of several agencies acting together at the border: the third pillar of B-READY international trade, which replaces border compliance time to export (D167). It is a score, not hours, and it adds imports, compliance cost and goods ordered online. The World Bank reads it from firm surveys, where Doing Business asked experts about one standard shipment. The series note also names participation in digital trade and perceived obstacles to trade; the 2023 scoring table weighed only time and cost, and the revised weights were not read. B-READY covered 74 of 125 countries in the 2025 round.',
+    notes: 'Observable throughput of several agencies acting together at the border: the third pillar of B-READY international trade, which replaces border compliance time to export (D167). It is a score, not hours, and it adds imports, compliance cost and goods ordered online. The World Bank reads it from firm surveys, where Doing Business asked experts about one standard shipment. The series note also names participation in digital trade and perceived obstacles to trade; the 2023 scoring table weighed only time and cost, and the revised weights were not read. B-READY covered 82 of 135 countries in the 2025 round.',
     wealthProxyPrior: 0.3,
   },
   {
@@ -386,7 +386,7 @@ const RAW: Raw[] = [
     transform: 'distance_from_100',
     source: WB('GF.XPD.BUDG.ZS'),
     ingest: 'worldbank',
-    notes: 'Observable alignment between an approved public plan and what government spent. The API covers 113 of 125 countries, with a latest year between 2016 and 2024. Values above and below 100 both indicate deviation, so the transform measures absolute distance from the approved budget rather than rewarding overspending. See D55.',
+    notes: 'Observable alignment between an approved public plan and what government spent. The API covers 123 of 135 countries, with a latest year between 2015 and 2024; the Central African Republic\'s last value, 2009, is too old to count (D159). Values above and below 100 both indicate deviation, so the transform measures absolute distance from the approved budget rather than rewarding overspending. See D55.',
     wealthProxyPrior: 0.15,
   },
   {
@@ -487,7 +487,7 @@ const RAW: Raw[] = [
     direction: 'higher_better',
     source: WB('IC.BRE.DR.P3'),
     ingest: 'worldbank',
-    notes: 'Confidence in contracts, measured as court throughput rather than opinion: the third pillar of B-READY dispute resolution, which replaces time to enforce a contract (D167). It is a score, not days, and it adds cost, the reliability of the process and the recognition of a decision. B-READY covered 74 of 125 countries in the 2025 round.',
+    notes: 'Confidence in contracts, measured as court throughput rather than opinion: the third pillar of B-READY dispute resolution, which replaces time to enforce a contract (D167). It is a score, not days, and it adds cost, the reliability of the process and the recognition of a decision. B-READY covered 82 of 135 countries in the 2025 round.',
     wealthProxyPrior: 0.2,
   },
   {
@@ -855,7 +855,7 @@ const RAW: Raw[] = [
     direction: 'higher_better',
     source: WB('IC.BRE.BI.P3'),
     ingest: 'worldbank',
-    notes: 'How cheaply a failed venture can end, measured in practice: the third pillar of B-READY business insolvency, which times and prices liquidation and reorganization in court. It is the observable substitute for tolerance of failure (D173). A score of 0 is a value, not a missing figure: the World Bank gives 0 when no liquidation and no reorganization closed in three years, so the formal exit is not in use. A country where only one of the two proceedings had no cases scores at most 50, and the published series does not show which. B-READY covered 74 of 125 countries in the 2025 round.',
+    notes: 'How cheaply a failed venture can end, measured in practice: the third pillar of B-READY business insolvency, which times and prices liquidation and reorganization in court. It is the observable substitute for tolerance of failure (D173). A score of 0 is a value, not a missing figure: the World Bank gives 0 when no liquidation and no reorganization closed in three years, so the formal exit is not in use. A country where only one of the two proceedings had no cases scores at most 50, and the published series does not show which. B-READY covered 82 of 135 countries in the 2025 round.',
     wealthProxyPrior: 0.2,
   },
   {
@@ -1155,7 +1155,7 @@ const RAW: Raw[] = [
     direction: 'higher_better',
     source: WB('IC.BRE.US.P3'),
     ingest: 'worldbank',
-    notes: 'Small-scale infrastructure delivery, measured end to end: the third pillar of B-READY utility services, which replaces electricity connection speed (D171). It is a score, not days, and it adds water and internet connections and the reliability of supply to the grid connection the old row read, so a fast connection to an unreliable grid and a slow one to a reliable grid can score alike. B-READY covered 74 of 125 countries in the 2025 round, and the countries it has not reached have no value.',
+    notes: 'Small-scale infrastructure delivery, measured end to end: the third pillar of B-READY utility services, which replaces electricity connection speed (D171). It is a score, not days, and it adds water and internet connections and the reliability of supply to the grid connection the old row read, so a fast connection to an unreliable grid and a slow one to a reliable grid can score alike. B-READY covered 82 of 135 countries in the 2025 round, and the countries it has not reached have no value.',
     wealthProxyPrior: 0.25,
   },
   {

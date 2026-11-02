@@ -2,7 +2,7 @@
 
 *Gerada em 2026-11-02*
 
-A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, sem classificação geral, e cada pontuação traz ao lado a solidez da evidência. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma pontuação.
+A escala reúne 135 países. Cada dimensão recebe uma pontuação de 0 a 100, sem classificação geral, e cada pontuação traz ao lado a solidez da evidência. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma pontuação.
 
 ## Onde os Estados Unidos está
 
@@ -12,10 +12,10 @@ A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 | Agência | 73,6 | 0,44 (fraca) | sem tendência comparável |
 | Coordenação | 79 | 0,29 (fraca) | sem tendência comparável |
 | Confiança | 70,4 | 0,55 (utilizável) | sem tendência comparável |
-| Aprendizagem | 61,6 | 0,55 (utilizável) | sem tendência comparável |
-| Experimentação | 52,7 | 0,64 (utilizável) | sem tendência comparável |
-| Adaptação | 72,8 | 0,62 (utilizável) | sem tendência comparável |
-| Construção | 62,5 | 0,59 (utilizável) | +0,4 em 10 anos, com base em 3 indicadores |
+| Aprendizagem | 63,1 | 0,55 (utilizável) | sem tendência comparável |
+| Experimentação | 52,8 | 0,64 (utilizável) | sem tendência comparável |
+| Adaptação | 72,4 | 0,62 (utilizável) | sem tendência comparável |
+| Construção | 62,4 | 0,59 (utilizável) | +0,4 em 10 anos, com base em 3 indicadores |
 | Propósito compartilhado | 53,9 | 0,43 (fraca) | -0,8 em 10 anos, com base em 2 indicadores |
 
 ## Dimensões com evidência fraca
@@ -50,12 +50,12 @@ Em que medida pessoas e organizações conseguem transformar intenção em açã
 
 Estas dimensões têm pontuação de pelo menos 50, com evidência utilizável.
 
-- Adaptação: 72,8, solidez utilizável
+- Adaptação: 72,4, solidez utilizável
 - Antecipação: 70,6, solidez utilizável
 - Confiança: 70,4, solidez utilizável
-- Construção: 62,5, solidez utilizável
-- Aprendizagem: 61,6, solidez utilizável
-- Experimentação: 52,7, solidez utilizável
+- Aprendizagem: 63,1, solidez utilizável
+- Construção: 62,4, solidez utilizável
+- Experimentação: 52,8, solidez utilizável
 
 ## Com o que os Estados Unidos conta
 
@@ -63,19 +63,19 @@ As condições descrevem com o que um país conta: infraestrutura, acesso, dinhe
 
 | Dimensão | Condição | Valor | Ano | Posição |
 | --- | --- | --- | --- | --- |
-| Antecipação | Dispêndio em P&D | 3,4 % do PIB | 2023 | 4º de 118 |
-| Antecipação | Pesquisadores em P&D | 4.937,5 por milhão de pessoas | 2022 | 20º de 114 |
-| Antecipação | Servidores de internet seguros | 196.616,1 por milhão de pessoas | 2024 | 5º de 125 |
-| Agência | Pessoas que usam a internet | 94,7 % da população | 2024 | 16º de 125 |
-| Agência | Adultos com conta financeira | 97 % das pessoas com 15 anos ou mais | 2024 | 23º de 122 |
-| Agência | Crédito ao setor privado | 201,3 % do PIB | 2025 | 1º de 124 |
-| Aprendizagem | Matrícula no ensino superior | 79,4 % (taxa bruta) | 2022 | 25º de 124 |
-| Aprendizagem | Dispêndio público em educação | 5,4 % do PIB | 2021 | 24º de 125 |
-| Aprendizagem | Educação profissional no ensino secundário | 0 % das matrículas no ensino secundário | 1996 | 123º de 125 |
-| Adaptação | Participação na força de trabalho | 73,7 % das pessoas com 15 anos ou mais | 2025 | 51º de 125 |
-| Adaptação | Assinaturas de banda larga fixa | 38,9 por 100 pessoas | 2024 | 18º de 125 |
-| Adaptação | Perdas na transmissão de eletricidade | 5,3 % da produção | 2025 | 21º de 117 |
-| Construção | Produto por pessoa ocupada | 156.983,2 dólares PPC constantes de 2021 | 2025 | 5º de 123 |
+| Antecipação | Dispêndio em P&D | 3,4 % do PIB | 2023 | 4º de 123 |
+| Antecipação | Pesquisadores em P&D | 4.937,5 por milhão de pessoas | 2022 | 20º de 118 |
+| Antecipação | Servidores de internet seguros | 196.616,1 por milhão de pessoas | 2024 | 5º de 135 |
+| Agência | Pessoas que usam a internet | 94,7 % da população | 2024 | 16º de 135 |
+| Agência | Adultos com conta financeira | 97 % das pessoas com 15 anos ou mais | 2024 | 23º de 131 |
+| Agência | Crédito ao setor privado | 201,3 % do PIB | 2025 | 1º de 134 |
+| Aprendizagem | Matrícula no ensino superior | 79,4 % (taxa bruta) | 2022 | 25º de 134 |
+| Aprendizagem | Dispêndio público em educação | 5,4 % do PIB | 2021 | 27º de 135 |
+| Aprendizagem | Educação profissional no ensino secundário | 0 % das matrículas no ensino secundário | 1996 | 133º de 135 |
+| Adaptação | Participação na força de trabalho | 73,7 % das pessoas com 15 anos ou mais | 2025 | 52º de 135 |
+| Adaptação | Assinaturas de banda larga fixa | 38,9 por 100 pessoas | 2024 | 18º de 135 |
+| Adaptação | Perdas na transmissão de eletricidade | 5,3 % da produção | 2025 | 21º de 122 |
+| Construção | Produto por pessoa ocupada | 156.983,2 dólares PPC constantes de 2021 | 2025 | 5º de 133 |
 
 ## Agenda de medição
 

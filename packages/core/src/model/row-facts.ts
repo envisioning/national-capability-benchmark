@@ -24,6 +24,8 @@
  *
  * - `household_survey`: the series comes from a household survey rather than
  *   a labour force survey. `{survey}` names it.
+ * - `household_survey_unnamed`: the same, where the publisher labels the
+ *   survey only as a household survey, so no name is printed.
  * - `household_survey_unreliable`: the same, and the publisher flags the
  *   value unreliable.
  * - `urban_survey_unreliable`: the series comes from a survey covering urban
@@ -34,6 +36,7 @@
  */
 export type RowFactKind =
   | 'household_survey'
+  | 'household_survey_unnamed'
   | 'household_survey_unreliable'
   | 'urban_survey_unreliable'
   | 'flagged_unreliable'
@@ -41,6 +44,7 @@ export type RowFactKind =
 
 export const ROW_FACT_KINDS: readonly RowFactKind[] = [
   'household_survey',
+  'household_survey_unnamed',
   'household_survey_unreliable',
   'urban_survey_unreliable',
   'flagged_unreliable',
@@ -96,6 +100,7 @@ export const COUNTRY_ROW_FACTS: readonly CountryRowFact[] = [
   },
   { iso3: 'KEN', indicatorId: LTU, kind: 'household_survey_unreliable', decisions: ['D120'] },
   { iso3: 'BWA', indicatorId: LTU, kind: 'household_survey_unreliable', decisions: ['D120'] },
+  { iso3: 'CMR', indicatorId: LTU, kind: 'household_survey_unnamed', decisions: ['D120'] },
   {
     iso3: 'ARG',
     indicatorId: LTU,
@@ -108,9 +113,8 @@ export const COUNTRY_ROW_FACTS: readonly CountryRowFact[] = [
   { iso3: 'FRA', indicatorId: LTU, kind: 'flagged_unreliable', decisions: ['D120'] },
   { iso3: 'BEL', indicatorId: LTU, kind: 'flagged_unreliable', decisions: ['D120'] },
   { iso3: 'HRV', indicatorId: LTU, kind: 'flagged_unreliable', decisions: ['D120'] },
-  { iso3: 'JAM', indicatorId: LTU, kind: 'flagged_unreliable', decisions: ['D120'] },
   { iso3: 'MMR', indicatorId: LTU, kind: 'flagged_unreliable', decisions: ['D120'] },
-  { iso3: 'UGA', indicatorId: LTU, kind: 'flagged_unreliable', decisions: ['D120'] },
+  { iso3: 'TLS', indicatorId: LTU, kind: 'flagged_unreliable', decisions: ['D120'] },
   ...['KOR', 'MEX', 'PER', 'PHL', 'SLV', 'URY'].map(
     (iso3): CountryRowFact => ({ iso3, indicatorId: LTU, kind: 'gate_never_passed', decisions: ['D120'] }),
   ),
