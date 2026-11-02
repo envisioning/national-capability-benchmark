@@ -699,13 +699,14 @@ On dataset 10.0.0 the 10-year verdict is unreadable: five dimensions have no
 D22 trend in any country, three read noise, and Experimentation reads moves
 apart on three IP office series that share one source (D177).
 
-**Read:** D22, D138, D174, D175 and D177.
+**Read:** D22, D138, D174, D175, D177 and D179.
 
 **Open:** what moves the verdict is history, not method. A dimension becomes
 readable when two of its rows have values at both ends of the span in 20 or
 more countries, so a source with a back series is worth more here than one
-with a wider current round. A pair rule restricted to different sources needs
-a decision before it is run. A `/thesis` sentence needs its own decision.
+with a wider current round. D179 counts a pair only when the two rows share
+no primary data, decided before its first run. A `/thesis` sentence needs its
+own decision.
 
 ## Country-set changes are a separate project
 

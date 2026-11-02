@@ -9945,3 +9945,82 @@ chart shows that. Each refill of the history moves the published lines.
 **Overturned by.** Evidence that readers quote the reconstruction as observed
 data, or a holdout where the donor rule stops beating the flat comparison.
 Either takes the history back offline until it is fixed.
+
+---
+
+## D179 — Movers counts an indicator pair only when the two rows share no primary data
+
+*Recorded 2026-11-02. Amends (m2) of D175, as D177 asked. Committed before any
+run under it. Changes no score, confidence, frame or dataset version.*
+
+**Decision.** (m2) counts a pair of indicators only when the two rows come
+from different primary data. A pair is left out when:
+
+1. both rows have the same **origin**: the body or system that collects the
+   observations, which is often not the publisher that distributes them; or
+2. both rows are ratios to GDP, because a GDP revision or rebasing moves both.
+
+Origin is a new field, `source.origin`, on every scored row in the registry.
+A scored row without one fails the movers command, so the rule fails closed.
+Today's assignments:
+
+| Origin | Rows |
+| --- | --- |
+| Scopus, through NSF | `sci_articles_per_million` |
+| World Bank Statistical Performance Indicators | `statistical_performance` |
+| World Bank Entrepreneurship Database (business registries) | `new_business_density` |
+| B-READY | `business_entry_efficiency`, `trade_compliance_efficiency`, `dispute_resolution_efficiency`, `insolvency_efficiency`, `utility_connection_efficiency` |
+| Doing Business | `business_start_procedures` |
+| Joint EVS/WVS | `perceived_control`, `interpersonal_trust`, `willingness_to_cooperate_strangers`, `civic_participation` |
+| PEFA assessments | `budget_execution_fidelity` |
+| V-Dem expert coding | `civil_society_strength`, `court_compliance` |
+| World Bank Enterprise Surveys | `bribery_incidence`, `firm_training_incidence` |
+| World Bank Human Capital Index | `human_capital_index` |
+| OpenAlex | `research_citation_impact` |
+| WIPO, from national IP offices | `resident_patents_per_million`, `resident_trademarks_per_million`, `resident_industrial_designs_per_million` |
+| GitHub Innovation Graph | `new_repositories_per_million` |
+| Global Entrepreneurship Monitor | `early_stage_entrepreneurial_activity`, `failure_tolerance` |
+| ILO | `unemployment_rate`, `long_term_unemployment_share` |
+| UN Comtrade, through its compilers | `export_diversification`, `new_export_products_rate`, `high_tech_exports_share`, `economic_complexity` |
+| National accounts | `manufacturing_value_added` |
+| Government finance statistics | `tax_revenue_gdp` |
+| Household surveys, through the World Bank Poverty and Inequality Platform | `income_inequality` |
+
+A ratio to population is not a reason to leave a pair out. Population
+revisions are small next to the changes these rows read.
+
+`MoversCoherence` gains `excludedPairs`, the pairs with enough countries that
+this rule left out, so a reader sees what the rule removed.
+
+**Why.** D175 rests (m2) on one premise: indicators of one dimension do not
+share measurement error, so leftovers that move together mean the dimension
+moved. D177 found that Experimentation's three pairs all come from WIPO, so a
+change in how one office reports moves all three. The same holds where two
+rows read one customs record through different compilers, or one survey wave.
+The rule enforces the premise D175 already stated. It does not add a new one.
+
+**What is known before the run.** This rule is decided after one result, and
+part of its effect can be seen from the registry. On dataset 10.0.0 at 10
+years, every Experimentation pair is WIPO with WIPO, so Experimentation
+becomes unreadable. Building keeps the two pairs with manufacturing value
+added and loses the pair of high-tech exports with economic complexity, which
+both read Comtrade. Anticipation and Shared purpose keep their one pair each.
+No other dimension has a pair. So this rule cannot move the 10-year verdict
+on 10.0.0 away from unreadable. It is fixed now for every later run, when
+more history makes more dimensions readable.
+
+**Cost.**
+
+- Fewer pairs. Adaptability's two ILO rows and its two Comtrade rows can
+  never pair with each other, and the Trust survey rows cannot either.
+- Origin is a judgment at the level of collection. Two rows of one origin can
+  carry independent error, and two origins can share an upstream source this
+  table does not name. The table is in the registry, so a reader can dispute
+  a row.
+- Shared error is wider than origin and GDP. A war, a census or a currency
+  redenomination moves many series at once. No pair rule removes that.
+
+**Overturned by.** Evidence that two rows of one origin carry independent
+measurement error, which would let that pair back in; an upstream source
+shared by two different origins, which adds it to this rule; or a test of
+(m2) that measures shared error directly, which replaces the rule.
