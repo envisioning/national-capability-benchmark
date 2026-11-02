@@ -15,6 +15,8 @@ import {
   LeverageFile as LeverageFileSchema,
   ResidualFile as ResidualFileSchema,
   FactorHistoryFile as FactorHistoryFileSchema,
+  HistoryCountryFile as HistoryCountryFileSchema,
+  HistoryIndexFile as HistoryIndexFileSchema,
   VelocityFile as VelocityFileSchema,
 } from '@ncb/core'
 import { DATA_DIR } from '@ncb/core/node'
@@ -74,6 +76,8 @@ const PATHS = {
   leverage: resolve(DATA_ROOT, 'out/leverage.json'),
   residual: resolve(DATA_ROOT, 'out/residual.json'),
   factorHistory: resolve(DATA_ROOT, 'out/factor-history.json'),
+  historyIndex: resolve(DATA_ROOT, 'out/history/index.json'),
+  history: (iso3: string) => resolve(DATA_ROOT, 'out/history', `${iso3.toUpperCase()}.json`),
 }
 
 async function readJson<T>(path: string): Promise<T | null> {
@@ -131,6 +135,20 @@ export async function loadResidual(): Promise<ResidualFile | null> {
 export async function loadFactorHistory(): Promise<FactorHistoryFileSchema | null> {
   const raw = await readJson<unknown>(PATHS.factorHistory)
   const parsed = FactorHistoryFileSchema.safeParse(raw)
+  return parsed.success ? parsed.data : null
+}
+
+/** One country's reconstructed history, validated. Offline: it never feeds a score. See D174. */
+export async function loadHistory(iso3: string): Promise<HistoryCountryFileSchema | null> {
+  const raw = await readJson<unknown>(PATHS.history(iso3))
+  const parsed = HistoryCountryFileSchema.safeParse(raw)
+  return parsed.success ? parsed.data : null
+}
+
+/** The cohort medians and the holdout test behind every history file. See D174. */
+export async function loadHistoryIndex(): Promise<HistoryIndexFileSchema | null> {
+  const raw = await readJson<unknown>(PATHS.historyIndex)
+  const parsed = HistoryIndexFileSchema.safeParse(raw)
   return parsed.success ? parsed.data : null
 }
 

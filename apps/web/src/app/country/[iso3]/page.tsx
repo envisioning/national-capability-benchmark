@@ -18,6 +18,7 @@ import { CompareRadar } from '@/components/views/CompareRadar'
 import { CheckList } from '@/components/views/CheckList'
 import { ConditionList } from '@/components/views/ConditionList'
 import { CountryDimensionTable } from '@/components/views/CountryDimensionTable'
+import { CountryHistoryChart } from '@/components/views/CountryHistoryChart'
 import { CountryIndicatorList } from '@/components/views/CountryIndicatorList'
 import { EvidenceList } from '@/components/views/EvidenceList'
 import Link from 'next/link'
@@ -36,7 +37,15 @@ import {
 } from '@/components/ui'
 import { capabilityHref, countryCsvHref, delphiHref, glossaryHref, limitsHref, ogCountryHref } from '@/lib/links'
 import { loadAgenda } from '@/lib/agenda'
-import { loadCountry, loadDelphiRun, loadDisputes, loadEvidence, loadIndex } from '@/lib/data'
+import {
+  loadCountry,
+  loadDelphiRun,
+  loadDisputes,
+  loadEvidence,
+  loadHistory,
+  loadHistoryIndex,
+  loadIndex,
+} from '@/lib/data'
 import { toProfile } from '@/lib/profile'
 
 export const dynamic = 'force-dynamic'
@@ -63,12 +72,14 @@ export default async function CountryPage({ params }: { params: Promise<{ iso3: 
   const { iso3 } = await params
   const country = await loadCountry(iso3)
   if (!country) notFound()
-  const [data, agenda, loadedRun, allEvidence, disputes] = await Promise.all([
+  const [data, agenda, loadedRun, allEvidence, disputes, history, historyIndex] = await Promise.all([
     loadIndex(),
     loadAgenda(country.iso3),
     loadDelphiRun(),
     loadEvidence(),
     loadDisputes(),
+    loadHistory(country.iso3),
+    loadHistoryIndex(),
   ])
   /* A mock run exercises the pipeline and is never presented as evidence, so
    * the page treats it as no run at all. See the provenance invariant. */
@@ -83,6 +94,9 @@ export default async function CountryPage({ params }: { params: Promise<{ iso3: 
   const contestedCounts = contestedDisputeCounts(disputes)
   const meta = COUNTRIES.find((c) => c.iso3 === country.iso3)
   const others = (data?.countries ?? []).filter((c) => c.iso3 !== country.iso3)
+  const historyCohorts = (historyIndex?.cohorts ?? []).filter(
+    (c) => c.id === 'all' || c.members.includes(country.iso3),
+  )
   const countryHasEstimates = (run?.cellEstimates ?? []).some((e) => e.iso3 === country.iso3)
 
   return (
@@ -179,6 +193,15 @@ export default async function CountryPage({ params }: { params: Promise<{ iso3: 
               hint={DIMENSION_QUESTIONS[d]}
               icon={<Icon name={DIMENSION_ICON[d]} size={22} />}
             >
+              {history?.dimensions[d] ? (
+                <CountryHistoryChart
+                  history={history.dimensions[d]}
+                  dimension={d}
+                  label={DIMENSION_LABELS[d]}
+                  country={country.country}
+                  cohorts={historyCohorts}
+                />
+              ) : null}
               {dim.momentum.length > 0 ? (
                 <div className="mb-6 space-y-3">
                   {dim.momentum.map((m) => (

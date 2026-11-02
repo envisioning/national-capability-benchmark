@@ -9,6 +9,19 @@ The entries before App 1.0.0 are retrospective, high-level summaries
 reconstructed from the repository history. They document explicit version bumps
 and may skip versions that were never committed.
 
+## App 1.35.0 — 2026-11-02
+
+- **Country pages show each capability since 2000.** Every capability on a
+  country page has a chart of its score for each year, measured on today's
+  indicators. Some past years have no published value, and the benchmark
+  fills them in. The shaded band shows how far off those filled years can
+  be. The dashed line uses only the values that existed in each year. A
+  strip under the chart marks the years in which a model filled a missing
+  value. Under the chart, the 10- and 20-year change appears beside the
+  median change for all countries, for the country's region and for its
+  income group in 2000. The history is provisional and does not change any
+  score. Decision D174.
+
 ## App 1.34.0 — 2026-11-02
 
 - **Ten more country pages.** Cameroon, Chad, Senegal, Sierra Leone, Togo,
