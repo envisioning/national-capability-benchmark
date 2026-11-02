@@ -726,7 +726,7 @@ year, not because the source has no history.
 | `new_export_products_rate` | UN Comtrade | 135 | 0 | 2024 | derivable from the pinned Growth Lab file for earlier windows |
 | `research_citation_impact` | OpenAlex | 135 | 0 | 2021 | queryable by publication year |
 | `long_term_unemployment_share` | ILO | 99 | 0 | 2010 | ILOSTAT series by year |
-| `perceived_control`, `interpersonal_trust`, `willingness_to_cooperate_strangers`, `civic_participation` | Joint EVS/WVS | 72 | 0 | 2022 | earlier waves in the same release |
+| `perceived_control`, `interpersonal_trust`, `willingness_to_cooperate_strangers`, `civic_participation` | Joint EVS/WVS | 72 | 0 | 2022 | earlier waves are separate files; the EVS trend file needs a GESIS registration, closed under D154, so each wave's open status needs a check first |
 
 B-READY (one round), the GitHub Innovation Graph (from 2020) and GEM (held,
 D125) have no back series to keep.
@@ -735,13 +735,14 @@ What each backfill would unlock, by the D22 and D179 rules:
 
 - **Coordination:** V-Dem with PEFA (102 countries at both ends) gives one
   cross-origin pair.
-- **Trust:** V-Dem with Enterprise Surveys (72) gives one pair, and EVS/WVS
-  adds pairs with both.
+- **Trust:** V-Dem with Enterprise Surveys (72) gives one pair. EVS/WVS
+  adds pairs only if an open source for its earlier waves exists.
 - **Adaptability:** UNCTAD or Growth Lab with the ILO rows gives up to four
   pairs. The two Comtrade rows never pair with each other, nor the two ILO
   rows.
 - **Learning:** OpenAlex with Enterprise Surveys gives one pair.
-- **Agency:** EVS/WVS with new business density (110) gives one pair.
+- **Agency:** EVS/WVS with new business density (110) gives one pair, on
+  the same condition.
 
 **Cost:** each backfill changes the observation store, so D22 momentum and
 the D174 history move on country pages, which is a dataset release. Scores
