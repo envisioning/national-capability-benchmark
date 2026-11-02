@@ -708,6 +708,49 @@ with a wider current round. D179 counts a pair only when the two rows share
 no primary data, decided before its first run. A `/thesis` sentence needs its
 own decision.
 
+### MOVERS-1: give the pinned adapters their back series
+
+**Goal:** make dimensions readable in the movers analysis by keeping the
+history the sources already publish.
+
+**Status:** triaged 2026-11-02, nothing built. At 10 years (2016 to 2026),
+a row counts when it has a value at both ends in 20 or more countries. Most
+unreadable dimensions miss that because an adapter keeps only the latest
+year, not because the source has no history.
+
+| Row | Origin | Countries now | At both ends | First year stored | Source history |
+| --- | --- | ---: | ---: | ---: | --- |
+| `civil_society_strength` | V-Dem | 135 | 0 | 2025 | country-year file reaches far back |
+| `court_compliance` | V-Dem | 135 | 0 | 2025 | same file |
+| `export_diversification` | UN Comtrade | 135 | 0 | 2025 | UNCTADstat series from 1995 |
+| `new_export_products_rate` | UN Comtrade | 135 | 0 | 2024 | derivable from the pinned Growth Lab file for earlier windows |
+| `research_citation_impact` | OpenAlex | 135 | 0 | 2021 | queryable by publication year |
+| `long_term_unemployment_share` | ILO | 99 | 0 | 2010 | ILOSTAT series by year |
+| `perceived_control`, `interpersonal_trust`, `willingness_to_cooperate_strangers`, `civic_participation` | Joint EVS/WVS | 72 | 0 | 2022 | earlier waves in the same release |
+
+B-READY (one round), the GitHub Innovation Graph (from 2020) and GEM (held,
+D125) have no back series to keep.
+
+What each backfill would unlock, by the D22 and D179 rules:
+
+- **Coordination:** V-Dem with PEFA (102 countries at both ends) gives one
+  cross-origin pair.
+- **Trust:** V-Dem with Enterprise Surveys (72) gives one pair, and EVS/WVS
+  adds pairs with both.
+- **Adaptability:** UNCTAD or Growth Lab with the ILO rows gives up to four
+  pairs. The two Comtrade rows never pair with each other, nor the two ILO
+  rows.
+- **Learning:** OpenAlex with Enterprise Surveys gives one pair.
+- **Agency:** EVS/WVS with new business density (110) gives one pair.
+
+**Cost:** each backfill changes the observation store, so D22 momentum and
+the D174 history move on country pages, which is a dataset release. Scores
+do not move, because scoring reads the latest value. Each adapter needs its
+pin restated and the D25 revision log.
+
+**Open:** V-Dem first. It reaches two dimensions from one pinned file that
+the adapter already reads, and Coordination has no other row with history.
+
 ## Country-set changes are a separate project
 
 Do not add countries while closing a source gap unless the user explicitly
