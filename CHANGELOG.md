@@ -9,6 +9,19 @@ The entries before App 1.0.0 are retrospective, high-level summaries
 reconstructed from the repository history. They document explicit version bumps
 and may skip versions that were never committed.
 
+## App 1.37.0 — 2026-11-02
+
+- **A history page for every country and for groups of countries.** Under
+  Countries, History shows how each capability moved since 2000 for all
+  countries, for Latin America and for four income groups set by income in
+  2000. A cohort's line is the median of its countries, with the middle half
+  of them shaded around it. A table gives every cohort's 10- and 20-year
+  change with its error band, and another gives the change for each of the
+  135 countries, in alphabetical order. The page also shows how wrong each
+  way of filling a missing year was when tested on published values. The
+  history is provisional and does not change any score. Decisions D174 and
+  D178.
+
 ## App 1.36.0 — 2026-11-02
 
 - **Model panel estimates are back, on all 135 countries.** Three Claude

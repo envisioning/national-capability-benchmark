@@ -15,6 +15,7 @@ import {
   compareBaseHref,
   contactHref,
   countriesHref,
+  countriesHistoryHref,
   exploreHref,
   gapsHref,
   institutionNetworkHref,
@@ -48,6 +49,7 @@ export async function GET(): Promise<Response> {
 
   add('/')
   add(countriesHref)
+  add(countriesHistoryHref)
   /* The bare comparison page only. A combination is a reader's selection, not
      a published page, and 135 countries make more pairs than a crawl map should
      carry. See D70. */

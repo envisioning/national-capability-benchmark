@@ -145,6 +145,18 @@ export async function loadHistory(iso3: string): Promise<HistoryCountryFileSchem
   return parsed.success ? parsed.data : null
 }
 
+/** Every country's reconstructed history, for the cohort page. See D178. */
+export async function loadAllHistories(): Promise<HistoryCountryFileSchema[]> {
+  const dir = dirname(PATHS.historyIndex)
+  const names = await readdir(dir).catch(() => [] as string[])
+  const files = await Promise.all(
+    names
+      .filter((n) => /^[A-Z]{3}\.json$/.test(n))
+      .map((n) => loadHistory(n.slice(0, 3))),
+  )
+  return files.filter((f): f is HistoryCountryFileSchema => f !== null)
+}
+
 /** The cohort medians and the holdout test behind every history file. See D174. */
 export async function loadHistoryIndex(): Promise<HistoryIndexFileSchema | null> {
   const raw = await readJson<unknown>(PATHS.historyIndex)

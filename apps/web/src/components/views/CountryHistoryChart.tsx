@@ -1,7 +1,8 @@
 import type { HistoryCohort, HistoryDelta, HistoryDimension, Dimension } from '@ncb/core'
 import { CHART_INK, CHART_STROKE } from '@/components/chartTokens'
 import { DefineLink } from '@/components/ui'
-import { decisionHref } from '@/lib/links'
+import { countriesHistoryHref, decisionHref } from '@/lib/links'
+import { historyYearTicks as yearTicks, signedPoints as signed } from '@/lib/history'
 import Link from 'next/link'
 
 const WIDTH = 760
@@ -217,6 +218,10 @@ export function CountryHistoryChart({
           <Link href={decisionHref('D174')} className="underline underline-offset-4">
             How it is built
           </Link>
+          ,{' '}
+          <Link href={countriesHistoryHref} className="underline underline-offset-4">
+            every country and cohort
+          </Link>
           .
         </p>
       </div>
@@ -224,23 +229,11 @@ export function CountryHistoryChart({
   )
 }
 
-function signed(value: number): string {
-  if (Math.abs(value) < 0.05) return '0.0'
-  return `${value > 0 ? '+' : '−'}${Math.abs(value).toFixed(1)}`
-}
 
 function crossesZero(d: HistoryDelta): boolean {
   return d.lo <= 0 && d.hi >= 0
 }
 
-function yearTicks(from: number, to: number): number[] {
-  const ticks: number[] = []
-  for (let year = Math.ceil(from / 5) * 5; year <= to; year += 5) ticks.push(year)
-  const lastTick = ticks[ticks.length - 1]
-  if (lastTick !== undefined && to - lastTick < 3) ticks.pop()
-  ticks.push(to)
-  return ticks
-}
 
 function segments<T extends { year: number }>(points: T[]): T[][] {
   const out: T[][] = []

@@ -28,6 +28,9 @@ import {
 /** Every country in the benchmark, each drawn as its nine-dimension shape. */
 export const countriesHref = '/countries'
 
+/** Every country and cohort over time, from the reconstructed history. See D178. */
+export const countriesHistoryHref = '/countries/history'
+
 /** The full country profile. Ground layer, English. */
 export const countryProfileHref = (iso3: string): string => `/country/${iso3}`
 

@@ -9903,3 +9903,45 @@ most real pairs have.
 and two-indicator dimensions, on which (m2) misses either bound; or a pair
 rule restricted to different sources, decided before its result is read,
 which then replaces this reading of Experimentation.
+
+---
+
+## D178 — The reconstructed history is published in the viewer, provisional
+
+*Recorded 2026-11-02. Overturns the clause in D174 that kept the history out
+of the viewer; every other D174 rule stands. App 1.35.0 and the cohort page in
+1.37.0 read `data/out/history`. Changes no score, confidence, frame or dataset
+version.*
+
+**Decision.** The viewer publishes the D174 history on two surfaces.
+
+1. **Each country page** draws, per dimension, the reconstruction with its 10th
+   to 90th percentile band, the replay, and the count of modelled cells for
+   each year. Under it are the 10- and 20-year changes with their bands, beside
+   the median change of each cohort the country belongs to.
+2. **A cohort page** under Countries draws the median reconstruction of each
+   cohort per dimension, with the number of countries behind each median, the
+   cohort deltas with their bands and `relative`, and the holdout table.
+
+The D174 rules hold on every surface. The replay and the reconstruction
+appear together. A reconstruction never appears without its band and its
+modelled count. Every surface labels the history provisional and links
+D174. The history never feeds a score, a confidence, an agenda or a ranking.
+
+**Why.** The question the history answers, how a country and its peers moved,
+is the question readers bring to a benchmark. The band and the modelled count
+show how much of each year is data and how much is fill, so publishing them
+does not show the fill as data. D65's promotion gate covers Velocity and
+Exponential Leverage, which are new scores. This history is today's score
+carried back on today's frame, and its error is measured on a holdout, so
+D65 does not apply to it. The movers analysis of D175 and D177 is a separate
+layer and stays offline.
+
+**Cost.** A reader can still quote the solid line without its band. Where most
+of a basket is modelled, the chart shows the peers' path more than the
+country's. Brazil's Trust basket is mostly modelled before 2026, and its
+chart shows that. Each refill of the history moves the published lines.
+
+**Overturned by.** Evidence that readers quote the reconstruction as observed
+data, or a holdout where the donor rule stops beating the flat comparison.
+Either takes the history back offline until it is fixed.

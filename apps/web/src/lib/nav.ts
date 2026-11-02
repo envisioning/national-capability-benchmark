@@ -10,6 +10,7 @@ import {
   compareBaseHref,
   contactHref,
   countriesHref,
+  countriesHistoryHref,
   countryLayerHref,
   countryLocalHref,
   countryMapHref,
@@ -109,6 +110,7 @@ export const METHOD_PAGES: NavNode[] = [
 export const COUNTRY_INDEX_PAGES: NavNode[] = [
   { href: countriesHref, label: 'All countries', exact: true },
   { href: compareBaseHref, label: 'Compare' },
+  { href: countriesHistoryHref, label: 'History' },
   { href: agendasIndexHref, label: 'Agendas' },
 ]
 

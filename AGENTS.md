@@ -273,15 +273,16 @@ port 3888. That entry starts Next directly and does not use the proxy.
   from `CheckList`: a check is a reading of the capability the model declined
   to score, a condition is not a reading of the capability. Moving a row in or
   out of the role is a decision entry and a major dataset version. See D122.
-- **The reconstructed history is offline and never feeds a score.**
+- **The reconstructed history is provisional and never feeds a score.**
   `buildReconstructedHistory` in `packages/core/src/pipeline/history.ts`
   writes `data/out/history/{ISO3}.json` and `index.json`. Each point carries
   `replay` (values that existed, the basket changes) and `estimate` with
   `lo`/`hi` (today's basket, filled). Never print one without the other, and
   never print an estimate without its band and its `modelled` count. A fill
   rule changes only when it beats the current one on the holdout in
-  `index.json`, and the flat comparison stays published. Nothing in the viewer
-  reads these files. See D174.
+  `index.json`, and the flat comparison stays published. The viewer reads
+  these files on the country page and the cohort page (D178) and nowhere
+  else. Every surface labels the history provisional and links D174. See D174.
 - **The movers analysis is offline and reads only what was observed.**
   `buildMovers` in `packages/core/src/pipeline/movers.ts` writes
   `data/out/history/movers.json`. Change is the D22 matched basket from
