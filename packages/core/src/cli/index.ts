@@ -66,6 +66,7 @@ import { FactorHistoryFile, IndexFile } from '../model/index.js'
 import { writeVelocity } from '../pipeline/velocity.js'
 import { writeLeverage } from '../pipeline/leverage.js'
 import { writeResidual } from '../pipeline/residual.js'
+import { writeHistory } from '../pipeline/history.js'
 import { writeSubnationalOutputs } from '../pipeline/br-subnational.js'
 import { writeInstitutionExplorer } from '../pipeline/institution-explorer-out.js'
 import {
@@ -1091,6 +1092,18 @@ async function main() {
       break
     }
 
+    case 'history': {
+      const output = await writeHistory(CURRENT_YEAR)
+      const covered = output.countries.filter((c) => Object.values(c.dimensions).some(Boolean)).length
+      console.log(
+        `history    -> ${FILES.historyIndex} (${covered} countries, ${output.index.cohorts.length} cohorts, ${output.index.params.fromYear} to ${output.index.params.toYear})`,
+      )
+      for (const row of output.index.validation) {
+        console.log(`  holdout ${row.fill.padEnd(14)} n=${String(row.n).padStart(6)}  rmse ${row.rmse.toFixed(2)}  bias ${row.bias.toFixed(2)}`)
+      }
+      break
+    }
+
     case 'residual': {
       const output = await writeResidual()
       const weak = output.fits.filter((fit) => fit.fitStrength === 'weak')
@@ -1650,6 +1663,7 @@ Start with file 1.
   pnpm bench velocity                     write the provisional five-year velocity fixture
   pnpm bench leverage                     write the provisional leverage fixture
   pnpm bench residual                     write the provisional wealth-residual fixture
+  pnpm bench history                      write the provisional reconstructed history: replay, fill, holdout test, cohorts
   pnpm bench br-subnational [--year 2024]          fetch the registered Brazil subnational series
   pnpm bench institutions [--country BRA]  project the institution map into the explorer feed, one file per lexicon
   pnpm bench evs      fetch                fetch the Joint EVS/WVS items: A165 trust, A173 control, A080_01 charitable membership, G007_34_B trust in strangers, E069_17 court confidence check (alias: trust)

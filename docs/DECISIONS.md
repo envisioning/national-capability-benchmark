@@ -9585,3 +9585,66 @@ so a zero no longer means no closed case; evidence that the pillar's cost
 term mostly reads fixed court fees set by statute rather than the time of the
 process; or the 2026 round leaving the 74 countries' coverage under the
 half-frame gate.
+
+## D174 — A reconstructed history fills the past on a fixed basket, offline, with its error measured
+
+*Recorded 2026-11-02. Extends D22 and D24. Leaves D5 standing for every score.
+New command `bench history`, new files `data/out/history/{ISO3}.json` and
+`data/out/history/index.json`. Changes no score, confidence, frame or dataset
+version.*
+
+**Decision.** Publish, offline and provisional, two yearly series per country
+and dimension from 2000 to the current year, on today's frame.
+
+1. **Replay.** The score the scorer would have published that year: the values
+   in force then, no older than the D159 limit, at least two rows. No value is
+   filled. The row count prints beside every point, because the basket changes
+   from year to year.
+2. **Reconstruction.** The headline basket held fixed in every year. A missing
+   cell is interpolated between two observations, carried forward under the
+   scoring rule, or modelled: the nearest observation of the country's own
+   series plus the median change, over the same years, of the 25 countries
+   that stood nearest to it on that indicator at the anchor year. Donors are
+   chosen by level on the indicator alone, never by income.
+
+The fill error is measured by a holdout: a tenth of the observed cells hidden
+at random, and a fifth of the long series hidden before their median year.
+Each fill bucket's RMSE is the noise of 200 seeded draws, half of it held
+across a cell's years and half drawn each year. Bands are the 10th to 90th
+percentile spread placed around the estimate. The end year carries no fill
+noise and equals the headline score, except where the headline pairs a count
+with a later population than the count's own year.
+
+Cohorts are every country, Latin America, and GDP per capita quartiles fixed
+in 2000, so no country leaves a group by growing. A cohort delta is the median
+of its members' own deltas, and `relative` subtracts the median delta of every
+country, because diffusion lifts almost every country on Anticipation.
+
+**Why.** D22's matched basket answers "did this country move" only where two
+or more rows reach both ends of the span. For Brazil it covers four of the
+nine dimensions over ten years. Comparing cohorts needs every country on every
+dimension in every year, which no published series gives. The replay alone
+cannot do it: Brazil's Agency replay goes from 30.8 in 2016 to 52.2 now, and
+most of that is the basket growing from two rows to three.
+
+A low-rank model across countries, years and indicators was tried first. On
+the holdout it lost to holding the nearest observation flat (RMSE 10.6 at its
+best setting against 10.2), so it was dropped. The donor rule scores 9.1, with
+bias 0.4 against flat's 2.0. Interpolated cells err by 4.8 points and cells
+carried one to three years by 7.6. These numbers are in `index.json` and
+`bench history` prints them.
+
+**Cost.** A modelled cell four or more years from its anchor errs by about 10
+to 11 points, so a ten-year delta on a basket that is mostly modelled has a
+band of ten points or more. Brazil's Trust basket is modelled in three or four of
+its four rows in every year before 2026. The donor rule assumes a country moves the way the countries
+at its level moved; a country that broke from its peers gets its peers' path.
+The 15-year carry gives a flat line wherever a series is frozen, which
+includes every Doing Business row since 2019. The reconstruction and the
+replay diverge by design, so a reader who sees one without the other is
+misled. Nothing in the viewer reads these files.
+
+**Overturned by.** A fill rule that beats the donor rule on the same holdout;
+a holdout where the donor rule stops beating the flat comparison; or enough
+published history that the modelled share of the 2006 baskets falls below a
+quarter, at which point the replay alone can carry the cohort deltas.

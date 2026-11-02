@@ -312,6 +312,12 @@ export const GLOSSARY: GlossaryEntry[] = [
     full: 'An indicator is comparable with itself, so its line reaches back to 1960 where data exists. Each point carries the published, normalized and source-tier values. Nothing is filled in or carried forward.',
   },
   {
+    term: 'Reconstructed history',
+    group: 'How things change over time',
+    short: 'A dimension year by year on today\'s indicators, with missing years filled and the fill error shown as a band.',
+    full: 'Most indicators have gaps or start late, so a past score usually rests on fewer indicators than today\'s. The reconstruction keeps today\'s indicators in every year. A missing year is drawn between two published values, carried forward from the last one, or modelled from the nearest published value plus the typical change of countries at the same level on that indicator. Published values were hidden and refilled to measure how wrong each method is, and that error sets the width of the band. It is published beside the replay, which uses only values that existed, and it never enters a score.',
+  },
+  {
     term: 'Delphi panel',
     group: 'What sits beside the score',
     short: 'Language models with fixed analytical stances, interpreting what the data misses.',

@@ -24,6 +24,7 @@ pnpm bench agenda      write the capability agenda: JSON per country plus one ma
 pnpm bench brief       write the two-page brief from the release files: data/out/brief/brief.{en,pt-BR}.md
 pnpm bench cost        measure the panel prompts and price a run before making it
 pnpm bench residual    write the provisional wealth-residual fixture, one number per dimension
+pnpm bench history     write the provisional reconstructed history: replay, fill, holdout test, cohorts (D174)
 pnpm bench institutions project the institution map into the explorer feed: one JSON per lexicon
 pnpm bench probe       test candidate World Bank series before wiring them: --series a,b[@db]
 pnpm bench validate    schema-check data/delphi and data/evidence; add --fetch to live-check evidence source URLs
@@ -271,6 +272,15 @@ port 3888. That entry starts Next directly and does not use the proxy.
   from `CheckList`: a check is a reading of the capability the model declined
   to score, a condition is not a reading of the capability. Moving a row in or
   out of the role is a decision entry and a major dataset version. See D122.
+- **The reconstructed history is offline and never feeds a score.**
+  `buildReconstructedHistory` in `packages/core/src/pipeline/history.ts`
+  writes `data/out/history/{ISO3}.json` and `index.json`. Each point carries
+  `replay` (values that existed, the basket changes) and `estimate` with
+  `lo`/`hi` (today's basket, filled). Never print one without the other, and
+  never print an estimate without its band and its `modelled` count. A fill
+  rule changes only when it beats the current one on the holdout in
+  `index.json`, and the flat comparison stays published. Nothing in the viewer
+  reads these files. See D174.
 - The wealth residual is never summed across dimensions. `ResidualFile` has no
   country-level field, `buildResidual` in
   `packages/core/src/pipeline/residual.ts` computes one fit per dimension, and

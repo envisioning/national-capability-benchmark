@@ -28,6 +28,7 @@ export const AGENDA_OUT_DIR = resolve(OUT_DIR, 'agenda')
 export const INSTITUTION_OUT_DIR = resolve(OUT_DIR, 'institutions')
 export const SCHEMA_OUT_DIR = resolve(OUT_DIR, 'schema')
 export const BRIEF_OUT_DIR = resolve(OUT_DIR, 'brief')
+export const HISTORY_OUT_DIR = resolve(OUT_DIR, 'history')
 /** Profiles and the gate. Never read by scoring or the viewer (D168). */
 export const FITNESS_OUT_DIR = resolve(OUT_DIR, 'fitness')
 
@@ -63,6 +64,8 @@ export const FILES = {
   velocity: resolve(OUT_DIR, 'velocity.json'),
   leverage: resolve(OUT_DIR, 'leverage.json'),
   residual: resolve(OUT_DIR, 'residual.json'),
+  /** Cohort aggregates and the holdout test of the reconstructed history. See D174. */
+  historyIndex: resolve(HISTORY_OUT_DIR, 'index.json'),
   datapackage: resolve(OUT_DIR, 'datapackage.json'),
   subnationalIndex: resolve(SUBNATIONAL_OUT_DIR, 'index.json'),
 }
@@ -75,6 +78,11 @@ export function institutionFile(iso3: string): string {
 /** One file per country, so a page loads what it needs and nothing else. See D27. */
 export function countryFile(iso3: string): string {
   return resolve(COUNTRY_OUT_DIR, `${iso3.toUpperCase()}.json`)
+}
+
+/** One country's reconstructed history. Provisional and offline. See D174. */
+export function historyFile(iso3: string): string {
+  return resolve(HISTORY_OUT_DIR, `${iso3.toUpperCase()}.json`)
 }
 
 /** One file per indicator, holding every country's value for it. See D30. */

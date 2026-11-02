@@ -630,6 +630,103 @@ export const VelocityFile = z.object({
 })
 export type VelocityFile = z.infer<typeof VelocityFile>
 
+/** How one basket cell got its value for one year in the reconstructed history. See D174. */
+export const HistoryFill = z.enum(['observed', 'interpolated', 'carried', 'modelled'])
+export type HistoryFill = z.infer<typeof HistoryFill>
+
+/** One dimension in one year: the replayed score, and the reconstruction with its band. */
+export const HistoryPoint = z.object({
+  year: z.number().int(),
+  /** The score as the scorer would have computed it that year, on today's frame. Null below two indicators. */
+  replay: z.number().nullable(),
+  /** Indicators in force behind `replay`. */
+  replayIndicators: z.number().int(),
+  /** Reconstruction on the headline basket, with no noise added. */
+  estimate: z.number(),
+  /** 10th and 90th percentile over the draws. */
+  lo: z.number(),
+  hi: z.number(),
+  /** Basket cells filled by the model in this year. The rest come from data. */
+  modelled: z.number().int(),
+})
+export type HistoryPoint = z.infer<typeof HistoryPoint>
+
+/** A change between two years, as a point estimate and a draw band. */
+export const HistoryDelta = z.object({
+  span: z.number().int(),
+  baseYear: z.number().int(),
+  endYear: z.number().int(),
+  estimate: z.number(),
+  lo: z.number(),
+  hi: z.number(),
+})
+export type HistoryDelta = z.infer<typeof HistoryDelta>
+
+export const HistoryDimension = z.object({
+  /** The headline basket: the indicators the country is scored on today. */
+  basket: z.array(z.string()),
+  series: z.array(HistoryPoint),
+  deltas: z.array(HistoryDelta),
+})
+export type HistoryDimension = z.infer<typeof HistoryDimension>
+
+/** One country's reconstructed history, written by `bench history`. Provisional and offline. */
+export const HistoryCountryFile = z.object({
+  generatedAt: z.string(),
+  methodVersion: z.literal('history/0.1-provisional'),
+  iso3: z.string().length(3),
+  country: z.string(),
+  dimensions: z.partialRecord(DimensionEnum, HistoryDimension.nullable()),
+})
+export type HistoryCountryFile = z.infer<typeof HistoryCountryFile>
+
+/** Holdout error for one way of filling a cell, in 0 to 100 points. */
+export const HistoryValidationRow = z.object({
+  fill: z.string(),
+  n: z.number().int(),
+  rmse: z.number(),
+  bias: z.number(),
+})
+export type HistoryValidationRow = z.infer<typeof HistoryValidationRow>
+
+export const HistoryCohortDelta = HistoryDelta.extend({
+  /** Countries with a reconstruction at both ends. */
+  n: z.number().int(),
+  /** The cohort's median delta minus the median delta of every country. */
+  relative: z.number(),
+})
+
+export const HistoryCohort = z.object({
+  id: z.string(),
+  label: z.string(),
+  members: z.array(z.string().length(3)),
+  dimensions: z.partialRecord(
+    DimensionEnum,
+    z.object({
+      series: z.array(z.object({ year: z.number().int(), median: z.number(), n: z.number().int() })),
+      deltas: z.array(HistoryCohortDelta),
+    }),
+  ),
+})
+export type HistoryCohort = z.infer<typeof HistoryCohort>
+
+/** The cohort aggregates and the holdout test behind every country file. */
+export const HistoryIndexFile = z.object({
+  generatedAt: z.string(),
+  methodVersion: z.literal('history/0.1-provisional'),
+  params: z.object({
+    fromYear: z.number().int(),
+    toYear: z.number().int(),
+    donors: z.number().int(),
+    draws: z.number().int(),
+    seed: z.number().int(),
+    spans: z.array(z.number().int()),
+  }),
+  validation: z.array(HistoryValidationRow),
+  cohorts: z.array(HistoryCohort),
+})
+export type HistoryIndexFile = z.infer<typeof HistoryIndexFile>
+
 /** One provisional leverage input and its placeholder weighted-sum result. */
 export const LeverageCell = z.object({
   value: z.number().min(0).max(100).nullable(),
