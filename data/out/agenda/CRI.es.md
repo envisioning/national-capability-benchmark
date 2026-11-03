@@ -14,7 +14,7 @@ La comparación incluye 135 países. Cada dimensión recibe una puntuación de 0
 | Confianza | 71.1 | 0.33 (débil) | sin base de tendencia |
 | Aprendizaje | 43.6 | 0.54 (utilizable) | sin base de tendencia |
 | Experimentación | 26.7 | 0.64 (utilizable) | sin base de tendencia |
-| Adaptación | 65.2 | 0.62 (utilizable) | sin base de tendencia |
+| Adaptación | 65.2 | 0.62 (utilizable) | -0.6 en 10 años, con 3 indicadores |
 | Ejecución | 36.5 | 0.63 (utilizable) | +4.7 en 10 años, con 3 indicadores |
 | Propósito compartido | 37.3 | 0.32 (débil) | +4.4 en 10 años, con 2 indicadores |
 

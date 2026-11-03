@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-03T08:48:45.538Z",
+  "generatedAt": "2026-11-03T10:31:57.756Z",
   "iso3": "TTO",
   "country": "Trinidad and Tobago",
   "dimensions": [
@@ -3005,7 +3005,12 @@
       "score": 56.5,
       "confidence": 0.459,
       "band": "usable",
-      "trend": null,
+      "trend": {
+        "spanYears": 10,
+        "delta": 2.3,
+        "basket": 3,
+        "clamped": 0
+      },
       "scoredOn": [
         "unemployment_rate",
         "export_diversification",

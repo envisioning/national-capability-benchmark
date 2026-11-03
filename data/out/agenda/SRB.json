@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-03T08:48:45.538Z",
+  "generatedAt": "2026-11-03T10:31:57.756Z",
   "iso3": "SRB",
   "country": "Serbia",
   "dimensions": [
@@ -3009,7 +3009,12 @@
       "score": 69.6,
       "confidence": 0.617,
       "band": "usable",
-      "trend": null,
+      "trend": {
+        "spanYears": 10,
+        "delta": 20.6,
+        "basket": 2,
+        "clamped": 0
+      },
       "scoredOn": [
         "unemployment_rate",
         "long_term_unemployment_share",

@@ -11,10 +11,10 @@ pnpm install
 pnpm bench ingest      fetch World Bank series from 1990 into data/observations/worldbank.json
 pnpm bench evs fetch   import the pinned Joint EVS/WVS items (A165 trust, A173 perceived control, A080_01 charitable membership, and the E069_17 court confidence check) into data/observations/joint-evs-wvs.json; `trust fetch` is an alias
 pnpm bench vdem fetch  import the pinned V-Dem civil-society and court-compliance series (every country-year from 1990, D180) and the polarization and turnout checks into data/observations/vdem-cy-core.json
-pnpm bench unctad fetch import the pinned UNCTADstat export concentration index into data/observations/unctad-concentration.json (needs bsdtar)
+pnpm bench unctad fetch import the pinned UNCTADstat export concentration index, every year from 1995 (D183), into data/observations/unctad-concentration.json (needs bsdtar)
 pnpm bench grs fetch   fill tax revenue from the pinned OECD Global Revenue Statistics into data/observations/oecd-grs-tax-fill.json, only where the World Bank has no value inside the D159 window; run it after `bench ingest`, because it reads worldbank.json (D172)
 pnpm bench ilostat fetch derive and gate the ILOSTAT long-term unemployment share into data/observations/ilostat-ltu.json, and read the informal employment rate (a condition) into data/observations/ilostat-informality.json; --only ltu|informality runs one
-pnpm bench atlas fetch  count new export products from the pinned Growth Lab HS92 4-digit file (about 450 MB, checksum-checked) into data/observations/atlas-new-export-products.json, with the pin and every count under `atlas`
+pnpm bench atlas fetch  count new export products from the pinned Growth Lab HS92 4-digit file (about 450 MB, checksum-checked), for every end year from 2010 (D183), into data/observations/atlas-new-export-products.json, with the pin and every count under `atlas`
 pnpm bench openalex fetch count the OpenAlex top 10% cited share and pin requests and counts into data/observations/openalex-citation-impact.json (set OPENALEX_MAILTO; OPENALEX_API_KEY optional)
 pnpm bench score       normalise and score, write data/out/index.json, data/out/countries/*.json and table.csv
 pnpm bench delphi      run the LLM panel (add --mock to run offline)

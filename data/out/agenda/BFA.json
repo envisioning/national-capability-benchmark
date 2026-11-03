@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-03T08:48:45.538Z",
+  "generatedAt": "2026-11-03T10:31:57.756Z",
   "iso3": "BFA",
   "country": "Burkina Faso",
   "dimensions": [
@@ -3010,7 +3010,12 @@
       "score": 33.6,
       "confidence": 0.617,
       "band": "usable",
-      "trend": null,
+      "trend": {
+        "spanYears": 10,
+        "delta": -6.9,
+        "basket": 3,
+        "clamped": 0
+      },
       "scoredOn": [
         "unemployment_rate",
         "long_term_unemployment_share",

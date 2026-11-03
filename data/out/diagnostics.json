@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-03T08:48:36.517Z",
+  "generatedAt": "2026-11-03T10:31:48.202Z",
   "gdpSeries": "NY.GDP.PCAP.PP.KD",
   "income": [
     {
@@ -1238,9 +1238,10 @@
           "9.6.0",
           "10.0.0",
           "10.0.1",
-          "10.0.2"
+          "10.0.2",
+          "10.0.3"
         ],
-        "pairs": 34,
+        "pairs": 35,
         "perDimension": [
           {
             "dimension": "anticipation",
@@ -2015,14 +2016,14 @@
     ]
   },
   "delphiApplication": {
-    "datasetVersion": "10.0.2",
+    "datasetVersion": "10.0.3",
     "sourceDatasetVersion": "10.0.2",
-    "mode": "exact",
+    "mode": "carried",
     "cells": 1215,
     "carried": 1215,
     "dropped": [],
-    "judgementsCarried": 198,
-    "judgementsDropped": 0
+    "judgementsCarried": 138,
+    "judgementsDropped": 60
   },
   "redundantIndicatorPairs": [],
   "measurability": [
@@ -2488,6 +2489,22 @@
         "lowDiscrimination": false
       },
       {
+        "indicatorId": "export_diversification",
+        "dimension": "adaptability",
+        "countries": 133,
+        "years": 21,
+        "firstYear": 2006,
+        "lastYear": 2026,
+        "firstSpread": 32.95,
+        "lastSpread": 33.02,
+        "changeShare": 0.002,
+        "spearman": -0.11,
+        "carriedForwardCells": 133,
+        "clampedCells": 85,
+        "fading": false,
+        "lowDiscrimination": false
+      },
+      {
         "indicatorId": "court_compliance",
         "dimension": "trust",
         "countries": 135,
@@ -2841,22 +2858,6 @@
       },
       {
         "indicatorId": "long_term_unemployment_share",
-        "dimension": "adaptability",
-        "countries": 0,
-        "years": 0,
-        "firstYear": null,
-        "lastYear": null,
-        "firstSpread": null,
-        "lastSpread": null,
-        "changeShare": null,
-        "spearman": null,
-        "carriedForwardCells": 0,
-        "clampedCells": 0,
-        "fading": false,
-        "lowDiscrimination": false
-      },
-      {
-        "indicatorId": "export_diversification",
         "dimension": "adaptability",
         "countries": 0,
         "years": 0,

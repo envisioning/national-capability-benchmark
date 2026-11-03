@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-03T08:48:01.204Z",
-  "version": "10.0.2",
+  "generatedAt": "2026-11-03T10:31:29.395Z",
+  "version": "10.0.3",
   "country": {
     "country": "Sudan",
     "iso3": "SDN",
@@ -2402,7 +2402,68 @@
         "delphiDissent": false,
         "blendedScore": 35.5,
         "blendedFrom": "indicators",
-        "momentum": [],
+        "momentum": [
+          {
+            "baseYear": 2016,
+            "currentYear": 2026,
+            "baseScore": 37.6,
+            "currentScore": 37.5,
+            "delta": -0.1,
+            "matchedIndicators": 3,
+            "basket": [
+              "unemployment_rate",
+              "export_diversification",
+              "new_export_products_rate"
+            ],
+            "clamped": 0,
+            "series": [
+              {
+                "year": 2016,
+                "score": 37.6
+              },
+              {
+                "year": 2017,
+                "score": 35.5
+              },
+              {
+                "year": 2018,
+                "score": 40.6
+              },
+              {
+                "year": 2019,
+                "score": 40.6
+              },
+              {
+                "year": 2020,
+                "score": 37.4
+              },
+              {
+                "year": 2021,
+                "score": 33.7
+              },
+              {
+                "year": 2022,
+                "score": 41.9
+              },
+              {
+                "year": 2023,
+                "score": 38.4
+              },
+              {
+                "year": 2024,
+                "score": 38
+              },
+              {
+                "year": 2025,
+                "score": 37.5
+              },
+              {
+                "year": 2026,
+                "score": 37.5
+              }
+            ]
+          }
+        ],
         "indicators": [
           {
             "indicatorId": "unemployment_rate",
@@ -2650,6 +2711,84 @@
             "outOfFrame": false,
             "series": [
               {
+                "year": 2012,
+                "raw": 0.564,
+                "normalized": 35,
+                "tier": "international_organization"
+              },
+              {
+                "year": 2013,
+                "raw": 0.687,
+                "normalized": 19.2,
+                "tier": "international_organization"
+              },
+              {
+                "year": 2014,
+                "raw": 0.482,
+                "normalized": 45.5,
+                "tier": "international_organization"
+              },
+              {
+                "year": 2015,
+                "raw": 0.422,
+                "normalized": 53.2,
+                "tier": "international_organization"
+              },
+              {
+                "year": 2016,
+                "raw": 0.379,
+                "normalized": 58.8,
+                "tier": "international_organization"
+              },
+              {
+                "year": 2017,
+                "raw": 0.438,
+                "normalized": 51.2,
+                "tier": "international_organization"
+              },
+              {
+                "year": 2018,
+                "raw": 0.364,
+                "normalized": 60.7,
+                "tier": "international_organization"
+              },
+              {
+                "year": 2019,
+                "raw": 0.375,
+                "normalized": 59.3,
+                "tier": "international_organization"
+              },
+              {
+                "year": 2020,
+                "raw": 0.438,
+                "normalized": 51.3,
+                "tier": "international_organization"
+              },
+              {
+                "year": 2021,
+                "raw": 0.546,
+                "normalized": 37.3,
+                "tier": "international_organization"
+              },
+              {
+                "year": 2022,
+                "raw": 0.463,
+                "normalized": 48,
+                "tier": "international_organization"
+              },
+              {
+                "year": 2023,
+                "raw": 0.539,
+                "normalized": 38.2,
+                "tier": "international_organization"
+              },
+              {
+                "year": 2024,
+                "raw": 0.526,
+                "normalized": 39.8,
+                "tier": "international_organization"
+              },
+              {
                 "year": 2025,
                 "raw": 0.538,
                 "normalized": 38.4,
@@ -2672,6 +2811,90 @@
             "winsorized": false,
             "outOfFrame": false,
             "series": [
+              {
+                "year": 2010,
+                "raw": 0.34,
+                "normalized": 3.8,
+                "tier": "academic_survey"
+              },
+              {
+                "year": 2011,
+                "raw": 0.43,
+                "normalized": 4.8,
+                "tier": "academic_survey"
+              },
+              {
+                "year": 2012,
+                "raw": 0.43,
+                "normalized": 4.8,
+                "tier": "academic_survey"
+              },
+              {
+                "year": 2013,
+                "raw": 1.04,
+                "normalized": 11.6,
+                "tier": "academic_survey"
+              },
+              {
+                "year": 2014,
+                "raw": 1.81,
+                "normalized": 20.2,
+                "tier": "academic_survey"
+              },
+              {
+                "year": 2015,
+                "raw": 1.79,
+                "normalized": 20,
+                "tier": "academic_survey"
+              },
+              {
+                "year": 2016,
+                "raw": 1.71,
+                "normalized": 19.1,
+                "tier": "academic_survey"
+              },
+              {
+                "year": 2017,
+                "raw": 1.53,
+                "normalized": 17.1,
+                "tier": "academic_survey"
+              },
+              {
+                "year": 2018,
+                "raw": 1.76,
+                "normalized": 19.6,
+                "tier": "academic_survey"
+              },
+              {
+                "year": 2019,
+                "raw": 1.6,
+                "normalized": 17.9,
+                "tier": "academic_survey"
+              },
+              {
+                "year": 2020,
+                "raw": 1.59,
+                "normalized": 17.7,
+                "tier": "academic_survey"
+              },
+              {
+                "year": 2021,
+                "raw": 1.42,
+                "normalized": 15.8,
+                "tier": "academic_survey"
+              },
+              {
+                "year": 2022,
+                "raw": 1.08,
+                "normalized": 12.1,
+                "tier": "academic_survey"
+              },
+              {
+                "year": 2023,
+                "raw": 1,
+                "normalized": 11.2,
+                "tier": "academic_survey"
+              },
               {
                 "year": 2024,
                 "raw": 0.75,

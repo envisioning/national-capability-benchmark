@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-03T08:48:45.538Z",
+  "generatedAt": "2026-11-03T10:31:57.756Z",
   "iso3": "COG",
   "country": "Republic of the Congo",
   "dimensions": [
@@ -3005,7 +3005,12 @@
       "score": 12.5,
       "confidence": 0.459,
       "band": "usable",
-      "trend": null,
+      "trend": {
+        "spanYears": 10,
+        "delta": -4.9,
+        "basket": 3,
+        "clamped": 0
+      },
       "scoredOn": [
         "unemployment_rate",
         "export_diversification",

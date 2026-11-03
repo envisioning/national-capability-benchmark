@@ -24,16 +24,22 @@ assert.deepEqual(result.availableCountries, ['BRA', 'NLD', 'USA'])
 /* USA has a 2024 value but none for the pinned year: held, never carried forward. */
 assert.deepEqual(result.heldCountries, ['USA'])
 assert.deepEqual(result.estimatedCountries, ['NLD'])
-assert.equal(result.observations[0]?.indicatorId, 'export_diversification')
-assert.equal(result.observations[0]?.value, 0.17851)
-assert.equal(result.observations[0]?.year, 2025)
-assert.equal(result.observations[0]?.sourceTier, 'international_organization')
-assert.match(result.observations[1]?.note ?? '', /UNCTAD footnote: Estimated/)
-assert.doesNotMatch(result.observations[0]?.note ?? '', /footnote/)
+/* Brazil keeps its 2024 value as history beside the pinned year; USA keeps nothing (D183). */
+assert.deepEqual(
+  result.observations.map((o) => `${o.iso3} ${o.year}`),
+  ['BRA 2024', 'BRA 2025', 'NLD 2025'],
+)
+const bra = result.observations.find((o) => o.iso3 === 'BRA' && o.year === 2025)!
+assert.equal(bra.indicatorId, 'export_diversification')
+assert.equal(bra.value, 0.17851)
+assert.equal(bra.sourceTier, 'international_organization')
+assert.equal(result.observations.find((o) => o.iso3 === 'BRA' && o.year === 2024)?.value, 0.2)
+assert.match(result.observations.find((o) => o.iso3 === 'NLD')?.note ?? '', /UNCTAD footnote: Estimated/)
+assert.doesNotMatch(bra.note ?? '', /footnote/)
 
 /* Every benchmark country has an M49 code, and no two share one. */
 assert.deepEqual(result.unmappedLabels, [])
 for (const country of COUNTRIES) assert.ok(UNCTAD_M49[country.iso3], `${country.iso3} has no M49 code`)
 assert.equal(new Set(Object.values(UNCTAD_M49)).size, Object.keys(UNCTAD_M49).length)
 
-console.log('UNCTAD adapter validated: exports flow, pinned year, held and estimated countries.')
+console.log('UNCTAD adapter validated: exports flow, pinned year and its history, held and estimated countries.')

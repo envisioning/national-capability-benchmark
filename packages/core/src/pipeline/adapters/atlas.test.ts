@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict'
 import { ATLAS_NEW_PRODUCTS_RULE } from '../../model/index.js'
-import { AtlasAccumulator, buildAtlasObservations } from './atlas.js'
+import { AtlasAccumulator, atlasEndYears, buildAtlasObservations, ruleEndingIn } from './atlas.js'
 
 const header = 'country_id,country_iso3_code,product_id,product_hs92_code,year,export_value,import_value,global_market_share,export_rca,distance,cog,pci'
 const row = (iso3: string, product: string, year: number, exports: number, imports: number, rca: number) =>
@@ -41,6 +41,8 @@ assert.equal(bra.new, 3) // 0101, 0102, 0106
 assert.deepEqual(bra.products, ['0101', '0102', '0106'])
 assert.equal(bra.newNetExporter, 2) // 0102 is imported more than exported
 assert.deepEqual(result.emittedCountries, ['BRA', 'USA'])
+/* The fixture holds Brazil in no full earlier pair of windows, so the pinned year is all it emits. */
+assert.deepEqual(result.observations.map((o) => `${o.iso3} ${o.year}`), ['BRA 2024', 'USA 2024'])
 const obs = result.observations.find((o) => o.iso3 === 'BRA')!
 assert.equal(obs.indicatorId, 'new_export_products_rate')
 assert.equal(obs.value, 50)
@@ -52,7 +54,31 @@ assert.equal(result.observations.find((o) => o.iso3 === 'USA')!.value, 0)
 assert.ok(!result.emittedCountries.includes('ZZZ'))
 assert.ok(result.unmappedLabels.includes('ARE'))
 
+/*
+ * History (D183): the rule moves back one end year at a time, keeping both
+ * windows and the gap. Chile is in the file every year from 2007; product
+ * 0201 turns competitive in 2020 and 0202 in 2023.
+ */
+assert.deepEqual(atlasEndYears().slice(0, 2), [2010, 2011])
+assert.equal(atlasEndYears().at(-1), ATLAS_NEW_PRODUCTS_RULE.end.to)
+assert.deepEqual(ruleEndingIn(ATLAS_NEW_PRODUCTS_RULE, 2020).start, { from: 2005, to: 2007 })
+const history = new AtlasAccumulator()
+history.line(header)
+for (let year = 2007; year <= 2024; year += 1) {
+  history.line(row('CHL', '0201', year, year >= 2020 ? 5_000_000 : 0, 0, year >= 2020 ? 2 : 0))
+  history.line(row('CHL', '0202', year, year >= 2023 ? 5_000_000 : 0, 0, year >= 2023 ? 2 : 0))
+}
+const past = buildAtlasObservations(history, { retrievedAt: '2026-10-02T00:00:00.000Z' })
+const chile = new Map(past.observations.map((o) => [o.year, o]))
+/* Start windows before 2007 are not covered, so the first end year is 2022 (start 2007-2009). */
+assert.deepEqual([...chile.keys()], [2022, 2023, 2024])
+assert.equal(chile.get(2022)!.value, 50) // 0201 only: mean RCA over 2020-2022 is 2
+assert.equal(chile.get(2023)!.value, 50) // 0202 mean RCA over 2021-2023 is 2/3, under 1
+assert.equal(chile.get(2024)!.value, 100) // 0202 mean RCA over 2022-2024 is 4/3
+assert.match(chile.get(2022)!.note ?? '', /over 2007-2009/)
+assert.equal(past.pin.counts.CHL!.new, 2)
+
 /* A file without the columns the rule reads is refused. */
 assert.throws(() => new AtlasAccumulator().line('country_iso3_code,year'), /missing product_hs92_code/)
 
-console.log('Atlas adapter validated: windows, absence and presence lines, export floor, product universe, re-export count.')
+console.log('Atlas adapter validated: windows, absence and presence lines, export floor, product universe, re-export count, moved windows.')

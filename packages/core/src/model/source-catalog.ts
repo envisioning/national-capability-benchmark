@@ -52,6 +52,12 @@ export const UNCTAD_CONCENTRATION_RELEASE = '2026-10-23'
 export const UNCTAD_CONCENTRATION_CSV_SHA256 =
   'ad6f72192ff20fb47d7575813097e968db6d12404ea787591f4a4558d219a57c'
 export const UNCTAD_CONCENTRATION_YEAR = 2025
+/**
+ * First year the adapter keeps for export concentration. The file publishes
+ * every year from 1995 on one product classification; scoring reads only the
+ * latest. See D183.
+ */
+export const UNCTAD_CONCENTRATION_HISTORY_FROM = 1995
 /** UNCTADstat flow code for exports. Imports are `01`. */
 export const UNCTAD_EXPORTS_FLOW = '02'
 export const UNCTAD_LICENCE = 'CC BY 3.0 IGO'
@@ -194,3 +200,10 @@ export const ATLAS_NEW_PRODUCTS_RULE = {
   presentRca: 1,
   minExportsUsd: 1_000_000,
 } as const
+/**
+ * First year of the pinned HS92 file. The adapter also applies the rule to
+ * every earlier end year whose start window begins on or after this year,
+ * keeping both windows and the gap between them; scoring reads only the
+ * pinned end year. See D183.
+ */
+export const ATLAS_HISTORY_FROM = 1995

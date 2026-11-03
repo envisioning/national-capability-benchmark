@@ -9,6 +9,17 @@ The entries before App 1.0.0 are retrospective, high-level summaries
 reconstructed from the repository history. They document explicit version bumps
 and may skip versions that were never committed.
 
+## Dataset 10.0.3 — 2026-11-03
+
+- **Adaptability has trends.** Export diversification now carries every
+  year since 1995, and new export products every year since 2010, both from
+  the same files as before. Until this release each row held only its latest
+  year. Adaptability shows a 10-year trend in 135 countries, where it had
+  none in any country before. The history charts on country pages use the
+  longer series too.
+- **Scores and confidence do not move.** A score still reads each country's
+  latest value, and those values are the same as in 10.0.2. Decision D183.
+
 ## App 1.38.1 — 2026-11-03
 
 - Publishes dataset 10.0.2.

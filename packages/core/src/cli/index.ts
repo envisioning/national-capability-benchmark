@@ -614,7 +614,9 @@ async function unctad(args: Args): Promise<void> {
   await writeOut(FILES.unctad, `${JSON.stringify({ generatedAt: retrievedAt, observations: result.observations }, null, 2)}\n`)
   const revisions = await recordRevisions(before, previousRetrievedAt, result.observations, retrievedAt)
 
-  console.log(`UNCTAD ${result.release}: ${result.observations.length}/${COUNTRY_ISO3.length} benchmark countries emitted`)
+  console.log(
+    `UNCTAD ${result.release}: ${result.emittedCountries.length}/${COUNTRY_ISO3.length} benchmark countries emitted, ${result.observations.length} country-years`,
+  )
   console.log(`  source coverage: ${result.availableCountries.length}/${COUNTRY_ISO3.length}`)
   console.log(`  estimated (UNCTAD footnote): ${result.estimatedCountries.length} ${result.estimatedCountries.join(' ')}`)
   if (result.heldCountries.length > 0) console.log(`  held, no pinned-year value: ${result.heldCountries.join(' ')}`)
@@ -675,8 +677,10 @@ async function atlas(args: Args): Promise<void> {
   const retrievedAt = new Date().toISOString()
   const result = await fetchAtlasNewExportProducts({ retrievedAt })
   const { pin } = result
-  console.log(`Atlas ${result.release}: ${result.observations.length}/${COUNTRY_ISO3.length} benchmark countries emitted`)
-  console.log(`  md5 ${pin.md5} matches the pin; ${pin.productUniverse} four-digit products in the windows`)
+  console.log(
+    `Atlas ${result.release}: ${result.emittedCountries.length}/${COUNTRY_ISO3.length} benchmark countries emitted, ${result.observations.length} country-years`,
+  )
+  console.log(`  md5 ${pin.md5} matches the pin; ${pin.productUniverse} four-digit products in the pinned windows`)
   if (result.heldCountries.length > 0) console.log(`  held, no product to enter: ${result.heldCountries.join(' ')}`)
   if (result.unmappedLabels.length > 0) console.log(`  not in the file: ${result.unmappedLabels.join(' ')}`)
   /* The pin travels in the same file: release, checksums, the rule and every count the values derive from. */

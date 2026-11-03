@@ -160,7 +160,7 @@ passes triage runs to its gate. One that fails triage costs one paragraph.
 | Q7 | OpenAlex research impact | Learning | OpenAlex API, full frame. Memo on #23 recommends the share of works in the top 10% for their field, as a ratio to world | Wired as `research_citation_impact` (D124), 53 / 53 |
 | Q8 | IDEA voter turnout | O1: Shared purpose | IDEA open data, full frame | Triage note, including the compulsory-voting rule |
 | Q9 | Full Delphi rerun (TRUST-5, #33) | Reading, not measurement | In-session multi-vendor panel under D154 (Claude subagents and the codex CLI); a gateway run if `AI_GATEWAY_API_KEY` exists | A reviewed run on dataset 9.0.0 |
-| Q10 | Movers analysis (MOVERS-0) | The claim test, not O1 | D175: D22 observed baskets against change in log GDP per capita, D174 as a bias check | Built (D177, D179): the 10-year verdict on 10.0.0 is unreadable |
+| Q10 | Movers analysis (MOVERS-0) | The claim test, not O1 | D175: D22 observed baskets against change in log GDP per capita, D174 as a bias check | Built (D177, D179): the 10-year verdict on 10.0.3 is unreadable |
 
 **Q2 status (2026-10-02): triaged, nothing scored.** Memo:
 `docs/research/adaptability/DISASTER-PREPAREDNESS.md`. Eleven sources; ten
@@ -695,9 +695,11 @@ countries: can a dimension rise more than the country's own income growth
 predicts?
 
 **Status:** built. `pnpm bench movers` writes `data/out/history/movers.json`.
-On dataset 10.0.0 the 10-year verdict is unreadable and no dimension is
-readable: five dimensions have no D22 trend in any country, three read noise,
-and Experimentation has no pair once D179 leaves out its three WIPO pairs.
+On dataset 10.0.3 the 10-year verdict is unreadable and no dimension is
+readable: Agency and Learning have no D22 trend in any country, six
+dimensions read noise, and Experimentation has no pair once D179 leaves out
+its three WIPO pairs. 10.0.1 (D180) and 10.0.3 (D183) brought Coordination,
+Trust and Adaptability in.
 
 **Read:** D22, D138, D174, D175, D177 and D179.
 
@@ -722,8 +724,8 @@ year, not because the source has no history.
 | --- | --- | ---: | ---: | ---: | --- |
 | `civil_society_strength` | V-Dem | 135 | 135 | 1990 | done (D180) |
 | `court_compliance` | V-Dem | 135 | 135 | 1990 | done (D180) |
-| `export_diversification` | UN Comtrade | 135 | 0 | 2025 | UNCTADstat series from 1995 |
-| `new_export_products_rate` | UN Comtrade | 135 | 0 | 2024 | derivable from the pinned Growth Lab file for earlier windows |
+| `export_diversification` | UN Comtrade | 135 | 135 | 1995 | done (D183) |
+| `new_export_products_rate` | UN Comtrade | 135 | 134 | 2010 | done (D183) |
 | `research_citation_impact` | OpenAlex | 135 | 0 | 2021 | queryable by publication year |
 | `long_term_unemployment_share` | ILO | 99 | 0 | 2010 | ILOSTAT series by year |
 | `perceived_control`, `interpersonal_trust`, `willingness_to_cooperate_strangers`, `civic_participation` | Joint EVS/WVS | 72 | 0 | 2022 | earlier waves are separate files; the EVS trend file needs a GESIS registration, closed under D154, so each wave's open status needs a check first |
@@ -753,8 +755,14 @@ pin restated and the D25 revision log.
 trend in 102 countries and Trust in 46. Both enter the movers test and read
 noise on their one cross-origin pair, so the verdict stays unreadable.
 
-**Open:** UNCTAD or the Growth Lab file next, for Adaptability, which pairs
-with the ILO rows. OpenAlex for Learning after that.
+**Done:** the two export rows (D183, dataset 10.0.3). Adaptability now has
+a 10-year trend in 135 countries. It enters the movers test with two
+cross-origin pairs, unemployment with each export row; the two export rows
+share UN Comtrade and never pair. It reads noise, so the verdict stays
+unreadable.
+
+**Open:** OpenAlex by publication year next, for Learning. The ILO
+long-term unemployment series after that, which adds Adaptability pairs.
 
 ## Country-set changes are a separate project
 

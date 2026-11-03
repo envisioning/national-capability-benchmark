@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-03T08:48:45.538Z",
+  "generatedAt": "2026-11-03T10:31:57.756Z",
   "iso3": "ISR",
   "country": "Israel",
   "dimensions": [
@@ -3003,7 +3003,12 @@
       "score": 80,
       "confidence": 0.617,
       "band": "usable",
-      "trend": null,
+      "trend": {
+        "spanYears": 10,
+        "delta": 11.2,
+        "basket": 3,
+        "clamped": 0
+      },
       "scoredOn": [
         "unemployment_rate",
         "long_term_unemployment_share",

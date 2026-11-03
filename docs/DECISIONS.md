@@ -10149,3 +10149,79 @@ reads RMSE 9.55 against the flat comparison's 10.45, so D174 stands.
 
 **Overturned by.** A source whose per-head value is published on a stated
 population of another year, which then follows the publisher's pairing.
+
+---
+
+## D183 — The two export rows keep the history their pinned files already hold
+
+*Recorded 2026-11-03. Extends D119 and D149, follows D180 and serves D22,
+D174 and D175. The second MOVERS-1 backfill. Dataset 10.0.3. No score or
+confidence changes.*
+
+**Decision.** Both Adaptability export rows now emit past years from the
+file they already pin. No new download and no new source.
+
+- `export_diversification` emits UNCTAD's export Concentration Index for
+  every year from 1995 (`UNCTAD_CONCENTRATION_HISTORY_FROM`) to 2025, all
+  from the 2026-10-23 bulk file. UNCTAD's footnote travels in the note of
+  each year.
+- `new_export_products_rate` applies the D149 rule to every end year from
+  2010 to 2024, all from the pinned Atlas v18.0 file. Both windows move back
+  together and keep their length, the distance between them and every
+  threshold: the
+  value for 2016 compares 2001 to 2003 with 2014 to 2016. 2010 is the first
+  end year because the HS92 file starts in 1995 (`ATLAS_HISTORY_FROM`).
+
+Two guards keep the latest value where it was:
+
+- A country emits history only if it has a value for the pinned year. So no
+  older value can become its latest.
+- An Atlas window counts only when the file holds the country in every year
+  of both windows. So a country that the file starts late cannot read its
+  first year as entry into every product. Botswana, Eswatini, Lesotho and
+  Namibia start in 2000 and Serbia in 2006. Their series start in 2015 and
+  2021.
+
+Scoring still reads each country's latest value.
+
+**Why.** The adapters threw away history that the publishers had already
+computed on one classification. That left Adaptability with no D22 trend in
+any country, and the movers test could not read it. The D174 history filled
+those years from donors instead of from the countries' own values. Each row
+comes from one release, so a trend compares values on one scale.
+
+**What changed in the published data.** The fetches logged 0 changed and
+5,863 added country-years: 4,004 for UNCTAD and 1,859 for Atlas. All 1,215
+scores and confidences are identical to 10.0.2. Adaptability now has a trend
+in 135 countries over 10 years, in 133 over 20 years and in 131 over 30
+years. Before, it had none. Brazil's Adaptability reads +2.3 over 10 years
+on three rows and +3.8 over 20 years on two. The D174 history still ends on
+the headline in 1,195 of 1,195 cells.
+
+The holdout now hides the new published years too, so it grew from 2,904 to
+3,279 values. The donor fill reads RMSE 10.26 against 11.33 for the flat
+comparison, so the donor fill still beats flat and D178 stands. Both errors
+rose because the export rows move more from year to year than the rows the
+holdout tested before.
+
+**The movers test, rerun on 10.0.3.** Adaptability enters (m1) with 133
+countries. Income change explains almost none of its change (r² 0.02). Over
+10 years (m2) has two cross-origin pairs, unemployment with each export row.
+The pair of the two export rows is left out, because both come from UN
+Comtrade reports (D179). The leftovers read noise: the statistic is -0.117
+against a shuffle null of 0.103. Over 20 years, one pair reads noise at
+0.097 against 0.140. The 10-year verdict stays unreadable. No other
+dimension's reading changed.
+
+**Cost.** The two observation files grow from 0.3 MB to 4.6 MB together. The
+Atlas rule moves both windows together, so values one or two years apart
+share most of their data: a one-year change in the new-products rate is not
+one year of entry. Values 3 to 10 years apart share no year, so the 10-year
+trend compares independent windows. Values 11 to 15 years apart share years
+again, because the later start window overlaps the earlier end window. The concentration index over 1995 to 2025 follows
+what UNCTAD restates in each release, and the next re-pin logs that in the
+revision log.
+
+**Overturned by.** A release that changes the product classification of
+either file across years, or a review that shows the moved Atlas windows
+read the trade data's reporting coverage more than entry into new products.

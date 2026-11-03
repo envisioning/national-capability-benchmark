@@ -9,6 +9,7 @@ import {
   UNCTAD_CONCENTRATION_CSV,
   UNCTAD_CONCENTRATION_CSV_SHA256,
   UNCTAD_CONCENTRATION_DATASET,
+  UNCTAD_CONCENTRATION_HISTORY_FROM,
   UNCTAD_CONCENTRATION_RELEASE,
   UNCTAD_CONCENTRATION_URL,
   UNCTAD_CONCENTRATION_YEAR,
@@ -83,11 +84,13 @@ export type UnctadExportConcentrationResult = SourceAdapterResult & {
  * The value is the publisher's Concentration Index for exports (flow `02`), a
  * normalised Herfindahl-Hirschman index across SITC Rev.3 3-digit products,
  * stored as published: lower is more diversified, and the registry row says
- * `lower_better` rather than this adapter inverting it. Only the pinned year is
- * emitted, as with V-Dem. A country present in the file but without a value
- * for that year is held, never carried forward from an earlier year. UNCTAD's
- * footnote travels in the observation note, so an `Estimated` mirror value is
- * readable as one.
+ * `lower_better` rather than this adapter inverting it. Every year from
+ * `UNCTAD_CONCENTRATION_HISTORY_FROM` to the pinned year is emitted, all from
+ * the one pinned file, so trends and the reconstructed history have a past
+ * (D183). Scoring reads the latest. A country present in the file but without
+ * a value for the pinned year is held, with no earlier year either, so no
+ * older value can become its latest. UNCTAD's footnote travels in each
+ * observation's note, so an `Estimated` mirror value is readable as one.
  */
 export function parseUnctadExportConcentration(
   csv: string,
@@ -100,26 +103,28 @@ export function parseUnctadExportConcentration(
   const observations: Observation[] = []
   const estimated: string[] = []
 
+  const candidates: Observation[] = []
   for (const row of parseCsv(csv)) {
     if (row.Flow !== UNCTAD_EXPORTS_FLOW) continue
     const iso3 = byCode.get(row.Economy ?? '')
     if (!iso3 || !benchmark.has(iso3)) continue
     available.add(iso3)
-    if (Number(row.Year) !== UNCTAD_CONCENTRATION_YEAR) continue
+    const year = Number(row.Year)
+    if (!Number.isInteger(year) || year < UNCTAD_CONCENTRATION_HISTORY_FROM || year > UNCTAD_CONCENTRATION_YEAR) continue
     const rawValue = (row['Concentration Index'] ?? '').trim()
     if (rawValue === '') continue
     const value = Number(rawValue)
     if (!Number.isFinite(value) || value < 0 || value > 1) continue
     const footnote = (row['Concentration Index Footnote'] ?? '').trim()
-    if (/^Estimated/.test(footnote)) estimated.push(iso3)
+    if (year === UNCTAD_CONCENTRATION_YEAR && /^Estimated/.test(footnote)) estimated.push(iso3)
     const products = (row['Number of products'] ?? '').trim()
-    observations.push({
+    candidates.push({
       indicatorId: 'export_diversification',
       iso3,
       geometry: 'national',
       reconciliation: 'context_only',
       value,
-      year: UNCTAD_CONCENTRATION_YEAR,
+      year,
       sourceTier: 'international_organization',
       sourceUrl,
       retrievedAt,
@@ -131,9 +136,11 @@ export function parseUnctadExportConcentration(
     })
   }
 
-  observations.sort((a, b) => a.iso3.localeCompare(b.iso3))
-  const emittedCountries = observations.map((observation) => observation.iso3)
-  const emitted = new Set(emittedCountries)
+  const current = new Set(candidates.filter((o) => o.year === UNCTAD_CONCENTRATION_YEAR).map((o) => o.iso3))
+  for (const observation of candidates) if (current.has(observation.iso3)) observations.push(observation)
+  observations.sort((a, b) => a.iso3.localeCompare(b.iso3) || a.year - b.year)
+  const emittedCountries = [...current].sort()
+  const emitted = current
   return {
     adapterId: UNCTAD_EXPORT_CONCENTRATION_ADAPTER_ID,
     observations,
