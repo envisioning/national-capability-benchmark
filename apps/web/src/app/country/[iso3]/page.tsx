@@ -47,6 +47,7 @@ import {
   loadIndex,
 } from '@/lib/data'
 import { toProfile } from '@/lib/profile'
+import { HISTORY_WORDS_EN } from '@/lib/words'
 
 export const dynamic = 'force-dynamic'
 
@@ -200,6 +201,7 @@ export default async function CountryPage({ params }: { params: Promise<{ iso3: 
                   label={DIMENSION_LABELS[d]}
                   country={country.country}
                   cohorts={historyCohorts}
+                  words={HISTORY_WORDS_EN}
                 />
               ) : null}
               {dim.momentum.length > 0 ? (

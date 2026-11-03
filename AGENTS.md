@@ -281,8 +281,10 @@ port 3888. That entry starts Next directly and does not use the proxy.
   never print an estimate without its band and its `modelled` count. A fill
   rule changes only when it beats the current one on the holdout in
   `index.json`, and the flat comparison stays published. The viewer reads
-  these files on the country page and the cohort page (D178) and nowhere
-  else. Every surface labels the history provisional and links D174. See D174.
+  these files on the country page, the cohort page (D178) and Brazil's
+  `/brasil/historia` (D181), and nowhere else. The chart's words come from
+  `HistoryChartWords` in `words.ts`. Every surface labels the history
+  provisional and links D174. See D174.
 - **The movers analysis is offline and reads only what was observed.**
   `buildMovers` in `packages/core/src/pipeline/movers.ts` writes
   `data/out/history/movers.json`. Change is the D22 matched basket from

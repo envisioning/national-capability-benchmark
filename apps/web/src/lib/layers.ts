@@ -31,7 +31,14 @@ import type { Dimension, Lang } from '@ncb/core'
 export type MapSectionId = 'map'
 
 /** The kinds of section a layer can hold. */
-export type LayerSectionId = 'agenda' | 'institutions' | 'local' | 'support' | 'brief' | MapSectionId
+export type LayerSectionId =
+  | 'agenda'
+  | 'institutions'
+  | 'local'
+  | 'support'
+  | 'brief'
+  | 'history'
+  | MapSectionId
 
 export type LayerSection = {
   id: LayerSectionId
@@ -114,6 +121,8 @@ export const COUNTRY_LAYERS: readonly CountryLayer[] = [
     sections: [
       { id: 'agenda', label: 'Agenda', slug: 'agenda' },
       { id: 'map', label: PT_BR.capabilityMap.index.navLabel, slug: 'mapa' },
+      /* The reconstructed history in Portuguese. See D181. */
+      { id: 'history', label: 'História', slug: 'historia' },
       { id: 'institutions', label: 'Instituições', slug: 'instituicoes' },
       /* The subnational reading in Portuguese. The English one stays at
        * /country/BRA/local in the ground layer. */

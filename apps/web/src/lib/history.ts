@@ -125,7 +125,7 @@ export function buildHistoryPage(
 }
 
 /** A change in score points with its sign, as both history charts print it. */
-export const signedPoints = (value: number): string => signed(value, 'en')
+export const signedPoints = (value: number, locale = 'en'): string => signed(value, locale)
 
 /** Year labels every five years, ending on the last year without crowding it. */
 export function historyYearTicks(from: number, to: number): number[] {

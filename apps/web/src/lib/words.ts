@@ -2,6 +2,7 @@ import { LEXICONS, countWord, mergeOverride, ptCountWord } from '@ncb/core'
 import type { Lang } from '@ncb/core'
 import type { FlagFieldWords } from '@/components/FlagField'
 import type { ConditionListWords } from '@/components/views/ConditionList'
+import type { HistoryChartWords } from '@/components/views/CountryHistoryChart'
 
 /**
  * Copy-rule helpers for text the viewer computes.
@@ -42,6 +43,63 @@ export const CONDITION_WORDS_EN: ConditionListWords = {
   noValue: 'No value for this country. {definition}',
   rank: 'rank {rank} of {n}',
   stale: 'The value is from {year}, more than {age} years old.',
+}
+
+/** The reconstructed history chart's words in English. See D174 and D178. */
+export const HISTORY_WORDS_EN: HistoryChartWords = {
+  term: 'Reconstructed history',
+  eyebrow: ', {from} to {to}, provisional',
+  aria: '{country}, {label}: reconstruction {from} in {fromYear} and {to} in {toYear}',
+  tooltip: '{year}: {m} of {n} indicators modelled',
+  modelAxis: 'model',
+  legendEstimate: "Reconstruction on today's {n} indicators, band 10th to 90th percentile",
+  legendReplay: 'Replay on the values that existed each year',
+  legendModelled: 'Darker means more indicators modelled',
+  delta: '{delta} over {span} years',
+  deltaRest: '({from} to {to}), band {lo} to {hi}',
+  includesZero: ', which includes no change',
+  medianChange: 'Median change:',
+  cohorts: { all: 'all countries' },
+  noneModelled: 'No indicator is modelled in any year.',
+  modelled:
+    'The model fills at least one of the {basket} indicators in {years} of {total} years, at most {peak}, last in {last}.',
+  replayStarts: 'The replay starts in {year}, the first year with two indicators in force.',
+  noReplay: 'No year before today has two indicators in force, so there is no replay.',
+  neverScored: 'This never enters a score.',
+  howBuilt: 'How it is built',
+  everyCountry: 'every country and cohort',
+}
+
+/** The reconstructed history chart's words in Portuguese, for the Brazil layer. See D181. */
+export const PT_HISTORY_WORDS: HistoryChartWords = {
+  term: 'História reconstruída',
+  eyebrow: ', de {from} a {to}, provisória',
+  aria: '{country}, {label}: reconstrução {from} em {fromYear} e {to} em {toYear}',
+  tooltip: '{year}: {m} de {n} indicadores modelados',
+  modelAxis: 'modelo',
+  legendEstimate: 'Reconstrução com os {n} indicadores de hoje, faixa do 10º ao 90º percentil',
+  legendReplay: 'Pontuação da época, só com os valores que existiam em cada ano',
+  legendModelled: 'Quanto mais escuro, mais indicadores modelados',
+  delta: '{delta} em {span} anos',
+  deltaRest: '(de {from} a {to}), faixa de {lo} a {hi}',
+  includesZero: ', que inclui a ausência de mudança',
+  medianChange: 'Mudança mediana:',
+  cohorts: {
+    all: 'todos os países',
+    latam: 'América Latina',
+    income_2000_q1: 'quartil de renda 1 de 4 em 2000, o mais baixo',
+    income_2000_q2: 'quartil de renda 2 de 4 em 2000',
+    income_2000_q3: 'quartil de renda 3 de 4 em 2000',
+    income_2000_q4: 'quartil de renda 4 de 4 em 2000, o mais alto',
+  },
+  noneModelled: 'Nenhum indicador é modelado em nenhum ano.',
+  modelled:
+    'O modelo preenche pelo menos um dos {basket} indicadores em {years} de {total} anos, no máximo {peak} por ano, e pela última vez em {last}.',
+  replayStarts: 'A pontuação da época começa em {year}, o primeiro ano com dois indicadores em vigor.',
+  noReplay: 'Nenhum ano antes de hoje tem dois indicadores em vigor, por isso não há pontuação da época.',
+  neverScored: 'Esta história nunca entra numa pontuação.',
+  howBuilt: 'Como ela é construída (em inglês)',
+  everyCountry: 'todos os países e grupos (em inglês)',
 }
 
 /* A count as prose, spelled out to nine: defined in core so the bench's

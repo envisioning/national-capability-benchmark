@@ -20,6 +20,16 @@ and may skip versions that were never committed.
 - **Scores and confidence do not move.** A score still reads each country's
   latest value, and the 2025 values are the same as in 10.0.0. Decision D180.
 
+## App 1.38.0 — 2026-11-03
+
+- **Brazil's reading has a History page in Portuguese.** Each of the nine
+  capabilities has the chart from the country page, with its words in
+  Portuguese: the score year by year since
+  2000 on today's indicators, the error band of the filled years, the score
+  from only the values of each year, and the years a model filled. The change
+  over 10 and 20 years sits beside the median change for Latin America and
+  for Brazil's income group in 2000. Decision D181.
+
 ## App 1.37.0 — 2026-11-02
 
 - **A history page for every country and for groups of countries.** Under

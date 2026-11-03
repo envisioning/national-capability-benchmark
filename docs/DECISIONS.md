@@ -10072,3 +10072,31 @@ Both rows stay expert-coded and keep the D83 and D131 caveats.
 either variable across years, which would make the series compare two
 scales; or evidence that coders backdate a current judgment so strongly
 that the series tracks the present more than the past.
+
+---
+
+## D181 — Brazil's layer reads the reconstructed history in Portuguese
+
+*Recorded 2026-11-03. Extends D178 to a third surface. New layer section
+`/brasil/historia`. Changes no score, confidence, frame or dataset version.*
+
+**Decision.** Brazil's layer gets a History section. It draws the country
+page's D174 chart for each of the nine capabilities, in Portuguese, from the
+same `data/out/history/BRA.json`. The chart takes its words as one
+`HistoryChartWords` object from `apps/web/src/lib/words.ts`, so the English
+and the Portuguese readings are one component. The replay is named "pontuação
+da época", because "reprodução" reads as playback. The method and the cohort
+page stay in English, and the page says so.
+
+**Why.** The question the history answers, how Brazil moved against its
+region and its income group, is the one the layer's institutional reader
+brings. D178's rules carry over unchanged: replay and reconstruction together,
+the band and the modelled count with every line, and a label that says it is
+provisional.
+
+**Cost.** One more surface to keep in step when the chart changes, and a
+second set of words to translate. Only Brazil's layer has it; the Spanish and
+pt-PT layers do not.
+
+**Overturned by.** D178 being overturned, which takes this surface offline
+with the others.
