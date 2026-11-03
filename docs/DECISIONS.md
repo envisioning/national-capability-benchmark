@@ -10225,3 +10225,90 @@ revision log.
 **Overturned by.** A release that changes the product classification of
 either file across years, or a review that shows the moved Atlas windows
 read the trade data's reporting coverage more than entry into new products.
+
+---
+
+## D184 — Research citation impact keeps a history, counted one publication year at a time
+
+*Recorded 2026-11-03. Extends D124, follows D180 and D183 and serves D22,
+D174 and D175. The third MOVERS-1 backfill. Dataset 10.0.4. No score or
+confidence changes.*
+
+**Decision.** `research_citation_impact` (Learning) now emits one value for
+every three-year window ending 1992 to 2020, beside the pinned 2019 to 2021
+value. The new command `pnpm bench openalex history` counts each publication
+year from 1990 (`OPENALEX_HISTORY_FROM`) to 2021 on its own, with the same
+four requests D124 makes for the pinned window, and stores every request,
+total and country count under `openalex.history`. A history value pools three
+of those years and divides by the affiliated-world share of the same three
+years, so it reads on the D124 scale: the value for 2011 is the window 2009
+to 2011.
+
+`pnpm bench openalex history` never refetches the pinned window, so no
+pinned value moves. `pnpm bench openalex fetch` refetches the pinned window
+and keeps the stored history.
+
+Three guards:
+
+- A country emits history only if it has a value for the pinned window. So
+  no older value can become its latest.
+- A history window counts only if it pools at least 200 works
+  (`OPENALEX_HISTORY_MIN_WORKS`). The pinned window's thinnest country rests
+  on 217 works, so no history value is thinner than a headline value. The
+  floor was set after the fetch showed 421 windows under 100 works (Timor-Leste
+  reads on one work in 1993) and before any trend or movers result was read.
+  It never applies to the pinned window, which keeps D124's no-floor rule.
+- A grouped call lists at most 200 countries. A country missing from a
+  shorter list has no works, and the pin marks it `group_absent`; a country
+  missing from a full page is counted on its own, as in D124.
+
+**Why.** Learning had no D22 trend in any country, so the movers test could
+not read it. OpenAlex computes the top 10% flag within each subfield and
+publication year, so a past window is on the same footing as the pinned one,
+and its citations have had longer to mature, not shorter.
+
+**What changed in the published data.** The fetch logged 0 changed and
+3,236 added country-years, at 128 grouped and baseline requests plus 28
+per-country requests. 89 countries start in 1992 and 33 after 2001; Timor-Leste,
+Guinea-Bissau and the Central African Republic start in 2020. All 1,215
+scores and confidences are identical to 10.0.3, and all 1,215 panel cells
+carry under D160. Learning now has a trend in 68 countries over 10 years and
+50 over 20 years. Before, it had none. Every Learning trend pairs this row
+with firm training, because the Human Capital Index has no value from 2011
+to 2016, the five years D22 allows before the base year. Brazil has no
+Learning trend: its firm training value before 2016 is from 2009. Its citation impact reads 0.617 in
+2016 and 0.586 in 2021. The D174 history still ends on the headline in 1,195
+of 1,195 cells.
+
+The holdout grew from 3,279 to 3,688 values. The donor fill reads RMSE 10.18
+against 11.14 for the flat comparison, so D178 stands.
+
+Drift check: the history also counted 2019, 2020 and 2021, which the pinned
+window covers. Pooled, they differ from the pinned value by a median of 0.004
+across the 135 countries, and by 0.055 at most (Lesotho, 343 works, one day
+apart). The history and the pin come from fetches on 2026-11-02 and
+2026-11-03.
+
+**The movers test, rerun on 10.0.4.** Learning enters (m1) with 68 countries
+over 10 years; income change explains almost none of its change (r² 0.04).
+(m2) has one pair, citation impact with firm training (OpenAlex and the
+Enterprise Surveys), and it reads noise: the statistic is -0.038 against a
+shuffle null of 0.194. Over 20 years the pair reads -0.005 against 0.243. The
+10-year verdict stays unreadable. No other dimension's reading changed.
+
+**Cost.** The observation file grows from 0.1 MB to 3.5 MB. Windows one or
+two years apart share most of their works, so a one-year change is not one
+year of research; values three or more years apart share none, and the
+10-year trend compares independent windows. Whole counting, the missing
+affiliations and the continuous recomputation D124 names apply to every
+year, and affiliation coverage is thinner in early years, which the ratio to
+the affiliated world absorbs only where it thins every country alike. The
+affiliated-world share moves from 18.5% in 1990 to 21.3% in 2000 and 15.2%
+in 2021; each window is read against its own. The fetch cost about 156 of
+the keyless 1,000 daily credits.
+
+**Overturned by.** Evidence that OpenAlex's affiliation coverage in early
+years differs by country income or region enough to make the trend read
+indexing rather than research; or OpenAlex changing the percentile's pool or
+definition, which would need a new adapter version, a new pin and a new
+entry.

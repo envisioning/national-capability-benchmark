@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-03T10:31:48.202Z",
+  "generatedAt": "2026-11-03T12:34:17.424Z",
   "gdpSeries": "NY.GDP.PCAP.PP.KD",
   "income": [
     {
@@ -1239,9 +1239,10 @@
           "10.0.0",
           "10.0.1",
           "10.0.2",
-          "10.0.3"
+          "10.0.3",
+          "10.0.4"
         ],
-        "pairs": 35,
+        "pairs": 36,
         "perDimension": [
           {
             "dimension": "anticipation",
@@ -2016,7 +2017,7 @@
     ]
   },
   "delphiApplication": {
-    "datasetVersion": "10.0.3",
+    "datasetVersion": "10.0.4",
     "sourceDatasetVersion": "10.0.2",
     "mode": "carried",
     "cells": 1215,
@@ -2473,6 +2474,22 @@
         "lowDiscrimination": false
       },
       {
+        "indicatorId": "research_citation_impact",
+        "dimension": "learning",
+        "countries": 113,
+        "years": 21,
+        "firstYear": 2006,
+        "lastYear": 2026,
+        "firstSpread": 34.24,
+        "lastSpread": 37.17,
+        "changeShare": 0.086,
+        "spearman": -0.421,
+        "carriedForwardCells": 567,
+        "clampedCells": 10,
+        "fading": false,
+        "lowDiscrimination": false
+      },
+      {
         "indicatorId": "bribery_incidence",
         "dimension": "trust",
         "countries": 28,
@@ -2773,22 +2790,6 @@
         "spearman": null,
         "carriedForwardCells": 338,
         "clampedCells": 3,
-        "fading": false,
-        "lowDiscrimination": false
-      },
-      {
-        "indicatorId": "research_citation_impact",
-        "dimension": "learning",
-        "countries": 0,
-        "years": 0,
-        "firstYear": null,
-        "lastYear": null,
-        "firstSpread": null,
-        "lastSpread": null,
-        "changeShare": null,
-        "spearman": null,
-        "carriedForwardCells": 0,
-        "clampedCells": 0,
         "fading": false,
         "lowDiscrimination": false
       },

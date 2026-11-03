@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-03T10:31:57.756Z",
+  "generatedAt": "2026-11-03T12:34:27.287Z",
   "iso3": "ESP",
   "country": "Spain",
   "dimensions": [
@@ -1748,7 +1748,12 @@
       "score": 77.8,
       "confidence": 0.554,
       "band": "usable",
-      "trend": null,
+      "trend": {
+        "spanYears": 20,
+        "delta": 22.8,
+        "basket": 2,
+        "clamped": 0
+      },
       "scoredOn": [
         "human_capital_index",
         "firm_training_incidence",

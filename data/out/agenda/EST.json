@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-03T10:31:57.756Z",
+  "generatedAt": "2026-11-03T12:34:27.287Z",
   "iso3": "EST",
   "country": "Estonia",
   "dimensions": [
@@ -1748,7 +1748,12 @@
       "score": 76,
       "confidence": 0.535,
       "band": "usable",
-      "trend": null,
+      "trend": {
+        "spanYears": 10,
+        "delta": 9.9,
+        "basket": 2,
+        "clamped": 0
+      },
       "scoredOn": [
         "human_capital_index",
         "firm_training_incidence",

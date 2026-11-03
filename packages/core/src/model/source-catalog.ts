@@ -119,6 +119,18 @@ export const OPENALEX_TOP10_FIELD = 'citation_normalized_percentile.is_in_top_10
 /** The pooled publication window, stamped with its last year. */
 export const OPENALEX_WINDOW_FROM = 2019
 export const OPENALEX_WINDOW_TO = 2021
+/**
+ * The first publication year the history reads. Each year is counted on its
+ * own and pooled into the same three-year windows as the pin, so the first
+ * window is 1990 to 1992, stamped 1992. See D184.
+ */
+export const OPENALEX_HISTORY_FROM = 1990
+/**
+ * A history window counts only if it pools at least this many works. The
+ * pinned window's thinnest country rests on 217, so no history value is
+ * thinner than a headline value. Never applied to the pinned window. See D184.
+ */
+export const OPENALEX_HISTORY_MIN_WORKS = 200
 /** Work types counted. Conference papers are excluded. */
 export const OPENALEX_WORK_TYPES = ['article', 'review'] as const
 /** Pinned explicitly so a change of the API default cannot move the counts. */

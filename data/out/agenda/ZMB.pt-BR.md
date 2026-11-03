@@ -12,7 +12,7 @@ A escala reúne 135 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 | Agência | 38,6 | 0,3 (fraca) | sem tendência comparável |
 | Coordenação | 85 | 0,29 (fraca) | +9,8 em 10 anos, com base em 2 indicadores |
 | Confiança | 77,4 | 0,21 (muito fraca) | +5,1 em 10 anos, com base em 2 indicadores |
-| Aprendizagem | 34,6 | 0,55 (utilizável) | sem tendência comparável |
+| Aprendizagem | 34,6 | 0,55 (utilizável) | -11,6 em 10 anos, com base em 2 indicadores |
 | Experimentação | 1,3 | 0,37 (fraca) | -0,1 em 10 anos, com base em 3 indicadores |
 | Adaptação | 40,3 | 0,62 (utilizável) | -1,2 em 10 anos, com base em 3 indicadores |
 | Construção | 8,7 | 0,48 (utilizável) | -10,7 em 10 anos, com base em 3 indicadores |

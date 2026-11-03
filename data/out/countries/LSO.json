@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-03T10:31:29.395Z",
-  "version": "10.0.3",
+  "generatedAt": "2026-11-03T12:33:57.534Z",
+  "version": "10.0.4",
   "country": {
     "country": "Lesotho",
     "iso3": "LSO",
@@ -1870,7 +1870,63 @@
         "delphiDissent": false,
         "blendedScore": 32.1,
         "blendedFrom": "indicators",
-        "momentum": [],
+        "momentum": [
+          {
+            "baseYear": 2016,
+            "currentYear": 2026,
+            "baseScore": 43.6,
+            "currentScore": 39,
+            "delta": -4.6,
+            "matchedIndicators": 2,
+            "basket": [
+              "firm_training_incidence",
+              "research_citation_impact"
+            ],
+            "clamped": 0,
+            "series": [
+              {
+                "year": 2016,
+                "score": 43.6
+              },
+              {
+                "year": 2017,
+                "score": 44.4
+              },
+              {
+                "year": 2018,
+                "score": 44.4
+              },
+              {
+                "year": 2019,
+                "score": 40
+              },
+              {
+                "year": 2020,
+                "score": 43.6
+              },
+              {
+                "year": 2021,
+                "score": 37.7
+              },
+              {
+                "year": 2023,
+                "score": 39
+              },
+              {
+                "year": 2024,
+                "score": 39
+              },
+              {
+                "year": 2025,
+                "score": 39
+              },
+              {
+                "year": 2026,
+                "score": 39
+              }
+            ]
+          }
+        ],
         "indicators": [
           {
             "indicatorId": "human_capital_index",
@@ -1977,6 +2033,36 @@
             "winsorized": false,
             "outOfFrame": false,
             "series": [
+              {
+                "year": 2015,
+                "raw": 1.269,
+                "normalized": 58.7,
+                "tier": "academic_survey"
+              },
+              {
+                "year": 2016,
+                "raw": 1.108,
+                "normalized": 50.1,
+                "tier": "academic_survey"
+              },
+              {
+                "year": 2017,
+                "raw": 1.136,
+                "normalized": 51.6,
+                "tier": "academic_survey"
+              },
+              {
+                "year": 2019,
+                "raw": 0.972,
+                "normalized": 42.9,
+                "tier": "academic_survey"
+              },
+              {
+                "year": 2020,
+                "raw": 1.107,
+                "normalized": 50.1,
+                "tier": "academic_survey"
+              },
               {
                 "year": 2021,
                 "raw": 0.886,

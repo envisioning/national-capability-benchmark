@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-03T10:31:29.395Z",
-  "version": "10.0.3",
+  "generatedAt": "2026-11-03T12:33:57.534Z",
+  "version": "10.0.4",
   "country": {
     "country": "Greece",
     "iso3": "GRC",
@@ -1691,7 +1691,79 @@
         "delphiDissent": false,
         "blendedScore": 49.4,
         "blendedFrom": "indicators",
-        "momentum": [],
+        "momentum": [
+          {
+            "baseYear": 2006,
+            "currentYear": 2026,
+            "baseScore": 38.6,
+            "currentScore": 40.2,
+            "delta": 1.6,
+            "matchedIndicators": 2,
+            "basket": [
+              "firm_training_incidence",
+              "research_citation_impact"
+            ],
+            "clamped": 0,
+            "series": [
+              {
+                "year": 2006,
+                "score": 38.6
+              },
+              {
+                "year": 2007,
+                "score": 40.6
+              },
+              {
+                "year": 2008,
+                "score": 41.6
+              },
+              {
+                "year": 2009,
+                "score": 42.7
+              },
+              {
+                "year": 2010,
+                "score": 43
+              },
+              {
+                "year": 2018,
+                "score": 43.8
+              },
+              {
+                "year": 2019,
+                "score": 44.2
+              },
+              {
+                "year": 2020,
+                "score": 44.7
+              },
+              {
+                "year": 2021,
+                "score": 45.4
+              },
+              {
+                "year": 2022,
+                "score": 45.4
+              },
+              {
+                "year": 2023,
+                "score": 40.2
+              },
+              {
+                "year": 2024,
+                "score": 40.2
+              },
+              {
+                "year": 2025,
+                "score": 40.2
+              },
+              {
+                "year": 2026,
+                "score": 40.2
+              }
+            ]
+          }
+        ],
         "indicators": [
           {
             "indicatorId": "human_capital_index",
@@ -1798,6 +1870,180 @@
             "winsorized": false,
             "outOfFrame": false,
             "series": [
+              {
+                "year": 1992,
+                "raw": 0.707,
+                "normalized": 28.8,
+                "tier": "academic_survey"
+              },
+              {
+                "year": 1993,
+                "raw": 0.712,
+                "normalized": 29,
+                "tier": "academic_survey"
+              },
+              {
+                "year": 1994,
+                "raw": 0.722,
+                "normalized": 29.6,
+                "tier": "academic_survey"
+              },
+              {
+                "year": 1995,
+                "raw": 0.74,
+                "normalized": 30.5,
+                "tier": "academic_survey"
+              },
+              {
+                "year": 1996,
+                "raw": 0.768,
+                "normalized": 32,
+                "tier": "academic_survey"
+              },
+              {
+                "year": 1997,
+                "raw": 0.775,
+                "normalized": 32.4,
+                "tier": "academic_survey"
+              },
+              {
+                "year": 1998,
+                "raw": 0.794,
+                "normalized": 33.4,
+                "tier": "academic_survey"
+              },
+              {
+                "year": 1999,
+                "raw": 0.813,
+                "normalized": 34.4,
+                "tier": "academic_survey"
+              },
+              {
+                "year": 2000,
+                "raw": 0.877,
+                "normalized": 37.8,
+                "tier": "academic_survey"
+              },
+              {
+                "year": 2001,
+                "raw": 0.912,
+                "normalized": 39.7,
+                "tier": "academic_survey"
+              },
+              {
+                "year": 2002,
+                "raw": 0.961,
+                "normalized": 42.3,
+                "tier": "academic_survey"
+              },
+              {
+                "year": 2003,
+                "raw": 0.994,
+                "normalized": 44,
+                "tier": "academic_survey"
+              },
+              {
+                "year": 2004,
+                "raw": 1.062,
+                "normalized": 47.7,
+                "tier": "academic_survey"
+              },
+              {
+                "year": 2005,
+                "raw": 1.114,
+                "normalized": 50.4,
+                "tier": "academic_survey"
+              },
+              {
+                "year": 2006,
+                "raw": 1.196,
+                "normalized": 54.8,
+                "tier": "academic_survey"
+              },
+              {
+                "year": 2007,
+                "raw": 1.269,
+                "normalized": 58.7,
+                "tier": "academic_survey"
+              },
+              {
+                "year": 2008,
+                "raw": 1.309,
+                "normalized": 60.8,
+                "tier": "academic_survey"
+              },
+              {
+                "year": 2009,
+                "raw": 1.348,
+                "normalized": 62.9,
+                "tier": "academic_survey"
+              },
+              {
+                "year": 2010,
+                "raw": 1.36,
+                "normalized": 63.5,
+                "tier": "academic_survey"
+              },
+              {
+                "year": 2011,
+                "raw": 1.403,
+                "normalized": 65.8,
+                "tier": "academic_survey"
+              },
+              {
+                "year": 2012,
+                "raw": 1.428,
+                "normalized": 67.1,
+                "tier": "academic_survey"
+              },
+              {
+                "year": 2013,
+                "raw": 1.454,
+                "normalized": 68.5,
+                "tier": "academic_survey"
+              },
+              {
+                "year": 2014,
+                "raw": 1.467,
+                "normalized": 69.2,
+                "tier": "academic_survey"
+              },
+              {
+                "year": 2015,
+                "raw": 1.454,
+                "normalized": 68.5,
+                "tier": "academic_survey"
+              },
+              {
+                "year": 2016,
+                "raw": 1.408,
+                "normalized": 66.1,
+                "tier": "academic_survey"
+              },
+              {
+                "year": 2017,
+                "raw": 1.362,
+                "normalized": 63.6,
+                "tier": "academic_survey"
+              },
+              {
+                "year": 2018,
+                "raw": 1.35,
+                "normalized": 63,
+                "tier": "academic_survey"
+              },
+              {
+                "year": 2019,
+                "raw": 1.366,
+                "normalized": 63.8,
+                "tier": "academic_survey"
+              },
+              {
+                "year": 2020,
+                "raw": 1.382,
+                "normalized": 64.7,
+                "tier": "academic_survey"
+              },
               {
                 "year": 2021,
                 "raw": 1.409,

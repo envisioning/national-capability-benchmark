@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-03T10:31:57.756Z",
+  "generatedAt": "2026-11-03T12:34:27.287Z",
   "iso3": "SLV",
   "country": "El Salvador",
   "dimensions": [
@@ -1757,7 +1757,12 @@
       "score": 31.4,
       "confidence": 0.535,
       "band": "usable",
-      "trend": null,
+      "trend": {
+        "spanYears": 10,
+        "delta": -17.9,
+        "basket": 2,
+        "clamped": 0
+      },
       "scoredOn": [
         "human_capital_index",
         "firm_training_incidence",

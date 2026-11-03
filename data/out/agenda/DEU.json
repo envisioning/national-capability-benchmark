@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-03T10:31:57.756Z",
+  "generatedAt": "2026-11-03T12:34:27.287Z",
   "iso3": "DEU",
   "country": "Germany",
   "dimensions": [
@@ -1735,7 +1735,12 @@
       "score": 66.6,
       "confidence": 0.554,
       "band": "usable",
-      "trend": null,
+      "trend": {
+        "spanYears": 20,
+        "delta": 10.6,
+        "basket": 2,
+        "clamped": 0
+      },
       "scoredOn": [
         "human_capital_index",
         "firm_training_incidence",

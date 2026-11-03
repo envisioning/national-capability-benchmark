@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-03T10:31:57.756Z",
+  "generatedAt": "2026-11-03T12:34:27.287Z",
   "iso3": "BOL",
   "country": "Bolivia",
   "dimensions": [
@@ -1757,7 +1757,12 @@
       "score": 35.9,
       "confidence": 0.394,
       "band": "thin",
-      "trend": null,
+      "trend": {
+        "spanYears": 20,
+        "delta": -9.1,
+        "basket": 2,
+        "clamped": 0
+      },
       "scoredOn": [
         "firm_training_incidence",
         "research_citation_impact"

@@ -15,7 +15,8 @@ pnpm bench unctad fetch import the pinned UNCTADstat export concentration index,
 pnpm bench grs fetch   fill tax revenue from the pinned OECD Global Revenue Statistics into data/observations/oecd-grs-tax-fill.json, only where the World Bank has no value inside the D159 window; run it after `bench ingest`, because it reads worldbank.json (D172)
 pnpm bench ilostat fetch derive and gate the ILOSTAT long-term unemployment share into data/observations/ilostat-ltu.json, and read the informal employment rate (a condition) into data/observations/ilostat-informality.json; --only ltu|informality runs one
 pnpm bench atlas fetch  count new export products from the pinned Growth Lab HS92 4-digit file (about 450 MB, checksum-checked), for every end year from 2010 (D183), into data/observations/atlas-new-export-products.json, with the pin and every count under `atlas`
-pnpm bench openalex fetch count the OpenAlex top 10% cited share and pin requests and counts into data/observations/openalex-citation-impact.json (set OPENALEX_MAILTO; OPENALEX_API_KEY optional)
+pnpm bench openalex fetch count the OpenAlex top 10% cited share and pin requests and counts into data/observations/openalex-citation-impact.json (set OPENALEX_MAILTO; OPENALEX_API_KEY optional); a refetch keeps the stored history
+pnpm bench openalex history count every publication year from 1990 into the same pin, without refetching the pinned window, and emit the earlier three-year windows (D184)
 pnpm bench score       normalise and score, write data/out/index.json, data/out/countries/*.json and table.csv
 pnpm bench delphi      run the LLM panel (add --mock to run offline)
 pnpm bench diagnose    correlations, redundancy, GDP-sensitivity test

@@ -9,6 +9,17 @@ The entries before App 1.0.0 are retrospective, high-level summaries
 reconstructed from the repository history. They document explicit version bumps
 and may skip versions that were never committed.
 
+## Dataset 10.0.4 — 2026-11-03
+
+- **Learning has trends.** Research citation impact now has a value for
+  every three-year window back to 1990 to 1992, counted the same way as the
+  latest one. Until this release it held only 2019 to 2021. Learning shows
+  a 10-year trend in 68 countries, the ones where a second Learning row
+  also reaches back ten years. Before, it had a trend in none. The history
+  charts on country pages use the longer series too.
+- **Scores and confidence do not move.** A score still reads each country's
+  latest value, and those values are the same as in 10.0.3. Decision D184.
+
 ## Dataset 10.0.3 — 2026-11-03
 
 - **Adaptability has trends.** Export diversification now carries every

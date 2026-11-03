@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-03T10:31:57.756Z",
+  "generatedAt": "2026-11-03T12:34:27.287Z",
   "iso3": "IRQ",
   "country": "Iraq",
   "dimensions": [
@@ -1757,7 +1757,12 @@
       "score": 18.7,
       "confidence": 0.516,
       "band": "usable",
-      "trend": null,
+      "trend": {
+        "spanYears": 10,
+        "delta": 0.1,
+        "basket": 2,
+        "clamped": 0
+      },
       "scoredOn": [
         "human_capital_index",
         "firm_training_incidence",

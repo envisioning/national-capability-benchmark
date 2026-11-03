@@ -12,7 +12,7 @@ La comparación incluye 135 países. Cada dimensión recibe una puntuación de 0
 | Iniciativa | 62.9 | 0.43 (débil) | sin base de tendencia |
 | Coordinación | 88.1 | 0.27 (débil) | +31.2 en 10 años, con 2 indicadores |
 | Confianza | 56.2 | 0.41 (débil) | +1.8 en 20 años, con 2 indicadores |
-| Aprendizaje | 51.6 | 0.55 (utilizable) | sin base de tendencia |
+| Aprendizaje | 51.6 | 0.55 (utilizable) | -1.2 en 20 años, con 2 indicadores |
 | Experimentación | 37.2 | 0.54 (utilizable) | +2.2 en 10 años, con 3 indicadores |
 | Adaptación | 53.5 | 0.62 (utilizable) | -8.5 en 10 años, con 3 indicadores |
 | Ejecución | 15.9 | 0.48 (utilizable) | -1.3 en 10 años, con 3 indicadores |

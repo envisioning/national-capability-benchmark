@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-03T10:31:29.395Z",
-  "version": "10.0.3",
+  "generatedAt": "2026-11-03T12:33:57.534Z",
+  "version": "10.0.4",
   "country": {
     "country": "Democratic Republic of the Congo",
     "iso3": "COD",
@@ -1960,7 +1960,47 @@
         "delphiDissent": false,
         "blendedScore": 22.5,
         "blendedFrom": "indicators",
-        "momentum": [],
+        "momentum": [
+          {
+            "baseYear": 2016,
+            "currentYear": 2026,
+            "baseScore": 29.5,
+            "currentScore": 27.4,
+            "delta": -2.1,
+            "matchedIndicators": 2,
+            "basket": [
+              "firm_training_incidence",
+              "research_citation_impact"
+            ],
+            "clamped": 0,
+            "series": [
+              {
+                "year": 2016,
+                "score": 29.5
+              },
+              {
+                "year": 2017,
+                "score": 27.8
+              },
+              {
+                "year": 2018,
+                "score": 27
+              },
+              {
+                "year": 2024,
+                "score": 27.4
+              },
+              {
+                "year": 2025,
+                "score": 27.4
+              },
+              {
+                "year": 2026,
+                "score": 27.4
+              }
+            ]
+          }
+        ],
         "indicators": [
           {
             "indicatorId": "human_capital_index",
@@ -2067,6 +2107,90 @@
             "winsorized": false,
             "outOfFrame": false,
             "series": [
+              {
+                "year": 2007,
+                "raw": 0.841,
+                "normalized": 35.9,
+                "tier": "academic_survey"
+              },
+              {
+                "year": 2008,
+                "raw": 1.016,
+                "normalized": 45.2,
+                "tier": "academic_survey"
+              },
+              {
+                "year": 2009,
+                "raw": 1.092,
+                "normalized": 49.3,
+                "tier": "academic_survey"
+              },
+              {
+                "year": 2010,
+                "raw": 1.067,
+                "normalized": 47.9,
+                "tier": "academic_survey"
+              },
+              {
+                "year": 2011,
+                "raw": 1.168,
+                "normalized": 53.3,
+                "tier": "academic_survey"
+              },
+              {
+                "year": 2012,
+                "raw": 1.22,
+                "normalized": 56.1,
+                "tier": "academic_survey"
+              },
+              {
+                "year": 2013,
+                "raw": 1.172,
+                "normalized": 53.5,
+                "tier": "academic_survey"
+              },
+              {
+                "year": 2014,
+                "raw": 1.067,
+                "normalized": 47.9,
+                "tier": "academic_survey"
+              },
+              {
+                "year": 2015,
+                "raw": 0.967,
+                "normalized": 42.6,
+                "tier": "academic_survey"
+              },
+              {
+                "year": 2016,
+                "raw": 0.93,
+                "normalized": 40.6,
+                "tier": "academic_survey"
+              },
+              {
+                "year": 2017,
+                "raw": 0.864,
+                "normalized": 37.1,
+                "tier": "academic_survey"
+              },
+              {
+                "year": 2018,
+                "raw": 0.836,
+                "normalized": 35.6,
+                "tier": "academic_survey"
+              },
+              {
+                "year": 2019,
+                "raw": 0.794,
+                "normalized": 33.4,
+                "tier": "academic_survey"
+              },
+              {
+                "year": 2020,
+                "raw": 0.817,
+                "normalized": 34.6,
+                "tier": "academic_survey"
+              },
               {
                 "year": 2021,
                 "raw": 0.839,

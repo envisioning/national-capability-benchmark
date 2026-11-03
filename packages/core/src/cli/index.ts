@@ -19,7 +19,7 @@ import { fetchOecdGrsFill } from '../pipeline/adapters/oecd-grs.js'
 import { fetchIlostatInformalEmployment, fetchIlostatLongTermUnemployment } from '../pipeline/adapters/ilostat.js'
 import { fetchAtlasNewExportProducts } from '../pipeline/adapters/atlas.js'
 import type { Observation } from '../model/index.js'
-import { fetchOpenAlexCitationImpact } from '../pipeline/adapters/openalex.js'
+import { fetchOpenAlexCitationImpact, fetchOpenAlexHistory, type OpenAlexPin } from '../pipeline/adapters/openalex.js'
 import { fetchGithubNewRepositories } from '../pipeline/adapters/github.js'
 import { probeSeries, registrySeries, searchCatalogue } from '../pipeline/probe.js'
 import { loadFitnessItems } from '../fitness/validate.js'
@@ -734,18 +734,13 @@ async function ilostat(args: Args): Promise<void> {
 
 async function openalex(args: Args): Promise<void> {
   const action = args._[1] ?? 'fetch'
-  if (action !== 'fetch') {
-    throw new Error(`Unknown OpenAlex action "${action}". Use pnpm bench openalex fetch.`)
+  if (action !== 'fetch' && action !== 'history') {
+    throw new Error(`Unknown OpenAlex action "${action}". Use pnpm bench openalex fetch|history.`)
   }
   const retrievedAt = new Date().toISOString()
   const mailto = str(args, 'mailto', process.env.OPENALEX_MAILTO ?? '')
   if (!mailto) console.log('  no --mailto or OPENALEX_MAILTO: requests go without a contact address')
   const apiKey = process.env.OPENALEX_API_KEY ?? ''
-  const result = await fetchOpenAlexCitationImpact({
-    retrievedAt,
-    ...(mailto ? { mailto } : {}),
-    ...(apiKey ? { apiKey } : {}),
-  })
   let existing: unknown | null = null
   try {
     existing = JSON.parse(await readFile(FILES.openalex, 'utf8'))
@@ -760,15 +755,30 @@ async function openalex(args: Args): Promise<void> {
   }
   const before = parsedExisting?.success ? parsedExisting.data.observations : []
   const previousRetrievedAt = parsedExisting?.success ? parsedExisting.data.generatedAt : null
+  const existingPin = (existing as { openalex?: OpenAlexPin } | null)?.openalex
+  const courtesy = { ...(mailto ? { mailto } : {}), ...(apiKey ? { apiKey } : {}) }
+  /* `history` adds the per-year counts to the pinned window and never refetches it (D184). */
+  if (action === 'history' && !existingPin) throw new Error(`No OpenAlex pin in ${FILES.openalex}: run pnpm bench openalex fetch first.`)
+  const result =
+    action === 'history'
+      ? await fetchOpenAlexHistory(existingPin!, { retrievedAt, ...courtesy })
+      : await fetchOpenAlexCitationImpact({
+          retrievedAt,
+          ...courtesy,
+          ...(existingPin?.history ? { keepHistory: existingPin.history } : {}),
+        })
+  const generatedAt = action === 'history' ? (previousRetrievedAt ?? retrievedAt) : retrievedAt
   /* The pin travels in the same file: the requests, the totals and every count the values derive from. */
   await writeOut(
     FILES.openalex,
-    `${JSON.stringify({ generatedAt: retrievedAt, observations: result.observations, openalex: result.pin }, null, 2)}\n`,
+    `${JSON.stringify({ generatedAt, observations: result.observations, openalex: result.pin }, null, 2)}\n`,
   )
   const revisions = await recordRevisions(before, previousRetrievedAt, result.observations, retrievedAt)
 
   const { pin } = result
-  console.log(`OpenAlex ${result.release}: ${result.observations.length}/${COUNTRY_ISO3.length} benchmark countries emitted`)
+  console.log(
+    `OpenAlex ${result.release}: ${result.emittedCountries.length}/${COUNTRY_ISO3.length} benchmark countries emitted, ${result.observations.length} country-years`,
+  )
   console.log(`  window ${pin.window.from}-${pin.window.to}, stamped ${pin.year}`)
   console.log(
     `  affiliated-world baseline: ${pin.totals.baselineTop10} of ${pin.totals.baselineWorks} works in the top 10% (${(100 * pin.baselineShare).toFixed(2)}%)`,
@@ -776,6 +786,12 @@ async function openalex(args: Args): Promise<void> {
   const fallback = Object.entries(pin.counts).filter(([, c]) => c.via === 'per_country').map(([iso3]) => iso3)
   if (fallback.length > 0) console.log(`  counted one by one, missing from a grouped call: ${fallback.join(' ')}`)
   if (result.heldCountries.length > 0) console.log(`  held, no works: ${result.heldCountries.join(' ')}`)
+  if (pin.history) {
+    const oneByOne = pin.history.years.reduce((sum, entry) => sum + entry.requests.perCountry.length, 0)
+    console.log(
+      `  history: publication years ${pin.history.from}-${pin.history.to}, retrieved ${pin.history.retrievedAt.slice(0, 10)}, ${oneByOne} per-country requests`,
+    )
+  }
   console.log(`openalex data -> ${FILES.openalex}`)
   console.log(
     `revisions   -> ${revisions.changed} changed, ${revisions.added} added, ${revisions.removed} removed in ${FILES.revisions}`,

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-03T10:31:57.756Z",
+  "generatedAt": "2026-11-03T12:34:27.287Z",
   "iso3": "PRT",
   "country": "Portugal",
   "dimensions": [
@@ -1727,7 +1727,12 @@
       "score": 62.9,
       "confidence": 0.535,
       "band": "usable",
-      "trend": null,
+      "trend": {
+        "spanYears": 20,
+        "delta": 9.1,
+        "basket": 2,
+        "clamped": 0
+      },
       "scoredOn": [
         "human_capital_index",
         "firm_training_incidence",
