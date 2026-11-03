@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-03T12:33:57.534Z",
-  "version": "10.0.4",
+  "generatedAt": "2026-11-03T19:47:34.764Z",
+  "version": "10.0.5",
   "country": {
     "country": "Sudan",
     "iso3": "SDN",
@@ -2580,12 +2580,13 @@
           {
             "baseYear": 2016,
             "currentYear": 2026,
-            "baseScore": 37.6,
-            "currentScore": 37.5,
-            "delta": -0.1,
-            "matchedIndicators": 3,
+            "baseScore": 39,
+            "currentScore": 35.5,
+            "delta": -3.5,
+            "matchedIndicators": 4,
             "basket": [
               "unemployment_rate",
+              "long_term_unemployment_share",
               "export_diversification",
               "new_export_products_rate"
             ],
@@ -2593,47 +2594,27 @@
             "series": [
               {
                 "year": 2016,
-                "score": 37.6
-              },
-              {
-                "year": 2017,
-                "score": 35.5
-              },
-              {
-                "year": 2018,
-                "score": 40.6
-              },
-              {
-                "year": 2019,
-                "score": 40.6
-              },
-              {
-                "year": 2020,
-                "score": 37.4
-              },
-              {
-                "year": 2021,
-                "score": 33.7
+                "score": 39
               },
               {
                 "year": 2022,
-                "score": 41.9
+                "score": 38.8
               },
               {
                 "year": 2023,
-                "score": 38.4
+                "score": 36.2
               },
               {
                 "year": 2024,
-                "score": 38
+                "score": 35.9
               },
               {
                 "year": 2025,
-                "score": 37.5
+                "score": 35.5
               },
               {
                 "year": 2026,
-                "score": 37.5
+                "score": 35.5
               }
             ]
           }
@@ -2861,6 +2842,12 @@
             "winsorized": false,
             "outOfFrame": false,
             "series": [
+              {
+                "year": 2011,
+                "raw": 57.7,
+                "normalized": 43.2,
+                "tier": "international_organization"
+              },
               {
                 "year": 2022,
                 "raw": 70.5,

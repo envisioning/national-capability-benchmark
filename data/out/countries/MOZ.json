@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-03T12:33:57.534Z",
-  "version": "10.0.4",
+  "generatedAt": "2026-11-03T19:47:34.764Z",
+  "version": "10.0.5",
   "country": {
     "country": "Mozambique",
     "iso3": "MOZ",
@@ -2895,12 +2895,13 @@
           {
             "baseYear": 2016,
             "currentYear": 2026,
-            "baseScore": 64.7,
-            "currentScore": 55.7,
-            "delta": -9,
-            "matchedIndicators": 3,
+            "baseScore": 67.3,
+            "currentScore": 60.3,
+            "delta": -7,
+            "matchedIndicators": 4,
             "basket": [
               "unemployment_rate",
+              "long_term_unemployment_share",
               "export_diversification",
               "new_export_products_rate"
             ],
@@ -2908,47 +2909,43 @@
             "series": [
               {
                 "year": 2016,
-                "score": 64.7
+                "score": 67.3
               },
               {
                 "year": 2017,
-                "score": 60.3
+                "score": 64
               },
               {
                 "year": 2018,
-                "score": 59.3
+                "score": 63.2
               },
               {
                 "year": 2019,
-                "score": 59.9
+                "score": 63.7
               },
               {
                 "year": 2020,
-                "score": 60.1
-              },
-              {
-                "year": 2021,
-                "score": 59.7
+                "score": 63.9
               },
               {
                 "year": 2022,
-                "score": 56
+                "score": 60.6
               },
               {
                 "year": 2023,
-                "score": 56
+                "score": 60.6
               },
               {
                 "year": 2024,
-                "score": 55.4
+                "score": 60.1
               },
               {
                 "year": 2025,
-                "score": 55.7
+                "score": 60.3
               },
               {
                 "year": 2026,
-                "score": 55.7
+                "score": 60.3
               }
             ]
           },
@@ -3432,6 +3429,12 @@
             "winsorized": false,
             "outOfFrame": false,
             "series": [
+              {
+                "year": 2015,
+                "raw": 27.9,
+                "normalized": 75.2,
+                "tier": "international_organization"
+              },
               {
                 "year": 2022,
                 "raw": 28.9,

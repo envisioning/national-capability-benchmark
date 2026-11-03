@@ -243,7 +243,10 @@ const STATUS_LABEL: Record<string, string> = { B: 'break in series', U: 'flagged
 
 /**
  * Parse the ILOSTAT SDMX CSV into observations: derive the share, run the
- * plausibility gate on every country, emit the latest surviving year.
+ * plausibility gate on every country, emit every surviving year. The latest
+ * surviving year is the headline; the earlier ones are its history (D186).
+ * The gate runs once per country over the fetched window, so a history year
+ * is one the same gate keeps, and the headline is the value D120 emits.
  */
 export function parseIlostatLongTermUnemployment(
   csv: string,
@@ -267,40 +270,41 @@ export function parseIlostatLongTermUnemployment(
     available.push(iso3)
     const gated = plausibilityGate(iso3, points)
     dropped.push(...gated.dropped)
-    const latest = gated.kept[gated.kept.length - 1]
-    if (!latest) {
+    if (gated.kept.length === 0) {
       held.push(iso3)
       continue
     }
-    const flags = latest.status.map((code) => STATUS_LABEL[code] ?? code)
-    observations.push({
-      indicatorId: 'long_term_unemployment_share',
-      iso3,
-      geometry: 'national',
-      reconciliation: 'context_only',
-      value: round1(latest.value),
-      year: latest.year,
-      sourceTier: 'international_organization',
-      sourceUrl: ilostatLtuUrl([iso3]),
-      retrievedAt,
-      note: [
-        `${ILOSTAT_PUBLISHER} ${ILOSTAT_LTU_DATAFLOW}: ${DUR_12_PLUS} / (${DUR_TOTAL} - ${DUR_NOT_STATED}), ${SEX_TOTAL}, ${AGE_15_PLUS}`,
-        `survey: ${latest.source}`,
-        `duration not stated: ${round1(latest.unknownPct)}% of unemployed`,
-        ...(flags.length > 0 ? [`status: ${flags.join(', ')}`] : []),
-        `passed the D120 plausibility gate`,
-        'CC BY 4.0.',
-      ].join('; '),
-    })
+    for (const point of gated.kept) {
+      const flags = point.status.map((code) => STATUS_LABEL[code] ?? code)
+      observations.push({
+        indicatorId: 'long_term_unemployment_share',
+        iso3,
+        geometry: 'national',
+        reconciliation: 'context_only',
+        value: round1(point.value),
+        year: point.year,
+        sourceTier: 'international_organization',
+        sourceUrl: ilostatLtuUrl([iso3]),
+        retrievedAt,
+        note: [
+          `${ILOSTAT_PUBLISHER} ${ILOSTAT_LTU_DATAFLOW}: ${DUR_12_PLUS} / (${DUR_TOTAL} - ${DUR_NOT_STATED}), ${SEX_TOTAL}, ${AGE_15_PLUS}`,
+          `survey: ${point.source}`,
+          `duration not stated: ${round1(point.unknownPct)}% of unemployed`,
+          ...(flags.length > 0 ? [`status: ${flags.join(', ')}`] : []),
+          `passed the D120 plausibility gate`,
+          'CC BY 4.0.',
+        ].join('; '),
+      })
+    }
   }
 
-  observations.sort((a, b) => a.iso3.localeCompare(b.iso3))
+  observations.sort((a, b) => a.iso3.localeCompare(b.iso3) || a.year - b.year)
   dropped.sort((a, b) => a.iso3.localeCompare(b.iso3) || a.year - b.year)
   return {
     adapterId: ILOSTAT_LTU_ADAPTER_ID,
     observations,
     availableCountries: available.sort(),
-    emittedCountries: observations.map((observation) => observation.iso3),
+    emittedCountries: [...new Set(observations.map((observation) => observation.iso3))],
     heldCountries: held.sort(),
     unmappedLabels: unmapped.sort(),
     sourceUrl,

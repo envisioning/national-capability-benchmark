@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-03T12:33:57.534Z",
-  "version": "10.0.4",
+  "generatedAt": "2026-11-03T19:47:34.764Z",
+  "version": "10.0.5",
   "country": {
     "country": "Morocco",
     "iso3": "MAR",
@@ -3090,12 +3090,13 @@
           {
             "baseYear": 2016,
             "currentYear": 2026,
-            "baseScore": 62.9,
-            "currentScore": 55.4,
-            "delta": -7.5,
-            "matchedIndicators": 3,
+            "baseScore": 55.9,
+            "currentScore": 49.4,
+            "delta": -6.5,
+            "matchedIndicators": 4,
             "basket": [
               "unemployment_rate",
+              "long_term_unemployment_share",
               "export_diversification",
               "new_export_products_rate"
             ],
@@ -3103,47 +3104,35 @@
             "series": [
               {
                 "year": 2016,
-                "score": 62.9
+                "score": 55.9
               },
               {
                 "year": 2017,
-                "score": 60.5
-              },
-              {
-                "year": 2018,
-                "score": 59.1
-              },
-              {
-                "year": 2019,
-                "score": 59.7
-              },
-              {
-                "year": 2020,
-                "score": 53.9
+                "score": 54.1
               },
               {
                 "year": 2021,
-                "score": 55
+                "score": 48.1
               },
               {
                 "year": 2022,
-                "score": 56.7
+                "score": 50.4
               },
               {
                 "year": 2023,
-                "score": 55.8
+                "score": 49.7
               },
               {
                 "year": 2024,
-                "score": 55.2
+                "score": 49.2
               },
               {
                 "year": 2025,
-                "score": 55.4
+                "score": 49.4
               },
               {
                 "year": 2026,
-                "score": 55.4
+                "score": 49.4
               }
             ]
           },
@@ -3627,6 +3616,24 @@
             "winsorized": false,
             "outOfFrame": false,
             "series": [
+              {
+                "year": 2011,
+                "raw": 64.9,
+                "normalized": 35.4,
+                "tier": "international_organization"
+              },
+              {
+                "year": 2012,
+                "raw": 65.3,
+                "normalized": 35,
+                "tier": "international_organization"
+              },
+              {
+                "year": 2021,
+                "raw": 72.5,
+                "normalized": 27.3,
+                "tier": "international_organization"
+              },
               {
                 "year": 2022,
                 "raw": 68.6,

@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-03T12:33:57.534Z",
-  "version": "10.0.4",
+  "generatedAt": "2026-11-03T19:47:34.764Z",
+  "version": "10.0.5",
   "country": {
     "country": "Tunisia",
     "iso3": "TUN",
@@ -3158,12 +3158,13 @@
           {
             "baseYear": 2016,
             "currentYear": 2026,
-            "baseScore": 65,
-            "currentScore": 48.7,
-            "delta": -16.3,
-            "matchedIndicators": 3,
+            "baseScore": 57.8,
+            "currentScore": 45.7,
+            "delta": -12.1,
+            "matchedIndicators": 4,
             "basket": [
               "unemployment_rate",
+              "long_term_unemployment_share",
               "export_diversification",
               "new_export_products_rate"
             ],
@@ -3171,47 +3172,47 @@
             "series": [
               {
                 "year": 2016,
-                "score": 65
+                "score": 57.8
               },
               {
                 "year": 2017,
-                "score": 62.6
+                "score": 56.7
               },
               {
                 "year": 2018,
-                "score": 59.3
+                "score": 54.2
               },
               {
                 "year": 2019,
-                "score": 53.1
-              },
-              {
-                "year": 2020,
-                "score": 49.8
-              },
-              {
-                "year": 2021,
-                "score": 50.9
-              },
-              {
-                "year": 2022,
-                "score": 50.1
-              },
-              {
-                "year": 2023,
                 "score": 51.1
               },
               {
+                "year": 2020,
+                "score": 48.6
+              },
+              {
+                "year": 2021,
+                "score": 47.3
+              },
+              {
+                "year": 2022,
+                "score": 46.7
+              },
+              {
+                "year": 2023,
+                "score": 47.5
+              },
+              {
                 "year": 2024,
-                "score": 48.3
+                "score": 45.3
               },
               {
                 "year": 2025,
-                "score": 48.7
+                "score": 45.7
               },
               {
                 "year": 2026,
-                "score": 48.7
+                "score": 45.7
               }
             ]
           },
@@ -3695,6 +3696,42 @@
             "winsorized": false,
             "outOfFrame": false,
             "series": [
+              {
+                "year": 2012,
+                "raw": 64.5,
+                "normalized": 35.9,
+                "tier": "international_organization"
+              },
+              {
+                "year": 2013,
+                "raw": 64.3,
+                "normalized": 36.1,
+                "tier": "international_organization"
+              },
+              {
+                "year": 2015,
+                "raw": 65.3,
+                "normalized": 35,
+                "tier": "international_organization"
+              },
+              {
+                "year": 2016,
+                "raw": 64.3,
+                "normalized": 36.1,
+                "tier": "international_organization"
+              },
+              {
+                "year": 2017,
+                "raw": 61.7,
+                "normalized": 38.9,
+                "tier": "international_organization"
+              },
+              {
+                "year": 2019,
+                "raw": 56.1,
+                "normalized": 44.9,
+                "tier": "international_organization"
+              },
               {
                 "year": 2021,
                 "raw": 63.9,

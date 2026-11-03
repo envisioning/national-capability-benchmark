@@ -14,7 +14,7 @@ The frame includes 135 countries. Each dimension is scored from 0 to 100, with n
 | Trust | 82 | 0.33 (thin) | +1.9 over 10 years using 2 indicators |
 | Learning | 57.8 | 0.54 (usable) | +11 over 10 years using 2 indicators |
 | Experimentation | 30.7 | 0.47 (usable) | -0.9 over 10 years using 3 indicators |
-| Adaptability | 57.7 | 0.62 (usable) | -5.8 over 10 years using 3 indicators |
+| Adaptability | 57.7 | 0.62 (usable) | -4.5 over 10 years using 4 indicators |
 | Building | 39.3 | 0.63 (usable) | -1.3 over 10 years using 3 indicators |
 | Shared Purpose | 75.5 | 0.3 (thin) | +3.6 over 10 years using 2 indicators |
 

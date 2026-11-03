@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-03T12:33:57.534Z",
-  "version": "10.0.4",
+  "generatedAt": "2026-11-03T19:47:34.764Z",
+  "version": "10.0.5",
   "country": {
     "country": "Czechia",
     "iso3": "CZE",
@@ -3253,12 +3253,13 @@
           {
             "baseYear": 2016,
             "currentYear": 2026,
-            "baseScore": 88.9,
-            "currentScore": 75.8,
-            "delta": -13.1,
-            "matchedIndicators": 3,
+            "baseScore": 79.1,
+            "currentScore": 75.1,
+            "delta": -4,
+            "matchedIndicators": 4,
             "basket": [
               "unemployment_rate",
+              "long_term_unemployment_share",
               "export_diversification",
               "new_export_products_rate"
             ],
@@ -3266,47 +3267,47 @@
             "series": [
               {
                 "year": 2016,
-                "score": 88.9
+                "score": 79.1
               },
               {
                 "year": 2017,
-                "score": 89.9
+                "score": 81
               },
               {
                 "year": 2018,
-                "score": 83.6
+                "score": 76.7
               },
               {
                 "year": 2019,
-                "score": 81.3
+                "score": 75.8
               },
               {
                 "year": 2020,
-                "score": 81.3
+                "score": 79
               },
               {
                 "year": 2021,
-                "score": 79.5
+                "score": 75.2
               },
               {
                 "year": 2022,
-                "score": 77.5
+                "score": 75.2
               },
               {
                 "year": 2023,
-                "score": 77.1
+                "score": 74.5
               },
               {
                 "year": 2024,
-                "score": 76.2
+                "score": 73.4
               },
               {
                 "year": 2025,
-                "score": 75.8
+                "score": 75.1
               },
               {
                 "year": 2026,
-                "score": 75.8
+                "score": 75.1
               }
             ]
           },
@@ -3790,6 +3791,96 @@
             "winsorized": false,
             "outOfFrame": false,
             "series": [
+              {
+                "year": 2010,
+                "raw": 49.6,
+                "normalized": 51.9,
+                "tier": "international_organization"
+              },
+              {
+                "year": 2011,
+                "raw": 50.6,
+                "normalized": 50.8,
+                "tier": "international_organization"
+              },
+              {
+                "year": 2012,
+                "raw": 52.8,
+                "normalized": 48.4,
+                "tier": "international_organization"
+              },
+              {
+                "year": 2013,
+                "raw": 52.5,
+                "normalized": 48.8,
+                "tier": "international_organization"
+              },
+              {
+                "year": 2014,
+                "raw": 54.2,
+                "normalized": 46.9,
+                "tier": "international_organization"
+              },
+              {
+                "year": 2015,
+                "raw": 57.4,
+                "normalized": 43.5,
+                "tier": "international_organization"
+              },
+              {
+                "year": 2016,
+                "raw": 51.6,
+                "normalized": 49.7,
+                "tier": "international_organization"
+              },
+              {
+                "year": 2017,
+                "raw": 47.3,
+                "normalized": 54.4,
+                "tier": "international_organization"
+              },
+              {
+                "year": 2018,
+                "raw": 45.8,
+                "normalized": 56,
+                "tier": "international_organization"
+              },
+              {
+                "year": 2019,
+                "raw": 42.7,
+                "normalized": 59.3,
+                "tier": "international_organization"
+              },
+              {
+                "year": 2020,
+                "raw": 30.9,
+                "normalized": 72,
+                "tier": "international_organization"
+              },
+              {
+                "year": 2021,
+                "raw": 40.1,
+                "normalized": 62.1,
+                "tier": "international_organization"
+              },
+              {
+                "year": 2022,
+                "raw": 34.4,
+                "normalized": 68.2,
+                "tier": "international_organization"
+              },
+              {
+                "year": 2023,
+                "raw": 35.8,
+                "normalized": 66.7,
+                "tier": "international_organization"
+              },
+              {
+                "year": 2024,
+                "raw": 37.3,
+                "normalized": 65.1,
+                "tier": "international_organization"
+              },
               {
                 "year": 2025,
                 "raw": 30,

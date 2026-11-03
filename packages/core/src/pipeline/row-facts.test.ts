@@ -56,8 +56,13 @@ test('every lexicon has a template for every kind, and every placeholder fills',
 test('the table restates the pinned ILOSTAT release', () => {
   const file = JSON.parse(
     readFileSync(new URL('../../../../data/observations/ilostat-ltu.json', import.meta.url), 'utf8'),
-  ) as { observations: { iso3: string; note?: string }[] }
-  const notes = new Map(file.observations.map((o) => [o.iso3, o.note ?? '']))
+  ) as { observations: { iso3: string; year: number; note?: string }[] }
+  /* The facts are about the headline, each country's latest year (D186). */
+  const latest = new Map<string, { year: number; note?: string }>()
+  for (const o of file.observations) {
+    if ((latest.get(o.iso3)?.year ?? -Infinity) < o.year) latest.set(o.iso3, o)
+  }
+  const notes = new Map([...latest].map(([iso3, o]) => [iso3, o.note ?? '']))
   const ltu = COUNTRY_ROW_FACTS.filter((f) => f.indicatorId === 'long_term_unemployment_share')
   const kindOf = new Map(ltu.map((f) => [f.iso3, f]))
 

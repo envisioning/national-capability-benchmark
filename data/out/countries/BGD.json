@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-03T12:33:57.534Z",
-  "version": "10.0.4",
+  "generatedAt": "2026-11-03T19:47:34.764Z",
+  "version": "10.0.5",
   "country": {
     "country": "Bangladesh",
     "iso3": "BGD",
@@ -3217,12 +3217,13 @@
           {
             "baseYear": 2016,
             "currentYear": 2026,
-            "baseScore": 53.2,
-            "currentScore": 51,
-            "delta": -2.2,
-            "matchedIndicators": 3,
+            "baseScore": 59,
+            "currentScore": 60.1,
+            "delta": 1.1,
+            "matchedIndicators": 4,
             "basket": [
               "unemployment_rate",
+              "long_term_unemployment_share",
               "export_diversification",
               "new_export_products_rate"
             ],
@@ -3230,47 +3231,47 @@
             "series": [
               {
                 "year": 2016,
-                "score": 53.2
+                "score": 59
               },
               {
                 "year": 2017,
-                "score": 53.1
+                "score": 62.1
               },
               {
                 "year": 2018,
-                "score": 52.1
+                "score": 61.4
               },
               {
                 "year": 2019,
-                "score": 52.5
+                "score": 61.6
               },
               {
                 "year": 2020,
-                "score": 48.9
+                "score": 58.9
               },
               {
                 "year": 2021,
-                "score": 48.7
+                "score": 58.8
               },
               {
                 "year": 2022,
-                "score": 51
+                "score": 59
               },
               {
                 "year": 2023,
-                "score": 51.9
+                "score": 60.3
               },
               {
                 "year": 2024,
-                "score": 51.4
+                "score": 60.4
               },
               {
                 "year": 2025,
-                "score": 51
+                "score": 60.1
               },
               {
                 "year": 2026,
-                "score": 51
+                "score": 60.1
               }
             ]
           },
@@ -3754,6 +3755,36 @@
             "winsorized": false,
             "outOfFrame": false,
             "series": [
+              {
+                "year": 2010,
+                "raw": 63.3,
+                "normalized": 37.2,
+                "tier": "international_organization"
+              },
+              {
+                "year": 2013,
+                "raw": 26.7,
+                "normalized": 76.5,
+                "tier": "international_organization"
+              },
+              {
+                "year": 2017,
+                "raw": 15,
+                "normalized": 89,
+                "tier": "international_organization"
+              },
+              {
+                "year": 2022,
+                "raw": 20.6,
+                "normalized": 83,
+                "tier": "international_organization"
+              },
+              {
+                "year": 2023,
+                "raw": 18.6,
+                "normalized": 85.2,
+                "tier": "international_organization"
+              },
               {
                 "year": 2024,
                 "raw": 16.7,

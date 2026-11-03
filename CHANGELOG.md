@@ -9,6 +9,16 @@ The entries before App 1.0.0 are retrospective, high-level summaries
 reconstructed from the repository history. They document explicit version bumps
 and may skip versions that were never committed.
 
+## Dataset 10.0.5 — 2026-11-03
+
+- **Long-term unemployment has a history.** The share of the unemployed
+  who have looked for work for a year or more now keeps every year since
+  2010 that passes its plausibility check. Until this release it held only
+  the latest one. Adaptability's 10-year trend now includes this row in 83
+  countries. The history charts on country pages use the longer series too.
+- **Scores and confidence do not move.** A score still reads each country's
+  latest value, and those values are the same as in 10.0.4. Decision D186.
+
 ## Dataset 10.0.4 — 2026-11-03
 
 - **Learning has trends.** Research citation impact now has a value for

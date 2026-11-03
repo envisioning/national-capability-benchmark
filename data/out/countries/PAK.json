@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-03T12:33:57.534Z",
-  "version": "10.0.4",
+  "generatedAt": "2026-11-03T19:47:34.764Z",
+  "version": "10.0.5",
   "country": {
     "country": "Pakistan",
     "iso3": "PAK",
@@ -3226,12 +3226,13 @@
           {
             "baseYear": 2016,
             "currentYear": 2026,
-            "baseScore": 75.2,
-            "currentScore": 66.4,
-            "delta": -8.8,
-            "matchedIndicators": 3,
+            "baseScore": 60.9,
+            "currentScore": 69.4,
+            "delta": 8.5,
+            "matchedIndicators": 4,
             "basket": [
               "unemployment_rate",
+              "long_term_unemployment_share",
               "export_diversification",
               "new_export_products_rate"
             ],
@@ -3239,47 +3240,47 @@
             "series": [
               {
                 "year": 2016,
-                "score": 75.2
+                "score": 60.9
               },
               {
                 "year": 2017,
-                "score": 72.6
+                "score": 59
               },
               {
                 "year": 2018,
-                "score": 71.8
+                "score": 61.9
               },
               {
                 "year": 2019,
-                "score": 70.3
+                "score": 59
               },
               {
                 "year": 2020,
-                "score": 69.4
+                "score": 58.3
               },
               {
                 "year": 2021,
-                "score": 67
+                "score": 70.6
               },
               {
                 "year": 2022,
-                "score": 68.4
+                "score": 71.6
               },
               {
                 "year": 2023,
-                "score": 66.6
+                "score": 70.2
               },
               {
                 "year": 2024,
-                "score": 66.1
+                "score": 69.9
               },
               {
                 "year": 2025,
-                "score": 66.4
+                "score": 69.4
               },
               {
                 "year": 2026,
-                "score": 66.4
+                "score": 69.4
               }
             ]
           },
@@ -3763,6 +3764,60 @@
             "winsorized": false,
             "outOfFrame": false,
             "series": [
+              {
+                "year": 2010,
+                "raw": 24.3,
+                "normalized": 79.1,
+                "tier": "international_organization"
+              },
+              {
+                "year": 2011,
+                "raw": 21.1,
+                "normalized": 82.5,
+                "tier": "international_organization"
+              },
+              {
+                "year": 2013,
+                "raw": 32,
+                "normalized": 70.8,
+                "tier": "international_organization"
+              },
+              {
+                "year": 2014,
+                "raw": 61.1,
+                "normalized": 39.5,
+                "tier": "international_organization"
+              },
+              {
+                "year": 2015,
+                "raw": 78.1,
+                "normalized": 21.3,
+                "tier": "international_organization"
+              },
+              {
+                "year": 2016,
+                "raw": 80.9,
+                "normalized": 18.3,
+                "tier": "international_organization"
+              },
+              {
+                "year": 2018,
+                "raw": 68.1,
+                "normalized": 32,
+                "tier": "international_organization"
+              },
+              {
+                "year": 2019,
+                "raw": 74.5,
+                "normalized": 25.1,
+                "tier": "international_organization"
+              },
+              {
+                "year": 2021,
+                "raw": 22.3,
+                "normalized": 81.2,
+                "tier": "international_organization"
+              },
               {
                 "year": 2025,
                 "raw": 25,

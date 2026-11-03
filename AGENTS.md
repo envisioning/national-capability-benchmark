@@ -13,7 +13,7 @@ pnpm bench evs fetch   import the pinned Joint EVS/WVS items (A165 trust, A173 p
 pnpm bench vdem fetch  import the pinned V-Dem civil-society and court-compliance series (every country-year from 1990, D180) and the polarization and turnout checks into data/observations/vdem-cy-core.json
 pnpm bench unctad fetch import the pinned UNCTADstat export concentration index, every year from 1995 (D183), into data/observations/unctad-concentration.json (needs bsdtar)
 pnpm bench grs fetch   fill tax revenue from the pinned OECD Global Revenue Statistics into data/observations/oecd-grs-tax-fill.json, only where the World Bank has no value inside the D159 window; run it after `bench ingest`, because it reads worldbank.json (D172)
-pnpm bench ilostat fetch derive and gate the ILOSTAT long-term unemployment share into data/observations/ilostat-ltu.json, and read the informal employment rate (a condition) into data/observations/ilostat-informality.json; --only ltu|informality runs one
+pnpm bench ilostat fetch derive and gate the ILOSTAT long-term unemployment share into data/observations/ilostat-ltu.json, every year from 2010 the gate keeps (D186), and read the informal employment rate (a condition) into data/observations/ilostat-informality.json; --only ltu|informality runs one
 pnpm bench atlas fetch  count new export products from the pinned Growth Lab HS92 4-digit file (about 450 MB, checksum-checked), for every end year from 2010 (D183), into data/observations/atlas-new-export-products.json, with the pin and every count under `atlas`
 pnpm bench openalex fetch count the OpenAlex top 10% cited share and pin requests and counts into data/observations/openalex-citation-impact.json (set OPENALEX_MAILTO; OPENALEX_API_KEY optional); a refetch keeps the stored history
 pnpm bench openalex history count every publication year from 1990 into the same pin, without refetching the pinned window, and emit the earlier three-year windows (D184)
@@ -98,8 +98,9 @@ port 3888. That entry starts Next directly and does not use the proxy.
   output, `vdem-cy-core.json` holds the pinned V-Dem adapter output,
   `unctad-concentration.json` holds the pinned UNCTADstat adapter output,
   `oecd-grs-tax-fill.json` holds the OECD tax revenue fill (D172), and
-  `ilostat-ltu.json` holds the ILOSTAT long-term unemployment share, after
-  the plausibility gate D120 applies to every country.
+  `ilostat-ltu.json` holds the ILOSTAT long-term unemployment share, every
+  year from 2010 after the plausibility gate D120 applies to every country;
+  the latest year is the headline (D186).
   `openalex-citation-impact.json` holds the OpenAlex research citation
   impact and, under `openalex`, the pin: every request, the retrieval date
   and the counts the values derive from, because the API has no versions

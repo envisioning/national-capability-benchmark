@@ -123,7 +123,7 @@ const keptYears = (result: ReturnType<typeof plausibilityGate>) => result.kept.m
   assert.deepEqual(reasons(r), [])
 }
 
-/* End to end: derive, prefer the LFS, gate, emit the latest surviving year, log drops. */
+/* End to end: derive, prefer the LFS, gate, emit every surviving year, log drops. */
 const header =
   'DATAFLOW,REF_AREA,FREQ,MEASURE,SEX,AGE,DUR,TIME_PERIOD,OBS_VALUE,OBS_STATUS,UNIT_MEASURE_TYPE,UNIT_MEASURE,UNIT_MULT,SOURCE,NOTE_SOURCE,NOTE_INDICATOR,NOTE_CLASSIF,DECIMALS,UPPER_BOUND,LOWER_BOUND'
 const row = (iso3: string, dur: string, year: number, value: number | '', source: string, status = '', age = 'AGE_YTHADULT_YGE15', sex = 'SEX_T') =>
@@ -165,7 +165,12 @@ assert.deepEqual(result.unmappedLabels, ['ZZZ'])
 assert.deepEqual(result.dropped, [
   { iso3: 'KOR', year: 2025, value: 0.5, source: 'LFS - Economically Active Population Survey', reason: 'below_floor' },
 ])
-const bra = result.observations.find((o) => o.iso3 === 'BRA')!
+/* Brazil keeps both years: the latest is the headline, the earlier its history (D186). */
+assert.deepEqual(
+  result.observations.filter((o) => o.iso3 === 'BRA').map((o) => [o.year, o.value]),
+  [[2024, 32.4], [2025, 30.2]],
+)
+const bra = result.observations.findLast((o) => o.iso3 === 'BRA')!
 assert.equal(bra.indicatorId, 'long_term_unemployment_share')
 assert.equal(bra.year, 2025)
 assert.equal(bra.value, 30.2)

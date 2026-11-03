@@ -717,7 +717,9 @@ async function ilostat(args: Args): Promise<void> {
   await writeOut(FILES.ilostat, `${JSON.stringify({ generatedAt: retrievedAt, observations: result.observations }, null, 2)}\n`)
   const revisions = await recordRevisions(before, previousRetrievedAt, result.observations, retrievedAt)
 
-  console.log(`ILOSTAT ${result.release}: ${result.observations.length}/${COUNTRY_ISO3.length} benchmark countries emitted`)
+  console.log(
+    `ILOSTAT ${result.release}: ${result.emittedCountries.length}/${COUNTRY_ISO3.length} benchmark countries emitted, ${result.observations.length} country-years with the history (D186)`,
+  )
   console.log(`  source coverage: ${result.availableCountries.length}/${COUNTRY_ISO3.length}`)
   if (result.heldCountries.length > 0) {
     console.log(`  held, every year failed the plausibility gate: ${result.heldCountries.join(', ')}`)

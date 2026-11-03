@@ -10341,3 +10341,70 @@ the row gets the same construct on fuller coverage.
 **Overturned by.** mz ruling to admit now; or the 2026 round slipping past
 mid-2027, which turns the hold into a rejection by default and needs a new
 entry.
+
+---
+
+## D186 — Long-term unemployment keeps every year its plausibility gate passes
+
+*Recorded 2026-11-03. Extends D120, follows D180, D183 and D184 and serves
+D22, D174 and D175. The fourth MOVERS-1 backfill. Dataset 10.0.5. No score
+or confidence changes.*
+
+**Decision.** `long_term_unemployment_share` (Adaptability) now emits every
+year from 2010 that the D120 plausibility gate keeps, not only the latest
+one. The fetch is the same single SDMX request from 2010
+(`ILOSTAT_LTU_FROM_YEAR`), and the gate runs once per country over that
+window, as before. The latest kept year is the headline; the earlier kept
+years are its history. A year the gate drops is in the run log and never in
+the file.
+
+The window stays at 2010. A probe from 1990 gave the gate more years per
+survey and changed four headline values: Nicaragua and Nepal moved to an
+older year, and the Republic of the Congo and Tajikistan gained a value from
+2009. A second gate run for the older years would let one country-year be
+kept by one run and dropped by the other. So the history stops where D120's
+window starts, and the 20-year trend gets nothing from this row.
+
+**Why.** Adaptability's 10-year trend read only the unemployment rate and
+the two export rows. The long-term share had a value at both ends in no
+country, because the adapter discarded the years the gate had already
+checked. ILOSTAT publishes the same derivation for every year, so a past
+value reads on the headline's scale.
+
+**What changed in the published data.** A fresh fetch from 2010 reproduced
+all 118 stored headline values. The run logged 0 changed and 1,076 added
+country-years: 1,194 values in 118 countries. 71 countries start in 2010
+and 12 after 2017. The gate dropped the same 92 country-years and held the
+same six countries as before. All 1,215 scores and confidences are
+identical to 10.0.4, and `table.csv` is identical.
+
+Only Adaptability's 10-year trend moved. The long-term share now enters its
+basket in 83 of 135 countries. Brazil's trend reads +3.8 on four rows,
+where it read +2.3 on three. Its long-term share reads 38.0% in 2016 and
+30.2% in 2025. No other dimension's trend changed. The D174 history still
+ends on the headline in 1,195 of 1,195 cells.
+
+The holdout grew from 3,688 to 3,763 values. The donor fill reads RMSE 9.70
+against 10.96 for the flat comparison, so D178 stands.
+
+**The movers test, rerun on 10.0.5.** Adaptability enters (m1) with 133
+countries; income change explains almost none of its change (r² 0.06). Over
+10 years (m2) has four cross-origin pairs: each ILO row with each export
+row. Two pairs are left out, the two ILO rows and the two UN Comtrade rows
+(D179). The leftovers read noise: the statistic is -0.121 against a shuffle
+null of 0.079, so the rows move apart more than together. Over 20 years
+nothing changed. The 10-year verdict stays unreadable. No other dimension's
+reading changed.
+
+**Cost.** The observation file grows from 0.1 MB to 0.8 MB. 15 countries
+change survey inside their series, and 85 kept years carry ILO's
+break-in-series flag; a trend across such a change can read the survey as
+well as the labour market. Each year's note names its survey and flags, as
+the headline's note does. The gate's last clause holds back only the
+latest value, so an earlier jump that the following year keeps stays in the
+history as a level shift. ILOSTAT restates past years without a version, and
+the next fetch logs that in the revision log.
+
+**Overturned by.** A review that shows the survey changes inside the series
+drive the Adaptability trend; or a change to the D120 gate or its window,
+which reopens the question of a longer history.

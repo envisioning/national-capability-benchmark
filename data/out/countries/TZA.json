@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-03T12:33:57.534Z",
-  "version": "10.0.4",
+  "generatedAt": "2026-11-03T19:47:34.764Z",
+  "version": "10.0.5",
   "country": {
     "country": "Tanzania",
     "iso3": "TZA",
@@ -2680,12 +2680,13 @@
           {
             "baseYear": 2016,
             "currentYear": 2026,
-            "baseScore": 74.6,
-            "currentScore": 71.2,
-            "delta": -3.4,
-            "matchedIndicators": 3,
+            "baseScore": 63.5,
+            "currentScore": 73,
+            "delta": 9.5,
+            "matchedIndicators": 4,
             "basket": [
               "unemployment_rate",
+              "long_term_unemployment_share",
               "export_diversification",
               "new_export_products_rate"
             ],
@@ -2693,47 +2694,47 @@
             "series": [
               {
                 "year": 2016,
-                "score": 74.6
+                "score": 63.5
               },
               {
                 "year": 2017,
-                "score": 72.3
+                "score": 61.8
               },
               {
                 "year": 2018,
-                "score": 91.3
+                "score": 76
               },
               {
                 "year": 2019,
-                "score": 84.4
+                "score": 70.9
               },
               {
                 "year": 2020,
-                "score": 81.2
+                "score": 74.4
               },
               {
                 "year": 2021,
-                "score": 67.2
+                "score": 63.9
               },
               {
                 "year": 2022,
-                "score": 68.3
+                "score": 64.7
               },
               {
                 "year": 2023,
-                "score": 66.5
+                "score": 63.4
               },
               {
                 "year": 2024,
-                "score": 71.5
+                "score": 72.5
               },
               {
                 "year": 2025,
-                "score": 71.2
+                "score": 73
               },
               {
                 "year": 2026,
-                "score": 71.2
+                "score": 73
               }
             ]
           },
@@ -3217,6 +3218,24 @@
             "winsorized": false,
             "outOfFrame": false,
             "series": [
+              {
+                "year": 2014,
+                "raw": 69.8,
+                "normalized": 30.2,
+                "tier": "international_organization"
+              },
+              {
+                "year": 2020,
+                "raw": 47.6,
+                "normalized": 54,
+                "tier": "international_organization"
+              },
+              {
+                "year": 2024,
+                "raw": 27.6,
+                "normalized": 75.5,
+                "tier": "international_organization"
+              },
               {
                 "year": 2025,
                 "raw": 24.8,

@@ -14,7 +14,7 @@ A escala reúne 135 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 | Confiança | 51,7 | 0,35 (fraca) | sem tendência comparável |
 | Aprendizagem | 43,4 | 0,42 (fraca) | sem tendência comparável |
 | Experimentação | 23,6 | 0,54 (utilizável) | +3 em 10 anos, com base em 3 indicadores |
-| Adaptação | 56,4 | 0,62 (utilizável) | -5,8 em 10 anos, com base em 3 indicadores |
+| Adaptação | 56,4 | 0,62 (utilizável) | -4,9 em 10 anos, com base em 4 indicadores |
 | Construção | 19,7 | 0,48 (utilizável) | -4,6 em 10 anos, com base em 3 indicadores |
 | Propósito compartilhado | 33,1 | 0,43 (fraca) | -2,5 em 10 anos, com base em 2 indicadores |
 

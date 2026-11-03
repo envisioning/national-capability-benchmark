@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-03T12:34:29.856Z",
+  "generatedAt": "2026-11-03T19:48:07.478Z",
   "methodVersion": "history/0.1-provisional",
   "params": {
     "fromYear": 2000,
@@ -15,57 +15,57 @@
   "validation": [
     {
       "fill": "carried",
-      "n": 241,
-      "rmse": 11.91,
-      "bias": 1.08
+      "n": 284,
+      "rmse": 8.18,
+      "bias": -0.39
     },
     {
       "fill": "carried:1-3",
-      "n": 224,
-      "rmse": 11.13,
-      "bias": 1.32
+      "n": 259,
+      "rmse": 6.65,
+      "bias": -0.16
     },
     {
       "fill": "carried:4-15",
-      "n": 17,
-      "rmse": 19.48,
-      "bias": -2.06
+      "n": 25,
+      "rmse": 17.39,
+      "bias": -2.78
     },
     {
       "fill": "flat",
-      "n": 3688,
-      "rmse": 11.14,
-      "bias": 2.1
+      "n": 3763,
+      "rmse": 10.96,
+      "bias": 2.66
     },
     {
       "fill": "interpolated",
-      "n": 6934,
-      "rmse": 4.7,
-      "bias": 0.07
+      "n": 7022,
+      "rmse": 5.11,
+      "bias": 0
     },
     {
       "fill": "modelled",
-      "n": 3688,
-      "rmse": 10.18,
-      "bias": 1.01
+      "n": 3763,
+      "rmse": 9.7,
+      "bias": 1.3
     },
     {
       "fill": "modelled:1-3",
-      "n": 1484,
-      "rmse": 7.97,
-      "bias": 0.71
+      "n": 1507,
+      "rmse": 6.94,
+      "bias": 0.7
     },
     {
       "fill": "modelled:4-7",
-      "n": 1640,
-      "rmse": 11.87,
-      "bias": 1.32
+      "n": 1673,
+      "rmse": 11,
+      "bias": 1.65
     },
     {
       "fill": "modelled:8+",
-      "n": 564,
-      "rmse": 10.06,
-      "bias": 0.92
+      "n": 583,
+      "rmse": 11.63,
+      "bias": 1.85
     }
   ],
   "cohorts": [
@@ -364,8 +364,8 @@
               "baseYear": 2006,
               "endYear": 2026,
               "estimate": 13.4,
-              "lo": 12.7,
-              "hi": 14.2,
+              "lo": 12.6,
+              "hi": 14.4,
               "n": 134,
               "relative": 0
             }
@@ -515,7 +515,7 @@
               "baseYear": 2016,
               "endYear": 2026,
               "estimate": 1.6,
-              "lo": 1.1,
+              "lo": 1.2,
               "hi": 2.1,
               "n": 131,
               "relative": 0
@@ -526,7 +526,7 @@
               "endYear": 2026,
               "estimate": 8.1,
               "lo": 7.4,
-              "hi": 8.9,
+              "hi": 8.8,
               "n": 131,
               "relative": 0
             }
@@ -677,7 +677,7 @@
               "endYear": 2026,
               "estimate": -1.7,
               "lo": -2.4,
-              "hi": -1,
+              "hi": -1.1,
               "n": 130,
               "relative": 0
             },
@@ -686,8 +686,8 @@
               "baseYear": 2006,
               "endYear": 2026,
               "estimate": -2.7,
-              "lo": -3.4,
-              "hi": -1.9,
+              "lo": -3.6,
+              "hi": -1.8,
               "n": 130,
               "relative": 0
             }
@@ -838,7 +838,7 @@
               "endYear": 2026,
               "estimate": 1.3,
               "lo": 0.8,
-              "hi": 1.9,
+              "hi": 2,
               "n": 132,
               "relative": 0
             },
@@ -847,8 +847,8 @@
               "baseYear": 2006,
               "endYear": 2026,
               "estimate": 1.4,
-              "lo": 0.6,
-              "hi": 2,
+              "lo": 0.8,
+              "hi": 2.2,
               "n": 132,
               "relative": 0
             }
@@ -998,8 +998,8 @@
               "baseYear": 2016,
               "endYear": 2026,
               "estimate": -1.3,
-              "lo": -1.9,
-              "hi": -0.7,
+              "lo": -1.8,
+              "hi": -0.6,
               "n": 133,
               "relative": 0
             },
@@ -1008,7 +1008,7 @@
               "baseYear": 2006,
               "endYear": 2026,
               "estimate": 0.8,
-              "lo": 0.1,
+              "lo": 0,
               "hi": 1.7,
               "n": 133,
               "relative": 0
@@ -1159,7 +1159,7 @@
               "baseYear": 2016,
               "endYear": 2026,
               "estimate": 0,
-              "lo": -0.4,
+              "lo": -0.5,
               "hi": 0.5,
               "n": 135,
               "relative": 0
@@ -1180,17 +1180,17 @@
           "series": [
             {
               "year": 2000,
-              "median": 61.6,
+              "median": 60.1,
               "n": 135
             },
             {
               "year": 2001,
-              "median": 61.8,
+              "median": 61,
               "n": 135
             },
             {
               "year": 2002,
-              "median": 61.5,
+              "median": 61,
               "n": 135
             },
             {
@@ -1200,82 +1200,82 @@
             },
             {
               "year": 2004,
-              "median": 61.6,
+              "median": 60.5,
               "n": 135
             },
             {
               "year": 2005,
-              "median": 62.4,
-              "n": 135
-            },
-            {
-              "year": 2006,
-              "median": 63.5,
-              "n": 135
-            },
-            {
-              "year": 2007,
-              "median": 64.2,
-              "n": 135
-            },
-            {
-              "year": 2008,
-              "median": 63.9,
-              "n": 135
-            },
-            {
-              "year": 2009,
-              "median": 64,
-              "n": 135
-            },
-            {
-              "year": 2010,
-              "median": 63.7,
-              "n": 135
-            },
-            {
-              "year": 2011,
-              "median": 62.5,
-              "n": 135
-            },
-            {
-              "year": 2012,
-              "median": 62.8,
-              "n": 135
-            },
-            {
-              "year": 2013,
-              "median": 62.4,
-              "n": 135
-            },
-            {
-              "year": 2014,
-              "median": 61.8,
-              "n": 135
-            },
-            {
-              "year": 2015,
-              "median": 62.7,
-              "n": 135
-            },
-            {
-              "year": 2016,
-              "median": 62,
-              "n": 135
-            },
-            {
-              "year": 2017,
-              "median": 61.7,
-              "n": 135
-            },
-            {
-              "year": 2018,
               "median": 61,
               "n": 135
             },
             {
+              "year": 2006,
+              "median": 61.8,
+              "n": 135
+            },
+            {
+              "year": 2007,
+              "median": 63.1,
+              "n": 135
+            },
+            {
+              "year": 2008,
+              "median": 63.7,
+              "n": 135
+            },
+            {
+              "year": 2009,
+              "median": 63.7,
+              "n": 135
+            },
+            {
+              "year": 2010,
+              "median": 63.4,
+              "n": 135
+            },
+            {
+              "year": 2011,
+              "median": 61.6,
+              "n": 135
+            },
+            {
+              "year": 2012,
+              "median": 61.4,
+              "n": 135
+            },
+            {
+              "year": 2013,
+              "median": 61.6,
+              "n": 135
+            },
+            {
+              "year": 2014,
+              "median": 60.4,
+              "n": 135
+            },
+            {
+              "year": 2015,
+              "median": 61.5,
+              "n": 135
+            },
+            {
+              "year": 2016,
+              "median": 61.4,
+              "n": 135
+            },
+            {
+              "year": 2017,
+              "median": 61,
+              "n": 135
+            },
+            {
+              "year": 2018,
+              "median": 60.1,
+              "n": 135
+            },
+            {
               "year": 2019,
-              "median": 61.1,
+              "median": 60.9,
               "n": 135
             },
             {
@@ -1285,22 +1285,22 @@
             },
             {
               "year": 2021,
-              "median": 58.6,
+              "median": 57.7,
               "n": 135
             },
             {
               "year": 2022,
-              "median": 60.3,
+              "median": 59.2,
               "n": 135
             },
             {
               "year": 2023,
-              "median": 60.8,
+              "median": 60.7,
               "n": 135
             },
             {
               "year": 2024,
-              "median": 61.8,
+              "median": 61.6,
               "n": 135
             },
             {
@@ -1319,9 +1319,9 @@
               "span": 10,
               "baseYear": 2016,
               "endYear": 2026,
-              "estimate": -1.3,
-              "lo": -1.6,
-              "hi": -1,
+              "estimate": -0.8,
+              "lo": -0.9,
+              "hi": -0.2,
               "n": 135,
               "relative": 0
             },
@@ -1329,9 +1329,9 @@
               "span": 20,
               "baseYear": 2006,
               "endYear": 2026,
-              "estimate": -2.2,
-              "lo": -2.9,
-              "hi": -1.4,
+              "estimate": -1,
+              "lo": -1.7,
+              "hi": -0.3,
               "n": 135,
               "relative": 0
             }
@@ -1491,8 +1491,8 @@
               "baseYear": 2006,
               "endYear": 2026,
               "estimate": -0.5,
-              "lo": -1,
-              "hi": 0,
+              "lo": -1.1,
+              "hi": 0.1,
               "n": 134,
               "relative": 0
             }
@@ -1642,8 +1642,8 @@
               "baseYear": 2016,
               "endYear": 2026,
               "estimate": 1.9,
-              "lo": 1.3,
-              "hi": 2.4,
+              "lo": 1.4,
+              "hi": 2.5,
               "n": 131,
               "relative": 0
             },
@@ -1652,8 +1652,8 @@
               "baseYear": 2006,
               "endYear": 2026,
               "estimate": 2.7,
-              "lo": 2,
-              "hi": 3.4,
+              "lo": 2.1,
+              "hi": 3.5,
               "n": 131,
               "relative": 0
             }
@@ -1841,8 +1841,8 @@
               "baseYear": 2006,
               "endYear": 2026,
               "estimate": 12.1,
-              "lo": 10.3,
-              "hi": 14.1,
+              "lo": 9.6,
+              "hi": 14.4,
               "n": 19,
               "relative": -1.3
             }
@@ -1992,8 +1992,8 @@
               "baseYear": 2016,
               "endYear": 2026,
               "estimate": 1.5,
-              "lo": 0,
-              "hi": 3.1,
+              "lo": 0.3,
+              "hi": 3.4,
               "n": 18,
               "relative": -0.1
             },
@@ -2002,8 +2002,8 @@
               "baseYear": 2006,
               "endYear": 2026,
               "estimate": 6.9,
-              "lo": 5.2,
-              "hi": 8.9,
+              "lo": 5.1,
+              "hi": 9.1,
               "n": 18,
               "relative": -1.2
             }
@@ -2153,8 +2153,8 @@
               "baseYear": 2016,
               "endYear": 2026,
               "estimate": -1.4,
-              "lo": -2.9,
-              "hi": 0.6,
+              "lo": -3,
+              "hi": 0.5,
               "n": 18,
               "relative": 0.2
             },
@@ -2163,8 +2163,8 @@
               "baseYear": 2006,
               "endYear": 2026,
               "estimate": -5.2,
-              "lo": -7.4,
-              "hi": -3.1,
+              "lo": -7.6,
+              "hi": -3.3,
               "n": 18,
               "relative": -2.5
             }
@@ -2314,8 +2314,8 @@
               "baseYear": 2016,
               "endYear": 2026,
               "estimate": 1,
-              "lo": -0.6,
-              "hi": 2.1,
+              "lo": -0.5,
+              "hi": 2.2,
               "n": 18,
               "relative": -0.3
             },
@@ -2324,8 +2324,8 @@
               "baseYear": 2006,
               "endYear": 2026,
               "estimate": 1.2,
-              "lo": -0.4,
-              "hi": 2.9,
+              "lo": -0.7,
+              "hi": 2.8,
               "n": 18,
               "relative": -0.2
             }
@@ -2475,8 +2475,8 @@
               "baseYear": 2016,
               "endYear": 2026,
               "estimate": -3.5,
-              "lo": -4.7,
-              "hi": -2.3,
+              "lo": -4.9,
+              "hi": -2.1,
               "n": 18,
               "relative": -2.3
             },
@@ -2485,8 +2485,8 @@
               "baseYear": 2006,
               "endYear": 2026,
               "estimate": 2.2,
-              "lo": 0,
-              "hi": 4.2,
+              "lo": 0.2,
+              "hi": 4.4,
               "n": 18,
               "relative": 1.4
             }
@@ -2636,8 +2636,8 @@
               "baseYear": 2016,
               "endYear": 2026,
               "estimate": 0.5,
-              "lo": -0.3,
-              "hi": 1.1,
+              "lo": -0.5,
+              "hi": 1.2,
               "n": 20,
               "relative": 0.5
             },
@@ -2647,7 +2647,7 @@
               "endYear": 2026,
               "estimate": 0.5,
               "lo": -0.7,
-              "hi": 1.2,
+              "hi": 1.1,
               "n": 20,
               "relative": 0.3
             }
@@ -2657,37 +2657,37 @@
           "series": [
             {
               "year": 2000,
-              "median": 64.2,
+              "median": 63.2,
               "n": 20
             },
             {
               "year": 2001,
-              "median": 64.6,
+              "median": 63,
               "n": 20
             },
             {
               "year": 2002,
-              "median": 63.9,
+              "median": 62.6,
               "n": 20
             },
             {
               "year": 2003,
-              "median": 62.9,
+              "median": 62.5,
               "n": 20
             },
             {
               "year": 2004,
-              "median": 63.6,
+              "median": 63.7,
               "n": 20
             },
             {
               "year": 2005,
-              "median": 64.7,
+              "median": 65.5,
               "n": 20
             },
             {
               "year": 2006,
-              "median": 65.8,
+              "median": 66,
               "n": 20
             },
             {
@@ -2697,17 +2697,17 @@
             },
             {
               "year": 2008,
-              "median": 67.1,
+              "median": 66.1,
               "n": 20
             },
             {
               "year": 2009,
-              "median": 65.2,
+              "median": 64.8,
               "n": 20
             },
             {
               "year": 2010,
-              "median": 66.6,
+              "median": 65.8,
               "n": 20
             },
             {
@@ -2722,17 +2722,17 @@
             },
             {
               "year": 2013,
-              "median": 63.5,
+              "median": 63.9,
               "n": 20
             },
             {
               "year": 2014,
-              "median": 62.2,
+              "median": 62.5,
               "n": 20
             },
             {
               "year": 2015,
-              "median": 63.8,
+              "median": 62.9,
               "n": 20
             },
             {
@@ -2742,42 +2742,42 @@
             },
             {
               "year": 2017,
-              "median": 60.9,
+              "median": 61.2,
               "n": 20
             },
             {
               "year": 2018,
-              "median": 60,
+              "median": 59.8,
               "n": 20
             },
             {
               "year": 2019,
-              "median": 60.2,
+              "median": 60.4,
               "n": 20
             },
             {
               "year": 2020,
-              "median": 56.1,
+              "median": 55.3,
               "n": 20
             },
             {
               "year": 2021,
-              "median": 56.4,
+              "median": 54.5,
               "n": 20
             },
             {
               "year": 2022,
-              "median": 59.2,
+              "median": 57.1,
               "n": 20
             },
             {
               "year": 2023,
-              "median": 60.9,
+              "median": 59.6,
               "n": 20
             },
             {
               "year": 2024,
-              "median": 63.1,
+              "median": 62.9,
               "n": 20
             },
             {
@@ -2796,21 +2796,21 @@
               "span": 10,
               "baseYear": 2016,
               "endYear": 2026,
-              "estimate": -0.3,
-              "lo": -1.1,
-              "hi": 0.7,
+              "estimate": -1.7,
+              "lo": -1.7,
+              "hi": -1.3,
               "n": 20,
-              "relative": 0.9
+              "relative": -0.9
             },
             {
               "span": 20,
               "baseYear": 2006,
               "endYear": 2026,
-              "estimate": -3.7,
-              "lo": -5.7,
-              "hi": -2.1,
+              "estimate": -4,
+              "lo": -5.6,
+              "hi": -2.3,
               "n": 20,
-              "relative": -1.6
+              "relative": -3
             }
           ]
         },
@@ -2968,8 +2968,8 @@
               "baseYear": 2006,
               "endYear": 2026,
               "estimate": -2.6,
-              "lo": -4,
-              "hi": -0.9,
+              "lo": -3.9,
+              "hi": -1.1,
               "n": 19,
               "relative": -2
             }
@@ -3119,8 +3119,8 @@
               "baseYear": 2016,
               "endYear": 2026,
               "estimate": 3.2,
-              "lo": 1.3,
-              "hi": 4.7,
+              "lo": 1.7,
+              "hi": 4.8,
               "n": 18,
               "relative": 1.3
             },
@@ -3129,8 +3129,8 @@
               "baseYear": 2006,
               "endYear": 2026,
               "estimate": 6.1,
-              "lo": 4.4,
-              "hi": 7.9,
+              "lo": 3.8,
+              "hi": 8.7,
               "n": 18,
               "relative": 3.5
             }
@@ -3331,8 +3331,8 @@
               "baseYear": 2006,
               "endYear": 2026,
               "estimate": 11.7,
-              "lo": 10.3,
-              "hi": 13.4,
+              "lo": 9.7,
+              "hi": 13.9,
               "n": 33,
               "relative": -1.7
             }
@@ -3482,8 +3482,8 @@
               "baseYear": 2016,
               "endYear": 2026,
               "estimate": 1.5,
-              "lo": 0.6,
-              "hi": 2.4,
+              "lo": 0.5,
+              "hi": 2.8,
               "n": 31,
               "relative": 0
             },
@@ -3492,7 +3492,7 @@
               "baseYear": 2006,
               "endYear": 2026,
               "estimate": 10.7,
-              "lo": 9,
+              "lo": 9.1,
               "hi": 12,
               "n": 31,
               "relative": 2.5
@@ -3643,8 +3643,8 @@
               "baseYear": 2016,
               "endYear": 2026,
               "estimate": 2.6,
-              "lo": 0.9,
-              "hi": 4,
+              "lo": 0.1,
+              "hi": 4.6,
               "n": 33,
               "relative": 4.3
             },
@@ -3804,8 +3804,8 @@
               "baseYear": 2016,
               "endYear": 2026,
               "estimate": 4.4,
-              "lo": 3.1,
-              "hi": 5.6,
+              "lo": 3.3,
+              "hi": 6,
               "n": 32,
               "relative": 3.1
             },
@@ -3814,8 +3814,8 @@
               "baseYear": 2006,
               "endYear": 2026,
               "estimate": 5.1,
-              "lo": 3.3,
-              "hi": 7.1,
+              "lo": 2.8,
+              "hi": 6.9,
               "n": 32,
               "relative": 3.6
             }
@@ -3965,8 +3965,8 @@
               "baseYear": 2016,
               "endYear": 2026,
               "estimate": -2.3,
-              "lo": -3.8,
-              "hi": -1.3,
+              "lo": -3.5,
+              "hi": -1.2,
               "n": 33,
               "relative": -1.1
             },
@@ -3975,8 +3975,8 @@
               "baseYear": 2006,
               "endYear": 2026,
               "estimate": 0.6,
-              "lo": -1.3,
-              "hi": 2,
+              "lo": -1,
+              "hi": 2.6,
               "n": 33,
               "relative": -0.2
             }
@@ -4126,8 +4126,8 @@
               "baseYear": 2016,
               "endYear": 2026,
               "estimate": 0,
-              "lo": -0.9,
-              "hi": 0.8,
+              "lo": -1.1,
+              "hi": 1,
               "n": 33,
               "relative": 0
             },
@@ -4136,8 +4136,8 @@
               "baseYear": 2006,
               "endYear": 2026,
               "estimate": 0.1,
-              "lo": -0.9,
-              "hi": 0.8,
+              "lo": -0.8,
+              "hi": 1,
               "n": 33,
               "relative": 0
             }
@@ -4147,67 +4147,67 @@
           "series": [
             {
               "year": 2000,
-              "median": 46.7,
+              "median": 46.1,
               "n": 33
             },
             {
               "year": 2001,
-              "median": 49.7,
+              "median": 45.6,
               "n": 33
             },
             {
               "year": 2002,
-              "median": 50.2,
+              "median": 46,
               "n": 33
             },
             {
               "year": 2003,
-              "median": 48.5,
+              "median": 48,
               "n": 33
             },
             {
               "year": 2004,
-              "median": 48.9,
+              "median": 48.8,
               "n": 33
             },
             {
               "year": 2005,
-              "median": 48.4,
+              "median": 47.8,
               "n": 33
             },
             {
               "year": 2006,
-              "median": 49.1,
-              "n": 33
-            },
-            {
-              "year": 2007,
-              "median": 51.6,
-              "n": 33
-            },
-            {
-              "year": 2008,
               "median": 48.1,
               "n": 33
             },
             {
+              "year": 2007,
+              "median": 49.1,
+              "n": 33
+            },
+            {
+              "year": 2008,
+              "median": 47.7,
+              "n": 33
+            },
+            {
               "year": 2009,
-              "median": 49.7,
+              "median": 47.9,
               "n": 33
             },
             {
               "year": 2010,
-              "median": 50.3,
+              "median": 49.9,
               "n": 33
             },
             {
               "year": 2011,
-              "median": 52,
+              "median": 51.9,
               "n": 33
             },
             {
               "year": 2012,
-              "median": 50.5,
+              "median": 51.1,
               "n": 33
             },
             {
@@ -4217,27 +4217,27 @@
             },
             {
               "year": 2014,
-              "median": 51.6,
+              "median": 47.5,
               "n": 33
             },
             {
               "year": 2015,
-              "median": 51.3,
+              "median": 50.3,
               "n": 33
             },
             {
               "year": 2016,
-              "median": 52.9,
+              "median": 50.2,
               "n": 33
             },
             {
               "year": 2017,
-              "median": 50.7,
+              "median": 50.6,
               "n": 33
             },
             {
               "year": 2018,
-              "median": 52.7,
+              "median": 52.3,
               "n": 33
             },
             {
@@ -4247,7 +4247,7 @@
             },
             {
               "year": 2020,
-              "median": 49.3,
+              "median": 50.1,
               "n": 33
             },
             {
@@ -4267,7 +4267,7 @@
             },
             {
               "year": 2024,
-              "median": 53.3,
+              "median": 55.1,
               "n": 33
             },
             {
@@ -4286,21 +4286,21 @@
               "span": 10,
               "baseYear": 2016,
               "endYear": 2026,
-              "estimate": -1.6,
-              "lo": -2.4,
-              "hi": -0.8,
+              "estimate": -0.2,
+              "lo": -0.9,
+              "hi": 0.7,
               "n": 33,
-              "relative": -0.3
+              "relative": 0.5
             },
             {
               "span": 20,
               "baseYear": 2006,
               "endYear": 2026,
-              "estimate": -1.2,
-              "lo": -2.8,
-              "hi": -0.2,
+              "estimate": 0.9,
+              "lo": -0.4,
+              "hi": 2,
               "n": 33,
-              "relative": 1
+              "relative": 1.9
             }
           ]
         },
@@ -4448,7 +4448,7 @@
               "baseYear": 2016,
               "endYear": 2026,
               "estimate": -1.1,
-              "lo": -1.7,
+              "lo": -1.9,
               "hi": -0.5,
               "n": 33,
               "relative": -0.8
@@ -4458,7 +4458,7 @@
               "baseYear": 2006,
               "endYear": 2026,
               "estimate": -0.5,
-              "lo": -1.8,
+              "lo": -2,
               "hi": 0.8,
               "n": 33,
               "relative": 0
@@ -4609,8 +4609,8 @@
               "baseYear": 2016,
               "endYear": 2026,
               "estimate": 2.3,
-              "lo": 1.2,
-              "hi": 3.1,
+              "lo": 1.3,
+              "hi": 2.9,
               "n": 31,
               "relative": 0.4
             },
@@ -4619,8 +4619,8 @@
               "baseYear": 2006,
               "endYear": 2026,
               "estimate": 5.5,
-              "lo": 4.5,
-              "hi": 7.4,
+              "lo": 4.4,
+              "hi": 7.3,
               "n": 31,
               "relative": 2.9
             }
@@ -4822,8 +4822,8 @@
               "baseYear": 2006,
               "endYear": 2026,
               "estimate": 13.6,
-              "lo": 12,
-              "hi": 15.3,
+              "lo": 11.9,
+              "hi": 15.2,
               "n": 34,
               "relative": 0.3
             }
@@ -4973,8 +4973,8 @@
               "baseYear": 2016,
               "endYear": 2026,
               "estimate": 2.3,
-              "lo": 1.3,
-              "hi": 3.6,
+              "lo": 1,
+              "hi": 3.4,
               "n": 33,
               "relative": 0.7
             },
@@ -4984,7 +4984,7 @@
               "endYear": 2026,
               "estimate": 8.1,
               "lo": 6.7,
-              "hi": 9.3,
+              "hi": 9.5,
               "n": 33,
               "relative": 0
             }
@@ -5134,8 +5134,8 @@
               "baseYear": 2016,
               "endYear": 2026,
               "estimate": -1.6,
-              "lo": -3.4,
-              "hi": -0.1,
+              "lo": -3.3,
+              "hi": -0.2,
               "n": 34,
               "relative": 0.1
             },
@@ -5145,7 +5145,7 @@
               "endYear": 2026,
               "estimate": -2.5,
               "lo": -4.3,
-              "hi": -0.6,
+              "hi": -0.5,
               "n": 34,
               "relative": 0.2
             }
@@ -5295,7 +5295,7 @@
               "baseYear": 2016,
               "endYear": 2026,
               "estimate": 1.9,
-              "lo": 0.9,
+              "lo": 1,
               "hi": 3.1,
               "n": 34,
               "relative": 0.6
@@ -5305,8 +5305,8 @@
               "baseYear": 2006,
               "endYear": 2026,
               "estimate": 3.3,
-              "lo": 1.6,
-              "hi": 4.7,
+              "lo": 1.7,
+              "hi": 5,
               "n": 34,
               "relative": 1.9
             }
@@ -5456,7 +5456,7 @@
               "baseYear": 2016,
               "endYear": 2026,
               "estimate": -0.4,
-              "lo": -1.4,
+              "lo": -1.5,
               "hi": 0.6,
               "n": 34,
               "relative": 0.8
@@ -5617,8 +5617,8 @@
               "baseYear": 2016,
               "endYear": 2026,
               "estimate": 0.5,
-              "lo": -0.3,
-              "hi": 1.4,
+              "lo": -0.4,
+              "hi": 1.3,
               "n": 34,
               "relative": 0.5
             },
@@ -5627,8 +5627,8 @@
               "baseYear": 2006,
               "endYear": 2026,
               "estimate": 0.7,
-              "lo": -0.2,
-              "hi": 1.4,
+              "lo": -0.5,
+              "hi": 1.3,
               "n": 34,
               "relative": 0.5
             }
@@ -5638,122 +5638,122 @@
           "series": [
             {
               "year": 2000,
-              "median": 59.2,
+              "median": 56,
               "n": 34
             },
             {
               "year": 2001,
-              "median": 59.1,
+              "median": 55.1,
               "n": 34
             },
             {
               "year": 2002,
-              "median": 58.4,
+              "median": 54.9,
               "n": 34
             },
             {
               "year": 2003,
-              "median": 58.9,
-              "n": 34
-            },
-            {
-              "year": 2004,
-              "median": 58.5,
-              "n": 34
-            },
-            {
-              "year": 2005,
-              "median": 57.6,
-              "n": 34
-            },
-            {
-              "year": 2006,
-              "median": 57.9,
-              "n": 34
-            },
-            {
-              "year": 2007,
-              "median": 58.2,
-              "n": 34
-            },
-            {
-              "year": 2008,
-              "median": 57.2,
-              "n": 34
-            },
-            {
-              "year": 2009,
-              "median": 56.8,
-              "n": 34
-            },
-            {
-              "year": 2010,
-              "median": 58.8,
-              "n": 34
-            },
-            {
-              "year": 2011,
-              "median": 56.9,
-              "n": 34
-            },
-            {
-              "year": 2012,
-              "median": 55,
-              "n": 34
-            },
-            {
-              "year": 2013,
-              "median": 57.7,
-              "n": 34
-            },
-            {
-              "year": 2014,
-              "median": 56.8,
-              "n": 34
-            },
-            {
-              "year": 2015,
               "median": 54.7,
               "n": 34
             },
             {
-              "year": 2016,
-              "median": 55,
+              "year": 2004,
+              "median": 56.9,
               "n": 34
             },
             {
-              "year": 2017,
-              "median": 55.4,
+              "year": 2005,
+              "median": 54.6,
               "n": 34
             },
             {
-              "year": 2018,
-              "median": 54.8,
+              "year": 2006,
+              "median": 56.3,
               "n": 34
             },
             {
-              "year": 2019,
-              "median": 51.7,
+              "year": 2007,
+              "median": 56.4,
               "n": 34
             },
             {
-              "year": 2020,
-              "median": 52.1,
+              "year": 2008,
+              "median": 54.9,
               "n": 34
             },
             {
-              "year": 2021,
+              "year": 2009,
+              "median": 56.9,
+              "n": 34
+            },
+            {
+              "year": 2010,
+              "median": 57.4,
+              "n": 34
+            },
+            {
+              "year": 2011,
+              "median": 55.9,
+              "n": 34
+            },
+            {
+              "year": 2012,
+              "median": 54.6,
+              "n": 34
+            },
+            {
+              "year": 2013,
               "median": 53.4,
               "n": 34
             },
             {
+              "year": 2014,
+              "median": 53.7,
+              "n": 34
+            },
+            {
+              "year": 2015,
+              "median": 51.1,
+              "n": 34
+            },
+            {
+              "year": 2016,
+              "median": 52.9,
+              "n": 34
+            },
+            {
+              "year": 2017,
+              "median": 53.3,
+              "n": 34
+            },
+            {
+              "year": 2018,
+              "median": 53.4,
+              "n": 34
+            },
+            {
+              "year": 2019,
+              "median": 52.1,
+              "n": 34
+            },
+            {
+              "year": 2020,
+              "median": 51.8,
+              "n": 34
+            },
+            {
+              "year": 2021,
+              "median": 51.1,
+              "n": 34
+            },
+            {
               "year": 2022,
-              "median": 53.9,
+              "median": 52.9,
               "n": 34
             },
             {
               "year": 2023,
-              "median": 53.1,
+              "median": 53.3,
               "n": 34
             },
             {
@@ -5777,21 +5777,21 @@
               "span": 10,
               "baseYear": 2016,
               "endYear": 2026,
-              "estimate": -1.2,
-              "lo": -1.5,
-              "hi": -0.3,
+              "estimate": -1.6,
+              "lo": -2.2,
+              "hi": -1.4,
               "n": 34,
-              "relative": 0
+              "relative": -0.9
             },
             {
               "span": 20,
               "baseYear": 2006,
               "endYear": 2026,
-              "estimate": -0.1,
-              "lo": -1.3,
-              "hi": 1.3,
+              "estimate": 0.4,
+              "lo": -0.7,
+              "hi": 2,
               "n": 34,
-              "relative": 2.1
+              "relative": 1.5
             }
           ]
         },
@@ -5950,7 +5950,7 @@
               "endYear": 2026,
               "estimate": -0.6,
               "lo": -1.5,
-              "hi": 0.4,
+              "hi": 0.6,
               "n": 34,
               "relative": -0.1
             }
@@ -6100,8 +6100,8 @@
               "baseYear": 2016,
               "endYear": 2026,
               "estimate": 2.9,
-              "lo": 1.9,
-              "hi": 4,
+              "lo": 2,
+              "hi": 3.9,
               "n": 34,
               "relative": 1
             },
@@ -6110,8 +6110,8 @@
               "baseYear": 2006,
               "endYear": 2026,
               "estimate": 3.8,
-              "lo": 2,
-              "hi": 5.4,
+              "lo": 2.2,
+              "hi": 5.1,
               "n": 34,
               "relative": 1.1
             }
@@ -6313,7 +6313,7 @@
               "endYear": 2026,
               "estimate": 15.2,
               "lo": 13.5,
-              "hi": 16.9,
+              "hi": 17.1,
               "n": 33,
               "relative": 1.9
             }
@@ -6464,7 +6464,7 @@
               "endYear": 2026,
               "estimate": 1.5,
               "lo": 0.6,
-              "hi": 2.9,
+              "hi": 2.5,
               "n": 33,
               "relative": 0
             },
@@ -6474,7 +6474,7 @@
               "endYear": 2026,
               "estimate": 9.1,
               "lo": 7.8,
-              "hi": 10.4,
+              "hi": 10.3,
               "n": 33,
               "relative": 0.9
             }
@@ -6624,8 +6624,8 @@
               "baseYear": 2016,
               "endYear": 2026,
               "estimate": 0.5,
-              "lo": -1.1,
-              "hi": 2.2,
+              "lo": -1.4,
+              "hi": 2.3,
               "n": 32,
               "relative": 2.2
             },
@@ -6634,8 +6634,8 @@
               "baseYear": 2006,
               "endYear": 2026,
               "estimate": -1.8,
-              "lo": -2.9,
-              "hi": -0.5,
+              "lo": -3.1,
+              "hi": -0.4,
               "n": 32,
               "relative": 0.8
             }
@@ -6785,8 +6785,8 @@
               "baseYear": 2016,
               "endYear": 2026,
               "estimate": 1,
-              "lo": -0.2,
-              "hi": 2.3,
+              "lo": -0.3,
+              "hi": 2.1,
               "n": 33,
               "relative": -0.3
             },
@@ -6795,7 +6795,7 @@
               "baseYear": 2006,
               "endYear": 2026,
               "estimate": 1.7,
-              "lo": 0.4,
+              "lo": 0.3,
               "hi": 3,
               "n": 33,
               "relative": 0.3
@@ -6946,8 +6946,8 @@
               "baseYear": 2016,
               "endYear": 2026,
               "estimate": -1.6,
-              "lo": -2.6,
-              "hi": -0.5,
+              "lo": -2.7,
+              "hi": -0.3,
               "n": 33,
               "relative": -0.3
             },
@@ -6956,8 +6956,8 @@
               "baseYear": 2006,
               "endYear": 2026,
               "estimate": -0.3,
-              "lo": -1.9,
-              "hi": 1.1,
+              "lo": -1.7,
+              "hi": 1.4,
               "n": 33,
               "relative": -1.1
             }
@@ -7107,8 +7107,8 @@
               "baseYear": 2016,
               "endYear": 2026,
               "estimate": 0,
-              "lo": -1,
-              "hi": 0.9,
+              "lo": -0.9,
+              "hi": 1.2,
               "n": 33,
               "relative": 0
             },
@@ -7117,8 +7117,8 @@
               "baseYear": 2006,
               "endYear": 2026,
               "estimate": 0.8,
-              "lo": -0.4,
-              "hi": 1.8,
+              "lo": -0.3,
+              "hi": 1.9,
               "n": 33,
               "relative": 0.6
             }
@@ -7128,37 +7128,37 @@
           "series": [
             {
               "year": 2000,
-              "median": 60,
+              "median": 60.8,
               "n": 33
             },
             {
               "year": 2001,
-              "median": 60,
+              "median": 62.4,
               "n": 33
             },
             {
               "year": 2002,
-              "median": 61.9,
+              "median": 62.7,
               "n": 33
             },
             {
               "year": 2003,
-              "median": 60.9,
+              "median": 61.8,
               "n": 33
             },
             {
               "year": 2004,
-              "median": 61.3,
+              "median": 62.6,
               "n": 33
             },
             {
               "year": 2005,
-              "median": 63.3,
+              "median": 61.7,
               "n": 33
             },
             {
               "year": 2006,
-              "median": 64.9,
+              "median": 64.5,
               "n": 33
             },
             {
@@ -7168,82 +7168,82 @@
             },
             {
               "year": 2008,
-              "median": 66.6,
+              "median": 65.2,
               "n": 33
             },
             {
               "year": 2009,
-              "median": 65.8,
+              "median": 65.2,
               "n": 33
             },
             {
               "year": 2010,
-              "median": 65.4,
+              "median": 64.4,
               "n": 33
             },
             {
               "year": 2011,
-              "median": 65.4,
+              "median": 61.6,
               "n": 33
             },
             {
               "year": 2012,
-              "median": 61.3,
+              "median": 61.7,
               "n": 33
             },
             {
               "year": 2013,
-              "median": 62.1,
+              "median": 61.7,
               "n": 33
             },
             {
               "year": 2014,
-              "median": 63.6,
+              "median": 61.2,
               "n": 33
             },
             {
               "year": 2015,
-              "median": 62.9,
+              "median": 62.2,
               "n": 33
             },
             {
               "year": 2016,
-              "median": 62.4,
+              "median": 61.8,
               "n": 33
             },
             {
               "year": 2017,
-              "median": 64.2,
+              "median": 61.6,
               "n": 33
             },
             {
               "year": 2018,
-              "median": 61.5,
+              "median": 60.7,
               "n": 33
             },
             {
               "year": 2019,
-              "median": 62.3,
+              "median": 61.9,
               "n": 33
             },
             {
               "year": 2020,
-              "median": 61.7,
+              "median": 62.1,
               "n": 33
             },
             {
               "year": 2021,
-              "median": 61.3,
+              "median": 61.9,
               "n": 33
             },
             {
               "year": 2022,
-              "median": 61.7,
+              "median": 62,
               "n": 33
             },
             {
               "year": 2023,
-              "median": 63.3,
+              "median": 63.7,
               "n": 33
             },
             {
@@ -7267,21 +7267,21 @@
               "span": 10,
               "baseYear": 2016,
               "endYear": 2026,
-              "estimate": -0.1,
-              "lo": -0.9,
-              "hi": 1,
+              "estimate": 0.8,
+              "lo": 0.5,
+              "hi": 0.8,
               "n": 33,
-              "relative": 1.2
+              "relative": 1.6
             },
             {
               "span": 20,
               "baseYear": 2006,
               "endYear": 2026,
-              "estimate": -3.2,
-              "lo": -4.7,
-              "hi": -1.7,
+              "estimate": -1.5,
+              "lo": -3.3,
+              "hi": 0.2,
               "n": 33,
-              "relative": -1
+              "relative": -0.5
             }
           ]
         },
@@ -7430,7 +7430,7 @@
               "endYear": 2026,
               "estimate": -0.3,
               "lo": -0.4,
-              "hi": 0.1,
+              "hi": 0,
               "n": 33,
               "relative": 0
             },
@@ -7590,7 +7590,7 @@
               "baseYear": 2016,
               "endYear": 2026,
               "estimate": 1.8,
-              "lo": 0.7,
+              "lo": 0.8,
               "hi": 3.2,
               "n": 32,
               "relative": -0.1
@@ -7601,7 +7601,7 @@
               "endYear": 2026,
               "estimate": 3.7,
               "lo": 2.6,
-              "hi": 4.7,
+              "hi": 4.8,
               "n": 32,
               "relative": 1.1
             }
@@ -7802,8 +7802,8 @@
               "baseYear": 2006,
               "endYear": 2026,
               "estimate": 12.4,
-              "lo": 10.8,
-              "hi": 13.8,
+              "lo": 10.6,
+              "hi": 14.4,
               "n": 33,
               "relative": -1
             }
@@ -7953,7 +7953,7 @@
               "baseYear": 2016,
               "endYear": 2026,
               "estimate": 0.5,
-              "lo": -0.7,
+              "lo": -0.8,
               "hi": 0.9,
               "n": 33,
               "relative": -1
@@ -7964,7 +7964,7 @@
               "endYear": 2026,
               "estimate": 5.2,
               "lo": 4,
-              "hi": 6.5,
+              "hi": 6.7,
               "n": 33,
               "relative": -3
             }
@@ -8114,8 +8114,8 @@
               "baseYear": 2016,
               "endYear": 2026,
               "estimate": -3.2,
-              "lo": -4.5,
-              "hi": -2.7,
+              "lo": -4.3,
+              "hi": -2.6,
               "n": 31,
               "relative": -1.5
             },
@@ -8124,8 +8124,8 @@
               "baseYear": 2006,
               "endYear": 2026,
               "estimate": -3.4,
-              "lo": -4.5,
-              "hi": -2.1,
+              "lo": -4.4,
+              "hi": -1.8,
               "n": 31,
               "relative": -0.7
             }
@@ -8275,8 +8275,8 @@
               "baseYear": 2016,
               "endYear": 2026,
               "estimate": 0.1,
-              "lo": -0.8,
-              "hi": 1.1,
+              "lo": -1,
+              "hi": 1.3,
               "n": 32,
               "relative": -1.2
             },
@@ -8447,7 +8447,7 @@
               "endYear": 2026,
               "estimate": 1.9,
               "lo": 0.2,
-              "hi": 3.8,
+              "hi": 3.6,
               "n": 33,
               "relative": 1.1
             }
@@ -8597,7 +8597,7 @@
               "baseYear": 2016,
               "endYear": 2026,
               "estimate": -4.2,
-              "lo": -5.6,
+              "lo": -5.5,
               "hi": -3.1,
               "n": 33,
               "relative": -4.2
@@ -8607,8 +8607,8 @@
               "baseYear": 2006,
               "endYear": 2026,
               "estimate": -5,
-              "lo": -6.9,
-              "hi": -3.5,
+              "lo": -6.7,
+              "hi": -3.2,
               "n": 33,
               "relative": -5.1
             }
@@ -8618,127 +8618,127 @@
           "series": [
             {
               "year": 2000,
-              "median": 72.9,
+              "median": 71.2,
               "n": 33
             },
             {
               "year": 2001,
-              "median": 73.4,
-              "n": 33
-            },
-            {
-              "year": 2002,
-              "median": 73.1,
-              "n": 33
-            },
-            {
-              "year": 2003,
-              "median": 73.2,
-              "n": 33
-            },
-            {
-              "year": 2004,
-              "median": 73.7,
-              "n": 33
-            },
-            {
-              "year": 2005,
-              "median": 72.5,
-              "n": 33
-            },
-            {
-              "year": 2006,
-              "median": 72.7,
-              "n": 33
-            },
-            {
-              "year": 2007,
-              "median": 73.8,
-              "n": 33
-            },
-            {
-              "year": 2008,
-              "median": 74.4,
-              "n": 33
-            },
-            {
-              "year": 2009,
-              "median": 71.6,
-              "n": 33
-            },
-            {
-              "year": 2010,
               "median": 70.9,
               "n": 33
             },
             {
-              "year": 2011,
-              "median": 71.1,
-              "n": 33
-            },
-            {
-              "year": 2012,
-              "median": 70.3,
-              "n": 33
-            },
-            {
-              "year": 2013,
-              "median": 70.1,
-              "n": 33
-            },
-            {
-              "year": 2014,
-              "median": 70.4,
-              "n": 33
-            },
-            {
-              "year": 2015,
-              "median": 71.8,
-              "n": 33
-            },
-            {
-              "year": 2016,
+              "year": 2002,
               "median": 71.6,
               "n": 33
             },
             {
+              "year": 2003,
+              "median": 72,
+              "n": 33
+            },
+            {
+              "year": 2004,
+              "median": 71.5,
+              "n": 33
+            },
+            {
+              "year": 2005,
+              "median": 71.4,
+              "n": 33
+            },
+            {
+              "year": 2006,
+              "median": 71.7,
+              "n": 33
+            },
+            {
+              "year": 2007,
+              "median": 72.6,
+              "n": 33
+            },
+            {
+              "year": 2008,
+              "median": 72,
+              "n": 33
+            },
+            {
+              "year": 2009,
+              "median": 70,
+              "n": 33
+            },
+            {
+              "year": 2010,
+              "median": 68.7,
+              "n": 33
+            },
+            {
+              "year": 2011,
+              "median": 68.5,
+              "n": 33
+            },
+            {
+              "year": 2012,
+              "median": 69.2,
+              "n": 33
+            },
+            {
+              "year": 2013,
+              "median": 68.4,
+              "n": 33
+            },
+            {
+              "year": 2014,
+              "median": 69.2,
+              "n": 33
+            },
+            {
+              "year": 2015,
+              "median": 68.7,
+              "n": 33
+            },
+            {
+              "year": 2016,
+              "median": 69.2,
+              "n": 33
+            },
+            {
               "year": 2017,
-              "median": 71.8,
+              "median": 71.4,
               "n": 33
             },
             {
               "year": 2018,
-              "median": 71.9,
+              "median": 71.1,
               "n": 33
             },
             {
               "year": 2019,
-              "median": 73.4,
+              "median": 71.2,
               "n": 33
             },
             {
               "year": 2020,
-              "median": 69.4,
+              "median": 69.8,
               "n": 33
             },
             {
               "year": 2021,
-              "median": 69.7,
+              "median": 69.2,
               "n": 33
             },
             {
               "year": 2022,
-              "median": 71,
+              "median": 70.5,
               "n": 33
             },
             {
               "year": 2023,
-              "median": 72.4,
+              "median": 72.1,
               "n": 33
             },
             {
               "year": 2024,
-              "median": 70.5,
+              "median": 70.2,
               "n": 33
             },
             {
@@ -8757,21 +8757,21 @@
               "span": 10,
               "baseYear": 2016,
               "endYear": 2026,
-              "estimate": -2.9,
-              "lo": -3.6,
-              "hi": -2,
+              "estimate": -0.9,
+              "lo": -1,
+              "hi": -0.9,
               "n": 33,
-              "relative": -1.7
+              "relative": -0.1
             },
             {
               "span": 20,
               "baseYear": 2006,
               "endYear": 2026,
-              "estimate": -5.1,
-              "lo": -6.3,
-              "hi": -3.9,
+              "estimate": -1.9,
+              "lo": -3.3,
+              "hi": -0.4,
               "n": 33,
-              "relative": -2.9
+              "relative": -0.9
             }
           ]
         },
@@ -8919,8 +8919,8 @@
               "baseYear": 2016,
               "endYear": 2026,
               "estimate": 0.3,
-              "lo": -0.7,
-              "hi": 0.8,
+              "lo": -0.6,
+              "hi": 1.1,
               "n": 33,
               "relative": 0.6
             },
@@ -8929,7 +8929,7 @@
               "baseYear": 2006,
               "endYear": 2026,
               "estimate": -0.2,
-              "lo": -1.3,
+              "lo": -1.4,
               "hi": 1,
               "n": 33,
               "relative": 0.3
@@ -9080,7 +9080,7 @@
               "baseYear": 2016,
               "endYear": 2026,
               "estimate": 1.2,
-              "lo": 0.6,
+              "lo": 0.5,
               "hi": 2.3,
               "n": 33,
               "relative": -0.7
@@ -9090,7 +9090,7 @@
               "baseYear": 2006,
               "endYear": 2026,
               "estimate": 0.7,
-              "lo": -0.5,
+              "lo": -0.7,
               "hi": 1.1,
               "n": 33,
               "relative": -1.9
