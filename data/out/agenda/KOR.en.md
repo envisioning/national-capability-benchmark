@@ -8,7 +8,7 @@ The frame includes 135 countries. Each dimension is scored from 0 to 100, with n
 
 | Dimension | Score | Confidence | Trend |
 | --- | --- | --- | --- |
-| Anticipation | 74.4 | 0.46 (usable) | +17.4 over 10 years using 2 indicators |
+| Anticipation | 74.1 | 0.46 (usable) | +17.3 over 10 years using 2 indicators |
 | Agency | 64 | 0.62 (usable) | no trend |
 | Coordination | 79.3 | 0.47 (usable) | no trend |
 | Trust | 66.4 | 0.55 (usable) | no trend |
@@ -37,7 +37,7 @@ These dimensions score at least 50 with usable evidence.
 - Building: 84.8, confidence usable
 - Coordination: 79.3, confidence usable
 - Experimentation: 75.1, confidence usable
-- Anticipation: 74.4, confidence usable
+- Anticipation: 74.1, confidence usable
 - Adaptability: 73.1, confidence usable
 - Trust: 66.4, confidence usable
 - Agency: 64, confidence usable

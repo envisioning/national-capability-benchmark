@@ -1,6 +1,6 @@
 # The National Capability Benchmark in two pages
 
-*Dataset 10.0.1, generated 2026-11-03*
+*Dataset 10.0.2, generated 2026-11-03*
 
 ## 1. The claim under test
 
@@ -12,13 +12,13 @@ The claim comes in two strengths. The strong claim is that capability is separat
 
 Over the 125 countries with all nine capabilities scored, one shared factor carries 50.6% of the variation. The same number of unrelated capabilities measured on 125 countries would give 15.9% by chance, and 17.4% in 19 draws out of 20. So the capabilities do move together, and 49.4% of the variation sits outside that one factor. Across the 125 of those countries with an income figure, the shared factor correlates 0.83 with log GDP per head, so income accounts for 69% of it. The shared factor looks like income. What the benchmark can add beyond income sits in the other 49.4% of the variation and in how a country's capabilities differ from each other.
 
-Across 38 dataset releases the share has run from 47.7% to 70.4%. The largest move between two releases came at dataset 7.0.0, from 60.4% on 33 countries to 49.8% on 33.
+Across 39 dataset releases the share has run from 47.7% to 70.4%. The largest move between two releases came at dataset 7.0.0, from 60.4% on 33 countries to 49.8% on 33.
 
 Take out of each capability the part its income predicts, and the leftovers still move together. Across the 125 countries with all nine, one factor carries 30.5% of what is left, where unrelated leftovers would give 15.9% by chance and 17.5% in 19 draws out of 20. It runs mostly through Anticipation, Learning, Trust, Coordination and Experimentation.
 
 The strong claim, that capability is separate from wealth, does not hold for what the nine capabilities share: that shared part is mostly income. The weaker claim fails on this data. Countries at the same income share a shape, so a capability profile adds little that income does not already say.
 
-For the typical country, income accounts for 29.3% of how far its profile sits from the average profile, and 25.0% on average across 125 countries, pulled down by countries the income line misses by more than the average profile does. Little of a capability profile is income.
+For the typical country, income accounts for 29.3% of how far its profile sits from the average profile, and 24.9% on average across 125 countries, pulled down by countries the income line misses by more than the average profile does. Little of a capability profile is income.
 
 All of it rests on 125 countries with all nine capabilities scored. At that size a handful of countries can move any of these numbers, so each one is a hint a wider country set could overturn. No country's own residual is published while the layer is under review.
 
@@ -53,4 +53,4 @@ It needs open data partners. The 18 declared gaps, and the evidence grid that do
 
 ---
 
-*Computed from dataset 10.0.1: data/out/diagnostics.json (diagnostics.factorStructure, diagnostics.residualStructure) and data/out/factor-history.json. The readings are D137 and D138; the brief is D163.*
+*Computed from dataset 10.0.2: data/out/diagnostics.json (diagnostics.factorStructure, diagnostics.residualStructure) and data/out/factor-history.json. The readings are D137 and D138; the brief is D163.*

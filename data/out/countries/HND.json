@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-03T08:12:02.083Z",
-  "version": "10.0.1",
+  "generatedAt": "2026-11-03T08:48:01.204Z",
+  "version": "10.0.2",
   "country": {
     "country": "Honduras",
     "iso3": "HND",
@@ -16,7 +16,7 @@
           "sourceQuality": 0.95
         },
         "delphiScore": 22,
-        "delphiIqr": 0.5,
+        "delphiIqr": 3.5,
         "delphiDissent": false,
         "blendedScore": 24.5,
         "blendedFrom": "indicators",
@@ -87,7 +87,7 @@
             "name": "Scientific articles",
             "measurementClass": "O",
             "raw": 130.35,
-            "transformed": 11.844,
+            "transformed": 12.245,
             "normalized": 0.4,
             "year": 2023,
             "source": "World Bank (IP.JRN.ARTC.SC)",
@@ -182,7 +182,7 @@
               {
                 "year": 2010,
                 "raw": 21.96,
-                "normalized": 0.1,
+                "normalized": 0,
                 "tier": "international_organization"
               },
               {
@@ -206,7 +206,7 @@
               {
                 "year": 2014,
                 "raw": 23.56,
-                "normalized": 0.1,
+                "normalized": 0,
                 "tier": "international_organization"
               },
               {
@@ -236,7 +236,7 @@
               {
                 "year": 2019,
                 "raw": 77.85,
-                "normalized": 0.3,
+                "normalized": 0.2,
                 "tier": "international_organization"
               },
               {
@@ -2081,8 +2081,8 @@
           "recency": 0.833,
           "sourceQuality": 0.925
         },
-        "delphiScore": 10,
-        "delphiIqr": 3,
+        "delphiScore": 4,
+        "delphiIqr": 4,
         "delphiDissent": false,
         "blendedScore": 3,
         "blendedFrom": "indicators",
@@ -2091,8 +2091,8 @@
             "baseYear": 2016,
             "currentYear": 2026,
             "baseScore": 2.6,
-            "currentScore": 2.9,
-            "delta": 0.3,
+            "currentScore": 3,
+            "delta": 0.4,
             "matchedIndicators": 2,
             "basket": [
               "resident_trademarks_per_million",
@@ -2138,11 +2138,11 @@
               },
               {
                 "year": 2025,
-                "score": 2.9
+                "score": 3
               },
               {
                 "year": 2026,
-                "score": 2.9
+                "score": 3
               }
             ]
           },
@@ -2150,8 +2150,8 @@
             "baseYear": 2006,
             "currentYear": 2026,
             "baseScore": 2.7,
-            "currentScore": 2.9,
-            "delta": 0.2,
+            "currentScore": 3,
+            "delta": 0.3,
             "matchedIndicators": 2,
             "basket": [
               "resident_trademarks_per_million",
@@ -2229,11 +2229,11 @@
               },
               {
                 "year": 2025,
-                "score": 2.9
+                "score": 3
               },
               {
                 "year": 2026,
-                "score": 2.9
+                "score": 3
               }
             ]
           }
@@ -2244,8 +2244,8 @@
             "name": "Resident patent applications",
             "measurementClass": "O",
             "raw": 8,
-            "transformed": 0.727,
-            "normalized": 0.4,
+            "transformed": 0.819,
+            "normalized": 0.5,
             "year": 2018,
             "source": "World Bank (IP.PAT.RESD)",
             "sourceTier": "international_organization",
@@ -2255,13 +2255,13 @@
               {
                 "year": 1980,
                 "raw": 6,
-                "normalized": 1,
+                "normalized": 0.9,
                 "tier": "international_organization"
               },
               {
                 "year": 1982,
                 "raw": 63,
-                "normalized": 9.5,
+                "normalized": 9.4,
                 "tier": "international_organization"
               },
               {
@@ -2285,7 +2285,7 @@
               {
                 "year": 1987,
                 "raw": 12,
-                "normalized": 1.6,
+                "normalized": 1.5,
                 "tier": "international_organization"
               },
               {
@@ -2321,7 +2321,7 @@
               {
                 "year": 2000,
                 "raw": 4,
-                "normalized": 0.4,
+                "normalized": 0.3,
                 "tier": "international_organization"
               },
               {
@@ -2387,8 +2387,8 @@
             "name": "Resident trademark applications",
             "measurementClass": "O",
             "raw": 3331,
-            "transformed": 302.657,
-            "normalized": 5.9,
+            "transformed": 307.694,
+            "normalized": 6,
             "year": 2024,
             "source": "World Bank (IP.TMK.RSCT)",
             "sourceTier": "international_organization",
@@ -2530,7 +2530,7 @@
             "name": "Resident industrial design applications",
             "measurementClass": "O",
             "raw": 1,
-            "transformed": 0.091,
+            "transformed": 0.096,
             "normalized": 0,
             "year": 2022,
             "source": "World Bank (IP.IDS.RSCT)",
@@ -2577,7 +2577,7 @@
               {
                 "year": 1991,
                 "raw": 3,
-                "normalized": 0.3,
+                "normalized": 0.2,
                 "tier": "international_organization"
               },
               {

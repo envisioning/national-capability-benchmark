@@ -77,7 +77,7 @@ capita is 0.739 (n 133).
 Belgium scores 53.0, 13th of 135, and the Netherlands 52.6, 15th. Neither is
 a finding about innovation in the Low Countries: both miss the trademark and
 design rows, venture capital is a gap, and Belgium's score rests on patents,
-repositories and insolvency. Uruguay scores 32.2, 44th, having legalised and
+repositories and insolvency. Uruguay scores 32.2, 43rd, having legalised and
 regulated a national cannabis market and run a fintech sandbox. Argentina
 scores 23.6, 57th, having produced more technology firms of scale per head
 than anywhere else in the region.
@@ -98,8 +98,8 @@ that would temper them is held by the access gate, and B-READY has not
 reached China.
 
 The panel agrees on the order: its Experimentation ranks correlate with the
-indicator ranks at 0.95 (Spearman, 135 countries). It reads the top lower,
-with China first at 75 against 98.0, and lifts India from 74th to 43rd.
+indicator ranks at 0.93 (Spearman, 135 countries). It reads the top lower,
+with China seventh at 65 against 98.0, and lifts India from 74th to 34th.
 
 **Fix.** A venture deal count is still missing: first rounds per million
 people, counted by deal and not by amount (D152). The only inspectable
@@ -116,16 +116,16 @@ reports.
 
 **Severity: medium.**
 
-India scores 16.2 on Experimentation, 74th of 135 on dataset 10.0.0. It comes
+India scores 16.2 on Experimentation, 74th of 135 on dataset 10.0.2. It comes
 from dividing absolute counts by 1.4 billion people. The arithmetic is correct
 and the result is not informative: it says India files few patents per head,
 which was never the question. Counted whole, India is third of 135 on
 scientific articles, fifth of 119 on resident patents and first of 132 on new
-public repositories. Anticipation reads 34.5, 74th of 134, on articles
+public repositories. Anticipation reads 34.6, 74th of 134, on articles
 per head and statistical performance; the per-head stocks of researchers and
 research spending are conditions beside it and do not enter it (D122). The
-panel reads both higher: Experimentation 36, 43rd of 135, and Anticipation 43,
-55th, with IQRs of 3.5 and 1.5.
+panel reads both higher: Experimentation 40, 34th of 135, and Anticipation 42,
+49th, each with an IQR of 1.
 
 **Fix.** Per-capita is right for most indicators and wrong where capability is
 concentrated in institutions rather than spread across a population. Consider a

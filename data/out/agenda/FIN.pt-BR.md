@@ -8,7 +8,7 @@ A escala reúne 135 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 
 | Dimensão | Pontuação | Solidez | Tendência |
 | --- | --- | --- | --- |
-| Antecipação | 84,9 | 0,46 (utilizável) | +1,8 em 10 anos, com base em 2 indicadores |
+| Antecipação | 84,9 | 0,46 (utilizável) | +2,2 em 10 anos, com base em 2 indicadores |
 | Agência | 69,2 | 0,44 (fraca) | sem tendência comparável |
 | Coordenação | 87,1 | 0,27 (fraca) | -2,7 em 10 anos, com base em 2 indicadores |
 | Confiança | 92,3 | 0,41 (fraca) | sem tendência comparável |

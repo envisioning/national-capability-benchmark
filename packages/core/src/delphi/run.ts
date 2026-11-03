@@ -30,6 +30,11 @@ export type DelphiOptions = {
   judgeIndicators: boolean
   /** Include dimensions whose source coverage is at or below this ceiling. */
   maxCoverage: number
+  /**
+   * Dimension subset, for a run that rescores only the cells a release
+   * dropped (D160). Empty means every dimension. The audit follows it.
+   */
+  dimensions?: Dimension[]
   concurrency: number
   onProgress?: (message: string) => void
 }
@@ -102,7 +107,9 @@ export async function runDelphi(
   const tally: CallTally = { attempted: 0, failed: 0 }
   const cellEstimates: DelphiCellEstimate[] = []
   const jobs: CellJob[] = targets.flatMap((result) => {
-    const dimensions = delphiDimensions(result, opts.maxCoverage)
+    const dimensions = delphiDimensions(result, opts.maxCoverage).filter(
+      (d) => !opts.dimensions?.length || opts.dimensions.includes(d),
+    )
     return dimensions.length > 0
       ? opts.panel.map((panelist) => ({ result, panelist, dimensions }))
       : []
@@ -165,7 +172,9 @@ export async function runDelphi(
 
   const indicatorJudgements: DelphiIndicatorJudgement[] = []
   if (opts.judgeIndicators) {
-    const auditJobs = DIMENSIONS.flatMap((dimension) =>
+    const auditJobs = DIMENSIONS.filter(
+      (d) => !opts.dimensions?.length || opts.dimensions.includes(d),
+    ).flatMap((dimension) =>
       opts.panel.map((panelist) => ({ dimension, panelist })),
     )
     log(`indicator audit: ${auditJobs.length} calls`)

@@ -8,12 +8,12 @@ The frame includes 135 countries. Each dimension is scored from 0 to 100, with n
 
 | Dimension | Score | Confidence | Trend |
 | --- | --- | --- | --- |
-| Anticipation | 82.2 | 0.46 (usable) | +17 over 10 years using 2 indicators |
+| Anticipation | 83 | 0.46 (usable) | +18.2 over 10 years using 2 indicators |
 | Agency | 75.8 | 0.63 (usable) | no trend |
 | Coordination | 71 | 0.47 (usable) | no trend |
 | Trust | 67.2 | 0.54 (usable) | no trend |
 | Learning | 84.2 | 0.54 (usable) | no trend |
-| Experimentation | 63.6 | 0.48 (usable) | -0.1 over 10 years using 3 indicators |
+| Experimentation | 63.7 | 0.48 (usable) | +0.4 over 10 years using 3 indicators |
 | Adaptability | 72.1 | 0.62 (usable) | no trend |
 | Building | 79.2 | 0.63 (usable) | +7 over 10 years using 3 indicators |
 | Shared Purpose | 32.3 | 0.28 (thin) | no trend |
@@ -35,13 +35,13 @@ To what extent can people imagine themselves as participants in a common project
 These dimensions score at least 50 with usable evidence.
 
 - Learning: 84.2, confidence usable
-- Anticipation: 82.2, confidence usable
+- Anticipation: 83, confidence usable
 - Building: 79.2, confidence usable
 - Agency: 75.8, confidence usable
 - Adaptability: 72.1, confidence usable
 - Coordination: 71, confidence usable
 - Trust: 67.2, confidence usable
-- Experimentation: 63.6, confidence usable
+- Experimentation: 63.7, confidence usable
 
 ## What Singapore has to work with
 

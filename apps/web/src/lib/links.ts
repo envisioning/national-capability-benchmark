@@ -89,6 +89,8 @@ export function layerSectionHref(layer: CountryLayer, section: LayerSection): st
     map: capabilitiesHref,
     support: supportHref,
     brief: briefHref,
+    /* The country page carries the reconstructed history chart. See D181. */
+    history: countryProfileHref(layer.iso3),
   }
   return ground[section.id]
 }

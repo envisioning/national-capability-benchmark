@@ -8,12 +8,12 @@ A escala reúne 135 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 
 | Dimensão | Pontuação | Solidez | Tendência |
 | --- | --- | --- | --- |
-| Antecipação | 63,5 | 0,46 (utilizável) | +12,8 em 10 anos, com base em 2 indicadores |
+| Antecipação | 63,4 | 0,46 (utilizável) | +12,9 em 10 anos, com base em 2 indicadores |
 | Agência | 54 | 0,44 (fraca) | sem tendência comparável |
 | Coordenação | 75,6 | 0,27 (fraca) | -11,6 em 10 anos, com base em 2 indicadores |
 | Confiança | 61,5 | 0,41 (fraca) | +5,3 em 10 anos, com base em 2 indicadores |
 | Aprendizagem | 56,3 | 0,55 (utilizável) | sem tendência comparável |
-| Experimentação | 32,4 | 0,37 (fraca) | +4 em 10 anos, com base em 3 indicadores |
+| Experimentação | 32,4 | 0,37 (fraca) | +4,1 em 10 anos, com base em 3 indicadores |
 | Adaptação | 74,4 | 0,62 (utilizável) | sem tendência comparável |
 | Construção | 25 | 0,48 (utilizável) | -0,3 em 10 anos, com base em 3 indicadores |
 | Propósito compartilhado | 43,7 | 0,42 (fraca) | +10,2 em 10 anos, com base em 2 indicadores |
@@ -81,7 +81,7 @@ Em que medida pessoas e organizações conseguem transformar intenção em açã
 Estas dimensões têm pontuação de pelo menos 50, com evidência utilizável.
 
 - Adaptação: 74,4, solidez utilizável
-- Antecipação: 63,5, solidez utilizável
+- Antecipação: 63,4, solidez utilizável
 - Aprendizagem: 56,3, solidez utilizável
 
 ## Com o que a Lituânia conta

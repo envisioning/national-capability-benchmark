@@ -1,6 +1,6 @@
 # O NCB em duas páginas
 
-*Versão dos dados 10.0.1, gerada em 2026-11-03*
+*Versão dos dados 10.0.2, gerada em 2026-11-03*
 
 ## 1. A afirmação em teste
 
@@ -12,13 +12,13 @@ O NCB testa uma afirmação em duas versões. A versão forte diz que capacidade
 
 Entre os 125 países com as nove capacidades pontuadas, um único fator comum responde por 50,6% da variação. O mesmo número de capacidades sem relação entre si, medidas nos mesmos 125 países, daria 15,9% por acaso, e até 17,4% em 19 de cada 20 sorteios. As capacidades, portanto, andam juntas, e 49,4% da variação fica fora desse fator. Nos 125 desses países com dado de renda, o fator comum tem correlação de 0,83 com o logaritmo do PIB per capita, de modo que a renda responde por 69% dele. O fator comum se parece com a renda. O que o NCB acrescenta além da renda está nos outros 49,4% da variação e na diferença entre as capacidades de um mesmo país.
 
-Ao longo de 38 versões dos dados, a parcela do fator comum foi de 47,7% a 70,4%. A maior mudança entre duas versões veio na versão 7.0.0, de 60,4% em 33 países para 49,8% em 33.
+Ao longo de 39 versões dos dados, a parcela do fator comum foi de 47,7% a 70,4%. A maior mudança entre duas versões veio na versão 7.0.0, de 60,4% em 33 países para 49,8% em 33.
 
 Retirada de cada capacidade a parte que a renda prevê, o que sobra ainda anda junto. Nos 125 países com as nove capacidades, um fator responde por 30,5% do que sobra, quando sobras sem relação entre si dariam 15,9% por acaso, e 17,5% em 19 de cada 20 sorteios.
 
 A versão forte não se sustenta para o que as nove capacidades têm em comum: essa parte comum é, sobretudo, renda. A versão fraca não se sustenta nestes dados. Países com a mesma renda têm o mesmo perfil, de modo que o perfil de capacidades acrescenta pouco ao que a renda já diz.
 
-Para o país típico, a renda responde por 29,3% da distância entre o seu perfil e o perfil médio, e por 25,0% na média dos 125 países, puxada para baixo por países dos quais a linha de renda se afasta mais do que o perfil médio. Pouco de um perfil de capacidades é renda.
+Para o país típico, a renda responde por 29,3% da distância entre o seu perfil e o perfil médio, e por 24,9% na média dos 125 países, puxada para baixo por países dos quais a linha de renda se afasta mais do que o perfil médio. Pouco de um perfil de capacidades é renda.
 
 Tudo isso se apoia em 125 países com as nove capacidades pontuadas. Com esse número, poucos países podem mover qualquer um destes resultados, e cada um é um indício que um conjunto maior de países pode derrubar. O que sobra depois da renda em cada país não é publicado enquanto essa camada estiver em revisão.
 
@@ -54,4 +54,4 @@ Precisa também de parceiros de dados abertos. As 18 lacunas declaradas, e a gra
 
 ---
 
-*Calculado a partir da versão dos dados 10.0.1: data/out/diagnostics.json (diagnostics.factorStructure, diagnostics.residualStructure) e data/out/factor-history.json. As leituras são as decisões D137 e D138; o resumo, a D163.*
+*Calculado a partir da versão dos dados 10.0.2: data/out/diagnostics.json (diagnostics.factorStructure, diagnostics.residualStructure) e data/out/factor-history.json. As leituras são as decisões D137 e D138; o resumo, a D163.*

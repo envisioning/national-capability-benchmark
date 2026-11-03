@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-11-02T16:44:31.186Z",
+  "generatedAt": "2026-11-03T08:48:47.347Z",
   "methodVersion": "residual/0.1-exploratory",
   "gdpSeries": "NY.GDP.PCAP.PP.KD",
   "fits": [
     {
       "dimension": "anticipation",
-      "slope": 39,
-      "intercept": -120.79,
+      "slope": 39.07,
+      "intercept": -121.05,
       "pearson": 0.866,
       "rSquared": 0.75,
       "n": 133,
-      "residualSd": 11.35,
+      "residualSd": 11.38,
       "fitStrength": "strong",
       "meanAbsRankShift": 32.5
     },
@@ -60,12 +60,12 @@
     },
     {
       "dimension": "experimentation",
-      "slope": 30.51,
-      "intercept": -103.24,
+      "slope": 30.52,
+      "intercept": -103.22,
       "pearson": 0.739,
       "rSquared": 0.547,
       "n": 133,
-      "residualSd": 14.02,
+      "residualSd": 14.03,
       "fitStrength": "strong",
       "meanAbsRankShift": 29.4
     },
@@ -137,8 +137,8 @@
       },
       "experimentation": {
         "score": 32,
-        "predicted": 28,
-        "residual": 4,
+        "predicted": 28.1,
+        "residual": 3.9,
         "outOfScale": false
       },
       "adaptability": {
@@ -162,9 +162,9 @@
     },
     "USA": {
       "anticipation": {
-        "score": 70.6,
+        "score": 70.7,
         "predicted": 69.8,
-        "residual": 0.8,
+        "residual": 0.9,
         "outOfScale": false
       },
       "agency": {
@@ -218,8 +218,8 @@
     },
     "NLD": {
       "anticipation": {
-        "score": 76.1,
-        "predicted": 68.5,
+        "score": 76.2,
+        "predicted": 68.6,
         "residual": 7.6,
         "outOfScale": false
       },
@@ -274,9 +274,9 @@
     },
     "CHE": {
       "anticipation": {
-        "score": 93.4,
-        "predicted": 71.6,
-        "residual": 21.8,
+        "score": 94,
+        "predicted": 71.7,
+        "residual": 22.3,
         "outOfScale": false
       },
       "agency": {
@@ -304,9 +304,9 @@
         "outOfScale": false
       },
       "experimentation": {
-        "score": 68.9,
+        "score": 69.1,
         "predicted": 47.3,
-        "residual": 21.6,
+        "residual": 21.8,
         "outOfScale": false
       },
       "adaptability": {
@@ -330,9 +330,9 @@
     },
     "SGP": {
       "anticipation": {
-        "score": 82.2,
+        "score": 83,
         "predicted": 79.9,
-        "residual": 2.3,
+        "residual": 3.1,
         "outOfScale": false
       },
       "agency": {
@@ -360,9 +360,9 @@
         "outOfScale": false
       },
       "experimentation": {
-        "score": 63.6,
+        "score": 63.7,
         "predicted": 53.8,
-        "residual": 9.8,
+        "residual": 9.9,
         "outOfScale": false
       },
       "adaptability": {
@@ -386,9 +386,9 @@
     },
     "KOR": {
       "anticipation": {
-        "score": 74.4,
-        "predicted": 64.3,
-        "residual": 10.1,
+        "score": 74.1,
+        "predicted": 64.4,
+        "residual": 9.7,
         "outOfScale": false
       },
       "agency": {
@@ -442,9 +442,9 @@
     },
     "EST": {
       "anticipation": {
-        "score": 69.9,
-        "predicted": 59.3,
-        "residual": 10.6,
+        "score": 69.5,
+        "predicted": 59.4,
+        "residual": 10.1,
         "outOfScale": false
       },
       "agency": {
@@ -498,9 +498,9 @@
     },
     "IND": {
       "anticipation": {
-        "score": 34.5,
+        "score": 34.6,
         "predicted": 35.3,
-        "residual": -0.8,
+        "residual": -0.7,
         "outOfScale": false
       },
       "agency": {
@@ -610,9 +610,9 @@
     },
     "ZAF": {
       "anticipation": {
-        "score": 42.8,
+        "score": 42.9,
         "predicted": 40.4,
-        "residual": 2.4,
+        "residual": 2.5,
         "outOfScale": false
       },
       "agency": {
@@ -723,8 +723,8 @@
     "ARG": {
       "anticipation": {
         "score": 41.2,
-        "predicted": 52.5,
-        "residual": -11.3,
+        "predicted": 52.6,
+        "residual": -11.4,
         "outOfScale": false
       },
       "agency": {
@@ -778,9 +778,9 @@
     },
     "COL": {
       "anticipation": {
-        "score": 43.6,
+        "score": 43.7,
         "predicted": 45.9,
-        "residual": -2.3,
+        "residual": -2.2,
         "outOfScale": false
       },
       "agency": {
@@ -834,8 +834,8 @@
     },
     "PER": {
       "anticipation": {
-        "score": 41.9,
-        "predicted": 43.2,
+        "score": 42,
+        "predicted": 43.3,
         "residual": -1.3,
         "outOfScale": false
       },
@@ -864,9 +864,9 @@
         "outOfScale": false
       },
       "experimentation": {
-        "score": 23.5,
+        "score": 23.6,
         "predicted": 25.1,
-        "residual": -1.6,
+        "residual": -1.5,
         "outOfScale": false
       },
       "adaptability": {
@@ -890,9 +890,9 @@
     },
     "URY": {
       "anticipation": {
-        "score": 43.4,
+        "score": 43.3,
         "predicted": 55.3,
-        "residual": -11.9,
+        "residual": -12,
         "outOfScale": false
       },
       "agency": {
@@ -921,8 +921,8 @@
       },
       "experimentation": {
         "score": 32.2,
-        "predicted": 34.5,
-        "residual": -2.3,
+        "predicted": 34.6,
+        "residual": -2.4,
         "outOfScale": false
       },
       "adaptability": {
@@ -947,8 +947,8 @@
     "CRI": {
       "anticipation": {
         "score": 49.6,
-        "predicted": 52.9,
-        "residual": -3.3,
+        "predicted": 53,
+        "residual": -3.4,
         "outOfScale": false
       },
       "agency": {
@@ -976,9 +976,9 @@
         "outOfScale": false
       },
       "experimentation": {
-        "score": 26.6,
+        "score": 26.7,
         "predicted": 32.7,
-        "residual": -6.1,
+        "residual": -6,
         "outOfScale": false
       },
       "adaptability": {
@@ -1002,9 +1002,9 @@
     },
     "DEU": {
       "anticipation": {
-        "score": 71.4,
-        "predicted": 66.3,
-        "residual": 5.1,
+        "score": 71.2,
+        "predicted": 66.4,
+        "residual": 4.8,
         "outOfScale": false
       },
       "agency": {
@@ -1032,9 +1032,9 @@
         "outOfScale": false
       },
       "experimentation": {
-        "score": 70.8,
+        "score": 70.9,
         "predicted": 43.2,
-        "residual": 27.6,
+        "residual": 27.7,
         "outOfScale": false
       },
       "adaptability": {
@@ -1058,9 +1058,9 @@
     },
     "FRA": {
       "anticipation": {
-        "score": 62.2,
-        "predicted": 64.1,
-        "residual": -1.9,
+        "score": 62.1,
+        "predicted": 64.2,
+        "residual": -2.1,
         "outOfScale": false
       },
       "agency": {
@@ -1088,8 +1088,8 @@
         "outOfScale": false
       },
       "experimentation": {
-        "score": 74,
-        "predicted": 41.4,
+        "score": 74.1,
+        "predicted": 41.5,
         "residual": 32.6,
         "outOfScale": false
       },
@@ -1114,9 +1114,9 @@
     },
     "GBR": {
       "anticipation": {
-        "score": 71.8,
+        "score": 71.9,
         "predicted": 63.8,
-        "residual": 8,
+        "residual": 8.1,
         "outOfScale": false
       },
       "agency": {
@@ -1170,9 +1170,9 @@
     },
     "ESP": {
       "anticipation": {
-        "score": 71.4,
-        "predicted": 62.2,
-        "residual": 9.2,
+        "score": 71.7,
+        "predicted": 62.3,
+        "residual": 9.4,
         "outOfScale": false
       },
       "agency": {
@@ -1200,9 +1200,9 @@
         "outOfScale": false
       },
       "experimentation": {
-        "score": 46.9,
+        "score": 47,
         "predicted": 40,
-        "residual": 6.9,
+        "residual": 7,
         "outOfScale": false
       },
       "adaptability": {
@@ -1226,9 +1226,9 @@
     },
     "PRT": {
       "anticipation": {
-        "score": 79.4,
-        "predicted": 59.7,
-        "residual": 19.7,
+        "score": 79.7,
+        "predicted": 59.8,
+        "residual": 19.9,
         "outOfScale": false
       },
       "agency": {
@@ -1256,9 +1256,9 @@
         "outOfScale": false
       },
       "experimentation": {
-        "score": 46.5,
-        "predicted": 38,
-        "residual": 8.5,
+        "score": 46.7,
+        "predicted": 38.1,
+        "residual": 8.6,
         "outOfScale": false
       },
       "adaptability": {
@@ -1282,9 +1282,9 @@
     },
     "POL": {
       "anticipation": {
-        "score": 63.7,
+        "score": 63.5,
         "predicted": 61.4,
-        "residual": 2.3,
+        "residual": 2.1,
         "outOfScale": false
       },
       "agency": {
@@ -1312,9 +1312,9 @@
         "outOfScale": false
       },
       "experimentation": {
-        "score": 36.2,
+        "score": 36.1,
         "predicted": 39.3,
-        "residual": -3.1,
+        "residual": -3.2,
         "outOfScale": false
       },
       "adaptability": {
@@ -1338,9 +1338,9 @@
     },
     "SWE": {
       "anticipation": {
-        "score": 87.3,
+        "score": 87.1,
         "predicted": 66.5,
-        "residual": 20.8,
+        "residual": 20.6,
         "outOfScale": false
       },
       "agency": {
@@ -1395,8 +1395,8 @@
     "FIN": {
       "anticipation": {
         "score": 84.9,
-        "predicted": 64.3,
-        "residual": 20.6,
+        "predicted": 64.4,
+        "residual": 20.5,
         "outOfScale": false
       },
       "agency": {
@@ -1450,9 +1450,9 @@
     },
     "IRL": {
       "anticipation": {
-        "score": 75.3,
-        "predicted": 78.8,
-        "residual": -3.5,
+        "score": 76,
+        "predicted": 78.9,
+        "residual": -2.9,
         "outOfScale": false
       },
       "agency": {
@@ -1481,8 +1481,8 @@
       },
       "experimentation": {
         "score": 42.1,
-        "predicted": 52.9,
-        "residual": -10.8,
+        "predicted": 53,
+        "residual": -10.9,
         "outOfScale": false
       },
       "adaptability": {
@@ -1506,9 +1506,9 @@
     },
     "CAN": {
       "anticipation": {
-        "score": 77.8,
+        "score": 78.7,
         "predicted": 65,
-        "residual": 12.8,
+        "residual": 13.7,
         "outOfScale": false
       },
       "agency": {
@@ -1536,9 +1536,9 @@
         "outOfScale": false
       },
       "experimentation": {
-        "score": 48,
+        "score": 48.2,
         "predicted": 42.1,
-        "residual": 5.9,
+        "residual": 6.1,
         "outOfScale": false
       },
       "adaptability": {
@@ -1562,9 +1562,9 @@
     },
     "AUS": {
       "anticipation": {
-        "score": 83.4,
-        "predicted": 65.6,
-        "residual": 17.8,
+        "score": 84.3,
+        "predicted": 65.7,
+        "residual": 18.6,
         "outOfScale": false
       },
       "agency": {
@@ -1592,9 +1592,9 @@
         "outOfScale": false
       },
       "experimentation": {
-        "score": 53.1,
+        "score": 53.6,
         "predicted": 42.6,
-        "residual": 10.5,
+        "residual": 11,
         "outOfScale": false
       },
       "adaptability": {
@@ -1618,9 +1618,9 @@
     },
     "JPN": {
       "anticipation": {
-        "score": 62.2,
+        "score": 61.9,
         "predicted": 61.9,
-        "residual": 0.3,
+        "residual": 0,
         "outOfScale": false
       },
       "agency": {
@@ -1648,9 +1648,9 @@
         "outOfScale": false
       },
       "experimentation": {
-        "score": 64.1,
+        "score": 63.8,
         "predicted": 39.7,
-        "residual": 24.4,
+        "residual": 24.1,
         "outOfScale": false
       },
       "adaptability": {
@@ -1674,9 +1674,9 @@
     },
     "CHN": {
       "anticipation": {
-        "score": 30.1,
+        "score": 29.9,
         "predicted": 50.8,
-        "residual": -20.7,
+        "residual": -20.9,
         "outOfScale": false
       },
       "agency": {
@@ -1898,9 +1898,9 @@
     },
     "MYS": {
       "anticipation": {
-        "score": 54.4,
-        "predicted": 56.6,
-        "residual": -2.2,
+        "score": 54.6,
+        "predicted": 56.7,
+        "residual": -2.1,
         "outOfScale": false
       },
       "agency": {
@@ -1984,9 +1984,9 @@
         "outOfScale": false
       },
       "experimentation": {
-        "score": 16,
-        "predicted": 29.5,
-        "residual": -13.5,
+        "score": 15.9,
+        "predicted": 29.6,
+        "residual": -13.7,
         "outOfScale": false
       },
       "adaptability": {
@@ -2010,9 +2010,9 @@
     },
     "TUR": {
       "anticipation": {
-        "score": 47.9,
-        "predicted": 57.5,
-        "residual": -9.6,
+        "score": 47.8,
+        "predicted": 57.6,
+        "residual": -9.8,
         "outOfScale": false
       },
       "agency": {
@@ -2040,9 +2040,9 @@
         "outOfScale": false
       },
       "experimentation": {
-        "score": 63.6,
+        "score": 63.7,
         "predicted": 36.3,
-        "residual": 27.3,
+        "residual": 27.4,
         "outOfScale": false
       },
       "adaptability": {
@@ -2066,9 +2066,9 @@
     },
     "ISR": {
       "anticipation": {
-        "score": 72.8,
-        "predicted": 61.8,
-        "residual": 11,
+        "score": 73.3,
+        "predicted": 61.9,
+        "residual": 11.4,
         "outOfScale": false
       },
       "agency": {
@@ -2096,9 +2096,9 @@
         "outOfScale": false
       },
       "experimentation": {
-        "score": 45.2,
+        "score": 45.4,
         "predicted": 39.7,
-        "residual": 5.5,
+        "residual": 5.7,
         "outOfScale": false
       },
       "adaptability": {
@@ -2122,9 +2122,9 @@
     },
     "ARE": {
       "anticipation": {
-        "score": 48.3,
-        "predicted": 68.1,
-        "residual": -19.8,
+        "score": 49.3,
+        "predicted": 68.2,
+        "residual": -18.9,
         "outOfScale": false
       },
       "agency": {
@@ -2142,9 +2142,9 @@
         "outOfScale": false
       },
       "experimentation": {
-        "score": 23,
+        "score": 23.4,
         "predicted": 44.6,
-        "residual": -21.6,
+        "residual": -21.2,
         "outOfScale": false
       },
       "adaptability": {
@@ -2198,9 +2198,9 @@
         "outOfScale": false
       },
       "experimentation": {
-        "score": 3,
+        "score": 3.1,
         "predicted": 16.1,
-        "residual": -13.1,
+        "residual": -13,
         "outOfScale": false
       },
       "adaptability": {
@@ -2255,8 +2255,8 @@
       },
       "experimentation": {
         "score": 8.1,
-        "predicted": 12,
-        "residual": -3.9,
+        "predicted": 12.1,
+        "residual": -4,
         "outOfScale": false
       },
       "adaptability": {
@@ -2311,8 +2311,8 @@
       },
       "experimentation": {
         "score": 20,
-        "predicted": 5.1,
-        "residual": 14.9,
+        "predicted": 5.2,
+        "residual": 14.8,
         "outOfScale": false
       },
       "adaptability": {
@@ -2449,8 +2449,8 @@
     "PRY": {
       "anticipation": {
         "score": 32.7,
-        "predicted": 44.4,
-        "residual": -11.7,
+        "predicted": 44.5,
+        "residual": -11.8,
         "outOfScale": false
       },
       "agency": {
@@ -2478,8 +2478,8 @@
         "outOfScale": false
       },
       "experimentation": {
-        "score": 14.6,
-        "predicted": 26,
+        "score": 14.7,
+        "predicted": 26.1,
         "residual": -11.4,
         "outOfScale": false
       },
@@ -2602,8 +2602,8 @@
       },
       "experimentation": {
         "score": 9.3,
-        "predicted": 36.3,
-        "residual": -27,
+        "predicted": 36.4,
+        "residual": -27.1,
         "outOfScale": false
       },
       "adaptability": {
@@ -2628,8 +2628,8 @@
     "GTM": {
       "anticipation": {
         "score": 36.7,
-        "predicted": 39.6,
-        "residual": -2.9,
+        "predicted": 39.7,
+        "residual": -3,
         "outOfScale": false
       },
       "agency": {
@@ -2657,9 +2657,9 @@
         "outOfScale": false
       },
       "experimentation": {
-        "score": 4.6,
+        "score": 4.7,
         "predicted": 22.3,
-        "residual": -17.7,
+        "residual": -17.6,
         "outOfScale": false
       },
       "adaptability": {
@@ -2769,9 +2769,9 @@
         "outOfScale": false
       },
       "experimentation": {
-        "score": 7.8,
+        "score": 7.9,
         "predicted": 21.3,
-        "residual": -13.5,
+        "residual": -13.4,
         "outOfScale": false
       },
       "adaptability": {
@@ -2825,9 +2825,9 @@
         "outOfScale": false
       },
       "experimentation": {
-        "score": 2.3,
+        "score": 2.5,
         "predicted": 15.8,
-        "residual": -13.5,
+        "residual": -13.3,
         "outOfScale": false
       },
       "adaptability": {
@@ -2852,8 +2852,8 @@
     "DOM": {
       "anticipation": {
         "score": 33.1,
-        "predicted": 50.4,
-        "residual": -17.3,
+        "predicted": 50.5,
+        "residual": -17.4,
         "outOfScale": false
       },
       "agency": {
@@ -2881,8 +2881,8 @@
         "outOfScale": false
       },
       "experimentation": {
-        "score": 7.9,
-        "predicted": 30.7,
+        "score": 8,
+        "predicted": 30.8,
         "residual": -22.8,
         "outOfScale": false
       },
@@ -3046,8 +3046,8 @@
       },
       "experimentation": {
         "score": 5.2,
-        "predicted": 16.9,
-        "residual": -11.7,
+        "predicted": 17,
+        "residual": -11.8,
         "outOfScale": false
       },
       "adaptability": {
@@ -3071,9 +3071,9 @@
     },
     "RUS": {
       "anticipation": {
-        "score": 50.1,
+        "score": 49.9,
         "predicted": 59.7,
-        "residual": -9.6,
+        "residual": -9.8,
         "outOfScale": false
       },
       "agency": {
@@ -3101,9 +3101,9 @@
         "outOfScale": false
       },
       "experimentation": {
-        "score": 48.9,
+        "score": 48.8,
         "predicted": 38,
-        "residual": 10.9,
+        "residual": 10.8,
         "outOfScale": false
       },
       "adaptability": {
@@ -3127,9 +3127,9 @@
     },
     "EGY": {
       "anticipation": {
-        "score": 39.2,
+        "score": 39.3,
         "predicted": 44.5,
-        "residual": -5.3,
+        "residual": -5.2,
         "outOfScale": false
       },
       "agency": {
@@ -3157,9 +3157,9 @@
         "outOfScale": false
       },
       "experimentation": {
-        "score": 9,
+        "score": 9.1,
         "predicted": 26.1,
-        "residual": -17.1,
+        "residual": -17,
         "outOfScale": false
       },
       "adaptability": {
@@ -3239,8 +3239,8 @@
     },
     "IRN": {
       "anticipation": {
-        "score": 33.8,
-        "predicted": 44,
+        "score": 33.9,
+        "predicted": 44.1,
         "residual": -10.2,
         "outOfScale": false
       },
@@ -3264,9 +3264,9 @@
         "outOfScale": false
       },
       "experimentation": {
-        "score": 40.1,
-        "predicted": 25.7,
-        "residual": 14.4,
+        "score": 40.4,
+        "predicted": 25.8,
+        "residual": 14.6,
         "outOfScale": false
       },
       "adaptability": {
@@ -3346,9 +3346,9 @@
     },
     "ITA": {
       "anticipation": {
-        "score": 74.1,
-        "predicted": 63.6,
-        "residual": 10.5,
+        "score": 73.8,
+        "predicted": 63.7,
+        "residual": 10.1,
         "outOfScale": false
       },
       "agency": {
@@ -3376,9 +3376,9 @@
         "outOfScale": false
       },
       "experimentation": {
-        "score": 55.6,
+        "score": 55.5,
         "predicted": 41.1,
-        "residual": 14.5,
+        "residual": 14.4,
         "outOfScale": false
       },
       "adaptability": {
@@ -3483,8 +3483,8 @@
         "outOfScale": false
       },
       "experimentation": {
-        "score": 1.2,
-        "predicted": -3.4,
+        "score": 1.3,
+        "predicted": -3.3,
         "residual": 4.6,
         "outOfScale": true
       },
@@ -3509,9 +3509,9 @@
     },
     "UGA": {
       "anticipation": {
-        "score": 27.5,
+        "score": 27.6,
         "predicted": 14.7,
-        "residual": 12.8,
+        "residual": 12.9,
         "outOfScale": false
       },
       "agency": {
@@ -3565,9 +3565,9 @@
     },
     "IRQ": {
       "anticipation": {
-        "score": 20.6,
+        "score": 20.8,
         "predicted": 38.6,
-        "residual": -18,
+        "residual": -17.8,
         "outOfScale": false
       },
       "agency": {
@@ -3596,8 +3596,8 @@
       },
       "experimentation": {
         "score": 2.9,
-        "predicted": 21.4,
-        "residual": -18.5,
+        "predicted": 21.5,
+        "residual": -18.6,
         "outOfScale": false
       },
       "adaptability": {
@@ -3677,8 +3677,8 @@
     },
     "UKR": {
       "anticipation": {
-        "score": 41.3,
-        "predicted": 43.3,
+        "score": 41.4,
+        "predicted": 43.4,
         "residual": -2,
         "outOfScale": false
       },
@@ -3707,9 +3707,9 @@
         "outOfScale": false
       },
       "experimentation": {
-        "score": 21.8,
+        "score": 22.3,
         "predicted": 25.2,
-        "residual": -3.4,
+        "residual": -2.9,
         "outOfScale": false
       },
       "adaptability": {
@@ -3733,9 +3733,9 @@
     },
     "MAR": {
       "anticipation": {
-        "score": 35.8,
+        "score": 35.9,
         "predicted": 34.3,
-        "residual": 1.5,
+        "residual": 1.6,
         "outOfScale": false
       },
       "agency": {
@@ -3763,8 +3763,8 @@
         "outOfScale": false
       },
       "experimentation": {
-        "score": 30.9,
-        "predicted": 18.1,
+        "score": 31,
+        "predicted": 18.2,
         "residual": 12.8,
         "outOfScale": false
       },
@@ -3819,9 +3819,9 @@
         "outOfScale": false
       },
       "experimentation": {
-        "score": 20,
+        "score": 20.1,
         "predicted": 20.8,
-        "residual": -0.8,
+        "residual": -0.7,
         "outOfScale": false
       },
       "adaptability": {
@@ -3876,8 +3876,8 @@
       },
       "experimentation": {
         "score": 0.9,
-        "predicted": -6.8,
-        "residual": 7.7,
+        "predicted": -6.7,
+        "residual": 7.6,
         "outOfScale": true
       },
       "adaptability": {
@@ -3901,9 +3901,9 @@
     },
     "GHA": {
       "anticipation": {
-        "score": 26.1,
+        "score": 26.2,
         "predicted": 30,
-        "residual": -3.9,
+        "residual": -3.8,
         "outOfScale": false
       },
       "agency": {
@@ -3958,8 +3958,8 @@
     "MDG": {
       "anticipation": {
         "score": 17,
-        "predicted": 4.9,
-        "residual": 12.1,
+        "predicted": 4.8,
+        "residual": 12.2,
         "outOfScale": false
       },
       "agency": {
@@ -4043,8 +4043,8 @@
         "outOfScale": false
       },
       "experimentation": {
-        "score": 14.8,
-        "predicted": 14.1,
+        "score": 14.9,
+        "predicted": 14.2,
         "residual": 0.7,
         "outOfScale": false
       },
@@ -4100,8 +4100,8 @@
       },
       "experimentation": {
         "score": 4.3,
-        "predicted": 10.3,
-        "residual": -6,
+        "predicted": 10.4,
+        "residual": -6.1,
         "outOfScale": false
       },
       "adaptability": {
@@ -4156,8 +4156,8 @@
       },
       "experimentation": {
         "score": 17.5,
-        "predicted": 2.8,
-        "residual": 14.7,
+        "predicted": 2.9,
+        "residual": 14.6,
         "outOfScale": false
       },
       "adaptability": {
@@ -4181,9 +4181,9 @@
     },
     "BFA": {
       "anticipation": {
-        "score": 34.3,
+        "score": 34.4,
         "predicted": 12.5,
-        "residual": 21.8,
+        "residual": 21.9,
         "outOfScale": false
       },
       "agency": {
@@ -4263,8 +4263,8 @@
       },
       "experimentation": {
         "score": 0.5,
-        "predicted": -5.3,
-        "residual": 5.8,
+        "predicted": -5.2,
+        "residual": 5.7,
         "outOfScale": true
       },
       "adaptability": {
@@ -4288,9 +4288,9 @@
     },
     "ZMB": {
       "anticipation": {
-        "score": 23.2,
-        "predicted": 18.6,
-        "residual": 4.6,
+        "score": 23.3,
+        "predicted": 18.5,
+        "residual": 4.8,
         "outOfScale": false
       },
       "agency": {
@@ -4344,9 +4344,9 @@
     },
     "LKA": {
       "anticipation": {
-        "score": 34.4,
+        "score": 34.3,
         "predicted": 41.6,
-        "residual": -7.2,
+        "residual": -7.3,
         "outOfScale": false
       },
       "agency": {
@@ -4375,8 +4375,8 @@
       },
       "experimentation": {
         "score": 12.8,
-        "predicted": 23.8,
-        "residual": -11,
+        "predicted": 23.9,
+        "residual": -11.1,
         "outOfScale": false
       },
       "adaptability": {
@@ -4401,8 +4401,8 @@
     "KAZ": {
       "anticipation": {
         "score": 45.2,
-        "predicted": 57.7,
-        "residual": -12.5,
+        "predicted": 57.8,
+        "residual": -12.6,
         "outOfScale": false
       },
       "agency": {
@@ -4430,9 +4430,9 @@
         "outOfScale": false
       },
       "experimentation": {
-        "score": 24.2,
+        "score": 24.3,
         "predicted": 36.5,
-        "residual": -12.3,
+        "residual": -12.2,
         "outOfScale": false
       },
       "adaptability": {
@@ -4456,9 +4456,9 @@
     },
     "ROU": {
       "anticipation": {
-        "score": 58,
-        "predicted": 59,
-        "residual": -1,
+        "score": 57.9,
+        "predicted": 59.1,
+        "residual": -1.2,
         "outOfScale": false
       },
       "agency": {
@@ -4486,9 +4486,9 @@
         "outOfScale": false
       },
       "experimentation": {
-        "score": 26.8,
+        "score": 26.7,
         "predicted": 37.5,
-        "residual": -10.7,
+        "residual": -10.8,
         "outOfScale": false
       },
       "adaptability": {
@@ -4625,8 +4625,8 @@
     "BDI": {
       "anticipation": {
         "score": 5.9,
-        "predicted": -2.7,
-        "residual": 8.6,
+        "predicted": -2.8,
+        "residual": 8.7,
         "outOfScale": true
       },
       "agency": {
@@ -4710,9 +4710,9 @@
         "outOfScale": false
       },
       "experimentation": {
-        "score": 21.7,
+        "score": 21.8,
         "predicted": 22.3,
-        "residual": -0.6,
+        "residual": -0.5,
         "outOfScale": false
       },
       "adaptability": {
@@ -4736,8 +4736,8 @@
     },
     "BEL": {
       "anticipation": {
-        "score": 70.9,
-        "predicted": 66.5,
+        "score": 71,
+        "predicted": 66.6,
         "residual": 4.4,
         "outOfScale": false
       },
@@ -4822,9 +4822,9 @@
         "outOfScale": false
       },
       "experimentation": {
-        "score": 12.3,
-        "predicted": 19.8,
-        "residual": -7.5,
+        "score": 12.2,
+        "predicted": 19.9,
+        "residual": -7.7,
         "outOfScale": false
       },
       "adaptability": {
@@ -4848,9 +4848,9 @@
     },
     "CZE": {
       "anticipation": {
-        "score": 67.3,
-        "predicted": 62.2,
-        "residual": 5.1,
+        "score": 67.1,
+        "predicted": 62.3,
+        "residual": 4.8,
         "outOfScale": false
       },
       "agency": {
@@ -5011,9 +5011,9 @@
     },
     "GRC": {
       "anticipation": {
-        "score": 68.2,
-        "predicted": 57.9,
-        "residual": 10.3,
+        "score": 68,
+        "predicted": 58,
+        "residual": 10,
         "outOfScale": false
       },
       "agency": {
@@ -5097,9 +5097,9 @@
         "outOfScale": false
       },
       "experimentation": {
-        "score": 8.6,
+        "score": 8.7,
         "predicted": 29.5,
-        "residual": -20.9,
+        "residual": -20.8,
         "outOfScale": false
       },
       "adaptability": {
@@ -5123,9 +5123,9 @@
     },
     "HUN": {
       "anticipation": {
-        "score": 61,
+        "score": 60.7,
         "predicted": 59.2,
-        "residual": 1.8,
+        "residual": 1.5,
         "outOfScale": false
       },
       "agency": {
@@ -5153,9 +5153,9 @@
         "outOfScale": false
       },
       "experimentation": {
-        "score": 32.3,
+        "score": 32.1,
         "predicted": 37.6,
-        "residual": -5.3,
+        "residual": -5.5,
         "outOfScale": false
       },
       "adaptability": {
@@ -5180,8 +5180,8 @@
     "AUT": {
       "anticipation": {
         "score": 74.6,
-        "predicted": 66.6,
-        "residual": 8,
+        "predicted": 66.7,
+        "residual": 7.9,
         "outOfScale": false
       },
       "agency": {
@@ -5235,9 +5235,9 @@
     },
     "BLR": {
       "anticipation": {
-        "score": 37.7,
-        "predicted": 53.6,
-        "residual": -15.9,
+        "score": 37.6,
+        "predicted": 53.7,
+        "residual": -16.1,
         "outOfScale": false
       },
       "agency": {
@@ -5265,9 +5265,9 @@
         "outOfScale": false
       },
       "experimentation": {
-        "score": 12.2,
-        "predicted": 33.2,
-        "residual": -21,
+        "score": 12,
+        "predicted": 33.3,
+        "residual": -21.3,
         "outOfScale": false
       },
       "adaptability": {
@@ -5322,8 +5322,8 @@
       },
       "experimentation": {
         "score": 1.1,
-        "predicted": 17.2,
-        "residual": -16.1,
+        "predicted": 17.3,
+        "residual": -16.2,
         "outOfScale": false
       },
       "adaptability": {
@@ -5403,9 +5403,9 @@
     },
     "SRB": {
       "anticipation": {
-        "score": 52.9,
+        "score": 52.5,
         "predicted": 52.4,
-        "residual": 0.5,
+        "residual": 0.1,
         "outOfScale": false
       },
       "agency": {
@@ -5433,9 +5433,9 @@
         "outOfScale": false
       },
       "experimentation": {
-        "score": 16.4,
+        "score": 16.3,
         "predicted": 32.3,
-        "residual": -15.9,
+        "residual": -16,
         "outOfScale": false
       },
       "adaptability": {
@@ -5515,9 +5515,9 @@
     },
     "BGR": {
       "anticipation": {
-        "score": 55.4,
+        "score": 55.2,
         "predicted": 56.6,
-        "residual": -1.2,
+        "residual": -1.4,
         "outOfScale": false
       },
       "agency": {
@@ -5545,9 +5545,9 @@
         "outOfScale": false
       },
       "experimentation": {
-        "score": 30.8,
-        "predicted": 35.5,
-        "residual": -4.7,
+        "score": 30.7,
+        "predicted": 35.6,
+        "residual": -4.9,
         "outOfScale": false
       },
       "adaptability": {
@@ -5572,8 +5572,8 @@
     "DNK": {
       "anticipation": {
         "score": 98.1,
-        "predicted": 68.8,
-        "residual": 29.3,
+        "predicted": 68.9,
+        "residual": 29.2,
         "outOfScale": false
       },
       "agency": {
@@ -5622,9 +5622,9 @@
     },
     "LBN": {
       "anticipation": {
-        "score": 24,
+        "score": 24.1,
         "predicted": 36,
-        "residual": -12,
+        "residual": -11.9,
         "outOfScale": false
       },
       "agency": {
@@ -5652,9 +5652,9 @@
         "outOfScale": false
       },
       "experimentation": {
-        "score": 11.1,
-        "predicted": 19.4,
-        "residual": -8.3,
+        "score": 10.6,
+        "predicted": 19.5,
+        "residual": -8.9,
         "outOfScale": false
       },
       "adaptability": {
@@ -5678,9 +5678,9 @@
     },
     "NOR": {
       "anticipation": {
-        "score": 97.2,
+        "score": 97.5,
         "predicted": 73.4,
-        "residual": 23.8,
+        "residual": 24.1,
         "outOfScale": false
       },
       "agency": {
@@ -5708,9 +5708,9 @@
         "outOfScale": false
       },
       "experimentation": {
-        "score": 45.9,
+        "score": 46,
         "predicted": 48.7,
-        "residual": -2.8,
+        "residual": -2.7,
         "outOfScale": false
       },
       "adaptability": {
@@ -5734,9 +5734,9 @@
     },
     "SVK": {
       "anticipation": {
-        "score": 59.1,
+        "score": 58.9,
         "predicted": 59,
-        "residual": 0.1,
+        "residual": -0.1,
         "outOfScale": false
       },
       "agency": {
@@ -5765,8 +5765,8 @@
       },
       "experimentation": {
         "score": 30.7,
-        "predicted": 37.4,
-        "residual": -6.7,
+        "predicted": 37.5,
+        "residual": -6.8,
         "outOfScale": false
       },
       "adaptability": {
@@ -5790,9 +5790,9 @@
     },
     "NZL": {
       "anticipation": {
-        "score": 77.1,
+        "score": 77.5,
         "predicted": 61.9,
-        "residual": 15.2,
+        "residual": 15.6,
         "outOfScale": false
       },
       "agency": {
@@ -5820,9 +5820,9 @@
         "outOfScale": false
       },
       "experimentation": {
-        "score": 42.5,
+        "score": 42.6,
         "predicted": 39.7,
-        "residual": 2.8,
+        "residual": 2.9,
         "outOfScale": false
       },
       "adaptability": {
@@ -5846,8 +5846,8 @@
     },
     "GEO": {
       "anticipation": {
-        "score": 47.4,
-        "predicted": 50.8,
+        "score": 47.5,
+        "predicted": 50.9,
         "residual": -3.4,
         "outOfScale": false
       },
@@ -5876,9 +5876,9 @@
         "outOfScale": false
       },
       "experimentation": {
-        "score": 43.3,
-        "predicted": 31,
-        "residual": 12.3,
+        "score": 43.7,
+        "predicted": 31.1,
+        "residual": 12.6,
         "outOfScale": false
       },
       "adaptability": {
@@ -5902,9 +5902,9 @@
     },
     "HRV": {
       "anticipation": {
-        "score": 69.1,
+        "score": 69,
         "predicted": 60.4,
-        "residual": 8.7,
+        "residual": 8.6,
         "outOfScale": false
       },
       "agency": {
@@ -5932,9 +5932,9 @@
         "outOfScale": false
       },
       "experimentation": {
-        "score": 26.1,
+        "score": 26,
         "predicted": 38.5,
-        "residual": -12.4,
+        "residual": -12.5,
         "outOfScale": false
       },
       "adaptability": {
@@ -5959,8 +5959,8 @@
     "MNG": {
       "anticipation": {
         "score": 42.1,
-        "predicted": 44.9,
-        "residual": -2.8,
+        "predicted": 45,
+        "residual": -2.9,
         "outOfScale": false
       },
       "agency": {
@@ -5988,9 +5988,9 @@
         "outOfScale": false
       },
       "experimentation": {
-        "score": 46.9,
-        "predicted": 26.4,
-        "residual": 20.5,
+        "score": 47.1,
+        "predicted": 26.5,
+        "residual": 20.6,
         "outOfScale": false
       },
       "adaptability": {
@@ -6014,9 +6014,9 @@
     },
     "BIH": {
       "anticipation": {
-        "score": 33.5,
+        "score": 33.4,
         "predicted": 47.9,
-        "residual": -14.4,
+        "residual": -14.5,
         "outOfScale": false
       },
       "agency": {
@@ -6044,9 +6044,9 @@
         "outOfScale": false
       },
       "experimentation": {
-        "score": 15.9,
+        "score": 15.8,
         "predicted": 28.8,
-        "residual": -12.9,
+        "residual": -13,
         "outOfScale": false
       },
       "adaptability": {
@@ -6101,8 +6101,8 @@
       },
       "experimentation": {
         "score": 7.4,
-        "predicted": 19.1,
-        "residual": -11.7,
+        "predicted": 19.2,
+        "residual": -11.8,
         "outOfScale": false
       },
       "adaptability": {
@@ -6126,9 +6126,9 @@
     },
     "ARM": {
       "anticipation": {
-        "score": 44.2,
+        "score": 44.3,
         "predicted": 47.9,
-        "residual": -3.7,
+        "residual": -3.6,
         "outOfScale": false
       },
       "agency": {
@@ -6156,9 +6156,9 @@
         "outOfScale": false
       },
       "experimentation": {
-        "score": 21.4,
-        "predicted": 28.7,
-        "residual": -7.3,
+        "score": 21.6,
+        "predicted": 28.8,
+        "residual": -7.2,
         "outOfScale": false
       },
       "adaptability": {
@@ -6182,9 +6182,9 @@
     },
     "LTU": {
       "anticipation": {
-        "score": 63.5,
+        "score": 63.4,
         "predicted": 62.1,
-        "residual": 1.4,
+        "residual": 1.3,
         "outOfScale": false
       },
       "agency": {
@@ -6213,8 +6213,8 @@
       },
       "experimentation": {
         "score": 32.4,
-        "predicted": 39.8,
-        "residual": -7.4,
+        "predicted": 39.9,
+        "residual": -7.5,
         "outOfScale": false
       },
       "adaptability": {
@@ -6294,9 +6294,9 @@
     },
     "GMB": {
       "anticipation": {
-        "score": 26,
+        "score": 26.1,
         "predicted": 15.7,
-        "residual": 10.3,
+        "residual": 10.4,
         "outOfScale": false
       },
       "agency": {
@@ -6324,9 +6324,9 @@
         "outOfScale": false
       },
       "experimentation": {
-        "score": 22.8,
+        "score": 22.9,
         "predicted": 3.6,
-        "residual": 19.2,
+        "residual": 19.3,
         "outOfScale": false
       },
       "adaptability": {
@@ -6350,9 +6350,9 @@
     },
     "BWA": {
       "anticipation": {
-        "score": 25.8,
+        "score": 25.9,
         "predicted": 44.9,
-        "residual": -19.1,
+        "residual": -19,
         "outOfScale": false
       },
       "agency": {
@@ -6380,9 +6380,9 @@
         "outOfScale": false
       },
       "experimentation": {
-        "score": 19,
+        "score": 19.1,
         "predicted": 26.4,
-        "residual": -7.4,
+        "residual": -7.3,
         "outOfScale": false
       },
       "adaptability": {
@@ -6407,8 +6407,8 @@
     "LSO": {
       "anticipation": {
         "score": 18.1,
-        "predicted": 13.2,
-        "residual": 4.9,
+        "predicted": 13.1,
+        "residual": 5,
         "outOfScale": false
       },
       "agency": {
@@ -6462,9 +6462,9 @@
     },
     "MDA": {
       "anticipation": {
-        "score": 45.1,
+        "score": 44.9,
         "predicted": 44.3,
-        "residual": 0.8,
+        "residual": 0.6,
         "outOfScale": false
       },
       "agency": {
@@ -6492,9 +6492,9 @@
         "outOfScale": false
       },
       "experimentation": {
-        "score": 36.6,
-        "predicted": 25.9,
-        "residual": 10.7,
+        "score": 36.2,
+        "predicted": 26,
+        "residual": 10.2,
         "outOfScale": false
       },
       "adaptability": {
@@ -6518,9 +6518,9 @@
     },
     "ALB": {
       "anticipation": {
-        "score": 43.1,
+        "score": 43,
         "predicted": 49.1,
-        "residual": -6,
+        "residual": -6.1,
         "outOfScale": false
       },
       "agency": {
@@ -6548,9 +6548,9 @@
         "outOfScale": false
       },
       "experimentation": {
-        "score": 13.7,
+        "score": 13.6,
         "predicted": 29.7,
-        "residual": -16,
+        "residual": -16.1,
         "outOfScale": false
       },
       "adaptability": {
@@ -6604,9 +6604,9 @@
         "outOfScale": false
       },
       "experimentation": {
-        "score": 0.8,
+        "score": 1.1,
         "predicted": 2,
-        "residual": -1.2,
+        "residual": -0.9,
         "outOfScale": false
       },
       "adaptability": {
@@ -6630,9 +6630,9 @@
     },
     "SVN": {
       "anticipation": {
-        "score": 79.5,
+        "score": 79.3,
         "predicted": 62.2,
-        "residual": 17.3,
+        "residual": 17.1,
         "outOfScale": false
       },
       "agency": {
@@ -6686,9 +6686,9 @@
     },
     "LVA": {
       "anticipation": {
-        "score": 62.6,
+        "score": 62.1,
         "predicted": 58.2,
-        "residual": 4.4,
+        "residual": 3.9,
         "outOfScale": false
       },
       "agency": {
@@ -6716,9 +6716,9 @@
         "outOfScale": false
       },
       "experimentation": {
-        "score": 45.7,
+        "score": 45.5,
         "predicted": 36.8,
-        "residual": 8.9,
+        "residual": 8.7,
         "outOfScale": false
       },
       "adaptability": {
@@ -6742,9 +6742,9 @@
     },
     "MKD": {
       "anticipation": {
-        "score": 49,
+        "score": 48.9,
         "predicted": 50.8,
-        "residual": -1.8,
+        "residual": -1.9,
         "outOfScale": false
       },
       "agency": {
@@ -6798,9 +6798,9 @@
     },
     "CYP": {
       "anticipation": {
-        "score": 66.6,
-        "predicted": 63.8,
-        "residual": 2.8,
+        "score": 66.8,
+        "predicted": 63.9,
+        "residual": 2.9,
         "outOfScale": false
       },
       "agency": {
@@ -6854,9 +6854,9 @@
     },
     "TTO": {
       "anticipation": {
-        "score": 22.1,
+        "score": 22,
         "predicted": 54.8,
-        "residual": -32.7,
+        "residual": -32.8,
         "outOfScale": false
       },
       "agency": {
@@ -6884,9 +6884,9 @@
         "outOfScale": false
       },
       "experimentation": {
-        "score": 15.2,
-        "predicted": 34.1,
-        "residual": -18.9,
+        "score": 15.1,
+        "predicted": 34.2,
+        "residual": -19.1,
         "outOfScale": false
       },
       "adaptability": {
@@ -6905,9 +6905,9 @@
     },
     "MUS": {
       "anticipation": {
-        "score": 40.8,
+        "score": 40.7,
         "predicted": 53.1,
-        "residual": -12.3,
+        "residual": -12.4,
         "outOfScale": false
       },
       "agency": {
@@ -6936,8 +6936,8 @@
       },
       "experimentation": {
         "score": 33.9,
-        "predicted": 32.8,
-        "residual": 1.1,
+        "predicted": 32.9,
+        "residual": 1,
         "outOfScale": false
       },
       "adaptability": {
@@ -6961,9 +6961,9 @@
     },
     "CMR": {
       "anticipation": {
-        "score": 25.6,
+        "score": 25.7,
         "predicted": 23.3,
-        "residual": 2.3,
+        "residual": 2.4,
         "outOfScale": false
       },
       "agency": {
@@ -7048,8 +7048,8 @@
       },
       "experimentation": {
         "score": 0.2,
-        "predicted": 0.3,
-        "residual": -0.1,
+        "predicted": 0.4,
+        "residual": -0.2,
         "outOfScale": false
       },
       "adaptability": {
@@ -7104,8 +7104,8 @@
       },
       "experimentation": {
         "score": 34.5,
-        "predicted": 8.7,
-        "residual": 25.8,
+        "predicted": 8.8,
+        "residual": 25.7,
         "outOfScale": false
       },
       "adaptability": {
@@ -7160,8 +7160,8 @@
       },
       "experimentation": {
         "score": 0.6,
-        "predicted": 3.6,
-        "residual": -3,
+        "predicted": 3.7,
+        "residual": -3.1,
         "outOfScale": false
       },
       "adaptability": {
@@ -7186,8 +7186,8 @@
     "TGO": {
       "anticipation": {
         "score": 25.4,
-        "predicted": 17.4,
-        "residual": 8,
+        "predicted": 17.3,
+        "residual": 8.1,
         "outOfScale": false
       },
       "agency": {
@@ -7298,8 +7298,8 @@
     "CAF": {
       "anticipation": {
         "score": 7.4,
-        "predicted": -1.8,
-        "residual": 9.2,
+        "predicted": -1.9,
+        "residual": 9.3,
         "outOfScale": true
       },
       "agency": {
@@ -7328,8 +7328,8 @@
       },
       "experimentation": {
         "score": 0,
-        "predicted": -10.2,
-        "residual": 10.2,
+        "predicted": -10.1,
+        "residual": 10.1,
         "outOfScale": true
       },
       "adaptability": {
@@ -7383,9 +7383,9 @@
         "outOfScale": false
       },
       "experimentation": {
-        "score": 6.9,
-        "predicted": 13.2,
-        "residual": -6.3,
+        "score": 7.9,
+        "predicted": 13.3,
+        "residual": -5.4,
         "outOfScale": false
       },
       "adaptability": {
@@ -7440,8 +7440,8 @@
       },
       "experimentation": {
         "score": 0.7,
-        "predicted": 7,
-        "residual": -6.3,
+        "predicted": 7.1,
+        "residual": -6.4,
         "outOfScale": false
       },
       "adaptability": {
@@ -7496,8 +7496,8 @@
       },
       "experimentation": {
         "score": 22.1,
-        "predicted": 19.7,
-        "residual": 2.4,
+        "predicted": 19.8,
+        "residual": 2.3,
         "outOfScale": false
       },
       "adaptability": {

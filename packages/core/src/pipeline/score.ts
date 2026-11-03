@@ -84,16 +84,41 @@ export type ScoreOptions = {
   momentumSpans?: number[]
 }
 
-/** Latest observation per indicator x country. */
-function latest(observations: Observation[]): Map<string, Observation> {
-  const best = new Map<string, Observation>()
+type Latest = {
+  /** Latest observation per indicator x country. */
+  values: Map<string, Observation>
+  /** Every year of each denominator series per country, newest first. */
+  denominators: Map<string, Observation[]>
+}
+
+function latest(observations: Observation[]): Latest {
+  const values = new Map<string, Observation>()
+  const denominators = new Map<string, Observation[]>()
   for (const o of observations) {
     if (o.geometry !== 'national') continue
     const key = `${o.indicatorId}|${o.iso3}`
-    const cur = best.get(key)
-    if (!cur || o.year > cur.year) best.set(key, o)
+    const cur = values.get(key)
+    if (!cur || o.year > cur.year) values.set(key, o)
+    if (o.indicatorId.startsWith('__denominator__')) {
+      const series = denominators.get(key) ?? []
+      series.push(o)
+      denominators.set(key, series)
+    }
   }
-  return best
+  for (const series of denominators.values()) series.sort((a, b) => b.year - a.year)
+  return { values, denominators }
+}
+
+/**
+ * The denominator a value is divided by: the one of the value's own year, or
+ * the nearest earlier year, and the earliest one only when none is earlier.
+ * Never simply the newest: a 2023 count divided by a 2025 population is a
+ * per-head figure for no year. See D182.
+ */
+function denominatorFor(series: Observation[] | undefined, year: number): number | null {
+  if (!series || series.length === 0) return null
+  const inForce = series.find((d) => d.year <= year)
+  return (inForce ?? series[series.length - 1])!.value
 }
 
 /**
@@ -112,14 +137,17 @@ type TransformedRow = { iso3: string; obs: Observation; transformed: number }
 
 function transformedRows(
   def: IndicatorDef,
-  byKey: Map<string, Observation>,
+  byKey: Latest,
 ): TransformedRow[] {
   const rows: TransformedRow[] = []
   for (const iso3 of COUNTRY_ISO3) {
-    const obs = byKey.get(`${def.id}|${iso3}`)
+    const obs = byKey.values.get(`${def.id}|${iso3}`)
     if (!obs) continue
     const denom = def.denominatorSeries
-      ? byKey.get(`__denominator__${def.denominatorSeries}|${iso3}`)?.value ?? null
+      ? denominatorFor(
+          byKey.denominators.get(`__denominator__${def.denominatorSeries}|${iso3}`),
+          obs.year,
+        )
       : null
     const transformed = applyTransform(def, obs.value, denom)
     if (transformed === null || !Number.isFinite(transformed)) continue

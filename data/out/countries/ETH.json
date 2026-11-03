@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-03T08:12:02.083Z",
-  "version": "10.0.1",
+  "generatedAt": "2026-11-03T08:48:01.204Z",
+  "version": "10.0.2",
   "country": {
     "country": "Ethiopia",
     "iso3": "ETH",
@@ -15,8 +15,8 @@
           "recency": 0.958,
           "sourceQuality": 0.95
         },
-        "delphiScore": 22,
-        "delphiIqr": 0,
+        "delphiScore": 20,
+        "delphiIqr": 1,
         "delphiDissent": false,
         "blendedScore": 21.7,
         "blendedFrom": "indicators",
@@ -87,7 +87,7 @@
             "name": "Scientific articles",
             "measurementClass": "O",
             "raw": 6727.91,
-            "transformed": 49.663,
+            "transformed": 52.279,
             "normalized": 1.9,
             "year": 2023,
             "source": "World Bank (IP.JRN.ARTC.SC)",
@@ -104,7 +104,7 @@
               {
                 "year": 1997,
                 "raw": 161.04,
-                "normalized": 0.1,
+                "normalized": 0,
                 "tier": "international_organization"
               },
               {
@@ -188,7 +188,7 @@
               {
                 "year": 2011,
                 "raw": 487.65,
-                "normalized": 0.2,
+                "normalized": 0.1,
                 "tier": "international_organization"
               },
               {
@@ -230,7 +230,7 @@
               {
                 "year": 2018,
                 "raw": 2048.67,
-                "normalized": 0.7,
+                "normalized": 0.6,
                 "tier": "international_organization"
               },
               {
@@ -260,7 +260,7 @@
               {
                 "year": 2023,
                 "raw": 6727.91,
-                "normalized": 2,
+                "normalized": 1.9,
                 "tier": "international_organization"
               }
             ],
@@ -2130,8 +2130,8 @@
           "recency": 1,
           "sourceQuality": 0.925
         },
-        "delphiScore": 8,
-        "delphiIqr": 2,
+        "delphiScore": 6,
+        "delphiIqr": 4,
         "delphiDissent": false,
         "blendedScore": 0.8,
         "blendedFrom": "indicators",
@@ -2227,15 +2227,15 @@
               },
               {
                 "year": 2010,
-                "score": 0.4
+                "score": 0.5
               },
               {
                 "year": 2011,
-                "score": 0.4
+                "score": 0.5
               },
               {
                 "year": 2012,
-                "score": 0.4
+                "score": 0.5
               },
               {
                 "year": 2022,
@@ -2266,7 +2266,7 @@
             "name": "Resident patent applications",
             "measurementClass": "O",
             "raw": 66,
-            "transformed": 0.487,
+            "transformed": 0.5,
             "normalized": 0.3,
             "year": 2024,
             "source": "World Bank (IP.PAT.RESD)",
@@ -2397,7 +2397,7 @@
             "name": "Resident trademark applications",
             "measurementClass": "O",
             "raw": 2818,
-            "transformed": 20.801,
+            "transformed": 21.339,
             "normalized": 0.4,
             "year": 2024,
             "source": "World Bank (IP.TMK.RSCT)",
@@ -2408,7 +2408,7 @@
               {
                 "year": 2004,
                 "raw": 321,
-                "normalized": 0.1,
+                "normalized": 0,
                 "tier": "international_organization"
               },
               {
@@ -2432,7 +2432,7 @@
               {
                 "year": 2011,
                 "raw": 380,
-                "normalized": 0.1,
+                "normalized": 0,
                 "tier": "international_organization"
               },
               {
@@ -2522,7 +2522,7 @@
             "name": "Resident industrial design applications",
             "measurementClass": "O",
             "raw": 101,
-            "transformed": 0.746,
+            "transformed": 0.765,
             "normalized": 0.3,
             "year": 2024,
             "source": "World Bank (IP.IDS.RSCT)",

@@ -1242,6 +1242,20 @@ async function main() {
         .map((s) => s.trim())
         .filter(Boolean)
       const maxCoverage = num(args, 'max-coverage', 0.5)
+      /* --dimensions a,b: rescore only the cells a release dropped (D160). An
+       * unknown name stops the run rather than widening it to every dimension. */
+      const requestedDimensions = str(args, 'dimensions', '')
+        .split(',')
+        .map((s) => s.trim())
+        .filter(Boolean)
+      const unknownDimension = requestedDimensions.find(
+        (d) => !(DIMENSIONS as readonly string[]).includes(d),
+      )
+      if (unknownDimension) {
+        console.error(`unknown dimension "${unknownDimension}". one of: ${DIMENSIONS.join(', ')}`)
+        process.exitCode = 1
+        break
+      }
       const run = await runDelphi(countries, {
         panel,
         provider,
@@ -1250,6 +1264,7 @@ async function main() {
         datasetVersion: DATASET_VERSION,
         judgeIndicators: !bool(args, 'no-judge'),
         maxCoverage,
+        dimensions: requestedDimensions as Dimension[],
         concurrency: num(args, 'concurrency', 4),
         onProgress: (m) => console.log(`  ${m}`),
       })
@@ -1680,6 +1695,7 @@ Start with file 1.
   pnpm bench delphi    [--mock] [--rounds 2] [--countries BRA,IND] [--models a,b]
                        [--in-session <dir>] [--note text]  write the prompts for separate sessions to answer, then assemble the run
                        [--max-coverage 0.5] [--no-judge] [--concurrency 4] [--activate]
+                       [--dimensions anticipation,experimentation]  rescore only the cells a release dropped (D160)
                        0.5 reviews thin dimensions; use 1 for all nine dimensions
   pnpm bench diagnose                     correlations, redundancy, GDP-sensitivity test
   pnpm bench velocity                     write the provisional five-year velocity fixture

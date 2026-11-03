@@ -8,7 +8,7 @@ A escala reúne 135 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 
 | Dimensão | Pontuação | Solidez | Tendência |
 | --- | --- | --- | --- |
-| Antecipação | 70,6 | 0,46 (utilizável) | +0,5 em 10 anos, com base em 2 indicadores |
+| Antecipação | 70,7 | 0,46 (utilizável) | +0,9 em 10 anos, com base em 2 indicadores |
 | Agência | 73,6 | 0,44 (fraca) | sem tendência comparável |
 | Coordenação | 79 | 0,29 (fraca) | sem tendência comparável |
 | Confiança | 70,4 | 0,55 (utilizável) | sem tendência comparável |
@@ -51,7 +51,7 @@ Em que medida pessoas e organizações conseguem transformar intenção em açã
 Estas dimensões têm pontuação de pelo menos 50, com evidência utilizável.
 
 - Adaptação: 72,4, solidez utilizável
-- Antecipação: 70,6, solidez utilizável
+- Antecipação: 70,7, solidez utilizável
 - Confiança: 70,4, solidez utilizável
 - Aprendizagem: 63,1, solidez utilizável
 - Construção: 62,4, solidez utilizável

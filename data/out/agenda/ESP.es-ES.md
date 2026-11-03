@@ -8,12 +8,12 @@ La comparación incluye 135 países. Cada dimensión recibe una puntuación de 0
 
 | Dimensión | Puntuación | Solidez | Tendencia |
 | --- | --- | --- | --- |
-| Anticipación | 71,4 | 0,46 (utilizable) | +6,3 en 10 años, con 2 indicadores |
+| Anticipación | 71,7 | 0,46 (utilizable) | +6,9 en 10 años, con 2 indicadores |
 | Iniciativa | 56,6 | 0,63 (utilizable) | sin base de tendencia |
 | Coordinación | 86,3 | 0,45 (utilizable) | -4,8 en 10 años, con 2 indicadores |
 | Confianza | 75,4 | 0,55 (utilizable) | sin base de tendencia |
 | Aprendizaje | 77,8 | 0,55 (utilizable) | sin base de tendencia |
-| Experimentación | 46,9 | 0,47 (utilizable) | -7,2 en 10 años, con 3 indicadores |
+| Experimentación | 47 | 0,47 (utilizable) | -7,1 en 10 años, con 3 indicadores |
 | Adaptación | 71 | 0,62 (utilizable) | sin base de tendencia |
 | Ejecución | 55 | 0,63 (utilizable) | +2,1 en 10 años, con 3 indicadores |
 | Propósito compartido | 44,1 | 0,42 (débil) | +5,1 en 10 años, con 2 indicadores |
@@ -22,12 +22,12 @@ La comparación incluye 135 países. Cada dimensión recibe una puntuación de 0
 
 Estas son las puntuaciones más bajas con evidencia utilizable. Las dimensiones con evidencia débil aparecen más abajo.
 
-### Experimentación: 46,9, evidencia utilizable
+### Experimentación: 47, evidencia utilizable
 
 ¿Con qué facilidad se pueden intentar, probar, abandonar y mejorar enfoques nuevos?
 
 - Basada en 5 indicadores observados.
-- Puntuaciones más altas en esta dimensión, entre las que tienen evidencia utilizable: Corea del Sur 75,1, Reino Unido 70,1, Suiza 68,9.
+- Puntuaciones más altas en esta dimensión, entre las que tienen evidencia utilizable: Corea del Sur 75,1, Reino Unido 70,1, Suiza 69,1.
 - Casos documentados en otros países: The FCA regulatory sandbox (Reino Unido); Yozma, the venture capital catalyst (Israel); Korean regulatory-sandbox system across eight sectors (Corea del Sur); MAS FinTech Regulatory Sandbox variants (Singapur); British Patient Capital, a public venture-capital catalyst (Reino Unido); ICURe, from university research to spinouts (Reino Unido); Portugal Ventures, a public venture-capital bridge (Portugal); Rede Nacional de Test Beds for company experimentation (Portugal); Zonas Livres Tecnológicas, regulator-supervised experimentation zones (Portugal); Banco Central regulatory sandbox, first cycle (Brasil); Reserve Bank of India regulatory sandbox (India); Capital Markets Authority regulatory sandbox (Kenia); SEC Nigeria Regulatory Incubation Program (Nigeria); ADGM RegLab, the first fintech sandbox in the region (Emiratos Árabes Unidos); OJK regulatory sandbox for financial-sector technological innovation (Indonesia); Bank Negara Malaysia Fintech Regulatory Sandbox (Malasia); Bank of Thailand regulatory sandbox (Tailandia); IFWG Regulatory Sandbox (Sudáfrica); Project-based regulatory sandbox (new technology demonstration scheme) (Japón); CFPB Compliance Assistance Sandbox, rescinded in 2022 and withdrawn again in 2025 (Estados Unidos); CSA Regulatory Sandbox, succeeded by the Financial Innovation Hub (Canadá); ASIC enhanced regulatory sandbox (Australia); SINTEG-Verordnung, the energy-transition experimentation clause (Alemania); Experimenten Elektriciteitswet 2015-2018, and its erosion (Países Bajos); Bac à sable réglementaire in the energy sector (Francia); Italy's FinTech regulatory sandbox, and its contraction (Italia); Bank of Ghana Regulatory Sandbox (Ghana); AFSA FinTech Lab at the Astana International Financial Centre (Kazajistán); Banque Centrale de Tunisie regulatory sandbox, first cohort (Túnez); Sandbox Regulatório do Banco de Moçambique (Mozambique); Regulatory Sandbox Licence of the Economic Development Board (Mauricio); Bank of Uganda regulatory sandbox (Uganda); Regulatory Sandbox Framework for Capital Markets, first cohort (Zambia); Securities and Exchange Commission of Zimbabwe regulatory sandbox (Zimbabue); FMA Regulatory Sandbox (Austria); Regulatorisk sandkasse for AI (Datatilsynet and Digitaliseringsstyrelsen) (Dinamarca); Datatilsynet's regulatory sandbox for privacy-friendly innovation (Noruega); Bank of Lithuania regulatory sandbox, with one test in seven years (Lituania); Narodna banka Slovenska regulatory sandbox (Eslovaquia); Sandbox for AI and blockchain products, Ministry of Digital Transformation and Ukrainian Startup Fund (Ucrania); Bank of Russia regulatory sandbox (regulativnaya pesochnitsa) (Rusia); JoRegBox, the Central Bank of Jordan regulatory sandbox (Jordania); Special regulatory regimes (spetsialnye regulyativnye rezhimy) of the National Bank of the Kyrgyz Republic (Kirguistán); SECP Regulatory Sandbox, four cohorts and an open window (Pakistán); Bank of Jamaica FinTech Regulatory Sandbox (Jamaica); Financial Regulatory Commission sandbox regulatory environment (Mongolia); NAMFISA Regulatory Sandbox, microlending cohort (Namibia); Central Bank of Azerbaijan regulatory sandbox (Azerbaiyán); FRA Sandbox of the Financial Regulatory Authority (Egipto); Mohit-e azmoon-e tanzimgari (regulatory sandbox) of the Central Bank of the Islamic Republic of Iran (Irán); Regulatory sandbox (special legal regime) in the capital market of the National Agency of Perspective Projects (Uzbekistán); BRUGEL derogation framework for innovative energy projects (projets innovants) (Bélgica); FMA regulatory sandbox pilot (Nueva Zelanda); Regulatory Laboratory (regulatory sandbox) of the National Bank of Georgia (Georgia); Energy Sandbox (spatii de testare inovativa in domeniul energiei) (Moldavia).
 - Vacíos declarados: Operaciones de capital de riesgo, Empresas en espacios controlados de prueba, Empresas surgidas de universidades.
 - Series descartadas: I+D ejecutada por empresas.
@@ -51,7 +51,7 @@ Estas dimensiones tienen una puntuación de al menos 50, con evidencia utilizabl
 - Coordinación: 86,3, evidencia utilizable
 - Aprendizaje: 77,8, evidencia utilizable
 - Confianza: 75,4, evidencia utilizable
-- Anticipación: 71,4, evidencia utilizable
+- Anticipación: 71,7, evidencia utilizable
 - Adaptación: 71, evidencia utilizable
 - Iniciativa: 56,6, evidencia utilizable
 - Ejecución: 55, evidencia utilizable

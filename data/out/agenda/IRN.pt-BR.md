@@ -8,12 +8,12 @@ A escala reúne 135 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 
 | Dimensão | Pontuação | Solidez | Tendência |
 | --- | --- | --- | --- |
-| Antecipação | 33,8 | 0,46 (utilizável) | +14,7 em 10 anos, com base em 2 indicadores |
+| Antecipação | 33,9 | 0,46 (utilizável) | +14,9 em 10 anos, com base em 2 indicadores |
 | Agência | 33,1 | 0,38 (fraca) | sem tendência comparável |
 | Coordenação | sem pontuação | 0,1 (muito fraca) | sem tendência comparável |
 | Confiança | 26,7 | 0,28 (fraca) | sem tendência comparável |
 | Aprendizagem | 37,9 | 0,32 (fraca) | sem tendência comparável |
-| Experimentação | 40,1 | 0,37 (fraca) | -26,3 em 10 anos, com base em 3 indicadores |
+| Experimentação | 40,4 | 0,37 (fraca) | -25,8 em 10 anos, com base em 3 indicadores |
 | Adaptação | 71,8 | 0,53 (utilizável) | sem tendência comparável |
 | Construção | 30,1 | 0,29 (fraca) | +10,7 em 10 anos, com base em 2 indicadores |
 | Propósito compartilhado | 72,1 | 0,26 (fraca) | sem tendência comparável |
@@ -22,12 +22,12 @@ A escala reúne 135 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 
 São as pontuações mais baixas entre as dimensões com evidência utilizável. As dimensões com evidência fraca aparecem na seção seguinte.
 
-### Antecipação: 33,8, solidez utilizável
+### Antecipação: 33,9, solidez utilizável
 
 Em que medida o país consegue identificar mudanças emergentes e se preparar para elas?
 
 - A pontuação se apoia em 2 indicadores observados.
-- No topo da escala, entre as pontuações com evidência utilizável: Dinamarca 98,1, Noruega 97,2, Suíça 93,4.
+- No topo da escala, entre as pontuações com evidência utilizável: Dinamarca 98,1, Noruega 97,5, Suíça 94.
 - Registros de evidência desta dimensão em outros países, com êxitos e retrocessos, que não entram em nenhuma pontuação: Embrapa, uma aposta de cinquenta anos na agricultura tropical (Brasil); The Delta Programme and its fund (Países Baixos); Lei de Informática, uma política industrial setorial (Brasil); CGEE, o centro de estudos estratégicos (Brasil); Centre for Strategic Futures, foresight inside government (Singapura); Legally binding carbon budgets (Reino Unido); Fukushima decommissioning roadmap, a 30–40-year risk-reduction horizon (Japão); National basic-research funding allocation (China); PLANAPP and REPLAN, a centre-of-government foresight network (Portugal); Labour Market Intelligence Programme and forward skills planning (África do Sul); Government Report on the Future and the parliamentary Committee for the Future (Finlândia); Foresight Centre at the Riigikogu (Arenguseire Keskus) (Estônia); Office of Technology Assessment, defunded and closed in 1995 (Estados Unidos); Rządowe Centrum Studiów Strategicznych, liquidated in 2006 (Polônia); Office of Technology Assessment at the German Bundestag (TAB) (Alemanha); National Assembly Futures Institute (Coreia do Sul); Federal Chancellery situation and environment analysis (Perspektivstab) (Suíça); Senate foresight delegation (Délégation sénatoriale à la prospective) (França); Senate Commission on Future Challenges, Science, Technology and Innovation (Chile); Policy Horizons Canada, the federal foresight unit, and its 2024 disruption scan (Canadá); Framtidskommissionen, the Prime Minister's time-limited future commission (Suécia); National Planning Commission foresight work for Malawi 2063 (Malawi); Bureau National de la Prospective et de la Veille Stratégique and the national prospective studies (Costa do Marfim); Teknologiraadet, the Norwegian Board of Technology (Noruega); Teknologiraadet, the Danish Board of Technology, abolished in 2012 (Dinamarca); Bureau federal du Plan (Bélgica); Special Secretariat of Foresight (now of Long-term Planning) (Grécia); STRATA foresight for the Lietuva 2050 state progress strategy (Lituânia); Institut Royal des Etudes Stratégiques (IRES) (Marrocos); Long-term Insights Briefings under the Public Service Act 2020 (Nova Zelândia); Foresight und Technikfolgenabschätzung für das österreichische Parlament (Áustria); Latvija 2050 long-term scenario framework for the State Chancellery (Letônia); Natsionalnyi instytut stratehichnykh doslidzhen, and its falling staff ceiling (Ucrânia); Prognoz nauchno-tekhnologicheskogo razvitiya Rossiyskoy Federatsii na period do 2030 goda (Rússia); Agency for Strategic Planning, merged into a ministry in 2002 (Cazaquistão); Institut Tunisien des Études Stratégiques (ITES) (Tunísia); Cabinet Information and Decision Support Center (IDSC), Afaq Mostaqbaliya (Egito).
 - Lacunas declaradas: Capacidade governamental de prospecção, Compromissos de pesquisa de longo prazo.
 

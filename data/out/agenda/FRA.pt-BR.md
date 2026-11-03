@@ -8,12 +8,12 @@ A escala reúne 135 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 
 | Dimensão | Pontuação | Solidez | Tendência |
 | --- | --- | --- | --- |
-| Antecipação | 62,2 | 0,46 (utilizável) | +0,3 em 10 anos, com base em 2 indicadores |
+| Antecipação | 62,1 | 0,46 (utilizável) | +0,4 em 10 anos, com base em 2 indicadores |
 | Agência | 55,8 | 0,44 (fraca) | sem tendência comparável |
 | Coordenação | 90,3 | 0,27 (fraca) | -4,3 em 10 anos, com base em 2 indicadores |
 | Confiança | 66,8 | 0,41 (fraca) | sem tendência comparável |
 | Aprendizagem | 70,2 | 0,55 (utilizável) | sem tendência comparável |
-| Experimentação | 74 | 0,37 (fraca) | -2,6 em 10 anos, com base em 3 indicadores |
+| Experimentação | 74,1 | 0,37 (fraca) | -2,5 em 10 anos, com base em 3 indicadores |
 | Adaptação | 71,7 | 0,62 (utilizável) | sem tendência comparável |
 | Construção | 54,3 | 0,48 (utilizável) | -3,4 em 10 anos, com base em 3 indicadores |
 | Propósito compartilhado | 52,3 | 0,42 (fraca) | -0,4 em 10 anos, com base em 2 indicadores |
@@ -68,7 +68,7 @@ Estas dimensões têm pontuação de pelo menos 50, com evidência utilizável.
 
 - Adaptação: 71,7, solidez utilizável
 - Aprendizagem: 70,2, solidez utilizável
-- Antecipação: 62,2, solidez utilizável
+- Antecipação: 62,1, solidez utilizável
 - Construção: 54,3, solidez utilizável
 
 ## Com o que a França conta

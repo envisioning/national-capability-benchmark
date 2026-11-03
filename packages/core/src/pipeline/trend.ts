@@ -97,9 +97,10 @@ export function normalizedAt(
 
   let denominator: number | null = null
   if (def.denominatorSeries) {
+    /* The denominator of the value's own year, as the headline pairs it (D182). */
     const denom = asOf(
       history.get(`__denominator__${def.denominatorSeries}`)?.get(iso3),
-      year,
+      point.year,
       maxAge,
     )
     if (!denom) return null

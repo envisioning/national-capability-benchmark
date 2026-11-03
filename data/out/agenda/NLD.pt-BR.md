@@ -8,7 +8,7 @@ A escala reúne 135 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 
 | Dimensão | Pontuação | Solidez | Tendência |
 | --- | --- | --- | --- |
-| Antecipação | 76,1 | 0,46 (utilizável) | +9 em 10 anos, com base em 2 indicadores |
+| Antecipação | 76,2 | 0,46 (utilizável) | +9,5 em 10 anos, com base em 2 indicadores |
 | Agência | 52,2 | 0,27 (fraca) | sem tendência comparável |
 | Coordenação | 89,8 | 0,27 (fraca) | -4,4 em 10 anos, com base em 2 indicadores |
 | Confiança | 89 | 0,21 (muito fraca) | sem tendência comparável |
@@ -68,7 +68,7 @@ Estas dimensões têm pontuação de pelo menos 50, com evidência utilizável.
 
 - Adaptação: 81,6, solidez utilizável
 - Aprendizagem: 77,6, solidez utilizável
-- Antecipação: 76,1, solidez utilizável
+- Antecipação: 76,2, solidez utilizável
 - Construção: 55,1, solidez utilizável
 
 ## Com o que os Países Baixos conta

@@ -8,12 +8,12 @@ The frame includes 135 countries. Each dimension is scored from 0 to 100, with n
 
 | Dimension | Score | Confidence | Trend |
 | --- | --- | --- | --- |
-| Anticipation | 97.2 | 0.46 (usable) | +19.5 over 10 years using 2 indicators |
+| Anticipation | 97.5 | 0.46 (usable) | +20.2 over 10 years using 2 indicators |
 | Agency | 70.7 | 0.44 (thin) | no trend |
 | Coordination | 94.1 | 0.27 (thin) | -5 over 10 years using 2 indicators, with 1 at the frame edge |
 | Trust | 92.9 | 0.41 (thin) | no trend |
 | Learning | 85.4 | 0.55 (usable) | no trend |
-| Experimentation | 45.9 | 0.37 (thin) | -22.2 over 10 years using 3 indicators |
+| Experimentation | 46 | 0.37 (thin) | -22 over 10 years using 3 indicators |
 | Adaptability | 58.6 | 0.62 (usable) | no trend |
 | Building | 23.7 | 0.48 (usable) | +1.2 over 10 years using 3 indicators |
 | Shared Purpose | 68.9 | 0.42 (thin) | +7.5 over 10 years using 2 indicators |
@@ -80,7 +80,7 @@ How able are individuals and organizations to turn an intention into action?
 
 These dimensions score at least 50 with usable evidence.
 
-- Anticipation: 97.2, confidence usable
+- Anticipation: 97.5, confidence usable
 - Learning: 85.4, confidence usable
 - Adaptability: 58.6, confidence usable
 

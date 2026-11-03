@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-03T08:12:02.083Z",
-  "version": "10.0.1",
+  "generatedAt": "2026-11-03T08:48:01.204Z",
+  "version": "10.0.2",
   "country": {
     "country": "Haiti",
     "iso3": "HTI",
@@ -15,8 +15,8 @@
           "recency": 0.958,
           "sourceQuality": 0.95
         },
-        "delphiScore": 3,
-        "delphiIqr": 1,
+        "delphiScore": 2,
+        "delphiIqr": 1.5,
         "delphiDissent": false,
         "blendedScore": 0,
         "blendedFrom": "indicators",
@@ -87,7 +87,7 @@
             "name": "Scientific articles",
             "measurementClass": "O",
             "raw": 37.83,
-            "transformed": 3.177,
+            "transformed": 3.251,
             "normalized": 0.1,
             "year": 2023,
             "source": "World Bank (IP.JRN.ARTC.SC)",
@@ -1863,7 +1863,7 @@
           "recency": 0.444,
           "sourceQuality": 0.917
         },
-        "delphiScore": 3,
+        "delphiScore": 4,
         "delphiIqr": 4,
         "delphiDissent": false,
         "blendedScore": 1.1,
@@ -1875,7 +1875,7 @@
             "name": "Resident patent applications",
             "measurementClass": "O",
             "raw": 2,
-            "transformed": 0.168,
+            "transformed": 0.193,
             "normalized": 0.1,
             "year": 2014,
             "source": "World Bank (IP.PAT.RESD)",
@@ -1952,7 +1952,7 @@
               {
                 "year": 2011,
                 "raw": 1,
-                "normalized": 0.1,
+                "normalized": 0,
                 "tier": "international_organization"
               },
               {
@@ -1976,8 +1976,8 @@
             "name": "Resident trademark applications",
             "measurementClass": "O",
             "raw": 460,
-            "transformed": 38.636,
-            "normalized": 0.7,
+            "transformed": 44.345,
+            "normalized": 0.8,
             "year": 2014,
             "source": "World Bank (IP.TMK.RSCT)",
             "sourceTier": "international_organization",
@@ -1999,7 +1999,7 @@
               {
                 "year": 2006,
                 "raw": 225,
-                "normalized": 0.5,
+                "normalized": 0.4,
                 "tier": "international_organization"
               },
               {

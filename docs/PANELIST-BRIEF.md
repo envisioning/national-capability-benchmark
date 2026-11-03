@@ -121,15 +121,18 @@ run and recorded.
 
 ## Current state
 
-The active run, `data/delphi/2026-11-02T19-36-46-976Z-in_session.json`, is
-a one-vendor in-session panel under D155 for dataset 10.0.0: Claude Opus 5.5
+The active run, `data/delphi/2026-11-03T08-47-43-063Z-in_session.json`, is
+a one-vendor in-session panel under D155 for dataset 10.0.2: Claude Opus 5.5
 on the institutionalist and bottom-up stances and Claude Sonnet 5.5 on the
 wealth sceptic, two rounds and the indicator audit, prompt version 3, over all
-1,215 cells of the 135 countries. Its round-2 IQRs are narrow (median 1.5
-points, none above 9.5), which is what one model family agreeing with itself
-looks like as much as agreement about the countries. A run that adds an
-OpenAI panelist through the codex CLI, or a gateway run, supersedes it. The
-older in-session files are anchored to older frames and stay research notes.
+1,215 cells of the 135 countries. Seven dimensions come from the 2026-11-02
+run; Anticipation and Experimentation were rerun on 2026-11-03 in batches of
+27 countries, because D182 changed their briefs. Its round-2 IQRs are narrow
+(median 1.5 points on the seven, 2.0 on the two rerun), which is what one
+model family agreeing with itself looks like as much as agreement about the
+countries. A run that adds an OpenAI panelist through the codex CLI, or a
+gateway run, supersedes it. The older in-session files are anchored to older
+frames and stay research notes.
 
 Check every batch before you merge it. In that run Sonnet batches copied one
 missingEvidence list across all ten countries of a batch, and reported it only

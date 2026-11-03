@@ -8,12 +8,12 @@ A escala reúne 135 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 
 | Dimensão | Pontuação | Solidez | Tendência |
 | --- | --- | --- | --- |
-| Antecipação | 82,2 | 0,46 (utilizável) | +17 em 10 anos, com base em 2 indicadores |
+| Antecipação | 83 | 0,46 (utilizável) | +18,2 em 10 anos, com base em 2 indicadores |
 | Agência | 75,8 | 0,63 (utilizável) | sem tendência comparável |
 | Coordenação | 71 | 0,47 (utilizável) | sem tendência comparável |
 | Confiança | 67,2 | 0,54 (utilizável) | sem tendência comparável |
 | Aprendizagem | 84,2 | 0,54 (utilizável) | sem tendência comparável |
-| Experimentação | 63,6 | 0,48 (utilizável) | -0,1 em 10 anos, com base em 3 indicadores |
+| Experimentação | 63,7 | 0,48 (utilizável) | +0,4 em 10 anos, com base em 3 indicadores |
 | Adaptação | 72,1 | 0,62 (utilizável) | sem tendência comparável |
 | Construção | 79,2 | 0,63 (utilizável) | +7 em 10 anos, com base em 3 indicadores |
 | Propósito compartilhado | 32,3 | 0,28 (fraca) | sem tendência comparável |
@@ -35,13 +35,13 @@ Até que ponto as pessoas conseguem se ver como participantes de um projeto comu
 Estas dimensões têm pontuação de pelo menos 50, com evidência utilizável.
 
 - Aprendizagem: 84,2, solidez utilizável
-- Antecipação: 82,2, solidez utilizável
+- Antecipação: 83, solidez utilizável
 - Construção: 79,2, solidez utilizável
 - Agência: 75,8, solidez utilizável
 - Adaptação: 72,1, solidez utilizável
 - Coordenação: 71, solidez utilizável
 - Confiança: 67,2, solidez utilizável
-- Experimentação: 63,6, solidez utilizável
+- Experimentação: 63,7, solidez utilizável
 
 ## Com o que Singapura conta
 

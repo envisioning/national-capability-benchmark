@@ -8,12 +8,12 @@ A escala reúne 135 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 
 | Dimensão | Pontuação | Solidez | Tendência |
 | --- | --- | --- | --- |
-| Antecipação | 93,4 | 0,46 (utilizável) | +2,2 em 10 anos, com base em 2 indicadores, 1 limitados à borda da escala |
+| Antecipação | 94 | 0,46 (utilizável) | +2,8 em 10 anos, com base em 2 indicadores, 1 limitados à borda da escala |
 | Agência | 52,5 | 0,41 (fraca) | sem tendência comparável |
 | Coordenação | 98,3 | 0,23 (muito fraca) | sem tendência comparável |
 | Confiança | 85,3 | 0,41 (fraca) | sem tendência comparável |
 | Aprendizagem | 80,6 | 0,55 (utilizável) | sem tendência comparável |
-| Experimentação | 68,9 | 0,54 (utilizável) | -6,2 em 10 anos, com base em 3 indicadores |
+| Experimentação | 69,1 | 0,54 (utilizável) | -5,7 em 10 anos, com base em 3 indicadores |
 | Adaptação | 55,2 | 0,62 (utilizável) | sem tendência comparável |
 | Construção | 67,6 | 0,48 (utilizável) | +2 em 10 anos, com base em 3 indicadores |
 | Propósito compartilhado | 47,1 | 0,42 (fraca) | -0,4 em 10 anos, com base em 2 indicadores |
@@ -58,9 +58,9 @@ Até que ponto as pessoas conseguem se ver como participantes de um projeto comu
 
 Estas dimensões têm pontuação de pelo menos 50, com evidência utilizável.
 
-- Antecipação: 93,4, solidez utilizável
+- Antecipação: 94, solidez utilizável
 - Aprendizagem: 80,6, solidez utilizável
-- Experimentação: 68,9, solidez utilizável
+- Experimentação: 69,1, solidez utilizável
 - Construção: 67,6, solidez utilizável
 - Adaptação: 55,2, solidez utilizável
 

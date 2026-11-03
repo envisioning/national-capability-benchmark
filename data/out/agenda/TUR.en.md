@@ -8,12 +8,12 @@ The frame includes 135 countries. Each dimension is scored from 0 to 100, with n
 
 | Dimension | Score | Confidence | Trend |
 | --- | --- | --- | --- |
-| Anticipation | 47.9 | 0.46 (usable) | +9.1 over 10 years using 2 indicators |
+| Anticipation | 47.8 | 0.46 (usable) | +9.1 over 10 years using 2 indicators |
 | Agency | 49.6 | 0.63 (usable) | no trend |
 | Coordination | 52.5 | 0.45 (usable) | -12.3 over 10 years using 2 indicators |
 | Trust | 41.5 | 0.55 (usable) | no trend |
 | Learning | 36.2 | 0.55 (usable) | no trend |
-| Experimentation | 63.6 | 0.47 (usable) | +19.4 over 10 years using 3 indicators |
+| Experimentation | 63.7 | 0.47 (usable) | +19.5 over 10 years using 3 indicators |
 | Adaptability | 79.9 | 0.62 (usable) | no trend |
 | Building | 54.5 | 0.63 (usable) | +5.9 over 10 years using 3 indicators |
 | Shared Purpose | 35.4 | 0.42 (thin) | -3.5 over 10 years using 2 indicators |
@@ -41,12 +41,12 @@ How much cooperation is possible beyond immediate personal networks?
 - Missing indicators: Trust in public institutions, Court case clearance rate.
 - Rejected datasets: Rule of law, Control of corruption, Time to enforce a contract, Intentional homicide rate.
 
-### Anticipation: 47.9, confidence usable
+### Anticipation: 47.8, confidence usable
 
 How capable is the country of identifying and preparing for emerging change?
 
 - Uses 2 observed indicators.
-- Highest usable scores: Denmark 98.1, Norway 97.2, Switzerland 93.4.
+- Highest usable scores: Denmark 98.1, Norway 97.5, Switzerland 94.
 - Related deliveries in other countries: Embrapa, a fifty-year bet on tropical agriculture (Brazil); The Delta Programme and its fund (Netherlands); Lei de Informática, a sectoral industrial policy (Brazil); CGEE, the strategic studies center (Brazil); Centre for Strategic Futures, foresight inside government (Singapore); Legally binding carbon budgets (United Kingdom); Fukushima decommissioning roadmap, a 30–40-year risk-reduction horizon (Japan); National basic-research funding allocation (China); PLANAPP and REPLAN, a centre-of-government foresight network (Portugal); Labour Market Intelligence Programme and forward skills planning (South Africa); Government Report on the Future and the parliamentary Committee for the Future (Finland); Foresight Centre at the Riigikogu (Arenguseire Keskus) (Estonia); Office of Technology Assessment, defunded and closed in 1995 (United States); Rządowe Centrum Studiów Strategicznych, liquidated in 2006 (Poland); Office of Technology Assessment at the German Bundestag (TAB) (Germany); National Assembly Futures Institute (South Korea); Federal Chancellery situation and environment analysis (Perspektivstab) (Switzerland); Senate foresight delegation (Délégation sénatoriale à la prospective) (France); Senate Commission on Future Challenges, Science, Technology and Innovation (Chile); Policy Horizons Canada, the federal foresight unit, and its 2024 disruption scan (Canada); Framtidskommissionen, the Prime Minister's time-limited future commission (Sweden); National Planning Commission foresight work for Malawi 2063 (Malawi); Bureau National de la Prospective et de la Veille Stratégique and the national prospective studies (Côte d'Ivoire); Teknologiraadet, the Norwegian Board of Technology (Norway); Teknologiraadet, the Danish Board of Technology, abolished in 2012 (Denmark); Bureau federal du Plan (Belgium); Special Secretariat of Foresight (now of Long-term Planning) (Greece); STRATA foresight for the Lietuva 2050 state progress strategy (Lithuania); Institut Royal des Etudes Stratégiques (IRES) (Morocco); Long-term Insights Briefings under the Public Service Act 2020 (New Zealand); Foresight und Technikfolgenabschätzung für das österreichische Parlament (Austria); Latvija 2050 long-term scenario framework for the State Chancellery (Latvia); Natsionalnyi instytut stratehichnykh doslidzhen, and its falling staff ceiling (Ukraine); Prognoz nauchno-tekhnologicheskogo razvitiya Rossiyskoy Federatsii na period do 2030 goda (Russia); Agency for Strategic Planning, merged into a ministry in 2002 (Kazakhstan); Institut Tunisien des Études Stratégiques (ITES) (Tunisia); Cabinet Information and Decision Support Center (IDSC), Afaq Mostaqbaliya (Egypt); Center for the Islamic Iranian Model of Progress (Markaz-e Olgu) (Iran).
 - Missing indicators: Government foresight capacity, Long-horizon research commitments.
 
@@ -77,7 +77,7 @@ To what extent can people imagine themselves as participants in a common project
 These dimensions score at least 50 with usable evidence.
 
 - Adaptability: 79.9, confidence usable
-- Experimentation: 63.6, confidence usable
+- Experimentation: 63.7, confidence usable
 - Building: 54.5, confidence usable
 - Coordination: 52.5, confidence usable
 

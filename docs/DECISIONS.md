@@ -10100,3 +10100,52 @@ pt-PT layers do not.
 
 **Overturned by.** D178 being overturned, which takes this surface offline
 with the others.
+
+---
+
+## D182 — A per-head value is divided by the population of its own year
+
+*Recorded 2026-11-03. Fixes how `score.ts` pairs a count with its
+denominator; `trend.ts` follows. Dataset 10.0.2. Restates 123 Anticipation and
+Experimentation cells by at most 1.0 point. Panel run
+2026-11-03T08-47-43-063Z-in_session replaces the active run.*
+
+**Decision.** A row with a `denominatorSeries` divides each value by the
+denominator of the value's own year, or the nearest earlier year, and by the
+earliest one only when none is earlier. Before this the scorer took the newest
+denominator whatever the value's year, so a 2023 article count was divided by
+the 2025 population. `normalizedAt` in `trend.ts` pairs a value the same way,
+so the D174 history and the headline now agree in all 1,195 published cells,
+where 11 differed by up to 1.4 points.
+
+The five per-million rows are in Anticipation and Experimentation. 123 cells
+move: 67 in Anticipation and 56 in Experimentation, the largest +1.0 (United
+Arab Emirates Anticipation, Mauritania Experimentation). No country, field or
+row changes, so the release is a patch, 10.0.2. That is a default recorded for
+mz to overrule: the rule in AGENTS.md names re-ingest as a patch and does not
+name a pairing fix.
+
+The new pairing changed every Anticipation and Experimentation brief, so D160
+dropped 260 of the 1,215 panel cells. The panel was rerun on those two
+dimensions only, for all 135 countries, with the same three panelists, stances
+and prompt version, through `bench delphi --dimensions`, which this decision
+adds. Its cells and indicator audits replace the old run's for those two
+dimensions; the other seven dimensions keep the 2026-11-02 cells, whose briefs
+are unchanged. The merged run applies exactly: 1,215 of 1,215 cells. The new
+cells' median round-2 IQR is 2.0 points (old 1.5), the widest 8.0 (old 9.5),
+and the panel medians moved by 2.4 points on average, 12 at most.
+
+**Why.** A per-head figure that divides one year's count by another year's
+population describes no year. The error grows with population growth between
+the two years, so it is largest where the count is oldest and the population
+fastest-growing. The headline and the history disagreed on the same cell for
+that reason alone.
+
+**Cost.** Panel estimates for two dimensions now come from a later session
+than the other seven; the run's note says so. A rerun on two dimensions is a
+new set of contexts, and its spread is not the spread the first run would have
+given. The holdout of D174 moved with D180 and this change: the donor fill
+reads RMSE 9.55 against the flat comparison's 10.45, so D174 stands.
+
+**Overturned by.** A source whose per-head value is published on a stated
+population of another year, which then follows the publisher's pairing.

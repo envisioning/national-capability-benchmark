@@ -8,7 +8,7 @@ The frame includes 135 countries. Each dimension is scored from 0 to 100, with n
 
 | Dimension | Score | Confidence | Trend |
 | --- | --- | --- | --- |
-| Anticipation | 84.9 | 0.46 (usable) | +1.8 over 10 years using 2 indicators |
+| Anticipation | 84.9 | 0.46 (usable) | +2.2 over 10 years using 2 indicators |
 | Agency | 69.2 | 0.44 (thin) | no trend |
 | Coordination | 87.1 | 0.27 (thin) | -2.7 over 10 years using 2 indicators |
 | Trust | 92.3 | 0.41 (thin) | no trend |

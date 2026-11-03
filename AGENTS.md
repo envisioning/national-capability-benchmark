@@ -787,8 +787,12 @@ Do not add a cheap model to widen the panel. `pnpm bench cost` puts a full run i
 single-digit dollars, so cost is not the constraint — see D13.
 
 `data/delphi/latest.json` points at a one-vendor in-session panel on dataset
-10.0.0 (D154, D155), three Claude panelists over all 1,215 cells. A
-multi-vendor or gateway run on the same dataset supersedes it. The older files
+10.0.2 (D154, D155), three Claude panelists over all 1,215 cells: the
+2026-11-02 run with Anticipation and Experimentation rerun on 2026-11-03
+(D182). A multi-vendor or gateway run on the same dataset supersedes it. When
+a release changes the briefs of some dimensions only, rerun those with
+`bench delphi --in-session <dir> --dimensions a,b` and merge the cells into
+the active run for those dimensions alone. The older files
 in `data/delphi` are anchored to older frames and stay research notes. When
 you run a panel in session, check each batch for missingEvidence lists copied
 across countries before you merge it: see `docs/PANELIST-BRIEF.md`.

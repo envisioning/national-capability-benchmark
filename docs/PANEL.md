@@ -176,7 +176,7 @@ answer is missing. Each panelist writes JSON to `<dir>/answers/`, in the
 layout `packages/core/src/delphi/in-session.ts` describes. Rerun the same
 command: once round 1 is complete it writes the round-2 prompts from the
 merged round-1 cells, and once every answer is in it writes the run file with
-provenance `in_session`. Pass `--note` for the run's note. The prompts carry
+provenance `in_session`. Pass `--note` for the run's note. `--dimensions a,b` limits the run and the audit to those dimensions, for a release that changed only their briefs; merge its cells into the active run for those dimensions alone (D182). The prompts carry
 the stance but not the system rules, so a panelist reads `system.txt` first.
 4. Merge into one run file in `data/delphi/<runId>.json` with `provenance:
    "in_session"`, the current `datasetVersion` and `countrySet`, and one

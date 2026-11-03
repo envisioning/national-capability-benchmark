@@ -8,12 +8,12 @@ The frame includes 135 countries. Each dimension is scored from 0 to 100, with n
 
 | Dimension | Score | Confidence | Trend |
 | --- | --- | --- | --- |
-| Anticipation | 33.8 | 0.46 (usable) | +14.7 over 10 years using 2 indicators |
+| Anticipation | 33.9 | 0.46 (usable) | +14.9 over 10 years using 2 indicators |
 | Agency | 33.1 | 0.38 (thin) | no trend |
 | Coordination | not scored | 0.1 (very thin) | no trend |
 | Trust | 26.7 | 0.28 (thin) | no trend |
 | Learning | 37.9 | 0.32 (thin) | no trend |
-| Experimentation | 40.1 | 0.37 (thin) | -26.3 over 10 years using 3 indicators |
+| Experimentation | 40.4 | 0.37 (thin) | -25.8 over 10 years using 3 indicators |
 | Adaptability | 71.8 | 0.53 (usable) | no trend |
 | Building | 30.1 | 0.29 (thin) | +10.7 over 10 years using 2 indicators |
 | Shared Purpose | 72.1 | 0.26 (thin) | no trend |
@@ -22,12 +22,12 @@ The frame includes 135 countries. Each dimension is scored from 0 to 100, with n
 
 These are the lowest scores with usable evidence. Thin evidence appears below.
 
-### Anticipation: 33.8, confidence usable
+### Anticipation: 33.9, confidence usable
 
 How capable is the country of identifying and preparing for emerging change?
 
 - Uses 2 observed indicators.
-- Highest usable scores: Denmark 98.1, Norway 97.2, Switzerland 93.4.
+- Highest usable scores: Denmark 98.1, Norway 97.5, Switzerland 94.
 - Related deliveries in other countries: Embrapa, a fifty-year bet on tropical agriculture (Brazil); The Delta Programme and its fund (Netherlands); Lei de Informática, a sectoral industrial policy (Brazil); CGEE, the strategic studies center (Brazil); Centre for Strategic Futures, foresight inside government (Singapore); Legally binding carbon budgets (United Kingdom); Fukushima decommissioning roadmap, a 30–40-year risk-reduction horizon (Japan); National basic-research funding allocation (China); PLANAPP and REPLAN, a centre-of-government foresight network (Portugal); Labour Market Intelligence Programme and forward skills planning (South Africa); Government Report on the Future and the parliamentary Committee for the Future (Finland); Foresight Centre at the Riigikogu (Arenguseire Keskus) (Estonia); Office of Technology Assessment, defunded and closed in 1995 (United States); Rządowe Centrum Studiów Strategicznych, liquidated in 2006 (Poland); Office of Technology Assessment at the German Bundestag (TAB) (Germany); National Assembly Futures Institute (South Korea); Federal Chancellery situation and environment analysis (Perspektivstab) (Switzerland); Senate foresight delegation (Délégation sénatoriale à la prospective) (France); Senate Commission on Future Challenges, Science, Technology and Innovation (Chile); Policy Horizons Canada, the federal foresight unit, and its 2024 disruption scan (Canada); Framtidskommissionen, the Prime Minister's time-limited future commission (Sweden); National Planning Commission foresight work for Malawi 2063 (Malawi); Bureau National de la Prospective et de la Veille Stratégique and the national prospective studies (Côte d'Ivoire); Teknologiraadet, the Norwegian Board of Technology (Norway); Teknologiraadet, the Danish Board of Technology, abolished in 2012 (Denmark); Bureau federal du Plan (Belgium); Special Secretariat of Foresight (now of Long-term Planning) (Greece); STRATA foresight for the Lietuva 2050 state progress strategy (Lithuania); Institut Royal des Etudes Stratégiques (IRES) (Morocco); Long-term Insights Briefings under the Public Service Act 2020 (New Zealand); Foresight und Technikfolgenabschätzung für das österreichische Parlament (Austria); Latvija 2050 long-term scenario framework for the State Chancellery (Latvia); Natsionalnyi instytut stratehichnykh doslidzhen, and its falling staff ceiling (Ukraine); Prognoz nauchno-tekhnologicheskogo razvitiya Rossiyskoy Federatsii na period do 2030 goda (Russia); Agency for Strategic Planning, merged into a ministry in 2002 (Kazakhstan); Institut Tunisien des Études Stratégiques (ITES) (Tunisia); Cabinet Information and Decision Support Center (IDSC), Afaq Mostaqbaliya (Egypt).
 - Missing indicators: Government foresight capacity, Long-horizon research commitments.
 

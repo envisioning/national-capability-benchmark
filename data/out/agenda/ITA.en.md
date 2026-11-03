@@ -8,12 +8,12 @@ The frame includes 135 countries. Each dimension is scored from 0 to 100, with n
 
 | Dimension | Score | Confidence | Trend |
 | --- | --- | --- | --- |
-| Anticipation | 74.1 | 0.46 (usable) | +6.9 over 10 years using 2 indicators |
+| Anticipation | 73.8 | 0.46 (usable) | +6.8 over 10 years using 2 indicators |
 | Agency | 53.4 | 0.63 (usable) | no trend |
 | Coordination | 83.1 | 0.45 (usable) | -14.4 over 10 years using 2 indicators, with 1 at the frame edge |
 | Trust | 62.9 | 0.55 (usable) | no trend |
 | Learning | 66.4 | 0.55 (usable) | no trend |
-| Experimentation | 55.6 | 0.47 (usable) | +3.1 over 10 years using 3 indicators |
+| Experimentation | 55.5 | 0.47 (usable) | +3.1 over 10 years using 3 indicators |
 | Adaptability | 64.1 | 0.62 (usable) | no trend |
 | Building | 60.8 | 0.63 (usable) | +2.4 over 10 years using 3 indicators |
 | Shared Purpose | 51 | 0.42 (thin) | +2 over 10 years using 2 indicators |
@@ -35,12 +35,12 @@ To what extent can people imagine themselves as participants in a common project
 These dimensions score at least 50 with usable evidence.
 
 - Coordination: 83.1, confidence usable
-- Anticipation: 74.1, confidence usable
+- Anticipation: 73.8, confidence usable
 - Learning: 66.4, confidence usable
 - Adaptability: 64.1, confidence usable
 - Trust: 62.9, confidence usable
 - Building: 60.8, confidence usable
-- Experimentation: 55.6, confidence usable
+- Experimentation: 55.5, confidence usable
 - Agency: 53.4, confidence usable
 
 ## What Italy has to work with

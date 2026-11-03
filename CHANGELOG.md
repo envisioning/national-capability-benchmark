@@ -9,6 +9,24 @@ The entries before App 1.0.0 are retrospective, high-level summaries
 reconstructed from the repository history. They document explicit version bumps
 and may skip versions that were never committed.
 
+## App 1.38.1 — 2026-11-03
+
+- Publishes dataset 10.0.2.
+
+## Dataset 10.0.2 — 2026-11-03
+
+- **Per-head figures divide by the population of the same year.** Five rows
+  count articles, patents, trademarks, designs and new software repositories
+  per million people. Each count is now divided by the population of its own
+  year. Until this release a count from 2023 could be divided by the 2025
+  population. 123 Anticipation and Experimentation scores move, by at most
+  1.0 point. Decision D182.
+- **The panel scored Anticipation and Experimentation again.** The change
+  altered the evidence the panel read for those two capabilities, so the same
+  three panelists scored them again for all 135 countries. The other seven
+  capabilities keep their estimates from 2 November.
+- **The history charts now match the headline score in every country.**
+
 ## Dataset 10.0.1 — 2026-11-03
 
 - **Coordination and Trust have 10-year trends.** The two V-Dem rows, civil

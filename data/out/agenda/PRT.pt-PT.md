@@ -8,12 +8,12 @@ A escala reúne 135 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 
 | Dimensão | Pontuação | Solidez | Tendência |
 | --- | --- | --- | --- |
-| Antecipação | 79,4 | 0,46 (utilizável) | +10,9 em 10 anos, com base em 2 indicadores |
+| Antecipação | 79,7 | 0,46 (utilizável) | +11,4 em 10 anos, com base em 2 indicadores |
 | Agência | 63 | 0,63 (utilizável) | sem tendência comparável |
 | Coordenação | 75,6 | 0,45 (utilizável) | -11,8 em 10 anos, com base em 2 indicadores |
 | Confiança | 57,8 | 0,54 (utilizável) | sem tendência comparável |
 | Aprendizagem | 62,9 | 0,54 (utilizável) | sem tendência comparável |
-| Experimentação | 46,5 | 0,47 (utilizável) | -21,2 em 10 anos, com base em 3 indicadores |
+| Experimentação | 46,7 | 0,47 (utilizável) | -20,9 em 10 anos, com base em 3 indicadores |
 | Adaptação | 74,9 | 0,62 (utilizável) | sem tendência comparável |
 | Construção | 45,8 | 0,63 (utilizável) | -0,9 em 10 anos, com base em 3 indicadores |
 | Propósito partilhado | 46,1 | 0,42 (fraca) | +1,4 em 10 anos, com base em 2 indicadores |
@@ -32,12 +32,12 @@ Em que medida o país consegue transformar planos e conhecimento em sistemas que
 - Lacunas declaradas: Execução de grandes projetos, Empresas jovens que ganham escala.
 - Bases rejeitadas: Qualidade da infraestrutura logística, Tempo de ligação à rede elétrica.
 
-### Experimentação: 46,5, solidez utilizável
+### Experimentação: 46,7, solidez utilizável
 
 Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e melhoradas?
 
 - A pontuação assenta em 5 indicadores observados.
-- No topo da escala, entre as pontuações com evidência utilizável: Coreia do Sul 75,1, Reino Unido 70,1, Suíça 68,9.
+- No topo da escala, entre as pontuações com evidência utilizável: Coreia do Sul 75,1, Reino Unido 70,1, Suíça 69,1.
 - Registos de evidência desta dimensão noutros países, com êxitos e retrocessos, que não entram em nenhuma pontuação: The FCA regulatory sandbox (Reino Unido); Yozma, the venture capital catalyst (Israel); Korean regulatory-sandbox system across eight sectors (Coreia do Sul); MAS FinTech Regulatory Sandbox variants (Singapura); British Patient Capital, a public venture-capital catalyst (Reino Unido); ICURe, from university research to spinouts (Reino Unido); Sandbox regulatório do Banco Central, primeiro ciclo (Brasil); Reserve Bank of India regulatory sandbox (Índia); Capital Markets Authority regulatory sandbox (Quénia); SEC Nigeria Regulatory Incubation Program (Nigéria); ADGM RegLab, the first fintech sandbox in the region (Emirados Árabes Unidos); OJK regulatory sandbox for financial-sector technological innovation (Indonésia); Bank Negara Malaysia Fintech Regulatory Sandbox (Malásia); Bank of Thailand regulatory sandbox (Tailândia); Sandbox financiero (Ley 7/2020), and the fall in applications (Espanha); IFWG Regulatory Sandbox (África do Sul); Project-based regulatory sandbox (new technology demonstration scheme) (Japão); CFPB Compliance Assistance Sandbox, rescinded in 2022 and withdrawn again in 2025 (Estados Unidos); CSA Regulatory Sandbox, succeeded by the Financial Innovation Hub (Canadá); ASIC enhanced regulatory sandbox (Austrália); SINTEG-Verordnung, the energy-transition experimentation clause (Alemanha); Experimenten Elektriciteitswet 2015-2018, and its erosion (Países Baixos); Bac à sable réglementaire in the energy sector (França); Italy's FinTech regulatory sandbox, and its contraction (Itália); Bank of Ghana Regulatory Sandbox (Gana); AFSA FinTech Lab at the Astana International Financial Centre (Cazaquistão); Banque Centrale de Tunisie regulatory sandbox, first cohort (Tunísia); Sandbox Regulatório do Banco de Moçambique (Moçambique); Regulatory Sandbox Licence of the Economic Development Board (Maurícia); Bank of Uganda regulatory sandbox (Uganda); Regulatory Sandbox Framework for Capital Markets, first cohort (Zâmbia); Securities and Exchange Commission of Zimbabwe regulatory sandbox (Zimbabué); FMA Regulatory Sandbox (Áustria); Regulatorisk sandkasse for AI (Datatilsynet and Digitaliseringsstyrelsen) (Dinamarca); Datatilsynet's regulatory sandbox for privacy-friendly innovation (Noruega); Bank of Lithuania regulatory sandbox, with one test in seven years (Lituânia); Narodna banka Slovenska regulatory sandbox (Eslováquia); Sandbox for AI and blockchain products, Ministry of Digital Transformation and Ukrainian Startup Fund (Ucrânia); Bank of Russia regulatory sandbox (regulativnaya pesochnitsa) (Rússia); JoRegBox, the Central Bank of Jordan regulatory sandbox (Jordânia); Special regulatory regimes (spetsialnye regulyativnye rezhimy) of the National Bank of the Kyrgyz Republic (Quirguistão); SECP Regulatory Sandbox, four cohorts and an open window (Paquistão); Bank of Jamaica FinTech Regulatory Sandbox (Jamaica); Financial Regulatory Commission sandbox regulatory environment (Mongólia); NAMFISA Regulatory Sandbox, microlending cohort (Namíbia); Central Bank of Azerbaijan regulatory sandbox (Azerbaijão); FRA Sandbox of the Financial Regulatory Authority (Egito); Mohit-e azmoon-e tanzimgari (regulatory sandbox) of the Central Bank of the Islamic Republic of Iran (Irão); Regulatory sandbox (special legal regime) in the capital market of the National Agency of Perspective Projects (Usbequistão); BRUGEL derogation framework for innovative energy projects (projets innovants) (Bélgica); FMA regulatory sandbox pilot (Nova Zelândia); Regulatory Laboratory (regulatory sandbox) of the National Bank of Georgia (Geórgia); Energy Sandbox (spatii de testare inovativa in domeniul energiei) (Moldávia).
 - Lacunas declaradas: Operações de capital de risco, Empresas em ambientes de teste regulatório, Empresas derivadas da investigação universitária.
 - Bases rejeitadas: Peso das empresas na I&D.
@@ -58,7 +58,7 @@ Até que ponto as pessoas conseguem ver-se como participantes de um projeto comu
 
 Estas dimensões têm pontuação de pelo menos 50, com evidência utilizável.
 
-- Antecipação: 79,4, solidez utilizável
+- Antecipação: 79,7, solidez utilizável
 - Coordenação: 75,6, solidez utilizável
 - Adaptação: 74,9, solidez utilizável
 - Agência: 63, solidez utilizável
