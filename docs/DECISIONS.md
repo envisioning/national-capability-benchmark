@@ -10312,3 +10312,32 @@ years differs by country income or region enough to make the trend read
 indexing rather than research; or OpenAlex changing the percentile's pool or
 definition, which would need a new adapter version, a new pin and a new
 entry.
+
+## D185 — B-READY business location waits for the 2026 round
+
+*Recorded 2026-11-03. Applies D117 and D118 to #117. Default taken under
+the working agreement; mz can overrule. No dataset or app version.*
+
+**Decision.** `IC.BRE.BL.P3` (B-READY pillar 3, business location) does not
+enter Building now. #117 stays open and waits on #115, the 2026 round.
+
+**Why.** The construct fits Building. 85 of its 100 points time property
+transfer and construction and environmental permits as firms see them: the
+state delivering small-scale building, the family of the utility connection
+row. Under D118 that alone admits a row. The hold rests on cost, not on
+construct:
+
+- Building already meets O1 (0.547 on 10.0.0). The #117 simulation on 9.5.0
+  moved it from 0.550 to 0.551.
+- The guardrail falls by about 0.02 (0.436 to 0.416 in that simulation).
+  Most of the fall comes from rich countries outside the 2024 round losing
+  relative coverage.
+- It would be the fifth row from one World Bank programme on the same 82 of
+  135 countries (20, 20, 22 and 20 by income quartile, poorest first).
+
+The 2026 round widens the same series to about 110 countries. Admitted then,
+the row gets the same construct on fuller coverage.
+
+**Overturned by.** mz ruling to admit now; or the 2026 round slipping past
+mid-2027, which turns the hold into a rejection by default and needs a new
+entry.
