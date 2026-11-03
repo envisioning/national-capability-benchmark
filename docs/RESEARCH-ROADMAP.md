@@ -787,8 +787,13 @@ in the table. The access check of 2026-11-03 found:
   2.5 MB, `access.gesis.org/dbk/71022`) from the same host as the pinned
   `ZA7505_cdb_Tables.pdf`. WVS lists "Results By Country" for each wave as
   a documentation download with no licence form, separate from the data
-  files. Nobody has opened either file yet, so it is not known whether they
-  carry A165, A173 and A080_01 country by country.
+  files. The EVS trend report gives each item's question text and response
+  codes and no frequencies: A165 on its page 172 has no table. So the EVS
+  trend has no open table to read. The WVS file is not opened yet, because
+  its download goes through a form post.
+- **No licence in the files.** Neither `ZA7505_cdb_Tables.pdf` nor
+  `ZA7503_cdb.pdf` states a licence or a term on reuse. The trend report
+  names GESIS as publisher, with an ISSN and no licence.
 - **Terms.** WVS's conditions of use allow the data "for non-profit
   purposes", with no redistribution of data files and with citation. GESIS
   says the documentation is "openly accessible" and gives it no licence, so
