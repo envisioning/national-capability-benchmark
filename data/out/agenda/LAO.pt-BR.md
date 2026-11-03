@@ -1,6 +1,6 @@
 # Agenda de capacidades: Laos
 
-*Gerada em 2026-11-02*
+*Gerada em 2026-11-03*
 
 A escala reúne 135 países. Cada dimensão recebe uma pontuação de 0 a 100, sem classificação geral, e cada pontuação traz ao lado a solidez da evidência. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma pontuação.
 
@@ -11,7 +11,7 @@ A escala reúne 135 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 | Antecipação | 20,1 | 0,46 (utilizável) | +17,4 em 10 anos, com base em 2 indicadores |
 | Agência | 35,4 | 0,49 (utilizável) | sem tendência comparável |
 | Coordenação | 57,3 | 0,39 (fraca) | sem tendência comparável |
-| Confiança | 42,3 | 0,34 (fraca) | sem tendência comparável |
+| Confiança | 42,3 | 0,34 (fraca) | -17,3 em 10 anos, com base em 2 indicadores |
 | Aprendizagem | 38,5 | 0,55 (utilizável) | sem tendência comparável |
 | Experimentação | 1,1 | 0,45 (utilizável) | sem tendência comparável |
 | Adaptação | 75 | 0,59 (utilizável) | sem tendência comparável |

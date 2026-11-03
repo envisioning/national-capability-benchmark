@@ -1,6 +1,6 @@
 # Capability agenda: Senegal
 
-*Generated 2026-11-02*
+*Generated 2026-11-03*
 
 The frame includes 135 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
@@ -11,7 +11,7 @@ The frame includes 135 countries. Each dimension is scored from 0 to 100, with n
 | Anticipation | 39 | 0.46 (usable) | +23.9 over 10 years using 2 indicators |
 | Agency | 48.5 | 0.49 (usable) | no trend |
 | Coordination | 81 | 0.39 (thin) | no trend |
-| Trust | 74.3 | 0.34 (thin) | no trend |
+| Trust | 74.3 | 0.34 (thin) | +13.9 over 10 years using 2 indicators |
 | Learning | 24.9 | 0.55 (usable) | no trend |
 | Experimentation | 34.5 | 0.18 (very thin) | no trend |
 | Adaptability | 73.8 | 0.62 (usable) | no trend |

@@ -1,6 +1,6 @@
 # Capability agenda: Malawi
 
-*Generated 2026-11-02*
+*Generated 2026-11-03*
 
 The frame includes 135 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
@@ -10,8 +10,8 @@ The frame includes 135 countries. Each dimension is scored from 0 to 100, with n
 | --- | --- | --- | --- |
 | Anticipation | 23.4 | 0.46 (usable) | +8.1 over 10 years using 2 indicators |
 | Agency | not scored | 0.11 (very thin) | no trend |
-| Coordination | 89.9 | 0.28 (thin) | no trend |
-| Trust | 65.7 | 0.21 (very thin) | no trend |
+| Coordination | 89.9 | 0.28 (thin) | +5 over 10 years using 2 indicators |
+| Trust | 65.7 | 0.21 (very thin) | +3.6 over 10 years using 2 indicators |
 | Learning | 49.8 | 0.55 (usable) | no trend |
 | Experimentation | 0.5 | 0.21 (very thin) | no trend |
 | Adaptability | 50 | 0.48 (usable) | no trend |

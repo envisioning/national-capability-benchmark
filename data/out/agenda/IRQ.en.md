@@ -1,6 +1,6 @@
 # Capability agenda: Iraq
 
-*Generated 2026-11-02*
+*Generated 2026-11-03*
 
 The frame includes 135 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
@@ -10,8 +10,8 @@ The frame includes 135 countries. Each dimension is scored from 0 to 100, with n
 | --- | --- | --- | --- |
 | Anticipation | 20.6 | 0.46 (usable) | +20 over 10 years using 2 indicators, with 1 at the frame edge |
 | Agency | 34.2 | 0.41 (thin) | no trend |
-| Coordination | 61.7 | 0.28 (thin) | no trend |
-| Trust | 18.2 | 0.39 (thin) | no trend |
+| Coordination | 61.7 | 0.28 (thin) | +8.1 over 10 years using 2 indicators |
+| Trust | 18.2 | 0.39 (thin) | -15.7 over 10 years using 2 indicators |
 | Learning | 18.7 | 0.52 (usable) | no trend |
 | Experimentation | 2.9 | 0.36 (thin) | +0.8 over 10 years using 2 indicators |
 | Adaptability | 25.9 | 0.58 (usable) | no trend |

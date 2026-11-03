@@ -1,6 +1,6 @@
 # Capability agenda: Laos
 
-*Generated 2026-11-02*
+*Generated 2026-11-03*
 
 The frame includes 135 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
@@ -11,7 +11,7 @@ The frame includes 135 countries. Each dimension is scored from 0 to 100, with n
 | Anticipation | 20.1 | 0.46 (usable) | +17.4 over 10 years using 2 indicators |
 | Agency | 35.4 | 0.49 (usable) | no trend |
 | Coordination | 57.3 | 0.39 (thin) | no trend |
-| Trust | 42.3 | 0.34 (thin) | no trend |
+| Trust | 42.3 | 0.34 (thin) | -17.3 over 10 years using 2 indicators |
 | Learning | 38.5 | 0.55 (usable) | no trend |
 | Experimentation | 1.1 | 0.45 (usable) | no trend |
 | Adaptability | 75 | 0.59 (usable) | no trend |

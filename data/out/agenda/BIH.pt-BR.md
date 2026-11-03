@@ -1,6 +1,6 @@
 # Agenda de capacidades: Bósnia e Herzegovina
 
-*Gerada em 2026-11-02*
+*Gerada em 2026-11-03*
 
 A escala reúne 135 países. Cada dimensão recebe uma pontuação de 0 a 100, sem classificação geral, e cada pontuação traz ao lado a solidez da evidência. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma pontuação.
 
@@ -10,7 +10,7 @@ A escala reúne 135 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 | --- | --- | --- | --- |
 | Antecipação | 33,5 | 0,46 (utilizável) | +15,3 em 10 anos, com base em 2 indicadores |
 | Agência | 40,9 | 0,63 (utilizável) | sem tendência comparável |
-| Coordenação | 77,9 | 0,45 (utilizável) | sem tendência comparável |
+| Coordenação | 77,9 | 0,45 (utilizável) | +5 em 10 anos, com base em 2 indicadores |
 | Confiança | 41,5 | 0,54 (utilizável) | sem tendência comparável |
 | Aprendizagem | 34,4 | 0,54 (utilizável) | sem tendência comparável |
 | Experimentação | 15,9 | 0,47 (utilizável) | +1,1 em 10 anos, com base em 3 indicadores |

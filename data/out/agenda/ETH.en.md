@@ -1,6 +1,6 @@
 # Capability agenda: Ethiopia
 
-*Generated 2026-11-02*
+*Generated 2026-11-03*
 
 The frame includes 135 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
@@ -10,8 +10,8 @@ The frame includes 135 countries. Each dimension is scored from 0 to 100, with n
 | --- | --- | --- | --- |
 | Anticipation | 21.7 | 0.46 (usable) | +10.2 over 10 years using 2 indicators |
 | Agency | 40.1 | 0.44 (thin) | no trend |
-| Coordination | 80 | 0.29 (thin) | no trend |
-| Trust | 43.8 | 0.41 (thin) | no trend |
+| Coordination | 80 | 0.29 (thin) | +22.5 over 10 years using 2 indicators |
+| Trust | 43.8 | 0.41 (thin) | +12.9 over 10 years using 2 indicators |
 | Learning | 26.7 | 0.55 (usable) | no trend |
 | Experimentation | 0.8 | 0.37 (thin) | +0.2 over 10 years using 2 indicators |
 | Adaptability | 53 | 0.48 (usable) | no trend |

@@ -1,6 +1,6 @@
 # Agenda de capacidades: Vietnã
 
-*Gerada em 2026-11-02*
+*Gerada em 2026-11-03*
 
 A escala reúne 135 países. Cada dimensão recebe uma pontuação de 0 a 100, sem classificação geral, e cada pontuação traz ao lado a solidez da evidência. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma pontuação.
 
@@ -10,7 +10,7 @@ A escala reúne 135 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 | --- | --- | --- | --- |
 | Antecipação | 27,7 | 0,46 (utilizável) | +13,6 em 10 anos, com base em 2 indicadores |
 | Agência | 63,7 | 0,63 (utilizável) | sem tendência comparável |
-| Coordenação | 81,4 | 0,47 (utilizável) | sem tendência comparável |
+| Coordenação | 81,4 | 0,47 (utilizável) | -5,9 em 10 anos, com base em 2 indicadores |
 | Confiança | 38,8 | 0,54 (utilizável) | sem tendência comparável |
 | Aprendizagem | 44,2 | 0,54 (utilizável) | sem tendência comparável |
 | Experimentação | 20,1 | 0,47 (utilizável) | +3,1 em 10 anos, com base em 3 indicadores |

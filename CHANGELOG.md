@@ -9,6 +9,17 @@ The entries before App 1.0.0 are retrospective, high-level summaries
 reconstructed from the repository history. They document explicit version bumps
 and may skip versions that were never committed.
 
+## Dataset 10.0.1 — 2026-11-03
+
+- **Coordination and Trust have 10-year trends.** The two V-Dem rows, civil
+  society participation and compliance with courts, carry every year since
+  1990 from the same V-Dem release. Until this release they carried 2025
+  alone. Coordination shows a 10-year trend in 102 countries and Trust in 46;
+  neither had one in any country before. The history charts on country pages
+  use the longer series too.
+- **Scores and confidence do not move.** A score still reads each country's
+  latest value, and the 2025 values are the same as in 10.0.0. Decision D180.
+
 ## App 1.37.0 — 2026-11-02
 
 - **A history page for every country and for groups of countries.** Under

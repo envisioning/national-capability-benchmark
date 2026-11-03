@@ -1,6 +1,6 @@
 # Capability agenda: Tanzania
 
-*Generated 2026-11-02*
+*Generated 2026-11-03*
 
 The frame includes 135 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
@@ -10,8 +10,8 @@ The frame includes 135 countries. Each dimension is scored from 0 to 100, with n
 | --- | --- | --- | --- |
 | Anticipation | 27 | 0.46 (usable) | +6.5 over 10 years using 2 indicators |
 | Agency | 31.1 | 0.4 (thin) | no trend |
-| Coordination | 76.6 | 0.48 (usable) | no trend |
-| Trust | 87.7 | 0.33 (thin) | no trend |
+| Coordination | 76.6 | 0.48 (usable) | +4.9 over 10 years using 2 indicators |
+| Trust | 87.7 | 0.33 (thin) | +12.4 over 10 years using 2 indicators |
 | Learning | 34.1 | 0.54 (usable) | no trend |
 | Experimentation | 5.8 | 0.3 (thin) | no trend |
 | Adaptability | 73 | 0.62 (usable) | no trend |

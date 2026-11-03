@@ -1,6 +1,6 @@
 # Agenda de capacidades: Gana
 
-*Gerada em 2026-11-02*
+*Gerada em 2026-11-03*
 
 A escala reúne 135 países. Cada dimensão recebe uma pontuação de 0 a 100, sem classificação geral, e cada pontuação traz ao lado a solidez da evidência. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma pontuação.
 
@@ -10,8 +10,8 @@ A escala reúne 135 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 | --- | --- | --- | --- |
 | Antecipação | 26,1 | 0,46 (utilizável) | +6,9 em 10 anos, com base em 2 indicadores |
 | Agência | 39,1 | 0,49 (utilizável) | sem tendência comparável |
-| Coordenação | 72,9 | 0,45 (utilizável) | sem tendência comparável |
-| Confiança | 64,8 | 0,33 (fraca) | sem tendência comparável |
+| Coordenação | 72,9 | 0,45 (utilizável) | +9,1 em 10 anos, com base em 2 indicadores |
+| Confiança | 64,8 | 0,33 (fraca) | +5,1 em 10 anos, com base em 2 indicadores |
 | Aprendizagem | 52,9 | 0,54 (utilizável) | sem tendência comparável |
 | Experimentação | 8,4 | 0,46 (utilizável) | -1,3 em 10 anos, com base em 3 indicadores |
 | Adaptação | 52,4 | 0,62 (utilizável) | sem tendência comparável |

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-02T16:48:25.138Z",
+  "generatedAt": "2026-11-03T08:12:59.169Z",
   "iso3": "PNG",
   "country": "Papua New Guinea",
   "dimensions": [
@@ -1672,7 +1672,12 @@
       "score": 50.4,
       "confidence": 0.343,
       "band": "thin",
-      "trend": null,
+      "trend": {
+        "spanYears": 10,
+        "delta": 10.6,
+        "basket": 2,
+        "clamped": 0
+      },
       "scoredOn": [
         "dispute_resolution_efficiency",
         "bribery_incidence",

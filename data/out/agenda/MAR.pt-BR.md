@@ -1,6 +1,6 @@
 # Agenda de capacidades: Marrocos
 
-*Gerada em 2026-11-02*
+*Gerada em 2026-11-03*
 
 A escala reúne 135 países. Cada dimensão recebe uma pontuação de 0 a 100, sem classificação geral, e cada pontuação traz ao lado a solidez da evidência. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma pontuação.
 
@@ -10,7 +10,7 @@ A escala reúne 135 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 | --- | --- | --- | --- |
 | Antecipação | 35,8 | 0,46 (utilizável) | +14,7 em 10 anos, com base em 2 indicadores |
 | Agência | 51,3 | 0,63 (utilizável) | sem tendência comparável |
-| Coordenação | 82,1 | 0,48 (utilizável) | sem tendência comparável |
+| Coordenação | 82,1 | 0,48 (utilizável) | -5,5 em 10 anos, com base em 2 indicadores |
 | Confiança | 39,9 | 0,54 (utilizável) | sem tendência comparável |
 | Aprendizagem | 24,8 | 0,54 (utilizável) | sem tendência comparável |
 | Experimentação | 30,9 | 0,47 (utilizável) | +6,7 em 10 anos, com base em 3 indicadores |

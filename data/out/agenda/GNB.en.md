@@ -1,6 +1,6 @@
 # Capability agenda: Guinea-Bissau
 
-*Generated 2026-11-02*
+*Generated 2026-11-03*
 
 The frame includes 135 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
@@ -11,7 +11,7 @@ The frame includes 135 countries. Each dimension is scored from 0 to 100, with n
 | Anticipation | 8 | 0.46 (usable) | +7.9 over 10 years using 2 indicators, with 1 at the frame edge |
 | Agency | 32.8 | 0.3 (thin) | no trend |
 | Coordination | 57.2 | 0.21 (very thin) | no trend |
-| Trust | 41.8 | 0.21 (very thin) | no trend |
+| Trust | 41.8 | 0.21 (very thin) | -8.5 over 20 years using 2 indicators |
 | Learning | 43 | 0.39 (thin) | no trend |
 | Experimentation | 0.8 | 0.11 (very thin) | no trend |
 | Adaptability | 41.6 | 0.59 (usable) | no trend |

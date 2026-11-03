@@ -1,6 +1,6 @@
 # Agenda de capacidades: Romênia
 
-*Gerada em 2026-11-02*
+*Gerada em 2026-11-03*
 
 A escala reúne 135 países. Cada dimensão recebe uma pontuação de 0 a 100, sem classificação geral, e cada pontuação traz ao lado a solidez da evidência. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma pontuação.
 
@@ -10,8 +10,8 @@ A escala reúne 135 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 | --- | --- | --- | --- |
 | Antecipação | 58 | 0,46 (utilizável) | sem tendência comparável |
 | Agência | 62,3 | 0,49 (utilizável) | sem tendência comparável |
-| Coordenação | 81,1 | 0,48 (utilizável) | sem tendência comparável |
-| Confiança | 87,7 | 0,33 (fraca) | sem tendência comparável |
+| Coordenação | 81,1 | 0,48 (utilizável) | -11,7 em 10 anos, com base em 2 indicadores |
+| Confiança | 87,7 | 0,33 (fraca) | -1,3 em 10 anos, com base em 2 indicadores |
 | Aprendizagem | 35,8 | 0,54 (utilizável) | sem tendência comparável |
 | Experimentação | 26,8 | 0,47 (utilizável) | +0,6 em 10 anos, com base em 3 indicadores |
 | Adaptação | 75,6 | 0,62 (utilizável) | sem tendência comparável |

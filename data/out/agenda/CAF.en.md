@@ -1,6 +1,6 @@
 # Capability agenda: Central African Republic
 
-*Generated 2026-11-02*
+*Generated 2026-11-03*
 
 The frame includes 135 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
@@ -11,7 +11,7 @@ The frame includes 135 countries. Each dimension is scored from 0 to 100, with n
 | Anticipation | 7.4 | 0.46 (usable) | no trend |
 | Agency | 22.4 | 0.49 (usable) | no trend |
 | Coordination | 24.2 | 0.29 (thin) | no trend |
-| Trust | 39.8 | 0.33 (thin) | no trend |
+| Trust | 39.8 | 0.33 (thin) | -15.2 over 10 years using 2 indicators |
 | Learning | 23.5 | 0.54 (usable) | no trend |
 | Experimentation | 0 | 0.18 (very thin) | no trend |
 | Adaptability | 43.5 | 0.46 (usable) | no trend |

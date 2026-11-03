@@ -10024,3 +10024,51 @@ more history makes more dimensions readable.
 measurement error, which would let that pair back in; an upstream source
 shared by two different origins, which adds it to this rule; or a test of
 (m2) that measures shared error directly, which replaces the rule.
+
+---
+
+## D180 — V-Dem's scored rows keep the release's own country-years from 1990
+
+*Recorded 2026-11-03. Extends D83 and D131 and serves D22, D174 and D175. The
+first MOVERS-1 backfill. Dataset 10.0.1. No score or confidence changes.*
+
+**Decision.** The V-Dem adapter emits `civil_society_strength` (`v2x_cspart`)
+and `court_compliance` (`v2jucomp_osp`) for every country-year from 1990
+(`VDEM_CY_HISTORY_FROM`) to the release year 2025, all read from the one
+pinned v16 file. Scoring still reads each country's latest value. The two
+checks, polarization and turnout, keep their single reading.
+
+**Why.** The release codes every country-year back to 1789 on one
+measurement model, and the adapter threw all of it away but 2025. D22
+momentum and the D174 history therefore saw no past for either row. That
+left Coordination with no 10-year trend in any country, because PEFA was its
+only row with history and D22 needs two, and Trust with none either. Every
+value comes from one release, so a trend compares values coded on one scale.
+Mixing releases would not.
+
+**What changed in the published data.** The 2025 values restate nothing: the
+fetch logged 0 changed and 9,427 added country-years. All 1,215 scores and
+confidences are identical to 10.0.0. A 10-year trend now publishes for
+Coordination in 102 countries and for Trust in 46, where both had none.
+Brazil's Coordination reads +7.4 over 10 years and -0.3 over 20, on two rows.
+The D174 history refills on the longer series: the donor rule's holdout error
+is 9.56 against 10.46 for the flat comparison, so it still beats flat and
+D178 stands.
+
+**The movers test, rerun on 10.0.1.** Coordination enters (m1) with 102
+countries and Trust with 46. Income change explains almost none of their
+change (r² 0.04 and 0.01). (m2) reads noise on both: one cross-origin pair
+each, V-Dem with PEFA and V-Dem with the Enterprise Surveys. The 10-year
+verdict stays unreadable. No dimension is readable, because no dimension's
+leftovers move together beyond the shuffle null.
+
+**Cost.** `vdem-cy-core.json` grows from 0.3 MB to 5.8 MB, and the revision
+log gains 9,427 entries. V-Dem revises past years in each release, so the
+next re-pin restates history as well as the current year, and the revision
+log will record it. Expert coding of the past is done today, with hindsight.
+Both rows stay expert-coded and keep the D83 and D131 caveats.
+
+**Overturned by.** A V-Dem release that changes the measurement model of
+either variable across years, which would make the series compare two
+scales; or evidence that coders backdate a current judgment so strongly
+that the series tracks the present more than the past.

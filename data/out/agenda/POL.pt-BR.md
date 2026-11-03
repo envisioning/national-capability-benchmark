@@ -1,6 +1,6 @@
 # Agenda de capacidades: Polônia
 
-*Gerada em 2026-11-02*
+*Gerada em 2026-11-03*
 
 A escala reúne 135 países. Cada dimensão recebe uma pontuação de 0 a 100, sem classificação geral, e cada pontuação traz ao lado a solidez da evidência. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma pontuação.
 
@@ -10,7 +10,7 @@ A escala reúne 135 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 | --- | --- | --- | --- |
 | Antecipação | 63,7 | 0,46 (utilizável) | +8,1 em 10 anos, com base em 2 indicadores |
 | Agência | 56 | 0,63 (utilizável) | sem tendência comparável |
-| Coordenação | 79,8 | 0,48 (utilizável) | sem tendência comparável |
+| Coordenação | 79,8 | 0,48 (utilizável) | +1 em 10 anos, com base em 2 indicadores |
 | Confiança | 53,3 | 0,55 (utilizável) | sem tendência comparável |
 | Aprendizagem | 46,4 | 0,55 (utilizável) | sem tendência comparável |
 | Experimentação | 36,2 | 0,47 (utilizável) | sem tendência comparável |

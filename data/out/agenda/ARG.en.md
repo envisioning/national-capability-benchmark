@@ -1,6 +1,6 @@
 # Capability agenda: Argentina
 
-*Generated 2026-11-02*
+*Generated 2026-11-03*
 
 The frame includes 135 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
@@ -10,7 +10,7 @@ The frame includes 135 countries. Each dimension is scored from 0 to 100, with n
 | --- | --- | --- | --- |
 | Anticipation | 41.2 | 0.46 (usable) | +13.5 over 10 years using 2 indicators |
 | Agency | 41.1 | 0.44 (thin) | no trend |
-| Coordination | 55.6 | 0.25 (thin) | no trend |
+| Coordination | 55.6 | 0.25 (thin) | -1.7 over 10 years using 2 indicators |
 | Trust | 51.7 | 0.35 (thin) | no trend |
 | Learning | 43.4 | 0.42 (thin) | no trend |
 | Experimentation | 23.6 | 0.54 (usable) | +2.9 over 10 years using 3 indicators |

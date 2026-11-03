@@ -1,6 +1,6 @@
 # Agenda de capacidades: Paquistão
 
-*Gerada em 2026-11-02*
+*Gerada em 2026-11-03*
 
 A escala reúne 135 países. Cada dimensão recebe uma pontuação de 0 a 100, sem classificação geral, e cada pontuação traz ao lado a solidez da evidência. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma pontuação.
 
@@ -10,7 +10,7 @@ A escala reúne 135 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 | --- | --- | --- | --- |
 | Antecipação | 28 | 0,46 (utilizável) | +10,8 em 10 anos, com base em 2 indicadores |
 | Agência | 62,8 | 0,63 (utilizável) | sem tendência comparável |
-| Coordenação | 56,7 | 0,48 (utilizável) | sem tendência comparável |
+| Coordenação | 56,7 | 0,48 (utilizável) | -7,3 em 10 anos, com base em 2 indicadores |
 | Confiança | 45,7 | 0,53 (utilizável) | sem tendência comparável |
 | Aprendizagem | 26,9 | 0,52 (utilizável) | sem tendência comparável |
 | Experimentação | 15,2 | 0,47 (utilizável) | +0,8 em 10 anos, com base em 3 indicadores |

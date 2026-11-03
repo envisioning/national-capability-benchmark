@@ -720,8 +720,8 @@ year, not because the source has no history.
 
 | Row | Origin | Countries now | At both ends | First year stored | Source history |
 | --- | --- | ---: | ---: | ---: | --- |
-| `civil_society_strength` | V-Dem | 135 | 0 | 2025 | country-year file reaches far back |
-| `court_compliance` | V-Dem | 135 | 0 | 2025 | same file |
+| `civil_society_strength` | V-Dem | 135 | 135 | 1990 | done (D180) |
+| `court_compliance` | V-Dem | 135 | 135 | 1990 | done (D180) |
 | `export_diversification` | UN Comtrade | 135 | 0 | 2025 | UNCTADstat series from 1995 |
 | `new_export_products_rate` | UN Comtrade | 135 | 0 | 2024 | derivable from the pinned Growth Lab file for earlier windows |
 | `research_citation_impact` | OpenAlex | 135 | 0 | 2021 | queryable by publication year |
@@ -749,8 +749,12 @@ the D174 history move on country pages, which is a dataset release. Scores
 do not move, because scoring reads the latest value. Each adapter needs its
 pin restated and the D25 revision log.
 
-**Open:** V-Dem first. It reaches two dimensions from one pinned file that
-the adapter already reads, and Coordination has no other row with history.
+**Done:** V-Dem (D180, dataset 10.0.1). Coordination now has a 10-year
+trend in 102 countries and Trust in 46. Both enter the movers test and read
+noise on their one cross-origin pair, so the verdict stays unreadable.
+
+**Open:** UNCTAD or the Growth Lab file next, for Adaptability, which pairs
+with the ILO rows. OpenAlex for Learning after that.
 
 ## Country-set changes are a separate project
 

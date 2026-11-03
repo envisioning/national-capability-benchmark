@@ -1,6 +1,6 @@
 # Capability agenda: Austria
 
-*Generated 2026-11-02*
+*Generated 2026-11-03*
 
 The frame includes 135 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
@@ -10,7 +10,7 @@ The frame includes 135 countries. Each dimension is scored from 0 to 100, with n
 | --- | --- | --- | --- |
 | Anticipation | 74.6 | 0.46 (usable) | +3.5 over 10 years using 2 indicators |
 | Agency | 41.8 | 0.43 (thin) | no trend |
-| Coordination | 87.5 | 0.27 (thin) | no trend |
+| Coordination | 87.5 | 0.27 (thin) | -9.9 over 10 years using 2 indicators |
 | Trust | 72.2 | 0.41 (thin) | no trend |
 | Learning | 65 | 0.55 (usable) | no trend |
 | Experimentation | 44.1 | 0.37 (thin) | -3 over 10 years using 3 indicators |

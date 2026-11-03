@@ -1,6 +1,6 @@
 # Agenda de capacidades: Sudão
 
-*Gerada em 2026-11-02*
+*Gerada em 2026-11-03*
 
 A escala reúne 135 países. Cada dimensão recebe uma pontuação de 0 a 100, sem classificação geral, e cada pontuação traz ao lado a solidez da evidência. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma pontuação.
 
@@ -10,7 +10,7 @@ A escala reúne 135 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 | --- | --- | --- | --- |
 | Antecipação | 3,2 | 0,46 (utilizável) | +3,1 em 10 anos, com base em 2 indicadores, 1 limitados à borda da escala |
 | Agência | sem pontuação | 0,11 (muito fraca) | sem tendência comparável |
-| Coordenação | 35,3 | 0,27 (fraca) | sem tendência comparável |
+| Coordenação | 35,3 | 0,27 (fraca) | -22,9 em 10 anos, com base em 2 indicadores |
 | Confiança | 41,8 | 0,12 (muito fraca) | sem tendência comparável |
 | Aprendizagem | 16,1 | 0,36 (fraca) | sem tendência comparável |
 | Experimentação | 1,2 | 0,28 (fraca) | sem tendência comparável |

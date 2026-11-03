@@ -1,6 +1,6 @@
 # Capability agenda: Mali
 
-*Generated 2026-11-02*
+*Generated 2026-11-03*
 
 The frame includes 135 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
@@ -11,7 +11,7 @@ The frame includes 135 countries. Each dimension is scored from 0 to 100, with n
 | Anticipation | 25.1 | 0.46 (usable) | +15.2 over 10 years using 2 indicators |
 | Agency | 36.3 | 0.43 (thin) | no trend |
 | Coordination | 62 | 0.4 (thin) | no trend |
-| Trust | 61 | 0.34 (thin) | no trend |
+| Trust | 61 | 0.34 (thin) | +32.2 over 10 years using 2 indicators |
 | Learning | 22.8 | 0.55 (usable) | no trend |
 | Experimentation | 17.5 | 0.18 (very thin) | no trend |
 | Adaptability | 27.2 | 0.6 (usable) | no trend |

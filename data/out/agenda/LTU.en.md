@@ -1,6 +1,6 @@
 # Capability agenda: Lithuania
 
-*Generated 2026-11-02*
+*Generated 2026-11-03*
 
 The frame includes 135 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
@@ -10,8 +10,8 @@ The frame includes 135 countries. Each dimension is scored from 0 to 100, with n
 | --- | --- | --- | --- |
 | Anticipation | 63.5 | 0.46 (usable) | +12.8 over 10 years using 2 indicators |
 | Agency | 54 | 0.44 (thin) | no trend |
-| Coordination | 75.6 | 0.27 (thin) | no trend |
-| Trust | 61.5 | 0.41 (thin) | no trend |
+| Coordination | 75.6 | 0.27 (thin) | -11.6 over 10 years using 2 indicators |
+| Trust | 61.5 | 0.41 (thin) | +5.3 over 10 years using 2 indicators |
 | Learning | 56.3 | 0.55 (usable) | no trend |
 | Experimentation | 32.4 | 0.37 (thin) | +4 over 10 years using 3 indicators |
 | Adaptability | 74.4 | 0.62 (usable) | no trend |

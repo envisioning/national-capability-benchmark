@@ -1,6 +1,6 @@
 # Capability agenda: Malaysia
 
-*Generated 2026-11-02*
+*Generated 2026-11-03*
 
 The frame includes 135 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
@@ -10,7 +10,7 @@ The frame includes 135 countries. Each dimension is scored from 0 to 100, with n
 | --- | --- | --- | --- |
 | Anticipation | 54.4 | 0.46 (usable) | +23.2 over 10 years using 2 indicators |
 | Agency | 56.1 | 0.63 (usable) | no trend |
-| Coordination | 76.1 | 0.48 (usable) | no trend |
+| Coordination | 76.1 | 0.48 (usable) | +1 over 10 years using 2 indicators |
 | Trust | 56.6 | 0.55 (usable) | no trend |
 | Learning | 51.7 | 0.55 (usable) | no trend |
 | Experimentation | 22 | 0.47 (usable) | -3.3 over 10 years using 3 indicators |

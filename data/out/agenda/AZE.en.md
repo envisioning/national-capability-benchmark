@@ -1,6 +1,6 @@
 # Capability agenda: Azerbaijan
 
-*Generated 2026-11-02*
+*Generated 2026-11-03*
 
 The frame includes 135 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
@@ -10,7 +10,7 @@ The frame includes 135 countries. Each dimension is scored from 0 to 100, with n
 | --- | --- | --- | --- |
 | Anticipation | 30.6 | 0.46 (usable) | +15.6 over 10 years using 2 indicators |
 | Agency | 54.6 | 0.63 (usable) | no trend |
-| Coordination | 46.8 | 0.48 (usable) | no trend |
+| Coordination | 46.8 | 0.48 (usable) | +0.7 over 10 years using 2 indicators |
 | Trust | 41 | 0.55 (usable) | no trend |
 | Learning | 36.3 | 0.55 (usable) | no trend |
 | Experimentation | 8.6 | 0.47 (usable) | +3.7 over 10 years using 3 indicators |

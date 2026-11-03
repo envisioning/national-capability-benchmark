@@ -1,6 +1,6 @@
 # Capability agenda: Paraguay
 
-*Generated 2026-11-02*
+*Generated 2026-11-03*
 
 The frame includes 135 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
@@ -10,8 +10,8 @@ The frame includes 135 countries. Each dimension is scored from 0 to 100, with n
 | --- | --- | --- | --- |
 | Anticipation | 32.7 | 0.46 (usable) | +19.5 over 10 years using 2 indicators |
 | Agency | 35.1 | 0.49 (usable) | no trend |
-| Coordination | 49.5 | 0.44 (thin) | no trend |
-| Trust | 49.2 | 0.33 (thin) | no trend |
+| Coordination | 49.5 | 0.44 (thin) | +9.2 over 10 years using 2 indicators |
+| Trust | 49.2 | 0.33 (thin) | +8.6 over 20 years using 2 indicators |
 | Learning | 31.8 | 0.54 (usable) | no trend |
 | Experimentation | 14.6 | 0.47 (usable) | -9.2 over 20 years using 3 indicators |
 | Adaptability | 64.8 | 0.62 (usable) | no trend |

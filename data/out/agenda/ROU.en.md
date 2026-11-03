@@ -1,6 +1,6 @@
 # Capability agenda: Romania
 
-*Generated 2026-11-02*
+*Generated 2026-11-03*
 
 The frame includes 135 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
@@ -10,8 +10,8 @@ The frame includes 135 countries. Each dimension is scored from 0 to 100, with n
 | --- | --- | --- | --- |
 | Anticipation | 58 | 0.46 (usable) | no trend |
 | Agency | 62.3 | 0.49 (usable) | no trend |
-| Coordination | 81.1 | 0.48 (usable) | no trend |
-| Trust | 87.7 | 0.33 (thin) | no trend |
+| Coordination | 81.1 | 0.48 (usable) | -11.7 over 10 years using 2 indicators |
+| Trust | 87.7 | 0.33 (thin) | -1.3 over 10 years using 2 indicators |
 | Learning | 35.8 | 0.54 (usable) | no trend |
 | Experimentation | 26.8 | 0.47 (usable) | +0.6 over 10 years using 3 indicators |
 | Adaptability | 75.6 | 0.62 (usable) | no trend |

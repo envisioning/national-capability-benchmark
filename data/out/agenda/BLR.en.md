@@ -1,6 +1,6 @@
 # Capability agenda: Belarus
 
-*Generated 2026-11-02*
+*Generated 2026-11-03*
 
 The frame includes 135 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
@@ -10,7 +10,7 @@ The frame includes 135 countries. Each dimension is scored from 0 to 100, with n
 | --- | --- | --- | --- |
 | Anticipation | 37.7 | 0.46 (usable) | +10.7 over 10 years using 2 indicators |
 | Agency | 47.9 | 0.41 (thin) | no trend |
-| Coordination | 45.2 | 0.27 (thin) | no trend |
+| Coordination | 45.2 | 0.27 (thin) | -19.7 over 10 years using 2 indicators |
 | Trust | 42.3 | 0.36 (thin) | no trend |
 | Learning | 37.7 | 0.44 (thin) | no trend |
 | Experimentation | 12.2 | 0.28 (thin) | -4.1 over 10 years using 3 indicators |

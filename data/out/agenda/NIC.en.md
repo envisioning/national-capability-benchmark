@@ -1,6 +1,6 @@
 # Capability agenda: Nicaragua
 
-*Generated 2026-11-02*
+*Generated 2026-11-03*
 
 The frame includes 135 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
@@ -10,7 +10,7 @@ The frame includes 135 countries. Each dimension is scored from 0 to 100, with n
 | --- | --- | --- | --- |
 | Anticipation | 15.5 | 0.46 (usable) | +6.9 over 10 years using 2 indicators |
 | Agency | 79.9 | 0.26 (thin) | no trend |
-| Coordination | 16 | 0.25 (thin) | no trend |
+| Coordination | 16 | 0.25 (thin) | -50.2 over 10 years using 2 indicators |
 | Trust | 23.6 | 0.34 (thin) | no trend |
 | Learning | 42 | 0.4 (thin) | no trend |
 | Experimentation | 2.3 | 0.13 (very thin) | no trend |

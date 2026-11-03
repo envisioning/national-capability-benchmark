@@ -1,6 +1,6 @@
 # Agenda de capacidades: Libéria
 
-*Gerada em 2026-11-02*
+*Gerada em 2026-11-03*
 
 A escala reúne 135 países. Cada dimensão recebe uma pontuação de 0 a 100, sem classificação geral, e cada pontuação traz ao lado a solidez da evidência. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma pontuação.
 
@@ -10,7 +10,7 @@ A escala reúne 135 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 | --- | --- | --- | --- |
 | Antecipação | 18,5 | 0,46 (utilizável) | +14,4 em 10 anos, com base em 2 indicadores |
 | Agência | 39,5 | 0,3 (fraca) | sem tendência comparável |
-| Coordenação | 94,1 | 0,28 (fraca) | sem tendência comparável |
+| Coordenação | 94,1 | 0,28 (fraca) | -1 em 10 anos, com base em 2 indicadores |
 | Confiança | 54,5 | 0,21 (muito fraca) | sem tendência comparável |
 | Aprendizagem | 40 | 0,55 (utilizável) | sem tendência comparável |
 | Experimentação | 0,9 | 0,37 (fraca) | sem tendência comparável |

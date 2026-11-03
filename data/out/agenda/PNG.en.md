@@ -1,6 +1,6 @@
 # Capability agenda: Papua New Guinea
 
-*Generated 2026-11-02*
+*Generated 2026-11-03*
 
 The frame includes 135 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
@@ -11,7 +11,7 @@ The frame includes 135 countries. Each dimension is scored from 0 to 100, with n
 | Anticipation | 4.5 | 0.46 (usable) | +4.4 over 10 years using 2 indicators, with 1 at the frame edge |
 | Agency | 32.2 | 0.43 (thin) | no trend |
 | Coordination | 56.4 | 0.43 (thin) | no trend |
-| Trust | 50.4 | 0.34 (thin) | no trend |
+| Trust | 50.4 | 0.34 (thin) | +10.6 over 10 years using 2 indicators |
 | Learning | 66.2 | 0.55 (usable) | no trend |
 | Experimentation | 3.2 | 0.4 (thin) | 0 over 10 years using 2 indicators |
 | Adaptability | 52.2 | 0.46 (usable) | no trend |

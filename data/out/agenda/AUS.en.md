@@ -1,6 +1,6 @@
 # Capability agenda: Australia
 
-*Generated 2026-11-02*
+*Generated 2026-11-03*
 
 The frame includes 135 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
@@ -10,7 +10,7 @@ The frame includes 135 countries. Each dimension is scored from 0 to 100, with n
 | --- | --- | --- | --- |
 | Anticipation | 83.4 | 0.46 (usable) | -0.3 over 10 years using 2 indicators |
 | Agency | 86.3 | 0.44 (thin) | no trend |
-| Coordination | 96.5 | 0.28 (thin) | no trend |
+| Coordination | 96.5 | 0.28 (thin) | +4.1 over 10 years using 2 indicators |
 | Trust | 78.6 | 0.41 (thin) | no trend |
 | Learning | 81.8 | 0.55 (usable) | no trend |
 | Experimentation | 53.1 | 0.37 (thin) | -6.6 over 10 years using 3 indicators |

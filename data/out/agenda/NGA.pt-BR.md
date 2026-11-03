@@ -1,6 +1,6 @@
 # Agenda de capacidades: Nigéria
 
-*Gerada em 2026-11-02*
+*Gerada em 2026-11-03*
 
 A escala reúne 135 países. Cada dimensão recebe uma pontuação de 0 a 100, sem classificação geral, e cada pontuação traz ao lado a solidez da evidência. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma pontuação.
 
@@ -10,8 +10,8 @@ A escala reúne 135 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 | --- | --- | --- | --- |
 | Antecipação | 28,2 | 0,46 (utilizável) | +11,3 em 10 anos, com base em 2 indicadores |
 | Agência | 38 | 0,41 (fraca) | sem tendência comparável |
-| Coordenação | 39,3 | 0,29 (fraca) | sem tendência comparável |
-| Confiança | 34,4 | 0,41 (fraca) | sem tendência comparável |
+| Coordenação | 39,3 | 0,29 (fraca) | -34,4 em 10 anos, com base em 2 indicadores |
+| Confiança | 34,4 | 0,41 (fraca) | +0,6 em 10 anos, com base em 2 indicadores |
 | Aprendizagem | 26,2 | 0,55 (utilizável) | sem tendência comparável |
 | Experimentação | 3 | 0,27 (fraca) | sem tendência comparável |
 | Adaptação | 46,4 | 0,62 (utilizável) | sem tendência comparável |

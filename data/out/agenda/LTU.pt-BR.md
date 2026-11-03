@@ -1,6 +1,6 @@
 # Agenda de capacidades: Lituânia
 
-*Gerada em 2026-11-02*
+*Gerada em 2026-11-03*
 
 A escala reúne 135 países. Cada dimensão recebe uma pontuação de 0 a 100, sem classificação geral, e cada pontuação traz ao lado a solidez da evidência. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma pontuação.
 
@@ -10,8 +10,8 @@ A escala reúne 135 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 | --- | --- | --- | --- |
 | Antecipação | 63,5 | 0,46 (utilizável) | +12,8 em 10 anos, com base em 2 indicadores |
 | Agência | 54 | 0,44 (fraca) | sem tendência comparável |
-| Coordenação | 75,6 | 0,27 (fraca) | sem tendência comparável |
-| Confiança | 61,5 | 0,41 (fraca) | sem tendência comparável |
+| Coordenação | 75,6 | 0,27 (fraca) | -11,6 em 10 anos, com base em 2 indicadores |
+| Confiança | 61,5 | 0,41 (fraca) | +5,3 em 10 anos, com base em 2 indicadores |
 | Aprendizagem | 56,3 | 0,55 (utilizável) | sem tendência comparável |
 | Experimentação | 32,4 | 0,37 (fraca) | +4 em 10 anos, com base em 3 indicadores |
 | Adaptação | 74,4 | 0,62 (utilizável) | sem tendência comparável |

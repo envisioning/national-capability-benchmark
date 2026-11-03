@@ -1,6 +1,6 @@
 # Capability agenda: Mongolia
 
-*Generated 2026-11-02*
+*Generated 2026-11-03*
 
 The frame includes 135 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
@@ -10,8 +10,8 @@ The frame includes 135 countries. Each dimension is scored from 0 to 100, with n
 | --- | --- | --- | --- |
 | Anticipation | 42.1 | 0.46 (usable) | +14.8 over 10 years using 2 indicators |
 | Agency | 44.7 | 0.44 (thin) | no trend |
-| Coordination | 77.9 | 0.28 (thin) | no trend |
-| Trust | 48.8 | 0.41 (thin) | no trend |
+| Coordination | 77.9 | 0.28 (thin) | -9.5 over 10 years using 2 indicators |
+| Trust | 48.8 | 0.41 (thin) | +12.4 over 10 years using 2 indicators |
 | Learning | 57.2 | 0.55 (usable) | no trend |
 | Experimentation | 46.9 | 0.37 (thin) | +17 over 10 years using 3 indicators |
 | Adaptability | 54 | 0.62 (usable) | no trend |

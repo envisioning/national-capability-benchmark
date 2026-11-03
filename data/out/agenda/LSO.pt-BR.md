@@ -1,6 +1,6 @@
 # Agenda de capacidades: Lesoto
 
-*Gerada em 2026-11-02*
+*Gerada em 2026-11-03*
 
 A escala reúne 135 países. Cada dimensão recebe uma pontuação de 0 a 100, sem classificação geral, e cada pontuação traz ao lado a solidez da evidência. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma pontuação.
 
@@ -10,8 +10,8 @@ A escala reúne 135 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 | --- | --- | --- | --- |
 | Antecipação | 18,1 | 0,46 (utilizável) | +8,6 em 10 anos, com base em 2 indicadores |
 | Agência | 51,7 | 0,43 (fraca) | sem tendência comparável |
-| Coordenação | 59,6 | 0,45 (utilizável) | sem tendência comparável |
-| Confiança | 63,7 | 0,33 (fraca) | sem tendência comparável |
+| Coordenação | 59,6 | 0,45 (utilizável) | -17,6 em 10 anos, com base em 2 indicadores |
+| Confiança | 63,7 | 0,33 (fraca) | +11,9 em 10 anos, com base em 2 indicadores |
 | Aprendizagem | 32,1 | 0,54 (utilizável) | sem tendência comparável |
 | Experimentação | 2,1 | 0,3 (fraca) | sem tendência comparável |
 | Adaptação | 35,9 | 0,62 (utilizável) | sem tendência comparável |

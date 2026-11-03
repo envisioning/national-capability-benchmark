@@ -1,6 +1,6 @@
 # Capability agenda: Finland
 
-*Generated 2026-11-02*
+*Generated 2026-11-03*
 
 The frame includes 135 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
@@ -10,7 +10,7 @@ The frame includes 135 countries. Each dimension is scored from 0 to 100, with n
 | --- | --- | --- | --- |
 | Anticipation | 84.9 | 0.46 (usable) | +1.8 over 10 years using 2 indicators |
 | Agency | 69.2 | 0.44 (thin) | no trend |
-| Coordination | 87.1 | 0.27 (thin) | no trend |
+| Coordination | 87.1 | 0.27 (thin) | -2.7 over 10 years using 2 indicators |
 | Trust | 92.3 | 0.41 (thin) | no trend |
 | Learning | 78.3 | 0.55 (usable) | no trend |
 | Experimentation | 51 | 0.37 (thin) | -9.9 over 10 years using 3 indicators |

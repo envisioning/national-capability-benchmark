@@ -1,6 +1,6 @@
 # Agenda de capacidades: Angola
 
-*Gerada em 2026-11-02*
+*Gerada em 2026-11-03*
 
 A escala reúne 135 países. Cada dimensão recebe uma pontuação de 0 a 100, sem classificação geral, e cada pontuação traz ao lado a solidez da evidência. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma pontuação.
 
@@ -10,8 +10,8 @@ A escala reúne 135 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 | --- | --- | --- | --- |
 | Antecipação | 17,5 | 0,46 (utilizável) | +9,7 em 10 anos, com base em 2 indicadores, 1 cortados na extremidade da escala |
 | Agência | 52,5 | 0,49 (utilizável) | sem tendência comparável |
-| Coordenação | 28,1 | 0,47 (utilizável) | sem tendência comparável |
-| Confiança | 43,4 | 0,34 (fraca) | sem tendência comparável |
+| Coordenação | 28,1 | 0,47 (utilizável) | -0,3 em 10 anos, com base em 2 indicadores |
+| Confiança | 43,4 | 0,34 (fraca) | -2,8 em 20 anos, com base em 2 indicadores |
 | Aprendizagem | 21,9 | 0,55 (utilizável) | sem tendência comparável |
 | Experimentação | 0,8 | 0,41 (fraca) | sem tendência comparável |
 | Adaptação | 18,3 | 0,62 (utilizável) | sem tendência comparável |

@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-02T19:37:06.398Z",
-  "version": "10.0.0",
+  "generatedAt": "2026-11-03T08:12:02.083Z",
+  "version": "10.0.1",
   "country": {
     "country": "Bosnia and Herzegovina",
     "iso3": "BIH",
@@ -812,7 +812,67 @@
         "delphiDissent": false,
         "blendedScore": 77.9,
         "blendedFrom": "indicators",
-        "momentum": [],
+        "momentum": [
+          {
+            "baseYear": 2016,
+            "currentYear": 2026,
+            "baseScore": 68.2,
+            "currentScore": 73.2,
+            "delta": 5,
+            "matchedIndicators": 2,
+            "basket": [
+              "budget_execution_fidelity",
+              "civil_society_strength"
+            ],
+            "clamped": 0,
+            "series": [
+              {
+                "year": 2016,
+                "score": 68.2
+              },
+              {
+                "year": 2017,
+                "score": 69.3
+              },
+              {
+                "year": 2018,
+                "score": 60.2
+              },
+              {
+                "year": 2019,
+                "score": 64.3
+              },
+              {
+                "year": 2020,
+                "score": 77.6
+              },
+              {
+                "year": 2021,
+                "score": 68.7
+              },
+              {
+                "year": 2022,
+                "score": 72.4
+              },
+              {
+                "year": 2023,
+                "score": 73.2
+              },
+              {
+                "year": 2024,
+                "score": 73.2
+              },
+              {
+                "year": 2025,
+                "score": 73.2
+              },
+              {
+                "year": 2026,
+                "score": 73.2
+              }
+            ]
+          }
+        ],
         "indicators": [
           {
             "indicatorId": "government_effectiveness",
@@ -1044,6 +1104,204 @@
             "outOfFrame": false,
             "series": [
               {
+                "year": 1992,
+                "raw": 0.406,
+                "normalized": 36.3,
+                "tier": "expert_panel"
+              },
+              {
+                "year": 1993,
+                "raw": 0.406,
+                "normalized": 36.3,
+                "tier": "expert_panel"
+              },
+              {
+                "year": 1994,
+                "raw": 0.406,
+                "normalized": 36.3,
+                "tier": "expert_panel"
+              },
+              {
+                "year": 1995,
+                "raw": 0.406,
+                "normalized": 36.3,
+                "tier": "expert_panel"
+              },
+              {
+                "year": 1996,
+                "raw": 0.514,
+                "normalized": 48.3,
+                "tier": "expert_panel"
+              },
+              {
+                "year": 1997,
+                "raw": 0.502,
+                "normalized": 47,
+                "tier": "expert_panel"
+              },
+              {
+                "year": 1998,
+                "raw": 0.502,
+                "normalized": 47,
+                "tier": "expert_panel"
+              },
+              {
+                "year": 1999,
+                "raw": 0.502,
+                "normalized": 47,
+                "tier": "expert_panel"
+              },
+              {
+                "year": 2000,
+                "raw": 0.554,
+                "normalized": 52.8,
+                "tier": "expert_panel"
+              },
+              {
+                "year": 2001,
+                "raw": 0.554,
+                "normalized": 52.8,
+                "tier": "expert_panel"
+              },
+              {
+                "year": 2002,
+                "raw": 0.554,
+                "normalized": 52.8,
+                "tier": "expert_panel"
+              },
+              {
+                "year": 2003,
+                "raw": 0.554,
+                "normalized": 52.8,
+                "tier": "expert_panel"
+              },
+              {
+                "year": 2004,
+                "raw": 0.554,
+                "normalized": 52.8,
+                "tier": "expert_panel"
+              },
+              {
+                "year": 2005,
+                "raw": 0.554,
+                "normalized": 52.8,
+                "tier": "expert_panel"
+              },
+              {
+                "year": 2006,
+                "raw": 0.554,
+                "normalized": 52.8,
+                "tier": "expert_panel"
+              },
+              {
+                "year": 2007,
+                "raw": 0.554,
+                "normalized": 52.8,
+                "tier": "expert_panel"
+              },
+              {
+                "year": 2008,
+                "raw": 0.576,
+                "normalized": 55.2,
+                "tier": "expert_panel"
+              },
+              {
+                "year": 2009,
+                "raw": 0.585,
+                "normalized": 56.2,
+                "tier": "expert_panel"
+              },
+              {
+                "year": 2010,
+                "raw": 0.613,
+                "normalized": 59.3,
+                "tier": "expert_panel"
+              },
+              {
+                "year": 2011,
+                "raw": 0.613,
+                "normalized": 59.3,
+                "tier": "expert_panel"
+              },
+              {
+                "year": 2012,
+                "raw": 0.613,
+                "normalized": 59.3,
+                "tier": "expert_panel"
+              },
+              {
+                "year": 2013,
+                "raw": 0.633,
+                "normalized": 61.6,
+                "tier": "expert_panel"
+              },
+              {
+                "year": 2014,
+                "raw": 0.633,
+                "normalized": 61.6,
+                "tier": "expert_panel"
+              },
+              {
+                "year": 2015,
+                "raw": 0.633,
+                "normalized": 61.6,
+                "tier": "expert_panel"
+              },
+              {
+                "year": 2016,
+                "raw": 0.629,
+                "normalized": 61.1,
+                "tier": "expert_panel"
+              },
+              {
+                "year": 2017,
+                "raw": 0.638,
+                "normalized": 62.1,
+                "tier": "expert_panel"
+              },
+              {
+                "year": 2018,
+                "raw": 0.618,
+                "normalized": 59.9,
+                "tier": "expert_panel"
+              },
+              {
+                "year": 2019,
+                "raw": 0.638,
+                "normalized": 62.1,
+                "tier": "expert_panel"
+              },
+              {
+                "year": 2020,
+                "raw": 0.66,
+                "normalized": 64.6,
+                "tier": "expert_panel"
+              },
+              {
+                "year": 2021,
+                "raw": 0.66,
+                "normalized": 64.6,
+                "tier": "expert_panel"
+              },
+              {
+                "year": 2022,
+                "raw": 0.648,
+                "normalized": 63.2,
+                "tier": "expert_panel"
+              },
+              {
+                "year": 2023,
+                "raw": 0.662,
+                "normalized": 64.8,
+                "tier": "expert_panel"
+              },
+              {
+                "year": 2024,
+                "raw": 0.662,
+                "normalized": 64.8,
+                "tier": "expert_panel"
+              },
+              {
                 "year": 2025,
                 "raw": 0.662,
                 "normalized": 64.8,
@@ -1229,6 +1487,204 @@
             "winsorized": false,
             "outOfFrame": false,
             "series": [
+              {
+                "year": 1992,
+                "raw": 0.821,
+                "normalized": 20.2,
+                "tier": "expert_panel"
+              },
+              {
+                "year": 1993,
+                "raw": 0.821,
+                "normalized": 20.2,
+                "tier": "expert_panel"
+              },
+              {
+                "year": 1994,
+                "raw": 0.821,
+                "normalized": 20.2,
+                "tier": "expert_panel"
+              },
+              {
+                "year": 1995,
+                "raw": 0.821,
+                "normalized": 20.2,
+                "tier": "expert_panel"
+              },
+              {
+                "year": 1996,
+                "raw": 1.49,
+                "normalized": 38.1,
+                "tier": "expert_panel"
+              },
+              {
+                "year": 1997,
+                "raw": 1.49,
+                "normalized": 38.1,
+                "tier": "expert_panel"
+              },
+              {
+                "year": 1998,
+                "raw": 1.49,
+                "normalized": 38.1,
+                "tier": "expert_panel"
+              },
+              {
+                "year": 1999,
+                "raw": 1.49,
+                "normalized": 38.1,
+                "tier": "expert_panel"
+              },
+              {
+                "year": 2000,
+                "raw": 1.49,
+                "normalized": 38.1,
+                "tier": "expert_panel"
+              },
+              {
+                "year": 2001,
+                "raw": 1.974,
+                "normalized": 51.1,
+                "tier": "expert_panel"
+              },
+              {
+                "year": 2002,
+                "raw": 1.974,
+                "normalized": 51.1,
+                "tier": "expert_panel"
+              },
+              {
+                "year": 2003,
+                "raw": 2.375,
+                "normalized": 61.8,
+                "tier": "expert_panel"
+              },
+              {
+                "year": 2004,
+                "raw": 2.375,
+                "normalized": 61.8,
+                "tier": "expert_panel"
+              },
+              {
+                "year": 2005,
+                "raw": 2.375,
+                "normalized": 61.8,
+                "tier": "expert_panel"
+              },
+              {
+                "year": 2006,
+                "raw": 2.375,
+                "normalized": 61.8,
+                "tier": "expert_panel"
+              },
+              {
+                "year": 2007,
+                "raw": 2.375,
+                "normalized": 61.8,
+                "tier": "expert_panel"
+              },
+              {
+                "year": 2008,
+                "raw": 2.375,
+                "normalized": 61.8,
+                "tier": "expert_panel"
+              },
+              {
+                "year": 2009,
+                "raw": 2.229,
+                "normalized": 57.9,
+                "tier": "expert_panel"
+              },
+              {
+                "year": 2010,
+                "raw": 2.229,
+                "normalized": 57.9,
+                "tier": "expert_panel"
+              },
+              {
+                "year": 2011,
+                "raw": 2.229,
+                "normalized": 57.9,
+                "tier": "expert_panel"
+              },
+              {
+                "year": 2012,
+                "raw": 2.229,
+                "normalized": 57.9,
+                "tier": "expert_panel"
+              },
+              {
+                "year": 2013,
+                "raw": 2.089,
+                "normalized": 54.2,
+                "tier": "expert_panel"
+              },
+              {
+                "year": 2014,
+                "raw": 2.089,
+                "normalized": 54.2,
+                "tier": "expert_panel"
+              },
+              {
+                "year": 2015,
+                "raw": 2.089,
+                "normalized": 54.2,
+                "tier": "expert_panel"
+              },
+              {
+                "year": 2016,
+                "raw": 2.281,
+                "normalized": 59.3,
+                "tier": "expert_panel"
+              },
+              {
+                "year": 2017,
+                "raw": 2.199,
+                "normalized": 57.1,
+                "tier": "expert_panel"
+              },
+              {
+                "year": 2018,
+                "raw": 2.176,
+                "normalized": 56.5,
+                "tier": "expert_panel"
+              },
+              {
+                "year": 2019,
+                "raw": 2.24,
+                "normalized": 58.2,
+                "tier": "expert_panel"
+              },
+              {
+                "year": 2020,
+                "raw": 2.03,
+                "normalized": 52.6,
+                "tier": "expert_panel"
+              },
+              {
+                "year": 2021,
+                "raw": 2.152,
+                "normalized": 55.9,
+                "tier": "expert_panel"
+              },
+              {
+                "year": 2022,
+                "raw": 2.347,
+                "normalized": 61.1,
+                "tier": "expert_panel"
+              },
+              {
+                "year": 2023,
+                "raw": 2.29,
+                "normalized": 59.5,
+                "tier": "expert_panel"
+              },
+              {
+                "year": 2024,
+                "raw": 2.36,
+                "normalized": 61.4,
+                "tier": "expert_panel"
+              },
               {
                 "year": 2025,
                 "raw": 2.36,

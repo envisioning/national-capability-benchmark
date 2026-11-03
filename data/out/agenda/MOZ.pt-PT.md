@@ -1,6 +1,6 @@
 # Agenda de capacidades: Moçambique
 
-*Gerada em 2026-11-02*
+*Gerada em 2026-11-03*
 
 A escala reúne 135 países. Cada dimensão recebe uma pontuação de 0 a 100, sem classificação geral, e cada pontuação traz ao lado a solidez da evidência. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma pontuação.
 
@@ -10,7 +10,7 @@ A escala reúne 135 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 | --- | --- | --- | --- |
 | Antecipação | 25,4 | 0,46 (utilizável) | +12,8 em 10 anos, com base em 2 indicadores |
 | Agência | 26,9 | 0,24 (muito fraca) | sem tendência comparável |
-| Coordenação | 84,7 | 0,28 (fraca) | sem tendência comparável |
+| Coordenação | 84,7 | 0,28 (fraca) | +12,2 em 10 anos, com base em 2 indicadores |
 | Confiança | 65,3 | 0,21 (muito fraca) | sem tendência comparável |
 | Aprendizagem | 32,8 | 0,55 (utilizável) | sem tendência comparável |
 | Experimentação | 0,9 | 0,37 (fraca) | +0,2 em 10 anos, com base em 3 indicadores |

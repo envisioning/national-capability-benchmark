@@ -1,6 +1,6 @@
 # Agenda de capacidades: Etiópia
 
-*Gerada em 2026-11-02*
+*Gerada em 2026-11-03*
 
 A escala reúne 135 países. Cada dimensão recebe uma pontuação de 0 a 100, sem classificação geral, e cada pontuação traz ao lado a solidez da evidência. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma pontuação.
 
@@ -10,8 +10,8 @@ A escala reúne 135 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 | --- | --- | --- | --- |
 | Antecipação | 21,7 | 0,46 (utilizável) | +10,2 em 10 anos, com base em 2 indicadores |
 | Agência | 40,1 | 0,44 (fraca) | sem tendência comparável |
-| Coordenação | 80 | 0,29 (fraca) | sem tendência comparável |
-| Confiança | 43,8 | 0,41 (fraca) | sem tendência comparável |
+| Coordenação | 80 | 0,29 (fraca) | +22,5 em 10 anos, com base em 2 indicadores |
+| Confiança | 43,8 | 0,41 (fraca) | +12,9 em 10 anos, com base em 2 indicadores |
 | Aprendizagem | 26,7 | 0,55 (utilizável) | sem tendência comparável |
 | Experimentação | 0,8 | 0,37 (fraca) | +0,2 em 10 anos, com base em 2 indicadores |
 | Adaptação | 53 | 0,48 (utilizável) | sem tendência comparável |

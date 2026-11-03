@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-02T16:48:25.138Z",
+  "generatedAt": "2026-11-03T08:12:59.169Z",
   "iso3": "MDG",
   "country": "Madagascar",
   "dimensions": [
@@ -442,7 +442,12 @@
       "score": 47.3,
       "confidence": 0.48,
       "band": "usable",
-      "trend": null,
+      "trend": {
+        "spanYears": 10,
+        "delta": -27.5,
+        "basket": 2,
+        "clamped": 0
+      },
       "scoredOn": [
         "trade_compliance_efficiency",
         "budget_execution_fidelity",
@@ -1672,7 +1677,12 @@
       "score": 39.5,
       "confidence": 0.324,
       "band": "thin",
-      "trend": null,
+      "trend": {
+        "spanYears": 10,
+        "delta": 3.9,
+        "basket": 2,
+        "clamped": 0
+      },
       "scoredOn": [
         "dispute_resolution_efficiency",
         "bribery_incidence",

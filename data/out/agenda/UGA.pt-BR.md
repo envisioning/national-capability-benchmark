@@ -1,6 +1,6 @@
 # Agenda de capacidades: Uganda
 
-*Gerada em 2026-11-02*
+*Gerada em 2026-11-03*
 
 A escala reúne 135 países. Cada dimensão recebe uma pontuação de 0 a 100, sem classificação geral, e cada pontuação traz ao lado a solidez da evidência. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma pontuação.
 
@@ -10,8 +10,8 @@ A escala reúne 135 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 | --- | --- | --- | --- |
 | Antecipação | 27,5 | 0,46 (utilizável) | +4,5 em 10 anos, com base em 2 indicadores |
 | Agência | 21,5 | 0,3 (fraca) | sem tendência comparável |
-| Coordenação | 83,6 | 0,27 (fraca) | sem tendência comparável |
-| Confiança | 51,2 | 0,21 (muito fraca) | sem tendência comparável |
+| Coordenação | 83,6 | 0,27 (fraca) | -4,6 em 10 anos, com base em 2 indicadores |
+| Confiança | 51,2 | 0,21 (muito fraca) | +2,4 em 10 anos, com base em 2 indicadores |
 | Aprendizagem | 36,8 | 0,55 (utilizável) | sem tendência comparável |
 | Experimentação | 1,2 | 0,37 (fraca) | +0,2 em 10 anos, com base em 2 indicadores |
 | Adaptação | 56,2 | 0,62 (utilizável) | sem tendência comparável |

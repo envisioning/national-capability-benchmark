@@ -1,6 +1,6 @@
 # Capability agenda: Colombia
 
-*Generated 2026-11-02*
+*Generated 2026-11-03*
 
 The frame includes 135 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
@@ -10,7 +10,7 @@ The frame includes 135 countries. Each dimension is scored from 0 to 100, with n
 | --- | --- | --- | --- |
 | Anticipation | 43.6 | 0.46 (usable) | +11.5 over 10 years using 2 indicators |
 | Agency | 65.4 | 0.63 (usable) | no trend |
-| Coordination | 62.5 | 0.45 (usable) | no trend |
+| Coordination | 62.5 | 0.45 (usable) | -3.7 over 10 years using 2 indicators |
 | Trust | 50.4 | 0.54 (usable) | no trend |
 | Learning | 45.2 | 0.54 (usable) | no trend |
 | Experimentation | 34.1 | 0.62 (usable) | no trend |

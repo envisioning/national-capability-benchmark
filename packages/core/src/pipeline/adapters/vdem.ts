@@ -8,6 +8,7 @@ import {
   COUNTRIES,
   VDEM_CY_CSV,
   VDEM_CY_DATASET,
+  VDEM_CY_HISTORY_FROM,
   VDEM_CY_RELEASE,
   VDEM_CY_URL,
   VDEM_CY_YEAR,
@@ -31,7 +32,10 @@ export const VDEM_ADAPTER_ID = 'v-dem-cy-full-v16'
  * (D131).
  *
  * `years` says which country-year a variable is read from. `release_year`
- * reads the pinned release year and nothing else. `latest_election` exists
+ * reads the pinned release year and nothing else. `series` reads every year
+ * from `VDEM_CY_HISTORY_FROM` to the release year, all from the one pinned
+ * release, so a trend compares values coded on one scale; scoring still reads
+ * the latest (D180). `latest_election` exists
  * because V-Dem codes election variables in election years only, so a single
  * pinned year would leave most of the frame blank: it reads each country's most
  * recent row up to the release year that carries a value, records that row's
@@ -46,7 +50,7 @@ export const VDEM_CY_VARIABLES = [
     min: 0,
     max: 1,
     scaleNote: 'expert-coded index on a 0-1 scale',
-    years: 'release_year',
+    years: 'series',
     context: [],
   },
   {
@@ -75,7 +79,7 @@ export const VDEM_CY_VARIABLES = [
     max: 4,
     scaleNote:
       'expert-coded frequency with which the government complies with important decisions of courts other than the high court that it disagrees with, on the original 0-4 response scale, 0 never and 4 always',
-    years: 'release_year',
+    years: 'series',
     context: [],
   },
 ] as const satisfies ReadonlyArray<{
@@ -84,7 +88,7 @@ export const VDEM_CY_VARIABLES = [
   min: number
   max: number
   scaleNote: string
-  years: 'release_year' | 'latest_election'
+  years: 'release_year' | 'series' | 'latest_election'
   context: readonly string[]
 }>
 
@@ -242,6 +246,10 @@ class VdemAccumulator {
         })
         return
       }
+      if (spec.years === 'series') {
+        if (year >= VDEM_CY_HISTORY_FROM) this.emit(spec, iso3, rawValue, year, [])
+        return
+      }
       if (year !== VDEM_CY_YEAR) return
       this.emit(spec, iso3, rawValue, VDEM_CY_YEAR, [])
     })
@@ -282,13 +290,14 @@ class VdemAccumulator {
       for (const [iso3, row] of this.latest[i]!) this.emit(spec, iso3, row.raw, row.year, row.context)
     })
     const observations = [...this.observations].sort(
-      (a, b) => a.indicatorId.localeCompare(b.indicatorId) || a.iso3.localeCompare(b.iso3),
+      (a, b) => a.indicatorId.localeCompare(b.indicatorId) || a.iso3.localeCompare(b.iso3) || a.year - b.year,
     )
     const countries = [...new Set(observations.map((o) => o.iso3))].sort()
+    /* Countries, not rows: a series row has one observation per year. */
     const coverageByIndicator = Object.fromEntries(
       VDEM_CY_VARIABLES.map((spec) => [
         spec.indicatorId,
-        observations.filter((o) => o.indicatorId === spec.indicatorId).length,
+        new Set(observations.filter((o) => o.indicatorId === spec.indicatorId).map((o) => o.iso3)).size,
       ]),
     )
     return {
@@ -307,10 +316,10 @@ class VdemAccumulator {
 
 /**
  * Parse the pinned V-Dem country-year release into the existing observation
- * shape. One value per country and variable is emitted: the release year, or
- * for an election variable the latest election up to it. The adapter
- * deliberately does not invent a time series from a source whose release is
- * versioned.
+ * shape. A check emits one value per country: the release year, or for an
+ * election variable the latest election up to it. A scored row emits the
+ * release's own country-years from `VDEM_CY_HISTORY_FROM`, never values from
+ * an older release, so the series is one coding on one scale (D180).
  */
 export function parseVdem(
   csv: string,

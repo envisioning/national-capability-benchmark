@@ -29,11 +29,24 @@ assert.deepEqual(result.coverageByIndicator, {
   __check__voter_turnout: 2,
   court_compliance: 2,
 })
-assert.equal(result.observations.length, 9)
+assert.equal(result.observations.length, 16)
 const civil = result.observations.filter((o) => o.indicatorId === 'civil_society_strength')
 assert.equal(civil[0]?.indicatorId, 'civil_society_strength')
 assert.equal(civil[0]?.iso3, 'BRA')
-assert.equal(civil[0]?.year, Y)
+assert.equal(civil[0]?.year, Y - 6)
+/* A scored row reads every country-year of the release up to the release
+ * year, oldest first; a year past it is ignored and an out-of-scale year is
+ * dropped on its own (D180). */
+assert.deepEqual(
+  civil.map((o) => [o.iso3, o.year, o.value]),
+  [
+    ['BRA', Y - 6, 0.9],
+    ['BRA', Y - 2, 0.89],
+    ['BRA', Y - 1, 0.88],
+    ['BRA', Y, 0.898],
+    ['USA', Y, 0.981],
+  ],
+)
 assert.equal(civil[0]?.sourceUrl, 'fixture://vdem')
 assert.equal(civil[0]?.sourceTier, 'expert_panel')
 const polarization = result.observations.filter((o) => o.indicatorId === '__check__political_polarization')
@@ -47,13 +60,17 @@ assert.deepEqual(
 )
 assert.ok(polarization[0]?.note?.startsWith('v2cacamps_osp;'))
 
-/* Court compliance reads the release year only, on the 0-4 scale: the
- * United States' out-of-scale 4.2 is dropped, never clamped. See D131. */
+/* Court compliance reads the series on the 0-4 scale: the United States'
+ * out-of-scale 4.2 is dropped, never clamped. See D131 and D180. */
 const compliance = result.observations.filter((o) => o.indicatorId === 'court_compliance')
 assert.deepEqual(
   compliance.map((o) => [o.iso3, o.year, o.value]),
   [
+    ['BRA', Y - 6, 3.5],
+    ['BRA', Y - 2, 3.6],
+    ['BRA', Y - 1, 3.7],
     ['BRA', Y, 3.761],
+    ['IRL', Y - 4, 3],
     ['IRL', Y, 3.4],
   ],
 )
@@ -105,4 +122,4 @@ assert.throws(
   /missing v2elcomvot/,
 )
 
-console.log('V-Dem adapter validated: pinned year, latest election, benchmark filtering, per-variable scale.')
+console.log('V-Dem adapter validated: pinned year, series, latest election, benchmark filtering, per-variable scale.')

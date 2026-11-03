@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-02T19:37:30.756Z",
+  "generatedAt": "2026-11-03T08:12:39.691Z",
   "gdpSeries": "NY.GDP.PCAP.PP.KD",
   "income": [
     {
@@ -1236,9 +1236,10 @@
           "9.4.0",
           "9.5.0",
           "9.6.0",
-          "10.0.0"
+          "10.0.0",
+          "10.0.1"
         ],
-        "pairs": 32,
+        "pairs": 33,
         "perDimension": [
           {
             "dimension": "anticipation",
@@ -2013,9 +2014,9 @@
     ]
   },
   "delphiApplication": {
-    "datasetVersion": "10.0.0",
+    "datasetVersion": "10.0.1",
     "sourceDatasetVersion": "10.0.0",
-    "mode": "exact",
+    "mode": "carried",
     "cells": 1215,
     "carried": 1215,
     "dropped": [],
@@ -2486,6 +2487,22 @@
         "lowDiscrimination": false
       },
       {
+        "indicatorId": "court_compliance",
+        "dimension": "trust",
+        "countries": 135,
+        "years": 21,
+        "firstYear": 2006,
+        "lastYear": 2026,
+        "firstSpread": 42.33,
+        "lastSpread": 48.53,
+        "changeShare": 0.146,
+        "spearman": 0.348,
+        "carriedForwardCells": 135,
+        "clampedCells": 11,
+        "fading": false,
+        "lowDiscrimination": false
+      },
+      {
         "indicatorId": "budget_execution_fidelity",
         "dimension": "coordination",
         "countries": 23,
@@ -2514,6 +2531,22 @@
         "spearman": 0.438,
         "carriedForwardCells": 204,
         "clampedCells": 9,
+        "fading": false,
+        "lowDiscrimination": false
+      },
+      {
+        "indicatorId": "civil_society_strength",
+        "dimension": "coordination",
+        "countries": 135,
+        "years": 21,
+        "firstYear": 2006,
+        "lastYear": 2026,
+        "firstSpread": 31.11,
+        "lastSpread": 34.44,
+        "changeShare": 0.107,
+        "spearman": 0.618,
+        "carriedForwardCells": 135,
+        "clampedCells": 63,
         "fading": false,
         "lowDiscrimination": false
       },
@@ -2646,39 +2679,7 @@
         "lowDiscrimination": false
       },
       {
-        "indicatorId": "civil_society_strength",
-        "dimension": "coordination",
-        "countries": 0,
-        "years": 0,
-        "firstYear": null,
-        "lastYear": null,
-        "firstSpread": null,
-        "lastSpread": null,
-        "changeShare": null,
-        "spearman": null,
-        "carriedForwardCells": 0,
-        "clampedCells": 0,
-        "fading": false,
-        "lowDiscrimination": false
-      },
-      {
         "indicatorId": "dispute_resolution_efficiency",
-        "dimension": "trust",
-        "countries": 0,
-        "years": 0,
-        "firstYear": null,
-        "lastYear": null,
-        "firstSpread": null,
-        "lastSpread": null,
-        "changeShare": null,
-        "spearman": null,
-        "carriedForwardCells": 0,
-        "clampedCells": 0,
-        "fading": false,
-        "lowDiscrimination": false
-      },
-      {
-        "indicatorId": "court_compliance",
         "dimension": "trust",
         "countries": 0,
         "years": 0,

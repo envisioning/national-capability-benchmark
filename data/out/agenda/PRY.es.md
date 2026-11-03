@@ -1,6 +1,6 @@
 # Agenda de capacidades: Paraguay
 
-*Generado el 2026-11-02*
+*Generado el 2026-11-03*
 
 La comparación incluye 135 países. Cada dimensión recibe una puntuación de 0 a 100, sin clasificación general, y cada puntuación muestra a su lado la solidez de la evidencia. Antes de citar una puntuación, lea [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md).
 
@@ -10,8 +10,8 @@ La comparación incluye 135 países. Cada dimensión recibe una puntuación de 0
 | --- | --- | --- | --- |
 | Anticipación | 32.7 | 0.46 (utilizable) | +19.5 en 10 años, con 2 indicadores |
 | Iniciativa | 35.1 | 0.49 (utilizable) | sin base de tendencia |
-| Coordinación | 49.5 | 0.44 (débil) | sin base de tendencia |
-| Confianza | 49.2 | 0.33 (débil) | sin base de tendencia |
+| Coordinación | 49.5 | 0.44 (débil) | +9.2 en 10 años, con 2 indicadores |
+| Confianza | 49.2 | 0.33 (débil) | +8.6 en 20 años, con 2 indicadores |
 | Aprendizaje | 31.8 | 0.54 (utilizable) | sin base de tendencia |
 | Experimentación | 14.6 | 0.47 (utilizable) | -9.2 en 20 años, con 3 indicadores |
 | Adaptación | 64.8 | 0.62 (utilizable) | sin base de tendencia |

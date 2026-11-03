@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-02T16:48:25.138Z",
+  "generatedAt": "2026-11-03T08:12:59.169Z",
   "iso3": "UGA",
   "country": "Uganda",
   "dimensions": [
@@ -441,7 +441,12 @@
       "score": 83.6,
       "confidence": 0.266,
       "band": "thin",
-      "trend": null,
+      "trend": {
+        "spanYears": 10,
+        "delta": -4.6,
+        "basket": 2,
+        "clamped": 0
+      },
       "scoredOn": [
         "budget_execution_fidelity",
         "civil_society_strength"
@@ -1656,7 +1661,12 @@
       "score": 51.2,
       "confidence": 0.207,
       "band": "very_thin",
-      "trend": null,
+      "trend": {
+        "spanYears": 10,
+        "delta": 2.4,
+        "basket": 2,
+        "clamped": 0
+      },
       "scoredOn": [
         "bribery_incidence",
         "court_compliance"

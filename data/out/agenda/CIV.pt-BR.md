@@ -1,6 +1,6 @@
 # Agenda de capacidades: Costa do Marfim
 
-*Gerada em 2026-11-02*
+*Gerada em 2026-11-03*
 
 A escala reúne 135 países. Cada dimensão recebe uma pontuação de 0 a 100, sem classificação geral, e cada pontuação traz ao lado a solidez da evidência. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma pontuação.
 
@@ -11,7 +11,7 @@ A escala reúne 135 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 | Antecipação | 28,6 | 0,46 (utilizável) | +21,1 em 10 anos, com base em 2 indicadores |
 | Agência | 69,9 | 0,49 (utilizável) | sem tendência comparável |
 | Coordenação | 62,5 | 0,37 (fraca) | sem tendência comparável |
-| Confiança | 58,8 | 0,33 (fraca) | sem tendência comparável |
+| Confiança | 58,8 | 0,33 (fraca) | +3,1 em 10 anos, com base em 2 indicadores |
 | Aprendizagem | 21,2 | 0,54 (utilizável) | sem tendência comparável |
 | Experimentação | 14,8 | 0,19 (muito fraca) | sem tendência comparável |
 | Adaptação | 47,7 | 0,55 (utilizável) | sem tendência comparável |

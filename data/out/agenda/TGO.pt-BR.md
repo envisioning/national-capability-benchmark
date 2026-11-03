@@ -1,6 +1,6 @@
 # Agenda de capacidades: Togo
 
-*Gerada em 2026-11-02*
+*Gerada em 2026-11-03*
 
 A escala reúne 135 países. Cada dimensão recebe uma pontuação de 0 a 100, sem classificação geral, e cada pontuação traz ao lado a solidez da evidência. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma pontuação.
 
@@ -11,7 +11,7 @@ A escala reúne 135 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 | Antecipação | 25,4 | 0,46 (utilizável) | +13,3 em 10 anos, com base em 2 indicadores |
 | Agência | 63 | 0,49 (utilizável) | sem tendência comparável |
 | Coordenação | 65,6 | 0,36 (fraca) | sem tendência comparável |
-| Confiança | 55,4 | 0,33 (fraca) | sem tendência comparável |
+| Confiança | 55,4 | 0,33 (fraca) | +8,2 em 10 anos, com base em 2 indicadores |
 | Aprendizagem | 30,4 | 0,54 (utilizável) | sem tendência comparável |
 | Experimentação | 26,5 | 0,18 (muito fraca) | sem tendência comparável |
 | Adaptação | 60,3 | 0,59 (utilizável) | sem tendência comparável |

@@ -1,6 +1,6 @@
 # Capability agenda: Moldova
 
-*Generated 2026-11-02*
+*Generated 2026-11-03*
 
 The frame includes 135 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
@@ -10,8 +10,8 @@ The frame includes 135 countries. Each dimension is scored from 0 to 100, with n
 | --- | --- | --- | --- |
 | Anticipation | 45.1 | 0.46 (usable) | +13 over 10 years using 2 indicators |
 | Agency | 71 | 0.49 (usable) | no trend |
-| Coordination | 83.4 | 0.48 (usable) | no trend |
-| Trust | 61.7 | 0.34 (thin) | no trend |
+| Coordination | 83.4 | 0.48 (usable) | +8 over 10 years using 2 indicators |
+| Trust | 61.7 | 0.34 (thin) | +17.8 over 10 years using 2 indicators |
 | Learning | 30.9 | 0.55 (usable) | no trend |
 | Experimentation | 36.6 | 0.47 (usable) | -2.8 over 10 years using 3 indicators |
 | Adaptability | 73.9 | 0.62 (usable) | no trend |

@@ -1,6 +1,6 @@
 # Agenda de capacidades: Zimbábue
 
-*Gerada em 2026-11-02*
+*Gerada em 2026-11-03*
 
 A escala reúne 135 países. Cada dimensão recebe uma pontuação de 0 a 100, sem classificação geral, e cada pontuação traz ao lado a solidez da evidência. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma pontuação.
 
@@ -10,8 +10,8 @@ A escala reúne 135 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 | --- | --- | --- | --- |
 | Antecipação | 25,9 | 0,46 (utilizável) | +23,2 em 10 anos, com base em 2 indicadores |
 | Agência | 45 | 0,44 (fraca) | sem tendência comparável |
-| Coordenação | 58,7 | 0,25 (fraca) | sem tendência comparável |
-| Confiança | 16,7 | 0,41 (fraca) | sem tendência comparável |
+| Coordenação | 58,7 | 0,25 (fraca) | -22,4 em 10 anos, com base em 2 indicadores |
+| Confiança | 16,7 | 0,41 (fraca) | -39,1 em 10 anos, com base em 2 indicadores |
 | Aprendizagem | 38,9 | 0,55 (utilizável) | sem tendência comparável |
 | Experimentação | 1,6 | 0,37 (fraca) | +0,4 em 10 anos, com base em 2 indicadores |
 | Adaptação | 45,7 | 0,62 (utilizável) | sem tendência comparável |

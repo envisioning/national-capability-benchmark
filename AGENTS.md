@@ -10,7 +10,7 @@ countries (D153, D176), nine dimensions, equal weights and no headline ranking.
 pnpm install
 pnpm bench ingest      fetch World Bank series from 1990 into data/observations/worldbank.json
 pnpm bench evs fetch   import the pinned Joint EVS/WVS items (A165 trust, A173 perceived control, A080_01 charitable membership, and the E069_17 court confidence check) into data/observations/joint-evs-wvs.json; `trust fetch` is an alias
-pnpm bench vdem fetch  import the pinned V-Dem civil-society and court-compliance series and the polarization and turnout checks into data/observations/vdem-cy-core.json
+pnpm bench vdem fetch  import the pinned V-Dem civil-society and court-compliance series (every country-year from 1990, D180) and the polarization and turnout checks into data/observations/vdem-cy-core.json
 pnpm bench unctad fetch import the pinned UNCTADstat export concentration index into data/observations/unctad-concentration.json (needs bsdtar)
 pnpm bench grs fetch   fill tax revenue from the pinned OECD Global Revenue Statistics into data/observations/oecd-grs-tax-fill.json, only where the World Bank has no value inside the D159 window; run it after `bench ingest`, because it reads worldbank.json (D172)
 pnpm bench ilostat fetch derive and gate the ILOSTAT long-term unemployment share into data/observations/ilostat-ltu.json, and read the informal employment rate (a condition) into data/observations/ilostat-informality.json; --only ltu|informality runs one

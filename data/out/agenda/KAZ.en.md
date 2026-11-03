@@ -1,6 +1,6 @@
 # Capability agenda: Kazakhstan
 
-*Generated 2026-11-02*
+*Generated 2026-11-03*
 
 The frame includes 135 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
@@ -10,7 +10,7 @@ The frame includes 135 countries. Each dimension is scored from 0 to 100, with n
 | --- | --- | --- | --- |
 | Anticipation | 45.2 | 0.46 (usable) | +14 over 10 years using 2 indicators |
 | Agency | 58.7 | 0.63 (usable) | no trend |
-| Coordination | 65.1 | 0.48 (usable) | no trend |
+| Coordination | 65.1 | 0.48 (usable) | +9.9 over 10 years using 2 indicators |
 | Trust | 41.7 | 0.55 (usable) | no trend |
 | Learning | 29.8 | 0.55 (usable) | no trend |
 | Experimentation | 24.2 | 0.47 (usable) | +6.9 over 10 years using 3 indicators |

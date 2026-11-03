@@ -1,6 +1,6 @@
 # Agenda de capacidades: Egito
 
-*Gerada em 2026-11-02*
+*Gerada em 2026-11-03*
 
 A escala reúne 135 países. Cada dimensão recebe uma pontuação de 0 a 100, sem classificação geral, e cada pontuação traz ao lado a solidez da evidência. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma pontuação.
 
@@ -10,8 +10,8 @@ A escala reúne 135 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 | --- | --- | --- | --- |
 | Antecipação | 39,2 | 0,46 (utilizável) | +3,3 em 10 anos, com base em 2 indicadores |
 | Agência | 35,4 | 0,41 (fraca) | sem tendência comparável |
-| Coordenação | 53,9 | 0,27 (fraca) | sem tendência comparável |
-| Confiança | 38 | 0,41 (fraca) | sem tendência comparável |
+| Coordenação | 53,9 | 0,27 (fraca) | +7,7 em 10 anos, com base em 2 indicadores |
+| Confiança | 38 | 0,41 (fraca) | +6,7 em 10 anos, com base em 2 indicadores |
 | Aprendizagem | 24,4 | 0,55 (utilizável) | sem tendência comparável |
 | Experimentação | 9 | 0,37 (fraca) | +2,2 em 10 anos, com base em 3 indicadores |
 | Adaptação | 77,5 | 0,62 (utilizável) | sem tendência comparável |

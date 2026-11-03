@@ -1,6 +1,6 @@
 # Agenda de capacidades: Nepal
 
-*Gerada em 2026-11-02*
+*Gerada em 2026-11-03*
 
 A escala reúne 135 países. Cada dimensão recebe uma pontuação de 0 a 100, sem classificação geral, e cada pontuação traz ao lado a solidez da evidência. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma pontuação.
 
@@ -10,8 +10,8 @@ A escala reúne 135 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 | --- | --- | --- | --- |
 | Antecipação | 20,5 | 0,46 (utilizável) | +11,6 em 10 anos, com base em 2 indicadores |
 | Agência | 35,4 | 0,43 (fraca) | sem tendência comparável |
-| Coordenação | 70,1 | 0,48 (utilizável) | sem tendência comparável |
-| Confiança | 82 | 0,33 (fraca) | sem tendência comparável |
+| Coordenação | 70,1 | 0,48 (utilizável) | +4,5 em 10 anos, com base em 2 indicadores |
+| Confiança | 82 | 0,33 (fraca) | +7,9 em 10 anos, com base em 2 indicadores |
 | Aprendizagem | 26,8 | 0,54 (utilizável) | sem tendência comparável |
 | Experimentação | 4,3 | 0,3 (fraca) | sem tendência comparável |
 | Adaptação | 52,6 | 0,53 (utilizável) | sem tendência comparável |

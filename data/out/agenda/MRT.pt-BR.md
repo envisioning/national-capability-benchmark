@@ -1,6 +1,6 @@
 # Agenda de capacidades: Mauritânia
 
-*Gerada em 2026-11-02*
+*Gerada em 2026-11-03*
 
 A escala reúne 135 países. Cada dimensão recebe uma pontuação de 0 a 100, sem classificação geral, e cada pontuação traz ao lado a solidez da evidência. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma pontuação.
 
@@ -11,7 +11,7 @@ A escala reúne 135 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 | Antecipação | 17,9 | 0,46 (utilizável) | +16 em 10 anos, com base em 2 indicadores |
 | Agência | 44,5 | 0,3 (fraca) | sem tendência comparável |
 | Coordenação | 71,3 | 0,22 (muito fraca) | sem tendência comparável |
-| Confiança | 29,6 | 0,21 (muito fraca) | sem tendência comparável |
+| Confiança | 29,6 | 0,21 (muito fraca) | -3,6 em 10 anos, com base em 2 indicadores |
 | Aprendizagem | 23,1 | 0,55 (utilizável) | sem tendência comparável |
 | Experimentação | 6,9 | 0,14 (muito fraca) | sem tendência comparável |
 | Adaptação | 38,1 | 0,46 (utilizável) | sem tendência comparável |

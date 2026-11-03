@@ -1,6 +1,6 @@
 # Agenda de capacidades: Argentina
 
-*Generado el 2026-11-02*
+*Generado el 2026-11-03*
 
 La comparación incluye 135 países. Cada dimensión recibe una puntuación de 0 a 100, sin clasificación general, y cada puntuación muestra a su lado la solidez de la evidencia. Antes de citar una puntuación, lea [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md).
 
@@ -10,7 +10,7 @@ La comparación incluye 135 países. Cada dimensión recibe una puntuación de 0
 | --- | --- | --- | --- |
 | Anticipación | 41.2 | 0.46 (utilizable) | +13.5 en 10 años, con 2 indicadores |
 | Iniciativa | 41.1 | 0.44 (débil) | sin base de tendencia |
-| Coordinación | 55.6 | 0.25 (débil) | sin base de tendencia |
+| Coordinación | 55.6 | 0.25 (débil) | -1.7 en 10 años, con 2 indicadores |
 | Confianza | 51.7 | 0.35 (débil) | sin base de tendencia |
 | Aprendizaje | 43.4 | 0.42 (débil) | sin base de tendencia |
 | Experimentación | 23.6 | 0.54 (utilizable) | +2.9 en 10 años, con 3 indicadores |

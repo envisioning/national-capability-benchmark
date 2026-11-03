@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-02T16:48:25.138Z",
+  "generatedAt": "2026-11-03T08:12:59.169Z",
   "iso3": "SVK",
   "country": "Slovakia",
   "dimensions": [
@@ -442,7 +442,12 @@
       "score": 63.7,
       "confidence": 0.453,
       "band": "usable",
-      "trend": null,
+      "trend": {
+        "spanYears": 10,
+        "delta": -36.7,
+        "basket": 2,
+        "clamped": 0
+      },
       "scoredOn": [
         "trade_compliance_efficiency",
         "budget_execution_fidelity",
@@ -1658,7 +1663,12 @@
       "score": 82,
       "confidence": 0.334,
       "band": "thin",
-      "trend": null,
+      "trend": {
+        "spanYears": 10,
+        "delta": 1.9,
+        "basket": 2,
+        "clamped": 0
+      },
       "scoredOn": [
         "dispute_resolution_efficiency",
         "bribery_incidence",

@@ -1,6 +1,6 @@
 # Capability agenda: Kyrgyzstan
 
-*Generated 2026-11-02*
+*Generated 2026-11-03*
 
 The frame includes 135 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
@@ -10,7 +10,7 @@ The frame includes 135 countries. Each dimension is scored from 0 to 100, with n
 | --- | --- | --- | --- |
 | Anticipation | 37.3 | 0.46 (usable) | -1.2 over 10 years using 2 indicators |
 | Agency | 66.6 | 0.63 (usable) | no trend |
-| Coordination | 67.3 | 0.47 (usable) | no trend |
+| Coordination | 67.3 | 0.47 (usable) | -7.2 over 10 years using 2 indicators |
 | Trust | 36.2 | 0.54 (usable) | no trend |
 | Learning | 31.9 | 0.54 (usable) | no trend |
 | Experimentation | 7.2 | 0.47 (usable) | -0.1 over 10 years using 3 indicators |

@@ -1,6 +1,6 @@
 # Agenda de capacidades: Costa Rica
 
-*Generado el 2026-11-02*
+*Generado el 2026-11-03*
 
 La comparación incluye 135 países. Cada dimensión recibe una puntuación de 0 a 100, sin clasificación general, y cada puntuación muestra a su lado la solidez de la evidencia. Antes de citar una puntuación, lea [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md).
 
@@ -10,7 +10,7 @@ La comparación incluye 135 países. Cada dimensión recibe una puntuación de 0
 | --- | --- | --- | --- |
 | Anticipación | 49.6 | 0.46 (utilizable) | +12.2 en 10 años, con 2 indicadores |
 | Iniciativa | 45.7 | 0.49 (utilizable) | sin base de tendencia |
-| Coordinación | 75 | 0.44 (débil) | sin base de tendencia |
+| Coordinación | 75 | 0.44 (débil) | -2.9 en 10 años, con 2 indicadores |
 | Confianza | 71.1 | 0.33 (débil) | sin base de tendencia |
 | Aprendizaje | 43.6 | 0.54 (utilizable) | sin base de tendencia |
 | Experimentación | 26.6 | 0.64 (utilizable) | sin base de tendencia |

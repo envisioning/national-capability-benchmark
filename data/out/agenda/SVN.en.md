@@ -1,6 +1,6 @@
 # Capability agenda: Slovenia
 
-*Generated 2026-11-02*
+*Generated 2026-11-03*
 
 The frame includes 135 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
@@ -10,7 +10,7 @@ The frame includes 135 countries. Each dimension is scored from 0 to 100, with n
 | --- | --- | --- | --- |
 | Anticipation | 79.5 | 0.46 (usable) | +4.7 over 10 years using 2 indicators |
 | Agency | 61.5 | 0.63 (usable) | no trend |
-| Coordination | 89 | 0.45 (usable) | no trend |
+| Coordination | 89 | 0.45 (usable) | -6 over 10 years using 2 indicators |
 | Trust | 53.8 | 0.55 (usable) | no trend |
 | Learning | 66.8 | 0.55 (usable) | no trend |
 | Experimentation | 35 | 0.47 (usable) | -29.9 over 20 years using 3 indicators |

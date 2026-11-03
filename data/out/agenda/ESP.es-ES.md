@@ -1,6 +1,6 @@
 # Agenda de capacidades: España
 
-*Generado el 2026-11-02*
+*Generado el 2026-11-03*
 
 La comparación incluye 135 países. Cada dimensión recibe una puntuación de 0 a 100, sin clasificación general, y cada puntuación muestra a su lado la solidez de la evidencia. Antes de citar una puntuación, lea [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md).
 
@@ -10,7 +10,7 @@ La comparación incluye 135 países. Cada dimensión recibe una puntuación de 0
 | --- | --- | --- | --- |
 | Anticipación | 71,4 | 0,46 (utilizable) | +6,3 en 10 años, con 2 indicadores |
 | Iniciativa | 56,6 | 0,63 (utilizable) | sin base de tendencia |
-| Coordinación | 86,3 | 0,45 (utilizable) | sin base de tendencia |
+| Coordinación | 86,3 | 0,45 (utilizable) | -4,8 en 10 años, con 2 indicadores |
 | Confianza | 75,4 | 0,55 (utilizable) | sin base de tendencia |
 | Aprendizaje | 77,8 | 0,55 (utilizable) | sin base de tendencia |
 | Experimentación | 46,9 | 0,47 (utilizable) | -7,2 en 10 años, con 3 indicadores |

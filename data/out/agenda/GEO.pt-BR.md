@@ -1,6 +1,6 @@
 # Agenda de capacidades: Geórgia
 
-*Gerada em 2026-11-02*
+*Gerada em 2026-11-03*
 
 A escala reúne 135 países. Cada dimensão recebe uma pontuação de 0 a 100, sem classificação geral, e cada pontuação traz ao lado a solidez da evidência. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma pontuação.
 
@@ -10,7 +10,7 @@ A escala reúne 135 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 | --- | --- | --- | --- |
 | Antecipação | 47,4 | 0,46 (utilizável) | +9,9 em 10 anos, com base em 2 indicadores |
 | Agência | 66,7 | 0,63 (utilizável) | sem tendência comparável |
-| Coordenação | 77,4 | 0,47 (utilizável) | sem tendência comparável |
+| Coordenação | 77,4 | 0,47 (utilizável) | -11,4 em 10 anos, com base em 2 indicadores |
 | Confiança | 57,9 | 0,54 (utilizável) | sem tendência comparável |
 | Aprendizagem | 43,6 | 0,54 (utilizável) | sem tendência comparável |
 | Experimentação | 43,3 | 0,47 (utilizável) | +14,4 em 10 anos, com base em 3 indicadores |

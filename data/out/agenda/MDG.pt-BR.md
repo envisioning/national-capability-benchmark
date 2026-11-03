@@ -1,6 +1,6 @@
 # Agenda de capacidades: Madagascar
 
-*Gerada em 2026-11-02*
+*Gerada em 2026-11-03*
 
 A escala reúne 135 países. Cada dimensão recebe uma pontuação de 0 a 100, sem classificação geral, e cada pontuação traz ao lado a solidez da evidência. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma pontuação.
 
@@ -10,8 +10,8 @@ A escala reúne 135 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 | --- | --- | --- | --- |
 | Antecipação | 17 | 0,46 (utilizável) | +15,6 em 10 anos, com base em 2 indicadores |
 | Agência | 40,6 | 0,49 (utilizável) | sem tendência comparável |
-| Coordenação | 47,3 | 0,48 (utilizável) | sem tendência comparável |
-| Confiança | 39,5 | 0,32 (fraca) | sem tendência comparável |
+| Coordenação | 47,3 | 0,48 (utilizável) | -27,5 em 10 anos, com base em 2 indicadores |
+| Confiança | 39,5 | 0,32 (fraca) | +3,9 em 10 anos, com base em 2 indicadores |
 | Aprendizagem | 21,2 | 0,52 (utilizável) | sem tendência comparável |
 | Experimentação | 14,2 | 0,47 (utilizável) | +0,2 em 10 anos, com base em 3 indicadores |
 | Adaptação | 45,2 | 0,48 (utilizável) | sem tendência comparável |

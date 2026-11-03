@@ -1,6 +1,6 @@
 # Agenda de capacidades: Bolivia
 
-*Generado el 2026-11-02*
+*Generado el 2026-11-03*
 
 La comparación incluye 135 países. Cada dimensión recibe una puntuación de 0 a 100, sin clasificación general, y cada puntuación muestra a su lado la solidez de la evidencia. Antes de citar una puntuación, lea [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md).
 
@@ -10,8 +10,8 @@ La comparación incluye 135 países. Cada dimensión recibe una puntuación de 0
 | --- | --- | --- | --- |
 | Anticipación | 28.7 | 0.46 (utilizable) | +11.1 en 10 años, con 2 indicadores |
 | Iniciativa | 38.1 | 0.43 (débil) | sin base de tendencia |
-| Coordinación | 74.5 | 0.27 (débil) | sin base de tendencia |
-| Confianza | 31.5 | 0.41 (débil) | sin base de tendencia |
+| Coordinación | 74.5 | 0.27 (débil) | +13.8 en 10 años, con 2 indicadores |
+| Confianza | 31.5 | 0.41 (débil) | +2.6 en 20 años, con 2 indicadores |
 | Aprendizaje | 35.9 | 0.39 (débil) | sin base de tendencia |
 | Experimentación | 6.4 | 0.32 (débil) | +0.5 en 10 años, con 3 indicadores |
 | Adaptación | 65 | 0.62 (utilizable) | sin base de tendencia |

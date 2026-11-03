@@ -1,6 +1,6 @@
 # Capability agenda: El Salvador
 
-*Generated 2026-11-02*
+*Generated 2026-11-03*
 
 The frame includes 135 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
@@ -10,8 +10,8 @@ The frame includes 135 countries. Each dimension is scored from 0 to 100, with n
 | --- | --- | --- | --- |
 | Anticipation | 31.8 | 0.46 (usable) | +5.9 over 10 years using 2 indicators |
 | Agency | 30.4 | 0.49 (usable) | no trend |
-| Coordination | 58.1 | 0.45 (usable) | no trend |
-| Trust | 59.1 | 0.33 (thin) | no trend |
+| Coordination | 58.1 | 0.45 (usable) | -20.9 over 10 years using 2 indicators |
+| Trust | 59.1 | 0.33 (thin) | -25.1 over 10 years using 2 indicators |
 | Learning | 31.4 | 0.54 (usable) | no trend |
 | Experimentation | 7.8 | 0.47 (usable) | +2.3 over 10 years using 3 indicators |
 | Adaptability | 64.1 | 0.46 (usable) | no trend |

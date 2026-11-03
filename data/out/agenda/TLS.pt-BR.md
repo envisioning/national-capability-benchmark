@@ -1,6 +1,6 @@
 # Agenda de capacidades: Timor-Leste
 
-*Gerada em 2026-11-02*
+*Gerada em 2026-11-03*
 
 A escala reúne 135 países. Cada dimensão recebe uma pontuação de 0 a 100, sem classificação geral, e cada pontuação traz ao lado a solidez da evidência. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma pontuação.
 
@@ -10,8 +10,8 @@ A escala reúne 135 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 | --- | --- | --- | --- |
 | Antecipação | 19,9 | 0,46 (utilizável) | sem tendência comparável |
 | Agência | 52 | 0,46 (utilizável) | sem tendência comparável |
-| Coordenação | 50,1 | 0,48 (utilizável) | sem tendência comparável |
-| Confiança | 59,4 | 0,32 (fraca) | sem tendência comparável |
+| Coordenação | 50,1 | 0,48 (utilizável) | -13,1 em 10 anos, com base em 2 indicadores |
+| Confiança | 59,4 | 0,32 (fraca) | +34,7 em 10 anos, com base em 2 indicadores |
 | Aprendizagem | 23,5 | 0,5 (utilizável) | sem tendência comparável |
 | Experimentação | 0,7 | 0,18 (muito fraca) | sem tendência comparável |
 | Adaptação | 55,1 | 0,58 (utilizável) | sem tendência comparável |

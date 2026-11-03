@@ -1,6 +1,6 @@
 # Agenda de capacidades: Guatemala
 
-*Generado el 2026-11-02*
+*Generado el 2026-11-03*
 
 La comparación incluye 135 países. Cada dimensión recibe una puntuación de 0 a 100, sin clasificación general, y cada puntuación muestra a su lado la solidez de la evidencia. Antes de citar una puntuación, lea [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md).
 
@@ -10,8 +10,8 @@ La comparación incluye 135 países. Cada dimensión recibe una puntuación de 0
 | --- | --- | --- | --- |
 | Anticipación | 36.7 | 0.46 (utilizable) | +18.5 en 10 años, con 2 indicadores |
 | Iniciativa | 54 | 0.44 (débil) | sin base de tendencia |
-| Coordinación | 53.2 | 0.25 (débil) | sin base de tendencia |
-| Confianza | 54.1 | 0.41 (débil) | sin base de tendencia |
+| Coordinación | 53.2 | 0.25 (débil) | -22.2 en 10 años, con 2 indicadores |
+| Confianza | 54.1 | 0.41 (débil) | +22 en 20 años, con 2 indicadores |
 | Aprendizaje | 50.5 | 0.55 (utilizable) | sin base de tendencia |
 | Experimentación | 4.6 | 0.37 (débil) | -3.2 en 10 años, con 2 indicadores |
 | Adaptación | 74.6 | 0.62 (utilizable) | sin base de tendencia |

@@ -1,6 +1,6 @@
 # Agenda de capacidades: Perú
 
-*Generado el 2026-11-02*
+*Generado el 2026-11-03*
 
 La comparación incluye 135 países. Cada dimensión recibe una puntuación de 0 a 100, sin clasificación general, y cada puntuación muestra a su lado la solidez de la evidencia. Antes de citar una puntuación, lea [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md).
 
@@ -10,7 +10,7 @@ La comparación incluye 135 países. Cada dimensión recibe una puntuación de 0
 | --- | --- | --- | --- |
 | Anticipación | 41.9 | 0.46 (utilizable) | +19.5 en 10 años, con 2 indicadores |
 | Iniciativa | 55.4 | 0.63 (utilizable) | sin base de tendencia |
-| Coordinación | 59.4 | 0.45 (utilizable) | sin base de tendencia |
+| Coordinación | 59.4 | 0.45 (utilizable) | +4.5 en 10 años, con 2 indicadores |
 | Confianza | 35.9 | 0.54 (utilizable) | sin base de tendencia |
 | Aprendizaje | 52.1 | 0.54 (utilizable) | sin base de tendencia |
 | Experimentación | 23.5 | 0.64 (utilizable) | sin base de tendencia |

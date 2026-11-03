@@ -1,6 +1,6 @@
 # Agenda de capacidades: Panamá
 
-*Generado el 2026-11-02*
+*Generado el 2026-11-03*
 
 La comparación incluye 135 países. Cada dimensión recibe una puntuación de 0 a 100, sin clasificación general, y cada puntuación muestra a su lado la solidez de la evidencia. Antes de citar una puntuación, lea [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md).
 
@@ -10,8 +10,8 @@ La comparación incluye 135 países. Cada dimensión recibe una puntuación de 0
 | --- | --- | --- | --- |
 | Anticipación | 36.4 | 0.46 (utilizable) | +21.1 en 10 años, con 2 indicadores |
 | Iniciativa | 52.9 | 0.27 (débil) | sin base de tendencia |
-| Coordinación | 68.1 | 0.25 (débil) | sin base de tendencia |
-| Confianza | 78.1 | 0.21 (muy débil) | sin base de tendencia |
+| Coordinación | 68.1 | 0.25 (débil) | -12.7 en 10 años, con 2 indicadores |
+| Confianza | 78.1 | 0.21 (muy débil) | +8 en 20 años, con 2 indicadores |
 | Aprendizaje | 32.9 | 0.55 (utilizable) | sin base de tendencia |
 | Experimentación | 9.3 | 0.37 (débil) | -3.1 en 10 años, con 3 indicadores |
 | Adaptación | 70.9 | 0.62 (utilizable) | sin base de tendencia |

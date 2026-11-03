@@ -1,6 +1,6 @@
 # Agenda de capacidades: Belarus
 
-*Gerada em 2026-11-02*
+*Gerada em 2026-11-03*
 
 A escala reúne 135 países. Cada dimensão recebe uma pontuação de 0 a 100, sem classificação geral, e cada pontuação traz ao lado a solidez da evidência. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma pontuação.
 
@@ -10,7 +10,7 @@ A escala reúne 135 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 | --- | --- | --- | --- |
 | Antecipação | 37,7 | 0,46 (utilizável) | +10,7 em 10 anos, com base em 2 indicadores |
 | Agência | 47,9 | 0,41 (fraca) | sem tendência comparável |
-| Coordenação | 45,2 | 0,27 (fraca) | sem tendência comparável |
+| Coordenação | 45,2 | 0,27 (fraca) | -19,7 em 10 anos, com base em 2 indicadores |
 | Confiança | 42,3 | 0,36 (fraca) | sem tendência comparável |
 | Aprendizagem | 37,7 | 0,44 (fraca) | sem tendência comparável |
 | Experimentação | 12,2 | 0,28 (fraca) | -4,1 em 10 anos, com base em 3 indicadores |

@@ -1,6 +1,6 @@
 # Capability agenda: Guinea
 
-*Generated 2026-11-02*
+*Generated 2026-11-03*
 
 The frame includes 135 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
@@ -11,7 +11,7 @@ The frame includes 135 countries. Each dimension is scored from 0 to 100, with n
 | Anticipation | 10.1 | 0.46 (usable) | +6.5 over 10 years using 2 indicators |
 | Agency | 38.7 | 0.3 (thin) | no trend |
 | Coordination | 60.5 | 0.19 (very thin) | no trend |
-| Trust | 56.9 | 0.21 (very thin) | no trend |
+| Trust | 56.9 | 0.21 (very thin) | -2.4 over 10 years using 2 indicators |
 | Learning | 18.9 | 0.55 (usable) | no trend |
 | Experimentation | 0.4 | 0.1 (very thin) | no trend |
 | Adaptability | 39.1 | 0.46 (usable) | no trend |

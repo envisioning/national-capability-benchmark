@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-02T16:48:25.138Z",
+  "generatedAt": "2026-11-03T08:12:59.169Z",
   "iso3": "TUR",
   "country": "Turkey",
   "dimensions": [
@@ -443,7 +443,12 @@
       "score": 52.5,
       "confidence": 0.453,
       "band": "usable",
-      "trend": null,
+      "trend": {
+        "spanYears": 10,
+        "delta": -12.3,
+        "basket": 2,
+        "clamped": 0
+      },
       "scoredOn": [
         "trade_compliance_efficiency",
         "budget_execution_fidelity",

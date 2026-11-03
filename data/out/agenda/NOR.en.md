@@ -1,6 +1,6 @@
 # Capability agenda: Norway
 
-*Generated 2026-11-02*
+*Generated 2026-11-03*
 
 The frame includes 135 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
@@ -10,7 +10,7 @@ The frame includes 135 countries. Each dimension is scored from 0 to 100, with n
 | --- | --- | --- | --- |
 | Anticipation | 97.2 | 0.46 (usable) | +19.5 over 10 years using 2 indicators |
 | Agency | 70.7 | 0.44 (thin) | no trend |
-| Coordination | 94.1 | 0.27 (thin) | no trend |
+| Coordination | 94.1 | 0.27 (thin) | -5 over 10 years using 2 indicators, with 1 at the frame edge |
 | Trust | 92.9 | 0.41 (thin) | no trend |
 | Learning | 85.4 | 0.55 (usable) | no trend |
 | Experimentation | 45.9 | 0.37 (thin) | -22.2 over 10 years using 3 indicators |

@@ -1,6 +1,6 @@
 # Agenda de capacidades: Tajiquistão
 
-*Gerada em 2026-11-02*
+*Gerada em 2026-11-03*
 
 A escala reúne 135 países. Cada dimensão recebe uma pontuação de 0 a 100, sem classificação geral, e cada pontuação traz ao lado a solidez da evidência. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma pontuação.
 
@@ -10,7 +10,7 @@ A escala reúne 135 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 | --- | --- | --- | --- |
 | Antecipação | 22,9 | 0,46 (utilizável) | +11,9 em 10 anos, com base em 2 indicadores |
 | Agência | 61,9 | 0,54 (utilizável) | sem tendência comparável |
-| Coordenação | 51 | 0,45 (utilizável) | sem tendência comparável |
+| Coordenação | 51 | 0,45 (utilizável) | +10,9 em 10 anos, com base em 2 indicadores |
 | Confiança | 36 | 0,55 (utilizável) | sem tendência comparável |
 | Aprendizagem | 22,2 | 0,55 (utilizável) | sem tendência comparável |
 | Experimentação | 8,1 | 0,34 (fraca) | sem tendência comparável |

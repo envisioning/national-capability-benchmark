@@ -1,6 +1,6 @@
 # Agenda de capacidades: Letônia
 
-*Gerada em 2026-11-02*
+*Gerada em 2026-11-03*
 
 A escala reúne 135 países. Cada dimensão recebe uma pontuação de 0 a 100, sem classificação geral, e cada pontuação traz ao lado a solidez da evidência. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma pontuação.
 
@@ -10,7 +10,7 @@ A escala reúne 135 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 | --- | --- | --- | --- |
 | Antecipação | 62,6 | 0,46 (utilizável) | +8,8 em 10 anos, com base em 2 indicadores |
 | Agência | 60,7 | 0,63 (utilizável) | sem tendência comparável |
-| Coordenação | 82,9 | 0,45 (utilizável) | sem tendência comparável |
+| Coordenação | 82,9 | 0,45 (utilizável) | +9,6 em 10 anos, com base em 2 indicadores |
 | Confiança | 59,8 | 0,55 (utilizável) | sem tendência comparável |
 | Aprendizagem | 58 | 0,55 (utilizável) | sem tendência comparável |
 | Experimentação | 45,7 | 0,47 (utilizável) | -11,7 em 10 anos, com base em 3 indicadores |

@@ -1,6 +1,6 @@
 # Agenda de capacidades: El Salvador
 
-*Generado el 2026-11-02*
+*Generado el 2026-11-03*
 
 La comparación incluye 135 países. Cada dimensión recibe una puntuación de 0 a 100, sin clasificación general, y cada puntuación muestra a su lado la solidez de la evidencia. Antes de citar una puntuación, lea [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md).
 
@@ -10,8 +10,8 @@ La comparación incluye 135 países. Cada dimensión recibe una puntuación de 0
 | --- | --- | --- | --- |
 | Anticipación | 31.8 | 0.46 (utilizable) | +5.9 en 10 años, con 2 indicadores |
 | Iniciativa | 30.4 | 0.49 (utilizable) | sin base de tendencia |
-| Coordinación | 58.1 | 0.45 (utilizable) | sin base de tendencia |
-| Confianza | 59.1 | 0.33 (débil) | sin base de tendencia |
+| Coordinación | 58.1 | 0.45 (utilizable) | -20.9 en 10 años, con 2 indicadores |
+| Confianza | 59.1 | 0.33 (débil) | -25.1 en 10 años, con 2 indicadores |
 | Aprendizaje | 31.4 | 0.54 (utilizable) | sin base de tendencia |
 | Experimentación | 7.8 | 0.47 (utilizable) | +2.3 en 10 años, con 3 indicadores |
 | Adaptación | 64.1 | 0.46 (utilizable) | sin base de tendencia |

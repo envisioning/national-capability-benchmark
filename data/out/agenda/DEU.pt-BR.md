@@ -1,6 +1,6 @@
 # Agenda de capacidades: Alemanha
 
-*Gerada em 2026-11-02*
+*Gerada em 2026-11-03*
 
 A escala reúne 135 países. Cada dimensão recebe uma pontuação de 0 a 100, sem classificação geral, e cada pontuação traz ao lado a solidez da evidência. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma pontuação.
 
@@ -10,7 +10,7 @@ A escala reúne 135 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 | --- | --- | --- | --- |
 | Antecipação | 71,4 | 0,46 (utilizável) | +4,3 em 10 anos, com base em 2 indicadores |
 | Agência | 33,1 | 0,3 (fraca) | sem tendência comparável |
-| Coordenação | 96 | 0,27 (fraca) | sem tendência comparável |
+| Coordenação | 96 | 0,27 (fraca) | -2,7 em 10 anos, com base em 2 indicadores, 1 limitados à borda da escala |
 | Confiança | 92,1 | 0,21 (muito fraca) | sem tendência comparável |
 | Aprendizagem | 66,6 | 0,55 (utilizável) | sem tendência comparável |
 | Experimentação | 70,8 | 0,37 (fraca) | +1,1 em 10 anos, com base em 3 indicadores |

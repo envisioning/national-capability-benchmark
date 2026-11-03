@@ -1,6 +1,6 @@
 # Capability agenda: Angola
 
-*Generated 2026-11-02*
+*Generated 2026-11-03*
 
 The frame includes 135 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
@@ -10,8 +10,8 @@ The frame includes 135 countries. Each dimension is scored from 0 to 100, with n
 | --- | --- | --- | --- |
 | Anticipation | 17.5 | 0.46 (usable) | +9.7 over 10 years using 2 indicators, with 1 at the frame edge |
 | Agency | 52.5 | 0.49 (usable) | no trend |
-| Coordination | 28.1 | 0.47 (usable) | no trend |
-| Trust | 43.4 | 0.34 (thin) | no trend |
+| Coordination | 28.1 | 0.47 (usable) | -0.3 over 10 years using 2 indicators |
+| Trust | 43.4 | 0.34 (thin) | -2.8 over 20 years using 2 indicators |
 | Learning | 21.9 | 0.55 (usable) | no trend |
 | Experimentation | 0.8 | 0.41 (thin) | no trend |
 | Adaptability | 18.3 | 0.62 (usable) | no trend |

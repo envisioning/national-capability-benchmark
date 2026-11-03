@@ -1,6 +1,6 @@
 # Capability agenda: Sudan
 
-*Generated 2026-11-02*
+*Generated 2026-11-03*
 
 The frame includes 135 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
@@ -10,7 +10,7 @@ The frame includes 135 countries. Each dimension is scored from 0 to 100, with n
 | --- | --- | --- | --- |
 | Anticipation | 3.2 | 0.46 (usable) | +3.1 over 10 years using 2 indicators, with 1 at the frame edge |
 | Agency | not scored | 0.11 (very thin) | no trend |
-| Coordination | 35.3 | 0.27 (thin) | no trend |
+| Coordination | 35.3 | 0.27 (thin) | -22.9 over 10 years using 2 indicators |
 | Trust | 41.8 | 0.12 (very thin) | no trend |
 | Learning | 16.1 | 0.36 (thin) | no trend |
 | Experimentation | 1.2 | 0.28 (thin) | no trend |

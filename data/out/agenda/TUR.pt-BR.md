@@ -1,6 +1,6 @@
 # Agenda de capacidades: Turquia
 
-*Gerada em 2026-11-02*
+*Gerada em 2026-11-03*
 
 A escala reúne 135 países. Cada dimensão recebe uma pontuação de 0 a 100, sem classificação geral, e cada pontuação traz ao lado a solidez da evidência. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma pontuação.
 
@@ -10,7 +10,7 @@ A escala reúne 135 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 | --- | --- | --- | --- |
 | Antecipação | 47,9 | 0,46 (utilizável) | +9,1 em 10 anos, com base em 2 indicadores |
 | Agência | 49,6 | 0,63 (utilizável) | sem tendência comparável |
-| Coordenação | 52,5 | 0,45 (utilizável) | sem tendência comparável |
+| Coordenação | 52,5 | 0,45 (utilizável) | -12,3 em 10 anos, com base em 2 indicadores |
 | Confiança | 41,5 | 0,55 (utilizável) | sem tendência comparável |
 | Aprendizagem | 36,2 | 0,55 (utilizável) | sem tendência comparável |
 | Experimentação | 63,6 | 0,47 (utilizável) | +19,4 em 10 anos, com base em 3 indicadores |

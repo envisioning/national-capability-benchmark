@@ -27,6 +27,12 @@ export const VDEM_CY_DATASET = 'Country-Year Full+Others'
 /** Version and the date stamped on the CSV member inside the archive. */
 export const VDEM_CY_RELEASE = '16 (2026-03-10)'
 export const VDEM_CY_YEAR = 2025
+/**
+ * First country-year the adapter keeps for a scored V-Dem row. The release
+ * codes every year back to 1789; 1990 covers every span the trend layer and
+ * the reconstructed history read. Scoring reads only the latest. See D180.
+ */
+export const VDEM_CY_HISTORY_FROM = 1990
 
 /**
  * UNCTADstat's merchandise concentration and diversification indices, used for

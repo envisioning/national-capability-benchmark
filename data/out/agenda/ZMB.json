@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-02T16:48:25.138Z",
+  "generatedAt": "2026-11-03T08:12:59.169Z",
   "iso3": "ZMB",
   "country": "Zambia",
   "dimensions": [
@@ -441,7 +441,12 @@
       "score": 85,
       "confidence": 0.29,
       "band": "thin",
-      "trend": null,
+      "trend": {
+        "spanYears": 10,
+        "delta": 9.8,
+        "basket": 2,
+        "clamped": 0
+      },
       "scoredOn": [
         "budget_execution_fidelity",
         "civil_society_strength"
@@ -1663,7 +1668,12 @@
       "score": 77.4,
       "confidence": 0.207,
       "band": "very_thin",
-      "trend": null,
+      "trend": {
+        "spanYears": 10,
+        "delta": 5.1,
+        "basket": 2,
+        "clamped": 0
+      },
       "scoredOn": [
         "bribery_incidence",
         "court_compliance"

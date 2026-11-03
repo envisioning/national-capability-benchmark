@@ -1,6 +1,6 @@
 # Capability agenda: Nepal
 
-*Generated 2026-11-02*
+*Generated 2026-11-03*
 
 The frame includes 135 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
@@ -10,8 +10,8 @@ The frame includes 135 countries. Each dimension is scored from 0 to 100, with n
 | --- | --- | --- | --- |
 | Anticipation | 20.5 | 0.46 (usable) | +11.6 over 10 years using 2 indicators |
 | Agency | 35.4 | 0.43 (thin) | no trend |
-| Coordination | 70.1 | 0.48 (usable) | no trend |
-| Trust | 82 | 0.33 (thin) | no trend |
+| Coordination | 70.1 | 0.48 (usable) | +4.5 over 10 years using 2 indicators |
+| Trust | 82 | 0.33 (thin) | +7.9 over 10 years using 2 indicators |
 | Learning | 26.8 | 0.54 (usable) | no trend |
 | Experimentation | 4.3 | 0.3 (thin) | no trend |
 | Adaptability | 52.6 | 0.53 (usable) | no trend |

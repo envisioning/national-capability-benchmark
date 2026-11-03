@@ -1,6 +1,6 @@
 # Agenda de capacidades: Tailândia
 
-*Gerada em 2026-11-02*
+*Gerada em 2026-11-03*
 
 A escala reúne 135 países. Cada dimensão recebe uma pontuação de 0 a 100, sem classificação geral, e cada pontuação traz ao lado a solidez da evidência. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma pontuação.
 
@@ -10,8 +10,8 @@ A escala reúne 135 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 | --- | --- | --- | --- |
 | Antecipação | 46,2 | 0,46 (utilizável) | +8,6 em 10 anos, com base em 2 indicadores |
 | Agência | 32,6 | 0,44 (fraca) | sem tendência comparável |
-| Coordenação | 78,7 | 0,29 (fraca) | sem tendência comparável |
-| Confiança | 49,9 | 0,41 (fraca) | sem tendência comparável |
+| Coordenação | 78,7 | 0,29 (fraca) | +2,6 em 10 anos, com base em 2 indicadores |
+| Confiança | 49,9 | 0,41 (fraca) | -9,1 em 10 anos, com base em 2 indicadores |
 | Aprendizagem | 36,7 | 0,55 (utilizável) | sem tendência comparável |
 | Experimentação | 16 | 0,37 (fraca) | +1,1 em 10 anos, com base em 3 indicadores |
 | Adaptação | 86,7 | 0,62 (utilizável) | sem tendência comparável |

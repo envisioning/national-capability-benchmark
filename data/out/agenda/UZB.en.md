@@ -1,6 +1,6 @@
 # Capability agenda: Uzbekistan
 
-*Generated 2026-11-02*
+*Generated 2026-11-03*
 
 The frame includes 135 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
@@ -10,7 +10,7 @@ The frame includes 135 countries. Each dimension is scored from 0 to 100, with n
 | --- | --- | --- | --- |
 | Anticipation | 41 | 0.46 (usable) | +40.8 over 10 years using 2 indicators, with 1 at the frame edge |
 | Agency | 65.3 | 0.63 (usable) | no trend |
-| Coordination | 59.5 | 0.47 (usable) | no trend |
+| Coordination | 59.5 | 0.47 (usable) | +7.4 over 10 years using 2 indicators |
 | Trust | 47.8 | 0.55 (usable) | no trend |
 | Learning | 28.2 | 0.55 (usable) | no trend |
 | Experimentation | 20 | 0.47 (usable) | +1.9 over 10 years using 3 indicators |

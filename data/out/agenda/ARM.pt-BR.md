@@ -1,6 +1,6 @@
 # Agenda de capacidades: Armênia
 
-*Gerada em 2026-11-02*
+*Gerada em 2026-11-03*
 
 A escala reúne 135 países. Cada dimensão recebe uma pontuação de 0 a 100, sem classificação geral, e cada pontuação traz ao lado a solidez da evidência. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma pontuação.
 
@@ -10,8 +10,8 @@ A escala reúne 135 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 | --- | --- | --- | --- |
 | Antecipação | 44,2 | 0,46 (utilizável) | +3,9 em 10 anos, com base em 2 indicadores |
 | Agência | 70,3 | 0,49 (utilizável) | sem tendência comparável |
-| Coordenação | 63,1 | 0,47 (utilizável) | sem tendência comparável |
-| Confiança | 61,5 | 0,34 (fraca) | sem tendência comparável |
+| Coordenação | 63,1 | 0,47 (utilizável) | +4,1 em 10 anos, com base em 2 indicadores |
+| Confiança | 61,5 | 0,34 (fraca) | +11,9 em 10 anos, com base em 2 indicadores |
 | Aprendizagem | 32,5 | 0,55 (utilizável) | sem tendência comparável |
 | Experimentação | 21,4 | 0,47 (utilizável) | +4 em 10 anos, com base em 3 indicadores |
 | Adaptação | 64,5 | 0,6 (utilizável) | sem tendência comparável |

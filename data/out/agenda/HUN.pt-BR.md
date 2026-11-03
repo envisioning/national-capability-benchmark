@@ -1,6 +1,6 @@
 # Agenda de capacidades: Hungria
 
-*Gerada em 2026-11-02*
+*Gerada em 2026-11-03*
 
 A escala reúne 135 países. Cada dimensão recebe uma pontuação de 0 a 100, sem classificação geral, e cada pontuação traz ao lado a solidez da evidência. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma pontuação.
 
@@ -10,7 +10,7 @@ A escala reúne 135 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 | --- | --- | --- | --- |
 | Antecipação | 61 | 0,46 (utilizável) | +7,9 em 10 anos, com base em 2 indicadores |
 | Agência | 55,5 | 0,63 (utilizável) | sem tendência comparável |
-| Coordenação | 61,4 | 0,45 (utilizável) | sem tendência comparável |
+| Coordenação | 61,4 | 0,45 (utilizável) | -27,4 em 10 anos, com base em 2 indicadores |
 | Confiança | 67,4 | 0,54 (utilizável) | sem tendência comparável |
 | Aprendizagem | 49,7 | 0,54 (utilizável) | sem tendência comparável |
 | Experimentação | 32,3 | 0,47 (utilizável) | -9,7 em 10 anos, com base em 3 indicadores |

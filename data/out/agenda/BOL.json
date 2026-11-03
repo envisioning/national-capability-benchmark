@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-02T16:48:25.138Z",
+  "generatedAt": "2026-11-03T08:12:59.169Z",
   "iso3": "BOL",
   "country": "Bolivia",
   "dimensions": [
@@ -442,7 +442,12 @@
       "score": 74.5,
       "confidence": 0.266,
       "band": "thin",
-      "trend": null,
+      "trend": {
+        "spanYears": 10,
+        "delta": 13.8,
+        "basket": 2,
+        "clamped": 0
+      },
       "scoredOn": [
         "budget_execution_fidelity",
         "civil_society_strength"
@@ -1664,7 +1669,12 @@
       "score": 31.5,
       "confidence": 0.413,
       "band": "thin",
-      "trend": null,
+      "trend": {
+        "spanYears": 20,
+        "delta": 2.6,
+        "basket": 2,
+        "clamped": 0
+      },
       "scoredOn": [
         "bribery_incidence",
         "court_compliance",

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-02T16:48:25.138Z",
+  "generatedAt": "2026-11-03T08:12:59.169Z",
   "iso3": "GNB",
   "country": "Guinea-Bissau",
   "dimensions": [
@@ -1663,7 +1663,12 @@
       "score": 41.8,
       "confidence": 0.207,
       "band": "very_thin",
-      "trend": null,
+      "trend": {
+        "spanYears": 20,
+        "delta": -8.5,
+        "basket": 2,
+        "clamped": 0
+      },
       "scoredOn": [
         "bribery_incidence",
         "court_compliance"

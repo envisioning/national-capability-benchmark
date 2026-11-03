@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-11-02T20:42:07.994Z",
+  "generatedAt": "2026-11-03T08:13:16.516Z",
   "methodVersion": "movers/0.1-provisional",
-  "datasetVersion": "10.0.0",
+  "datasetVersion": "10.0.1",
   "params": {
     "endYear": 2026,
     "spans": [
@@ -990,42 +990,1108 @@
           "countries": []
         },
         "coordination": {
-          "m1": null,
-          "m2": null,
+          "m1": {
+            "n": 102,
+            "slope": 38.06,
+            "r": 0.212,
+            "r2": 0.045,
+            "reading": "little"
+          },
+          "m2": {
+            "pairs": 1,
+            "excludedPairs": 0,
+            "n": 102,
+            "statistic": 0.012,
+            "nullMean": -0.002,
+            "nullP95": 0.16,
+            "reading": "noise"
+          },
           "reading": "unreadable",
           "d174": {
             "n": 130,
-            "slope": 9.32,
-            "r": 0.07,
-            "r2": 0.005,
+            "slope": 13.54,
+            "r": 0.087,
+            "r2": 0.008,
             "reading": "little"
           },
           "coverage": {
-            "entered": 0,
+            "entered": 102,
             "eligible": 133,
-            "rWithLogGdp": null,
+            "rWithLogGdp": -0.024,
             "excludedPairs": 0
           },
-          "countries": []
+          "countries": [
+            {
+              "iso3": "BRA",
+              "change": 10.2,
+              "incomeChange": 0.056,
+              "leftover": 11.9,
+              "basket": 2
+            },
+            {
+              "iso3": "NLD",
+              "change": -1.6,
+              "incomeChange": 0.046,
+              "leftover": 0.5,
+              "basket": 2
+            },
+            {
+              "iso3": "EST",
+              "change": 6.8,
+              "incomeChange": 0.045,
+              "leftover": 8.9,
+              "basket": 2
+            },
+            {
+              "iso3": "IND",
+              "change": 5.9,
+              "incomeChange": 0.173,
+              "leftover": 3.1,
+              "basket": 2
+            },
+            {
+              "iso3": "CHL",
+              "change": 34,
+              "incomeChange": 0.043,
+              "leftover": 36.2,
+              "basket": 2
+            },
+            {
+              "iso3": "ZAF",
+              "change": -1.8,
+              "incomeChange": -0.028,
+              "leftover": 3.1,
+              "basket": 2
+            },
+            {
+              "iso3": "MEX",
+              "change": 1.1,
+              "incomeChange": 0.007,
+              "leftover": 4.7,
+              "basket": 2
+            },
+            {
+              "iso3": "ARG",
+              "change": 1.1,
+              "incomeChange": 0.001,
+              "leftover": 4.9,
+              "basket": 2
+            },
+            {
+              "iso3": "COL",
+              "change": -0.9,
+              "incomeChange": 0.043,
+              "leftover": 1.3,
+              "basket": 2
+            },
+            {
+              "iso3": "PER",
+              "change": 7.3,
+              "incomeChange": 0.033,
+              "leftover": 9.9,
+              "basket": 2
+            },
+            {
+              "iso3": "URY",
+              "change": 10,
+              "incomeChange": 0.048,
+              "leftover": 12,
+              "basket": 2
+            },
+            {
+              "iso3": "CRI",
+              "change": -0.1,
+              "incomeChange": 0.113,
+              "leftover": -0.6,
+              "basket": 2
+            },
+            {
+              "iso3": "DEU",
+              "change": 0.1,
+              "incomeChange": 0.016,
+              "leftover": 3.3,
+              "basket": 2
+            },
+            {
+              "iso3": "FRA",
+              "change": -1.5,
+              "incomeChange": 0.034,
+              "leftover": 1,
+              "basket": 2
+            },
+            {
+              "iso3": "ESP",
+              "change": -2,
+              "incomeChange": 0.047,
+              "leftover": 0.1,
+              "basket": 2
+            },
+            {
+              "iso3": "PRT",
+              "change": -9,
+              "incomeChange": 0.065,
+              "leftover": -7.7,
+              "basket": 2
+            },
+            {
+              "iso3": "POL",
+              "change": 3.8,
+              "incomeChange": 0.157,
+              "leftover": 1.7,
+              "basket": 2
+            },
+            {
+              "iso3": "FIN",
+              "change": 0.1,
+              "incomeChange": 0.014,
+              "leftover": 3.4,
+              "basket": 2
+            },
+            {
+              "iso3": "IRL",
+              "change": -0.6,
+              "incomeChange": 0.211,
+              "leftover": -4.8,
+              "basket": 2
+            },
+            {
+              "iso3": "AUS",
+              "change": 6.9,
+              "incomeChange": 0.027,
+              "leftover": 9.7,
+              "basket": 2
+            },
+            {
+              "iso3": "JPN",
+              "change": -21.1,
+              "incomeChange": 0.031,
+              "leftover": -18.5,
+              "basket": 2
+            },
+            {
+              "iso3": "CHN",
+              "change": -4.4,
+              "incomeChange": 0.201,
+              "leftover": -8.2,
+              "basket": 2
+            },
+            {
+              "iso3": "IDN",
+              "change": 2.8,
+              "incomeChange": 0.125,
+              "leftover": 1.9,
+              "basket": 2
+            },
+            {
+              "iso3": "VNM",
+              "change": -3.1,
+              "incomeChange": 0.2,
+              "leftover": -6.9,
+              "basket": 2
+            },
+            {
+              "iso3": "MYS",
+              "change": 3.8,
+              "incomeChange": 0.096,
+              "leftover": 4,
+              "basket": 2
+            },
+            {
+              "iso3": "THA",
+              "change": 5.4,
+              "incomeChange": 0.064,
+              "leftover": 6.8,
+              "basket": 2
+            },
+            {
+              "iso3": "TUR",
+              "change": -9.5,
+              "incomeChange": 0.149,
+              "leftover": -11.3,
+              "basket": 2
+            },
+            {
+              "iso3": "NGA",
+              "change": -31.6,
+              "incomeChange": -0.02,
+              "leftover": -27,
+              "basket": 2
+            },
+            {
+              "iso3": "KEN",
+              "change": -8.5,
+              "incomeChange": 0.099,
+              "leftover": -8.4,
+              "basket": 2
+            },
+            {
+              "iso3": "RWA",
+              "change": 5.1,
+              "incomeChange": 0.173,
+              "leftover": 2.3,
+              "basket": 2
+            },
+            {
+              "iso3": "ETH",
+              "change": 25.3,
+              "incomeChange": 0.172,
+              "leftover": 22.6,
+              "basket": 2
+            },
+            {
+              "iso3": "BOL",
+              "change": 16.6,
+              "incomeChange": -0.017,
+              "leftover": 21.1,
+              "basket": 2
+            },
+            {
+              "iso3": "PRY",
+              "change": 12,
+              "incomeChange": 0.066,
+              "leftover": 13.3,
+              "basket": 2
+            },
+            {
+              "iso3": "ECU",
+              "change": 24.8,
+              "incomeChange": 0.023,
+              "leftover": 27.8,
+              "basket": 2
+            },
+            {
+              "iso3": "PAN",
+              "change": -9.9,
+              "incomeChange": 0.086,
+              "leftover": -9.3,
+              "basket": 2
+            },
+            {
+              "iso3": "GTM",
+              "change": -19.4,
+              "incomeChange": 0.077,
+              "leftover": -18.5,
+              "basket": 2
+            },
+            {
+              "iso3": "HND",
+              "change": 10.7,
+              "incomeChange": 0.055,
+              "leftover": 12.4,
+              "basket": 2
+            },
+            {
+              "iso3": "SLV",
+              "change": -18.1,
+              "incomeChange": 0.087,
+              "leftover": -17.6,
+              "basket": 2
+            },
+            {
+              "iso3": "NIC",
+              "change": -47.4,
+              "incomeChange": 0.045,
+              "leftover": -45.3,
+              "basket": 2
+            },
+            {
+              "iso3": "DOM",
+              "change": -19.9,
+              "incomeChange": 0.112,
+              "leftover": -20.3,
+              "basket": 2
+            },
+            {
+              "iso3": "HTI",
+              "change": -24.2,
+              "incomeChange": -0.106,
+              "leftover": -16.3,
+              "basket": 2
+            },
+            {
+              "iso3": "PAK",
+              "change": -4.5,
+              "incomeChange": 0.061,
+              "leftover": -3,
+              "basket": 2
+            },
+            {
+              "iso3": "BGD",
+              "change": 3.9,
+              "incomeChange": 0.184,
+              "leftover": 0.7,
+              "basket": 2
+            },
+            {
+              "iso3": "RUS",
+              "change": -8.1,
+              "incomeChange": 0.083,
+              "leftover": -7.4,
+              "basket": 2
+            },
+            {
+              "iso3": "EGY",
+              "change": 10.5,
+              "incomeChange": 0.1,
+              "leftover": 10.5,
+              "basket": 2
+            },
+            {
+              "iso3": "COD",
+              "change": 24.4,
+              "incomeChange": 0.072,
+              "leftover": 25.5,
+              "basket": 2
+            },
+            {
+              "iso3": "TZA",
+              "change": 7.7,
+              "incomeChange": 0.075,
+              "leftover": 8.7,
+              "basket": 2
+            },
+            {
+              "iso3": "ITA",
+              "change": -11.6,
+              "incomeChange": 0.048,
+              "leftover": -9.6,
+              "basket": 2
+            },
+            {
+              "iso3": "SDN",
+              "change": -20.1,
+              "incomeChange": -0.348,
+              "leftover": -3,
+              "basket": 2
+            },
+            {
+              "iso3": "UGA",
+              "change": -1.8,
+              "incomeChange": 0.067,
+              "leftover": -0.5,
+              "basket": 2
+            },
+            {
+              "iso3": "IRQ",
+              "change": 10.9,
+              "incomeChange": -0.09,
+              "leftover": 18.2,
+              "basket": 2
+            },
+            {
+              "iso3": "AGO",
+              "change": 2.5,
+              "incomeChange": -0.097,
+              "leftover": 10,
+              "basket": 2
+            },
+            {
+              "iso3": "UKR",
+              "change": -16.8,
+              "incomeChange": 0.008,
+              "leftover": -13.3,
+              "basket": 2
+            },
+            {
+              "iso3": "MAR",
+              "change": -2.7,
+              "incomeChange": 0.067,
+              "leftover": -1.4,
+              "basket": 2
+            },
+            {
+              "iso3": "UZB",
+              "change": 10.2,
+              "incomeChange": 0.153,
+              "leftover": 8.2,
+              "basket": 2
+            },
+            {
+              "iso3": "MOZ",
+              "change": 15,
+              "incomeChange": -0.025,
+              "leftover": 19.8,
+              "basket": 2
+            },
+            {
+              "iso3": "GHA",
+              "change": 11.9,
+              "incomeChange": 0.113,
+              "leftover": 11.4,
+              "basket": 2
+            },
+            {
+              "iso3": "MDG",
+              "change": -24.7,
+              "incomeChange": 0.005,
+              "leftover": -21.1,
+              "basket": 2
+            },
+            {
+              "iso3": "NPL",
+              "change": 7.3,
+              "incomeChange": 0.149,
+              "leftover": 5.5,
+              "basket": 2
+            },
+            {
+              "iso3": "MWI",
+              "change": 7.8,
+              "incomeChange": 0.008,
+              "leftover": 11.3,
+              "basket": 2
+            },
+            {
+              "iso3": "ZMB",
+              "change": 12.6,
+              "incomeChange": 0.017,
+              "leftover": 15.8,
+              "basket": 2
+            },
+            {
+              "iso3": "LKA",
+              "change": 2.8,
+              "incomeChange": 0.023,
+              "leftover": 5.8,
+              "basket": 2
+            },
+            {
+              "iso3": "KAZ",
+              "change": 12.7,
+              "incomeChange": 0.09,
+              "leftover": 13.1,
+              "basket": 2
+            },
+            {
+              "iso3": "ROU",
+              "change": -8.9,
+              "incomeChange": 0.131,
+              "leftover": -10.1,
+              "basket": 2
+            },
+            {
+              "iso3": "ZWE",
+              "change": -19.6,
+              "incomeChange": 0.038,
+              "leftover": -17.2,
+              "basket": 2
+            },
+            {
+              "iso3": "BDI",
+              "change": -10.7,
+              "incomeChange": 0.025,
+              "leftover": -7.8,
+              "basket": 2
+            },
+            {
+              "iso3": "TUN",
+              "change": -22.5,
+              "incomeChange": 0.007,
+              "leftover": -18.9,
+              "basket": 2
+            },
+            {
+              "iso3": "BEL",
+              "change": -1.5,
+              "incomeChange": 0.04,
+              "leftover": 0.8,
+              "basket": 2
+            },
+            {
+              "iso3": "JOR",
+              "change": 6.7,
+              "incomeChange": 0.025,
+              "leftover": 9.6,
+              "basket": 2
+            },
+            {
+              "iso3": "CZE",
+              "change": -14.5,
+              "incomeChange": 0.059,
+              "leftover": -12.9,
+              "basket": 2
+            },
+            {
+              "iso3": "TJK",
+              "change": 13.7,
+              "incomeChange": 0.203,
+              "leftover": 9.8,
+              "basket": 2
+            },
+            {
+              "iso3": "AZE",
+              "change": 3.5,
+              "incomeChange": 0.051,
+              "leftover": 5.4,
+              "basket": 2
+            },
+            {
+              "iso3": "HUN",
+              "change": -24.6,
+              "incomeChange": 0.104,
+              "leftover": -24.7,
+              "basket": 2
+            },
+            {
+              "iso3": "AUT",
+              "change": -7.1,
+              "incomeChange": 0.017,
+              "leftover": -3.9,
+              "basket": 2
+            },
+            {
+              "iso3": "BLR",
+              "change": -16.9,
+              "incomeChange": 0.077,
+              "leftover": -16,
+              "basket": 2
+            },
+            {
+              "iso3": "KGZ",
+              "change": -4.4,
+              "incomeChange": 0.139,
+              "leftover": -5.9,
+              "basket": 2
+            },
+            {
+              "iso3": "SRB",
+              "change": 0.6,
+              "incomeChange": 0.165,
+              "leftover": -1.8,
+              "basket": 2
+            },
+            {
+              "iso3": "BGR",
+              "change": 0.3,
+              "incomeChange": 0.139,
+              "leftover": -1.2,
+              "basket": 2
+            },
+            {
+              "iso3": "NOR",
+              "change": -2.2,
+              "incomeChange": 0.034,
+              "leftover": 0.3,
+              "basket": 2
+            },
+            {
+              "iso3": "SVK",
+              "change": -33.9,
+              "incomeChange": 0.077,
+              "leftover": -33,
+              "basket": 2
+            },
+            {
+              "iso3": "GEO",
+              "change": -8.6,
+              "incomeChange": 0.212,
+              "leftover": -12.8,
+              "basket": 2
+            },
+            {
+              "iso3": "HRV",
+              "change": -2,
+              "incomeChange": 0.156,
+              "leftover": -4.1,
+              "basket": 2
+            },
+            {
+              "iso3": "MNG",
+              "change": -6.7,
+              "incomeChange": 0.107,
+              "leftover": -6.9,
+              "basket": 2
+            },
+            {
+              "iso3": "BIH",
+              "change": 7.8,
+              "incomeChange": 0.153,
+              "leftover": 5.8,
+              "basket": 2
+            },
+            {
+              "iso3": "NAM",
+              "change": -1.6,
+              "incomeChange": -0.063,
+              "leftover": 4.6,
+              "basket": 2
+            },
+            {
+              "iso3": "ARM",
+              "change": 6.9,
+              "incomeChange": 0.205,
+              "leftover": 2.9,
+              "basket": 2
+            },
+            {
+              "iso3": "LTU",
+              "change": -8.8,
+              "incomeChange": 0.125,
+              "leftover": -9.7,
+              "basket": 2
+            },
+            {
+              "iso3": "JAM",
+              "change": 16.8,
+              "incomeChange": 0.048,
+              "leftover": 18.8,
+              "basket": 2
+            },
+            {
+              "iso3": "GMB",
+              "change": 27.6,
+              "incomeChange": 0.106,
+              "leftover": 27.4,
+              "basket": 2
+            },
+            {
+              "iso3": "BWA",
+              "change": -7.3,
+              "incomeChange": 0.02,
+              "leftover": -4.2,
+              "basket": 2
+            },
+            {
+              "iso3": "LSO",
+              "change": -14.8,
+              "incomeChange": -0.051,
+              "leftover": -9,
+              "basket": 2
+            },
+            {
+              "iso3": "MDA",
+              "change": 10.8,
+              "incomeChange": 0.14,
+              "leftover": 9.3,
+              "basket": 2
+            },
+            {
+              "iso3": "ALB",
+              "change": 5.5,
+              "incomeChange": 0.191,
+              "leftover": 2.1,
+              "basket": 2
+            },
+            {
+              "iso3": "SVN",
+              "change": -3.2,
+              "incomeChange": 0.092,
+              "leftover": -2.9,
+              "basket": 2
+            },
+            {
+              "iso3": "LVA",
+              "change": 12.4,
+              "incomeChange": 0.088,
+              "leftover": 12.9,
+              "basket": 2
+            },
+            {
+              "iso3": "MKD",
+              "change": 3.9,
+              "incomeChange": 0.102,
+              "leftover": 3.8,
+              "basket": 2
+            },
+            {
+              "iso3": "MUS",
+              "change": 29,
+              "incomeChange": 0.091,
+              "leftover": 29.4,
+              "basket": 2
+            },
+            {
+              "iso3": "CMR",
+              "change": -49.4,
+              "incomeChange": 0.016,
+              "leftover": -46.2,
+              "basket": 2
+            },
+            {
+              "iso3": "SLE",
+              "change": -13.3,
+              "incomeChange": 0.065,
+              "leftover": -12,
+              "basket": 2
+            },
+            {
+              "iso3": "LBR",
+              "change": 1.8,
+              "incomeChange": 0.01,
+              "leftover": 5.2,
+              "basket": 2
+            },
+            {
+              "iso3": "TLS",
+              "change": -10.3,
+              "incomeChange": -0.041,
+              "leftover": -4.9,
+              "basket": 2
+            },
+            {
+              "iso3": "SWZ",
+              "change": 3.8,
+              "incomeChange": 0.056,
+              "leftover": 5.5,
+              "basket": 2
+            }
+          ]
         },
         "trust": {
-          "m1": null,
-          "m2": null,
+          "m1": {
+            "n": 46,
+            "slope": 23.02,
+            "r": 0.118,
+            "r2": 0.014,
+            "reading": "little"
+          },
+          "m2": {
+            "pairs": 1,
+            "excludedPairs": 0,
+            "n": 72,
+            "statistic": 0.112,
+            "nullMean": 0.002,
+            "nullP95": 0.205,
+            "reading": "noise"
+          },
           "reading": "unreadable",
           "d174": {
             "n": 131,
-            "slope": 1.92,
-            "r": 0.028,
-            "r2": 0.001,
+            "slope": 3.81,
+            "r": 0.043,
+            "r2": 0.002,
             "reading": "little"
           },
           "coverage": {
-            "entered": 0,
+            "entered": 46,
             "eligible": 133,
-            "rWithLogGdp": null,
+            "rWithLogGdp": -0.435,
             "excludedPairs": 0
           },
-          "countries": []
+          "countries": [
+            {
+              "iso3": "IND",
+              "change": 4.6,
+              "incomeChange": 0.173,
+              "leftover": 5.1,
+              "basket": 2
+            },
+            {
+              "iso3": "CHN",
+              "change": 1.8,
+              "incomeChange": 0.201,
+              "leftover": 1.5,
+              "basket": 2
+            },
+            {
+              "iso3": "THA",
+              "change": -14.1,
+              "incomeChange": 0.064,
+              "leftover": -11.2,
+              "basket": 2
+            },
+            {
+              "iso3": "ISR",
+              "change": -35.3,
+              "incomeChange": 0.061,
+              "leftover": -32.4,
+              "basket": 2
+            },
+            {
+              "iso3": "NGA",
+              "change": -4.4,
+              "incomeChange": -0.02,
+              "leftover": 0.4,
+              "basket": 2
+            },
+            {
+              "iso3": "KEN",
+              "change": -14.1,
+              "incomeChange": 0.099,
+              "leftover": -12,
+              "basket": 2
+            },
+            {
+              "iso3": "RWA",
+              "change": -10.3,
+              "incomeChange": 0.173,
+              "leftover": -10,
+              "basket": 2
+            },
+            {
+              "iso3": "ETH",
+              "change": 7.9,
+              "incomeChange": 0.172,
+              "leftover": 8.3,
+              "basket": 2
+            },
+            {
+              "iso3": "SLV",
+              "change": -30.1,
+              "incomeChange": 0.087,
+              "leftover": -27.8,
+              "basket": 2
+            },
+            {
+              "iso3": "DOM",
+              "change": 8.3,
+              "incomeChange": 0.112,
+              "leftover": 10.1,
+              "basket": 2
+            },
+            {
+              "iso3": "EGY",
+              "change": 1.7,
+              "incomeChange": 0.1,
+              "leftover": 3.7,
+              "basket": 2
+            },
+            {
+              "iso3": "COD",
+              "change": 9.6,
+              "incomeChange": 0.072,
+              "leftover": 12.3,
+              "basket": 2
+            },
+            {
+              "iso3": "TZA",
+              "change": 7.4,
+              "incomeChange": 0.075,
+              "leftover": 10,
+              "basket": 2
+            },
+            {
+              "iso3": "UGA",
+              "change": -2.6,
+              "incomeChange": 0.067,
+              "leftover": 0.2,
+              "basket": 2
+            },
+            {
+              "iso3": "IRQ",
+              "change": -20.7,
+              "incomeChange": -0.09,
+              "leftover": -14.3,
+              "basket": 2
+            },
+            {
+              "iso3": "GHA",
+              "change": 0,
+              "incomeChange": 0.113,
+              "leftover": 1.8,
+              "basket": 2
+            },
+            {
+              "iso3": "MDG",
+              "change": -1.1,
+              "incomeChange": 0.005,
+              "leftover": 3.1,
+              "basket": 2
+            },
+            {
+              "iso3": "CIV",
+              "change": -1.9,
+              "incomeChange": 0.12,
+              "leftover": -0.3,
+              "basket": 2
+            },
+            {
+              "iso3": "NPL",
+              "change": 2.9,
+              "incomeChange": 0.149,
+              "leftover": 3.8,
+              "basket": 2
+            },
+            {
+              "iso3": "MLI",
+              "change": 27.2,
+              "incomeChange": 0.035,
+              "leftover": 30.7,
+              "basket": 2
+            },
+            {
+              "iso3": "MWI",
+              "change": -1.4,
+              "incomeChange": 0.008,
+              "leftover": 2.8,
+              "basket": 2
+            },
+            {
+              "iso3": "ZMB",
+              "change": 0,
+              "incomeChange": 0.017,
+              "leftover": 4,
+              "basket": 2
+            },
+            {
+              "iso3": "LKA",
+              "change": -17,
+              "incomeChange": 0.023,
+              "leftover": -13.2,
+              "basket": 2
+            },
+            {
+              "iso3": "ROU",
+              "change": -6.3,
+              "incomeChange": 0.131,
+              "leftover": -5,
+              "basket": 2
+            },
+            {
+              "iso3": "ZWE",
+              "change": -44.1,
+              "incomeChange": 0.038,
+              "leftover": -40.6,
+              "basket": 2
+            },
+            {
+              "iso3": "GIN",
+              "change": -7.4,
+              "incomeChange": 0.134,
+              "leftover": -6.1,
+              "basket": 2
+            },
+            {
+              "iso3": "BDI",
+              "change": 7.9,
+              "incomeChange": 0.025,
+              "leftover": 11.7,
+              "basket": 2
+            },
+            {
+              "iso3": "CZE",
+              "change": 4.9,
+              "incomeChange": 0.059,
+              "leftover": 7.9,
+              "basket": 2
+            },
+            {
+              "iso3": "PNG",
+              "change": 5.6,
+              "incomeChange": 0.018,
+              "leftover": 9.5,
+              "basket": 2
+            },
+            {
+              "iso3": "LAO",
+              "change": -22.3,
+              "incomeChange": 0.099,
+              "leftover": -20.2,
+              "basket": 2
+            },
+            {
+              "iso3": "SRB",
+              "change": 0,
+              "incomeChange": 0.165,
+              "leftover": 0.5,
+              "basket": 2
+            },
+            {
+              "iso3": "SVK",
+              "change": -3.1,
+              "incomeChange": 0.077,
+              "leftover": -0.5,
+              "basket": 2
+            },
+            {
+              "iso3": "MNG",
+              "change": 7.4,
+              "incomeChange": 0.107,
+              "leftover": 9.3,
+              "basket": 2
+            },
+            {
+              "iso3": "NAM",
+              "change": -12,
+              "incomeChange": -0.063,
+              "leftover": -6.2,
+              "basket": 2
+            },
+            {
+              "iso3": "ARM",
+              "change": 6.9,
+              "incomeChange": 0.205,
+              "leftover": 6.5,
+              "basket": 2
+            },
+            {
+              "iso3": "LTU",
+              "change": 0.3,
+              "incomeChange": 0.125,
+              "leftover": 1.8,
+              "basket": 2
+            },
+            {
+              "iso3": "LSO",
+              "change": 6.9,
+              "incomeChange": -0.051,
+              "leftover": 12.4,
+              "basket": 2
+            },
+            {
+              "iso3": "MDA",
+              "change": 12.8,
+              "incomeChange": 0.14,
+              "leftover": 13.9,
+              "basket": 2
+            },
+            {
+              "iso3": "ALB",
+              "change": -2.1,
+              "incomeChange": 0.191,
+              "leftover": -2.2,
+              "basket": 2
+            },
+            {
+              "iso3": "CMR",
+              "change": 1.5,
+              "incomeChange": 0.016,
+              "leftover": 5.5,
+              "basket": 2
+            },
+            {
+              "iso3": "SEN",
+              "change": 8.9,
+              "incomeChange": 0.1,
+              "leftover": 10.9,
+              "basket": 2
+            },
+            {
+              "iso3": "TGO",
+              "change": 3.1,
+              "incomeChange": 0.119,
+              "leftover": 4.8,
+              "basket": 2
+            },
+            {
+              "iso3": "CAF",
+              "change": -20.2,
+              "incomeChange": 0.019,
+              "leftover": -16.3,
+              "basket": 2
+            },
+            {
+              "iso3": "MRT",
+              "change": -8.6,
+              "incomeChange": 0.048,
+              "leftover": -5.4,
+              "basket": 2
+            },
+            {
+              "iso3": "TLS",
+              "change": 29.7,
+              "incomeChange": -0.041,
+              "leftover": 35,
+              "basket": 2
+            },
+            {
+              "iso3": "SWZ",
+              "change": -6.8,
+              "incomeChange": 0.056,
+              "leftover": -3.8,
+              "basket": 2
+            }
+          ]
         },
         "learning": {
           "m1": null,
@@ -3277,42 +4343,387 @@
           "countries": []
         },
         "coordination": {
-          "m1": null,
-          "m2": null,
+          "m1": {
+            "n": 23,
+            "slope": -6.32,
+            "r": -0.042,
+            "r2": 0.002,
+            "reading": "little"
+          },
+          "m2": {
+            "pairs": 1,
+            "excludedPairs": 0,
+            "n": 23,
+            "statistic": -0.391,
+            "nullMean": -0.002,
+            "nullP95": 0.334,
+            "reading": "noise"
+          },
           "reading": "unreadable",
           "d174": {
             "n": 130,
-            "slope": 15.3,
-            "r": 0.208,
-            "r2": 0.043,
+            "slope": 15.42,
+            "r": 0.166,
+            "r2": 0.027,
             "reading": "little"
           },
           "coverage": {
-            "entered": 0,
+            "entered": 23,
             "eligible": 133,
-            "rWithLogGdp": null,
+            "rWithLogGdp": -0.212,
             "excludedPairs": 0
           },
-          "countries": []
+          "countries": [
+            {
+              "iso3": "BRA",
+              "change": 3.8,
+              "incomeChange": 0.107,
+              "leftover": 3.6,
+              "basket": 2
+            },
+            {
+              "iso3": "ZAF",
+              "change": -3.6,
+              "incomeChange": 0.005,
+              "leftover": -4.5,
+              "basket": 2
+            },
+            {
+              "iso3": "COL",
+              "change": -1.7,
+              "incomeChange": 0.172,
+              "leftover": -1.5,
+              "basket": 2
+            },
+            {
+              "iso3": "PER",
+              "change": 0,
+              "incomeChange": 0.226,
+              "leftover": 0.5,
+              "basket": 2
+            },
+            {
+              "iso3": "KEN",
+              "change": -18.3,
+              "incomeChange": 0.179,
+              "leftover": -18.1,
+              "basket": 2
+            },
+            {
+              "iso3": "BOL",
+              "change": -15.2,
+              "incomeChange": 0.124,
+              "leftover": -15.3,
+              "basket": 2
+            },
+            {
+              "iso3": "PRY",
+              "change": -3.8,
+              "incomeChange": 0.208,
+              "leftover": -3.4,
+              "basket": 2
+            },
+            {
+              "iso3": "GTM",
+              "change": -22.5,
+              "incomeChange": 0.141,
+              "leftover": -22.5,
+              "basket": 2
+            },
+            {
+              "iso3": "HND",
+              "change": 11.2,
+              "incomeChange": 0.107,
+              "leftover": 11,
+              "basket": 2
+            },
+            {
+              "iso3": "SLV",
+              "change": -7.8,
+              "incomeChange": 0.156,
+              "leftover": -7.7,
+              "basket": 2
+            },
+            {
+              "iso3": "PAK",
+              "change": 15.2,
+              "incomeChange": 0.128,
+              "leftover": 15.1,
+              "basket": 2
+            },
+            {
+              "iso3": "COD",
+              "change": 13.8,
+              "incomeChange": 0.2,
+              "leftover": 14.2,
+              "basket": 2
+            },
+            {
+              "iso3": "UGA",
+              "change": 0,
+              "incomeChange": 0.196,
+              "leftover": 0.3,
+              "basket": 2
+            },
+            {
+              "iso3": "UKR",
+              "change": -5.7,
+              "incomeChange": -0.02,
+              "leftover": -6.7,
+              "basket": 2
+            },
+            {
+              "iso3": "MAR",
+              "change": 3.7,
+              "incomeChange": 0.165,
+              "leftover": 3.8,
+              "basket": 2
+            },
+            {
+              "iso3": "MOZ",
+              "change": 8.6,
+              "incomeChange": 0.144,
+              "leftover": 8.6,
+              "basket": 2
+            },
+            {
+              "iso3": "GHA",
+              "change": 9.1,
+              "incomeChange": 0.28,
+              "leftover": 10,
+              "basket": 2
+            },
+            {
+              "iso3": "BDI",
+              "change": -20.2,
+              "incomeChange": 0.03,
+              "leftover": -20.9,
+              "basket": 2
+            },
+            {
+              "iso3": "TUN",
+              "change": 9.1,
+              "incomeChange": 0.074,
+              "leftover": 8.7,
+              "basket": 2
+            },
+            {
+              "iso3": "JOR",
+              "change": 23.3,
+              "incomeChange": -0.002,
+              "leftover": 22.4,
+              "basket": 2
+            },
+            {
+              "iso3": "BLR",
+              "change": -7.8,
+              "incomeChange": 0.209,
+              "leftover": -7.4,
+              "basket": 2
+            },
+            {
+              "iso3": "GMB",
+              "change": 6.1,
+              "incomeChange": 0.092,
+              "leftover": 5.8,
+              "basket": 2
+            },
+            {
+              "iso3": "BWA",
+              "change": 4.7,
+              "incomeChange": 0.064,
+              "leftover": 4.2,
+              "basket": 2
+            }
+          ]
         },
         "trust": {
-          "m1": null,
-          "m2": null,
+          "m1": {
+            "n": 22,
+            "slope": -6.71,
+            "r": -0.052,
+            "r2": 0.003,
+            "reading": "little"
+          },
+          "m2": {
+            "pairs": 1,
+            "excludedPairs": 0,
+            "n": 28,
+            "statistic": -0.077,
+            "nullMean": 0.007,
+            "nullP95": 0.329,
+            "reading": "noise"
+          },
           "reading": "unreadable",
           "d174": {
             "n": 131,
-            "slope": 9.87,
-            "r": 0.172,
+            "slope": 11.13,
+            "r": 0.175,
             "r2": 0.03,
             "reading": "little"
           },
           "coverage": {
-            "entered": 0,
+            "entered": 22,
             "eligible": 133,
-            "rWithLogGdp": null,
+            "rWithLogGdp": -0.331,
             "excludedPairs": 0
           },
-          "countries": []
+          "countries": [
+            {
+              "iso3": "CHL",
+              "change": 0.4,
+              "incomeChange": 0.148,
+              "leftover": -3.3,
+              "basket": 2
+            },
+            {
+              "iso3": "RWA",
+              "change": -6,
+              "incomeChange": 0.375,
+              "leftover": -8.2,
+              "basket": 2
+            },
+            {
+              "iso3": "ETH",
+              "change": -8.3,
+              "incomeChange": 0.48,
+              "leftover": -9.8,
+              "basket": 2
+            },
+            {
+              "iso3": "BOL",
+              "change": 1.2,
+              "incomeChange": 0.124,
+              "leftover": -2.7,
+              "basket": 2
+            },
+            {
+              "iso3": "PRY",
+              "change": 7.2,
+              "incomeChange": 0.208,
+              "leftover": 3.9,
+              "basket": 2
+            },
+            {
+              "iso3": "PAN",
+              "change": 6.6,
+              "incomeChange": 0.314,
+              "leftover": 4,
+              "basket": 2
+            },
+            {
+              "iso3": "GTM",
+              "change": 20.6,
+              "incomeChange": 0.141,
+              "leftover": 16.8,
+              "basket": 2
+            },
+            {
+              "iso3": "SLV",
+              "change": -26.2,
+              "incomeChange": 0.156,
+              "leftover": -29.9,
+              "basket": 2
+            },
+            {
+              "iso3": "COD",
+              "change": 14.4,
+              "incomeChange": 0.2,
+              "leftover": 11,
+              "basket": 2
+            },
+            {
+              "iso3": "TZA",
+              "change": 14.4,
+              "incomeChange": 0.214,
+              "leftover": 11.1,
+              "basket": 2
+            },
+            {
+              "iso3": "UGA",
+              "change": -5,
+              "incomeChange": 0.196,
+              "leftover": -8.4,
+              "basket": 2
+            },
+            {
+              "iso3": "AGO",
+              "change": -4.2,
+              "incomeChange": -0.039,
+              "leftover": -9.2,
+              "basket": 2
+            },
+            {
+              "iso3": "BFA",
+              "change": -4.8,
+              "incomeChange": 0.185,
+              "leftover": -8.3,
+              "basket": 2
+            },
+            {
+              "iso3": "GIN",
+              "change": 38.4,
+              "incomeChange": 0.231,
+              "leftover": 35.2,
+              "basket": 2
+            },
+            {
+              "iso3": "BDI",
+              "change": -0.4,
+              "incomeChange": 0.03,
+              "leftover": -4.9,
+              "basket": 2
+            },
+            {
+              "iso3": "NAM",
+              "change": -16.2,
+              "incomeChange": 0.02,
+              "leftover": -20.8,
+              "basket": 2
+            },
+            {
+              "iso3": "GMB",
+              "change": 25.8,
+              "incomeChange": 0.092,
+              "leftover": 21.7,
+              "basket": 2
+            },
+            {
+              "iso3": "BWA",
+              "change": -0.4,
+              "incomeChange": 0.064,
+              "leftover": -4.7,
+              "basket": 2
+            },
+            {
+              "iso3": "GNB",
+              "change": -9.9,
+              "incomeChange": 0.134,
+              "leftover": -13.7,
+              "basket": 2
+            },
+            {
+              "iso3": "CMR",
+              "change": 28.6,
+              "incomeChange": 0.067,
+              "leftover": 24.3,
+              "basket": 2
+            },
+            {
+              "iso3": "MRT",
+              "change": 14.6,
+              "incomeChange": 0.019,
+              "leftover": 10,
+              "basket": 2
+            },
+            {
+              "iso3": "SWZ",
+              "change": -10.2,
+              "incomeChange": 0.15,
+              "leftover": -13.9,
+              "basket": 2
+            }
+          ]
         },
         "learning": {
           "m1": null,

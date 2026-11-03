@@ -1,6 +1,6 @@
 # Agenda de capacidades: Países Baixos
 
-*Gerada em 2026-11-02*
+*Gerada em 2026-11-03*
 
 A escala reúne 135 países. Cada dimensão recebe uma pontuação de 0 a 100, sem classificação geral, e cada pontuação traz ao lado a solidez da evidência. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma pontuação.
 
@@ -10,7 +10,7 @@ A escala reúne 135 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 | --- | --- | --- | --- |
 | Antecipação | 76,1 | 0,46 (utilizável) | +9 em 10 anos, com base em 2 indicadores |
 | Agência | 52,2 | 0,27 (fraca) | sem tendência comparável |
-| Coordenação | 89,8 | 0,27 (fraca) | sem tendência comparável |
+| Coordenação | 89,8 | 0,27 (fraca) | -4,4 em 10 anos, com base em 2 indicadores |
 | Confiança | 89 | 0,21 (muito fraca) | sem tendência comparável |
 | Aprendizagem | 77,6 | 0,55 (utilizável) | sem tendência comparável |
 | Experimentação | 52,6 | 0,35 (fraca) | sem tendência comparável |

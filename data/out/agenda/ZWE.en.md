@@ -1,6 +1,6 @@
 # Capability agenda: Zimbabwe
 
-*Generated 2026-11-02*
+*Generated 2026-11-03*
 
 The frame includes 135 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
@@ -10,8 +10,8 @@ The frame includes 135 countries. Each dimension is scored from 0 to 100, with n
 | --- | --- | --- | --- |
 | Anticipation | 25.9 | 0.46 (usable) | +23.2 over 10 years using 2 indicators |
 | Agency | 45 | 0.44 (thin) | no trend |
-| Coordination | 58.7 | 0.25 (thin) | no trend |
-| Trust | 16.7 | 0.41 (thin) | no trend |
+| Coordination | 58.7 | 0.25 (thin) | -22.4 over 10 years using 2 indicators |
+| Trust | 16.7 | 0.41 (thin) | -39.1 over 10 years using 2 indicators |
 | Learning | 38.9 | 0.55 (usable) | no trend |
 | Experimentation | 1.6 | 0.37 (thin) | +0.4 over 10 years using 2 indicators |
 | Adaptability | 45.7 | 0.62 (usable) | no trend |

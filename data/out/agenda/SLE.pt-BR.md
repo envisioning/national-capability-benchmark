@@ -1,6 +1,6 @@
 # Agenda de capacidades: Serra Leoa
 
-*Gerada em 2026-11-02*
+*Gerada em 2026-11-03*
 
 A escala reúne 135 países. Cada dimensão recebe uma pontuação de 0 a 100, sem classificação geral, e cada pontuação traz ao lado a solidez da evidência. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma pontuação.
 
@@ -10,7 +10,7 @@ A escala reúne 135 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 | --- | --- | --- | --- |
 | Antecipação | 19,3 | 0,46 (utilizável) | +13 em 10 anos, com base em 2 indicadores |
 | Agência | 50,2 | 0,49 (utilizável) | sem tendência comparável |
-| Coordenação | 59,2 | 0,47 (utilizável) | sem tendência comparável |
+| Coordenação | 59,2 | 0,47 (utilizável) | -16,1 em 10 anos, com base em 2 indicadores |
 | Confiança | 53,8 | 0,33 (fraca) | sem tendência comparável |
 | Aprendizagem | 33,1 | 0,54 (utilizável) | sem tendência comparável |
 | Experimentação | 0,6 | 0,35 (fraca) | sem tendência comparável |

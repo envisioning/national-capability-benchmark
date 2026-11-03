@@ -1,6 +1,6 @@
 # Capability agenda: Croatia
 
-*Generated 2026-11-02*
+*Generated 2026-11-03*
 
 The frame includes 135 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
@@ -10,7 +10,7 @@ The frame includes 135 countries. Each dimension is scored from 0 to 100, with n
 | --- | --- | --- | --- |
 | Anticipation | 69.1 | 0.46 (usable) | +25.3 over 10 years using 2 indicators |
 | Agency | 77.1 | 0.63 (usable) | no trend |
-| Coordination | 83.9 | 0.45 (usable) | no trend |
+| Coordination | 83.9 | 0.45 (usable) | -4.8 over 10 years using 2 indicators |
 | Trust | 55.4 | 0.54 (usable) | no trend |
 | Learning | 47.8 | 0.54 (usable) | no trend |
 | Experimentation | 26.1 | 0.47 (usable) | -21.1 over 10 years using 3 indicators |

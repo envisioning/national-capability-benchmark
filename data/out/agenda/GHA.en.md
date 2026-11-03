@@ -1,6 +1,6 @@
 # Capability agenda: Ghana
 
-*Generated 2026-11-02*
+*Generated 2026-11-03*
 
 The frame includes 135 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
@@ -10,8 +10,8 @@ The frame includes 135 countries. Each dimension is scored from 0 to 100, with n
 | --- | --- | --- | --- |
 | Anticipation | 26.1 | 0.46 (usable) | +6.9 over 10 years using 2 indicators |
 | Agency | 39.1 | 0.49 (usable) | no trend |
-| Coordination | 72.9 | 0.45 (usable) | no trend |
-| Trust | 64.8 | 0.33 (thin) | no trend |
+| Coordination | 72.9 | 0.45 (usable) | +9.1 over 10 years using 2 indicators |
+| Trust | 64.8 | 0.33 (thin) | +5.1 over 10 years using 2 indicators |
 | Learning | 52.9 | 0.54 (usable) | no trend |
 | Experimentation | 8.4 | 0.46 (usable) | -1.3 over 10 years using 3 indicators |
 | Adaptability | 52.4 | 0.62 (usable) | no trend |

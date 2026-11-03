@@ -1,6 +1,6 @@
 # Agenda de capacidades: Sérvia
 
-*Gerada em 2026-11-02*
+*Gerada em 2026-11-03*
 
 A escala reúne 135 países. Cada dimensão recebe uma pontuação de 0 a 100, sem classificação geral, e cada pontuação traz ao lado a solidez da evidência. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma pontuação.
 
@@ -10,8 +10,8 @@ A escala reúne 135 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 | --- | --- | --- | --- |
 | Antecipação | 52,9 | 0,46 (utilizável) | +12,5 em 10 anos, com base em 2 indicadores |
 | Agência | 59,2 | 0,49 (utilizável) | sem tendência comparável |
-| Coordenação | 73,6 | 0,47 (utilizável) | sem tendência comparável |
-| Confiança | 63,9 | 0,34 (fraca) | sem tendência comparável |
+| Coordenação | 73,6 | 0,47 (utilizável) | -2,2 em 10 anos, com base em 2 indicadores |
+| Confiança | 63,9 | 0,34 (fraca) | +5 em 10 anos, com base em 2 indicadores |
 | Aprendizagem | 40,8 | 0,55 (utilizável) | sem tendência comparável |
 | Experimentação | 16,4 | 0,47 (utilizável) | -1,6 em 10 anos, com base em 3 indicadores |
 | Adaptação | 69,6 | 0,62 (utilizável) | sem tendência comparável |

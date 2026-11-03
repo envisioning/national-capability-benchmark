@@ -1,6 +1,6 @@
 # Agenda de capacidades: Senegal
 
-*Gerada em 2026-11-02*
+*Gerada em 2026-11-03*
 
 A escala reúne 135 países. Cada dimensão recebe uma pontuação de 0 a 100, sem classificação geral, e cada pontuação traz ao lado a solidez da evidência. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma pontuação.
 
@@ -11,7 +11,7 @@ A escala reúne 135 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 | Antecipação | 39 | 0,46 (utilizável) | +23,9 em 10 anos, com base em 2 indicadores |
 | Agência | 48,5 | 0,49 (utilizável) | sem tendência comparável |
 | Coordenação | 81 | 0,39 (fraca) | sem tendência comparável |
-| Confiança | 74,3 | 0,34 (fraca) | sem tendência comparável |
+| Confiança | 74,3 | 0,34 (fraca) | +13,9 em 10 anos, com base em 2 indicadores |
 | Aprendizagem | 24,9 | 0,55 (utilizável) | sem tendência comparável |
 | Experimentação | 34,5 | 0,18 (muito fraca) | sem tendência comparável |
 | Adaptação | 73,8 | 0,62 (utilizável) | sem tendência comparável |

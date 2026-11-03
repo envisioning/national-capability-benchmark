@@ -1,6 +1,6 @@
 # Capability agenda: Madagascar
 
-*Generated 2026-11-02*
+*Generated 2026-11-03*
 
 The frame includes 135 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
@@ -10,8 +10,8 @@ The frame includes 135 countries. Each dimension is scored from 0 to 100, with n
 | --- | --- | --- | --- |
 | Anticipation | 17 | 0.46 (usable) | +15.6 over 10 years using 2 indicators |
 | Agency | 40.6 | 0.49 (usable) | no trend |
-| Coordination | 47.3 | 0.48 (usable) | no trend |
-| Trust | 39.5 | 0.32 (thin) | no trend |
+| Coordination | 47.3 | 0.48 (usable) | -27.5 over 10 years using 2 indicators |
+| Trust | 39.5 | 0.32 (thin) | +3.9 over 10 years using 2 indicators |
 | Learning | 21.2 | 0.52 (usable) | no trend |
 | Experimentation | 14.2 | 0.47 (usable) | +0.2 over 10 years using 3 indicators |
 | Adaptability | 45.2 | 0.48 (usable) | no trend |

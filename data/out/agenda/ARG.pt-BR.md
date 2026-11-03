@@ -1,6 +1,6 @@
 # Agenda de capacidades: Argentina
 
-*Gerada em 2026-11-02*
+*Gerada em 2026-11-03*
 
 A escala reúne 135 países. Cada dimensão recebe uma pontuação de 0 a 100, sem classificação geral, e cada pontuação traz ao lado a solidez da evidência. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma pontuação.
 
@@ -10,7 +10,7 @@ A escala reúne 135 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 | --- | --- | --- | --- |
 | Antecipação | 41,2 | 0,46 (utilizável) | +13,5 em 10 anos, com base em 2 indicadores |
 | Agência | 41,1 | 0,44 (fraca) | sem tendência comparável |
-| Coordenação | 55,6 | 0,25 (fraca) | sem tendência comparável |
+| Coordenação | 55,6 | 0,25 (fraca) | -1,7 em 10 anos, com base em 2 indicadores |
 | Confiança | 51,7 | 0,35 (fraca) | sem tendência comparável |
 | Aprendizagem | 43,4 | 0,42 (fraca) | sem tendência comparável |
 | Experimentação | 23,6 | 0,54 (utilizável) | +2,9 em 10 anos, com base em 3 indicadores |

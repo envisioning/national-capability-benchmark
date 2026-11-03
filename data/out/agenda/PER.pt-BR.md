@@ -1,6 +1,6 @@
 # Agenda de capacidades: Peru
 
-*Gerada em 2026-11-02*
+*Gerada em 2026-11-03*
 
 A escala reúne 135 países. Cada dimensão recebe uma pontuação de 0 a 100, sem classificação geral, e cada pontuação traz ao lado a solidez da evidência. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma pontuação.
 
@@ -10,7 +10,7 @@ A escala reúne 135 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 | --- | --- | --- | --- |
 | Antecipação | 41,9 | 0,46 (utilizável) | +19,5 em 10 anos, com base em 2 indicadores |
 | Agência | 55,4 | 0,63 (utilizável) | sem tendência comparável |
-| Coordenação | 59,4 | 0,45 (utilizável) | sem tendência comparável |
+| Coordenação | 59,4 | 0,45 (utilizável) | +4,5 em 10 anos, com base em 2 indicadores |
 | Confiança | 35,9 | 0,54 (utilizável) | sem tendência comparável |
 | Aprendizagem | 52,1 | 0,54 (utilizável) | sem tendência comparável |
 | Experimentação | 23,5 | 0,64 (utilizável) | sem tendência comparável |

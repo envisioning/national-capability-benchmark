@@ -1,6 +1,6 @@
 # Capability agenda: Belgium
 
-*Generated 2026-11-02*
+*Generated 2026-11-03*
 
 The frame includes 135 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
@@ -10,7 +10,7 @@ The frame includes 135 countries. Each dimension is scored from 0 to 100, with n
 | --- | --- | --- | --- |
 | Anticipation | 70.9 | 0.46 (usable) | +10.1 over 10 years using 2 indicators |
 | Agency | 66.3 | 0.48 (usable) | no trend |
-| Coordination | 93.3 | 0.45 (usable) | no trend |
+| Coordination | 93.3 | 0.45 (usable) | -4.3 over 10 years using 2 indicators |
 | Trust | 79.7 | 0.34 (thin) | no trend |
 | Learning | 80.4 | 0.55 (usable) | no trend |
 | Experimentation | 53 | 0.28 (thin) | no trend |

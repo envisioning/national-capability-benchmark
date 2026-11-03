@@ -1,6 +1,6 @@
 # Capability agenda: Cameroon
 
-*Generated 2026-11-02*
+*Generated 2026-11-03*
 
 The frame includes 135 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
@@ -10,8 +10,8 @@ The frame includes 135 countries. Each dimension is scored from 0 to 100, with n
 | --- | --- | --- | --- |
 | Anticipation | 25.6 | 0.46 (usable) | +12.2 over 10 years using 2 indicators |
 | Agency | 62.4 | 0.3 (thin) | no trend |
-| Coordination | 38.6 | 0.48 (usable) | no trend |
-| Trust | 40.1 | 0.34 (thin) | no trend |
+| Coordination | 38.6 | 0.48 (usable) | -52.2 over 10 years using 2 indicators |
+| Trust | 40.1 | 0.34 (thin) | +6.5 over 10 years using 2 indicators |
 | Learning | 24.9 | 0.55 (usable) | no trend |
 | Experimentation | 41.9 | 0.18 (very thin) | no trend |
 | Adaptability | 47.8 | 0.58 (usable) | no trend |

@@ -1,6 +1,6 @@
 # Capability agenda: Liberia
 
-*Generated 2026-11-02*
+*Generated 2026-11-03*
 
 The frame includes 135 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
@@ -10,7 +10,7 @@ The frame includes 135 countries. Each dimension is scored from 0 to 100, with n
 | --- | --- | --- | --- |
 | Anticipation | 18.5 | 0.46 (usable) | +14.4 over 10 years using 2 indicators |
 | Agency | 39.5 | 0.3 (thin) | no trend |
-| Coordination | 94.1 | 0.28 (thin) | no trend |
+| Coordination | 94.1 | 0.28 (thin) | -1 over 10 years using 2 indicators |
 | Trust | 54.5 | 0.21 (very thin) | no trend |
 | Learning | 40 | 0.55 (usable) | no trend |
 | Experimentation | 0.9 | 0.37 (thin) | no trend |

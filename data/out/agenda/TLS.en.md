@@ -1,6 +1,6 @@
 # Capability agenda: Timor-Leste
 
-*Generated 2026-11-02*
+*Generated 2026-11-03*
 
 The frame includes 135 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
@@ -10,8 +10,8 @@ The frame includes 135 countries. Each dimension is scored from 0 to 100, with n
 | --- | --- | --- | --- |
 | Anticipation | 19.9 | 0.46 (usable) | no trend |
 | Agency | 52 | 0.46 (usable) | no trend |
-| Coordination | 50.1 | 0.48 (usable) | no trend |
-| Trust | 59.4 | 0.32 (thin) | no trend |
+| Coordination | 50.1 | 0.48 (usable) | -13.1 over 10 years using 2 indicators |
+| Trust | 59.4 | 0.32 (thin) | +34.7 over 10 years using 2 indicators |
 | Learning | 23.5 | 0.5 (usable) | no trend |
 | Experimentation | 0.7 | 0.18 (very thin) | no trend |
 | Adaptability | 55.1 | 0.58 (usable) | no trend |

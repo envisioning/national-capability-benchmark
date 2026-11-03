@@ -1,6 +1,6 @@
 # National Capability Benchmark, prototype v0
 
-*Generated 2026-11-02T19:37:30.756Z*
+*Generated 2026-11-03T08:12:39.691Z*
 
 This run covers 135 countries and nine dimensions. Indicators carry equal weight within each dimension, and the benchmark has no headline ranking.
 
@@ -295,145 +295,147 @@ Trends use the current frame and only indicators observed at both ends. The bask
 
 | Country | Anticipation | Agency | Coordination | Trust | Learning | Experimentation | Adaptability | Building | Shared Purpose |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Brazil | +7.6 (2) | no data | no data | no data | no data | +10.8 (3) | no data | -2.6 (3) | +6.7 (2) |
+| Brazil | +7.6 (2) | no data | +7.4 (2) | no data | no data | +10.8 (3) | no data | -2.6 (3) | +6.7 (2) |
 | United States | +0.5 (2) | no data | no data | no data | no data | no data | no data | +0.4 (3) | -0.8 (2) |
-| Netherlands | +9.0 (2) | no data | no data | no data | no data | no data | no data | -0.5 (3) | +7.7 (2) |
+| Netherlands | +9.0 (2) | no data | -4.4 (2) | no data | no data | no data | no data | -0.5 (3) | +7.7 (2) |
 | Switzerland | +2.2 (2, 1 clamped) | no data | no data | no data | no data | -6.2 (3) | no data | +2.0 (3) | -0.4 (2) |
 | Singapore | +17.0 (2) | no data | no data | no data | no data | -0.1 (3) | no data | +7.0 (3) | no data |
 | South Korea | +17.4 (2) | no data | no data | no data | no data | no data | no data | +3.1 (3) | +3.2 (2) |
-| Estonia | +9.4 (2) | no data | no data | no data | no data | no data | no data | -4.8 (3) | +2.1 (2) |
-| India | +8.7 (2) | no data | no data | no data | no data | +10.9 (3) | no data | +4.3 (3) | +1.9 (2) |
-| Chile | +10.4 (2) | no data | no data | no data | no data | +2.1 (3) | no data | -1.3 (3) | +4.3 (2) |
-| South Africa | +5.0 (2) | no data | no data | no data | no data | -3.2 (3) | no data | -2.1 (3) | +8.4 (2, 1 clamped) |
-| Mexico | +10.7 (2) | no data | no data | no data | no data | no data | no data | +3.2 (3) | +8.4 (2) |
-| Argentina | +13.5 (2) | no data | no data | no data | no data | +2.9 (3) | no data | -4.6 (3) | -2.5 (2) |
-| Colombia | +11.5 (2) | no data | no data | no data | no data | no data | no data | -3.3 (3) | -2.5 (2) |
-| Peru | +19.5 (2) | no data | no data | no data | no data | no data | no data | -1.1 (3) | +7.9 (2) |
-| Uruguay | +14.5 (2) | no data | no data | no data | no data | no data | no data | -1.6 (3) | -6.0 (2) |
-| Costa Rica | +12.2 (2) | no data | no data | no data | no data | no data | no data | +4.7 (3) | +4.4 (2) |
-| Germany | +4.3 (2) | no data | no data | no data | no data | +1.1 (3) | no data | -3.0 (3) | -4.7 (2) |
-| France | +0.3 (2) | no data | no data | no data | no data | -2.6 (3) | no data | -3.4 (3) | -0.4 (2) |
+| Estonia | +9.4 (2) | no data | +4.0 (2) | no data | no data | no data | no data | -4.8 (3) | +2.1 (2) |
+| India | +8.7 (2) | no data | +3.1 (2) | +9.7 (2) | no data | +10.9 (3) | no data | +4.3 (3) | +1.9 (2) |
+| Chile | +10.4 (2) | no data | +31.2 (2) | no data | no data | +2.1 (3) | no data | -1.3 (3) | +4.3 (2) |
+| South Africa | +5.0 (2) | no data | -4.6 (2) | no data | no data | -3.2 (3) | no data | -2.1 (3) | +8.4 (2, 1 clamped) |
+| Mexico | +10.7 (2) | no data | -1.7 (2) | no data | no data | no data | no data | +3.2 (3) | +8.4 (2) |
+| Argentina | +13.5 (2) | no data | -1.7 (2) | no data | no data | +2.9 (3) | no data | -4.6 (3) | -2.5 (2) |
+| Colombia | +11.5 (2) | no data | -3.7 (2) | no data | no data | no data | no data | -3.3 (3) | -2.5 (2) |
+| Peru | +19.5 (2) | no data | +4.5 (2) | no data | no data | no data | no data | -1.1 (3) | +7.9 (2) |
+| Uruguay | +14.5 (2) | no data | +7.2 (2) | no data | no data | no data | no data | -1.6 (3) | -6.0 (2) |
+| Costa Rica | +12.2 (2) | no data | -2.9 (2) | no data | no data | no data | no data | +4.7 (3) | +4.4 (2) |
+| Germany | +4.3 (2) | no data | -2.7 (2, 1 clamped) | no data | no data | +1.1 (3) | no data | -3.0 (3) | -4.7 (2) |
+| France | +0.3 (2) | no data | -4.3 (2) | no data | no data | -2.6 (3) | no data | -3.4 (3) | -0.4 (2) |
 | United Kingdom | +3.3 (2) | no data | no data | no data | no data | +16.4 (3) | no data | +1.7 (3) | +3.3 (2) |
-| Spain | +6.3 (2) | no data | no data | no data | no data | -7.2 (3) | no data | +2.1 (3) | +5.1 (2) |
-| Portugal | +10.9 (2) | no data | no data | no data | no data | -21.2 (3) | no data | -0.9 (3) | +1.4 (2) |
-| Poland | +8.1 (2) | no data | no data | no data | no data | no data | no data | +5.2 (3) | +5.5 (2) |
+| Spain | +6.3 (2) | no data | -4.8 (2) | no data | no data | -7.2 (3) | no data | +2.1 (3) | +5.1 (2) |
+| Portugal | +10.9 (2) | no data | -11.8 (2) | no data | no data | -21.2 (3) | no data | -0.9 (3) | +1.4 (2) |
+| Poland | +8.1 (2) | no data | +1.0 (2) | no data | no data | no data | no data | +5.2 (3) | +5.5 (2) |
 | Sweden | +2.2 (2) | no data | no data | no data | no data | -8.7 (3) | no data | -2.9 (3) | -1.2 (2) |
-| Finland | +1.8 (2) | no data | no data | no data | no data | -9.9 (3) | no data | -1.6 (3) | +5.8 (2) |
-| Ireland | +5.8 (2) | no data | no data | no data | no data | -4.1 (2) | no data | +16.0 (3) | +4.3 (2) |
+| Finland | +1.8 (2) | no data | -2.7 (2) | no data | no data | -9.9 (3) | no data | -1.6 (3) | +5.8 (2) |
+| Ireland | +5.8 (2) | no data | -3.4 (2) | no data | no data | -4.1 (2) | no data | +16.0 (3) | +4.3 (2) |
 | Canada | +2.7 (2) | no data | no data | no data | no data | -10.7 (3) | no data | -1.1 (3) | +3.4 (2) |
-| Australia | -0.3 (2) | no data | no data | no data | no data | -6.6 (3) | no data | +0.7 (3) | no data |
-| Japan | +13.2 (2) | no data | no data | no data | no data | -11.6 (3) | no data | -1.3 (3) | no data |
-| China | +10.7 (2) | no data | no data | no data | no data | +14.8 (3) | no data | -5.1 (3) | +0.7 (2) |
-| Indonesia | +14.7 (2) | no data | no data | no data | no data | +4.0 (3) | no data | +0.5 (3) | +3.1 (2) |
-| Vietnam | +13.6 (2) | no data | no data | no data | no data | +3.1 (3) | no data | +18.1 (3) | -3.7 (2) |
+| Australia | -0.3 (2) | no data | +4.1 (2) | no data | no data | -6.6 (3) | no data | +0.7 (3) | no data |
+| Japan | +13.2 (2) | no data | -23.9 (2) | no data | no data | -11.6 (3) | no data | -1.3 (3) | no data |
+| China | +10.7 (2) | no data | -7.2 (2) | +6.8 (2) | no data | +14.8 (3) | no data | -5.1 (3) | +0.7 (2) |
+| Indonesia | +14.7 (2) | no data | 0.0 (2) | no data | no data | +4.0 (3) | no data | +0.5 (3) | +3.1 (2) |
+| Vietnam | +13.6 (2) | no data | -5.9 (2) | no data | no data | +3.1 (3) | no data | +18.1 (3) | -3.7 (2) |
 | Philippines | +10.1 (2) | no data | no data | no data | no data | +1.7 (3) | no data | -4.8 (2) | +9.2 (2) |
-| Malaysia | +23.2 (2) | no data | no data | no data | no data | -3.3 (3) | no data | +6.4 (3) | -1.1 (2) |
-| Thailand | +8.6 (2) | no data | no data | no data | no data | +1.1 (3) | no data | -0.2 (3) | +3.4 (2) |
-| Turkey | +9.1 (2) | no data | no data | no data | no data | +19.4 (3) | no data | +5.9 (3) | -3.5 (2) |
-| Israel | +10.1 (2) | no data | no data | no data | no data | -17.2 (3) | no data | +7.1 (3) | +1.2 (2) |
+| Malaysia | +23.2 (2) | no data | +1.0 (2) | no data | no data | -3.3 (3) | no data | +6.4 (3) | -1.1 (2) |
+| Thailand | +8.6 (2) | no data | +2.6 (2) | -9.1 (2) | no data | +1.1 (3) | no data | -0.2 (3) | +3.4 (2) |
+| Turkey | +9.1 (2) | no data | -12.3 (2) | no data | no data | +19.4 (3) | no data | +5.9 (3) | -3.5 (2) |
+| Israel | +10.1 (2) | no data | no data | -30.3 (2) | no data | -17.2 (3) | no data | +7.1 (3) | +1.2 (2) |
 | United Arab Emirates | +35.7 (2) | no data | no data | no data | no data | +6.4 (3) | no data | +7.4 (3) | no data |
-| Nigeria | +11.3 (2) | no data | no data | no data | no data | no data | no data | -0.7 (3) | +6.7 (2) |
-| Kenya | +16.0 (2) | no data | no data | no data | no data | +1.7 (3) | no data | -4.7 (3) | +1.9 (2) |
-| Rwanda | +16.4 (2) | no data | no data | no data | no data | +0.7 (3) | no data | -3.3 (3) | +3.2 (2) |
-| Ethiopia | +10.2 (2) | no data | no data | no data | no data | +0.2 (2) | no data | -3.2 (3) | -1.4 (2) |
-| Bolivia | +11.1 (2) | no data | no data | no data | no data | +0.5 (3) | no data | +4.4 (3) | +0.8 (2) |
-| Paraguay | +19.5 (2) | no data | no data | no data | no data | no data | no data | +2.0 (3) | +7.7 (2) |
-| Ecuador | +11.0 (2) | no data | no data | no data | no data | +1.0 (3) | no data | -1.0 (3) | -3.3 (2) |
+| Nigeria | +11.3 (2) | no data | -34.4 (2) | +0.6 (2) | no data | no data | no data | -0.7 (3) | +6.7 (2) |
+| Kenya | +16.0 (2) | no data | -11.3 (2) | -9.1 (2) | no data | +1.7 (3) | no data | -4.7 (3) | +1.9 (2) |
+| Rwanda | +16.4 (2) | no data | +2.3 (2) | -5.3 (2) | no data | +0.7 (3) | no data | -3.3 (3) | +3.2 (2) |
+| Ethiopia | +10.2 (2) | no data | +22.5 (2) | +12.9 (2) | no data | +0.2 (2) | no data | -3.2 (3) | -1.4 (2) |
+| Bolivia | +11.1 (2) | no data | +13.8 (2) | no data | no data | +0.5 (3) | no data | +4.4 (3) | +0.8 (2) |
+| Paraguay | +19.5 (2) | no data | +9.2 (2) | no data | no data | no data | no data | +2.0 (3) | +7.7 (2) |
+| Ecuador | +11.0 (2) | no data | +22.0 (2) | no data | no data | +1.0 (3) | no data | -1.0 (3) | -3.3 (2) |
 | Venezuela | -5.4 (2) | no data | no data | no data | no data | -2.1 (2) | no data | no data | no data |
-| Panama | +21.1 (2) | no data | no data | no data | no data | -3.1 (3) | no data | -1.5 (3) | -3.2 (2) |
-| Guatemala | +18.5 (2) | no data | no data | no data | no data | -3.2 (2) | no data | -1.1 (3) | +6.0 (2) |
-| Honduras | +6.0 (2) | no data | no data | no data | no data | +0.3 (2) | no data | -1.7 (3) | no data |
-| El Salvador | +5.9 (2) | no data | no data | no data | no data | +2.3 (3) | no data | -3.5 (3) | +6.6 (2) |
-| Nicaragua | +6.9 (2) | no data | no data | no data | no data | no data | no data | -1.7 (3) | no data |
-| Dominican Republic | +11.0 (2) | no data | no data | no data | no data | +0.5 (3) | no data | +1.5 (3) | +11.8 (2) |
+| Panama | +21.1 (2) | no data | -12.7 (2) | no data | no data | -3.1 (3) | no data | -1.5 (3) | -3.2 (2) |
+| Guatemala | +18.5 (2) | no data | -22.2 (2) | no data | no data | -3.2 (2) | no data | -1.1 (3) | +6.0 (2) |
+| Honduras | +6.0 (2) | no data | +7.9 (2) | no data | no data | +0.3 (2) | no data | -1.7 (3) | no data |
+| El Salvador | +5.9 (2) | no data | -20.9 (2) | -25.1 (2) | no data | +2.3 (3) | no data | -3.5 (3) | +6.6 (2) |
+| Nicaragua | +6.9 (2) | no data | -50.2 (2) | no data | no data | no data | no data | -1.7 (3) | no data |
+| Dominican Republic | +11.0 (2) | no data | -22.7 (2) | +13.3 (2) | no data | +0.5 (3) | no data | +1.5 (3) | +11.8 (2) |
 | Cuba | no data | no data | no data | no data | no data | +0.6 (3) | no data | -27.4 (2) | no data |
-| Haiti | 0.0 (2, 1 clamped) | no data | no data | no data | no data | no data | no data | +5.9 (2) | no data |
-| Pakistan | +10.8 (2) | no data | no data | no data | no data | +0.8 (3) | no data | +1.9 (3) | -1.3 (2) |
-| Bangladesh | +13.7 (2) | no data | no data | no data | no data | -0.6 (3) | no data | +4.8 (2) | +2.5 (2) |
-| Russia | +14.5 (2) | no data | no data | no data | no data | +17.2 (3) | no data | -5.2 (3) | +7.6 (2) |
-| Egypt | +3.3 (2) | no data | no data | no data | no data | +2.2 (3) | no data | -0.3 (3) | no data |
-| Democratic Republic of the Congo | no data | no data | no data | no data | no data | no data | no data | -8.2 (3) | no data |
+| Haiti | 0.0 (2, 1 clamped) | no data | -27.0 (2) | no data | no data | no data | no data | +5.9 (2) | no data |
+| Pakistan | +10.8 (2) | no data | -7.3 (2) | no data | no data | +0.8 (3) | no data | +1.9 (3) | -1.3 (2) |
+| Bangladesh | +13.7 (2) | no data | +1.1 (2) | no data | no data | -0.6 (3) | no data | +4.8 (2) | +2.5 (2) |
+| Russia | +14.5 (2) | no data | -10.9 (2) | no data | no data | +17.2 (3) | no data | -5.2 (3) | +7.6 (2) |
+| Egypt | +3.3 (2) | no data | +7.7 (2) | +6.7 (2) | no data | +2.2 (3) | no data | -0.3 (3) | no data |
+| Democratic Republic of the Congo | no data | no data | +21.6 (2) | +14.6 (2, 1 clamped) | no data | no data | no data | -8.2 (3) | no data |
 | Iran | +14.7 (2) | no data | no data | no data | no data | -26.3 (3) | no data | +10.7 (2) | no data |
-| Tanzania | +6.5 (2) | no data | no data | no data | no data | no data | no data | +1.0 (3) | no data |
-| Italy | +6.9 (2) | no data | no data | no data | no data | +3.1 (3) | no data | +2.4 (3) | +2.0 (2) |
+| Tanzania | +6.5 (2) | no data | +4.9 (2) | +12.4 (2) | no data | no data | no data | +1.0 (3) | no data |
+| Italy | +6.9 (2) | no data | -14.4 (2, 1 clamped) | no data | no data | +3.1 (3) | no data | +2.4 (3) | +2.0 (2) |
 | Myanmar | +18.5 (2) | no data | no data | no data | no data | no data | no data | +2.2 (3) | no data |
-| Sudan | +3.1 (2, 1 clamped) | no data | no data | no data | no data | no data | no data | no data | no data |
-| Uganda | +4.5 (2) | no data | no data | no data | no data | +0.2 (2) | no data | -1.9 (3) | +8.6 (2) |
-| Iraq | +20.0 (2, 1 clamped) | no data | no data | no data | no data | +0.8 (2) | no data | +2.9 (2) | no data |
-| Angola | +9.7 (2, 1 clamped) | no data | no data | no data | no data | no data | no data | +4.0 (3) | no data |
-| Ukraine | +12.4 (2) | no data | no data | no data | no data | -14.1 (3) | no data | -5.5 (3) | no data |
-| Morocco | +14.7 (2) | no data | no data | no data | no data | +6.7 (3) | no data | +1.4 (3) | no data |
-| Uzbekistan | +40.8 (2, 1 clamped) | no data | no data | no data | no data | +1.9 (3) | no data | +11.9 (2) | no data |
-| Mozambique | +12.8 (2) | no data | no data | no data | no data | +0.2 (3) | no data | -0.9 (3) | +8.6 (2) |
-| Ghana | +6.9 (2) | no data | no data | no data | no data | -1.3 (3) | no data | -0.8 (3) | no data |
-| Madagascar | +15.6 (2) | no data | no data | no data | no data | +0.2 (3) | no data | +2.8 (3) | +10.5 (2) |
-| Côte d'Ivoire | +21.1 (2) | no data | no data | no data | no data | no data | no data | -2.2 (3) | +10.9 (2) |
-| Nepal | +11.6 (2) | no data | no data | no data | no data | no data | no data | +0.1 (3) | no data |
-| Mali | +15.2 (2) | no data | no data | no data | no data | no data | no data | -1.4 (3) | no data |
+| Sudan | +3.1 (2, 1 clamped) | no data | -22.9 (2) | no data | no data | no data | no data | no data | no data |
+| Uganda | +4.5 (2) | no data | -4.6 (2) | +2.4 (2) | no data | +0.2 (2) | no data | -1.9 (3) | +8.6 (2) |
+| Iraq | +20.0 (2, 1 clamped) | no data | +8.1 (2) | -15.7 (2) | no data | +0.8 (2) | no data | +2.9 (2) | no data |
+| Angola | +9.7 (2, 1 clamped) | no data | -0.3 (2) | no data | no data | no data | no data | +4.0 (3) | no data |
+| Ukraine | +12.4 (2) | no data | -19.6 (2) | no data | no data | -14.1 (3) | no data | -5.5 (3) | no data |
+| Morocco | +14.7 (2) | no data | -5.5 (2) | no data | no data | +6.7 (3) | no data | +1.4 (3) | no data |
+| Uzbekistan | +40.8 (2, 1 clamped) | no data | +7.4 (2) | no data | no data | +1.9 (3) | no data | +11.9 (2) | no data |
+| Mozambique | +12.8 (2) | no data | +12.2 (2) | no data | no data | +0.2 (3) | no data | -0.9 (3) | +8.6 (2) |
+| Ghana | +6.9 (2) | no data | +9.1 (2) | +5.1 (2) | no data | -1.3 (3) | no data | -0.8 (3) | no data |
+| Madagascar | +15.6 (2) | no data | -27.5 (2) | +3.9 (2) | no data | +0.2 (3) | no data | +2.8 (3) | +10.5 (2) |
+| Côte d'Ivoire | +21.1 (2) | no data | no data | +3.1 (2) | no data | no data | no data | -2.2 (3) | +10.9 (2) |
+| Nepal | +11.6 (2) | no data | +4.5 (2) | +7.9 (2) | no data | no data | no data | +0.1 (3) | no data |
+| Mali | +15.2 (2) | no data | no data | +32.2 (2) | no data | no data | no data | -1.4 (3) | no data |
 | Burkina Faso | +24.4 (2) | no data | no data | no data | no data | no data | no data | -7.0 (3) | +3.6 (2) |
-| Malawi | +8.1 (2) | no data | no data | no data | no data | no data | no data | -0.7 (2) | no data |
-| Zambia | +7.2 (2) | no data | no data | no data | no data | -0.1 (3) | no data | -10.7 (3) | +13.9 (2) |
-| Sri Lanka | +2.3 (2) | no data | no data | no data | no data | -0.2 (3) | no data | +1.6 (3) | no data |
-| Kazakhstan | +14.0 (2) | no data | no data | no data | no data | +6.9 (3) | no data | +7.2 (3) | +0.1 (2) |
-| Romania | no data | no data | no data | no data | no data | +0.6 (3) | no data | -5.3 (3) | +5.1 (2) |
-| Zimbabwe | +23.2 (2) | no data | no data | no data | no data | +0.4 (2) | no data | +2.1 (3) | no data |
-| Guinea | +6.5 (2) | no data | no data | no data | no data | no data | no data | +2.8 (2) | no data |
-| Burundi | -4.7 (2, 1 clamped) | no data | no data | no data | no data | no data | no data | -0.2 (3) | no data |
-| Tunisia | +11.5 (2) | no data | no data | no data | no data | +6.6 (3) | no data | +1.0 (3) | no data |
-| Belgium | +10.1 (2) | no data | no data | no data | no data | no data | no data | +2.4 (3) | +1.2 (2) |
-| Jordan | +26.4 (2) | no data | no data | no data | no data | +1.4 (3) | no data | -0.2 (3) | no data |
-| Czechia | +0.9 (2) | no data | no data | no data | no data | -16.2 (3) | no data | -0.4 (3) | -1.9 (2) |
-| Tajikistan | +11.9 (2) | no data | no data | no data | no data | no data | no data | -8.3 (3) | no data |
-| Papua New Guinea | +4.4 (2, 1 clamped) | no data | no data | no data | no data | 0.0 (2) | no data | +3.2 (3) | no data |
+| Malawi | +8.1 (2) | no data | +5.0 (2) | +3.6 (2) | no data | no data | no data | -0.7 (2) | no data |
+| Zambia | +7.2 (2) | no data | +9.8 (2) | +5.1 (2) | no data | -0.1 (3) | no data | -10.7 (3) | +13.9 (2) |
+| Sri Lanka | +2.3 (2) | no data | 0.0 (2) | -12.0 (2) | no data | -0.2 (3) | no data | +1.6 (3) | no data |
+| Kazakhstan | +14.0 (2) | no data | +9.9 (2) | no data | no data | +6.9 (3) | no data | +7.2 (3) | +0.1 (2) |
+| Romania | no data | no data | -11.7 (2) | -1.3 (2) | no data | +0.6 (3) | no data | -5.3 (3) | +5.1 (2) |
+| Zimbabwe | +23.2 (2) | no data | -22.4 (2) | -39.1 (2) | no data | +0.4 (2) | no data | +2.1 (3) | no data |
+| Guinea | +6.5 (2) | no data | no data | -2.4 (2) | no data | no data | no data | +2.8 (2) | no data |
+| Burundi | -4.7 (2, 1 clamped) | no data | -13.5 (2) | +12.9 (2) | no data | no data | no data | -0.2 (3) | no data |
+| Tunisia | +11.5 (2) | no data | -25.3 (2) | no data | no data | +6.6 (3) | no data | +1.0 (3) | no data |
+| Belgium | +10.1 (2) | no data | -4.3 (2) | no data | no data | no data | no data | +2.4 (3) | +1.2 (2) |
+| Jordan | +26.4 (2) | no data | +3.9 (2) | no data | no data | +1.4 (3) | no data | -0.2 (3) | no data |
+| Czechia | +0.9 (2) | no data | -17.3 (2) | +9.9 (2) | no data | -16.2 (3) | no data | -0.4 (3) | -1.9 (2) |
+| Tajikistan | +11.9 (2) | no data | +10.9 (2) | no data | no data | no data | no data | -8.3 (3) | no data |
+| Papua New Guinea | +4.4 (2, 1 clamped) | no data | no data | +10.6 (2) | no data | 0.0 (2) | no data | +3.2 (3) | no data |
 | Greece | +9.0 (2) | no data | no data | no data | no data | no data | no data | +2.0 (3) | +2.7 (2) |
-| Azerbaijan | +15.6 (2) | no data | no data | no data | no data | +3.7 (3) | no data | +1.2 (3) | no data |
-| Hungary | +7.9 (2) | no data | no data | no data | no data | -9.7 (3) | no data | -1.4 (3) | no data |
-| Austria | +3.5 (2) | no data | no data | no data | no data | -3.0 (3) | no data | -1.7 (3) | -0.6 (2) |
-| Belarus | +10.7 (2) | no data | no data | no data | no data | -4.1 (3) | no data | +0.4 (3) | no data |
-| Laos | +17.4 (2) | no data | no data | no data | no data | no data | no data | -12.9 (3) | +0.6 (2) |
-| Kyrgyzstan | -1.2 (2) | no data | no data | no data | no data | -0.1 (3) | no data | -6.7 (3) | +2.8 (2) |
-| Serbia | +12.5 (2) | no data | no data | no data | no data | -1.6 (3) | no data | -6.8 (2) | +10.4 (2) |
+| Azerbaijan | +15.6 (2) | no data | +0.7 (2) | no data | no data | +3.7 (3) | no data | +1.2 (3) | no data |
+| Hungary | +7.9 (2) | no data | -27.4 (2) | no data | no data | -9.7 (3) | no data | -1.4 (3) | no data |
+| Austria | +3.5 (2) | no data | -9.9 (2) | no data | no data | -3.0 (3) | no data | -1.7 (3) | -0.6 (2) |
+| Belarus | +10.7 (2) | no data | -19.7 (2) | no data | no data | -4.1 (3) | no data | +0.4 (3) | no data |
+| Laos | +17.4 (2) | no data | no data | -17.3 (2) | no data | no data | no data | -12.9 (3) | +0.6 (2) |
+| Kyrgyzstan | -1.2 (2) | no data | -7.2 (2) | no data | no data | -0.1 (3) | no data | -6.7 (3) | +2.8 (2) |
+| Serbia | +12.5 (2) | no data | -2.2 (2) | +5.0 (2) | no data | -1.6 (3) | no data | -6.8 (2) | +10.4 (2) |
 | Republic of the Congo | -3.4 (2) | no data | no data | no data | no data | no data | no data | +1.6 (2) | no data |
-| Bulgaria | +15.9 (2) | no data | no data | no data | no data | -5.4 (3) | no data | +5.4 (2) | +2.0 (2) |
+| Bulgaria | +15.9 (2) | no data | -2.5 (2) | no data | no data | -5.4 (3) | no data | +5.4 (2) | +2.0 (2) |
 | Denmark | +13.3 (2) | no data | no data | no data | no data | -6.7 (3) | no data | +6.1 (3) | -2.5 (2) |
 | Lebanon | +19.6 (2, 1 clamped) | no data | no data | no data | no data | no data | no data | -7.6 (3) | -8.5 (2) |
-| Norway | +19.5 (2) | no data | no data | no data | no data | -22.2 (3) | no data | +1.2 (3) | +7.5 (2) |
-| Slovakia | +1.1 (2) | no data | no data | no data | no data | -0.9 (3) | no data | -1.3 (3) | +3.6 (2) |
+| Norway | +19.5 (2) | no data | -5.0 (2, 1 clamped) | no data | no data | -22.2 (3) | no data | +1.2 (3) | +7.5 (2) |
+| Slovakia | +1.1 (2) | no data | -36.7 (2) | +1.9 (2) | no data | -0.9 (3) | no data | -1.3 (3) | +3.6 (2) |
 | New Zealand | +7.7 (2) | no data | no data | no data | no data | -21.8 (3) | no data | -1.4 (3) | no data |
-| Georgia | +9.9 (2) | no data | no data | no data | no data | +14.4 (3) | no data | +0.5 (3) | +5.5 (2) |
-| Croatia | +25.3 (2) | no data | no data | no data | no data | -21.1 (3) | no data | -3.8 (3) | +0.1 (2) |
-| Mongolia | +14.8 (2) | no data | no data | no data | no data | +17.0 (3) | no data | +2.6 (3) | +9.2 (2) |
-| Bosnia and Herzegovina | +15.3 (2) | no data | no data | no data | no data | +1.1 (3) | no data | +2.5 (3) | +4.3 (2) |
-| Namibia | +5.9 (2) | no data | no data | no data | no data | no data | no data | -3.1 (3) | no data |
-| Armenia | +3.9 (2) | no data | no data | no data | no data | +4.0 (3) | no data | +10.5 (3) | +8.6 (2) |
-| Lithuania | +12.8 (2) | no data | no data | no data | no data | +4.0 (3) | no data | -0.3 (3) | +10.2 (2) |
-| Jamaica | +20.2 (2) | no data | no data | no data | no data | -11.3 (3) | no data | -0.1 (3) | no data |
-| Gambia | +18.6 (2) | no data | no data | no data | no data | no data | no data | -2.5 (3, 1 clamped) | no data |
-| Botswana | +13.1 (2) | no data | no data | no data | no data | +8.2 (3) | no data | -0.9 (3) | no data |
-| Lesotho | +8.6 (2) | no data | no data | no data | no data | no data | no data | -4.9 (3) | no data |
-| Moldova | +13.0 (2) | no data | no data | no data | no data | -2.8 (3) | no data | -3.0 (3) | +2.7 (2) |
-| Albania | +18.4 (2) | no data | no data | no data | no data | +4.0 (3) | no data | +0.2 (3) | no data |
+| Georgia | +9.9 (2) | no data | -11.4 (2) | no data | no data | +14.4 (3) | no data | +0.5 (3) | +5.5 (2) |
+| Croatia | +25.3 (2) | no data | -4.8 (2) | no data | no data | -21.1 (3) | no data | -3.8 (3) | +0.1 (2) |
+| Mongolia | +14.8 (2) | no data | -9.5 (2) | +12.4 (2) | no data | +17.0 (3) | no data | +2.6 (3) | +9.2 (2) |
+| Bosnia and Herzegovina | +15.3 (2) | no data | +5.0 (2) | no data | no data | +1.1 (3) | no data | +2.5 (3) | +4.3 (2) |
+| Namibia | +5.9 (2) | no data | -4.4 (2) | -7.0 (2) | no data | no data | no data | -3.1 (3) | no data |
+| Armenia | +3.9 (2) | no data | +4.1 (2) | +11.9 (2) | no data | +4.0 (3) | no data | +10.5 (3) | +8.6 (2) |
+| Lithuania | +12.8 (2) | no data | -11.6 (2) | +5.3 (2) | no data | +4.0 (3) | no data | -0.3 (3) | +10.2 (2) |
+| Jamaica | +20.2 (2) | no data | +14.0 (2) | no data | no data | -11.3 (3) | no data | -0.1 (3) | no data |
+| Gambia | +18.6 (2) | no data | +24.8 (2) | no data | no data | no data | no data | -2.5 (3, 1 clamped) | no data |
+| Botswana | +13.1 (2) | no data | -10.1 (2) | no data | no data | +8.2 (3) | no data | -0.9 (3) | no data |
+| Lesotho | +8.6 (2) | no data | -17.6 (2) | +11.9 (2) | no data | no data | no data | -4.9 (3) | no data |
+| Moldova | +13.0 (2) | no data | +8.0 (2) | +17.8 (2) | no data | -2.8 (3) | no data | -3.0 (3) | +2.7 (2) |
+| Albania | +18.4 (2) | no data | +2.7 (2) | +2.9 (2) | no data | +4.0 (3) | no data | +0.2 (3) | no data |
 | Guinea-Bissau | +7.9 (2, 1 clamped) | no data | no data | no data | no data | no data | no data | -0.1 (2) | no data |
-| Slovenia | +4.7 (2) | no data | no data | no data | no data | no data | no data | -0.2 (3) | -1.5 (2) |
-| Latvia | +8.8 (2) | no data | no data | no data | no data | -11.7 (3) | no data | -0.2 (3) | +1.0 (2) |
-| North Macedonia | +23.2 (2) | no data | no data | no data | no data | no data | no data | +4.2 (3) | no data |
+| Slovenia | +4.7 (2) | no data | -6.0 (2) | no data | no data | no data | no data | -0.2 (3) | -1.5 (2) |
+| Latvia | +8.8 (2) | no data | +9.6 (2) | no data | no data | -11.7 (3) | no data | -0.2 (3) | +1.0 (2) |
+| North Macedonia | +23.2 (2) | no data | +1.1 (2) | no data | no data | no data | no data | +4.2 (3) | no data |
 | Cyprus | +25.1 (2) | no data | no data | no data | no data | -2.2 (3) | no data | +2.6 (3) | +2.1 (2) |
 | Trinidad and Tobago | +19.0 (2) | no data | no data | no data | no data | -5.1 (3) | no data | -3.0 (3) | no data |
-| Mauritius | +6.0 (2) | no data | no data | no data | no data | +19.4 (3) | no data | -0.4 (3) | no data |
-| Cameroon | +12.2 (2) | no data | no data | no data | no data | no data | no data | -1.2 (3) | +5.7 (2) |
+| Mauritius | +6.0 (2) | no data | +26.2 (2) | no data | no data | +19.4 (3) | no data | -0.4 (3) | no data |
+| Cameroon | +12.2 (2) | no data | -52.2 (2) | +6.5 (2) | no data | no data | no data | -1.2 (3) | +5.7 (2) |
 | Chad | +13.4 (2, 2 clamped) | no data | no data | no data | no data | no data | no data | no data | +16.2 (2) |
-| Senegal | +23.9 (2) | no data | no data | no data | no data | no data | no data | -3.1 (3) | +10.3 (2) |
-| Sierra Leone | +13.0 (2) | no data | no data | no data | no data | no data | no data | +0.8 (2) | no data |
-| Togo | +13.3 (2) | no data | no data | no data | no data | no data | no data | -1.6 (3) | +7.1 (2) |
-| Liberia | +14.4 (2) | no data | no data | no data | no data | no data | no data | no data | no data |
-| Central African Republic | no data | no data | no data | no data | no data | no data | no data | -5.2 (2) | no data |
-| Mauritania | +16.0 (2) | no data | no data | no data | no data | no data | no data | +3.6 (3, 1 clamped) | no data |
-| Timor-Leste | no data | no data | no data | no data | no data | no data | no data | no data | no data |
-| Eswatini | +13.5 (2) | no data | no data | no data | no data | no data | no data | -3.0 (3) | no data |
+| Senegal | +23.9 (2) | no data | no data | +13.9 (2) | no data | no data | no data | -3.1 (3) | +10.3 (2) |
+| Sierra Leone | +13.0 (2) | no data | -16.1 (2) | no data | no data | no data | no data | +0.8 (2) | no data |
+| Togo | +13.3 (2) | no data | no data | +8.2 (2) | no data | no data | no data | -1.6 (3) | +7.1 (2) |
+| Liberia | +14.4 (2) | no data | -1.0 (2) | no data | no data | no data | no data | no data | no data |
+| Central African Republic | no data | no data | no data | -15.2 (2) | no data | no data | no data | -5.2 (2) | no data |
+| Mauritania | +16.0 (2) | no data | no data | -3.6 (2) | no data | no data | no data | +3.6 (3, 1 clamped) | no data |
+| Timor-Leste | no data | no data | -13.1 (2) | +34.7 (2) | no data | no data | no data | no data | no data |
+| Eswatini | +13.5 (2) | no data | +1.0 (2) | -1.8 (2) | no data | no data | no data | -3.0 (3) | no data |
 
 | Dimension | Median change over 10 years | Countries with a trend |
 | --- | --- | --- |
 | Anticipation | 11.1 | 130 |
+| Coordination | -2.8 | 102 |
+| Trust | 5.1 | 46 |
 | Experimentation | 0.2 | 87 |
 | Building | -0.3 | 130 |
 | Shared Purpose | 3.2 | 82 |
@@ -442,7 +444,7 @@ Trends use the current frame and only indicators observed at both ends. The bask
 
 | Country | Anticipation | Agency | Coordination | Trust | Learning | Experimentation | Adaptability | Building | Shared Purpose |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Brazil | no data | no data | no data | no data | no data | +12.9 (3) | no data | no data | no data |
+| Brazil | no data | no data | -0.3 (2) | no data | no data | +12.9 (3) | no data | no data | no data |
 | United States | no data | no data | no data | no data | no data | no data | no data | no data | -0.9 (2) |
 | Netherlands | no data | no data | no data | no data | no data | no data | no data | no data | +12.0 (2) |
 | Switzerland | no data | no data | no data | no data | no data | -1.9 (3) | no data | no data | +1.1 (2) |
@@ -450,12 +452,12 @@ Trends use the current frame and only indicators observed at both ends. The bask
 | South Korea | no data | no data | no data | no data | no data | no data | no data | no data | -1.5 (2) |
 | Estonia | no data | no data | no data | no data | no data | no data | no data | no data | +8.1 (2) |
 | India | no data | no data | no data | no data | no data | +13.1 (3) | no data | no data | +0.4 (2) |
-| Chile | no data | no data | no data | no data | no data | no data | no data | no data | +4.5 (2) |
-| South Africa | no data | no data | no data | no data | no data | -4.5 (3) | no data | no data | +9.1 (2, 1 clamped) |
+| Chile | no data | no data | no data | +1.8 (2) | no data | no data | no data | no data | +4.5 (2) |
+| South Africa | no data | no data | -7.7 (2) | no data | no data | -4.5 (3) | no data | no data | +9.1 (2, 1 clamped) |
 | Mexico | no data | no data | no data | no data | no data | no data | no data | no data | no data |
 | Argentina | no data | no data | no data | no data | no data | +0.7 (3) | no data | no data | +2.0 (2) |
-| Colombia | no data | no data | no data | no data | no data | no data | no data | no data | +5.0 (2) |
-| Peru | no data | no data | no data | no data | no data | no data | no data | no data | +14.5 (2) |
+| Colombia | no data | no data | -5.8 (2) | no data | no data | no data | no data | no data | +5.0 (2) |
+| Peru | no data | no data | -4.1 (2) | no data | no data | no data | no data | no data | +14.5 (2) |
 | Uruguay | no data | no data | no data | no data | no data | no data | no data | no data | +6.8 (2) |
 | Costa Rica | no data | no data | no data | no data | no data | no data | no data | no data | +4.8 (2) |
 | Germany | no data | no data | no data | no data | no data | -0.8 (3) | no data | no data | -3.8 (2) |
@@ -480,55 +482,55 @@ Trends use the current frame and only indicators observed at both ends. The bask
 | Israel | no data | no data | no data | no data | no data | -26.2 (3) | no data | no data | +1.6 (2) |
 | United Arab Emirates | no data | no data | no data | no data | no data | no data | no data | no data | no data |
 | Nigeria | no data | no data | no data | no data | no data | no data | no data | no data | no data |
-| Kenya | no data | no data | no data | no data | no data | +3.1 (2) | no data | no data | no data |
-| Rwanda | no data | no data | no data | no data | no data | no data | no data | no data | no data |
-| Ethiopia | no data | no data | no data | no data | no data | 0.0 (3) | no data | no data | -8.8 (2) |
-| Bolivia | no data | no data | no data | no data | no data | no data | no data | no data | +21.7 (2) |
-| Paraguay | no data | no data | no data | no data | no data | -9.2 (3) | no data | no data | +16.5 (2) |
+| Kenya | no data | no data | -22.4 (2, 1 clamped) | no data | no data | +3.1 (2) | no data | no data | no data |
+| Rwanda | no data | no data | no data | -4.6 (2) | no data | no data | no data | no data | no data |
+| Ethiopia | no data | no data | no data | -6.9 (2) | no data | 0.0 (3) | no data | no data | -8.8 (2) |
+| Bolivia | no data | no data | -19.3 (2) | +2.6 (2) | no data | no data | no data | no data | +21.7 (2) |
+| Paraguay | no data | no data | -7.9 (2) | +8.6 (2) | no data | -9.2 (3) | no data | no data | +16.5 (2) |
 | Ecuador | no data | no data | no data | no data | no data | +0.4 (3) | no data | no data | no data |
 | Venezuela | no data | no data | no data | no data | no data | -5.1 (2) | no data | no data | no data |
-| Panama | no data | no data | no data | no data | no data | no data | no data | no data | no data |
-| Guatemala | no data | no data | no data | no data | no data | -0.3 (2) | no data | no data | +12.2 (2) |
-| Honduras | no data | no data | no data | no data | no data | +0.2 (2) | no data | no data | no data |
-| El Salvador | no data | no data | no data | no data | no data | no data | no data | no data | +16.9 (2) |
+| Panama | no data | no data | no data | +8.0 (2) | no data | no data | no data | no data | no data |
+| Guatemala | no data | no data | -26.6 (2) | +22.0 (2) | no data | -0.3 (2) | no data | no data | +12.2 (2) |
+| Honduras | no data | no data | +7.1 (2) | no data | no data | +0.2 (2) | no data | no data | no data |
+| El Salvador | no data | no data | -11.9 (2) | -24.8 (2) | no data | no data | no data | no data | +16.9 (2) |
 | Nicaragua | no data | no data | no data | no data | no data | no data | no data | no data | no data |
 | Dominican Republic | no data | no data | no data | no data | no data | +4.4 (2) | no data | no data | +19.1 (2) |
 | Cuba | no data | no data | no data | no data | no data | +0.5 (3) | no data | no data | no data |
 | Haiti | no data | no data | no data | no data | no data | no data | no data | no data | no data |
-| Pakistan | no data | no data | no data | no data | no data | +1.3 (3) | no data | no data | no data |
+| Pakistan | no data | no data | +11.1 (2) | no data | no data | +1.3 (3) | no data | no data | no data |
 | Bangladesh | no data | no data | no data | no data | no data | -0.2 (3) | no data | no data | +4.0 (2) |
 | Russia | no data | no data | no data | no data | no data | +23.8 (2) | no data | no data | +2.9 (2) |
 | Egypt | no data | no data | no data | no data | no data | +1.6 (3) | no data | no data | no data |
-| Democratic Republic of the Congo | no data | no data | no data | no data | no data | no data | no data | no data | no data |
+| Democratic Republic of the Congo | no data | no data | +9.7 (2) | +15.8 (2, 1 clamped) | no data | no data | no data | no data | no data |
 | Iran | no data | no data | no data | no data | no data | no data | no data | no data | no data |
-| Tanzania | no data | no data | no data | no data | no data | no data | no data | no data | no data |
+| Tanzania | no data | no data | no data | +15.8 (2) | no data | no data | no data | no data | no data |
 | Italy | no data | no data | no data | no data | no data | no data | no data | no data | +2.5 (2) |
 | Myanmar | no data | no data | no data | no data | no data | no data | no data | no data | no data |
 | Sudan | no data | no data | no data | no data | no data | no data | no data | no data | no data |
-| Uganda | no data | no data | no data | no data | no data | +0.4 (2) | no data | no data | no data |
+| Uganda | no data | no data | -4.1 (2) | -3.6 (2) | no data | +0.4 (2) | no data | no data | no data |
 | Iraq | no data | no data | no data | no data | no data | no data | no data | no data | no data |
-| Angola | no data | no data | no data | no data | no data | no data | no data | no data | no data |
-| Ukraine | no data | no data | no data | no data | no data | -13.9 (2) | no data | no data | no data |
-| Morocco | no data | no data | no data | no data | no data | no data | no data | no data | no data |
+| Angola | no data | no data | no data | -2.8 (2) | no data | no data | no data | no data | no data |
+| Ukraine | no data | no data | -9.8 (2) | no data | no data | -13.9 (2) | no data | no data | no data |
+| Morocco | no data | no data | -0.4 (2) | no data | no data | no data | no data | no data | no data |
 | Uzbekistan | no data | no data | no data | no data | no data | +4.4 (3) | no data | no data | no data |
-| Mozambique | no data | no data | no data | no data | no data | +0.6 (3) | no data | no data | no data |
-| Ghana | no data | no data | no data | no data | no data | no data | no data | no data | no data |
+| Mozambique | no data | no data | +4.5 (2) | no data | no data | +0.6 (3) | no data | no data | no data |
+| Ghana | no data | no data | +5.0 (2) | no data | no data | no data | no data | no data | no data |
 | Madagascar | no data | no data | no data | no data | no data | -2.8 (3) | no data | no data | +6.8 (2) |
 | Côte d'Ivoire | no data | no data | no data | no data | no data | no data | no data | no data | +12.2 (2) |
 | Nepal | no data | no data | no data | no data | no data | no data | no data | no data | +26.5 (2) |
 | Mali | no data | no data | no data | no data | no data | no data | no data | no data | no data |
-| Burkina Faso | no data | no data | no data | no data | no data | no data | no data | no data | +19.5 (2) |
+| Burkina Faso | no data | no data | no data | -3.4 (2) | no data | no data | no data | no data | +19.5 (2) |
 | Malawi | no data | no data | no data | no data | no data | no data | no data | no data | no data |
 | Zambia | no data | no data | no data | no data | no data | +0.7 (3) | no data | no data | +11.7 (2) |
 | Sri Lanka | no data | no data | no data | no data | no data | -0.6 (3) | no data | no data | no data |
 | Kazakhstan | no data | no data | no data | no data | no data | no data | no data | no data | -1.5 (2) |
 | Romania | no data | no data | no data | no data | no data | -0.8 (3) | no data | no data | +11.1 (2) |
 | Zimbabwe | no data | no data | no data | no data | no data | no data | no data | no data | no data |
-| Guinea | no data | no data | no data | no data | no data | no data | no data | no data | no data |
-| Burundi | no data | no data | no data | no data | no data | no data | no data | no data | no data |
-| Tunisia | no data | no data | no data | no data | no data | no data | no data | no data | no data |
+| Guinea | no data | no data | no data | +39.8 (2, 1 clamped) | no data | no data | no data | no data | no data |
+| Burundi | no data | no data | -24.3 (2) | +1.0 (2) | no data | no data | no data | no data | no data |
+| Tunisia | no data | no data | +5.0 (2) | no data | no data | no data | no data | no data | no data |
 | Belgium | no data | no data | no data | no data | no data | no data | no data | no data | -1.6 (2) |
-| Jordan | no data | no data | no data | no data | no data | no data | no data | no data | no data |
+| Jordan | no data | no data | +19.2 (2) | no data | no data | no data | no data | no data | no data |
 | Czechia | no data | no data | no data | no data | no data | -28.6 (3) | no data | no data | +1.3 (2) |
 | Tajikistan | no data | no data | no data | no data | no data | no data | no data | no data | -2.2 (2) |
 | Papua New Guinea | no data | no data | no data | no data | no data | no data | no data | no data | no data |
@@ -536,7 +538,7 @@ Trends use the current frame and only indicators observed at both ends. The bask
 | Azerbaijan | no data | no data | no data | no data | no data | +1.1 (3) | no data | no data | no data |
 | Hungary | no data | no data | no data | no data | no data | -6.5 (3) | no data | no data | no data |
 | Austria | no data | no data | no data | no data | no data | -29.0 (3) | no data | no data | -1.4 (2) |
-| Belarus | no data | no data | no data | no data | no data | -21.2 (3) | no data | no data | no data |
+| Belarus | no data | no data | -11.9 (2) | no data | no data | -21.2 (3) | no data | no data | no data |
 | Laos | no data | no data | no data | no data | no data | no data | no data | no data | no data |
 | Kyrgyzstan | no data | no data | no data | no data | no data | -4.3 (3) | no data | no data | no data |
 | Serbia | no data | no data | no data | no data | no data | no data | no data | no data | no data |
@@ -551,35 +553,37 @@ Trends use the current frame and only indicators observed at both ends. The bask
 | Croatia | no data | no data | no data | no data | no data | no data | no data | no data | -0.9 (2) |
 | Mongolia | no data | no data | no data | no data | no data | +40.1 (3) | no data | no data | -14.9 (2) |
 | Bosnia and Herzegovina | no data | no data | no data | no data | no data | +8.4 (3) | no data | no data | +3.0 (2) |
-| Namibia | no data | no data | no data | no data | no data | no data | no data | no data | no data |
+| Namibia | no data | no data | no data | -14.8 (2) | no data | no data | no data | no data | no data |
 | Armenia | no data | no data | no data | no data | no data | +2.1 (3) | no data | no data | +14.6 (2) |
 | Lithuania | no data | no data | no data | no data | no data | +10.2 (3) | no data | no data | -0.3 (2) |
 | Jamaica | no data | no data | no data | no data | no data | no data | no data | no data | no data |
-| Gambia | no data | no data | no data | no data | no data | no data | no data | no data | no data |
-| Botswana | no data | no data | no data | no data | no data | no data | no data | no data | no data |
+| Gambia | no data | no data | +2.0 (2) | +27.2 (2) | no data | no data | no data | no data | no data |
+| Botswana | no data | no data | +0.6 (2) | +1.0 (2) | no data | no data | no data | no data | no data |
 | Lesotho | no data | no data | no data | no data | no data | no data | no data | no data | no data |
 | Moldova | no data | no data | no data | no data | no data | -4.8 (3) | no data | no data | +10.8 (2) |
 | Albania | no data | no data | no data | no data | no data | no data | no data | no data | no data |
-| Guinea-Bissau | no data | no data | no data | no data | no data | no data | no data | no data | no data |
+| Guinea-Bissau | no data | no data | no data | -8.5 (2) | no data | no data | no data | no data | no data |
 | Slovenia | no data | no data | no data | no data | no data | -29.9 (3) | no data | no data | -4.0 (2) |
 | Latvia | no data | no data | no data | no data | no data | no data | no data | no data | +4.0 (2) |
 | North Macedonia | no data | no data | no data | no data | no data | no data | no data | no data | no data |
 | Cyprus | no data | no data | no data | no data | no data | no data | no data | no data | -1.5 (2) |
 | Trinidad and Tobago | no data | no data | no data | no data | no data | no data | no data | no data | no data |
 | Mauritius | no data | no data | no data | no data | no data | no data | no data | no data | no data |
-| Cameroon | no data | no data | no data | no data | no data | no data | no data | no data | no data |
+| Cameroon | no data | no data | no data | +30.0 (2, 1 clamped) | no data | no data | no data | no data | no data |
 | Chad | no data | no data | no data | no data | no data | no data | no data | no data | no data |
 | Senegal | no data | no data | no data | no data | no data | no data | no data | no data | no data |
 | Sierra Leone | no data | no data | no data | no data | no data | no data | no data | no data | no data |
 | Togo | no data | no data | no data | no data | no data | no data | no data | no data | +11.8 (2) |
 | Liberia | no data | no data | no data | no data | no data | no data | no data | no data | no data |
 | Central African Republic | no data | no data | no data | no data | no data | no data | no data | no data | no data |
-| Mauritania | no data | no data | no data | no data | no data | no data | no data | no data | no data |
+| Mauritania | no data | no data | no data | +16.0 (2, 1 clamped) | no data | no data | no data | no data | no data |
 | Timor-Leste | no data | no data | no data | no data | no data | no data | no data | no data | no data |
-| Eswatini | no data | no data | no data | no data | no data | no data | no data | no data | no data |
+| Eswatini | no data | no data | no data | -8.8 (2) | no data | no data | no data | no data | no data |
 
 | Dimension | Median change over 20 years | Countries with a trend |
 | --- | --- | --- |
+| Coordination | -4.1 | 23 |
+| Trust | 1.4 | 22 |
 | Experimentation | 0 | 53 |
 | Shared Purpose | 4.1 | 65 |
 
@@ -1006,7 +1010,7 @@ Four tests on the wealth residual (D68), over the 125 countries with all nine re
 | --- | --- | --- |
 | (a) Residuals move together | first-factor share 30.5%, chance 15.9% (95th 17.5%), n 125 | structure |
 | (b) Same income, different shape | peer distance 1.389 against 1.439 without regard to income (5th 1.399); shape share 22.2% against random 95th 18.9%, n 125 | alike |
-| (c) Order holds between releases | lowest rank r 0.718 on Trust (n 36), 32 release pairs | mixed |
+| (c) Order holds between releases | lowest rank r 0.718 on Trust (n 36), 33 release pairs | mixed |
 | (c) Order holds without one country | largest own-residual shift 0.101 residual SD | robust |
 | (d) Share of a profile that is income | mean 25%, median 29.3%, n 125 | little |
 
@@ -1049,7 +1053,7 @@ Every other test here reads the latest year. This one asks whether an indicator 
 
 Two rules carry over from the trend layer. Historical values are scored against the frame built from every country's current values, so a change in spread is a change in the countries and not a change in the scale. And the spread is computed on the countries observed at both ends of the window, so an indicator that gained coverage does not read as one that gained variance. That panel is printed beside every row.
 
-10 of 35 scored indicators reach back far enough to test. The other 25 either start after 2006 or stop before 2021, which is its own finding about what the registry can watch over time.
+12 of 35 scored indicators reach back far enough to test. The other 23 either start after 2006 or stop before 2021, which is its own finding about what the registry can watch over time.
 
 | Indicator | Dimension | Countries | Years | Spread 2006 | Spread 2026 | Change | Trend |
 | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -1058,11 +1062,11 @@ Two rules carry over from the trend layer. Historical values are scored against 
 | Manufacturing value added | Building | 121 | 21 | 25.25 | 20.48 | -19% | -0.693 |
 | Unemployment rate | Adaptability | 135 | 21 | 29.33 | 21.93 | -25% | -0.578 |
 | Bribery incidence | Trust | 28 | 8 | 36.86 | 22.27 | -40% | -0.309 |
+| Government compliance with the courts | Trust | 135 | 21 | 42.33 | 48.53 | 15% | 0.348 |
 | Budget execution fidelity | Coordination | 23 | 21 | 12.86 | 20.37 | 58% | 0.401 |
 | Resident trademark applications | Experimentation | 74 | 10 | 24.06 | 26.24 | 9% | 0.438 |
+| Civil society strength | Coordination | 135 | 21 | 31.11 | 34.44 | 11% | 0.618 |
 | New business density | Agency | 83 | 21 | 20.06 | 32.87 | 64% | 0.929 |
-| Tax revenue | Shared Purpose | 89 | 8 | 25.69 | 29.44 | 15% | 0.952 |
-| Scientific articles | Anticipation | 134 | 21 | 10.11 | 29.24 | 189% | 0.958 |
 
 One indicator falls on both tests, a rank correlation against year at or below -0.5 and a narrowing of at least 25%: Unemployment rate. Convergence is a real thing the world does, so a falling spread is a finding rather than a fault. What it rules out is going on reading the indicator as though it still separated countries as well as it once did.
 
@@ -1183,6 +1187,8 @@ These rows remain in the registry and lower confidence like gaps. The project re
 Run 2026-11-02T19-36-46-976Z-in_session, provenance `in_session`, 2 round(s), panel: Institutionalist (claude-opus-5-5), Bottom-up analyst (claude-opus-5-5), Wealth sceptic (claude-sonnet-5-5).
 
 > In-session one-vendor panel under D154(b) as amended by D155, run on 2026-11-02 by a Claude Code orchestrating session (Claude Opus 5.5) on dataset 10.0.0, after D176. Three panelists, each stance a separate set of contexts: institutionalist on claude-opus-5-5, bottom_up on claude-opus-5-5, wealth_sceptic on claude-sonnet-5-5, all Anthropic, each through Claude Code subagents. Each panelist answered in batches of ten countries, one fresh context per batch and per round, and the indicator audit in one context per stance, so no context held two stances and none saw another panelist's text except the anonymised round-1 summary the round-2 prompt carries. Two rounds plus the indicator audit, at maxCoverage 1: all nine dimensions for all 135 countries, 1215 country-dimension cells. Prompts are byte-identical to a gateway run's, built by pnpm bench delphi --in-session with the current prompt version; the system rules were given as a file each panelist read first. Quality control by the orchestrator: twelve round-1 wealth_sceptic batches and one round-2 wealth_sceptic batch were discarded and rerun from scratch in fresh contexts, because their missingEvidence lists were copied across countries or restated brief gaps; the discarded answers never entered this run. Several batches in every stance skipped boilerplate NO DATA and NOT SCORED lines after checking that they repeat word for word across countries, and read every country-specific line; some missingEvidence items recur across countries where the briefs declare the same gap. Panelists drew on their own knowledge where the system rules allow it, and those claims are unverified. No call in this run failed and none was rerun into it except the quality reruns named here. One vendor means the spread measures stance, not vendor, and shared model-family blind spots are hidden by a narrow IQR, which is a floor on real uncertainty (D155). A multi-vendor or gateway run on the same dataset supersedes this one. This is an interpretation layer: its estimates reach only delphiScore and delphiIqr, and blendedScore only where a dimension has no observed indicator; they never enter score.
+
+Carried from dataset 10.0.0 onto 10.0.1: 1215 of 1215 cells kept because the evidence brief each was made on is unchanged; 0 dropped. 198 of 198 indicator judgements kept. See D160.
 
 Convergence: 1031 of 1215 cells narrowed between rounds.
 

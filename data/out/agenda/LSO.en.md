@@ -1,6 +1,6 @@
 # Capability agenda: Lesotho
 
-*Generated 2026-11-02*
+*Generated 2026-11-03*
 
 The frame includes 135 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
@@ -10,8 +10,8 @@ The frame includes 135 countries. Each dimension is scored from 0 to 100, with n
 | --- | --- | --- | --- |
 | Anticipation | 18.1 | 0.46 (usable) | +8.6 over 10 years using 2 indicators |
 | Agency | 51.7 | 0.43 (thin) | no trend |
-| Coordination | 59.6 | 0.45 (usable) | no trend |
-| Trust | 63.7 | 0.33 (thin) | no trend |
+| Coordination | 59.6 | 0.45 (usable) | -17.6 over 10 years using 2 indicators |
+| Trust | 63.7 | 0.33 (thin) | +11.9 over 10 years using 2 indicators |
 | Learning | 32.1 | 0.54 (usable) | no trend |
 | Experimentation | 2.1 | 0.3 (thin) | no trend |
 | Adaptability | 35.9 | 0.62 (usable) | no trend |

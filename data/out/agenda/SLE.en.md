@@ -1,6 +1,6 @@
 # Capability agenda: Sierra Leone
 
-*Generated 2026-11-02*
+*Generated 2026-11-03*
 
 The frame includes 135 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
@@ -10,7 +10,7 @@ The frame includes 135 countries. Each dimension is scored from 0 to 100, with n
 | --- | --- | --- | --- |
 | Anticipation | 19.3 | 0.46 (usable) | +13 over 10 years using 2 indicators |
 | Agency | 50.2 | 0.49 (usable) | no trend |
-| Coordination | 59.2 | 0.47 (usable) | no trend |
+| Coordination | 59.2 | 0.47 (usable) | -16.1 over 10 years using 2 indicators |
 | Trust | 53.8 | 0.33 (thin) | no trend |
 | Learning | 33.1 | 0.54 (usable) | no trend |
 | Experimentation | 0.6 | 0.35 (thin) | no trend |

@@ -1,6 +1,6 @@
 # Agenda de capacidades: Ecuador
 
-*Generado el 2026-11-02*
+*Generado el 2026-11-03*
 
 La comparación incluye 135 países. Cada dimensión recibe una puntuación de 0 a 100, sin clasificación general, y cada puntuación muestra a su lado la solidez de la evidencia. Antes de citar una puntuación, lea [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md).
 
@@ -10,7 +10,7 @@ La comparación incluye 135 países. Cada dimensión recibe una puntuación de 0
 | --- | --- | --- | --- |
 | Anticipación | 40.8 | 0.46 (utilizable) | +11 en 10 años, con 2 indicadores |
 | Iniciativa | 45.9 | 0.63 (utilizable) | sin base de tendencia |
-| Coordinación | 72.4 | 0.45 (utilizable) | sin base de tendencia |
+| Coordinación | 72.4 | 0.45 (utilizable) | +22 en 10 años, con 2 indicadores |
 | Confianza | 26.4 | 0.55 (utilizable) | sin base de tendencia |
 | Aprendizaje | 47.1 | 0.55 (utilizable) | sin base de tendencia |
 | Experimentación | 13.5 | 0.47 (utilizable) | +1 en 10 años, con 3 indicadores |

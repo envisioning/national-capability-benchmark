@@ -1,6 +1,6 @@
 # Agenda de capacidades: Jamaica
 
-*Gerada em 2026-11-02*
+*Gerada em 2026-11-03*
 
 A escala reúne 135 países. Cada dimensão recebe uma pontuação de 0 a 100, sem classificação geral, e cada pontuação traz ao lado a solidez da evidência. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma pontuação.
 
@@ -10,7 +10,7 @@ A escala reúne 135 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 | --- | --- | --- | --- |
 | Antecipação | 32,4 | 0,46 (utilizável) | +20,2 em 10 anos, com base em 2 indicadores |
 | Agência | 65,4 | 0,49 (utilizável) | sem tendência comparável |
-| Coordenação | 67,5 | 0,45 (utilizável) | sem tendência comparável |
+| Coordenação | 67,5 | 0,45 (utilizável) | +14 em 10 anos, com base em 2 indicadores |
 | Confiança | 72 | 0,34 (fraca) | sem tendência comparável |
 | Aprendizagem | 39,7 | 0,55 (utilizável) | sem tendência comparável |
 | Experimentação | 18,2 | 0,47 (utilizável) | -11,3 em 10 anos, com base em 3 indicadores |

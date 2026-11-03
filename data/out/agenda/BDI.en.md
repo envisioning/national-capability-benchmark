@@ -1,6 +1,6 @@
 # Capability agenda: Burundi
 
-*Generated 2026-11-02*
+*Generated 2026-11-03*
 
 The frame includes 135 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
@@ -10,8 +10,8 @@ The frame includes 135 countries. Each dimension is scored from 0 to 100, with n
 | --- | --- | --- | --- |
 | Anticipation | 5.9 | 0.46 (usable) | -4.7 over 10 years using 2 indicators, with 1 at the frame edge |
 | Agency | 44.9 | 0.3 (thin) | no trend |
-| Coordination | 50.2 | 0.28 (thin) | no trend |
-| Trust | 46.5 | 0.21 (very thin) | no trend |
+| Coordination | 50.2 | 0.28 (thin) | -13.5 over 10 years using 2 indicators |
+| Trust | 46.5 | 0.21 (very thin) | +12.9 over 10 years using 2 indicators |
 | Learning | 26.5 | 0.55 (usable) | no trend |
 | Experimentation | 0.3 | 0.34 (thin) | no trend |
 | Adaptability | 37.5 | 0.49 (usable) | no trend |

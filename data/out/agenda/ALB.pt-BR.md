@@ -1,6 +1,6 @@
 # Agenda de capacidades: Albânia
 
-*Gerada em 2026-11-02*
+*Gerada em 2026-11-03*
 
 A escala reúne 135 países. Cada dimensão recebe uma pontuação de 0 a 100, sem classificação geral, e cada pontuação traz ao lado a solidez da evidência. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma pontuação.
 
@@ -10,8 +10,8 @@ A escala reúne 135 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 | --- | --- | --- | --- |
 | Antecipação | 43,1 | 0,46 (utilizável) | +18,4 em 10 anos, com base em 2 indicadores |
 | Agência | 43,8 | 0,44 (fraca) | sem tendência comparável |
-| Coordenação | 78,1 | 0,27 (fraca) | sem tendência comparável |
-| Confiança | 36,8 | 0,41 (fraca) | sem tendência comparável |
+| Coordenação | 78,1 | 0,27 (fraca) | +2,7 em 10 anos, com base em 2 indicadores |
+| Confiança | 36,8 | 0,41 (fraca) | +2,9 em 10 anos, com base em 2 indicadores |
 | Aprendizagem | 34,6 | 0,55 (utilizável) | sem tendência comparável |
 | Experimentação | 13,7 | 0,36 (fraca) | +4 em 10 anos, com base em 3 indicadores |
 | Adaptação | 49,9 | 0,62 (utilizável) | sem tendência comparável |
