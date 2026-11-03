@@ -774,9 +774,35 @@ cross-origin pairs; they read noise, so the verdict stays unreadable. The
 history stops at 2010, because a longer window changes four headline values
 through the gate.
 
-**Open:** the Joint EVS/WVS waves, the last row in the table. They first
-need a check that each earlier wave is open, because the EVS trend file
-needs a GESIS registration (D154).
+**Checked, waits on an owner ruling:** the Joint EVS/WVS waves, the last row
+in the table. The access check of 2026-11-03 found:
+
+- **Microdata.** Every earlier wave needs an account. GESIS serves the EVS
+  waves and the EVS Trend File 1981-2017 (ZA7503) only after registration,
+  and its terms (valid from 2026-02-04) forbid commercial use, provision to
+  third parties and processing by an AI system. WVS serves its wave data
+  files only through a licence form. D154 closes both routes.
+- **Published tables.** The documentation downloads without an account on
+  both sides. GESIS serves the EVS trend variable report (`ZA7503_cdb.pdf`,
+  2.5 MB, `access.gesis.org/dbk/71022`) from the same host as the pinned
+  `ZA7505_cdb_Tables.pdf`. WVS lists "Results By Country" for each wave as
+  a documentation download with no licence form, separate from the data
+  files. Nobody has opened either file yet, so it is not known whether they
+  carry A165, A173 and A080_01 country by country.
+- **Terms.** WVS's conditions of use allow the data "for non-profit
+  purposes", with no redistribution of data files and with citation. GESIS
+  says the documentation is "openly accessible" and gives it no licence, so
+  on redistribution it is silent. Under D154 (a) a silent term fails, and a
+  non-profit term does not clearly pass under CC BY 4.0, which allows
+  commercial reuse.
+
+The terms finding also bears on the row already scored. The pinned
+`ZA7505_cdb_Tables.pdf` comes from the same GESIS documentation service and
+has no licence note in `docs/research/trust/JOINT-EVS-WVS.md`. D154 says a
+source wired before 9.0.0 that fails its test is reviewed in its own change.
+So the owner rules on two questions first: whether published EVS/WVS tables
+pass D154 (a), and if they do not, what happens to the four scored Joint
+EVS/WVS rows. No backfill starts before that ruling.
 
 ## Country-set changes are a separate project
 
