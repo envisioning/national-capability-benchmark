@@ -809,6 +809,28 @@ So the owner rules on two questions first: whether published EVS/WVS tables
 pass D154 (a), and if they do not, what happens to the four scored Joint
 EVS/WVS rows. No backfill starts before that ruling.
 
+**The first question has an answer: the published tables fail D154 (a).** The
+owner asked for the check, and the check of 2026-11-04 read the terms as
+published:
+
+- **GESIS.** The terms valid from 2026-02-04 govern the "original data". They
+  name variable reports as separate material that GESIS creates, and give no
+  licence for it. So `ZA7505_cdb_Tables.pdf` has no term on redistribution, and
+  a silent term fails.
+- **WVS.** Its conditions name "data files". The 60 wave 6 results PDFs carry
+  no licence text. If the conditions do not reach those PDFs, the PDFs are
+  silent and fail. If the conditions do reach them, the non-profit condition
+  conflicts with CC BY 4.0, and the rule to send each citation to the WVS
+  Association conflicts with D154's rule against writing to data owners.
+- **Limit of the check.** D154 (a) asks what the publisher's terms allow. This
+  check does not ask what copyright or database law allows for country
+  percentages, and it is not legal advice.
+
+No EVS/WVS backfill starts. The wave 6 work stays off main, on the local branch
+`d187-wvs-wave6`. The second question stays with the owner. The four rows reach
+72 of the 135 countries, and removal drops these cells below the coverage
+floor: Shared purpose 6, Agency 3 and Trust 2.
+
 ## Country-set changes are a separate project
 
 Do not add countries while closing a source gap unless the user explicitly
