@@ -6,7 +6,7 @@ import { readPatternFilters } from '@/lib/links'
 export const dynamic = 'force-dynamic'
 
 export const metadata = {
-  title: 'Patterns, NCB',
+  title: 'Examples, NCB',
   description: 'Documented examples of what countries have built, with sources and limits.',
 }
 

@@ -68,7 +68,7 @@ export function Fold({
       id={id}
       open={defaultOpen || undefined}
       data-fold-section={section ? '' : undefined}
-      className={`group scroll-mt-24 ${className}`}
+      className={`group scroll-mt-40 ${className}`}
     >
       <summary className="flex cursor-pointer list-none items-center gap-3 py-4 [&::-webkit-details-marker]:hidden">
         <Icon

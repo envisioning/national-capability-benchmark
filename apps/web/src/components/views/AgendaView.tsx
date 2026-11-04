@@ -506,9 +506,9 @@ function AgendaCard({
       <p className="mt-2 text-lg leading-relaxed text-[var(--muted)]">{question}</p>
       <div className="mt-4 divide-y divide-[var(--rule-soft)] border-t border-[var(--rule-soft)]">
         {rows.map((row, i) => (
-          <p key={i} className="py-3 text-lg leading-relaxed">
+          <div key={i} className="py-3 text-lg leading-relaxed">
             {row}
-          </p>
+          </div>
         ))}
       </div>
     </article>
