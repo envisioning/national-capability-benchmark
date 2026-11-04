@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import { DECISIONS_DOC, docHref } from '@ncb/core'
-import { Markdown } from '@/lib/markdown'
+import { DocEntries } from '@/components/DocEntries'
+import { Fold } from '@/components/Fold'
+import { Markdown, docEntries, splitMarkdown } from '@/lib/markdown'
 import { loadDoc } from '@/lib/data'
 import { Empty, Headline, PageTitle } from '@/components/ui'
 
@@ -21,6 +23,7 @@ export const metadata: Metadata = {
  */
 export default async function DecisionsPage() {
   const doc = await loadDoc('DECISIONS.md')
+  const split = doc ? splitMarkdown(doc) : null
 
   return (
     <>
@@ -29,8 +32,20 @@ export default async function DecisionsPage() {
         Each entry records a choice, its trade-offs and what could overturn it. The log is
         append-only, so later entries supersede earlier ones.
       </Headline>
-      {doc ? (
-        <Markdown source={doc} />
+      {split ? (
+        <>
+          {split.preamble ? (
+            <Fold className="mb-6 border-y border-[var(--rule)]" summary={<span className="text-xs font-medium">How to read this log</span>}>
+              <Markdown source={split.preamble} />
+            </Fold>
+          ) : null}
+          {/* Newest first: the log is append-only, so the latest entry is the one in force. */}
+          <DocEntries
+            entries={docEntries(split.sections).reverse()}
+            placeholder="Find a decision"
+            noun="decisions, newest first"
+          />
+        </>
       ) : (
         <Empty
           hint={`The decision log is not available in this deployment. The source of record is ${DECISIONS_DOC} in the repository.`}

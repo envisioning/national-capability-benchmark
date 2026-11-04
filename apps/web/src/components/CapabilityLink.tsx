@@ -1,3 +1,4 @@
+import { dimensionLabel } from '@/lib/labels'
 import Link from 'next/link'
 import { DIMENSION_LABELS } from '@ncb/core'
 import type { Dimension } from '@ncb/core'
@@ -15,7 +16,7 @@ export function CapabilityLink({
 }) {
   return (
     <Link href={capabilityHref(dimension)} className={className}>
-      {children ?? DIMENSION_LABELS[dimension]}
+      {children ?? dimensionLabel(dimension)}
     </Link>
   )
 }

@@ -1,3 +1,4 @@
+import { dimensionLabel } from '@/lib/labels'
 import Link from 'next/link'
 import type { Lexicon, MeasurementClass, Provenance } from '@ncb/core'
 import { DIMENSIONS, DIMENSION_LABELS, EN, countryFlag, fill, isEvidential } from '@ncb/core'
@@ -888,7 +889,7 @@ export function DimensionLegend({
           className="inline-flex items-center gap-2 rounded-full border border-[var(--rule)] bg-[var(--surface-sunken)] px-3 py-1 font-medium text-[var(--muted)]"
         >
           <Icon name={DIMENSION_ICON[d]} size={14} className="text-[var(--muted)]" />
-          <span>{names?.[d] ?? DIMENSION_LABELS[d]}</span>
+          <span>{names?.[d] ?? dimensionLabel(d)}</span>
         </li>
       ))}
     </ul>

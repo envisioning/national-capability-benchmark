@@ -1,5 +1,6 @@
 'use client'
 
+import { dimensionLabel } from '@/lib/labels'
 import { useEffect, useMemo, useState } from 'react'
 import {
   COUNTRY_NAMES,
@@ -161,7 +162,7 @@ export function EvidenceFilters({
             <option value="">every capability</option>
             {dimensions.map((d: Dimension) => (
               <option key={d} value={d}>
-                {DIMENSION_LABELS[d]}
+                {dimensionLabel(d)}
               </option>
             ))}
           </select>

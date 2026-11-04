@@ -1,5 +1,6 @@
 'use client'
 
+import { dimensionLabel } from '@/lib/labels'
 import { useEffect, useRef, useState } from 'react'
 import { DIMENSION_LABELS, DIMENSION_QUESTIONS, confidenceBand } from '@ncb/core'
 import type { Dimension } from '@ncb/core'
@@ -119,7 +120,7 @@ export function DimensionDialog({
             <div>
               <h2 className="flex items-center gap-3 text-2xl font-light leading-tight">
                 <Icon name={DIMENSION_ICON[dimension]} size={22} className="text-[var(--muted)]" />
-                <CapabilityLink dimension={dimension}>{DIMENSION_LABELS[dimension]}</CapabilityLink>
+                <CapabilityLink dimension={dimension}>{dimensionLabel(dimension)}</CapabilityLink>
               </h2>
               <p className="mt-2 max-w-2xl text-lg leading-relaxed">
                 {DIMENSION_QUESTIONS[dimension]}

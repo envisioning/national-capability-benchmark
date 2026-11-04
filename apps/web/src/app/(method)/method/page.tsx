@@ -1,3 +1,5 @@
+import { PageContents } from '@/components/PageContents'
+import { dimensionLabel } from '@/lib/labels'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
@@ -48,6 +50,7 @@ export default function MethodPage() {
         The benchmark asks whether a country&apos;s capacity to act is distinct from its income.
         Every choice is open to challenge.
       </Headline>
+      <PageContents />
 
       <Section
         title="Why this exists"
@@ -103,7 +106,7 @@ export default function MethodPage() {
                     <span className="inline-flex items-center gap-2">
                       <Icon name={DIMENSION_ICON[d]} size={14} className="text-[var(--muted)]" />
                       <Link href={capabilityHref(d)} className="hover:underline">
-                        {DIMENSION_LABELS[d]}
+                        {dimensionLabel(d)}
                       </Link>
                     </span>
                   </Td>

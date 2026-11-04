@@ -1,5 +1,6 @@
 'use client'
 
+import { dimensionLabel } from '@/lib/labels'
 import {
   CONDITIONS,
   DIMENSIONS,
@@ -14,6 +15,7 @@ import {
 import type { Dimension, IndicatorDef } from '@ncb/core'
 import { DataTable } from '@/components/DataTable'
 import { ClassBadge, ClassLegend, Section } from '@/components/ui'
+import { withoutDecisionRefs } from '@/lib/words'
 import Link from 'next/link'
 import { capabilityHref } from '@/lib/links'
 
@@ -29,7 +31,7 @@ export function IndicatorRegistry({ dimension }: { dimension?: Dimension } = {})
       title={
         dimension ? (
           <Link href={capabilityHref(dimension)} className="hover:underline">
-            {DIMENSION_LABELS[dimension]} indicators
+            {dimensionLabel(dimension)} indicators
           </Link>
         ) : (
           'Every indicator, including the missing ones'
@@ -46,13 +48,13 @@ export function IndicatorRegistry({ dimension }: { dimension?: Dimension } = {})
         <div key={d} className="mb-10">
           <h3 className="mb-3 text-xl font-medium tracking-tight">
             <Link href={capabilityHref(d)} className="hover:underline">
-              {DIMENSION_LABELS[d]}
+              {dimensionLabel(d)}
             </Link>
           </h3>
           <DataTable
             rows={[...indicatorsFor(d), ...conditionsFor(d)]}
             initialSort={{ key: 'name' }}
-            caption={`${DIMENSION_LABELS[d]} indicators`}
+            caption={`${dimensionLabel(d)} indicators`}
             columns={[
               {
                 key: 'name',
@@ -113,7 +115,17 @@ export function IndicatorRegistry({ dimension }: { dimension?: Dimension } = {})
                 sort: (i: IndicatorDef) => i.wealthProxyPrior,
                 render: (i: IndicatorDef) => muted(i.wealthProxyPrior.toFixed(2)),
               },
-              { key: 'notes', label: 'Note', render: (i: IndicatorDef) => muted(i.notes) },
+              {
+                key: 'notes',
+                label: 'Note',
+                render: (i: IndicatorDef) =>
+                  i.notes ? (
+                    <details className="min-w-28 max-w-sm text-[var(--muted)]">
+                      <summary className="cursor-pointer">Read the note</summary>
+                      <p className="mt-2 leading-relaxed">{withoutDecisionRefs(i.notes)}</p>
+                    </details>
+                  ) : null,
+              },
             ]}
           />
         </div>

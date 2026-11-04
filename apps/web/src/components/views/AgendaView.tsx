@@ -20,6 +20,7 @@ import {
   signed,
   splitAgenda,
 } from '@ncb/core'
+import { Fold } from '@/components/Fold'
 import { DIMENSION_ICON, Icon } from '@/components/Icon'
 import { CapabilityLink } from '@/components/CapabilityLink'
 import {
@@ -263,7 +264,7 @@ export function AgendaView({
               if (d.evidenceElsewhere.length > 0) {
                 rows.push(
                   fillNodes(s.evidenceElsewhereLine, {
-                    list: joinNodes(
+                    list: firstThenMore(
                       d.evidenceElsewhere.map((e) => (
                         <>
                           {evidenceLink(e.id, evidenceTitle(lex, e.id, e.title))} ({countryLink(e.iso3)})
@@ -417,8 +418,9 @@ export function AgendaView({
       </Section>
 
       {agenda.ownEvidence.length > 0 ? (
-        <Section
-          title={fillLex(
+        <Fold
+          className="mb-16 border-y border-[var(--rule)]"
+          summary={<h2 className="text-2xl font-light leading-tight">{fillLex(
             lex,
             hasInstitutionalHistory
               ? s.institutionalHistoryHeading
@@ -426,15 +428,15 @@ export function AgendaView({
                 ? s.brazilEvidenceHeading
                 : s.ownEvidenceHeading,
             { countryTopic: topic },
-          )}
-          hint={
-            hasInstitutionalHistory
+          )}</h2>}
+        >
+          <p className="mb-4 max-w-3xl text-xs leading-relaxed text-[var(--muted)]">
+            {hasInstitutionalHistory
               ? fillLex(lex, s.institutionalHistoryIntro, { country: name, countryTopic: topic })
               : agenda.iso3 === 'BRA'
                 ? s.brazilEvidenceIntro
-                : s.ownEvidenceIntro
-          }
-        >
+                : s.ownEvidenceIntro}
+          </p>
           <ul className="max-w-3xl list-disc space-y-3 pl-5 text-lg leading-relaxed">
             {agenda.ownEvidence.map((r) => (
               <li key={r.id}>
@@ -446,7 +448,7 @@ export function AgendaView({
               </li>
             ))}
           </ul>
-        </Section>
+        </Fold>
       ) : null}
 
       <Section title={s.contributeHeading}>
@@ -510,5 +512,22 @@ function AgendaCard({
         ))}
       </div>
     </article>
+  )
+}
+
+/**
+ * The first few items of a long inline list, with the rest one click away. The
+ * label is a count, so it reads the same in every lexicon. See D190.
+ */
+function firstThenMore(items: React.ReactNode[], separator: string, keep = 3): React.ReactNode {
+  if (items.length <= keep) return joinNodes(items, separator)
+  return (
+    <>
+      {joinNodes(items.slice(0, keep), separator)}
+      <details className="mt-1">
+        <summary className="cursor-pointer text-xs text-[var(--muted)]">+{items.length - keep}</summary>
+        <div className="mt-1">{joinNodes(items.slice(keep), separator)}</div>
+      </details>
+    </>
   )
 }

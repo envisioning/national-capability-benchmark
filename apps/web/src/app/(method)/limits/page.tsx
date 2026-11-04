@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import { LIMITS_DOC, docHref } from '@ncb/core'
-import { Markdown } from '@/lib/markdown'
+import { DocEntries } from '@/components/DocEntries'
+import { Fold } from '@/components/Fold'
+import { Markdown, docEntries, splitMarkdown } from '@/lib/markdown'
 import { loadDoc } from '@/lib/data'
 import { Empty, Headline, PageTitle } from '@/components/ui'
 
@@ -19,6 +21,7 @@ export const metadata: Metadata = {
  */
 export default async function LimitsPage() {
   const doc = await loadDoc('KNOWN-ARTEFACTS.md')
+  const split = doc ? splitMarkdown(doc) : null
 
   return (
     <>
@@ -27,8 +30,15 @@ export default async function LimitsPage() {
         These are known measurement failures, each with its evidence and a possible fix. The
         pipeline runs as designed, and sometimes the design is wrong.
       </Headline>
-      {doc ? (
-        <Markdown source={doc} />
+      {split ? (
+        <>
+          {split.preamble ? (
+            <Fold className="mb-6 border-y border-[var(--rule)]" summary={<span className="text-xs font-medium">Which run each figure comes from</span>}>
+              <Markdown source={split.preamble} />
+            </Fold>
+          ) : null}
+          <DocEntries entries={docEntries(split.sections)} placeholder="Find a limit" noun="limits" />
+        </>
       ) : (
         <Empty
           hint={`The limits document is not available in this deployment. The source of record is ${LIMITS_DOC} in the repository.`}

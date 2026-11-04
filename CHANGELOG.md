@@ -9,6 +9,25 @@ The entries before App 1.0.0 are retrospective, high-level summaries
 reconstructed from the repository history. They document explicit version bumps
 and may skip versions that were never committed.
 
+## App 1.40.0 — 2026-11-04
+
+- **The front page asks the question and gives the current answer.** It now reads
+  "Is wealth the same as capability?", and the first paragraph says what the data
+  shows so far. A country search sits under it. The rest of the page is shorter.
+- **Countries is one table you can narrow.** Find a country by name, region or
+  income group, then sort any column. The radar shapes are one click away, and
+  the address keeps your filters so you can send them.
+- **The longest pages fold.** Examples, the agenda register, decisions, limits and
+  the changelog now show one line per entry, with a filter where the list is long.
+  Every entry keeps its address. Examples went from about 759,000 pixels tall to a
+  few screens.
+- **Pages start with the data.** Capabilities, Compare and the country agendas lost
+  their opening paragraphs, and their long lists now fold. Long documents have an
+  "On this page" list.
+- **The Method menu has groups.** Data, Checks and Reference. Explore is now
+  Indicator map, Patterns is Examples and Delphi panel is Panel. The addresses do
+  not change. Decision D190.
+
 ## App 1.39.1 — 2026-11-04
 
 - **The country summary keeps its margin on a phone.** It ran 31 pixels past the

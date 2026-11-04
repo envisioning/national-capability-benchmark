@@ -1,3 +1,4 @@
+import { dimensionLabel } from '@/lib/labels'
 import Link from 'next/link'
 import {
   COUNTRY_ISO3,
@@ -85,7 +86,7 @@ export function AgendaEvidenceMatrix({
                   className="min-w-24 border-b border-[var(--rule)] px-2 py-3 text-center font-medium text-[var(--muted)]"
                 >
                   <Link href={capabilityHref(dimension)} className="hover:underline">
-                    {DIMENSION_LABELS[dimension]}
+                    {dimensionLabel(dimension)}
                   </Link>
                 </th>
               ))}
@@ -129,13 +130,13 @@ export function AgendaEvidenceMatrix({
                         >
                           <span aria-hidden="true">{cell.records.length}</span>
                           <span className="sr-only">
-                            {cell.records.length} documented {cell.records.length === 1 ? 'delivery' : 'deliveries'} for {row.country}, {DIMENSION_LABELS[dimension]}: {titles}
+                            {cell.records.length} documented {cell.records.length === 1 ? 'delivery' : 'deliveries'} for {row.country}, {dimensionLabel(dimension)}: {titles}
                           </span>
                         </Link>
                       ) : (
                         <span
                           className="text-[var(--muted)]"
-                          aria-label={`No documented delivery for ${row.country}, ${DIMENSION_LABELS[dimension]}`}
+                          aria-label={`No documented delivery for ${row.country}, ${dimensionLabel(dimension)}`}
                         >
                           0
                         </span>

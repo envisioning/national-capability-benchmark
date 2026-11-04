@@ -1,3 +1,4 @@
+import { dimensionLabel } from '@/lib/labels'
 import Link from 'next/link'
 import {
   DIMENSIONS,
@@ -8,6 +9,7 @@ import {
   valueInUnit,
 } from '@ncb/core'
 import type { CountryResult, Dimension, IndicatorResult } from '@ncb/core'
+import { Fold } from '@/components/Fold'
 import { DIMENSION_ICON, Icon } from '@/components/Icon'
 import { Radar } from '@/components/Radar'
 import {
@@ -206,7 +208,7 @@ export function CompareBoard({ countries }: { countries: CountryResult[] }) {
                           size={14}
                           className="text-[var(--muted)]"
                         />
-                        {DIMENSION_LABELS[d]}
+                        {dimensionLabel(d)}
                       </Link>
                     </Td>
                     {countries.map((c) => {
@@ -249,7 +251,7 @@ export function CompareBoard({ countries }: { countries: CountryResult[] }) {
             <tbody>
               {DIMENSIONS.map((d) => (
                 <tr key={d}>
-                  <Td>{DIMENSION_LABELS[d]}</Td>
+                  <Td>{dimensionLabel(d)}</Td>
                   {countries.map((c) => (
                     <Td key={c.iso3} align="right">
                       <Confidence value={c.dimensions[d]?.confidence ?? null} />
@@ -282,7 +284,7 @@ export function CompareBoard({ countries }: { countries: CountryResult[] }) {
             <tbody>
               {DIMENSIONS.map((d) => (
                 <tr key={d}>
-                  <Td>{DIMENSION_LABELS[d]}</Td>
+                  <Td>{dimensionLabel(d)}</Td>
                   {countries.map((c) => {
                     const m = primaryMomentum(c.dimensions[d]?.momentum ?? [])
                     return (
@@ -317,20 +319,23 @@ export function CompareBoard({ countries }: { countries: CountryResult[] }) {
           const rows = indicatorRows(d)
           if (rows.length === 0) return null
           return (
-            <div key={d} className="mb-10">
-              <h3 className="flex items-center gap-2 text-xl font-medium tracking-tight">
-                <Icon
-                  name={DIMENSION_ICON[d]}
-                  size={16}
-                  className="text-[var(--muted)]"
-                />
-                {DIMENSION_LABELS[d]}
-              </h3>
-              <p className="mb-4 mt-1 text-xs text-[var(--muted)]">{DIMENSION_QUESTIONS[d]}</p>
+            <Fold
+              key={d}
+              id={`indicators-${d}`}
+              summary={
+                <>
+                  <h3 className="flex items-center gap-2 text-xl font-light tracking-tight">
+                    <Icon name={DIMENSION_ICON[d]} size={16} className="text-[var(--muted)]" />
+                    {dimensionLabel(d)}
+                  </h3>
+                  <p className="mt-1 text-xs text-[var(--muted)]">{DIMENSION_QUESTIONS[d]}</p>
+                </>
+              }
+            >
               <Scroller>
                 <Table>
                   <caption className="sr-only">
-                    {DIMENSION_LABELS[d]} indicators for{' '}
+                    {dimensionLabel(d)} indicators for{' '}
                     {countries.map((c) => c.country).join(', ')}
                   </caption>
                   <thead>
@@ -387,7 +392,7 @@ export function CompareBoard({ countries }: { countries: CountryResult[] }) {
                   </tbody>
                 </Table>
               </Scroller>
-            </div>
+            </Fold>
           )
         })}
       </Section>

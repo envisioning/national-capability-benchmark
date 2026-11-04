@@ -1,5 +1,6 @@
 'use client'
 
+import { dimensionLabel } from '@/lib/labels'
 import Link from 'next/link'
 import { useMemo, useState } from 'react'
 import {
@@ -15,7 +16,8 @@ import { compareSortValues, type SortDirection } from '@/components/DataTable'
 import { EvidenceFilters, useEvidenceFilters } from '@/components/EvidenceFilters'
 import { CapabilityLink } from '@/components/CapabilityLink'
 import { DIMENSION_ICON, Icon, TIER_ICON } from '@/components/Icon'
-import { CountryLabel, Empty, Meta } from '@/components/ui'
+import { RecordRow } from '@/components/RecordRow'
+import { Button, CountryLabel, Empty, Meta } from '@/components/ui'
 import {
   EVIDENCE_STATUS_ORDER,
   evidenceDimension,
@@ -42,6 +44,9 @@ import {
  *
  * A record is never scored and never raises confidence. See D20 and D46.
  */
+
+/** How many rows the register shows before the reader asks for more. */
+const PAGE = 40
 
 function tierLabel(tier: keyof typeof SOURCE_TIERS): string {
   return tier.replace(/_/g, ' ')
@@ -101,7 +106,7 @@ function sortValue(record: EvidenceRecord, key: DeliverySortKey): number | strin
       return COUNTRY_NAMES[record.iso3] ?? record.iso3
     case 'capability': {
       const dimension = evidenceDimension(record)
-      return dimension ? DIMENSION_LABELS[dimension] : null
+      return dimension ? dimensionLabel(dimension) : null
     }
     case 'status':
       return EVIDENCE_STATUS_ORDER[record.status]
@@ -219,6 +224,7 @@ export function DeliveryTable({
     key: 'started',
     dir: 'desc',
   })
+  const [limit, setLimit] = useState(PAGE)
 
   const sorted = useMemo(() => {
     return [...state.shown].sort((a, b) => compareSortValues(sortValue(a, sort.key), sortValue(b, sort.key), sort.dir))
@@ -260,13 +266,24 @@ export function DeliveryTable({
         <Empty hint="No delivery matches those filters. Clear one and try again." />
       ) : (
         <>
-          <div className="space-y-4" role="list" aria-label="Documented deliveries">
-            {sorted.map((record) => (
-              <div key={record.id} role="listitem">
-                <DeliveryCard record={record} />
-              </div>
+          <div className="border-t border-[var(--rule)]">
+            {sorted.slice(0, limit).map((record) => (
+              <RecordRow key={record.id} record={record} render={() => <DeliveryCard record={record} />} />
             ))}
           </div>
+          <p className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-2 text-xs text-[var(--muted)]">
+            Showing {Math.min(limit, sorted.length)} of {sorted.length}.
+            {limit < sorted.length ? (
+              <>
+                <Button size="sm" variant="outline" onClick={() => setLimit(limit + PAGE)}>
+                  Show {Math.min(PAGE, sorted.length - limit)} more
+                </Button>
+                <button type="button" className="underline underline-offset-4" onClick={() => setLimit(sorted.length)}>
+                  Show all
+                </button>
+              </>
+            ) : null}
+          </p>
         </>
       )}
     </>

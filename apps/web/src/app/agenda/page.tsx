@@ -1,10 +1,9 @@
-import Link from 'next/link'
 import { AgendaEvidenceMatrix } from '@/components/views/AgendaEvidenceMatrix'
 import { DeliveryTable } from '@/components/views/DeliveryTable'
 import { Empty, Headline, PageTitle, Section } from '@/components/ui'
 import { Icon } from '@/components/Icon'
 import { MISSING_DATA_HINT, loadEvidence, loadIndex } from '@/lib/data'
-import { patternFiltersQuery, patternsHref, readPatternFilters } from '@/lib/links'
+import { patternFiltersQuery, readPatternFilters } from '@/lib/links'
 
 export const dynamic = 'force-dynamic'
 
@@ -40,25 +39,14 @@ export default async function AgendaIndexPage({
     <>
       <PageTitle>Capability agendas</PageTitle>
       <Headline>
-        Each agenda turns a country&apos;s scores into actions: what to raise, what to measure
-        first, and what to keep watching. The register below records what countries have already
-        built in areas the benchmark cannot yet measure.
+        Each agenda turns a country&apos;s scores into what to raise, what to measure first and what
+        to keep watching. The register records what countries have built where the benchmark cannot
+        yet measure, and none of it moves a score.
       </Headline>
-      <p className="mb-12 max-w-3xl text-lg leading-relaxed text-[var(--muted)]">
-        A delivery is filed against an indicator that has no dataset behind it, so none of these
-        records moves a score or a confidence. Filter or sort the register to find a delivery,
-        then open its full record. The same records in a grouped view, with preconditions and
-        where else each move has been used, are at{' '}
-        <Link href={patternsHref()} className="underline underline-offset-4">
-          patterns
-        </Link>
-        .
-      </p>
-
       <Section
         title="Where examples exist"
         icon={<Icon name="list-filter" size={22} />}
-        hint="Every benchmark country and all nine capabilities stay visible. Filled cells link to the source-checked examples; empty cells show where the research agenda is still open."
+        hint="Filled cells link to source-checked examples. Empty cells show where research is open."
       >
         <AgendaEvidenceMatrix records={records} active={filters} />
       </Section>
@@ -66,7 +54,6 @@ export default async function AgendaIndexPage({
       <Section
         title="Documented examples"
         icon={<Icon name="hammer" size={22} />}
-        hint="Each delivery shows its claim alongside the year, country, capability, status, published number, source, and mechanism."
       >
         {records.length === 0 ? (
           <Empty hint="No evidence records yet. Add them to data/evidence/records.json." />

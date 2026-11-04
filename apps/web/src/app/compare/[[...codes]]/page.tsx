@@ -59,19 +59,11 @@ export default async function ComparePage({ params }: Params) {
 
   return (
     <>
-      <PageTitle>Compare countries side by side</PageTitle>
+      <PageTitle>Compare countries</PageTitle>
       <Headline>
-        A score is meaningful only in comparison with other countries. This page puts one reference
-        country beside up to three others on the same nine axes, then shows the indicator behind
-        each score.
+        One reference country beside up to three others, on the same nine axes and down to the
+        indicator behind each score. The address holds the selection, so you can send it.
       </Headline>
-      <p className="mb-10 max-w-3xl text-lg leading-relaxed text-[var(--muted)]">
-        The first country is the{' '}
-        <DefineLink term="Reference country">reference</DefineLink>: it keeps the filled shape and
-        every other country is shown as a distance from it. The selection is part of the address, so{' '}
-        <code className="text-xs">{compareBaseHref}/BRA-IDN-ZAF</code> is a comparison you can send
-        to someone. There is no composite score or ranking.
-      </p>
 
       <ComparePicker selected={selected} all={all} />
 

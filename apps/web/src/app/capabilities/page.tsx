@@ -1,30 +1,19 @@
+import { dimensionLabel } from '@/lib/labels'
 import Link from 'next/link'
 import { DIMENSIONS, DIMENSION_LABELS, DIMENSION_QUESTIONS, contestedDisputeCounts } from '@ncb/core'
 import { DIMENSION_ICON, Icon } from '@/components/Icon'
-import { ScoreTable } from '@/components/views/ScoreTables'
-import { Empty, FrameNote, Headline, PageTitle, ScoreLegend, Section } from '@/components/ui'
-import { MISSING_DATA_HINT, loadDisputes, loadIndex } from '@/lib/data'
-import { capabilityHref } from '@/lib/links'
-
-export const dynamic = 'force-dynamic'
+import { Headline, PageTitle } from '@/components/ui'
+import { capabilityHref, countriesHref } from '@/lib/links'
 
 export const metadata = {
   title: 'Capabilities, NCB',
   description: 'The nine capability dimensions, the indicators behind them and every country score.',
 }
 
-export default async function CapabilitiesPage() {
-  const [data, disputes] = await Promise.all([loadIndex(), loadDisputes()])
-  /* Alphabetical, like every other list of countries here. The table sorts on
-   * click, so a reader who wants a ranking asks for one. */
-  const countries = data
-    ? [...data.countries].sort((a, b) => a.country.localeCompare(b.country))
-    : []
-  const contestedCounts = contestedDisputeCounts(disputes)
-
+export default function CapabilitiesPage() {
   return (
     <>
-      <PageTitle>Compare capabilities across countries</PageTitle>
+      <PageTitle>Capabilities</PageTitle>
       <Headline>
         Each capability has a question, a set of indicators, and a comparison across countries.
       </Headline>
@@ -39,33 +28,23 @@ export default async function CapabilitiesPage() {
             <div className="flex items-center gap-3">
               <Icon name={DIMENSION_ICON[dimension]} size={22} className="text-[var(--muted)]" />
               <h2 className="text-xl font-medium tracking-tight group-hover:underline">
-                {DIMENSION_LABELS[dimension]}
+                {dimensionLabel(dimension)}
               </h2>
             </div>
-            <p className="mt-4 text-lg leading-relaxed text-[var(--muted)]">
+            <p className="mt-3 text-xs leading-relaxed text-[var(--muted)]">
               {DIMENSION_QUESTIONS[dimension]}
             </p>
-            <span className="mt-6 inline-block text-xs font-medium underline underline-offset-4">
-              Open page
-            </span>
           </Link>
         ))}
       </div>
 
-      <Section
-        title="Compare scores in a table"
-        hint="The table shows every country and capability. Click a column heading to sort."
-      >
-        {countries.length === 0 ? (
-          <Empty hint={MISSING_DATA_HINT} />
-        ) : (
-          <>
-            <ScoreLegend />
-            <ScoreTable countries={countries} contestedCounts={contestedCounts} />
-            <FrameNote />
-          </>
-        )}
-      </Section>
+      <p className="text-xs text-[var(--muted)]">
+        All nine for every country, side by side, are on{' '}
+        <Link href={countriesHref} className="underline underline-offset-4">
+          Countries
+        </Link>
+        .
+      </p>
     </>
   )
 }

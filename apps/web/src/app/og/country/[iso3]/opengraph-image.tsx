@@ -1,3 +1,4 @@
+import { dimensionLabel } from '@/lib/labels'
 import { ImageResponse } from 'next/og'
 import { COUNTRIES, COUNTRY_NAMES, DIMENSIONS, DIMENSION_LABELS } from '@ncb/core'
 import { OgCountryMark, OgFrame, OgRadar, OG_SIZE, loadOgFonts } from '@/components/Og'
@@ -36,7 +37,7 @@ export default async function Image({ params }: { params: Promise<{ iso3: string
         <div style={{ display: 'flex', flex: 1, flexDirection: 'column', justifyContent: 'center', paddingTop: 28 }}>
           {top.map(({ dimension, score }) => (
             <div key={dimension} style={{ alignItems: 'baseline', borderBottom: '1px solid #525252', display: 'flex', justifyContent: 'space-between', padding: '11px 0' }}>
-              <div style={{ fontSize: 22 }}>{DIMENSION_LABELS[dimension]}</div>
+              <div style={{ fontSize: 22 }}>{dimensionLabel(dimension)}</div>
               <div style={{ color: '#d6f249', fontSize: 25 }}>{score.toFixed(1)}</div>
             </div>
           ))}

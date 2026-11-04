@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { COUNTRY_NAMES, EVIDENCE_STATUS_LABELS, INDICATORS_BY_ID } from '@ncb/core'
 import { Icon } from '@/components/Icon'
+import { RecordRow } from '@/components/RecordRow'
 import { CountryLabel, Meta } from '@/components/ui'
 import { formatEvidenceMetricValue } from '@/lib/evidence'
 import { countryProfileHref, evidenceHref } from '@/lib/links'
@@ -23,18 +24,16 @@ export function EvidenceList({ records }: { records: EvidenceRecord[] }) {
         Evidence for missing indicators
       </p>
       <p className="evidence-list-intro mb-4 max-w-3xl text-xs leading-relaxed text-[var(--muted)]">
-        Each record describes a case the indicators above cannot see. It does not affect the score
-        or confidence because one case is not comparable across countries. A gap can become an
-        indicator when a comparable series covers at least two countries.
+        Cases the indicators cannot see. They do not affect the score or confidence, because one
+        case is not comparable across countries.
       </p>
-      <ul className="evidence-list-items mt-5 grid list-none gap-4 p-0">
+      <ul className="evidence-list-items list-none border-t border-[var(--rule-soft)] p-0">
         {records.map((r) => {
           const def = INDICATORS_BY_ID[r.indicatorId]
           return (
-            <li
-              key={r.id}
-              className="evidence-record-card rounded-lg border border-[var(--rule)] bg-[var(--surface)] p-5 focus-within:border-[var(--muted)] sm:p-6"
-            >
+            <li key={r.id}>
+              <RecordRow record={r}>
+              <div className="evidence-record-card rounded-lg border border-[var(--rule)] bg-[var(--surface)] p-5 sm:p-6">
               <div className="evidence-record-meta mb-2 flex flex-wrap items-center gap-2">
                 <Meta className="bg-[var(--surface)]">
                   <Link
@@ -90,6 +89,8 @@ export function EvidenceList({ records }: { records: EvidenceRecord[] }) {
                 <Icon name="triangle-alert" size={13} className="mt-0.5 shrink-0" />
                 <span>Limits: {r.limits}</span>
               </p>
+              </div>
+              </RecordRow>
             </li>
           )
         })}

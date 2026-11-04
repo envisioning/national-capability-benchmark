@@ -1,3 +1,4 @@
+import { dimensionLabel } from '@/lib/labels'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
@@ -22,7 +23,7 @@ export async function generateMetadata({
   if (!dispute) return {}
   const country = COUNTRY_NAMES[dispute.target.iso3] ?? dispute.target.iso3
   return {
-    title: `Dispute for ${country} ${DIMENSION_LABELS[dispute.target.dimension]}, NCB`,
+    title: `Dispute for ${country} ${dimensionLabel(dispute.target.dimension)}, NCB`,
     description: 'A public objection to one National Capability Benchmark score.',
   }
 }
@@ -62,7 +63,7 @@ export default async function ObjectionDetailPage({
             href={capabilityHref(dispute.target.dimension)}
             className="underline underline-offset-4"
           >
-            {DIMENSION_LABELS[dispute.target.dimension]}
+            {dimensionLabel(dispute.target.dimension)}
           </Link>
           <span className="text-[var(--muted)]">Score</span>
           <span className="tabular-nums">{dispute.target.value?.toFixed(1) ?? 'no data'}</span>

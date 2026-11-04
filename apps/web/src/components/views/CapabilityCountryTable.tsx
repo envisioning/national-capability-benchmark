@@ -1,9 +1,11 @@
 'use client'
 
+import { dimensionLabel } from '@/lib/labels'
 import Link from 'next/link'
 import { DIMENSION_LABELS } from '@ncb/core'
 import type { Dimension } from '@ncb/core'
 import { CoverageMark } from '@/components/CoverageMark'
+import { Fold } from '@/components/Fold'
 import { DataTable } from '@/components/DataTable'
 import { FlagField } from '@/components/FlagField'
 import { Confidence, CountryLabel, Delta, DimensionScore } from '@/components/ui'
@@ -60,10 +62,14 @@ export function CapabilityCountryTable({
           />
         </div>
       ) : null}
+      <Fold
+        className="mt-4 border-y border-[var(--rule)]"
+        summary={<span className="text-xs font-medium">Every country as a sortable table</span>}
+      >
       <DataTable
       rows={rows}
       initialSort={{ key: 'country' }}
-      caption={`${DIMENSION_LABELS[dimension]} scores by country`}
+      caption={`${dimensionLabel(dimension)} scores by country`}
       columns={[
         {
           key: 'country',
@@ -127,6 +133,7 @@ export function CapabilityCountryTable({
         },
       ]}
     />
+      </Fold>
     </>
   )
 }

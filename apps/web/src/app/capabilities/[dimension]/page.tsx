@@ -1,3 +1,4 @@
+import { dimensionLabel } from '@/lib/labels'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
@@ -37,7 +38,7 @@ export async function generateMetadata({
   const { dimension: raw } = await params
   const dimension = asDimension(raw)
   if (!dimension) return {}
-  const label = DIMENSION_LABELS[dimension]
+  const label = dimensionLabel(dimension)
   return {
     title: `${label}, NCB`,
     description: `${label} across every country in the National Capability Benchmark: the question, indicators, scores, confidence and trend.`,
@@ -121,7 +122,7 @@ export default async function CapabilityPage({
 
   return (
     <>
-      <p className="mb-6">
+      <p className="mb-4">
         <Link
           href={capabilitiesHref}
           className="inline-flex items-center gap-2 text-xs text-[var(--muted)] underline underline-offset-4"
@@ -131,13 +132,8 @@ export default async function CapabilityPage({
         </Link>
       </p>
 
-      <PageTitle>{DIMENSION_LABELS[dimension]}</PageTitle>
+      <PageTitle>{dimensionLabel(dimension)}</PageTitle>
       <Headline>{DIMENSION_QUESTIONS[dimension]}</Headline>
-      <p className="mb-10 max-w-3xl text-lg leading-relaxed text-[var(--muted)]">
-        The country comparison, the indicators and the documented cases below show how much of
-        this capability the current data can capture.
-      </p>
-
       <p className="mb-10 flex flex-wrap gap-2">
         <Meta icon="globe">{data.countries.length} countries in the frame</Meta>
         <Meta icon="ruler">{definitions.length} indicators in the registry</Meta>
@@ -146,14 +142,12 @@ export default async function CapabilityPage({
       </p>
 
       <Section
-        title="Compare every country on one scale"
-        hint="The table starts in alphabetical order. Sort by score, confidence, coverage, or trend. A score needs two observed indicators; a trend uses indicators observed at both ends."
+        title="Every country on one scale"
         icon={<Icon name={DIMENSION_ICON[dimension]} size={22} />}
       >
         <p className="mb-4 max-w-2xl text-xs leading-relaxed text-[var(--muted)]">
-          Scores use one 0 to 100 scale for all countries. Each flag is a country, and the ring
-          around it shows how strong the evidence behind that score is. Point at a flag to read the country,
-          click it to open the profile.
+          Each flag is a country, and its ring shows how strong the evidence is. A score needs two
+          observed indicators. Point at a flag to read it and click to open the profile.
         </p>
         <CapabilityCountryTable
           dimension={dimension}

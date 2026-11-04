@@ -2,7 +2,8 @@ import type { Metadata } from 'next'
 import { APP_VERSION, CHANGELOG_DOC, DATASET_VERSION, docHref } from '@ncb/core'
 import { Empty, Headline, PageTitle } from '@/components/ui'
 import { loadChangelog } from '@/lib/distribution'
-import { Markdown } from '@/lib/markdown'
+import { DocEntries } from '@/components/DocEntries'
+import { docEntries, splitMarkdown } from '@/lib/markdown'
 
 export const dynamic = 'force-dynamic'
 
@@ -29,7 +30,12 @@ export default async function ChangelogPage() {
         not comparable.
       </Headline>
       {changelog ? (
-        <Markdown source={changelog} />
+        <DocEntries
+          entries={docEntries(splitMarkdown(changelog).sections)}
+          placeholder="Find a release, such as Dataset or 1.39"
+          noun="releases, newest first"
+          open={2}
+        />
       ) : (
         <Empty
           hint={`The changelog is not available in this deployment. The source of record is ${CHANGELOG_DOC} in the repository.`}

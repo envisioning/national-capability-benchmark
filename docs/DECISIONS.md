@@ -10608,3 +10608,57 @@ registry note can still name a decision.
 **Overturned by.** Readers failing to find the record behind a score, or print and
 search failing on closed sections in a browser this site supports.
 
+## D190 — Every page answers first, and a long record shows one line per entry
+
+*Recorded 2026-11-04. Amends D75 on the front page's order and modules, and
+extends D189 from the country profile to the site.*
+
+**Why.** A measure of every public route at 1440 wide found `/patterns` at 758,567
+pixels, `/agenda` at 336,700, `/decisions` at 293,396, the changelog at 61,268 and
+`/capabilities/experimentation` at 46,079. Only the profile had any disclosure.
+Countries had no way to find a country, and its first card sat 837 pixels down. The
+front page stated "Wealth is not capability" as a finding, while the diagnostics
+report that one shared factor correlates strongly with income. That headline
+claimed what `docs/WHY.md` calls the claim under test.
+
+**Decision.** Five rules for the viewer.
+
+1. **The front page asks.** The title is the question under test. The first
+   paragraph states the current answer from `readFactorTest`, computed on each
+   release. The owner can overrule this wording.
+2. **A reader can reach any country in one step.** `CountryJump` on the front page
+   and `CountryFinder` on Countries. The finder narrows by name, World Bank region
+   and income group, and holds its state in the address (D46, D70). The groups in
+   `model/country-groups.ts` narrow a list and enter no score, frame, peer set or
+   cohort. The table opens alphabetically and a column sorts only when asked, as
+   the capability table has done since D30.
+3. **A page opens on its data.** One headline, then the control or the chart.
+   Definitions move to a caption, a fold or the glossary. The confidence legend
+   stays visible beside confidence values, as its comment requires.
+4. **A long record shows one line per entry.** `Fold` is the one disclosure with an
+   address. `RecordRow` draws a delivery as one line. `DocEntries` lists a document
+   cut at its headings by `splitMarkdown`, and each entry keeps the anchor citations
+   point at, so `decisionHref` still resolves and opens the entry. The decision log
+   lists newest first. Its numbering and the source file do not change.
+5. **Navigation uses the reader's words.** The Method menu groups into Data, Checks
+   and Reference, with Indicator map, Examples and Panel replacing Explore, Patterns
+   and Delphi panel. Addresses do not change. The Portuguese and Spanish menus gain
+   the missing History label. Every viewer surface prints Shared purpose in sentence
+   case through `dimensionLabel`.
+
+The front page keeps one sentence, a live number and a link for each remaining
+section, in three cards. The institution matrix picture left the front page and
+stays on the network page. The table of every score left `/capabilities`, because
+Countries now holds it.
+
+**Cost.** A reader clicks once more to read an entry. A filter reads titles only, so
+a phrase inside a closed entry needs the browser's find, which opens the entry in
+browsers that support it. World Bank income groups change every July, so the table
+needs a refresh with the frame. `PageContents` reads headings after hydration, so it
+holds a fixed height until then.
+
+**Overturned by.** Readers failing to find a record that a full list would have
+shown, or a citation that no longer opens its entry. Diagnostics that stop tracking
+income would change the sentence on the front page without a new decision, because
+it is computed, but "mostly no" is written by hand and would need rewriting.
+

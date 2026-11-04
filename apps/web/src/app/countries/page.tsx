@@ -1,19 +1,7 @@
-import Link from 'next/link'
-import { Radar } from '@/components/Radar'
-import { ConfidenceTable } from '@/components/views/ScoreTables'
-import {
-  ConfidenceLegend,
-  CountryLabel,
-  DimensionLegend,
-  Empty,
-  FrameNote,
-  Headline,
-  PageTitle,
-  RadarEvidenceLegend,
-  Section,
-} from '@/components/ui'
+import { COUNTRY_INCOME_GROUPS, COUNTRY_REGIONS, DIMENSIONS } from '@ncb/core'
+import { CountryFinder, type FinderCountry, type FinderState } from '@/components/views/CountryFinder'
+import { Empty, FrameNote, Headline, PageTitle } from '@/components/ui'
 import { MISSING_DATA_HINT, loadIndex } from '@/lib/data'
-import { capabilitiesHref, compareBaseHref, countryProfileHref } from '@/lib/links'
 import { toProfile } from '@/lib/profile'
 
 export const dynamic = 'force-dynamic'
@@ -24,82 +12,47 @@ export const metadata = {
     'Nine-dimension profiles for every country in the benchmark, with the confidence behind each score.',
 }
 
-export default async function CountriesPage() {
-  const data = await loadIndex()
+const one = (value: string | string[] | undefined): string =>
+  typeof value === 'string' ? value : ''
+
+/** What the address asks for, with anything unknown dropped. */
+function readState(params: Record<string, string | string[] | undefined>): FinderState {
+  const region = one(params.region)
+  const income = one(params.income)
+  return {
+    q: one(params.q).slice(0, 60),
+    region: region in COUNTRY_REGIONS ? (region as FinderState['region']) : '',
+    income: income in COUNTRY_INCOME_GROUPS ? (income as FinderState['income']) : '',
+    view: one(params.view) === 'shapes' ? 'shapes' : 'table',
+    measure: one(params.show) === 'confidence' ? 'confidence' : 'score',
+  }
+}
+
+export default async function CountriesPage({
+  searchParams,
+}: {
+  searchParams: Promise<Record<string, string | string[] | undefined>>
+}) {
+  const [data, params] = await Promise.all([loadIndex(), searchParams])
   if (!data || data.countries.length === 0) return <Empty hint={MISSING_DATA_HINT} />
 
-  /* Alphabetical. Any other order on this page would be a ranking, and there is
-   * no headline number to rank by. */
-  const countries = [...data.countries].sort((a, b) => a.country.localeCompare(b.country))
+  const countries: FinderCountry[] = [...data.countries]
+    .sort((a, b) => a.country.localeCompare(b.country))
+    .map((c) => ({
+      ...toProfile(c),
+      floors: DIMENSIONS.map((d) => c.dimensions[d]?.belowCoverageFloor ?? false),
+      observed: DIMENSIONS.map((d) => c.dimensions[d]?.observedIndicators ?? 0),
+    }))
 
   return (
     <>
-      <PageTitle>Country profiles</PageTitle>
+      <PageTitle>Countries</PageTitle>
       <Headline>
-        Each profile shows nine capability scores together. Two countries can have the same average
-        and very different profiles, so the benchmark does not publish an overall score.
+        Nine capability scores for each of {countries.length} countries, with no overall score. Two
+        countries can share an average and differ on every capability.
       </Headline>
-      <p className="mb-10 max-w-3xl text-lg leading-relaxed text-[var(--muted)]">
-        Open a country to see its indicator rows, trend, and agenda. To compare a few countries,
-        put{' '}
-        <Link href={compareBaseHref} className="underline underline-offset-4">
-          up to four side by side
-        </Link>
-        . To compare one capability across the full set, the{' '}
-        <Link href={capabilitiesHref} className="underline underline-offset-4">
-          capabilities directory
-        </Link>{' '}
-        puts them all on one scale.
-      </p>
-
-      <Section
-        title="Different profiles, same average"
-        hint="Each score runs from 0 to 100, using all countries to set the comparison frame. The benchmark has no composite score, so countries with the same average can still have different profiles."
-      >
-        <DimensionLegend />
-        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-          {countries.map((c) => {
-            const profile = toProfile(c)
-            return (
-              <Link
-                key={profile.iso3}
-                href={countryProfileHref(profile.iso3)}
-                className="rounded-xl border border-[var(--rule)] p-4 transition-all duration-200 hover:border-[var(--foreground)]"
-              >
-                <div className="mb-2 flex items-baseline justify-between">
-                  <span className="text-xs font-medium">
-                    <CountryLabel iso3={profile.iso3} name={profile.country} />
-                  </span>
-                  <span className="text-xs text-[var(--muted)]">{profile.iso3}</span>
-                </div>
-                <Radar
-                  labels="icons"
-                  interactive={false}
-                  hoverLabels
-                  series={[
-                    {
-                      label: profile.country,
-                      values: profile.values,
-                      confidences: profile.confidences,
-                      color: 'var(--primary)',
-                    },
-                  ]}
-                />
-              </Link>
-            )
-          })}
-        </div>
-        <RadarEvidenceLegend interactive={false} />
-        <FrameNote />
-      </Section>
-
-      <Section
-        title="Score and confidence stay separate"
-        hint="Confidence is coverage times recency times source quality. It sits beside the score; missing data lowers coverage and is never imputed."
-      >
-        <ConfidenceLegend />
-        <ConfidenceTable countries={countries} />
-      </Section>
+      <CountryFinder countries={countries} initial={readState(params)} />
+      <FrameNote />
     </>
   )
 }

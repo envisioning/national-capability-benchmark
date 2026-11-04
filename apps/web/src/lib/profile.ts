@@ -1,3 +1,4 @@
+import { dimensionLabel } from '@/lib/labels'
 import { DIMENSIONS, DIMENSION_LABELS, primaryMomentum } from '@ncb/core'
 import type { CountryResult, Dimension } from '@ncb/core'
 
@@ -76,7 +77,7 @@ export function widestSpread(profiles: RadarProfile[]): CapabilitySpread | null 
     DIMENSIONS.forEach((dimension, i) => {
       const value = profile.values[i]
       if (value === null || value === undefined) return
-      const point = { dimension, label: DIMENSION_LABELS[dimension], value }
+      const point = { dimension, label: dimensionLabel(dimension), value }
       if (high === null || value > high.value) high = point
       if (low === null || value < low.value) low = point
     })

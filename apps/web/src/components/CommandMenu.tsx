@@ -1,5 +1,6 @@
 'use client'
 
+import { dimensionLabel } from '@/lib/labels'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import { useEffect, useMemo, useRef, useState } from 'react'
@@ -106,10 +107,10 @@ function searchItems(lang: Lang): SearchItem[] {
     })),
     ...DIMENSIONS.map((dimension) => ({
       href: capabilityHref(dimension),
-      label: lex ? lex.dimensions[dimension] : DIMENSION_LABELS[dimension],
+      label: lex ? lex.dimensions[dimension] : dimensionLabel(dimension),
       group: 'Capabilities' as const,
       icon: DIMENSION_ICON[dimension],
-      keywords: `${dimension} ${DIMENSION_LABELS[dimension]} ${DIMENSION_QUESTIONS[dimension]}${
+      keywords: `${dimension} ${dimensionLabel(dimension)} ${DIMENSION_QUESTIONS[dimension]}${
         lex ? ` ${lex.questions[dimension]}` : ''
       }`,
     })),

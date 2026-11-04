@@ -1,3 +1,4 @@
+import { PageContents } from '@/components/PageContents'
 import type { Metadata } from 'next'
 import { GLOSSARY, GLOSSARY_GROUPS, MEASUREMENT_CLASS_MEANING } from '@ncb/core'
 import type { MeasurementClass } from '@ncb/core'
@@ -20,6 +21,7 @@ export default function GlossaryPage() {
         This page explains the terms used by the benchmark. If a letter, band or dashed line is
         unclear, start here.
       </Headline>
+      <PageContents />
 
       <Section
         title="The four letters beside every indicator"

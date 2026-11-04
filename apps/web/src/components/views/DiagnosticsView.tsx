@@ -1,5 +1,6 @@
 'use client'
 
+import { dimensionLabel } from '@/lib/labels'
 import {
   DIMENSION_LABELS,
   DIMENSION_OVERLAP_THRESHOLD,
@@ -15,6 +16,7 @@ import type { Dimension, FactorHistoryRelease, FactorSolution } from '@ncb/core'
 import Link from 'next/link'
 import { DataTable } from '@/components/DataTable'
 import { CapabilityLink } from '@/components/CapabilityLink'
+import { PageContents } from '@/components/PageContents'
 import { ClassBadge, Headline, Meta, PageTitle, PanelProvenanceNote, Section } from '@/components/ui'
 import type { Diagnostics } from '@ncb/core'
 import { capitalize, countWord } from '@/lib/words'
@@ -69,6 +71,7 @@ export function DiagnosticsView({
         They check for income bias, duplicate indicators, weak evidence and scores that change
         sharply when inputs change.
       </Headline>
+      <PageContents />
       <p className="mb-12 flex flex-wrap gap-2">
         <Meta icon="calendar">computed {diag.generatedAt.slice(0, 10)}</Meta>
         <Meta icon="globe">{n} countries</Meta>
@@ -86,7 +89,7 @@ export function DiagnosticsView({
             {
               key: 'dimension',
               label: 'Dimension',
-              sort: (d) => DIMENSION_LABELS[d.dimension],
+              sort: (d) => dimensionLabel(d.dimension),
               render: (d) => <CapabilityLink dimension={d.dimension} />,
             },
             {
@@ -190,11 +193,11 @@ export function DiagnosticsView({
         title={
           emptied.length === 0
             ? 'Every dimension survives without income-linked data'
-            : `${emptied.map((d: Dimension) => DIMENSION_LABELS[d]).join(' and ')} ${emptied.length === 1 ? 'fails' : 'fail'} without wealth-correlated data`
+            : `${emptied.map((d: Dimension) => dimensionLabel(d)).join(' and ')} ${emptied.length === 1 ? 'fails' : 'fail'} without wealth-correlated data`
         }
         hint={`${diag.gdpStrippedTest.excluded.length} indicators meet the ${WEALTH_CORRELATION_THRESHOLD} correlation threshold. This table shows the shift after removing them.${
           emptied.length
-            ? ` ${emptied.map((d: Dimension) => DIMENSION_LABELS[d]).join(' and ')} lose every measured indicator.`
+            ? ` ${emptied.map((d: Dimension) => dimensionLabel(d)).join(' and ')} lose every measured indicator.`
             : ' Every dimension keeps at least one measured indicator.'
         }`}
       >
@@ -206,7 +209,7 @@ export function DiagnosticsView({
             {
               key: 'dimension',
               label: 'Dimension',
-              sort: (r) => DIMENSION_LABELS[r.dimension],
+              sort: (r) => dimensionLabel(r.dimension),
               render: (r) => <CapabilityLink dimension={r.dimension} />,
             },
             {
@@ -255,7 +258,7 @@ export function DiagnosticsView({
             {
               key: 'dimension',
               label: 'Dimension',
-              sort: (i) => DIMENSION_LABELS[i.dimension],
+              sort: (i) => dimensionLabel(i.dimension),
               render: (i) => muted(<CapabilityLink dimension={i.dimension} />),
             },
             {
@@ -300,7 +303,7 @@ export function DiagnosticsView({
             {
               key: 'dimension',
               label: 'Dimension',
-              sort: (i) => DIMENSION_LABELS[i.dimension],
+              sort: (i) => dimensionLabel(i.dimension),
               render: (i) => muted(<CapabilityLink dimension={i.dimension} />),
             },
             {
@@ -345,7 +348,7 @@ export function DiagnosticsView({
           }
           hint={`The panel reads the same published record as the indicators, so it is not independent evidence. It gets the same GDP test, with same-country indicator results beside it.${
             panelBackfill.length > 0
-              ? ` ${panelBackfill.map((d) => DIMENSION_LABELS[d.dimension]).join(' and ')} have no indicator score, so the panel is the only candidate.`
+              ? ` ${panelBackfill.map((d) => dimensionLabel(d.dimension)).join(' and ')} have no indicator score, so the panel is the only candidate.`
               : ''
           }`}
         >
@@ -358,7 +361,7 @@ export function DiagnosticsView({
               {
                 key: 'dimension',
                 label: 'Dimension',
-                sort: (d) => DIMENSION_LABELS[d.dimension],
+                sort: (d) => dimensionLabel(d.dimension),
                 render: (d) => <CapabilityLink dimension={d.dimension} />,
               },
               {
@@ -455,13 +458,13 @@ export function DiagnosticsView({
             {
               key: 'a',
               label: 'Dimension A',
-              sort: (p) => DIMENSION_LABELS[p.a as Dimension],
+              sort: (p) => dimensionLabel(p.a as Dimension),
               render: (p) => <CapabilityLink dimension={p.a as Dimension} />,
             },
             {
               key: 'b',
               label: 'Dimension B',
-              sort: (p) => DIMENSION_LABELS[p.b as Dimension],
+              sort: (p) => dimensionLabel(p.b as Dimension),
               render: (p) => <CapabilityLink dimension={p.b as Dimension} />,
             },
             {
@@ -478,12 +481,12 @@ export function DiagnosticsView({
       <Section
         title={
           best && worst
-            ? `Evidence is strongest for ${DIMENSION_LABELS[best.dimension]} and weakest for ${DIMENSION_LABELS[worst.dimension]}`
+            ? `Evidence is strongest for ${dimensionLabel(best.dimension)} and weakest for ${dimensionLabel(worst.dimension)}`
             : 'Evidence quality varies across the nine dimensions'
         }
         hint={`Subjectivity share counts perception proxies and indicators with no dataset.${
           worst
-            ? ` ${DIMENSION_LABELS[worst.dimension]} is the weakest: ${countWord(worst.indicatorsObserved)} of its ${countWord(worst.indicatorsDefined)} indicators ${worst.indicatorsObserved === 1 ? 'is' : 'are'} observed and its mean confidence is ${worst.meanConfidence.toFixed(2)}.`
+            ? ` ${dimensionLabel(worst.dimension)} is the weakest: ${countWord(worst.indicatorsObserved)} of its ${countWord(worst.indicatorsDefined)} indicators ${worst.indicatorsObserved === 1 ? 'is' : 'are'} observed and its mean confidence is ${worst.meanConfidence.toFixed(2)}.`
             : ''
         }`}
       >
@@ -495,7 +498,7 @@ export function DiagnosticsView({
             {
               key: 'dimension',
               label: 'Dimension',
-              sort: (m) => DIMENSION_LABELS[m.dimension],
+              sort: (m) => dimensionLabel(m.dimension),
               render: (m) => <CapabilityLink dimension={m.dimension} />,
             },
             {
@@ -561,7 +564,7 @@ export function DiagnosticsView({
               {
                 key: 'dimension',
                 label: 'Dimension',
-                sort: (f) => DIMENSION_LABELS[f.dimension],
+                sort: (f) => dimensionLabel(f.dimension),
                 render: (f) => <CapabilityLink dimension={f.dimension} />,
               },
               {
@@ -592,7 +595,7 @@ export function DiagnosticsView({
               {singleFamily
                 .map(
                   (fb) =>
-                    `Every scored country rests on one family in ${DIMENSION_LABELS[fb.dimension]}.`,
+                    `Every scored country rests on one family in ${dimensionLabel(fb.dimension)}.`,
                 )
                 .join(' ')}
             </p>
@@ -638,7 +641,7 @@ export function DiagnosticsView({
             {
               key: 'dimension',
               label: 'Dimension',
-              sort: (g) => DIMENSION_LABELS[g.dimension],
+              sort: (g) => dimensionLabel(g.dimension),
               render: (g) => muted(<CapabilityLink dimension={g.dimension} />),
             },
             { key: 'name', label: 'Indicator', sort: (g) => g.name, render: (g) => g.name },
@@ -666,7 +669,7 @@ export function DiagnosticsView({
               {
                 key: 'dimension',
                 label: 'Dimension',
-                sort: (g) => DIMENSION_LABELS[g.dimension],
+                sort: (g) => dimensionLabel(g.dimension),
                 render: (g) => muted(<CapabilityLink dimension={g.dimension} />),
               },
               { key: 'name', label: 'Indicator', sort: (g) => g.name, render: (g) => g.name },
@@ -697,7 +700,7 @@ function FactorTables({ solution, label }: { solution: FactorSolution; label: st
           {
             key: 'dimension',
             label: 'Dimension',
-            sort: (r) => DIMENSION_LABELS[r.dimension],
+            sort: (r) => dimensionLabel(r.dimension),
             render: (r) => <CapabilityLink dimension={r.dimension} />,
           },
           {
@@ -715,7 +718,7 @@ function FactorTables({ solution, label }: { solution: FactorSolution; label: st
         {solution.dimensions.length}, and the first over {solution.dimensions.length} is the share.{' '}
         {solution.dropped.length
           ? `Left out because a dimension has no score: ${solution.dropped
-              .map((d) => `${d.iso3} (${d.missing.map((m) => DIMENSION_LABELS[m]).join(', ')})`)
+              .map((d) => `${d.iso3} (${d.missing.map((m) => dimensionLabel(m)).join(', ')})`)
               .join('; ')}.`
           : 'No country was left out.'}
       </p>
@@ -823,7 +826,7 @@ function ResidualSection({ reading }: { reading: ResidualReading }) {
               {
                 key: 'dimension',
                 label: 'Dimension',
-                sort: (r) => DIMENSION_LABELS[r.dimension],
+                sort: (r) => dimensionLabel(r.dimension),
                 render: (r) => <CapabilityLink dimension={r.dimension} />,
               },
               {
@@ -897,7 +900,7 @@ function ResidualSection({ reading }: { reading: ResidualReading }) {
             {
               key: 'dimension',
               label: 'Dimension',
-              sort: (r) => DIMENSION_LABELS[r.dimension],
+              sort: (r) => dimensionLabel(r.dimension),
               render: (r) => <CapabilityLink dimension={r.dimension} />,
             },
             {

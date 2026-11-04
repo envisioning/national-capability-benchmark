@@ -1,3 +1,4 @@
+import { dimensionLabel } from '@/lib/labels'
 import { DIMENSIONS, DIMENSION_LABELS, median, quantile, round, signed } from '@ncb/core'
 import type { Dimension, HistoryCountryFile, HistoryDelta, HistoryIndexFile } from '@ncb/core'
 
@@ -117,7 +118,7 @@ export function buildHistoryPage(
     fromYear: index.params.fromYear,
     toYear: index.params.toYear,
     spans: index.params.spans,
-    dimensions: DIMENSIONS.map((dimension) => ({ dimension, label: DIMENSION_LABELS[dimension] })),
+    dimensions: DIMENSIONS.map((dimension) => ({ dimension, label: dimensionLabel(dimension) })),
     cohorts,
     countries,
     validation: index.validation,

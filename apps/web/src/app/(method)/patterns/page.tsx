@@ -29,14 +29,10 @@ export default async function PatternsPage({
     <>
       <PageTitle>Documented examples</PageTitle>
       <Headline>
-        Each record describes something a country built that the indicators do not capture. The
-        source provides the published number; the mechanism is our interpretation.
+        What countries built that the indicators do not capture. The source provides the published
+        number and the mechanism is our interpretation. {withPattern.length} of {records.length}{' '}
+        records include a mechanism, and none affects a score.
       </Headline>
-      <p className="mb-12 max-w-3xl text-lg leading-relaxed text-[var(--muted)]">
-        Scores describe outcomes. These records describe how a country acted, what it needed and
-        what happened. {withPattern.length} of {records.length} records include a mechanism. They
-        do not affect scores.
-      </p>
 
       <PatternsView records={records} initial={filters} />
     </>

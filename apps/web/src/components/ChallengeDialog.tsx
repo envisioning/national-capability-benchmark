@@ -1,5 +1,6 @@
 'use client'
 
+import { dimensionLabel } from '@/lib/labels'
 import { useEffect, useId, useRef, useState } from 'react'
 import {
   CHALLENGE_STATUS_LABELS,
@@ -147,7 +148,7 @@ export function ChallengeDialog() {
               >
                 {DIMENSIONS.map((candidate) => (
                   <option key={candidate} value={candidate}>
-                    {lex ? lex.dimensions[candidate] : DIMENSION_LABELS[candidate]}
+                    {lex ? lex.dimensions[candidate] : dimensionLabel(candidate)}
                   </option>
                 ))}
               </select>

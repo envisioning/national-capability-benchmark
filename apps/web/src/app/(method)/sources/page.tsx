@@ -1,3 +1,4 @@
+import { dimensionLabel } from '@/lib/labels'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
@@ -325,7 +326,7 @@ export default async function SourcesPage() {
                     <Td>{check.name}</Td>
                     <Td>
                       <Link href={capabilityHref(check.dimension)} className="hover:underline">
-                        {DIMENSION_LABELS[check.dimension]}
+                        {dimensionLabel(check.dimension)}
                       </Link>
                     </Td>
                     <Td dim>{check.source.series ?? 'no series code'}</Td>
@@ -408,7 +409,7 @@ export default async function SourcesPage() {
                     </Td>
                     <Td>
                       <Link href={capabilityHref(def.dimension)} className="hover:underline">
-                        {DIMENSION_LABELS[def.dimension]}
+                        {dimensionLabel(def.dimension)}
                       </Link>
                     </Td>
                     <Td dim>{def.source.series ?? 'no series code'}</Td>

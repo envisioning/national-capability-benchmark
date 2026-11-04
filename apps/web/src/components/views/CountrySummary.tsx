@@ -14,7 +14,7 @@ import { DIMENSION_ICON, Icon } from '@/components/Icon'
 import { ConfidenceText, Delta, DefineLink, DimensionScore, Score } from '@/components/ui'
 import { DimensionPeek } from '@/components/views/DimensionPeek'
 import { agendaHref, scoreAnchorId } from '@/lib/links'
-import { sentenceLabel } from '@/lib/labels'
+import { dimensionLabel, sentenceLabel } from '@/lib/labels'
 
 const ROW_GRID =
   'lg:grid lg:grid-cols-[minmax(0,10rem)_minmax(6rem,1fr)_3.5rem_3.5rem_6.5rem_5rem] lg:items-center lg:gap-4'
@@ -124,7 +124,7 @@ function Sentence({ split }: { split: ReturnType<typeof splitAgenda> }) {
   const thinnest = split.measure[0]
   const link = (d: Dimension) => (
     <CapabilityLink dimension={d} className="underline underline-offset-4">
-      {sentenceLabel(DIMENSION_LABELS[d])}
+      {dimensionLabel(d)}
     </CapabilityLink>
   )
   return (
@@ -167,7 +167,7 @@ function Row({
 }) {
   const thin = isThinEvidence(dim.confidence)
   const trend = primaryMomentum(dim.momentum)
-  const label = sentenceLabel(DIMENSION_LABELS[dimension])
+  const label = dimensionLabel(dimension)
   return (
     <li className={`grid grid-cols-[minmax(0,1fr)_auto] items-center gap-x-4 gap-y-1.5 border-b border-[var(--rule-soft)] py-2.5 text-xs ${ROW_GRID}`}>
       <a href={`#${dimension}`} className="inline-flex min-w-0 items-center gap-2 font-medium underline underline-offset-4">

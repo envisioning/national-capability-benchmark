@@ -1,5 +1,6 @@
 'use client'
 
+import { dimensionLabel } from '@/lib/labels'
 import Link from 'next/link'
 import { DIMENSION_LABELS, type CellConsensus } from '@ncb/core'
 import { CapabilityLink } from '@/components/CapabilityLink'
@@ -27,7 +28,7 @@ export function DissentTable({ rows }: { rows: CellConsensus[] }) {
         {
           key: 'dimension',
           label: 'Dimension',
-          sort: (c) => DIMENSION_LABELS[c.dimension],
+          sort: (c) => dimensionLabel(c.dimension),
           render: (c) => <CapabilityLink dimension={c.dimension} />,
         },
         { key: 'median', label: 'Median', align: 'right', sort: (c) => c.median, render: (c) => <Score value={c.median} size="sm" /> },

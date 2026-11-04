@@ -1,3 +1,5 @@
+import { PageContents } from '@/components/PageContents'
+import { dimensionLabel } from '@/lib/labels'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
@@ -57,6 +59,7 @@ export default function GapsPage() {
         the registry and lowers confidence, and the project does not delete a gap to make the
         numbers look better.
       </Headline>
+      <PageContents />
 
       <Note>
         A gap closes when somebody names a published series that covers at least two countries
@@ -94,7 +97,7 @@ export default function GapsPage() {
           icon={<Icon name={DIMENSION_ICON[dimension as Dimension]} size={22} />}
           title={
             <Link href={capabilityHref(dimension)} className="hover:underline">
-              {DIMENSION_LABELS[dimension]}
+              {dimensionLabel(dimension)}
             </Link>
           }
           hint={`${capitalize(countWord(rows.length))} of this capability's indicators have no dataset behind them.`}
@@ -143,7 +146,7 @@ export default function GapsPage() {
                     {row.name}
                   </Link>{' '}
                   <span className="text-xs font-normal text-[var(--muted)]">
-                    {DIMENSION_LABELS[row.dimension]}
+                    {dimensionLabel(row.dimension)}
                   </span>
                 </h3>
                 {row.notes ? (
