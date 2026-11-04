@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useRef, useState } from 'react'
-import { INDICATORS_BY_ID, MEASUREMENT_CLASS_MEANING } from '@ncb/core'
+import { INDICATORS_BY_ID, MEASUREMENT_CLASS_MEANING, rawUnit } from '@ncb/core'
 import type { IndicatorAcrossCountries } from '@ncb/core'
 import { FlagField } from '@/components/FlagField'
 import { Icon } from '@/components/Icon'
@@ -142,7 +142,7 @@ export function IndicatorPeek({
                 iso3: v.iso3,
                 label: v.country,
                 value: v.normalized,
-                detail: `${v.raw.toLocaleString('en-US')} ${def.unit}, ${v.year}`,
+                detail: `${v.raw.toLocaleString('en-US')} ${rawUnit(def)}, ${v.year}`,
                 focal: v.iso3 === iso3,
                 clamped: v.outOfFrame,
               }))}

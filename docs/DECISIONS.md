@@ -10550,3 +10550,61 @@ in the Shared purpose brief.
 
 **Overturned by.** A multi-vendor or gateway run, which supersedes the panel; or
 an open source for any of the four rows, which changes the briefs again.
+
+## D189 — A country page opens on a summary, and its record folds away
+
+*Recorded 2026-11-04. Supersedes the label in D136: the map's tab reads Peers.*
+
+**Why.** The profile was 49,313 pixels tall at 1440 wide, about 55 screens, and
+nothing on it collapsed. The first two screens printed the nine scores three
+times. The loudest mark was the Coordination chip for Brazil at 92.8, with
+confidence 0.25. A score had no reference, though the peer median existed one tab
+away. No control moved between the nine sections.
+
+The review also found a defect. A per-head row's `unit` describes the transformed
+value, and five surfaces printed `raw`, the national total, beside it. Brazil read
+58,292 articles per million people, where the scored value is 276.
+
+**Decision.**
+
+1. `valueInUnit` in `model/indicators.ts` returns the number a reader reads against
+   `def.unit`: `transformed` for `per_million_population`, else `raw`. A log or a
+   distance transform is a scoring device, so its unit still describes `raw`.
+   `rawUnit` names a bare raw value, for the surfaces that hold no transformed
+   value. The country page prints the total under the per-head value, so a reader
+   can check it against the source. No score moved.
+2. `CountrySummary` replaces the lede lists and the dimension table. Nine rows sit
+   on one axis, grouped by `splitAgenda`. A dot is the score and a tick is the
+   income-peer median of D130. Both numbers are printed, because the mark is a
+   second encoding. A median places the country and ranks nothing, so D1 holds.
+3. A thin score keeps its number and gives up the band fill, as a radar point goes
+   hollow. Confidence stays a separate number and reads as text beside the chip,
+   so the two do not look like one kind of number. It is not folded into the
+   score.
+4. The radar draws the peer median as its default outline. The median names no
+   country, so a named comparator stays the reader's choice.
+5. Each capability is a closed `details`, so its content stays in the document for
+   search and print. An address with its id opens it. A rail lists the nine in the
+   model's order on wide screens. Narrow screens get no rail, because the closed
+   sections read as their own list.
+6. Indicators read as one table. Gap and retired rows become one line of names
+   linked to `/indicators`, where the notes live. They still count and still
+   reduce confidence. Decision references leave the condition and check notes on
+   display, through `withoutDecisionRefs`.
+7. The confidence legend stays visible, because its caveat has to survive skim
+   reading. The class legend stays above the record. The rest of "How to read this
+   page" folds.
+8. The map keeps its address and its pages, and the tab reads Peers. The map index
+   and its nine pages still hold the row-by-row peer reading that the summary does
+   not.
+
+**Cost.** A reader who wants everything now clicks once. The dimension table's
+sort is gone, along with its side-by-side panel and recency columns: those numbers
+moved into each section. Summary rows order by agenda group and sections by the
+model's order, so the two orders differ on purpose. The summary's order is the
+agenda's, and D133's rule against sorting holds for the map index. Prose inside a
+registry note can still name a decision.
+
+**Overturned by.** Readers failing to find the record behind a score, or print and
+search failing on closed sections in a browser this site supports.
+

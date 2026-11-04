@@ -1430,3 +1430,22 @@ export function isScored(def: IndicatorDef): boolean {
 export function isDeclaredGap(def: IndicatorDef): boolean {
   return def.ingest === 'gap'
 }
+
+/**
+ * The number a reader reads against `def.unit`.
+ *
+ * A per-head row's `unit` describes the transformed value, and its `raw` value
+ * is the national total the publisher wrote. A log or a distance transform is
+ * a scoring device, so the unit there describes `raw`. See D189.
+ */
+export function valueInUnit(
+  def: Pick<IndicatorDef, 'transform'> | undefined,
+  cell: { raw: number | null; transformed?: number | null },
+): number | null {
+  return def?.transform === 'per_million_population' ? (cell.transformed ?? null) : cell.raw
+}
+
+/** What a bare `raw` value is, where `valueInUnit` has no transformed value to read. */
+export function rawUnit(def: Pick<IndicatorDef, 'transform' | 'unit'>): string {
+  return def.transform === 'per_million_population' ? 'national total' : def.unit
+}

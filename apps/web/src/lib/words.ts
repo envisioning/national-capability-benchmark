@@ -525,3 +525,14 @@ export const PT_METHOD = {
     HTI: 'Caso de ruptura estatal, mostrando o piso do quadro comparativo.',
   } as Record<string, string>,
 } as const
+
+/**
+ * A registry note as a reader sees it. The note cites the decision it rests on
+ * for the people who maintain the registry, and the decision log is one link
+ * away on the method pages. See D189.
+ */
+export function withoutDecisionRefs(note: string): string {
+  return note
+    .replace(/\s*\((?:see )?D\d+(?:(?:,\s*|\s+and\s+)D\d+)*\)/gi, '')
+    .replace(/\s*See D\d+(?:(?:,\s*|\s+and\s+)D\d+)*\./g, '')
+}
