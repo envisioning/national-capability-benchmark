@@ -481,12 +481,6 @@ export default async function SourcesPage() {
             holds fetched values with year, tier and retrieval date, from {INGEST_FROM_YEAR} on.
           </li>
           <li>
-            <a href={docHref('data/observations/joint-evs-wvs.json')} className="underline underline-offset-4">
-              joint-evs-wvs.json
-            </a>{' '}
-            holds the permitted derived trust observations from the Joint EVS/WVS adapter.
-          </li>
-          <li>
             <a href={docHref('data/observations/revisions.json')} className="underline underline-offset-4">
               revisions.json
             </a>{' '}

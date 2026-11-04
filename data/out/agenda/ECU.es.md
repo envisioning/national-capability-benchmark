@@ -1,6 +1,6 @@
 # Agenda de capacidades: Ecuador
 
-*Generado el 2026-11-03*
+*Generado el 2026-11-04*
 
 La comparación incluye 135 países. Cada dimensión recibe una puntuación de 0 a 100, sin clasificación general, y cada puntuación muestra a su lado la solidez de la evidencia. Antes de citar una puntuación, lea [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md).
 
@@ -9,14 +9,14 @@ La comparación incluye 135 países. Cada dimensión recibe una puntuación de 0
 | Dimensión | Puntuación | Solidez | Tendencia |
 | --- | --- | --- | --- |
 | Anticipación | 40.8 | 0.46 (utilizable) | +11 en 10 años, con 2 indicadores |
-| Iniciativa | 45.9 | 0.63 (utilizable) | sin base de tendencia |
+| Iniciativa | 36.5 | 0.49 (utilizable) | sin base de tendencia |
 | Coordinación | 72.4 | 0.45 (utilizable) | +22 en 10 años, con 2 indicadores |
-| Confianza | 26.4 | 0.55 (utilizable) | sin base de tendencia |
+| Confianza | 42.3 | 0.34 (débil) | +1.9 en 20 años, con 2 indicadores |
 | Aprendizaje | 47.1 | 0.55 (utilizable) | -7.7 en 20 años, con 2 indicadores |
 | Experimentación | 13.5 | 0.47 (utilizable) | +1 en 10 años, con 3 indicadores |
 | Adaptación | 63.9 | 0.62 (utilizable) | +2.1 en 10 años, con 4 indicadores |
 | Ejecución | 27.4 | 0.63 (utilizable) | -1 en 10 años, con 3 indicadores |
-| Propósito compartido | 39.1 | 0.41 (débil) | -3.3 en 10 años, con 2 indicadores |
+| Propósito compartido | 36.2 | 0.29 (débil) | -3.3 en 10 años, con 2 indicadores |
 
 ## Puntuaciones bajas con evidencia utilizable
 
@@ -32,16 +32,6 @@ Estas son las puntuaciones más bajas con evidencia utilizable. Las dimensiones 
 - Vacíos declarados: Operaciones de capital de riesgo, Empresas en espacios controlados de prueba, Empresas surgidas de universidades.
 - Series descartadas: I+D ejecutada por empresas.
 
-### Confianza: 26.4, evidencia utilizable
-
-¿Cuánta cooperación es posible más allá de las redes personales inmediatas?
-
-- Basada en 5 indicadores observados.
-- Puntuaciones más altas en esta dimensión, entre las que tienen evidencia utilizable: Suecia 90.3, Nueva Zelanda 83.2, Estonia 75.7.
-- Casos documentados en otros países: Cadastro Único, the unified social registry (Brasil); Portal da Transparência, the federal open-books system (Brasil); MyData, citizen-directed data portability (Corea del Sur); Singapore Courts' case-clearance discipline (Singapur); Civil-court clearance and the CEPEJ monitoring series (Portugal).
-- Vacíos declarados: Confianza en las instituciones públicas, Tasa de resolución de casos judiciales.
-- Series descartadas: Estado de derecho, Control de la corrupción, Tiempo para hacer cumplir un contrato, Tasa de homicidios intencionales.
-
 ### Ejecución: 27.4, evidencia utilizable
 
 ¿En qué medida es capaz el país de convertir planes y conocimiento en sistemas que funcionan?
@@ -52,6 +42,16 @@ Estas son las puntuaciones más bajas con evidencia utilizable. Las dimensiones 
 - Vacíos declarados: Ejecución de grandes proyectos, Empresas jóvenes que ganan escala.
 - Series descartadas: Calidad de la infraestructura logística, Tiempo de conexión a la red eléctrica.
 
+### Iniciativa: 36.5, evidencia utilizable
+
+¿En qué medida son capaces las personas y las organizaciones de convertir una intención en acción?
+
+- Basada en 3 indicadores observados.
+- Puntuaciones más altas en esta dimensión, entre las que tienen evidencia utilizable: Nueva Zelanda 97.6, Reino Unido 94.7, Estonia 93.9.
+- Casos documentados en otros países: Singapore's national ICT-skills measurement and baseline (Singapur); e.escola, a national laptop-and-broadband push (Portugal); Pradhan Mantri Gramin Digital Saksharta Abhiyan (India); Puntos México Conectado, centros nacionales de aprendizaje digital (México).
+- Vacíos declarados: Adultos que realizan tareas digitales, Control percibido sobre la propia vida.
+- Series descartadas: Tiempo para abrir una empresa.
+
 ### Anticipación: 40.8, evidencia utilizable
 
 ¿En qué medida es capaz el país de identificar cambios emergentes y prepararse para ellos?
@@ -60,16 +60,6 @@ Estas son las puntuaciones más bajas con evidencia utilizable. Las dimensiones 
 - Puntuaciones más altas en esta dimensión, entre las que tienen evidencia utilizable: Dinamarca 98.1, Noruega 97.5, Suiza 94.
 - Casos documentados en otros países: Embrapa, a fifty-year bet on tropical agriculture (Brasil); The Delta Programme and its fund (Países Bajos); Lei de Informática, a sectoral industrial policy (Brasil); CGEE, the strategic studies center (Brasil); Centre for Strategic Futures, foresight inside government (Singapur); Legally binding carbon budgets (Reino Unido); Fukushima decommissioning roadmap, a 30–40-year risk-reduction horizon (Japón); National basic-research funding allocation (China); PLANAPP and REPLAN, a centre-of-government foresight network (Portugal); Labour Market Intelligence Programme and forward skills planning (Sudáfrica); Government Report on the Future and the parliamentary Committee for the Future (Finlandia); Foresight Centre at the Riigikogu (Arenguseire Keskus) (Estonia); Office of Technology Assessment, defunded and closed in 1995 (Estados Unidos); Rządowe Centrum Studiów Strategicznych, liquidated in 2006 (Polonia); Office of Technology Assessment at the German Bundestag (TAB) (Alemania); National Assembly Futures Institute (Corea del Sur); Federal Chancellery situation and environment analysis (Perspektivstab) (Suiza); Senate foresight delegation (Délégation sénatoriale à la prospective) (Francia); Comisión de Desafíos del Futuro, Ciencia, Tecnología e Innovación del Senado (Chile); Policy Horizons Canada, the federal foresight unit, and its 2024 disruption scan (Canadá); Framtidskommissionen, the Prime Minister's time-limited future commission (Suecia); National Planning Commission foresight work for Malawi 2063 (Malaui); Bureau National de la Prospective et de la Veille Stratégique and the national prospective studies (Costa de Marfil); Teknologiraadet, the Norwegian Board of Technology (Noruega); Teknologiraadet, the Danish Board of Technology, abolished in 2012 (Dinamarca); Bureau federal du Plan (Bélgica); Special Secretariat of Foresight (now of Long-term Planning) (Grecia); STRATA foresight for the Lietuva 2050 state progress strategy (Lituania); Institut Royal des Etudes Stratégiques (IRES) (Marruecos); Long-term Insights Briefings under the Public Service Act 2020 (Nueva Zelanda); Foresight und Technikfolgenabschätzung für das österreichische Parlament (Austria); Latvija 2050 long-term scenario framework for the State Chancellery (Letonia); Natsionalnyi instytut stratehichnykh doslidzhen, and its falling staff ceiling (Ucrania); Prognoz nauchno-tekhnologicheskogo razvitiya Rossiyskoy Federatsii na period do 2030 goda (Rusia); Agency for Strategic Planning, merged into a ministry in 2002 (Kazajistán); Institut Tunisien des Études Stratégiques (ITES) (Túnez); Cabinet Information and Decision Support Center (IDSC), Afaq Mostaqbaliya (Egipto); Center for the Islamic Iranian Model of Progress (Markaz-e Olgu) (Irán).
 - Vacíos declarados: Capacidad gubernamental de prospectiva, Compromisos de investigación de largo plazo.
-
-### Iniciativa: 45.9, evidencia utilizable
-
-¿En qué medida son capaces las personas y las organizaciones de convertir una intención en acción?
-
-- Basada en 4 indicadores observados.
-- Puntuaciones más altas en esta dimensión, entre las que tienen evidencia utilizable: Reino Unido 94.7, Nueva Zelanda 92.7, Mauricio 87.
-- Casos documentados en otros países: Singapore's national ICT-skills measurement and baseline (Singapur); e.escola, a national laptop-and-broadband push (Portugal); Pradhan Mantri Gramin Digital Saksharta Abhiyan (India); Puntos México Conectado, centros nacionales de aprendizaje digital (México).
-- Vacíos declarados: Adultos que realizan tareas digitales.
-- Series descartadas: Tiempo para abrir una empresa.
 
 ### Aprendizaje: 47.1, evidencia utilizable
 
@@ -84,13 +74,21 @@ Estas son las puntuaciones más bajas con evidencia utilizable. Las dimensiones 
 
 La solidez de la evidencia está por debajo de la franja utilizable, así que la puntuación se apoya en poca evidencia.
 
-### Propósito compartido: solidez 0.41, evidencia débil
+### Propósito compartido: solidez 0.29, evidencia débil
 
 ¿Hasta qué punto las personas logran verse como parte de un proyecto común?
 
-- Basada en 3 indicadores observados.
-- Vacíos declarados: Sentido de pertenencia nacional, Voluntariado, Polarización política.
+- Basada en 2 indicadores observados.
+- Vacíos declarados: Sentido de pertenencia nacional, Voluntariado, Polarización política, Participación cívica.
 - Series descartadas: Voz y rendición de cuentas.
+
+### Confianza: solidez 0.34, evidencia débil
+
+¿Cuánta cooperación es posible más allá de las redes personales inmediatas?
+
+- Basada en 3 indicadores observados.
+- Vacíos declarados: Confianza interpersonal generalizada, Confianza en las instituciones públicas, Cooperación más allá del propio grupo, Tasa de resolución de casos judiciales.
+- Series descartadas: Estado de derecho, Control de la corrupción, Tiempo para hacer cumplir un contrato, Tasa de homicidios intencionales.
 
 ## Puntuaciones altas con evidencia utilizable
 
@@ -122,16 +120,19 @@ Las condiciones describen lo que un país tiene para trabajar: infraestructura, 
 
 ## ¿Qué falta medir?
 
-18 indicadores previstos en el modelo no tienen una serie comparable, y cada uno baja la solidez. Un vacío se convierte en indicador con puntuación cuando una serie comparable cubre al menos dos países.
+22 indicadores previstos en el modelo no tienen una serie comparable, y cada uno baja la solidez. Un vacío se convierte en indicador con puntuación cuando una serie comparable cubre al menos dos países.
 
 | Dimensión | Indicador ausente | Qué mediría |
 | --- | --- | --- |
 | Anticipación | Capacidad gubernamental de prospectiva | Existencia, mandato y continuidad de una función nacional de prospectiva estratégica. |
 | Anticipación | Compromisos de investigación de largo plazo | Proyectos de investigación nuevos con financiamiento público concursable y una duración de cinco años o más, como proporción de todos los proyectos con financiamiento público concursable adjudicados en el año. |
 | Iniciativa | Adultos que realizan tareas digitales | Proporción de adultos que realizaron una tarea digital determinada en los últimos tres meses, como enviar un mensaje con un archivo adjunto, mover un archivo entre dispositivos o usar una fórmula en una hoja de cálculo, contada tarea por tarea y nunca como nivel de habilidad. |
+| Iniciativa | Control percibido sobre la propia vida | Libertad de elección y control sobre el rumbo de la propia vida, según declaran las personas. |
 | Coordinación | Colaboración universidad-empresa | Intensidad de la colaboración en investigación entre universidades y empresas. |
 | Coordinación | Colaboración público-privada | Frecuencia y escala con que el gobierno y las empresas ejecutan juntos objetivos nacionales. |
+| Confianza | Confianza interpersonal generalizada | Proporción que está de acuerdo en que se puede confiar en la mayoría de las personas. |
 | Confianza | Confianza en las instituciones públicas | Confianza en el gobierno nacional, los tribunales y el servicio público. |
+| Confianza | Cooperación más allá del propio grupo | Proporción de adultos que confía completamente o algo en las personas que conoce por primera vez. |
 | Confianza | Tasa de resolución de casos judiciales | Casos civiles y comerciales resueltos en un año como proporción de los casos presentados en ese mismo año. |
 | Aprendizaje | Participación de adultos en aprendizaje | Proporción de adultos en educación o capacitación, formal o no, en los últimos 12 meses. |
 | Experimentación | Operaciones de capital de riesgo | Primeras rondas de capital de riesgo cerradas en el año por empresas con sede en el país, por millón de personas, contadas por operación y nunca por monto. |
@@ -144,6 +145,7 @@ Las condiciones describen lo que un país tiene para trabajar: infraestructura, 
 | Propósito compartido | Sentido de pertenencia nacional | Identificación y apego a la comunidad nacional, según declaran las personas, distintos del orgullo nacional. |
 | Propósito compartido | Voluntariado | Proporción de adultos que dedicaron tiempo voluntario a una organización en el último mes. |
 | Propósito compartido | Polarización política | Grado en que las diferencias políticas se alinean en una sola división hostil. |
+| Propósito compartido | Participación cívica | Proporción de adultos que declaran pertenecer a una organización humanitaria o de caridad. |
 
 ## Lo que Ecuador construyó y ningún indicador cuenta
 

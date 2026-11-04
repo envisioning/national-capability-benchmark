@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-03T19:47:34.764Z",
-  "version": "10.0.5",
+  "generatedAt": "2026-11-04T10:00:40.260Z",
+  "version": "10.1.0",
   "country": {
     "country": "Nicaragua",
     "iso3": "NIC",
@@ -421,20 +421,20 @@
         ]
       },
       "agency": {
-        "score": 79.9,
-        "observedIndicators": 2,
-        "belowCoverageFloor": false,
-        "confidence": 0.255,
+        "score": null,
+        "observedIndicators": 1,
+        "belowCoverageFloor": true,
+        "confidence": 0.111,
         "confidenceParts": {
-          "coverage": 0.4,
-          "recency": 0.708,
-          "sourceQuality": 0.9
+          "coverage": 0.2,
+          "recency": 0.583,
+          "sourceQuality": 0.95
         },
-        "delphiScore": 40,
-        "delphiIqr": 4,
+        "delphiScore": null,
+        "delphiIqr": null,
         "delphiDissent": false,
-        "blendedScore": 79.9,
-        "blendedFrom": "indicators",
+        "blendedScore": null,
+        "blendedFrom": "none",
         "momentum": [],
         "indicators": [
           {
@@ -624,23 +624,16 @@
             "indicatorId": "perceived_control",
             "name": "Perceived control over life",
             "measurementClass": "P",
-            "raw": 8,
-            "transformed": 8,
-            "normalized": 91.3,
-            "year": 2022,
+            "raw": null,
+            "transformed": null,
+            "normalized": null,
+            "year": null,
             "source": "Joint EVS/WVS (A173)",
-            "sourceTier": "academic_survey",
+            "sourceTier": null,
             "winsorized": false,
             "outOfFrame": false,
-            "series": [
-              {
-                "year": 2022,
-                "raw": 8,
-                "normalized": 91.3,
-                "tier": "academic_survey"
-              }
-            ],
-            "status": "observed",
+            "series": [],
+            "status": "gap",
             "staleExcluded": null
           }
         ],
@@ -1241,19 +1234,19 @@
         "conditions": []
       },
       "trust": {
-        "score": 23.6,
-        "observedIndicators": 4,
+        "score": 43.6,
+        "observedIndicators": 2,
         "belowCoverageFloor": false,
-        "confidence": 0.337,
+        "confidence": 0.138,
         "confidenceParts": {
-          "coverage": 0.571,
-          "recency": 0.75,
-          "sourceQuality": 0.788
+          "coverage": 0.286,
+          "recency": 0.667,
+          "sourceQuality": 0.725
         },
-        "delphiScore": 17,
-        "delphiIqr": 2,
+        "delphiScore": null,
+        "delphiIqr": null,
         "delphiDissent": false,
-        "blendedScore": 23.6,
+        "blendedScore": 43.6,
         "blendedFrom": "indicators",
         "momentum": [],
         "indicators": [
@@ -1609,23 +1602,16 @@
             "indicatorId": "interpersonal_trust",
             "name": "Generalised interpersonal trust",
             "measurementClass": "P",
-            "raw": 4.2,
-            "transformed": 4.2,
-            "normalized": 2.9,
-            "year": 2022,
+            "raw": null,
+            "transformed": null,
+            "normalized": null,
+            "year": null,
             "source": "Joint EVS/WVS (A165)",
-            "sourceTier": "academic_survey",
+            "sourceTier": null,
             "winsorized": false,
             "outOfFrame": false,
-            "series": [
-              {
-                "year": 2022,
-                "raw": 4.2,
-                "normalized": 2.9,
-                "tier": "academic_survey"
-              }
-            ],
-            "status": "observed",
+            "series": [],
+            "status": "gap",
             "staleExcluded": null
           },
           {
@@ -1648,23 +1634,16 @@
             "indicatorId": "willingness_to_cooperate_strangers",
             "name": "Cooperation beyond the in-group",
             "measurementClass": "P",
-            "raw": 10.8,
-            "transformed": 10.8,
-            "normalized": 4.4,
-            "year": 2022,
+            "raw": null,
+            "transformed": null,
+            "normalized": null,
+            "year": null,
             "source": "Joint EVS/WVS (G007_34_B)",
-            "sourceTier": "academic_survey",
+            "sourceTier": null,
             "winsorized": false,
             "outOfFrame": false,
-            "series": [
-              {
-                "year": 2022,
-                "raw": 10.8,
-                "normalized": 4.4,
-                "tier": "academic_survey"
-              }
-            ],
-            "status": "observed",
+            "series": [],
+            "status": "gap",
             "staleExcluded": null
           },
           {
@@ -1684,22 +1663,7 @@
             "staleExcluded": null
           }
         ],
-        "checks": [
-          {
-            "checkId": "institutional_trust",
-            "name": "Confidence in the courts",
-            "definition": "Share of survey respondents saying they have a great deal of confidence in the justice system and courts, of the four answers a great deal, quite a lot, not very much and none at all, in the Joint EVS/WVS 2017 to 2022 survey round.",
-            "unit": "% a great deal",
-            "direction": "higher_better",
-            "family": "institutional",
-            "value": 11.7,
-            "year": 2022,
-            "source": "Joint EVS/WVS (E069_17)",
-            "sourceTier": "academic_survey",
-            "stale": false,
-            "note": "Confidence in the courts is the public half of what this capability asks: whether people expect the rules to be enforced when a stranger breaks them. It is not scored because the survey answer reads two things the number cannot tell apart. Where courts are independent, confidence is a judgment of how they perform. Where they answer to the state, it is also deference, and saying otherwise to an interviewer has a cost. In this frame the pattern runs the wrong way. India, the Philippines and Indonesia, all electoral autocracies in the V-Dem 2025 classification, lead on the share saying a great deal, and Vietnam and China, the two closed autocracies surveyed, lead once quite a lot is counted too. The ten electoral autocracies average 21.8 percent saying a great deal and the two closed autocracies 28.1, against 13.6 for liberal and 8.4 for electoral democracies. Scored, it would rank highest the states whose courts are least able to rule against them. Income is not why it is left out: the share correlates about -0.18 with log GDP per capita. The value is the share saying a great deal; the share saying quite a lot is in the source note."
-          }
-        ],
+        "checks": [],
         "conditions": []
       },
       "learning": {
@@ -3899,19 +3863,19 @@
         ]
       },
       "shared_purpose": {
-        "score": 47.9,
-        "observedIndicators": 3,
+        "score": 45.8,
+        "observedIndicators": 2,
         "belowCoverageFloor": false,
-        "confidence": 0.306,
+        "confidence": 0.184,
         "confidenceParts": {
-          "coverage": 0.5,
-          "recency": 0.667,
-          "sourceQuality": 0.917
+          "coverage": 0.333,
+          "recency": 0.583,
+          "sourceQuality": 0.95
         },
-        "delphiScore": 25,
-        "delphiIqr": 1,
+        "delphiScore": null,
+        "delphiIqr": null,
         "delphiDissent": false,
-        "blendedScore": 47.9,
+        "blendedScore": 45.8,
         "blendedFrom": "indicators",
         "momentum": [],
         "indicators": [
@@ -4263,23 +4227,16 @@
             "indicatorId": "civic_participation",
             "name": "Civic participation",
             "measurementClass": "C",
-            "raw": 20.2,
-            "transformed": 20.2,
-            "normalized": 52,
-            "year": 2022,
+            "raw": null,
+            "transformed": null,
+            "normalized": null,
+            "year": null,
             "source": "Joint EVS/WVS (A080_01)",
-            "sourceTier": "academic_survey",
+            "sourceTier": null,
             "winsorized": false,
             "outOfFrame": false,
-            "series": [
-              {
-                "year": 2022,
-                "raw": 20.2,
-                "normalized": 52,
-                "tier": "academic_survey"
-              }
-            ],
-            "status": "observed",
+            "series": [],
+            "status": "gap",
             "staleExcluded": null
           }
         ],

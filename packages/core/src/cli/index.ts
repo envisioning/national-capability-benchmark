@@ -12,7 +12,6 @@ import {
 import type { CountryResult, DelphiRunFile, Dimension, ResidualStructure } from '../model/index.js'
 import type { AppliedDelphi } from '../delphi/apply.js'
 import { ingestWorldBank, recordRevisions } from '../pipeline/ingest.js'
-import { fetchJointEvsWvs } from '../pipeline/adapters/joint-evs-wvs.js'
 import { fetchVdem } from '../pipeline/adapters/vdem.js'
 import { fetchUnctadExportConcentration } from '../pipeline/adapters/unctad.js'
 import { fetchOecdGrsFill } from '../pipeline/adapters/oecd-grs.js'
@@ -459,51 +458,6 @@ async function research(args: Args): Promise<void> {
   }
 
   throw new Error(`Unknown research action "${action}". Use inventory, scout or critique.`)
-}
-
-async function evs(args: Args): Promise<void> {
-  const action = args._[1] ?? 'fetch'
-  if (action !== 'fetch') {
-    throw new Error(`Unknown Joint EVS/WVS action "${action}". Use pnpm bench evs fetch.`)
-  }
-  const retrievedAt = new Date().toISOString()
-  const result = await fetchJointEvsWvs({ retrievedAt })
-  let existing: unknown | null = null
-  try {
-    existing = JSON.parse(await readFile(FILES.jointEvsWvs, 'utf8'))
-  } catch (error) {
-    if ((error as NodeJS.ErrnoException).code !== 'ENOENT') {
-      throw new Error(`Cannot read existing Joint EVS/WVS observations: ${String(error)}`)
-    }
-  }
-  const parsedExisting = existing ? ObservationFile.safeParse(existing) : null
-  if (existing && !parsedExisting?.success) {
-    throw new Error(`Existing Joint EVS/WVS observations failed schema validation: ${FILES.jointEvsWvs}`)
-  }
-  const before = parsedExisting?.success ? parsedExisting.data.observations : []
-  const previousRetrievedAt = parsedExisting?.success ? parsedExisting.data.generatedAt : null
-  const body = `${JSON.stringify({ generatedAt: retrievedAt, observations: result.observations }, null, 2)}\n`
-  await writeOut(FILES.jointEvsWvs, body)
-  const revisions = await recordRevisions(before, previousRetrievedAt, result.observations, retrievedAt)
-
-  console.log(`Joint EVS/WVS ${result.release}: ${result.observations.length} observations`)
-  for (const [indicatorId, coverage] of Object.entries(result.coverageByIndicator)) {
-    const years = Object.values(coverage.fieldworkYears)
-    const span = years.length > 0 ? `, fieldwork ${Math.min(...years)}-${Math.max(...years)}` : ''
-    console.log(
-      `  ${coverage.variable} ${indicatorId}: ${coverage.emittedCountries.length}/${COUNTRY_ISO3.length} emitted, ${coverage.availableCountries.length} in source${span}`,
-    )
-  }
-  if (result.heldCountries.length > 0) {
-    console.log(`  held for pooled microdata: ${result.heldCountries.join(', ')}`)
-  }
-  if (result.unmappedLabels.length > 0) {
-    console.log(`  source labels outside this country registry: ${result.unmappedLabels.length}`)
-  }
-  console.log(`evs data    -> ${FILES.jointEvsWvs}`)
-  console.log(
-    `revisions   -> ${revisions.changed} changed, ${revisions.added} added, ${revisions.removed} removed in ${FILES.revisions}`,
-  )
 }
 
 async function vdem(args: Args): Promise<void> {
@@ -1174,11 +1128,6 @@ async function main() {
       break
     }
 
-    case 'evs':
-    case 'trust':
-      await evs(args)
-      break
-
     case 'vdem':
       await vdem(args)
       break
@@ -1727,7 +1676,6 @@ Start with file 1.
   pnpm bench movers                       read capability change against income change, in aggregate, offline (D175)
   pnpm bench br-subnational [--year 2024]          fetch the registered Brazil subnational series
   pnpm bench institutions [--country BRA]  project the institution map into the explorer feed, one file per lexicon
-  pnpm bench evs      fetch                fetch the Joint EVS/WVS items: A165 trust, A173 control, A080_01 charitable membership, G007_34_B trust in strangers, E069_17 court confidence check (alias: trust)
   pnpm bench vdem     fetch                fetch and parse V-Dem v16 civil society, court compliance and the polarization and turnout checks
   pnpm bench unctad   fetch                fetch and parse the pinned UNCTADstat export concentration index
   pnpm bench grs      fetch                fill tax revenue from the pinned OECD Global Revenue Statistics where the World Bank has no value (run after ingest)

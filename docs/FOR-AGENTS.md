@@ -33,7 +33,7 @@ The source-backed track is the measurement layer. It uses registry-defined
 indicators and named publishers, then computes `score`, `confidence` and the
 indicator rows. World Bank ingestion and reproducible source adapters emit the
 same observation shape, and manually authored observations remain a separate
-input. The current adapter imports the official Joint EVS/WVS A165 trust table.
+input. Each adapter reads one pinned release.
 Other publishers remain declared gaps until an adapter and comparable coverage
 exist.
 

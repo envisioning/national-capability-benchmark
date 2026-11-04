@@ -1,6 +1,6 @@
 # Agenda de capacidades: Colombia
 
-*Generado el 2026-11-03*
+*Generado el 2026-11-04*
 
 La comparación incluye 135 países. Cada dimensión recibe una puntuación de 0 a 100, sin clasificación general, y cada puntuación muestra a su lado la solidez de la evidencia. Antes de citar una puntuación, lea [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md).
 
@@ -9,14 +9,14 @@ La comparación incluye 135 países. Cada dimensión recibe una puntuación de 0
 | Dimensión | Puntuación | Solidez | Tendencia |
 | --- | --- | --- | --- |
 | Anticipación | 43.7 | 0.46 (utilizable) | +11.7 en 10 años, con 2 indicadores |
-| Iniciativa | 65.4 | 0.63 (utilizable) | sin base de tendencia |
+| Iniciativa | 55.3 | 0.49 (utilizable) | sin base de tendencia |
 | Coordinación | 62.5 | 0.45 (utilizable) | -3.7 en 10 años, con 2 indicadores |
-| Confianza | 50.4 | 0.54 (utilizable) | sin base de tendencia |
+| Confianza | 79.5 | 0.33 (débil) | +2.9 en 20 años, con 2 indicadores |
 | Aprendizaje | 45.2 | 0.54 (utilizable) | +11.8 en 20 años, con 2 indicadores |
 | Experimentación | 34.1 | 0.62 (utilizable) | sin base de tendencia |
 | Adaptación | 57.7 | 0.62 (utilizable) | -4.9 en 10 años, con 4 indicadores |
 | Ejecución | 30.2 | 0.63 (utilizable) | -3.3 en 10 años, con 3 indicadores |
-| Propósito compartido | 46.3 | 0.43 (débil) | -2.5 en 10 años, con 2 indicadores |
+| Propósito compartido | 27.5 | 0.32 (débil) | -2.5 en 10 años, con 2 indicadores |
 
 ## Puntuaciones bajas con evidencia utilizable
 
@@ -64,22 +64,29 @@ Estas son las puntuaciones más bajas con evidencia utilizable. Las dimensiones 
 
 La solidez de la evidencia está por debajo de la franja utilizable, así que la puntuación se apoya en poca evidencia.
 
-### Propósito compartido: solidez 0.43, evidencia débil
+### Propósito compartido: solidez 0.32, evidencia débil
 
 ¿Hasta qué punto las personas logran verse como parte de un proyecto común?
 
-- Basada en 3 indicadores observados.
-- Vacíos declarados: Sentido de pertenencia nacional, Voluntariado, Polarización política.
+- Basada en 2 indicadores observados.
+- Vacíos declarados: Sentido de pertenencia nacional, Voluntariado, Polarización política, Participación cívica.
 - Series descartadas: Voz y rendición de cuentas.
+
+### Confianza: solidez 0.33, evidencia débil
+
+¿Cuánta cooperación es posible más allá de las redes personales inmediatas?
+
+- Basada en 3 indicadores observados.
+- Vacíos declarados: Confianza interpersonal generalizada, Confianza en las instituciones públicas, Cooperación más allá del propio grupo, Tasa de resolución de casos judiciales.
+- Series descartadas: Estado de derecho, Control de la corrupción, Tiempo para hacer cumplir un contrato, Tasa de homicidios intencionales.
 
 ## Puntuaciones altas con evidencia utilizable
 
 Estas dimensiones tienen una puntuación de al menos 50, con evidencia utilizable.
 
-- Iniciativa: 65.4, evidencia utilizable
 - Coordinación: 62.5, evidencia utilizable
 - Adaptación: 57.7, evidencia utilizable
-- Confianza: 50.4, evidencia utilizable
+- Iniciativa: 55.3, evidencia utilizable
 
 ## ¿Con qué cuenta Colombia?
 
@@ -104,16 +111,19 @@ Las condiciones describen lo que un país tiene para trabajar: infraestructura, 
 
 ## ¿Qué falta medir?
 
-18 indicadores previstos en el modelo no tienen una serie comparable, y cada uno baja la solidez. Un vacío se convierte en indicador con puntuación cuando una serie comparable cubre al menos dos países.
+22 indicadores previstos en el modelo no tienen una serie comparable, y cada uno baja la solidez. Un vacío se convierte en indicador con puntuación cuando una serie comparable cubre al menos dos países.
 
 | Dimensión | Indicador ausente | Qué mediría |
 | --- | --- | --- |
 | Anticipación | Capacidad gubernamental de prospectiva | Existencia, mandato y continuidad de una función nacional de prospectiva estratégica. |
 | Anticipación | Compromisos de investigación de largo plazo | Proyectos de investigación nuevos con financiamiento público concursable y una duración de cinco años o más, como proporción de todos los proyectos con financiamiento público concursable adjudicados en el año. |
 | Iniciativa | Adultos que realizan tareas digitales | Proporción de adultos que realizaron una tarea digital determinada en los últimos tres meses, como enviar un mensaje con un archivo adjunto, mover un archivo entre dispositivos o usar una fórmula en una hoja de cálculo, contada tarea por tarea y nunca como nivel de habilidad. |
+| Iniciativa | Control percibido sobre la propia vida | Libertad de elección y control sobre el rumbo de la propia vida, según declaran las personas. |
 | Coordinación | Colaboración universidad-empresa | Intensidad de la colaboración en investigación entre universidades y empresas. |
 | Coordinación | Colaboración público-privada | Frecuencia y escala con que el gobierno y las empresas ejecutan juntos objetivos nacionales. |
+| Confianza | Confianza interpersonal generalizada | Proporción que está de acuerdo en que se puede confiar en la mayoría de las personas. |
 | Confianza | Confianza en las instituciones públicas | Confianza en el gobierno nacional, los tribunales y el servicio público. |
+| Confianza | Cooperación más allá del propio grupo | Proporción de adultos que confía completamente o algo en las personas que conoce por primera vez. |
 | Confianza | Tasa de resolución de casos judiciales | Casos civiles y comerciales resueltos en un año como proporción de los casos presentados en ese mismo año. |
 | Aprendizaje | Participación de adultos en aprendizaje | Proporción de adultos en educación o capacitación, formal o no, en los últimos 12 meses. |
 | Experimentación | Operaciones de capital de riesgo | Primeras rondas de capital de riesgo cerradas en el año por empresas con sede en el país, por millón de personas, contadas por operación y nunca por monto. |
@@ -126,6 +136,7 @@ Las condiciones describen lo que un país tiene para trabajar: infraestructura, 
 | Propósito compartido | Sentido de pertenencia nacional | Identificación y apego a la comunidad nacional, según declaran las personas, distintos del orgullo nacional. |
 | Propósito compartido | Voluntariado | Proporción de adultos que dedicaron tiempo voluntario a una organización en el último mes. |
 | Propósito compartido | Polarización política | Grado en que las diferencias políticas se alinean en una sola división hostil. |
+| Propósito compartido | Participación cívica | Proporción de adultos que declaran pertenecer a una organización humanitaria o de caridad. |
 
 ## Lo que Colombia construyó y ningún indicador cuenta
 

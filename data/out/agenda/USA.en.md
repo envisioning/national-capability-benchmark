@@ -1,6 +1,6 @@
 # Capability agenda: United States
 
-*Generated 2026-11-03*
+*Generated 2026-11-04*
 
 The frame includes 135 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
@@ -9,14 +9,14 @@ The frame includes 135 countries. Each dimension is scored from 0 to 100, with n
 | Dimension | Score | Confidence | Trend |
 | --- | --- | --- | --- |
 | Anticipation | 70.7 | 0.46 (usable) | +0.9 over 10 years using 2 indicators |
-| Agency | 73.6 | 0.44 (thin) | no trend |
+| Agency | 71.3 | 0.3 (thin) | no trend |
 | Coordination | 79 | 0.29 (thin) | no trend |
-| Trust | 70.4 | 0.55 (usable) | no trend |
+| Trust | 85.5 | 0.34 (thin) | no trend |
 | Learning | 63.1 | 0.55 (usable) | no trend |
 | Experimentation | 52.8 | 0.64 (usable) | no trend |
 | Adaptability | 72.4 | 0.62 (usable) | +0.7 over 10 years using 4 indicators |
 | Building | 62.4 | 0.59 (usable) | +0.4 over 10 years using 3 indicators |
-| Shared Purpose | 53.9 | 0.43 (thin) | -0.8 over 10 years using 2 indicators |
+| Shared Purpose | 38.5 | 0.32 (thin) | -0.8 over 10 years using 2 indicators |
 
 ## What to measure first
 
@@ -30,21 +30,29 @@ How effectively can independent actors organize around shared objectives?
 - Missing indicators: University-industry collaboration, Public-private collaboration.
 - Rejected datasets: Government effectiveness, Regulatory quality, Logistics performance, Border compliance time to export.
 
-### Shared Purpose: confidence 0.43, thin
-
-To what extent can people imagine themselves as participants in a common project?
-
-- Uses 3 observed indicators.
-- Missing indicators: Sense of national belonging, Volunteering, Political polarisation.
-- Rejected datasets: Voice and accountability.
-
-### Agency: confidence 0.44, thin
+### Agency: confidence 0.3, thin
 
 How able are individuals and organizations to turn an intention into action?
 
-- Uses 3 observed indicators.
-- Missing indicators: Adults doing digital tasks.
+- Uses 2 observed indicators.
+- Missing indicators: Adults doing digital tasks, Perceived control over life.
 - Rejected datasets: Time to start a business.
+
+### Shared Purpose: confidence 0.32, thin
+
+To what extent can people imagine themselves as participants in a common project?
+
+- Uses 2 observed indicators.
+- Missing indicators: Sense of national belonging, Volunteering, Political polarisation, Civic participation.
+- Rejected datasets: Voice and accountability.
+
+### Trust: confidence 0.34, thin
+
+How much cooperation is possible beyond immediate personal networks?
+
+- Uses 3 observed indicators.
+- Missing indicators: Generalised interpersonal trust, Trust in public institutions, Cooperation beyond the in-group, Court case clearance rate.
+- Rejected datasets: Rule of law, Control of corruption, Time to enforce a contract, Intentional homicide rate.
 
 ## What to keep watching
 
@@ -52,7 +60,6 @@ These dimensions score at least 50 with usable evidence.
 
 - Adaptability: 72.4, confidence usable
 - Anticipation: 70.7, confidence usable
-- Trust: 70.4, confidence usable
 - Learning: 63.1, confidence usable
 - Building: 62.4, confidence usable
 - Experimentation: 52.8, confidence usable
@@ -79,16 +86,19 @@ Conditions describe what a country has to work with: infrastructure, access, mon
 
 ## Missing data
 
-18 requested indicators have no comparable dataset, and each one lowers confidence. A gap can become an indicator when a comparable series covers at least two countries.
+22 requested indicators have no comparable dataset, and each one lowers confidence. A gap can become an indicator when a comparable series covers at least two countries.
 
 | Dimension | Missing indicator | What it asks |
 | --- | --- | --- |
 | Anticipation | Government foresight capacity | Existence, mandate and continuity of a national strategic foresight function. |
 | Anticipation | Long-horizon research commitments | New competitively awarded public research grants that run for five years or longer, as a share of all new competitive public research grants awarded in the year. |
 | Agency | Adults doing digital tasks | Share of adults who carried out a named digital task in the last three months, such as sending a message with an attached file, moving a file between devices or using a spreadsheet formula, counted one task at a time and never as a skill level. |
+| Agency | Perceived control over life | Self-reported freedom of choice and control over the course of one’s life. |
 | Coordination | University-industry collaboration | Intensity of research collaboration between universities and firms. |
 | Coordination | Public-private collaboration | Frequency and scale of joint public-private delivery of national objectives. |
+| Trust | Generalised interpersonal trust | Share agreeing that most people can be trusted. |
 | Trust | Trust in public institutions | Confidence in national government, courts and civil service. |
+| Trust | Cooperation beyond the in-group | Share of adults who trust people they meet for the first time completely or somewhat. |
 | Trust | Court case clearance rate | Civil and commercial cases resolved in a year as a share of cases filed in the same year. |
 | Learning | Adult learning participation | Share of adults in formal or non-formal education and training in the last 12 months. |
 | Experimentation | Venture deals | First venture capital rounds closed by companies based in the country in the year, per million people, counted by deal and never by amount. |
@@ -101,6 +111,7 @@ Conditions describe what a country has to work with: infrastructure, access, mon
 | Shared Purpose | Sense of national belonging | Reported identification with and attachment to the national community, as distinct from pride in the nation. |
 | Shared Purpose | Volunteering | Share of adults who volunteered time to an organisation in the last month. |
 | Shared Purpose | Political polarisation | Degree to which political differences run along a single hostile divide. |
+| Shared Purpose | Civic participation | Share of adults who report belonging to a humanitarian or charitable organisation. |
 
 ## What the indicators miss about the United States
 

@@ -286,8 +286,7 @@ transform. It must pass the coverage and quality gates below.
 World Bank ingestion and reproducible source adapters are live in v0.
 `manual.json` is for human-entered values from a source that has no usable API.
 A repeated manual process is a signal to build an adapter, not a reason to
-grow a larger hand-maintained file. The first adapter is the pinned official
-Joint EVS/WVS results table for generalized interpersonal trust.
+grow a larger hand-maintained file.
 
 ### B. Evidence records
 
@@ -483,7 +482,9 @@ are documented below.
 `willingness_to_cooperate_strangers` only if the same source and harmonisation
 process support it without weakening comparability.
 
-**Current source:** the official [Joint EVS/WVS 2017-2022 results release](https://www.gesis.org/en/european-values-study/data-and-documentation/joint-evs/wvs-2017-2022-dataset),
+**Closed by D187.** The source below fails D154 (a), and its adapter and values are gone. The row is a declared gap and needs another open source.
+
+**Former source:** the official [Joint EVS/WVS 2017-2022 results release](https://www.gesis.org/en/european-values-study/data-and-documentation/joint-evs/wvs-2017-2022-dataset),
 release 5.0.0, published by GESIS. The `A165` table asks whether most people
 can be trusted. Its published country results are weighted by `gwght`; `1`
 means trusted, `2` means careful, and negative codes are missing in the source
@@ -561,9 +562,9 @@ reusable adapter or a clearly bounded manual import while the adapter is built.
 
 **Goal:** make the social and institutional imports repeatable.
 
-**Status:** first path complete for the Joint EVS/WVS social measure. The shared
-contract is in `packages/core/src/pipeline/adapters/types.ts`; the adapter is
-in `packages/core/src/pipeline/adapters/joint-evs-wvs.ts`.
+**Status:** the shared contract is in
+`packages/core/src/pipeline/adapters/types.ts`. The Joint EVS/WVS adapter was
+removed by D187.
 
 **Deliverable for the remaining work:** add adapters for court or other
 institutional-performance sources with fixture data, a coverage report and a
@@ -729,7 +730,6 @@ year, not because the source has no history.
 | `new_export_products_rate` | UN Comtrade | 135 | 134 | 2010 | done (D183) |
 | `research_citation_impact` | OpenAlex | 135 | 128 | 1992 | done (D184) |
 | `long_term_unemployment_share` | ILO | 118 | 83 | 2010 | done (D186) |
-| `perceived_control`, `interpersonal_trust`, `willingness_to_cooperate_strangers`, `civic_participation` | Joint EVS/WVS | 72 | 0 | 2022 | earlier waves are separate files; the EVS trend file needs a GESIS registration, closed under D154, so each wave's open status needs a check first |
 
 B-READY (one round), the GitHub Innovation Graph (from 2020) and GEM (held,
 D125) have no back series to keep.
@@ -738,14 +738,13 @@ What each backfill would unlock, by the D22 and D179 rules:
 
 - **Coordination:** V-Dem with PEFA (102 countries at both ends) gives one
   cross-origin pair.
-- **Trust:** V-Dem with Enterprise Surveys (72) gives one pair. EVS/WVS
-  adds pairs only if an open source for its earlier waves exists.
+- **Trust:** V-Dem with Enterprise Surveys (72) gives one pair.
 - **Adaptability:** UNCTAD or Growth Lab with the ILO rows gives up to four
   pairs. The two Comtrade rows never pair with each other, nor the two ILO
   rows.
 - **Learning:** OpenAlex with Enterprise Surveys gives one pair.
-- **Agency:** EVS/WVS with new business density (110) gives one pair, on
-  the same condition.
+- **Agency:** no pair. D187 removed the EVS/WVS row that would have paired
+  with new business density.
 
 **Cost:** each backfill changes the observation store, so D22 momentum and
 the D174 history move on country pages, which is a dataset release. Scores
@@ -774,8 +773,9 @@ cross-origin pairs; they read noise, so the verdict stays unreadable. The
 history stops at 2010, because a longer window changes four headline values
 through the gate.
 
-**Checked, waits on an owner ruling:** the Joint EVS/WVS waves, the last row
-in the table. The access check of 2026-11-03 found:
+**Closed by D187 (dataset 10.1.0):** the Joint EVS/WVS waves, the last row
+in the table. The owner ruled the published tables fail D154 (a) and returned the
+four scored rows to declared gaps. No backfill follows. The record of the check stays here. The access check of 2026-11-03 found:
 
 - **Microdata.** Every earlier wave needs an account. GESIS serves the EVS
   waves and the EVS Trend File 1981-2017 (ZA7503) only after registration,
@@ -826,10 +826,9 @@ published:
   check does not ask what copyright or database law allows for country
   percentages, and it is not legal advice.
 
-No EVS/WVS backfill starts. The wave 6 work stays off main, on the local branch
-`d187-wvs-wave6`. The second question stays with the owner. The four rows reach
-72 of the 135 countries, and removal drops these cells below the coverage
-floor: Shared purpose 6, Agency 3 and Trust 2.
+No EVS/WVS backfill starts. The wave 6 draft stays off main, on the local branch
+`d187-wvs-wave6`, and D187 now means the ruling above. Removal took these cells
+below the coverage floor: Shared purpose 6, Agency 3 and Trust 2.
 
 ## Country-set changes are a separate project
 

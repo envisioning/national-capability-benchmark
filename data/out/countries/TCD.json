@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-03T19:47:34.764Z",
-  "version": "10.0.5",
+  "generatedAt": "2026-11-04T10:00:40.260Z",
+  "version": "10.1.0",
   "country": {
     "country": "Chad",
     "iso3": "TCD",
@@ -430,8 +430,8 @@
           "recency": 0.861,
           "sourceQuality": 0.95
         },
-        "delphiScore": 20,
-        "delphiIqr": 6,
+        "delphiScore": null,
+        "delphiIqr": null,
         "delphiDissent": false,
         "blendedScore": 29.9,
         "blendedFrom": "indicators",
@@ -755,7 +755,7 @@
             "winsorized": false,
             "outOfFrame": false,
             "series": [],
-            "status": "missing",
+            "status": "gap",
             "staleExcluded": null
           }
         ],
@@ -1288,8 +1288,8 @@
           "recency": 0.972,
           "sourceQuality": 0.8
         },
-        "delphiScore": 15,
-        "delphiIqr": 1.5,
+        "delphiScore": null,
+        "delphiIqr": null,
         "delphiDissent": false,
         "blendedScore": 20.3,
         "blendedFrom": "indicators",
@@ -1663,7 +1663,7 @@
             "winsorized": false,
             "outOfFrame": false,
             "series": [],
-            "status": "missing",
+            "status": "gap",
             "staleExcluded": null
           },
           {
@@ -1695,7 +1695,7 @@
             "winsorized": false,
             "outOfFrame": false,
             "series": [],
-            "status": "missing",
+            "status": "gap",
             "staleExcluded": null
           },
           {
@@ -1715,22 +1715,7 @@
             "staleExcluded": null
           }
         ],
-        "checks": [
-          {
-            "checkId": "institutional_trust",
-            "name": "Confidence in the courts",
-            "definition": "Share of survey respondents saying they have a great deal of confidence in the justice system and courts, of the four answers a great deal, quite a lot, not very much and none at all, in the Joint EVS/WVS 2017 to 2022 survey round.",
-            "unit": "% a great deal",
-            "direction": "higher_better",
-            "family": "institutional",
-            "value": null,
-            "year": null,
-            "source": "Joint EVS/WVS (E069_17)",
-            "sourceTier": null,
-            "stale": false,
-            "note": "Confidence in the courts is the public half of what this capability asks: whether people expect the rules to be enforced when a stranger breaks them. It is not scored because the survey answer reads two things the number cannot tell apart. Where courts are independent, confidence is a judgment of how they perform. Where they answer to the state, it is also deference, and saying otherwise to an interviewer has a cost. In this frame the pattern runs the wrong way. India, the Philippines and Indonesia, all electoral autocracies in the V-Dem 2025 classification, lead on the share saying a great deal, and Vietnam and China, the two closed autocracies surveyed, lead once quite a lot is counted too. The ten electoral autocracies average 21.8 percent saying a great deal and the two closed autocracies 28.1, against 13.6 for liberal and 8.4 for electoral democracies. Scored, it would rank highest the states whose courts are least able to rule against them. Income is not why it is left out: the share correlates about -0.18 with log GDP per capita. The value is the share saying a great deal; the share saying quite a lot is in the source note."
-          }
-        ],
+        "checks": [],
         "conditions": []
       },
       "learning": {
@@ -3665,8 +3650,8 @@
           "recency": 0.917,
           "sourceQuality": 0.95
         },
-        "delphiScore": 22,
-        "delphiIqr": 1,
+        "delphiScore": null,
+        "delphiIqr": null,
         "delphiDissent": false,
         "blendedScore": 42.4,
         "blendedFrom": "indicators",
@@ -3947,7 +3932,7 @@
             "winsorized": false,
             "outOfFrame": false,
             "series": [],
-            "status": "missing",
+            "status": "gap",
             "staleExcluded": null
           }
         ],

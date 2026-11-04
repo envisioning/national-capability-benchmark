@@ -366,15 +366,6 @@ export const PT_PT = withOverride(PT_BR, {
             'Não entra na pontuação por três razões que o número não separa: lê o canal democrático, o voto obrigatório transforma-a numa leitura da lei, e as autocracias também obtêm uma participação alta, que é mobilização e não participação.',
           decision: 'D129',
         },
-        institutional_trust: {
-          name: 'Confiança nos tribunais',
-          definition:
-            'Proporção dos inquiridos que dizem ter muita confiança no sistema de justiça e nos tribunais, entre quatro respostas (muita, bastante, pouca e nenhuma), na ronda de 2017 a 2022 do inquérito conjunto EVS/WVS.',
-          unit: '% que responde muita',
-          reason:
-            'Não entra na pontuação porque a resposta lê duas coisas que o número não separa. Onde os tribunais são independentes, a confiança neles julga o seu funcionamento; onde respondem ao Estado, é também deferência, e dizer outra coisa a um inquiridor tem um custo. Nesta comparação, as autocracias registam valores mais altos do que as democracias.',
-          decision: 'D132',
-        },
         customs_clearance_time: {
           name: 'Tempo de desalfandegamento das exportações',
           definition:

@@ -9,6 +9,39 @@ The entries before App 1.0.0 are retrospective, high-level summaries
 reconstructed from the repository history. They document explicit version bumps
 and may skip versions that were never committed.
 
+## App 1.38.2 — 2026-11-04
+
+- **The sources page no longer lists the Joint EVS/WVS file.** The file was
+  removed with Dataset 10.1.0.
+
+## Dataset 10.1.0 — 2026-11-04
+
+- **Four survey rows and one check are gone.** Interpersonal trust, trust in
+  strangers, perceived control and civic participation no longer count toward
+  any score. We still want these measurements, so they are listed as gaps and
+  lower confidence until an open source fills them. Confidence in the courts is no longer published beside Trust. All
+  five came from the Joint EVS/WVS results table. That table states no licence,
+  so it fails the rule that we only republish what the publisher's terms allow.
+  Decision D187.
+- **Trust moved the most, and mostly up.** It now reads only institutional
+  rows, and no row asks people whether they trust each other. 70 of the 130
+  countries with a score moved, 66 of them up, by 17.8 points on average. Brazil
+  went from 52.1 to 90.0. Trust's correlation with log GDP per capita rose from
+  0.426 to 0.628, so read Trust as closer to wealth than the last release said.
+- **Agency and Shared Purpose moved too.** Agency moved in 68 countries by 7.2
+  points on average, and Shared Purpose in 66 by 11.1. Shared Purpose now has two
+  rows, and Agency three at most.
+- **Confidence fell on all three.** The mean went from 0.468 to 0.393 on Agency,
+  from 0.386 to 0.277 on Trust, and from 0.322 to 0.259 on Shared Purpose.
+- **11 scores are no longer published.** Agency: Venezuela, Nicaragua and Lebanon.
+  Trust: Venezuela and Iran. Shared Purpose: Singapore, Venezuela, Iran, Jordan,
+  Azerbaijan and New Zealand. Each now has fewer rows than a score needs.
+- **Panel estimates are missing on these three capabilities.** They were written
+  against the old evidence, so the 405 estimates no longer apply. The other six
+  capabilities keep theirs.
+- **Do not compare these three capabilities with earlier releases.** The other
+  six did not change.
+
 ## Dataset 10.0.5 — 2026-11-03
 
 - **Long-term unemployment has a history.** The share of the unemployed

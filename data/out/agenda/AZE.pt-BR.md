@@ -1,6 +1,6 @@
 # Agenda de capacidades: Azerbaijão
 
-*Gerada em 2026-11-03*
+*Gerada em 2026-11-04*
 
 A escala reúne 135 países. Cada dimensão recebe uma pontuação de 0 a 100, sem classificação geral, e cada pontuação traz ao lado a solidez da evidência. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma pontuação.
 
@@ -9,14 +9,14 @@ A escala reúne 135 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 | Dimensão | Pontuação | Solidez | Tendência |
 | --- | --- | --- | --- |
 | Antecipação | 30,6 | 0,46 (utilizável) | +15,6 em 10 anos, com base em 2 indicadores |
-| Agência | 54,6 | 0,63 (utilizável) | sem tendência comparável |
+| Agência | 65,6 | 0,49 (utilizável) | sem tendência comparável |
 | Coordenação | 46,8 | 0,48 (utilizável) | +0,7 em 10 anos, com base em 2 indicadores |
-| Confiança | 41 | 0,55 (utilizável) | sem tendência comparável |
+| Confiança | 54,2 | 0,34 (fraca) | +14,5 em 10 anos, com base em 2 indicadores |
 | Aprendizagem | 36,3 | 0,55 (utilizável) | +5 em 10 anos, com base em 2 indicadores |
 | Experimentação | 8,7 | 0,47 (utilizável) | +3,8 em 10 anos, com base em 3 indicadores |
 | Adaptação | 41,2 | 0,48 (utilizável) | +12,7 em 10 anos, com base em 3 indicadores |
 | Construção | 26,4 | 0,63 (utilizável) | +1,2 em 10 anos, com base em 3 indicadores |
-| Propósito compartilhado | 23,9 | 0,28 (fraca) | sem tendência comparável |
+| Propósito compartilhado | sem pontuação | 0,16 (muito fraca) | sem tendência comparável |
 
 ## Dimensões com as pontuações mais baixas
 
@@ -60,16 +60,6 @@ Com que eficácia o país adquire, distribui e atualiza conhecimento?
 - Registros de evidência desta dimensão em outros países, com êxitos e retrocessos, que não entram em nenhuma pontuação: SkillsFuture Credit (Singapura); The public library system (Finlândia); CAPES, o financiamento federal da pós-graduação (Brasil); Kartu Prakerja, a national lifelong-learning delivery system (Indonésia); Compte personnel de formation (França); Programa Qualifica and Portugal's adult-learning network (Portugal); Novas Oportunidades, and the qualification-policy interruption (Portugal); SWAYAM national online-course platform (Índia); SETAs and workplace-based learning delivery (África do Sul); MEB public lifelong-learning network (Turquia); Kenya's adult education centres, and their halving (Quênia); Rwanda's adult literacy centres, and their decline (Ruanda); Integrated Functional Adult Education, and its erosion (Etiópia); Instituto Técnico de Capacitación y Productividad (INTECAP) (Guatemala); INFOTEP national technical and vocational training (República Dominicana); Campaña Nacional de Alfabetización (Cuba); VET FEE-HELP, and its abolition (Austrália); Adult education allowance (aikuiskoulutustuki), and its abolition (Finlândia); INEFOP, the tripartite national training institute (Uruguai); Franquicia Tributaria SENCE, and its erosion (Chile); Employer and in-work training under Employment Insurance, and its erosion (Coreia do Sul); TESDA technical-vocational training at national scale (Filipinas); INADEH national vocational training (Panamá); Yo, sí puedo national literacy campaign and post-literacy programme (Bolívia); Project 1956 vocational training for rural workers (Vietnã); Bildungsprämie training voucher, and its end (Alemanha); Aufstiegs-BAföG, upgrading training support (Alemanha); Formación programada por las empresas (FUNDAE training credit) (Espanha); Community Education and Training colleges, and their erosion (África do Sul); SENA complementary training (formación complementaria) (Colômbia); Vocational skills upgrading action, 2019-2021 (China); INA national vocational training, and its contraction (Costa Rica); Kunskapslyftet adult education initiative (Suécia); Springboard+ upskilling programme (Irlanda); State-administered adult education under the Adult Education and Family Literacy Act, and its erosion (Estados Unidos); STAP-budget training grant, abolished in 2024 (Países Baixos); INEA adult basic education (México); Hello Training, public vocational training (Japão); Educação de Jovens e Adultos (EJA) e sua erosão (Brasil); Government-funded adult further education in England, and its erosion (Reino Unido); Educación Básica Alternativa (EBA), and its erosion (Peru); Upper secondary education for adults in non-stationary study (Estônia); Department of Skill Development skill-upgrading training (Tailândia); Adult literacy education under the National Commission for Mass Literacy, Adult and Non-Formal Education (Nigéria); Skills Development under the Labour Market Development Agreements, and its 2024-25 funding cut (Canadá); Instituto Nacional de Formación Profesional (INFOP) (Honduras); Ministry of Labour Vocational Training Division adult courses (Israel); Educación Permanente para personas jóvenes y adultas (MEC) (Paraguai); National literacy campaigns, 2010-2015 (Haiti); County and city general secondary schools for adults (licea ogólnokształcące dla dorosłych) (Polônia); Kolej Komuniti part-time and lifelong-learning (Pembelajaran Sepanjang Hayat) courses (Malásia); Fondo nuove competenze (Itália); National adult literacy projects of the Bureau of Non-Formal Education, and their erosion (Bangladesh); Functional Adult Literacy programme, and its decline (Uganda); Integrated Community-Based Adult Education (MEMKWA), and its decline (Tanzânia); National Functional Literacy Programme, and its erosion (Gana); Centres d'alphabétisation, and their erosion (Costa do Marfim); Adult literacy centres financed through FONAENF, and their erosion (Burkina Faso); National Adult Literacy Programme (Malawi); Mauritius Institute of Training and Development part-time training (Maurício); NAMCOL secondary education programme for out-of-school learners (Namíbia); Alfabetização e Educação de Adultos (public adult literacy and adult primary education), and its decline (Moçambique); Sistema Nacional de Formação Profissional under INEFOP (Angola); Institut National de Préparation Professionnelle (INPP) (República Democrática do Congo); AMS training measures (Schulungen) for jobseekers (Áustria); Human Resource Development Authority (HRDA) subsidised training programmes (Chipre); Arbejdsmarkedsuddannelser (AMU), adult vocational training courses, and their decline (Dinamarca); Vaučeri za obrazovanje, training vouchers of the Croatian Employment Service (Croácia); Mācības pieaugušajiem, the ESF training programme for employed adults 2017 to 2023 (Letônia); Grunnskoleopplæring for voksne, municipal primary and lower secondary education for adults (Noruega); Zručnosti pre trh práce, retraining and training contributions of the labour offices (Eslováquia); Upper secondary education for adults (srednješolsko izobraževanje odraslih) (Eslovênia); Public vocational training centres of the National Agency for Employment and Skills (Albânia); Employment Agency adult training, including the DI-GI digital skills vouchers (Bulgária); ANOFM voucher-based vocational training for the unemployed (Moldávia); ANOFM national vocational training plan, and its fall after 2023 (Romênia); National Employment Service labour market training, and its 2025 non-delivery (Sérvia); Programme national d'enseignement des adultes (national adult education programme) (Tunísia); Agence Nationale de Lutte contre l'Analphabetisme literacy and post-literacy programmes (Marrocos); Federal project Sodeystvie zanyatosti (Employment Promotion) vocational training of adults (Rússia); Short-term vocational training of the unemployed in monocentres and district vocational training centres (Uzbequistão); HEART/NSTA Trust training enrolment (Jamaica); Enhanced Vocational Education and Training (EVENT II) short-term training (Nepal); Adult and community education at tertiary providers, and its halving (Nova Zelândia); NCHD Adult Literacy Programme, and its collapse after 2013 (Paquistão); Youth Training and Employment Partnership Programme (YTEPP), and its shrinking enrolment (Trinidad e Tobago); Bildungskarenz with Weiterbildungsgeld, and its abolition (Áustria); State Employment Service vocational training (Ucrânia); Labour Office retraining (rekvalifikace) (Tchéquia); DYPA digital and green skills training for the unemployed (Grécia); Individual learning accounts (Kursuok) (Lituânia); Non-day enrolment in vocational and technical schools (Hungria); Skills Enbek online vocational training platform (Cazaquistão); Vocational training of the unemployed under the State Programme Labour Market and Employment Promotion (Belarus); SESA vocational training and retraining programme for jobseekers (Geórgia); Vocational training of the unemployed through the state employment service (Quirguistão); Adult learning centres of the Agency of Labour and Employment (Tajiquistão); Vocational Training Corporation continuing training (Jordânia); Vocational Training Authority of Sri Lanka (Sri Lanka); Non-formal education in Zimbabwe's schools (Zimbábue); Fonds Malgache de Formation Professionnelle (Madagascar); FAFPA informal economy training, and its erosion (Mali); National adult literacy classes (Egito); Technical and Vocational Training Organization public centres (Irã); Government vocational and development training centres (Iraque); TEVET Fund training for MSMEs and the informal sector (Zâmbia); Flexible Open and Distance Education (FODE) secondary programme (Papua-Nova Guiné).
 - Lacunas declaradas: Participação de adultos em aprendizagem.
 
-### Confiança: 41, solidez utilizável
-
-Quanta cooperação é possível para além do círculo pessoal mais próximo?
-
-- A pontuação se apoia em 5 indicadores observados.
-- No topo da escala, entre as pontuações com evidência utilizável: Suécia 90,3, Nova Zelândia 83,2, Estônia 75,7.
-- Registros de evidência desta dimensão em outros países, com êxitos e retrocessos, que não entram em nenhuma pontuação: Cadastro Único, o registro social unificado (Brasil); Portal da Transparência, as contas federais abertas (Brasil); MyData, citizen-directed data portability (Coreia do Sul); Singapore Courts' case-clearance discipline (Singapura); Civil-court clearance and the CEPEJ monitoring series (Portugal).
-- Lacunas declaradas: Confiança nas instituições públicas, Taxa de resolução de processos judiciais.
-- Bases rejeitadas: Estado de direito, Controle da corrupção, Tempo para executar um contrato, Taxa de homicídios dolosos.
-
 ### Adaptação: 41,2, solidez utilizável
 
 Com que eficácia o sistema responde quando as circunstâncias mudam?
@@ -93,19 +83,27 @@ Com que eficácia atores independentes conseguem se organizar em torno de objeti
 
 A solidez da evidência está abaixo da faixa utilizável, de modo que a pontuação diz pouco sobre o país enquanto faltarem dados.
 
-### Propósito compartilhado: solidez 0,28, fraca
+### Propósito compartilhado: solidez 0,16, muito fraca
 
 Até que ponto as pessoas conseguem se ver como participantes de um projeto comum?
 
-- A pontuação se apoia em 2 indicadores observados.
-- Lacunas declaradas: Sentimento de pertencimento nacional, Voluntariado, Polarização política.
+- A pontuação se apoia em um indicador observado.
+- Lacunas declaradas: Sentimento de pertencimento nacional, Voluntariado, Polarização política, Participação cívica.
 - Bases rejeitadas: Voz e prestação de contas.
+
+### Confiança: solidez 0,34, fraca
+
+Quanta cooperação é possível para além do círculo pessoal mais próximo?
+
+- A pontuação se apoia em 3 indicadores observados.
+- Lacunas declaradas: Confiança interpessoal generalizada, Confiança nas instituições públicas, Cooperação além do próprio grupo, Taxa de resolução de processos judiciais.
+- Bases rejeitadas: Estado de direito, Controle da corrupção, Tempo para executar um contrato, Taxa de homicídios dolosos.
 
 ## Dimensões com as pontuações mais altas
 
 Estas dimensões têm pontuação de pelo menos 50, com evidência utilizável.
 
-- Agência: 54,6, solidez utilizável
+- Agência: 65,6, solidez utilizável
 
 ## Com o que o Azerbaijão conta
 
@@ -129,16 +127,19 @@ As condições descrevem com o que um país conta: infraestrutura, acesso, dinhe
 
 ## Agenda de medição
 
-18 indicadores previstos no modelo ainda não têm base comparável, e cada um reduz a solidez da evidência. Uma lacuna passa a entrar na pontuação quando uma série comparável cobre pelo menos dois países.
+22 indicadores previstos no modelo ainda não têm base comparável, e cada um reduz a solidez da evidência. Uma lacuna passa a entrar na pontuação quando uma série comparável cobre pelo menos dois países.
 
 | Dimensão | Indicador ausente | O que ele mediria |
 | --- | --- | --- |
 | Antecipação | Capacidade governamental de prospecção | Existência, mandato e continuidade de uma função nacional de prospecção estratégica. |
 | Antecipação | Compromissos de pesquisa de longo prazo | Novos auxílios públicos de pesquisa concedidos por concurso com duração de cinco anos ou mais, como parcela de todos os auxílios públicos por concurso concedidos no ano. |
 | Agência | Adultos que realizam tarefas digitais | Parcela de adultos que realizaram uma tarefa digital determinada nos últimos três meses, como enviar uma mensagem com arquivo anexo, mover um arquivo entre dispositivos ou usar uma fórmula em planilha, contada tarefa por tarefa e nunca como nível de habilidade. |
+| Agência | Percepção de controle sobre a própria vida | Liberdade de escolha e controle sobre o rumo da própria vida, segundo os próprios entrevistados. |
 | Coordenação | Colaboração universidade-empresa | Intensidade da colaboração em pesquisa entre universidades e empresas. |
 | Coordenação | Colaboração público-privada | Frequência e escala da execução conjunta, por governo e empresas, de objetivos nacionais. |
+| Confiança | Confiança interpessoal generalizada | Parcela dos entrevistados que concorda que se pode confiar na maioria das pessoas. |
 | Confiança | Confiança nas instituições públicas | Confiança no governo nacional, nos tribunais e no serviço público. |
+| Confiança | Cooperação além do próprio grupo | Parcela de adultos que confia completamente ou um pouco nas pessoas que encontra pela primeira vez. |
 | Confiança | Taxa de resolução de processos judiciais | Processos cíveis e comerciais encerrados em um ano, como parcela dos processos ajuizados no mesmo ano. |
 | Aprendizagem | Participação de adultos em aprendizagem | Parcela de adultos em educação ou capacitação, formal ou não, nos últimos 12 meses. |
 | Experimentação | Operações de capital de risco | Primeiras rodadas de capital de risco fechadas no ano por empresas sediadas no país, por milhão de pessoas, contadas por operação e nunca por valor. |
@@ -151,6 +152,7 @@ As condições descrevem com o que um país conta: infraestrutura, acesso, dinhe
 | Propósito compartilhado | Sentimento de pertencimento nacional | Identificação e vínculo com a comunidade nacional, declarados pelos entrevistados, distintos do orgulho pela nação. |
 | Propósito compartilhado | Voluntariado | Parcela de adultos que dedicaram tempo como voluntários a alguma organização no último mês. |
 | Propósito compartilhado | Polarização política | Grau em que as diferenças políticas se alinham em uma única divisão hostil. |
+| Propósito compartilhado | Participação cívica | Parcela de adultos que declaram pertencer a uma organização humanitária ou de caridade. |
 
 ## O que os indicadores não captam sobre o Azerbaijão
 

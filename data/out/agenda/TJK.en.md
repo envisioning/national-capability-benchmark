@@ -1,6 +1,6 @@
 # Capability agenda: Tajikistan
 
-*Generated 2026-11-03*
+*Generated 2026-11-04*
 
 The frame includes 135 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
@@ -9,14 +9,14 @@ The frame includes 135 countries. Each dimension is scored from 0 to 100, with n
 | Dimension | Score | Confidence | Trend |
 | --- | --- | --- | --- |
 | Anticipation | 22.9 | 0.46 (usable) | +11.9 over 10 years using 2 indicators |
-| Agency | 61.9 | 0.54 (usable) | no trend |
+| Agency | 59.4 | 0.4 (thin) | no trend |
 | Coordination | 51 | 0.45 (usable) | +10.9 over 10 years using 2 indicators |
-| Trust | 36 | 0.55 (usable) | no trend |
+| Trust | 50.2 | 0.34 (thin) | +24.3 over 10 years using 2 indicators |
 | Learning | 22.2 | 0.55 (usable) | -9.7 over 10 years using 2 indicators |
 | Experimentation | 8.1 | 0.34 (thin) | no trend |
 | Adaptability | 56 | 0.46 (usable) | +6.2 over 10 years using 3 indicators |
 | Building | 34.2 | 0.62 (usable) | -8.3 over 10 years using 3 indicators |
-| Shared Purpose | 48.7 | 0.43 (thin) | -2.2 over 20 years using 2 indicators |
+| Shared Purpose | 46.3 | 0.32 (thin) | -2.2 over 20 years using 2 indicators |
 
 ## What to raise
 
@@ -50,19 +50,25 @@ How capable is the country of turning plans and knowledge into functioning syste
 - Missing indicators: Large project delivery, Firm scale-up rate.
 - Rejected datasets: Logistics infrastructure quality, Electricity connection speed.
 
-### Trust: 36, confidence usable
-
-How much cooperation is possible beyond immediate personal networks?
-
-- Uses 5 observed indicators.
-- Highest usable scores: Sweden 90.3, New Zealand 83.2, Estonia 75.7.
-- Related deliveries in other countries: Cadastro Único, the unified social registry (Brazil); Portal da Transparência, the federal open-books system (Brazil); MyData, citizen-directed data portability (South Korea); Singapore Courts' case-clearance discipline (Singapore); Civil-court clearance and the CEPEJ monitoring series (Portugal).
-- Missing indicators: Trust in public institutions, Court case clearance rate.
-- Rejected datasets: Rule of law, Control of corruption, Time to enforce a contract, Intentional homicide rate.
-
 ## What to measure first
 
 The evidence is too thin to manage these dimensions confidently.
+
+### Shared Purpose: confidence 0.32, thin
+
+To what extent can people imagine themselves as participants in a common project?
+
+- Uses 2 observed indicators.
+- Missing indicators: Sense of national belonging, Volunteering, Political polarisation, Civic participation.
+- Rejected datasets: Voice and accountability.
+
+### Trust: confidence 0.34, thin
+
+How much cooperation is possible beyond immediate personal networks?
+
+- Uses 3 observed indicators.
+- Missing indicators: Generalised interpersonal trust, Trust in public institutions, Cooperation beyond the in-group, Court case clearance rate.
+- Rejected datasets: Rule of law, Control of corruption, Time to enforce a contract, Intentional homicide rate.
 
 ### Experimentation: confidence 0.34, thin
 
@@ -72,19 +78,18 @@ How easily can new approaches be attempted, tested, abandoned, and improved?
 - Missing indicators: Venture deals, Firms through regulatory sandboxes, University spinouts.
 - Rejected datasets: Business share of R&D.
 
-### Shared Purpose: confidence 0.43, thin
+### Agency: confidence 0.4, thin
 
-To what extent can people imagine themselves as participants in a common project?
+How able are individuals and organizations to turn an intention into action?
 
 - Uses 3 observed indicators.
-- Missing indicators: Sense of national belonging, Volunteering, Political polarisation.
-- Rejected datasets: Voice and accountability.
+- Missing indicators: Adults doing digital tasks, Perceived control over life.
+- Rejected datasets: Time to start a business.
 
 ## What to keep watching
 
 These dimensions score at least 50 with usable evidence.
 
-- Agency: 61.9, confidence usable
 - Adaptability: 56, confidence usable
 - Coordination: 51, confidence usable
 
@@ -110,16 +115,19 @@ Conditions describe what a country has to work with: infrastructure, access, mon
 
 ## Missing data
 
-18 requested indicators have no comparable dataset, and each one lowers confidence. A gap can become an indicator when a comparable series covers at least two countries.
+22 requested indicators have no comparable dataset, and each one lowers confidence. A gap can become an indicator when a comparable series covers at least two countries.
 
 | Dimension | Missing indicator | What it asks |
 | --- | --- | --- |
 | Anticipation | Government foresight capacity | Existence, mandate and continuity of a national strategic foresight function. |
 | Anticipation | Long-horizon research commitments | New competitively awarded public research grants that run for five years or longer, as a share of all new competitive public research grants awarded in the year. |
 | Agency | Adults doing digital tasks | Share of adults who carried out a named digital task in the last three months, such as sending a message with an attached file, moving a file between devices or using a spreadsheet formula, counted one task at a time and never as a skill level. |
+| Agency | Perceived control over life | Self-reported freedom of choice and control over the course of one’s life. |
 | Coordination | University-industry collaboration | Intensity of research collaboration between universities and firms. |
 | Coordination | Public-private collaboration | Frequency and scale of joint public-private delivery of national objectives. |
+| Trust | Generalised interpersonal trust | Share agreeing that most people can be trusted. |
 | Trust | Trust in public institutions | Confidence in national government, courts and civil service. |
+| Trust | Cooperation beyond the in-group | Share of adults who trust people they meet for the first time completely or somewhat. |
 | Trust | Court case clearance rate | Civil and commercial cases resolved in a year as a share of cases filed in the same year. |
 | Learning | Adult learning participation | Share of adults in formal or non-formal education and training in the last 12 months. |
 | Experimentation | Venture deals | First venture capital rounds closed by companies based in the country in the year, per million people, counted by deal and never by amount. |
@@ -132,6 +140,7 @@ Conditions describe what a country has to work with: infrastructure, access, mon
 | Shared Purpose | Sense of national belonging | Reported identification with and attachment to the national community, as distinct from pride in the nation. |
 | Shared Purpose | Volunteering | Share of adults who volunteered time to an organisation in the last month. |
 | Shared Purpose | Political polarisation | Degree to which political differences run along a single hostile divide. |
+| Shared Purpose | Civic participation | Share of adults who report belonging to a humanitarian or charitable organisation. |
 
 ## What the indicators miss about Tajikistan
 

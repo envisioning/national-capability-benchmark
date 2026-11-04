@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-03T19:48:04.822Z",
+  "generatedAt": "2026-11-04T10:01:13.665Z",
   "iso3": "LTU",
   "country": "Lithuania",
   "dimensions": [
@@ -336,22 +336,28 @@
     {
       "dimension": "agency",
       "kind": "measure",
-      "score": 54,
-      "confidence": 0.443,
+      "score": 48.4,
+      "confidence": 0.301,
       "band": "thin",
       "trend": null,
       "scoredOn": [
         "new_business_density",
-        "business_start_procedures",
-        "perceived_control"
+        "business_start_procedures"
       ],
       "gaps": [
-        "adult_digital_skills"
+        "adult_digital_skills",
+        "perceived_control"
       ],
       "retired": [
         "business_start_days"
       ],
       "exemplars": [
+        {
+          "iso3": "NZL",
+          "country": "New Zealand",
+          "score": 97.6,
+          "confidence": 0.491
+        },
         {
           "iso3": "GBR",
           "country": "United Kingdom",
@@ -359,15 +365,9 @@
           "confidence": 0.491
         },
         {
-          "iso3": "NZL",
-          "country": "New Zealand",
-          "score": 92.7,
-          "confidence": 0.632
-        },
-        {
-          "iso3": "MUS",
-          "country": "Mauritius",
-          "score": 87,
+          "iso3": "EST",
+          "country": "Estonia",
+          "score": 93.9,
           "confidence": 0.491
         }
       ],
@@ -1652,9 +1652,9 @@
     {
       "dimension": "trust",
       "kind": "measure",
-      "score": 61.5,
-      "confidence": 0.413,
-      "band": "thin",
+      "score": 95.2,
+      "confidence": 0.207,
+      "band": "very_thin",
       "trend": {
         "spanYears": 10,
         "delta": 5.3,
@@ -1663,12 +1663,12 @@
       },
       "scoredOn": [
         "bribery_incidence",
-        "court_compliance",
-        "interpersonal_trust",
-        "willingness_to_cooperate_strangers"
+        "court_compliance"
       ],
       "gaps": [
+        "interpersonal_trust",
         "institutional_trust",
+        "willingness_to_cooperate_strangers",
         "court_case_clearance"
       ],
       "retired": [
@@ -1677,26 +1677,7 @@
         "contract_enforcement_days",
         "homicide_rate"
       ],
-      "exemplars": [
-        {
-          "iso3": "SWE",
-          "country": "Sweden",
-          "score": 90.3,
-          "confidence": 0.546
-        },
-        {
-          "iso3": "NZL",
-          "country": "New Zealand",
-          "score": 83.2,
-          "confidence": 0.537
-        },
-        {
-          "iso3": "EST",
-          "country": "Estonia",
-          "score": 75.7,
-          "confidence": 0.537
-        }
-      ],
+      "exemplars": [],
       "evidenceElsewhere": [
         {
           "id": "bra-cadunico",
@@ -6475,8 +6456,8 @@
     {
       "dimension": "shared_purpose",
       "kind": "measure",
-      "score": 43.7,
-      "confidence": 0.42,
+      "score": 62.5,
+      "confidence": 0.303,
       "band": "thin",
       "trend": {
         "spanYears": 10,
@@ -6486,13 +6467,13 @@
       },
       "scoredOn": [
         "tax_revenue_gdp",
-        "income_inequality",
-        "civic_participation"
+        "income_inequality"
       ],
       "gaps": [
         "national_belonging",
         "volunteering_rate",
-        "political_polarization"
+        "political_polarization",
+        "civic_participation"
       ],
       "retired": [
         "voice_and_accountability"
@@ -6590,5 +6571,5 @@
       "started": 2024
     }
   ],
-  "gapCount": 18
+  "gapCount": 22
 }

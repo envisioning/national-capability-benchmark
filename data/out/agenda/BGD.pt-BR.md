@@ -1,6 +1,6 @@
 # Agenda de capacidades: Bangladesh
 
-*Gerada em 2026-11-03*
+*Gerada em 2026-11-04*
 
 A escala reúne 135 países. Cada dimensão recebe uma pontuação de 0 a 100, sem classificação geral, e cada pontuação traz ao lado a solidez da evidência. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma pontuação.
 
@@ -9,14 +9,14 @@ A escala reúne 135 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 | Dimensão | Pontuação | Solidez | Tendência |
 | --- | --- | --- | --- |
 | Antecipação | 30,6 | 0,46 (utilizável) | +13,7 em 10 anos, com base em 2 indicadores |
-| Agência | 42,7 | 0,63 (utilizável) | sem tendência comparável |
+| Agência | 36,7 | 0,49 (utilizável) | sem tendência comparável |
 | Coordenação | 68,5 | 0,47 (utilizável) | +1,1 em 10 anos, com base em 2 indicadores |
-| Confiança | 46,1 | 0,53 (utilizável) | sem tendência comparável |
+| Confiança | 65,5 | 0,32 (fraca) | +39,9 em 10 anos, com base em 2 indicadores |
 | Aprendizagem | 29,9 | 0,52 (utilizável) | +1,9 em 10 anos, com base em 2 indicadores |
 | Experimentação | 5,2 | 0,47 (utilizável) | -0,5 em 10 anos, com base em 3 indicadores |
 | Adaptação | 60,1 | 0,62 (utilizável) | +1,1 em 10 anos, com base em 4 indicadores |
 | Construção | 36,2 | 0,55 (utilizável) | +4,8 em 10 anos, com base em 2 indicadores |
-| Propósito compartilhado | 36,6 | 0,37 (fraca) | +2,5 em 10 anos, com base em 2 indicadores |
+| Propósito compartilhado | 49,1 | 0,25 (fraca) | +2,5 em 10 anos, com base em 2 indicadores |
 
 ## Dimensões com as pontuações mais baixas
 
@@ -60,37 +60,35 @@ Em que medida o país consegue transformar planos e conhecimento em sistemas que
 - Lacunas declaradas: Entrega de grandes projetos, Empresas jovens que ganham escala.
 - Bases rejeitadas: Qualidade da infraestrutura logística, Tempo de conexão à rede elétrica.
 
-### Agência: 42,7, solidez utilizável
+### Agência: 36,7, solidez utilizável
 
 Em que medida pessoas e organizações conseguem transformar intenção em ação?
 
-- A pontuação se apoia em 4 indicadores observados.
-- No topo da escala, entre as pontuações com evidência utilizável: Reino Unido 94,7, Nova Zelândia 92,7, Maurício 87.
+- A pontuação se apoia em 3 indicadores observados.
+- No topo da escala, entre as pontuações com evidência utilizável: Nova Zelândia 97,6, Reino Unido 94,7, Estônia 93,9.
 - Registros de evidência desta dimensão em outros países, com êxitos e retrocessos, que não entram em nenhuma pontuação: Singapore's national ICT-skills measurement and baseline (Singapura); e.escola, a national laptop-and-broadband push (Portugal); Pradhan Mantri Gramin Digital Saksharta Abhiyan (Índia); Puntos México Conectado, national digital learning centres (México).
-- Lacunas declaradas: Adultos que realizam tarefas digitais.
+- Lacunas declaradas: Adultos que realizam tarefas digitais, Percepção de controle sobre a própria vida.
 - Bases rejeitadas: Tempo para abrir uma empresa.
-
-### Confiança: 46,1, solidez utilizável
-
-Quanta cooperação é possível para além do círculo pessoal mais próximo?
-
-- A pontuação se apoia em 5 indicadores observados.
-- No topo da escala, entre as pontuações com evidência utilizável: Suécia 90,3, Nova Zelândia 83,2, Estônia 75,7.
-- Registros de evidência desta dimensão em outros países, com êxitos e retrocessos, que não entram em nenhuma pontuação: Cadastro Único, o registro social unificado (Brasil); Portal da Transparência, as contas federais abertas (Brasil); MyData, citizen-directed data portability (Coreia do Sul); Singapore Courts' case-clearance discipline (Singapura); Civil-court clearance and the CEPEJ monitoring series (Portugal).
-- Lacunas declaradas: Confiança nas instituições públicas, Taxa de resolução de processos judiciais.
-- Bases rejeitadas: Estado de direito, Controle da corrupção, Tempo para executar um contrato, Taxa de homicídios dolosos.
 
 ## Dimensões com evidência fraca
 
 A solidez da evidência está abaixo da faixa utilizável, de modo que a pontuação diz pouco sobre o país enquanto faltarem dados.
 
-### Propósito compartilhado: solidez 0,37, fraca
+### Propósito compartilhado: solidez 0,25, fraca
 
 Até que ponto as pessoas conseguem se ver como participantes de um projeto comum?
 
-- A pontuação se apoia em 3 indicadores observados.
-- Lacunas declaradas: Sentimento de pertencimento nacional, Voluntariado, Polarização política.
+- A pontuação se apoia em 2 indicadores observados.
+- Lacunas declaradas: Sentimento de pertencimento nacional, Voluntariado, Polarização política, Participação cívica.
 - Bases rejeitadas: Voz e prestação de contas.
+
+### Confiança: solidez 0,32, fraca
+
+Quanta cooperação é possível para além do círculo pessoal mais próximo?
+
+- A pontuação se apoia em 3 indicadores observados.
+- Lacunas declaradas: Confiança interpessoal generalizada, Confiança nas instituições públicas, Cooperação além do próprio grupo, Taxa de resolução de processos judiciais.
+- Bases rejeitadas: Estado de direito, Controle da corrupção, Tempo para executar um contrato, Taxa de homicídios dolosos.
 
 ## Dimensões com as pontuações mais altas
 
@@ -120,16 +118,19 @@ As condições descrevem com o que um país conta: infraestrutura, acesso, dinhe
 
 ## Agenda de medição
 
-18 indicadores previstos no modelo ainda não têm base comparável, e cada um reduz a solidez da evidência. Uma lacuna passa a entrar na pontuação quando uma série comparável cobre pelo menos dois países.
+22 indicadores previstos no modelo ainda não têm base comparável, e cada um reduz a solidez da evidência. Uma lacuna passa a entrar na pontuação quando uma série comparável cobre pelo menos dois países.
 
 | Dimensão | Indicador ausente | O que ele mediria |
 | --- | --- | --- |
 | Antecipação | Capacidade governamental de prospecção | Existência, mandato e continuidade de uma função nacional de prospecção estratégica. |
 | Antecipação | Compromissos de pesquisa de longo prazo | Novos auxílios públicos de pesquisa concedidos por concurso com duração de cinco anos ou mais, como parcela de todos os auxílios públicos por concurso concedidos no ano. |
 | Agência | Adultos que realizam tarefas digitais | Parcela de adultos que realizaram uma tarefa digital determinada nos últimos três meses, como enviar uma mensagem com arquivo anexo, mover um arquivo entre dispositivos ou usar uma fórmula em planilha, contada tarefa por tarefa e nunca como nível de habilidade. |
+| Agência | Percepção de controle sobre a própria vida | Liberdade de escolha e controle sobre o rumo da própria vida, segundo os próprios entrevistados. |
 | Coordenação | Colaboração universidade-empresa | Intensidade da colaboração em pesquisa entre universidades e empresas. |
 | Coordenação | Colaboração público-privada | Frequência e escala da execução conjunta, por governo e empresas, de objetivos nacionais. |
+| Confiança | Confiança interpessoal generalizada | Parcela dos entrevistados que concorda que se pode confiar na maioria das pessoas. |
 | Confiança | Confiança nas instituições públicas | Confiança no governo nacional, nos tribunais e no serviço público. |
+| Confiança | Cooperação além do próprio grupo | Parcela de adultos que confia completamente ou um pouco nas pessoas que encontra pela primeira vez. |
 | Confiança | Taxa de resolução de processos judiciais | Processos cíveis e comerciais encerrados em um ano, como parcela dos processos ajuizados no mesmo ano. |
 | Aprendizagem | Participação de adultos em aprendizagem | Parcela de adultos em educação ou capacitação, formal ou não, nos últimos 12 meses. |
 | Experimentação | Operações de capital de risco | Primeiras rodadas de capital de risco fechadas no ano por empresas sediadas no país, por milhão de pessoas, contadas por operação e nunca por valor. |
@@ -142,6 +143,7 @@ As condições descrevem com o que um país conta: infraestrutura, acesso, dinhe
 | Propósito compartilhado | Sentimento de pertencimento nacional | Identificação e vínculo com a comunidade nacional, declarados pelos entrevistados, distintos do orgulho pela nação. |
 | Propósito compartilhado | Voluntariado | Parcela de adultos que dedicaram tempo como voluntários a alguma organização no último mês. |
 | Propósito compartilhado | Polarização política | Grau em que as diferenças políticas se alinham em uma única divisão hostil. |
+| Propósito compartilhado | Participação cívica | Parcela de adultos que declaram pertencer a uma organização humanitária ou de caridade. |
 
 ## O que os indicadores não captam sobre o Bangladesh
 

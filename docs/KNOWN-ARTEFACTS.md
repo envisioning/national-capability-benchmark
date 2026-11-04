@@ -136,20 +136,21 @@ indicators, reported separately.
 
 ## A3 — Trust's low income correlation comes from which countries the survey reaches
 
-**Severity: high. Trust's 0.426 against log GDP per capita mixes two bases of
-evidence and understates how closely each tracks income; Coordination still
-tracks income through trade compliance.**
+**Severity: high. Since D187 Trust reads only institutional rows and correlates
+with log GDP per capita at 0.628 (n 130). The 0.426 this entry used to report
+mixed two bases of evidence. Coordination still tracks income through trade
+compliance.**
 
 The figures in this entry are from dataset 10.0.0 unless they name the
 16-country run or another release. Coordination publishes a score for 130 of
 135 countries, from B-READY trade compliance efficiency (82 countries, D167),
-budget execution and V-Dem's expert-coded civil-society index. Trust
-publishes for 132 of 135, from five rows: B-READY dispute resolution
-efficiency (82 countries, D167); bribery incidence (D123); government
-compliance with the courts (V-Dem, D131); and two Joint EVS/WVS items, A165
-social trust and G007_34_B trust in people met for the first time (D140),
-which cover the same 72. Trust correlates with log GDP per capita at 0.426
-(Spearman 0.445, n 131) and Coordination at 0.439 (Spearman 0.458, n 130),
+budget execution and V-Dem's expert-coded civil-society index. On dataset
+10.1.0 Trust publishes for 130 of 135, from three rows: B-READY dispute
+resolution efficiency (82 countries, D167); bribery incidence (D123); and
+government compliance with the courts (V-Dem, D131). D187 returned the two
+Joint EVS/WVS items to gaps, because the results table states no licence. Trust
+correlates with log GDP per capita at 0.628 (Spearman 0.665, n 130) and
+Coordination at 0.439 (Spearman 0.458, n 130),
 so both are usable as
 research baselines but not as clean claims of wealth-free capability. D23
 retired the WGI perception composites and D44 retired homicide.
@@ -174,30 +175,18 @@ indicators in it are retired, so it cannot be recomputed on the current frame:
 | Trust | Contract enforcement days | +0.61 | C | yes |
 
 The pattern to read is the class column. Every indicator that failed the old
-test was class P and every indicator that survived was class C. Trust's rows
-correlate with log GDP per capita at 0.604 for the A165 social measure, 0.532
-for bribery incidence, 0.466 for court compliance, 0.465 for dispute
-resolution efficiency (n 82) and 0.318 for trust in strangers. The A165
-measure is a watch item rather than a verdict. Dispute resolution efficiency
-carries the most income: without it Trust's correlation falls from 0.426 to
-0.332 (n 131). Without court compliance it falls to 0.384, but 19 countries
-drop under the coverage floor (n 112). The two survey rows pull the other
-way: dropping trust in strangers would raise the correlation to 0.531, and
-dropping A165 to 0.500, although A165 alone tracks income more closely than
-any other Trust row. The dispute resolution row replaced contract
-enforcement days, which correlated at 0.160 across 123 on 9.3.0.
+test was class P and every indicator that survived was class C. On 10.0.0
+Trust's three remaining rows correlated with log GDP per capita at 0.532 for
+bribery incidence, 0.466 for court compliance and 0.465 for dispute resolution
+efficiency (n 82). The dispute resolution row replaced contract enforcement
+days, which correlated at 0.160 across 123 on 9.3.0.
 
-**The 0.426 is a mix, not a separation.** The countries without the survey
-rows are poorer: a median income per head of 7,187 dollars across the 60 of
-them that publish a score and have an income figure, against 25,095 across
-the 71 with both rows. Inside each group Trust tracks income more closely
-than across the frame: at 0.752 among the 71 with both survey rows, and at
-0.517 among the 60 scored on the institutional rows alone. Scored on the
-institutional rows alone in every country, Trust would correlate at 0.628
-(n 130). The frame-wide figure is lower than all three because the two
-groups are scored on different rows, so it is a change of evidence and not a
-sign that Trust has come apart from income. Do not quote 0.426 as Trust's
-distance from wealth.
+**The old 0.426 was a mix, not a separation.** Until D187 the countries without
+the survey rows were poorer and were scored on different rows from the others.
+Inside each group Trust tracked income more closely than across the frame. This
+entry predicted 0.628 for Trust scored on the institutional rows alone in every
+country, and 10.1.0 reads exactly that. Do not quote 0.426 as Trust's distance
+from wealth.
 
 Coordination's rows sit at 0.532 for trade compliance efficiency (n 82),
 0.267 for V-Dem civil-society strength and 0.202 for budget execution;
@@ -210,8 +199,7 @@ operational proxy rather than a direct test of cross-agency delivery.
 **Fix.** These dimensions need observable, behavioural indicators that are not
 WGI and that reach the countries B-READY does not. V-Dem and budget execution are useful additions for
 Coordination, but they do not show whether agencies delivered the same
-objective. Trust's social family is two perception items from one survey
-release and no behaviour. Trust needs a recent court-throughput or case
+objective. Trust's social family has no row since D187. Trust needs a recent court-throughput or case
 clearance series, and broader institutional-performance evidence. See also A9,
 which is the same problem seen from an executive-led state, and D20, where
 documented cross-agency delivery is being collected as evidence.
@@ -251,14 +239,13 @@ effective collective actors in the set.
 The spec is explicit that political uniformity is not a capability, so the fix is
 not simply to raise Singapore.
 
-Voice and accountability is retired. On dataset 10.0.0 Shared Purpose rests on
-three rows, tax revenue, income inequality and EVS/WVS civic participation
-(D128, read through A15), at mean confidence 0.322, under the 0.40 objective,
-and it publishes a score for 131 of 135 countries. Tax revenue takes OECD
+Voice and accountability is retired. On dataset 10.1.0 Shared Purpose rests on
+two rows, tax revenue and income inequality, at mean confidence 0.259, under the
+0.40 objective, and it publishes a score for 125 of 135 countries. D187 returned
+EVS/WVS civic participation to a gap. Tax revenue takes OECD
 Global Revenue Statistics values for 14 countries the World Bank does not
-serve (D172). Its correlation with log GDP per capita is 0.262 (n 130), the
-lowest of the nine dimensions. Singapore scores 32.3, 123rd of 131, on the
-two rows it has. Volunteering, national belonging and
+serve (D172). Its correlation with log GDP per capita is 0.477 (n 125), up from 0.262
+on three rows. Singapore has one row and publishes no score. Volunteering, national belonging and
 polarization are gaps. National belonging has no usable series: its only
 cross-national item, national pride, is not belonging and fails the regime
 test A13 describes, so it is not wired, and the gap counts against confidence
@@ -540,52 +527,34 @@ run.
 | Dimension | Observed indicators | Confidence | What is left | Publishes a score |
 | --- | ---: | ---: | --- | --- |
 | Coordination | 3 of 5 for 74 countries | 0.100 to 0.480, mean 0.363 | B-READY trade compliance efficiency at 2025 for 82 countries, budget execution from 2015 to 2024 and V-Dem civil-society strength at 2025 | 130 of 135 |
-| Trust | 5 of 7 for 41 countries | 0.072 to 0.546, mean 0.386 | B-READY dispute resolution efficiency at 2025 for 82 countries, bribery incidence from 2014 to 2025, V-Dem court compliance at 2025, and EVS/WVS A165 and trust in strangers at 2022; court clearance and institutional trust remain gaps | 132 of 135 |
-| Shared Purpose | 3 of 6 for 66 countries | 0.016 to 0.433, mean 0.322 | Tax revenue (World Bank, with an OECD fill for 14 countries), income inequality, EVS/WVS civic participation; national belonging, volunteering and polarization remain gaps | 131 of 135 |
+| Trust | 3 of 7 for 82 countries | 0.072 to 0.343, mean 0.277 | B-READY dispute resolution efficiency at 2025 for 82 countries, bribery incidence from 2014 to 2025 and V-Dem court compliance at 2025; court clearance, institutional trust and both social rows are gaps | 130 of 135 |
+| Shared Purpose | 2 of 6 for 125 countries | 0.016 to 0.316, mean 0.259 | Tax revenue (World Bank, with an OECD fill for 14 countries) and income inequality; civic participation, national belonging, volunteering and polarization are gaps | 125 of 135 |
 
 Coordination remains a narrow operational proxy: budget alignment, border
 processing and civil-society judgements do not show whether several
 institutions delivered a shared national objective (A9). Coordination
 publishes for 130: Cuba, the United Arab Emirates, Venezuela, Iran and
 Denmark rest on civil-society strength alone, because B-READY has not reached
-them and none has a budget execution value. Trust prints for 132 of 135, but
-country-level confidence runs from 0.072 to 0.546, and the spread is the
-survey and B-READY: the 72 countries with both EVS/WVS rows sit at 0.280 to
-0.546, and the 60 scored without them at 0.121 to 0.343. Cuba, the United
-Arab Emirates and Haiti are below the floor on Trust, and Cuba on both.
-Shared Purpose has a third row in 66 countries; the 65 on two rows sit at
-0.079 to 0.316 and print, drawn dashed with a marked axis and a confidence
-band that says do not quote it alone. Four countries publish no Shared
-Purpose score, each on one row: Cuba, Haiti, Papua New Guinea and Trinidad
-and Tobago. That is a mitigation and not a fix.
+them and none has a budget execution value. Trust prints for 130 of 135, and country-level confidence runs from 0.072 to
+0.343, where the spread is B-READY. Cuba, the United Arab Emirates, Haiti,
+Venezuela and Iran are below the floor on Trust.
+Shared Purpose has two rows in all 125 countries it scores, at 0.016 to 0.316,
+and prints, drawn dashed with a marked axis and a confidence band that says do
+not quote it alone. Ten countries publish no Shared Purpose score, each on one
+row: Cuba, Haiti, Papua New Guinea, Trinidad and Tobago, Singapore, Venezuela,
+Iran, Jordan, Azerbaijan and New Zealand. That is a mitigation and not a fix.
 
-**Trust still has a narrow family balance.** D57 splits the dimension into a
-social family, which asks whether people rely on strangers, and an institutional
-family, which asks whether they rely on courts, government and the civil
-service. The social family has both its rows observed, A165 and trust in
-strangers (D140), in the same 72 countries, so it is two perception items from
-one survey release and no behaviour. The institutional family has three of
-five: dispute resolution efficiency, bribery incidence and court compliance.
-60 of the 132 scored countries rest on the institutional family alone. Among them
-are the ten whose survey values are held because the release prints separate
-EVS and WVS rows (D64): Germany, the Netherlands, the United Kingdom, Armenia,
-Czechia, Romania, Russia, Serbia, Slovakia and Ukraine. Court case clearance
-and institutional trust remain gaps. `familyBalance` publishes this coverage.
-
-**The two social items disagree where "most people" means one's own circle.**
-China reads 63.5% on A165, fourth of 72 after Denmark, Norway and Finland, and
-13.4% on trusting a stranger, 60th. Japan (33.7%, 16th, against 10.4%, 65th),
-Singapore (34.4%, 14th, against 18.0%, 51st), South Korea (32.9%, 18th,
-against 17.5%, 53rd) and Malaysia (19.6%, 33rd, against 14.9%, 56th) split the
-same way, and so do Belarus (40.0%, 12th, against 20.1%, 47th) and Tajikistan
-(20.6%, 32nd, against 10.3%, 66th). The second row pulls their Trust scores
-down: Japan to 58.7, 56th of 132, Singapore to 67.2, South Korea to 66.4,
-Malaysia to 56.6 and China to 49.5, 82nd. Ethiopia goes the other way, 11.9%
-on A165 and 47.8% on strangers, eighth of 72, and is the value to check first
-(D140); Myanmar (15.1% against 41.3%, 11th) splits the same way. Read a high
-A165 alone as a statement about a respondent's own network, and read China's
-Trust score through its court compliance (4.5 of 100) as much as through
-either survey row.
+**Trust has one family.** D57 splits the dimension into a social family, which
+asks whether people rely on strangers, and an institutional family, which asks
+whether they rely on courts, government and the civil service. D187 returned both
+social rows to gaps, because the results table states no licence. So 130 of 130 scored
+countries rest on the institutional family: dispute resolution efficiency,
+bribery incidence and court compliance. The capability asks whether trust
+reaches strangers, and no row observes that. The move was large and mostly up:
+70 countries moved by a mean of 17.8 points, and Brazil went from 52.1 to 90.0.
+A country that reads high here has courts and officials that behave; the score
+says nothing about whether its people trust each other. Court case clearance,
+institutional trust and both social rows are gaps. `familyBalance` publishes this coverage.
 
 **Fix.** Land court throughput and case clearance, cross-agency
 delivery records, institutional trust, and behavioural measures of corruption
@@ -640,8 +609,8 @@ V-Dem civil-society strength is an adapter-backed Coordination row (D83),
 but its expert coding keeps confidence low and does not answer cross-agency
 delivery. Voter turnout, volunteering and civic participation are absent from
 the catalogue under any database id, and the interpersonal and institutional
-trust items were never World Bank series. The Joint EVS/WVS adapter supplies
-both social rows; Trust still needs an adapter for court clearance and
+trust items were never World Bank series. D187 removed the Joint EVS/WVS adapter
+that supplied the social rows. Trust still needs an adapter for court clearance and
 Coordination needs one for delivery beyond the V-Dem and budget rows.
 The shortlist for court clearance is OECD Government at a Glance. `ingest: 'manual'` remains available for sources with no
 usable API.
@@ -731,30 +700,21 @@ item outside the closed regimes. Neither is wired, and the gap stays open.
 
 **Severity: medium.**
 
-The figures in this entry are from dataset 10.0.0.
+The figures in this entry are from dataset 10.1.0.
 
-Agency is scored on four rows: new business density, perceived control over
-life (D127), B-READY business entry efficiency (D167), and the number of
-procedures to start a business. The last comes from Doing Business and
+Agency is scored on three rows: new business density, B-READY business entry
+efficiency (D167), and the number of procedures to start a business. D187
+returned perceived control over life to a gap. The last comes from Doing Business and
 stopped in 2019 (A6). Business entry efficiency is a 2025 score of the time
 and cost to register a firm, and it reaches 82 of the 135. Internet users,
 account ownership and private credit sit beside the score as conditions
-(D122). So two of the four scored rows read registration rules, one of them
-from 2019, and the one current row that is not about registering a business
-is a perception (A15).
+(D122). So two of the three scored rows read registration rules, one of them from 2019,
+and the third counts registered firms.
 
-Where new business density is missing, Agency rests on those rules and
-perceived control. The United States scores 73.6 on business entry
-efficiency, procedures and perceived control, at confidence 0.443.
-Nicaragua (79.9), Lebanon (31.6) and Venezuela (39.1) have no B-READY value
-and score on the 2019 procedure count and perceived control alone, at
-confidence 0.255. Cameroon (62.4) has neither new business density nor
-perceived control, so it scores on business entry efficiency and the 2019
-procedure count, two registration rules and nothing else, at confidence
-0.301. Sudan, Haiti and Malawi have only the procedure count, so they
-publish no Agency score: Sudan has neither new business density nor
-perceived control, and the business density of Haiti and Malawi is from 2010
-and 2009, older than D159 lets a value count.
+Where new business density is missing, Agency rests on those two rules alone. The
+United States scores 71.3 on business entry efficiency and procedures, at
+confidence 0.301. Sudan, Haiti, Malawi, Venezuela, Nicaragua and Lebanon have
+one row and publish no Agency score.
 
 The procedure count is inside D159's 15 years until the 2035 release, so the
 rule does not touch it yet. For Liberia and Mauritania, which B-READY has not
@@ -767,9 +727,8 @@ people acting, which the O1 triage sweep did not find with frame coverage.
 
 ## A15 — Two survey rows read regime and question format
 
-**Severity: medium. Both rows are scored (D127, D128). On the 135 neither
-row's income correlation is a finding: perceived control has none, and civic
-participation's negative one carries the question format.**
+**Closed by D187: both rows are declared gaps, because the results table states no
+licence. This entry records what they read while they were scored (D127, D128).**
 
 The figures in this entry are from dataset 10.0.0 unless they name another
 run. None of the ten countries D176 added is in the survey release, so both
@@ -797,16 +756,8 @@ Azerbaijan (0.5%) and Estonia (1.5%,
 EVS) are the floor and Kenya (38.4%) and Indonesia (37.9%, both WVS) the top,
 and across the 72 the row runs against income at -0.271 (n 71).
 
-**What is published.** Both values, with the programme's question, the survey
-year and the valid-answer base in each observation's note. The release stamps
-every value 2022, though fieldwork ran from 2017 to 2023.
-
-**What remains.** Neither row is adjusted. A reader can take Vietnam's
-perceived control or the income correlation of either row as a
-finding; read them through this entry first. A behavioural row with frame
-coverage is the fix. A format term needs pooled respondent-level microdata,
-which sits behind a registration the open-data rule excludes (D154), so none
-is in view.
+**What remains.** Nothing is published from either row. A return needs an open
+source for the same item (D187), and this entry is what to read first.
 
 ---
 

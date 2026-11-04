@@ -1,6 +1,6 @@
 # Agenda de capacidades: Moçambique
 
-*Gerada em 2026-11-03*
+*Gerada em 2026-11-04*
 
 A escala reúne 135 países. Cada dimensão recebe uma pontuação de 0 a 100, sem classificação geral, e cada pontuação traz ao lado a solidez da evidência. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma pontuação.
 
@@ -59,7 +59,7 @@ A solidez da evidência está abaixo da faixa utilizável, de modo que a pontua�
 Quanta cooperação é possível para além do círculo pessoal mais próximo?
 
 - A pontuação assenta em 2 indicadores observados.
-- Lacunas declaradas: Confiança nas instituições públicas, Taxa de resolução de processos judiciais.
+- Lacunas declaradas: Confiança interpessoal generalizada, Confiança nas instituições públicas, Cooperação além do próprio grupo, Taxa de resolução de processos judiciais.
 - Bases rejeitadas: Estado de direito, Controlo da corrupção, Tempo para executar um contrato, Taxa de homicídios dolosos.
 
 ### Agência: solidez 0,24, muito fraca
@@ -67,7 +67,7 @@ Quanta cooperação é possível para além do círculo pessoal mais próximo?
 Em que medida pessoas e organizações conseguem transformar intenção em ação?
 
 - A pontuação assenta em 2 indicadores observados.
-- Lacunas declaradas: Adultos que realizam tarefas digitais.
+- Lacunas declaradas: Adultos que realizam tarefas digitais, Perceção de controlo sobre a própria vida.
 - Bases rejeitadas: Tempo para criar uma empresa.
 
 ### Coordenação: solidez 0,28, fraca
@@ -83,7 +83,7 @@ Com que eficácia atores independentes conseguem organizar-se em torno de objeti
 Até que ponto as pessoas conseguem ver-se como participantes de um projeto comum?
 
 - A pontuação assenta em 2 indicadores observados.
-- Lacunas declaradas: Sentimento de pertença nacional, Voluntariado, Polarização política.
+- Lacunas declaradas: Sentimento de pertença nacional, Voluntariado, Polarização política, Participação cívica.
 - Bases rejeitadas: Voz e prestação de contas.
 
 ### Experimentação: solidez 0,37, fraca
@@ -123,16 +123,19 @@ As condições descrevem aquilo com que um país conta: infraestrutura, acesso, 
 
 ## Agenda de medição
 
-18 indicadores previstos no modelo ainda não têm base comparável, e cada um reduz a solidez da evidência. Uma lacuna passa a entrar na pontuação quando uma série comparável cobre pelo menos dois países.
+22 indicadores previstos no modelo ainda não têm base comparável, e cada um reduz a solidez da evidência. Uma lacuna passa a entrar na pontuação quando uma série comparável cobre pelo menos dois países.
 
 | Dimensão | Indicador ausente | O que ele mediria |
 | --- | --- | --- |
 | Antecipação | Capacidade governamental de prospetiva | Existência, mandato e continuidade de uma função nacional de prospetiva estratégica. |
 | Antecipação | Compromissos de investigação de longo prazo | Novos financiamentos públicos de investigação atribuídos por concurso com duração de cinco anos ou mais, em proporção de todos os financiamentos públicos por concurso atribuídos no ano. |
 | Agência | Adultos que realizam tarefas digitais | Proporção de adultos que realizaram uma tarefa digital determinada nos últimos três meses, como enviar uma mensagem com um ficheiro anexo, mover um ficheiro entre dispositivos ou usar uma fórmula numa folha de cálculo, contada tarefa a tarefa e nunca como nível de competência. |
+| Agência | Perceção de controlo sobre a própria vida | Liberdade de escolha e controlo sobre o rumo da própria vida, segundo os próprios inquiridos. |
 | Coordenação | Colaboração universidade-empresa | Intensidade da colaboração em investigação entre universidades e empresas. |
 | Coordenação | Colaboração público-privada | Frequência e escala da execução conjunta, por governo e empresas, de objetivos nacionais. |
+| Confiança | Confiança interpessoal generalizada | Proporção dos inquiridos que concorda que se pode confiar na maioria das pessoas. |
 | Confiança | Confiança nas instituições públicas | Confiança no governo nacional, nos tribunais e no serviço público. |
+| Confiança | Cooperação além do próprio grupo | Proporção de adultos que confia completamente ou um pouco nas pessoas que conhece pela primeira vez. |
 | Confiança | Taxa de resolução de processos judiciais | Processos cíveis e comerciais findos num ano, em proporção dos processos entrados no mesmo ano. |
 | Aprendizagem | Participação de adultos em aprendizagem | Proporção de adultos em educação ou formação, formal ou não, nos últimos 12 meses. |
 | Experimentação | Operações de capital de risco | Primeiras rondas de capital de risco fechadas no ano por empresas sediadas no país, por milhão de pessoas, contadas por operação e nunca por valor. |
@@ -145,6 +148,7 @@ As condições descrevem aquilo com que um país conta: infraestrutura, acesso, 
 | Propósito partilhado | Sentimento de pertença nacional | Identificação e ligação à comunidade nacional, declaradas pelos inquiridos, distintas do orgulho na nação. |
 | Propósito partilhado | Voluntariado | Proporção de adultos que dedicaram tempo como voluntários a alguma organização no último mês. |
 | Propósito partilhado | Polarização política | Grau em que as diferenças políticas se alinham em uma única divisão hostil. |
+| Propósito partilhado | Participação cívica | Proporção de adultos que declaram pertencer a uma organização humanitária ou de beneficência. |
 
 ## O que os indicadores não captam sobre Moçambique
 

@@ -1,6 +1,6 @@
 # Capability agenda: Tunisia
 
-*Generated 2026-11-03*
+*Generated 2026-11-04*
 
 The frame includes 135 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
@@ -9,14 +9,14 @@ The frame includes 135 countries. Each dimension is scored from 0 to 100, with n
 | Dimension | Score | Confidence | Trend |
 | --- | --- | --- | --- |
 | Anticipation | 41.7 | 0.46 (usable) | +11.6 over 10 years using 2 indicators |
-| Agency | 50.8 | 0.63 (usable) | no trend |
+| Agency | 63.3 | 0.49 (usable) | no trend |
 | Coordination | 66.9 | 0.45 (usable) | -25.3 over 10 years using 2 indicators |
-| Trust | 42 | 0.55 (usable) | no trend |
+| Trust | 53.3 | 0.34 (thin) | -20.7 over 10 years using 2 indicators |
 | Learning | 35 | 0.55 (usable) | +0.2 over 10 years using 2 indicators |
 | Experimentation | 21.8 | 0.46 (usable) | +6.6 over 10 years using 3 indicators |
 | Adaptability | 45.7 | 0.58 (usable) | -12.1 over 10 years using 4 indicators |
 | Building | 27.5 | 0.62 (usable) | +1 over 10 years using 3 indicators |
-| Shared Purpose | 49.9 | 0.26 (thin) | no trend |
+| Shared Purpose | 63.2 | 0.13 (very thin) | no trend |
 
 ## What to raise
 
@@ -60,16 +60,6 @@ How capable is the country of identifying and preparing for emerging change?
 - Related deliveries in other countries: Embrapa, a fifty-year bet on tropical agriculture (Brazil); The Delta Programme and its fund (Netherlands); Lei de Informática, a sectoral industrial policy (Brazil); CGEE, the strategic studies center (Brazil); Centre for Strategic Futures, foresight inside government (Singapore); Legally binding carbon budgets (United Kingdom); Fukushima decommissioning roadmap, a 30–40-year risk-reduction horizon (Japan); National basic-research funding allocation (China); PLANAPP and REPLAN, a centre-of-government foresight network (Portugal); Labour Market Intelligence Programme and forward skills planning (South Africa); Government Report on the Future and the parliamentary Committee for the Future (Finland); Foresight Centre at the Riigikogu (Arenguseire Keskus) (Estonia); Office of Technology Assessment, defunded and closed in 1995 (United States); Rządowe Centrum Studiów Strategicznych, liquidated in 2006 (Poland); Office of Technology Assessment at the German Bundestag (TAB) (Germany); National Assembly Futures Institute (South Korea); Federal Chancellery situation and environment analysis (Perspektivstab) (Switzerland); Senate foresight delegation (Délégation sénatoriale à la prospective) (France); Senate Commission on Future Challenges, Science, Technology and Innovation (Chile); Policy Horizons Canada, the federal foresight unit, and its 2024 disruption scan (Canada); Framtidskommissionen, the Prime Minister's time-limited future commission (Sweden); National Planning Commission foresight work for Malawi 2063 (Malawi); Bureau National de la Prospective et de la Veille Stratégique and the national prospective studies (Côte d'Ivoire); Teknologiraadet, the Norwegian Board of Technology (Norway); Teknologiraadet, the Danish Board of Technology, abolished in 2012 (Denmark); Bureau federal du Plan (Belgium); Special Secretariat of Foresight (now of Long-term Planning) (Greece); STRATA foresight for the Lietuva 2050 state progress strategy (Lithuania); Institut Royal des Etudes Stratégiques (IRES) (Morocco); Long-term Insights Briefings under the Public Service Act 2020 (New Zealand); Foresight und Technikfolgenabschätzung für das österreichische Parlament (Austria); Latvija 2050 long-term scenario framework for the State Chancellery (Latvia); Natsionalnyi instytut stratehichnykh doslidzhen, and its falling staff ceiling (Ukraine); Prognoz nauchno-tekhnologicheskogo razvitiya Rossiyskoy Federatsii na period do 2030 goda (Russia); Agency for Strategic Planning, merged into a ministry in 2002 (Kazakhstan); Cabinet Information and Decision Support Center (IDSC), Afaq Mostaqbaliya (Egypt); Center for the Islamic Iranian Model of Progress (Markaz-e Olgu) (Iran).
 - Missing indicators: Government foresight capacity, Long-horizon research commitments.
 
-### Trust: 42, confidence usable
-
-How much cooperation is possible beyond immediate personal networks?
-
-- Uses 5 observed indicators.
-- Highest usable scores: Sweden 90.3, New Zealand 83.2, Estonia 75.7.
-- Related deliveries in other countries: Cadastro Único, the unified social registry (Brazil); Portal da Transparência, the federal open-books system (Brazil); MyData, citizen-directed data portability (South Korea); Singapore Courts' case-clearance discipline (Singapore); Civil-court clearance and the CEPEJ monitoring series (Portugal).
-- Missing indicators: Trust in public institutions, Court case clearance rate.
-- Rejected datasets: Rule of law, Control of corruption, Time to enforce a contract, Intentional homicide rate.
-
 ### Adaptability: 45.7, confidence usable
 
 How effectively can the system respond when circumstances change?
@@ -83,20 +73,28 @@ How effectively can the system respond when circumstances change?
 
 The evidence is too thin to manage these dimensions confidently.
 
-### Shared Purpose: confidence 0.26, thin
+### Shared Purpose: confidence 0.13, very thin
 
 To what extent can people imagine themselves as participants in a common project?
 
-- Uses 3 observed indicators.
-- Missing indicators: Sense of national belonging, Volunteering, Political polarisation.
+- Uses 2 observed indicators.
+- Missing indicators: Sense of national belonging, Volunteering, Political polarisation, Civic participation.
 - Rejected datasets: Voice and accountability.
+
+### Trust: confidence 0.34, thin
+
+How much cooperation is possible beyond immediate personal networks?
+
+- Uses 3 observed indicators.
+- Missing indicators: Generalised interpersonal trust, Trust in public institutions, Cooperation beyond the in-group, Court case clearance rate.
+- Rejected datasets: Rule of law, Control of corruption, Time to enforce a contract, Intentional homicide rate.
 
 ## What to keep watching
 
 These dimensions score at least 50 with usable evidence.
 
 - Coordination: 66.9, confidence usable
-- Agency: 50.8, confidence usable
+- Agency: 63.3, confidence usable
 
 ## What Tunisia has to work with
 
@@ -121,16 +119,19 @@ Conditions describe what a country has to work with: infrastructure, access, mon
 
 ## Missing data
 
-18 requested indicators have no comparable dataset, and each one lowers confidence. A gap can become an indicator when a comparable series covers at least two countries.
+22 requested indicators have no comparable dataset, and each one lowers confidence. A gap can become an indicator when a comparable series covers at least two countries.
 
 | Dimension | Missing indicator | What it asks |
 | --- | --- | --- |
 | Anticipation | Government foresight capacity | Existence, mandate and continuity of a national strategic foresight function. |
 | Anticipation | Long-horizon research commitments | New competitively awarded public research grants that run for five years or longer, as a share of all new competitive public research grants awarded in the year. |
 | Agency | Adults doing digital tasks | Share of adults who carried out a named digital task in the last three months, such as sending a message with an attached file, moving a file between devices or using a spreadsheet formula, counted one task at a time and never as a skill level. |
+| Agency | Perceived control over life | Self-reported freedom of choice and control over the course of one’s life. |
 | Coordination | University-industry collaboration | Intensity of research collaboration between universities and firms. |
 | Coordination | Public-private collaboration | Frequency and scale of joint public-private delivery of national objectives. |
+| Trust | Generalised interpersonal trust | Share agreeing that most people can be trusted. |
 | Trust | Trust in public institutions | Confidence in national government, courts and civil service. |
+| Trust | Cooperation beyond the in-group | Share of adults who trust people they meet for the first time completely or somewhat. |
 | Trust | Court case clearance rate | Civil and commercial cases resolved in a year as a share of cases filed in the same year. |
 | Learning | Adult learning participation | Share of adults in formal or non-formal education and training in the last 12 months. |
 | Experimentation | Venture deals | First venture capital rounds closed by companies based in the country in the year, per million people, counted by deal and never by amount. |
@@ -143,6 +144,7 @@ Conditions describe what a country has to work with: infrastructure, access, mon
 | Shared Purpose | Sense of national belonging | Reported identification with and attachment to the national community, as distinct from pride in the nation. |
 | Shared Purpose | Volunteering | Share of adults who volunteered time to an organisation in the last month. |
 | Shared Purpose | Political polarisation | Degree to which political differences run along a single hostile divide. |
+| Shared Purpose | Civic participation | Share of adults who report belonging to a humanitarian or charitable organisation. |
 
 ## What the indicators miss about Tunisia
 

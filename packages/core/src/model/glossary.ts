@@ -242,7 +242,7 @@ export const GLOSSARY: GlossaryEntry[] = [
     group: 'How a number is made',
     short: 'How a value gets into the dataset: from an API, a published table, or nowhere yet.',
     full: 'Every indicator declares one of five routes. World Bank values come from its API. Values from a reproducible source adapter are fetched or parsed by code tied to a named release. Values from published tables keep the retrieval date. A gap has no comparable dataset. A retired row has a rejected dataset. Both lower confidence.',
-    example: 'Generalised interpersonal trust is parsed by the Joint EVS/WVS adapter from the publisher-weighted A165 results table. GEM indicators remain entered by hand from published tables.',
+    example: 'V-Dem civil society strength is parsed by its adapter from the pinned country-year release. GEM indicators remain entered by hand from published tables.',
   },
   {
     term: 'Gap',

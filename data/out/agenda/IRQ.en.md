@@ -1,6 +1,6 @@
 # Capability agenda: Iraq
 
-*Generated 2026-11-03*
+*Generated 2026-11-04*
 
 The frame includes 135 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
@@ -9,14 +9,14 @@ The frame includes 135 countries. Each dimension is scored from 0 to 100, with n
 | Dimension | Score | Confidence | Trend |
 | --- | --- | --- | --- |
 | Anticipation | 20.8 | 0.46 (usable) | +20.3 over 10 years using 2 indicators, with 1 at the frame edge |
-| Agency | 34.2 | 0.41 (thin) | no trend |
+| Agency | 31.8 | 0.27 (thin) | no trend |
 | Coordination | 61.7 | 0.28 (thin) | +8.1 over 10 years using 2 indicators |
-| Trust | 18.2 | 0.39 (thin) | -15.7 over 10 years using 2 indicators |
+| Trust | 18.3 | 0.19 (very thin) | -15.7 over 10 years using 2 indicators |
 | Learning | 18.7 | 0.52 (usable) | +0.1 over 10 years using 2 indicators |
 | Experimentation | 2.9 | 0.36 (thin) | +0.7 over 10 years using 2 indicators |
 | Adaptability | 25.9 | 0.58 (usable) | -6.9 over 10 years using 3 indicators, with 1 at the frame edge |
 | Building | 4.4 | 0.32 (thin) | +2.9 over 10 years using 2 indicators |
-| Shared Purpose | 49.4 | 0.36 (thin) | no trend |
+| Shared Purpose | 41.6 | 0.24 (very thin) | no trend |
 
 ## What to raise
 
@@ -53,6 +53,30 @@ How effectively can the system respond when circumstances change?
 
 The evidence is too thin to manage these dimensions confidently.
 
+### Trust: confidence 0.19, very thin
+
+How much cooperation is possible beyond immediate personal networks?
+
+- Uses 2 observed indicators.
+- Missing indicators: Generalised interpersonal trust, Trust in public institutions, Cooperation beyond the in-group, Court case clearance rate.
+- Rejected datasets: Rule of law, Control of corruption, Time to enforce a contract, Intentional homicide rate.
+
+### Shared Purpose: confidence 0.24, very thin
+
+To what extent can people imagine themselves as participants in a common project?
+
+- Uses 2 observed indicators.
+- Missing indicators: Sense of national belonging, Volunteering, Political polarisation, Civic participation.
+- Rejected datasets: Voice and accountability.
+
+### Agency: confidence 0.27, thin
+
+How able are individuals and organizations to turn an intention into action?
+
+- Uses 2 observed indicators.
+- Missing indicators: Adults doing digital tasks, Perceived control over life.
+- Rejected datasets: Time to start a business.
+
 ### Coordination: confidence 0.28, thin
 
 How effectively can independent actors organize around shared objectives?
@@ -69,14 +93,6 @@ How capable is the country of turning plans and knowledge into functioning syste
 - Missing indicators: Large project delivery, Firm scale-up rate.
 - Rejected datasets: Logistics infrastructure quality, Electricity connection speed.
 
-### Shared Purpose: confidence 0.36, thin
-
-To what extent can people imagine themselves as participants in a common project?
-
-- Uses 3 observed indicators.
-- Missing indicators: Sense of national belonging, Volunteering, Political polarisation.
-- Rejected datasets: Voice and accountability.
-
 ### Experimentation: confidence 0.36, thin
 
 How easily can new approaches be attempted, tested, abandoned, and improved?
@@ -84,22 +100,6 @@ How easily can new approaches be attempted, tested, abandoned, and improved?
 - Uses 4 observed indicators.
 - Missing indicators: Venture deals, Firms through regulatory sandboxes, University spinouts.
 - Rejected datasets: Business share of R&D.
-
-### Trust: confidence 0.39, thin
-
-How much cooperation is possible beyond immediate personal networks?
-
-- Uses 4 observed indicators.
-- Missing indicators: Trust in public institutions, Court case clearance rate.
-- Rejected datasets: Rule of law, Control of corruption, Time to enforce a contract, Intentional homicide rate.
-
-### Agency: confidence 0.41, thin
-
-How able are individuals and organizations to turn an intention into action?
-
-- Uses 3 observed indicators.
-- Missing indicators: Adults doing digital tasks.
-- Rejected datasets: Time to start a business.
 
 ## What Iraq has to work with
 
@@ -124,16 +124,19 @@ Conditions describe what a country has to work with: infrastructure, access, mon
 
 ## Missing data
 
-18 requested indicators have no comparable dataset, and each one lowers confidence. A gap can become an indicator when a comparable series covers at least two countries.
+22 requested indicators have no comparable dataset, and each one lowers confidence. A gap can become an indicator when a comparable series covers at least two countries.
 
 | Dimension | Missing indicator | What it asks |
 | --- | --- | --- |
 | Anticipation | Government foresight capacity | Existence, mandate and continuity of a national strategic foresight function. |
 | Anticipation | Long-horizon research commitments | New competitively awarded public research grants that run for five years or longer, as a share of all new competitive public research grants awarded in the year. |
 | Agency | Adults doing digital tasks | Share of adults who carried out a named digital task in the last three months, such as sending a message with an attached file, moving a file between devices or using a spreadsheet formula, counted one task at a time and never as a skill level. |
+| Agency | Perceived control over life | Self-reported freedom of choice and control over the course of one’s life. |
 | Coordination | University-industry collaboration | Intensity of research collaboration between universities and firms. |
 | Coordination | Public-private collaboration | Frequency and scale of joint public-private delivery of national objectives. |
+| Trust | Generalised interpersonal trust | Share agreeing that most people can be trusted. |
 | Trust | Trust in public institutions | Confidence in national government, courts and civil service. |
+| Trust | Cooperation beyond the in-group | Share of adults who trust people they meet for the first time completely or somewhat. |
 | Trust | Court case clearance rate | Civil and commercial cases resolved in a year as a share of cases filed in the same year. |
 | Learning | Adult learning participation | Share of adults in formal or non-formal education and training in the last 12 months. |
 | Experimentation | Venture deals | First venture capital rounds closed by companies based in the country in the year, per million people, counted by deal and never by amount. |
@@ -146,6 +149,7 @@ Conditions describe what a country has to work with: infrastructure, access, mon
 | Shared Purpose | Sense of national belonging | Reported identification with and attachment to the national community, as distinct from pride in the nation. |
 | Shared Purpose | Volunteering | Share of adults who volunteered time to an organisation in the last month. |
 | Shared Purpose | Political polarisation | Degree to which political differences run along a single hostile divide. |
+| Shared Purpose | Civic participation | Share of adults who report belonging to a humanitarian or charitable organisation. |
 
 ## What the indicators miss about Iraq
 

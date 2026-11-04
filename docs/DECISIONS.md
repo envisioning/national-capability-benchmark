@@ -10408,3 +10408,99 @@ the next fetch logs that in the revision log.
 **Overturned by.** A review that shows the survey changes inside the series
 drive the Adaptability trend; or a change to the D120 gate or its window,
 which reopens the question of a longer history.
+
+---
+
+## D187 — The Joint EVS/WVS rows leave, because the results table states no licence
+
+*Recorded 2026-11-04. Owner ruling of 2026-11-04. Applies D154 (a) to a source
+wired before 9.0.0. Returns the rows D57, D127, D128 and D140 admitted to
+declared gaps and removes the check of D132. Ends D64's hold. Dataset 10.1.0, App 1.38.2. Restates
+Agency, Trust and Shared Purpose.*
+
+**Decision.** Four scored rows become `ingest: 'gap'`:
+`interpersonal_trust` (A165), `willingness_to_cooperate_strangers` (G007_34_B),
+`perceived_control` (A173) and `civic_participation` (A080_01). The court
+confidence check (E069_17) reads the same file and leaves the check registry.
+The owner ruled on the four rows. The agent added the check because the same
+test applies to it, and that addition is the owner's to overrule.
+
+The rows are gaps and not retired rows. The owner chose between the two with both
+sets of figures in hand. `retired` means the project rejected the measurement,
+and it leaves the coverage denominator (D100), so Agency's mean confidence would
+have risen from 0.468 to 0.490 after losing evidence. The project still wants
+these four measurements and has no open source for them, which is what a gap
+says. A gap counts against confidence.
+
+`data/observations/joint-evs-wvs.json`, the adapter, its test and `bench evs`
+are removed, so no command can write these values again. The 359 rows these
+series held in `revisions.json` are removed. Each run in that log keeps its
+original counts, so six runs now count rows the file no longer lists. Git
+history still holds all of these values; nobody rewrote it. The row definitions
+stay in the registry, as every gap does.
+
+**Evidence.** Read on 2026-11-04, on the pinned file and on the publishers'
+pages:
+
+- `ZA7505_cdb_Tables.pdf`, the pinned results table, states no licence and no
+  term on reuse in any of its 43,300 lines of text.
+- GESIS calls its documentation "openly accessible" and gives it no licence, so
+  on redistribution the publisher is silent. D154 (a) says a silent term fails.
+- WVS's conditions of use allow the data "for non-profit purposes" and forbid
+  redistribution of data files. `data/out` is CC BY 4.0, which allows commercial
+  reuse, so this term does not clearly pass either.
+- GESIS's terms for registered downloads, valid from 2026-02-04, forbid
+  commercial use, provision to third parties and processing by an AI system.
+  Registration is closed by D154 in any case.
+
+No item has another open source for this frame. Afrobarometer and
+Latinobarómetro are closed by D154. So no row has a replacement. The earlier
+waves are closed on the same evidence, so MOVERS-1 stops for this source.
+
+**What changed in the published data.**
+
+| Dimension | Scores published | Scores that moved | Mean move | Largest | Mean confidence | r with log GDP |
+| --- | --- | ---: | ---: | --- | --- | --- |
+| Agency | 131 to 128 | 68 | 7.2 | Argentina -18.6 | 0.468 to 0.393 | 0.492 to 0.493 |
+| Trust | 132 to 130 | 70 | 17.8 | Brazil +37.9 | 0.386 to 0.277 | 0.426 to 0.628 |
+| Shared Purpose | 131 to 125 | 66 | 11.1 | Estonia +22.8 | 0.322 to 0.259 | 0.262 to 0.477 |
+
+The other six dimensions, every score and confidence, are identical to 10.0.5.
+Each moved score belonged to a country the survey reached.
+
+Trust moved up in 66 of the 70 countries. The survey rows read low on their own
+frames for most countries, and the remaining institutional rows read high. Brazil
+goes from 52.1, 74th, to 90.0, 17th, on two rows. Trust now has no social family:
+`familyBalance` reads 130 of 130 countries on the institutional family alone.
+The dimension definition asks whether trust reaches strangers, and no row
+observes that now. Trust's 0.628 is the figure A3 predicted for the
+institutional rows alone.
+
+11 scores fall under the coverage floor (D45): Agency for Venezuela, Nicaragua
+and Lebanon; Trust for Venezuela and Iran; Shared Purpose for Singapore,
+Venezuela, Iran, Jordan, Azerbaijan and New Zealand. Shared Purpose now has two rows in every
+country it scores, so one row's value decides half of each score.
+
+The one-factor complete set falls from 125 to 119 countries. The history holdout
+is unchanged, 9.70 against 10.96 for the flat comparison, because the survey rows
+had one year each and no history. The movers verdict stays unreadable.
+
+**Panel.** D160 dropped 405 of the 1,215 cells, all of Agency, Trust and Shared
+Purpose. The other 810 carry. The dropped cells publish no panel estimate until
+a rerun under D182's procedure replaces them.
+
+**Version.** Minor, 10.1.0, as D167 was for the rows it retired. No frame rebased,
+because each indicator's frame stands alone. No published field was removed or
+renamed. The rule in AGENTS.md says a minor moves nothing published, and D167
+already departed from that. A major would drop all 1,215 panel cells for no
+reason in the data. This is a default for the owner to overrule.
+
+**Cost.** Trust and Shared Purpose lost the only rows that asked people directly
+what this project asks about. Trust is further from its construct and closer to
+wealth. The rows carried known faults (A3, A12, A15), but the release replaces
+those faults with an absence. The largest moves come from evidence leaving, not
+from anything changing in the countries.
+
+**Overturned by.** A publisher's published term that allows republishing derived
+values under CC BY 4.0, or an open source for the same items at frame coverage.
+Either one fills the gap in a new entry.

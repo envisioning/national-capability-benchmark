@@ -3,8 +3,8 @@
   "name": "national-capability-benchmark",
   "title": "NCB, the National Capability Benchmark",
   "description": "A prototype that measures what a country can do, separately from how rich it is. Nine capability dimensions scored from public data, each with a separate confidence number.",
-  "version": "10.0.5",
-  "created": "2026-11-03T19:47:34.764Z",
+  "version": "10.1.0",
+  "created": "2026-11-04T10:00:40.260Z",
   "homepage": "https://github.com/envisioning/national-capability-benchmark",
   "licenses": [
     {
@@ -17,10 +17,6 @@
     {
       "title": "World Bank",
       "path": "https://data.worldbank.org"
-    },
-    {
-      "title": "Joint EVS/WVS",
-      "path": "https://www.worldvaluessurvey.org/WVSEVSjoint2017.jsp"
     },
     {
       "title": "V-Dem",
@@ -218,13 +214,10 @@
         "indicators/statistical_performance.json",
         "indicators/new_business_density.json",
         "indicators/business_start_procedures.json",
-        "indicators/perceived_control.json",
         "indicators/budget_execution_fidelity.json",
         "indicators/civil_society_strength.json",
         "indicators/bribery_incidence.json",
         "indicators/court_compliance.json",
-        "indicators/interpersonal_trust.json",
-        "indicators/willingness_to_cooperate_strangers.json",
         "indicators/human_capital_index.json",
         "indicators/firm_training_incidence.json",
         "indicators/research_citation_impact.json",
@@ -243,7 +236,6 @@
         "indicators/economic_complexity.json",
         "indicators/tax_revenue_gdp.json",
         "indicators/income_inequality.json",
-        "indicators/civic_participation.json",
         "indicators/business_entry_efficiency.json",
         "indicators/trade_compliance_efficiency.json",
         "indicators/dispute_resolution_efficiency.json",

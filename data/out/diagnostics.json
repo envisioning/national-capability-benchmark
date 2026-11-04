@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-03T19:47:54.889Z",
+  "generatedAt": "2026-11-04T10:01:00.942Z",
   "gdpSeries": "NY.GDP.PCAP.PP.KD",
   "income": [
     {
@@ -677,9 +677,9 @@
     },
     {
       "dimension": "agency",
-      "pearson": 0.492,
-      "spearman": 0.5,
-      "n": 130
+      "pearson": 0.493,
+      "spearman": 0.499,
+      "n": 128
     },
     {
       "dimension": "coordination",
@@ -689,9 +689,9 @@
     },
     {
       "dimension": "trust",
-      "pearson": 0.426,
-      "spearman": 0.445,
-      "n": 131
+      "pearson": 0.628,
+      "spearman": 0.665,
+      "n": 130
     },
     {
       "dimension": "learning",
@@ -719,9 +719,9 @@
     },
     {
       "dimension": "shared_purpose",
-      "pearson": 0.262,
-      "spearman": 0.267,
-      "n": 130
+      "pearson": 0.477,
+      "spearman": 0.496,
+      "n": 125
     }
   ],
   "dimensionPairs": [
@@ -738,6 +738,12 @@
       "n": 133
     },
     {
+      "a": "anticipation",
+      "b": "trust",
+      "r": 0.714,
+      "n": 130
+    },
+    {
       "a": "learning",
       "b": "experimentation",
       "r": 0.686,
@@ -748,6 +754,24 @@
       "b": "building",
       "r": 0.668,
       "n": 134
+    },
+    {
+      "a": "trust",
+      "b": "learning",
+      "r": 0.648,
+      "n": 130
+    },
+    {
+      "a": "anticipation",
+      "b": "shared_purpose",
+      "r": 0.614,
+      "n": 125
+    },
+    {
+      "a": "coordination",
+      "b": "trust",
+      "r": 0.603,
+      "n": 129
     },
     {
       "a": "anticipation",
@@ -763,15 +787,15 @@
     },
     {
       "a": "trust",
-      "b": "learning",
-      "r": 0.566,
-      "n": 131
+      "b": "experimentation",
+      "r": 0.565,
+      "n": 130
     },
     {
-      "a": "anticipation",
-      "b": "trust",
-      "r": 0.564,
-      "n": 132
+      "a": "agency",
+      "b": "experimentation",
+      "r": 0.563,
+      "n": 128
     },
     {
       "a": "anticipation",
@@ -780,34 +804,22 @@
       "n": 134
     },
     {
-      "a": "coordination",
-      "b": "trust",
-      "r": 0.549,
-      "n": 129
-    },
-    {
-      "a": "anticipation",
-      "b": "agency",
-      "r": 0.533,
-      "n": 131
-    },
-    {
       "a": "adaptability",
       "b": "building",
       "r": 0.532,
       "n": 134
     },
     {
+      "a": "anticipation",
+      "b": "agency",
+      "r": 0.53,
+      "n": 128
+    },
+    {
       "a": "coordination",
       "b": "learning",
       "r": 0.517,
       "n": 130
-    },
-    {
-      "a": "agency",
-      "b": "experimentation",
-      "r": 0.513,
-      "n": 131
     },
     {
       "a": "learning",
@@ -818,8 +830,8 @@
     {
       "a": "agency",
       "b": "learning",
-      "r": 0.475,
-      "n": 130
+      "r": 0.467,
+      "n": 128
     },
     {
       "a": "experimentation",
@@ -828,21 +840,51 @@
       "n": 135
     },
     {
-      "a": "trust",
-      "b": "experimentation",
-      "r": 0.431,
-      "n": 132
+      "a": "learning",
+      "b": "shared_purpose",
+      "r": 0.444,
+      "n": 125
     },
     {
-      "a": "anticipation",
+      "a": "agency",
       "b": "shared_purpose",
-      "r": 0.428,
-      "n": 131
+      "r": 0.435,
+      "n": 121
     },
     {
       "a": "coordination",
       "b": "experimentation",
       "r": 0.417,
+      "n": 130
+    },
+    {
+      "a": "experimentation",
+      "b": "shared_purpose",
+      "r": 0.41,
+      "n": 125
+    },
+    {
+      "a": "trust",
+      "b": "building",
+      "r": 0.406,
+      "n": 130
+    },
+    {
+      "a": "trust",
+      "b": "shared_purpose",
+      "r": 0.396,
+      "n": 124
+    },
+    {
+      "a": "coordination",
+      "b": "shared_purpose",
+      "r": 0.393,
+      "n": 123
+    },
+    {
+      "a": "trust",
+      "b": "adaptability",
+      "r": 0.384,
       "n": 130
     },
     {
@@ -852,46 +894,22 @@
       "n": 133
     },
     {
-      "a": "trust",
+      "a": "adaptability",
       "b": "shared_purpose",
-      "r": 0.338,
-      "n": 130
+      "r": 0.37,
+      "n": 125
     },
     {
       "a": "agency",
       "b": "trust",
-      "r": 0.335,
-      "n": 130
-    },
-    {
-      "a": "agency",
-      "b": "shared_purpose",
-      "r": 0.313,
-      "n": 129
-    },
-    {
-      "a": "learning",
-      "b": "shared_purpose",
-      "r": 0.307,
-      "n": 130
-    },
-    {
-      "a": "coordination",
-      "b": "shared_purpose",
-      "r": 0.302,
-      "n": 127
+      "r": 0.366,
+      "n": 126
     },
     {
       "a": "agency",
       "b": "building",
-      "r": 0.301,
-      "n": 130
-    },
-    {
-      "a": "adaptability",
-      "b": "shared_purpose",
-      "r": 0.293,
-      "n": 131
+      "r": 0.305,
+      "n": 128
     },
     {
       "a": "coordination",
@@ -906,40 +924,22 @@
       "n": 130
     },
     {
-      "a": "trust",
-      "b": "building",
-      "r": 0.275,
-      "n": 131
-    },
-    {
-      "a": "experimentation",
+      "a": "building",
       "b": "shared_purpose",
-      "r": 0.233,
-      "n": 131
-    },
-    {
-      "a": "trust",
-      "b": "adaptability",
-      "r": 0.227,
-      "n": 132
-    },
-    {
-      "a": "agency",
-      "b": "adaptability",
-      "r": 0.218,
-      "n": 131
+      "r": 0.243,
+      "n": 125
     },
     {
       "a": "agency",
       "b": "coordination",
-      "r": 0.192,
-      "n": 127
+      "r": 0.238,
+      "n": 125
     },
     {
-      "a": "building",
-      "b": "shared_purpose",
-      "r": 0.138,
-      "n": 130
+      "a": "agency",
+      "b": "adaptability",
+      "r": 0.2,
+      "n": 128
     }
   ],
   "duplicateDimensionCandidates": [],
@@ -958,13 +958,19 @@
         "building",
         "shared_purpose"
       ],
-      "countries": 125,
+      "countries": 119,
       "dropped": [
         {
           "iso3": "ARE",
           "missing": [
             "coordination",
             "trust"
+          ]
+        },
+        {
+          "iso3": "AZE",
+          "missing": [
+            "shared_purpose"
           ]
         },
         {
@@ -995,13 +1001,39 @@
         {
           "iso3": "IRN",
           "missing": [
-            "coordination"
+            "coordination",
+            "trust",
+            "shared_purpose"
+          ]
+        },
+        {
+          "iso3": "JOR",
+          "missing": [
+            "shared_purpose"
+          ]
+        },
+        {
+          "iso3": "LBN",
+          "missing": [
+            "agency"
           ]
         },
         {
           "iso3": "MWI",
           "missing": [
             "agency"
+          ]
+        },
+        {
+          "iso3": "NIC",
+          "missing": [
+            "agency"
+          ]
+        },
+        {
+          "iso3": "NZL",
+          "missing": [
+            "shared_purpose"
           ]
         },
         {
@@ -1017,6 +1049,12 @@
           ]
         },
         {
+          "iso3": "SGP",
+          "missing": [
+            "shared_purpose"
+          ]
+        },
+        {
           "iso3": "TTO",
           "missing": [
             "shared_purpose"
@@ -1025,175 +1063,178 @@
         {
           "iso3": "VEN",
           "missing": [
+            "agency",
             "coordination",
+            "trust",
             "learning",
-            "building"
+            "building",
+            "shared_purpose"
           ]
         }
       ],
       "eigenvalues": [
-        4.55,
-        1.126,
-        0.885,
-        0.848,
-        0.454,
-        0.423,
-        0.338,
-        0.232,
-        0.145
+        4.909,
+        1.014,
+        0.872,
+        0.752,
+        0.436,
+        0.371,
+        0.295,
+        0.215,
+        0.138
       ],
-      "firstFactorShare": 0.506,
+      "firstFactorShare": 0.545,
       "loadings": [
         {
           "dimension": "anticipation",
-          "loading": 0.926
+          "loading": 0.933
         },
         {
           "dimension": "agency",
-          "loading": 0.6
+          "loading": 0.601
         },
         {
           "dimension": "coordination",
-          "loading": 0.637
+          "loading": 0.678
         },
         {
           "dimension": "trust",
-          "loading": 0.661
+          "loading": 0.76
         },
         {
           "dimension": "learning",
-          "loading": 0.863
+          "loading": 0.856
         },
         {
           "dimension": "experimentation",
-          "loading": 0.843
+          "loading": 0.842
         },
         {
           "dimension": "adaptability",
-          "loading": 0.583
+          "loading": 0.595
         },
         {
           "dimension": "building",
-          "loading": 0.69
+          "loading": 0.67
         },
         {
           "dimension": "shared_purpose",
-          "loading": 0.467
+          "loading": 0.628
         }
       ],
       "income": {
-        "r": 0.831,
-        "rSquared": 0.69,
-        "n": 125
+        "r": 0.848,
+        "rSquared": 0.718,
+        "n": 119
       },
       "chance": {
         "draws": 2000,
         "seed": 20261001,
-        "mean": 0.159,
-        "p95": 0.174
+        "mean": 0.16,
+        "p95": 0.175
       }
     },
     "nearFull": null
   },
   "residualStructure": {
-    "completeCases": 125,
-    "excluded": 10,
+    "completeCases": 119,
+    "excluded": 16,
     "structure": {
-      "countries": 125,
+      "countries": 119,
       "eigenvalues": [
-        2.742,
-        1.44,
-        1.165,
-        1.084,
-        0.619,
-        0.566,
-        0.548,
-        0.461,
-        0.375
+        2.749,
+        1.448,
+        1.21,
+        1.105,
+        0.672,
+        0.539,
+        0.478,
+        0.425,
+        0.373
       ],
       "firstFactorShare": 0.305,
       "loadings": [
         {
           "dimension": "anticipation",
-          "loading": 0.807
+          "loading": 0.814
         },
         {
           "dimension": "agency",
-          "loading": 0.361
+          "loading": 0.402
         },
         {
           "dimension": "coordination",
-          "loading": 0.588
+          "loading": 0.63
         },
         {
           "dimension": "trust",
-          "loading": 0.643
+          "loading": 0.593
         },
         {
           "dimension": "learning",
-          "loading": 0.727
+          "loading": 0.716
         },
         {
           "dimension": "experimentation",
-          "loading": 0.583
+          "loading": 0.588
         },
         {
           "dimension": "adaptability",
-          "loading": 0.199
+          "loading": 0.213
         },
         {
           "dimension": "building",
-          "loading": 0.238
+          "loading": 0.201
         },
         {
           "dimension": "shared_purpose",
-          "loading": 0.487
+          "loading": 0.483
         }
       ],
       "chance": {
         "draws": 2000,
         "seed": 20261001,
-        "mean": 0.159,
+        "mean": 0.16,
         "p95": 0.175
       },
       "permutation": {
         "draws": 2000,
         "seed": 20261002,
-        "mean": 0.159,
-        "p95": 0.174
+        "mean": 0.16,
+        "p95": 0.175
       },
       "reading": "structure"
     },
     "peers": {
-      "countries": 125,
+      "countries": 119,
       "peerCount": 10,
-      "observedMean": 1.389,
+      "observedMean": 1.378,
       "incomeNull": {
         "draws": 2000,
         "seed": 20261004,
-        "mean": 1.439,
-        "p5": 1.399,
+        "mean": 1.438,
+        "p5": 1.396,
         "p95": 1.477
       },
-      "shapeShare": 0.222,
+      "shapeShare": 0.227,
       "shapeNull": {
         "draws": 2000,
         "seed": 20261003,
-        "mean": 0.173,
-        "p5": 0.159,
-        "p95": 0.189
+        "mean": 0.174,
+        "p5": 0.16,
+        "p95": 0.19
       },
       "noiseFloor": {
         "draws": 2000,
         "seed": 20261003,
-        "mean": 1.777,
+        "mean": 1.778,
         "p5": 1.714,
-        "p95": 1.835
+        "p95": 1.839
       },
-      "shareBeyond": 0.024,
+      "shareBeyond": 0.008,
       "shareNull": {
         "mean": 0.05,
-        "p95": 0.08
+        "p95": 0.084
       },
       "reading": "alike"
     },
@@ -1241,9 +1282,10 @@
           "10.0.2",
           "10.0.3",
           "10.0.4",
-          "10.0.5"
+          "10.0.5",
+          "10.1.0"
         ],
-        "pairs": 37,
+        "pairs": 38,
         "perDimension": [
           {
             "dimension": "anticipation",
@@ -1254,8 +1296,8 @@
           },
           {
             "dimension": "agency",
-            "pairs": 5,
-            "mean": 0.874,
+            "pairs": 6,
+            "mean": 0.879,
             "min": 0.78,
             "minCountries": 51
           },
@@ -1268,8 +1310,8 @@
           },
           {
             "dimension": "trust",
-            "pairs": 5,
-            "mean": 0.888,
+            "pairs": 6,
+            "mean": 0.868,
             "min": 0.718,
             "minCountries": 36
           },
@@ -1303,10 +1345,10 @@
           },
           {
             "dimension": "shared_purpose",
-            "pairs": 6,
-            "mean": 0.95,
-            "min": 0.759,
-            "minCountries": 47
+            "pairs": 7,
+            "mean": 0.92,
+            "min": 0.739,
+            "minCountries": 125
           }
         ],
         "reading": "mixed"
@@ -1321,9 +1363,9 @@
           },
           {
             "dimension": "agency",
-            "n": 130,
-            "maxSlopeShiftSe": 0.248,
-            "maxResidualShiftSd": 0.045
+            "n": 128,
+            "maxSlopeShiftSe": 0.231,
+            "maxResidualShiftSd": 0.051
           },
           {
             "dimension": "coordination",
@@ -1333,9 +1375,9 @@
           },
           {
             "dimension": "trust",
-            "n": 131,
-            "maxSlopeShiftSe": 0.279,
-            "maxResidualShiftSd": 0.062
+            "n": 130,
+            "maxSlopeShiftSe": 0.297,
+            "maxResidualShiftSd": 0.066
           },
           {
             "dimension": "learning",
@@ -1363,20 +1405,20 @@
           },
           {
             "dimension": "shared_purpose",
-            "n": 130,
-            "maxSlopeShiftSe": 0.344,
-            "maxResidualShiftSd": 0.074
+            "n": 125,
+            "maxSlopeShiftSe": 0.279,
+            "maxResidualShiftSd": 0.054
           }
         ],
         "reading": "robust"
       }
     },
     "incomeShare": {
-      "countries": 125,
-      "mean": 0.249,
-      "median": 0.293,
-      "pooled": 0.41,
-      "reading": "little"
+      "countries": 119,
+      "mean": 0.273,
+      "median": 0.374,
+      "pooled": 0.434,
+      "reading": "part"
     },
     "weakClaim": "fails"
   },
@@ -1434,14 +1476,6 @@
       "dimension": "building",
       "measurementClass": "C",
       "r": 0.615,
-      "wealthProxyPrior": 0.25,
-      "flaggedAsWealthProxy": false
-    },
-    {
-      "indicatorId": "interpersonal_trust",
-      "dimension": "trust",
-      "measurementClass": "P",
-      "r": 0.604,
       "wealthProxyPrior": 0.25,
       "flaggedAsWealthProxy": false
     },
@@ -1590,14 +1624,6 @@
       "flaggedAsWealthProxy": false
     },
     {
-      "indicatorId": "willingness_to_cooperate_strangers",
-      "dimension": "trust",
-      "measurementClass": "P",
-      "r": 0.318,
-      "wealthProxyPrior": 0.15,
-      "flaggedAsWealthProxy": false
-    },
-    {
       "indicatorId": "early_stage_entrepreneurial_activity",
       "dimension": "experimentation",
       "measurementClass": "C",
@@ -1611,14 +1637,6 @@
       "measurementClass": "C",
       "r": 0.285,
       "wealthProxyPrior": 0.15,
-      "flaggedAsWealthProxy": false
-    },
-    {
-      "indicatorId": "civic_participation",
-      "dimension": "shared_purpose",
-      "measurementClass": "C",
-      "r": -0.271,
-      "wealthProxyPrior": 0.1,
       "flaggedAsWealthProxy": false
     },
     {
@@ -1652,14 +1670,6 @@
       "r": 0.012,
       "wealthProxyPrior": 0.25,
       "flaggedAsWealthProxy": false
-    },
-    {
-      "indicatorId": "perceived_control",
-      "dimension": "agency",
-      "measurementClass": "P",
-      "r": -0.006,
-      "wealthProxyPrior": 0.2,
-      "flaggedAsWealthProxy": false
     }
   ],
   "wealthAttribution": [
@@ -1673,23 +1683,9 @@
     {
       "indicatorId": "tax_revenue_gdp",
       "dimension": "shared_purpose",
-      "dimensionR": 0.262,
-      "dimensionRWithout": 0.063,
-      "delta": 0.199
-    },
-    {
-      "indicatorId": "new_business_density",
-      "dimension": "agency",
-      "dimensionR": 0.457,
-      "dimensionRWithout": 0.291,
-      "delta": 0.166
-    },
-    {
-      "indicatorId": "court_compliance",
-      "dimension": "trust",
-      "dimensionR": 0.403,
-      "dimensionRWithout": 0.28,
-      "delta": 0.124
+      "dimensionR": 0.454,
+      "dimensionRWithout": 0.333,
+      "delta": 0.121
     },
     {
       "indicatorId": "new_repositories_per_million",
@@ -1697,13 +1693,6 @@
       "dimensionR": 0.739,
       "dimensionRWithout": 0.619,
       "delta": 0.12
-    },
-    {
-      "indicatorId": "income_inequality",
-      "dimension": "shared_purpose",
-      "dimensionR": 0.262,
-      "dimensionRWithout": 0.146,
-      "delta": 0.116
     },
     {
       "indicatorId": "statistical_performance",
@@ -1720,18 +1709,18 @@
       "delta": 0.105
     },
     {
+      "indicatorId": "income_inequality",
+      "dimension": "shared_purpose",
+      "dimensionR": 0.454,
+      "dimensionRWithout": 0.351,
+      "delta": 0.103
+    },
+    {
       "indicatorId": "economic_complexity",
       "dimension": "building",
       "dimensionR": 0.629,
       "dimensionRWithout": 0.532,
       "delta": 0.097
-    },
-    {
-      "indicatorId": "dispute_resolution_efficiency",
-      "dimension": "trust",
-      "dimensionR": 0.403,
-      "dimensionRWithout": 0.315,
-      "delta": 0.088
     },
     {
       "indicatorId": "long_term_unemployment_share",
@@ -1755,6 +1744,20 @@
       "delta": 0.06
     },
     {
+      "indicatorId": "bribery_incidence",
+      "dimension": "trust",
+      "dimensionR": 0.58,
+      "dimensionRWithout": 0.52,
+      "delta": 0.06
+    },
+    {
+      "indicatorId": "new_business_density",
+      "dimension": "agency",
+      "dimensionR": 0.45,
+      "dimensionRWithout": 0.393,
+      "delta": 0.057
+    },
+    {
       "indicatorId": "sci_articles_per_million",
       "dimension": "anticipation",
       "dimensionR": 0.866,
@@ -1776,6 +1779,13 @@
       "delta": 0.044
     },
     {
+      "indicatorId": "court_compliance",
+      "dimension": "trust",
+      "dimensionR": 0.58,
+      "dimensionRWithout": 0.546,
+      "delta": 0.035
+    },
+    {
       "indicatorId": "utility_connection_efficiency",
       "dimension": "building",
       "dimensionR": 0.629,
@@ -1783,18 +1793,18 @@
       "delta": 0.034
     },
     {
-      "indicatorId": "bribery_incidence",
+      "indicatorId": "dispute_resolution_efficiency",
       "dimension": "trust",
-      "dimensionR": 0.403,
-      "dimensionRWithout": 0.373,
+      "dimensionR": 0.58,
+      "dimensionRWithout": 0.549,
       "delta": 0.031
     },
     {
       "indicatorId": "business_entry_efficiency",
       "dimension": "agency",
-      "dimensionR": 0.457,
-      "dimensionRWithout": 0.434,
-      "delta": 0.023
+      "dimensionR": 0.45,
+      "dimensionRWithout": 0.428,
+      "delta": 0.022
     },
     {
       "indicatorId": "budget_execution_fidelity",
@@ -1825,11 +1835,11 @@
       "delta": 0.009
     },
     {
-      "indicatorId": "perceived_control",
+      "indicatorId": "business_start_procedures",
       "dimension": "agency",
-      "dimensionR": 0.457,
-      "dimensionRWithout": 0.45,
-      "delta": 0.007
+      "dimensionR": 0.45,
+      "dimensionRWithout": 0.447,
+      "delta": 0.003
     },
     {
       "indicatorId": "failure_tolerance",
@@ -1853,13 +1863,6 @@
       "delta": -0.024
     },
     {
-      "indicatorId": "business_start_procedures",
-      "dimension": "agency",
-      "dimensionR": 0.457,
-      "dimensionRWithout": 0.484,
-      "delta": -0.027
-    },
-    {
       "indicatorId": "firm_training_incidence",
       "dimension": "learning",
       "dimensionR": 0.713,
@@ -1874,13 +1877,6 @@
       "delta": -0.031
     },
     {
-      "indicatorId": "interpersonal_trust",
-      "dimension": "trust",
-      "dimensionR": 0.403,
-      "dimensionRWithout": 0.471,
-      "delta": -0.068
-    },
-    {
       "indicatorId": "research_citation_impact",
       "dimension": "learning",
       "dimensionR": 0.713,
@@ -1893,20 +1889,6 @@
       "dimensionR": 0.536,
       "dimensionRWithout": 0.611,
       "delta": -0.075
-    },
-    {
-      "indicatorId": "willingness_to_cooperate_strangers",
-      "dimension": "trust",
-      "dimensionR": 0.403,
-      "dimensionRWithout": 0.502,
-      "delta": -0.099
-    },
-    {
-      "indicatorId": "civic_participation",
-      "dimension": "shared_purpose",
-      "dimensionR": 0.262,
-      "dimensionRWithout": 0.454,
-      "delta": -0.192
     }
   ],
   "panelVsGdp": {
@@ -1929,13 +1911,13 @@
       },
       {
         "dimension": "agency",
-        "panelR": 0.757,
-        "panelSpearman": 0.757,
-        "panelN": 133,
-        "indicatorR": 0.492,
-        "indicatorN": 130,
-        "delta": 0.265,
-        "flaggedAsWealthProxy": true,
+        "panelR": null,
+        "panelSpearman": null,
+        "panelN": 0,
+        "indicatorR": null,
+        "indicatorN": 0,
+        "delta": null,
+        "flaggedAsWealthProxy": false,
         "backfillCandidate": false
       },
       {
@@ -1951,12 +1933,12 @@
       },
       {
         "dimension": "trust",
-        "panelR": 0.639,
-        "panelSpearman": 0.635,
-        "panelN": 133,
-        "indicatorR": 0.426,
-        "indicatorN": 131,
-        "delta": 0.213,
+        "panelR": null,
+        "panelSpearman": null,
+        "panelN": 0,
+        "indicatorR": null,
+        "indicatorN": 0,
+        "delta": null,
         "flaggedAsWealthProxy": false,
         "backfillCandidate": false
       },
@@ -2006,26 +1988,2052 @@
       },
       {
         "dimension": "shared_purpose",
-        "panelR": 0.564,
-        "panelSpearman": 0.562,
-        "panelN": 133,
-        "indicatorR": 0.262,
-        "indicatorN": 130,
-        "delta": 0.301,
+        "panelR": null,
+        "panelSpearman": null,
+        "panelN": 0,
+        "indicatorR": null,
+        "indicatorN": 0,
+        "delta": null,
         "flaggedAsWealthProxy": false,
         "backfillCandidate": false
       }
     ]
   },
   "delphiApplication": {
-    "datasetVersion": "10.0.5",
+    "datasetVersion": "10.1.0",
     "sourceDatasetVersion": "10.0.2",
     "mode": "carried",
     "cells": 1215,
-    "carried": 1215,
-    "dropped": [],
-    "judgementsCarried": 138,
-    "judgementsDropped": 60
+    "carried": 810,
+    "dropped": [
+      {
+        "iso3": "AGO",
+        "dimension": "agency",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "ALB",
+        "dimension": "agency",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "ARE",
+        "dimension": "agency",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "ARG",
+        "dimension": "agency",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "ARM",
+        "dimension": "agency",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "AUS",
+        "dimension": "agency",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "AUT",
+        "dimension": "agency",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "AZE",
+        "dimension": "agency",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "BDI",
+        "dimension": "agency",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "BEL",
+        "dimension": "agency",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "BFA",
+        "dimension": "agency",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "BGD",
+        "dimension": "agency",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "BGR",
+        "dimension": "agency",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "BIH",
+        "dimension": "agency",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "BLR",
+        "dimension": "agency",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "BOL",
+        "dimension": "agency",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "BRA",
+        "dimension": "agency",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "BWA",
+        "dimension": "agency",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "CAF",
+        "dimension": "agency",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "CAN",
+        "dimension": "agency",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "CHE",
+        "dimension": "agency",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "CHL",
+        "dimension": "agency",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "CHN",
+        "dimension": "agency",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "CIV",
+        "dimension": "agency",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "CMR",
+        "dimension": "agency",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "COD",
+        "dimension": "agency",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "COG",
+        "dimension": "agency",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "COL",
+        "dimension": "agency",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "CRI",
+        "dimension": "agency",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "CUB",
+        "dimension": "agency",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "CYP",
+        "dimension": "agency",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "CZE",
+        "dimension": "agency",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "DEU",
+        "dimension": "agency",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "DNK",
+        "dimension": "agency",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "DOM",
+        "dimension": "agency",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "ECU",
+        "dimension": "agency",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "EGY",
+        "dimension": "agency",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "ESP",
+        "dimension": "agency",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "EST",
+        "dimension": "agency",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "ETH",
+        "dimension": "agency",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "FIN",
+        "dimension": "agency",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "FRA",
+        "dimension": "agency",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "GBR",
+        "dimension": "agency",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "GEO",
+        "dimension": "agency",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "GHA",
+        "dimension": "agency",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "GIN",
+        "dimension": "agency",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "GMB",
+        "dimension": "agency",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "GNB",
+        "dimension": "agency",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "GRC",
+        "dimension": "agency",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "GTM",
+        "dimension": "agency",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "HND",
+        "dimension": "agency",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "HRV",
+        "dimension": "agency",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "HTI",
+        "dimension": "agency",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "HUN",
+        "dimension": "agency",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "IDN",
+        "dimension": "agency",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "IND",
+        "dimension": "agency",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "IRL",
+        "dimension": "agency",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "IRN",
+        "dimension": "agency",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "IRQ",
+        "dimension": "agency",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "ISR",
+        "dimension": "agency",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "ITA",
+        "dimension": "agency",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "JAM",
+        "dimension": "agency",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "JOR",
+        "dimension": "agency",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "JPN",
+        "dimension": "agency",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "KAZ",
+        "dimension": "agency",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "KEN",
+        "dimension": "agency",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "KGZ",
+        "dimension": "agency",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "KOR",
+        "dimension": "agency",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "LAO",
+        "dimension": "agency",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "LBN",
+        "dimension": "agency",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "LBR",
+        "dimension": "agency",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "LKA",
+        "dimension": "agency",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "LSO",
+        "dimension": "agency",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "LTU",
+        "dimension": "agency",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "LVA",
+        "dimension": "agency",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "MAR",
+        "dimension": "agency",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "MDA",
+        "dimension": "agency",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "MDG",
+        "dimension": "agency",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "MEX",
+        "dimension": "agency",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "MKD",
+        "dimension": "agency",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "MLI",
+        "dimension": "agency",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "MMR",
+        "dimension": "agency",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "MNG",
+        "dimension": "agency",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "MOZ",
+        "dimension": "agency",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "MRT",
+        "dimension": "agency",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "MUS",
+        "dimension": "agency",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "MWI",
+        "dimension": "agency",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "MYS",
+        "dimension": "agency",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "NAM",
+        "dimension": "agency",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "NGA",
+        "dimension": "agency",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "NIC",
+        "dimension": "agency",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "NLD",
+        "dimension": "agency",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "NOR",
+        "dimension": "agency",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "NPL",
+        "dimension": "agency",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "NZL",
+        "dimension": "agency",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "PAK",
+        "dimension": "agency",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "PAN",
+        "dimension": "agency",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "PER",
+        "dimension": "agency",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "PHL",
+        "dimension": "agency",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "PNG",
+        "dimension": "agency",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "POL",
+        "dimension": "agency",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "PRT",
+        "dimension": "agency",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "PRY",
+        "dimension": "agency",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "ROU",
+        "dimension": "agency",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "RUS",
+        "dimension": "agency",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "RWA",
+        "dimension": "agency",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "SDN",
+        "dimension": "agency",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "SEN",
+        "dimension": "agency",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "SGP",
+        "dimension": "agency",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "SLE",
+        "dimension": "agency",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "SLV",
+        "dimension": "agency",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "SRB",
+        "dimension": "agency",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "SVK",
+        "dimension": "agency",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "SVN",
+        "dimension": "agency",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "SWE",
+        "dimension": "agency",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "SWZ",
+        "dimension": "agency",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "TCD",
+        "dimension": "agency",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "TGO",
+        "dimension": "agency",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "THA",
+        "dimension": "agency",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "TJK",
+        "dimension": "agency",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "TLS",
+        "dimension": "agency",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "TTO",
+        "dimension": "agency",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "TUN",
+        "dimension": "agency",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "TUR",
+        "dimension": "agency",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "TZA",
+        "dimension": "agency",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "UGA",
+        "dimension": "agency",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "UKR",
+        "dimension": "agency",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "URY",
+        "dimension": "agency",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "USA",
+        "dimension": "agency",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "UZB",
+        "dimension": "agency",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "VEN",
+        "dimension": "agency",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "VNM",
+        "dimension": "agency",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "ZAF",
+        "dimension": "agency",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "ZMB",
+        "dimension": "agency",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "ZWE",
+        "dimension": "agency",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "AGO",
+        "dimension": "shared_purpose",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "ALB",
+        "dimension": "shared_purpose",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "ARE",
+        "dimension": "shared_purpose",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "ARG",
+        "dimension": "shared_purpose",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "ARM",
+        "dimension": "shared_purpose",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "AUS",
+        "dimension": "shared_purpose",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "AUT",
+        "dimension": "shared_purpose",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "AZE",
+        "dimension": "shared_purpose",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "BDI",
+        "dimension": "shared_purpose",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "BEL",
+        "dimension": "shared_purpose",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "BFA",
+        "dimension": "shared_purpose",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "BGD",
+        "dimension": "shared_purpose",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "BGR",
+        "dimension": "shared_purpose",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "BIH",
+        "dimension": "shared_purpose",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "BLR",
+        "dimension": "shared_purpose",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "BOL",
+        "dimension": "shared_purpose",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "BRA",
+        "dimension": "shared_purpose",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "BWA",
+        "dimension": "shared_purpose",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "CAF",
+        "dimension": "shared_purpose",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "CAN",
+        "dimension": "shared_purpose",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "CHE",
+        "dimension": "shared_purpose",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "CHL",
+        "dimension": "shared_purpose",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "CHN",
+        "dimension": "shared_purpose",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "CIV",
+        "dimension": "shared_purpose",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "CMR",
+        "dimension": "shared_purpose",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "COD",
+        "dimension": "shared_purpose",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "COG",
+        "dimension": "shared_purpose",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "COL",
+        "dimension": "shared_purpose",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "CRI",
+        "dimension": "shared_purpose",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "CUB",
+        "dimension": "shared_purpose",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "CYP",
+        "dimension": "shared_purpose",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "CZE",
+        "dimension": "shared_purpose",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "DEU",
+        "dimension": "shared_purpose",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "DNK",
+        "dimension": "shared_purpose",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "DOM",
+        "dimension": "shared_purpose",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "ECU",
+        "dimension": "shared_purpose",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "EGY",
+        "dimension": "shared_purpose",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "ESP",
+        "dimension": "shared_purpose",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "EST",
+        "dimension": "shared_purpose",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "ETH",
+        "dimension": "shared_purpose",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "FIN",
+        "dimension": "shared_purpose",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "FRA",
+        "dimension": "shared_purpose",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "GBR",
+        "dimension": "shared_purpose",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "GEO",
+        "dimension": "shared_purpose",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "GHA",
+        "dimension": "shared_purpose",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "GIN",
+        "dimension": "shared_purpose",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "GMB",
+        "dimension": "shared_purpose",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "GNB",
+        "dimension": "shared_purpose",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "GRC",
+        "dimension": "shared_purpose",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "GTM",
+        "dimension": "shared_purpose",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "HND",
+        "dimension": "shared_purpose",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "HRV",
+        "dimension": "shared_purpose",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "HTI",
+        "dimension": "shared_purpose",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "HUN",
+        "dimension": "shared_purpose",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "IDN",
+        "dimension": "shared_purpose",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "IND",
+        "dimension": "shared_purpose",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "IRL",
+        "dimension": "shared_purpose",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "IRN",
+        "dimension": "shared_purpose",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "IRQ",
+        "dimension": "shared_purpose",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "ISR",
+        "dimension": "shared_purpose",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "ITA",
+        "dimension": "shared_purpose",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "JAM",
+        "dimension": "shared_purpose",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "JOR",
+        "dimension": "shared_purpose",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "JPN",
+        "dimension": "shared_purpose",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "KAZ",
+        "dimension": "shared_purpose",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "KEN",
+        "dimension": "shared_purpose",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "KGZ",
+        "dimension": "shared_purpose",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "KOR",
+        "dimension": "shared_purpose",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "LAO",
+        "dimension": "shared_purpose",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "LBN",
+        "dimension": "shared_purpose",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "LBR",
+        "dimension": "shared_purpose",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "LKA",
+        "dimension": "shared_purpose",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "LSO",
+        "dimension": "shared_purpose",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "LTU",
+        "dimension": "shared_purpose",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "LVA",
+        "dimension": "shared_purpose",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "MAR",
+        "dimension": "shared_purpose",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "MDA",
+        "dimension": "shared_purpose",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "MDG",
+        "dimension": "shared_purpose",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "MEX",
+        "dimension": "shared_purpose",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "MKD",
+        "dimension": "shared_purpose",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "MLI",
+        "dimension": "shared_purpose",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "MMR",
+        "dimension": "shared_purpose",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "MNG",
+        "dimension": "shared_purpose",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "MOZ",
+        "dimension": "shared_purpose",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "MRT",
+        "dimension": "shared_purpose",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "MUS",
+        "dimension": "shared_purpose",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "MWI",
+        "dimension": "shared_purpose",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "MYS",
+        "dimension": "shared_purpose",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "NAM",
+        "dimension": "shared_purpose",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "NGA",
+        "dimension": "shared_purpose",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "NIC",
+        "dimension": "shared_purpose",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "NLD",
+        "dimension": "shared_purpose",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "NOR",
+        "dimension": "shared_purpose",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "NPL",
+        "dimension": "shared_purpose",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "NZL",
+        "dimension": "shared_purpose",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "PAK",
+        "dimension": "shared_purpose",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "PAN",
+        "dimension": "shared_purpose",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "PER",
+        "dimension": "shared_purpose",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "PHL",
+        "dimension": "shared_purpose",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "PNG",
+        "dimension": "shared_purpose",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "POL",
+        "dimension": "shared_purpose",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "PRT",
+        "dimension": "shared_purpose",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "PRY",
+        "dimension": "shared_purpose",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "ROU",
+        "dimension": "shared_purpose",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "RUS",
+        "dimension": "shared_purpose",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "RWA",
+        "dimension": "shared_purpose",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "SDN",
+        "dimension": "shared_purpose",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "SEN",
+        "dimension": "shared_purpose",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "SGP",
+        "dimension": "shared_purpose",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "SLE",
+        "dimension": "shared_purpose",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "SLV",
+        "dimension": "shared_purpose",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "SRB",
+        "dimension": "shared_purpose",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "SVK",
+        "dimension": "shared_purpose",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "SVN",
+        "dimension": "shared_purpose",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "SWE",
+        "dimension": "shared_purpose",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "SWZ",
+        "dimension": "shared_purpose",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "TCD",
+        "dimension": "shared_purpose",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "TGO",
+        "dimension": "shared_purpose",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "THA",
+        "dimension": "shared_purpose",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "TJK",
+        "dimension": "shared_purpose",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "TLS",
+        "dimension": "shared_purpose",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "TTO",
+        "dimension": "shared_purpose",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "TUN",
+        "dimension": "shared_purpose",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "TUR",
+        "dimension": "shared_purpose",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "TZA",
+        "dimension": "shared_purpose",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "UGA",
+        "dimension": "shared_purpose",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "UKR",
+        "dimension": "shared_purpose",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "URY",
+        "dimension": "shared_purpose",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "USA",
+        "dimension": "shared_purpose",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "UZB",
+        "dimension": "shared_purpose",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "VEN",
+        "dimension": "shared_purpose",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "VNM",
+        "dimension": "shared_purpose",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "ZAF",
+        "dimension": "shared_purpose",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "ZMB",
+        "dimension": "shared_purpose",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "ZWE",
+        "dimension": "shared_purpose",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "AGO",
+        "dimension": "trust",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "ALB",
+        "dimension": "trust",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "ARE",
+        "dimension": "trust",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "ARG",
+        "dimension": "trust",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "ARM",
+        "dimension": "trust",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "AUS",
+        "dimension": "trust",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "AUT",
+        "dimension": "trust",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "AZE",
+        "dimension": "trust",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "BDI",
+        "dimension": "trust",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "BEL",
+        "dimension": "trust",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "BFA",
+        "dimension": "trust",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "BGD",
+        "dimension": "trust",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "BGR",
+        "dimension": "trust",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "BIH",
+        "dimension": "trust",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "BLR",
+        "dimension": "trust",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "BOL",
+        "dimension": "trust",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "BRA",
+        "dimension": "trust",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "BWA",
+        "dimension": "trust",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "CAF",
+        "dimension": "trust",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "CAN",
+        "dimension": "trust",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "CHE",
+        "dimension": "trust",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "CHL",
+        "dimension": "trust",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "CHN",
+        "dimension": "trust",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "CIV",
+        "dimension": "trust",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "CMR",
+        "dimension": "trust",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "COD",
+        "dimension": "trust",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "COG",
+        "dimension": "trust",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "COL",
+        "dimension": "trust",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "CRI",
+        "dimension": "trust",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "CUB",
+        "dimension": "trust",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "CYP",
+        "dimension": "trust",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "CZE",
+        "dimension": "trust",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "DEU",
+        "dimension": "trust",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "DNK",
+        "dimension": "trust",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "DOM",
+        "dimension": "trust",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "ECU",
+        "dimension": "trust",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "EGY",
+        "dimension": "trust",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "ESP",
+        "dimension": "trust",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "EST",
+        "dimension": "trust",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "ETH",
+        "dimension": "trust",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "FIN",
+        "dimension": "trust",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "FRA",
+        "dimension": "trust",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "GBR",
+        "dimension": "trust",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "GEO",
+        "dimension": "trust",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "GHA",
+        "dimension": "trust",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "GIN",
+        "dimension": "trust",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "GMB",
+        "dimension": "trust",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "GNB",
+        "dimension": "trust",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "GRC",
+        "dimension": "trust",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "GTM",
+        "dimension": "trust",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "HND",
+        "dimension": "trust",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "HRV",
+        "dimension": "trust",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "HTI",
+        "dimension": "trust",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "HUN",
+        "dimension": "trust",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "IDN",
+        "dimension": "trust",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "IND",
+        "dimension": "trust",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "IRL",
+        "dimension": "trust",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "IRN",
+        "dimension": "trust",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "IRQ",
+        "dimension": "trust",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "ISR",
+        "dimension": "trust",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "ITA",
+        "dimension": "trust",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "JAM",
+        "dimension": "trust",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "JOR",
+        "dimension": "trust",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "JPN",
+        "dimension": "trust",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "KAZ",
+        "dimension": "trust",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "KEN",
+        "dimension": "trust",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "KGZ",
+        "dimension": "trust",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "KOR",
+        "dimension": "trust",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "LAO",
+        "dimension": "trust",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "LBN",
+        "dimension": "trust",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "LBR",
+        "dimension": "trust",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "LKA",
+        "dimension": "trust",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "LSO",
+        "dimension": "trust",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "LTU",
+        "dimension": "trust",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "LVA",
+        "dimension": "trust",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "MAR",
+        "dimension": "trust",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "MDA",
+        "dimension": "trust",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "MDG",
+        "dimension": "trust",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "MEX",
+        "dimension": "trust",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "MKD",
+        "dimension": "trust",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "MLI",
+        "dimension": "trust",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "MMR",
+        "dimension": "trust",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "MNG",
+        "dimension": "trust",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "MOZ",
+        "dimension": "trust",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "MRT",
+        "dimension": "trust",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "MUS",
+        "dimension": "trust",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "MWI",
+        "dimension": "trust",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "MYS",
+        "dimension": "trust",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "NAM",
+        "dimension": "trust",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "NGA",
+        "dimension": "trust",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "NIC",
+        "dimension": "trust",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "NLD",
+        "dimension": "trust",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "NOR",
+        "dimension": "trust",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "NPL",
+        "dimension": "trust",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "NZL",
+        "dimension": "trust",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "PAK",
+        "dimension": "trust",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "PAN",
+        "dimension": "trust",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "PER",
+        "dimension": "trust",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "PHL",
+        "dimension": "trust",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "PNG",
+        "dimension": "trust",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "POL",
+        "dimension": "trust",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "PRT",
+        "dimension": "trust",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "PRY",
+        "dimension": "trust",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "ROU",
+        "dimension": "trust",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "RUS",
+        "dimension": "trust",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "RWA",
+        "dimension": "trust",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "SDN",
+        "dimension": "trust",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "SEN",
+        "dimension": "trust",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "SGP",
+        "dimension": "trust",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "SLE",
+        "dimension": "trust",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "SLV",
+        "dimension": "trust",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "SRB",
+        "dimension": "trust",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "SVK",
+        "dimension": "trust",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "SVN",
+        "dimension": "trust",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "SWE",
+        "dimension": "trust",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "SWZ",
+        "dimension": "trust",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "TCD",
+        "dimension": "trust",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "TGO",
+        "dimension": "trust",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "THA",
+        "dimension": "trust",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "TJK",
+        "dimension": "trust",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "TLS",
+        "dimension": "trust",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "TTO",
+        "dimension": "trust",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "TUN",
+        "dimension": "trust",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "TUR",
+        "dimension": "trust",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "TZA",
+        "dimension": "trust",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "UGA",
+        "dimension": "trust",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "UKR",
+        "dimension": "trust",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "URY",
+        "dimension": "trust",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "USA",
+        "dimension": "trust",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "UZB",
+        "dimension": "trust",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "VEN",
+        "dimension": "trust",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "VNM",
+        "dimension": "trust",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "ZAF",
+        "dimension": "trust",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "ZMB",
+        "dimension": "trust",
+        "reason": "brief_changed"
+      },
+      {
+        "iso3": "ZWE",
+        "dimension": "trust",
+        "reason": "brief_changed"
+      }
+    ],
+    "judgementsCarried": 99,
+    "judgementsDropped": 99
   },
   "redundantIndicatorPairs": [],
   "measurability": [
@@ -2048,11 +4056,11 @@
     {
       "dimension": "agency",
       "indicatorsDefined": 6,
-      "indicatorsObserved": 4,
-      "gaps": 1,
+      "indicatorsObserved": 3,
+      "gaps": 2,
       "retired": 1,
-      "meanCoverage": 0.613,
-      "meanConfidence": 0.468,
+      "meanCoverage": 0.507,
+      "meanConfidence": 0.393,
       "classMix": {
         "C": 5,
         "I": 0,
@@ -2080,11 +4088,11 @@
     {
       "dimension": "trust",
       "indicatorsDefined": 11,
-      "indicatorsObserved": 5,
-      "gaps": 2,
+      "indicatorsObserved": 3,
+      "gaps": 4,
       "retired": 4,
-      "meanCoverage": 0.52,
-      "meanConfidence": 0.386,
+      "meanCoverage": 0.368,
+      "meanConfidence": 0.277,
       "classMix": {
         "C": 2,
         "I": 0,
@@ -2160,18 +4168,18 @@
     {
       "dimension": "shared_purpose",
       "indicatorsDefined": 7,
-      "indicatorsObserved": 3,
-      "gaps": 3,
+      "indicatorsObserved": 2,
+      "gaps": 4,
       "retired": 1,
-      "meanCoverage": 0.41,
-      "meanConfidence": 0.322,
+      "meanCoverage": 0.321,
+      "meanConfidence": 0.259,
       "classMix": {
         "C": 2,
         "I": 0,
         "O": 2,
         "P": 3
       },
-      "subjectivityShare": 0.571
+      "subjectivityShare": 0.714
     }
   ],
   "familyBalance": [
@@ -2186,11 +4194,11 @@
         {
           "family": "social",
           "indicatorsDefined": 2,
-          "indicatorsObserved": 2
+          "indicatorsObserved": 0
         }
       ],
-      "countriesOnOneFamily": 60,
-      "countriesScored": 132
+      "countriesOnOneFamily": 130,
+      "countriesScored": 130
     }
   ],
   "behaviouralChecks": [
@@ -2201,8 +4209,8 @@
       "countries": 135,
       "latestYear": 2025,
       "r": -0.221,
-      "dimensionR": -0.082,
-      "dimensionN": 131
+      "dimensionR": -0.122,
+      "dimensionN": 125
     },
     {
       "checkId": "voter_turnout",
@@ -2211,18 +4219,8 @@
       "countries": 134,
       "latestYear": 2025,
       "r": 0.181,
-      "dimensionR": 0.074,
-      "dimensionN": 130
-    },
-    {
-      "checkId": "institutional_trust",
-      "dimension": "trust",
-      "name": "Confidence in the courts",
-      "countries": 71,
-      "latestYear": 2022,
-      "r": -0.274,
-      "dimensionR": 0.032,
-      "dimensionN": 71
+      "dimensionR": -0.006,
+      "dimensionN": 124
     },
     {
       "checkId": "customs_clearance_time",
@@ -2281,8 +4279,8 @@
       "latestYear": 2025,
       "r": 0.904,
       "n": 133,
-      "dimensionR": 0.455,
-      "dimensionN": 131
+      "dimensionR": 0.451,
+      "dimensionN": 128
     },
     {
       "indicatorId": "account_ownership",
@@ -2293,8 +4291,8 @@
       "latestYear": 2024,
       "r": 0.788,
       "n": 130,
-      "dimensionR": 0.41,
-      "dimensionN": 128
+      "dimensionR": 0.455,
+      "dimensionN": 125
     },
     {
       "indicatorId": "domestic_credit_private",
@@ -2305,8 +4303,8 @@
       "latestYear": 2025,
       "r": 0.607,
       "n": 133,
-      "dimensionR": 0.355,
-      "dimensionN": 131
+      "dimensionR": 0.405,
+      "dimensionN": 128
     },
     {
       "indicatorId": "tertiary_enrollment",
@@ -2683,22 +4681,6 @@
         "lowDiscrimination": false
       },
       {
-        "indicatorId": "perceived_control",
-        "dimension": "agency",
-        "countries": 0,
-        "years": 0,
-        "firstYear": null,
-        "lastYear": null,
-        "firstSpread": null,
-        "lastSpread": null,
-        "changeShare": null,
-        "spearman": null,
-        "carriedForwardCells": 0,
-        "clampedCells": 0,
-        "fading": false,
-        "lowDiscrimination": false
-      },
-      {
         "indicatorId": "trade_compliance_efficiency",
         "dimension": "coordination",
         "countries": 0,
@@ -2716,38 +4698,6 @@
       },
       {
         "indicatorId": "dispute_resolution_efficiency",
-        "dimension": "trust",
-        "countries": 0,
-        "years": 0,
-        "firstYear": null,
-        "lastYear": null,
-        "firstSpread": null,
-        "lastSpread": null,
-        "changeShare": null,
-        "spearman": null,
-        "carriedForwardCells": 0,
-        "clampedCells": 0,
-        "fading": false,
-        "lowDiscrimination": false
-      },
-      {
-        "indicatorId": "interpersonal_trust",
-        "dimension": "trust",
-        "countries": 0,
-        "years": 0,
-        "firstYear": null,
-        "lastYear": null,
-        "firstSpread": null,
-        "lastSpread": null,
-        "changeShare": null,
-        "spearman": null,
-        "carriedForwardCells": 0,
-        "clampedCells": 0,
-        "fading": false,
-        "lowDiscrimination": false
-      },
-      {
-        "indicatorId": "willingness_to_cooperate_strangers",
         "dimension": "trust",
         "countries": 0,
         "years": 0,
@@ -2953,22 +4903,6 @@
         "clampedCells": 2,
         "fading": false,
         "lowDiscrimination": false
-      },
-      {
-        "indicatorId": "civic_participation",
-        "dimension": "shared_purpose",
-        "countries": 0,
-        "years": 0,
-        "firstYear": null,
-        "lastYear": null,
-        "firstSpread": null,
-        "lastSpread": null,
-        "changeShare": null,
-        "spearman": null,
-        "carriedForwardCells": 0,
-        "clampedCells": 0,
-        "fading": false,
-        "lowDiscrimination": false
       }
     ]
   },
@@ -3044,7 +4978,7 @@
       {
         "iso3": "SGP",
         "country": "Singapore",
-        "meanAbsShift": 1.74
+        "meanAbsShift": 1.99
       },
       {
         "iso3": "KOR",
@@ -3244,7 +5178,7 @@
       {
         "iso3": "VEN",
         "country": "Venezuela",
-        "meanAbsShift": 0.14
+        "meanAbsShift": 0.35
       },
       {
         "iso3": "PAN",
@@ -3269,7 +5203,7 @@
       {
         "iso3": "NIC",
         "country": "Nicaragua",
-        "meanAbsShift": 0.46
+        "meanAbsShift": 0.53
       },
       {
         "iso3": "DOM",
@@ -3314,7 +5248,7 @@
       {
         "iso3": "IRN",
         "country": "Iran",
-        "meanAbsShift": 2.15
+        "meanAbsShift": 3.22
       },
       {
         "iso3": "TZA",
@@ -3454,7 +5388,7 @@
       {
         "iso3": "JOR",
         "country": "Jordan",
-        "meanAbsShift": 0.41
+        "meanAbsShift": 0.47
       },
       {
         "iso3": "CZE",
@@ -3479,7 +5413,7 @@
       {
         "iso3": "AZE",
         "country": "Azerbaijan",
-        "meanAbsShift": 1.02
+        "meanAbsShift": 1.17
       },
       {
         "iso3": "HUN",
@@ -3529,7 +5463,7 @@
       {
         "iso3": "LBN",
         "country": "Lebanon",
-        "meanAbsShift": 0.64
+        "meanAbsShift": 0.73
       },
       {
         "iso3": "NOR",
@@ -3544,7 +5478,7 @@
       {
         "iso3": "NZL",
         "country": "New Zealand",
-        "meanAbsShift": 0.24
+        "meanAbsShift": 0.27
       },
       {
         "iso3": "GEO",
@@ -3770,6 +5704,14 @@
       "status": "gap"
     },
     {
+      "dimension": "agency",
+      "indicatorId": "perceived_control",
+      "name": "Perceived control over life",
+      "publisher": "Joint EVS/WVS",
+      "reason": "A declared gap since D187. The project wants the felt capacity to act: how much freedom of choice and control people feel they have over the way their life turns out. It observes the feeling, not action. The Joint EVS/WVS results table that once filled this row fails the open-data test: WVS allows its data for non-profit purposes only and GESIS states no licence for the table, so the values cannot be republished under CC BY 4.0. See D187. Wireable on an open source that asks this of half the frame or more.",
+      "status": "gap"
+    },
+    {
       "dimension": "coordination",
       "indicatorId": "government_effectiveness",
       "name": "Government effectiveness",
@@ -3851,10 +5793,26 @@
     },
     {
       "dimension": "trust",
+      "indicatorId": "interpersonal_trust",
+      "name": "Generalised interpersonal trust",
+      "publisher": "Joint EVS/WVS",
+      "reason": "A declared gap since D187. The project wants the share of people who say that most people can be trusted. The Joint EVS/WVS results table that once filled this row fails the open-data test: WVS allows its data for non-profit purposes only and GESIS states no licence for the table, so the values cannot be republished under CC BY 4.0. See D187. Wireable on an open source that asks this of half the frame or more. Afrobarometer, Latinobarómetro, Arab Barometer and Asian Barometer are closed under D154.",
+      "status": "gap"
+    },
+    {
+      "dimension": "trust",
       "indicatorId": "institutional_trust",
       "name": "Trust in public institutions",
       "publisher": "OECD Trust Survey / WVS",
-      "reason": "The OECD survey covers members only. Mixing it with WVS items for India and South Africa would break comparability. The Joint EVS/WVS confidence battery (E069) reaches 37 countries from one release, and confidence in the courts (E069_17) is published beside Trust as a check under this id rather than scored: every item of the battery tested (courts, civil service, police, parliament and government) reads higher in the closed and electoral autocracies of the frame than in its democracies, which is deference as much as confidence (A13). The gap stays open for a measure that does not reward a court that cannot rule against the state. See D132.",
+      "reason": "The OECD survey covers members only, and mixing it with other items would break comparability. The Joint EVS/WVS confidence battery (E069) fails the open-data test (D187), so its court item is no longer published as a check. When it was inspected, every item of the battery (courts, civil service, police, parliament and government) read higher in the closed and electoral autocracies of the frame than in its democracies, which is deference as much as confidence (A13, D132). The gap stays open for a measure that does not reward a court that cannot rule against the state.",
+      "status": "gap"
+    },
+    {
+      "dimension": "trust",
+      "indicatorId": "willingness_to_cooperate_strangers",
+      "name": "Cooperation beyond the in-group",
+      "publisher": "Joint EVS/WVS",
+      "reason": "A declared gap since D187. The distinction that makes this dimension worth measuring: whether trust reaches a person with no tie to the respondent. Generalised trust asks about \"most people\", which a respondent can fill with their own circle; this row names the stranger. The Joint EVS/WVS results table that once filled this row fails the open-data test: WVS allows its data for non-profit purposes only and GESIS states no licence for the table, so the values cannot be republished under CC BY 4.0. See D187. Wireable on an open source that asks this of half the frame or more.",
       "status": "gap"
     },
     {
@@ -3984,10 +5942,18 @@
       "publisher": "V-Dem",
       "reason": "V-Dem political polarization (v2cacamps) is published beside this dimension as a behavioral check and is not scored, because a regime with no organized opposition reads as calm (D121, A13). The gap stays open for a measure that can tell calm between competing camps from calm where no camp may compete. Pluralism is the target, so only hostile polarization should count against a country.",
       "status": "gap"
+    },
+    {
+      "dimension": "shared_purpose",
+      "indicatorId": "civic_participation",
+      "name": "Civic participation",
+      "publisher": "Joint EVS/WVS",
+      "reason": "A declared gap since D187. The project wants the share of adults who belong to an organisation that acts for strangers, as a reported behaviour. Religious membership would read religiosity, and a count of any membership reads something else. The Joint EVS/WVS results table that once filled this row fails the open-data test: WVS allows its data for non-profit purposes only and GESIS states no licence for the table, so the values cannot be republished under CC BY 4.0. See D187. Wireable on an open source that asks this of half the frame or more.",
+      "status": "gap"
     }
   ],
   "outOfFrame": {
-    "observedCells": 3837,
+    "observedCells": 3549,
     "clampedCells": 0,
     "share": 0,
     "perCountry": []

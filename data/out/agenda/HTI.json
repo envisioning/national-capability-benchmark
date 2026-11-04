@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-03T19:48:04.822Z",
+  "generatedAt": "2026-11-04T10:01:13.665Z",
   "iso3": "HTI",
   "country": "Haiti",
   "dimensions": [
@@ -351,12 +351,19 @@
         "business_start_procedures"
       ],
       "gaps": [
-        "adult_digital_skills"
+        "adult_digital_skills",
+        "perceived_control"
       ],
       "retired": [
         "business_start_days"
       ],
       "exemplars": [
+        {
+          "iso3": "NZL",
+          "country": "New Zealand",
+          "score": 97.6,
+          "confidence": 0.491
+        },
         {
           "iso3": "GBR",
           "country": "United Kingdom",
@@ -364,15 +371,9 @@
           "confidence": 0.491
         },
         {
-          "iso3": "NZL",
-          "country": "New Zealand",
-          "score": 92.7,
-          "confidence": 0.632
-        },
-        {
-          "iso3": "MUS",
-          "country": "Mauritius",
-          "score": 87,
+          "iso3": "EST",
+          "country": "Estonia",
+          "score": 93.9,
           "confidence": 0.491
         }
       ],
@@ -1679,7 +1680,9 @@
         "court_compliance"
       ],
       "gaps": [
+        "interpersonal_trust",
         "institutional_trust",
+        "willingness_to_cooperate_strangers",
         "court_case_clearance"
       ],
       "retired": [
@@ -1688,26 +1691,7 @@
         "contract_enforcement_days",
         "homicide_rate"
       ],
-      "exemplars": [
-        {
-          "iso3": "SWE",
-          "country": "Sweden",
-          "score": 90.3,
-          "confidence": 0.546
-        },
-        {
-          "iso3": "NZL",
-          "country": "New Zealand",
-          "score": 83.2,
-          "confidence": 0.537
-        },
-        {
-          "iso3": "EST",
-          "country": "Estonia",
-          "score": 75.7,
-          "confidence": 0.537
-        }
-      ],
+      "exemplars": [],
       "evidenceElsewhere": [
         {
           "id": "bra-cadunico",
@@ -6482,7 +6466,8 @@
       "gaps": [
         "national_belonging",
         "volunteering_rate",
-        "political_polarization"
+        "political_polarization",
+        "civic_participation"
       ],
       "retired": [
         "voice_and_accountability"
@@ -6556,5 +6541,5 @@
       "started": 2010
     }
   ],
-  "gapCount": 18
+  "gapCount": 22
 }

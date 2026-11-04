@@ -34,7 +34,6 @@ export const FITNESS_OUT_DIR = resolve(OUT_DIR, 'fitness')
 
 export const FILES = {
   worldBank: resolve(OBSERVATIONS_DIR, 'worldbank.json'),
-  jointEvsWvs: resolve(OBSERVATIONS_DIR, 'joint-evs-wvs.json'),
   vdem: resolve(OBSERVATIONS_DIR, 'vdem-cy-core.json'),
   unctad: resolve(OBSERVATIONS_DIR, 'unctad-concentration.json'),
   oecdGrs: resolve(OBSERVATIONS_DIR, 'oecd-grs-tax-fill.json'),

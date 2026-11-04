@@ -1,6 +1,6 @@
 # Capability agenda: Spain
 
-*Generated 2026-11-03*
+*Generated 2026-11-04*
 
 The frame includes 135 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
@@ -9,14 +9,14 @@ The frame includes 135 countries. Each dimension is scored from 0 to 100, with n
 | Dimension | Score | Confidence | Trend |
 | --- | --- | --- | --- |
 | Anticipation | 71.7 | 0.46 (usable) | +6.9 over 10 years using 2 indicators |
-| Agency | 56.6 | 0.63 (usable) | no trend |
+| Agency | 53.8 | 0.49 (usable) | no trend |
 | Coordination | 86.3 | 0.45 (usable) | -4.8 over 10 years using 2 indicators |
-| Trust | 75.4 | 0.55 (usable) | no trend |
+| Trust | 89.9 | 0.34 (thin) | no trend |
 | Learning | 77.8 | 0.55 (usable) | +22.8 over 20 years using 2 indicators |
 | Experimentation | 47 | 0.47 (usable) | -7.1 over 10 years using 3 indicators |
 | Adaptability | 71 | 0.62 (usable) | +9.1 over 10 years using 4 indicators |
 | Building | 55 | 0.63 (usable) | +2.1 over 10 years using 3 indicators |
-| Shared Purpose | 44.1 | 0.42 (thin) | +5.1 over 10 years using 2 indicators |
+| Shared Purpose | 56.1 | 0.3 (thin) | +5.1 over 10 years using 2 indicators |
 
 ## What to raise
 
@@ -36,13 +36,21 @@ How easily can new approaches be attempted, tested, abandoned, and improved?
 
 The evidence is too thin to manage these dimensions confidently.
 
-### Shared Purpose: confidence 0.42, thin
+### Shared Purpose: confidence 0.3, thin
 
 To what extent can people imagine themselves as participants in a common project?
 
-- Uses 3 observed indicators.
-- Missing indicators: Sense of national belonging, Volunteering, Political polarisation.
+- Uses 2 observed indicators.
+- Missing indicators: Sense of national belonging, Volunteering, Political polarisation, Civic participation.
 - Rejected datasets: Voice and accountability.
+
+### Trust: confidence 0.34, thin
+
+How much cooperation is possible beyond immediate personal networks?
+
+- Uses 3 observed indicators.
+- Missing indicators: Generalised interpersonal trust, Trust in public institutions, Cooperation beyond the in-group, Court case clearance rate.
+- Rejected datasets: Rule of law, Control of corruption, Time to enforce a contract, Intentional homicide rate.
 
 ## What to keep watching
 
@@ -50,11 +58,10 @@ These dimensions score at least 50 with usable evidence.
 
 - Coordination: 86.3, confidence usable
 - Learning: 77.8, confidence usable
-- Trust: 75.4, confidence usable
 - Anticipation: 71.7, confidence usable
 - Adaptability: 71, confidence usable
-- Agency: 56.6, confidence usable
 - Building: 55, confidence usable
+- Agency: 53.8, confidence usable
 
 ## What Spain has to work with
 
@@ -79,16 +86,19 @@ Conditions describe what a country has to work with: infrastructure, access, mon
 
 ## Missing data
 
-18 requested indicators have no comparable dataset, and each one lowers confidence. A gap can become an indicator when a comparable series covers at least two countries.
+22 requested indicators have no comparable dataset, and each one lowers confidence. A gap can become an indicator when a comparable series covers at least two countries.
 
 | Dimension | Missing indicator | What it asks |
 | --- | --- | --- |
 | Anticipation | Government foresight capacity | Existence, mandate and continuity of a national strategic foresight function. |
 | Anticipation | Long-horizon research commitments | New competitively awarded public research grants that run for five years or longer, as a share of all new competitive public research grants awarded in the year. |
 | Agency | Adults doing digital tasks | Share of adults who carried out a named digital task in the last three months, such as sending a message with an attached file, moving a file between devices or using a spreadsheet formula, counted one task at a time and never as a skill level. |
+| Agency | Perceived control over life | Self-reported freedom of choice and control over the course of one’s life. |
 | Coordination | University-industry collaboration | Intensity of research collaboration between universities and firms. |
 | Coordination | Public-private collaboration | Frequency and scale of joint public-private delivery of national objectives. |
+| Trust | Generalised interpersonal trust | Share agreeing that most people can be trusted. |
 | Trust | Trust in public institutions | Confidence in national government, courts and civil service. |
+| Trust | Cooperation beyond the in-group | Share of adults who trust people they meet for the first time completely or somewhat. |
 | Trust | Court case clearance rate | Civil and commercial cases resolved in a year as a share of cases filed in the same year. |
 | Learning | Adult learning participation | Share of adults in formal or non-formal education and training in the last 12 months. |
 | Experimentation | Venture deals | First venture capital rounds closed by companies based in the country in the year, per million people, counted by deal and never by amount. |
@@ -101,6 +111,7 @@ Conditions describe what a country has to work with: infrastructure, access, mon
 | Shared Purpose | Sense of national belonging | Reported identification with and attachment to the national community, as distinct from pride in the nation. |
 | Shared Purpose | Volunteering | Share of adults who volunteered time to an organisation in the last month. |
 | Shared Purpose | Political polarisation | Degree to which political differences run along a single hostile divide. |
+| Shared Purpose | Civic participation | Share of adults who report belonging to a humanitarian or charitable organisation. |
 
 ## What Spain built that no indicator counts
 

@@ -9,7 +9,6 @@ countries (D153, D176), nine dimensions, equal weights and no headline ranking.
 ```
 pnpm install
 pnpm bench ingest      fetch World Bank series from 1990 into data/observations/worldbank.json
-pnpm bench evs fetch   import the pinned Joint EVS/WVS items (A165 trust, A173 perceived control, A080_01 charitable membership, and the E069_17 court confidence check) into data/observations/joint-evs-wvs.json; `trust fetch` is an alias
 pnpm bench vdem fetch  import the pinned V-Dem civil-society and court-compliance series (every country-year from 1990, D180) and the polarization and turnout checks into data/observations/vdem-cy-core.json
 pnpm bench unctad fetch import the pinned UNCTADstat export concentration index, every year from 1995 (D183), into data/observations/unctad-concentration.json (needs bsdtar)
 pnpm bench grs fetch   fill tax revenue from the pinned OECD Global Revenue Statistics into data/observations/oecd-grs-tax-fill.json, only where the World Bank has no value inside the D159 window; run it after `bench ingest`, because it reads worldbank.json (D172)
@@ -94,8 +93,7 @@ port 3888. That entry starts Next directly and does not use the proxy.
   diagnostics, Delphi, CLI. Compiles to `dist`.
 - `apps/web` — Next.js viewer. Reads `data/out/*.json` at request time.
 - `data/observations` — raw values with source and year. `worldbank.json` holds
-  the World Bank series, `joint-evs-wvs.json` holds the pinned Joint EVS/WVS adapter
-  output, `vdem-cy-core.json` holds the pinned V-Dem adapter output,
+  the World Bank series, `vdem-cy-core.json` holds the pinned V-Dem adapter output,
   `unctad-concentration.json` holds the pinned UNCTADstat adapter output,
   `oecd-grs-tax-fill.json` holds the OECD tax revenue fill (D172), and
   `ilostat-ltu.json` holds the ILOSTAT long-term unemployment share, every
@@ -791,7 +789,8 @@ single-digit dollars, so cost is not the constraint — see D13.
 `data/delphi/latest.json` points at a one-vendor in-session panel on dataset
 10.0.2 (D154, D155), three Claude panelists over all 1,215 cells: the
 2026-11-02 run with Anticipation and Experimentation rerun on 2026-11-03
-(D182). A multi-vendor or gateway run on the same dataset supersedes it. When
+(D182). D187 dropped its 405 Agency, Trust and Shared Purpose cells on dataset
+10.1.0, and those cells publish no estimate until a rerun replaces them. A multi-vendor or gateway run on the same dataset supersedes it. When
 a release changes the briefs of some dimensions only, rerun those with
 `bench delphi --in-session <dir> --dimensions a,b` and merge the cells into
 the active run for those dimensions alone. The older files

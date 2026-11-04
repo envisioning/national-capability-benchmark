@@ -1,6 +1,6 @@
 # Agenda de capacidades: República Dominicana
 
-*Generado el 2026-11-03*
+*Generado el 2026-11-04*
 
 La comparación incluye 135 países. Cada dimensión recibe una puntuación de 0 a 100, sin clasificación general, y cada puntuación muestra a su lado la solidez de la evidencia. Antes de citar una puntuación, lea [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md).
 
@@ -59,7 +59,7 @@ La solidez de la evidencia está por debajo de la franja utilizable, así que la
 ¿En qué medida son capaces las personas y las organizaciones de convertir una intención en acción?
 
 - Basada en 2 indicadores observados.
-- Vacíos declarados: Adultos que realizan tareas digitales.
+- Vacíos declarados: Adultos que realizan tareas digitales, Control percibido sobre la propia vida.
 - Series descartadas: Tiempo para abrir una empresa.
 
 ### Confianza: solidez 0.21, evidencia muy débil
@@ -67,7 +67,7 @@ La solidez de la evidencia está por debajo de la franja utilizable, así que la
 ¿Cuánta cooperación es posible más allá de las redes personales inmediatas?
 
 - Basada en 2 indicadores observados.
-- Vacíos declarados: Confianza en las instituciones públicas, Tasa de resolución de casos judiciales.
+- Vacíos declarados: Confianza interpersonal generalizada, Confianza en las instituciones públicas, Cooperación más allá del propio grupo, Tasa de resolución de casos judiciales.
 - Series descartadas: Estado de derecho, Control de la corrupción, Tiempo para hacer cumplir un contrato, Tasa de homicidios intencionales.
 
 ### Coordinación: solidez 0.25, evidencia débil
@@ -83,7 +83,7 @@ La solidez de la evidencia está por debajo de la franja utilizable, así que la
 ¿Hasta qué punto las personas logran verse como parte de un proyecto común?
 
 - Basada en 2 indicadores observados.
-- Vacíos declarados: Sentido de pertenencia nacional, Voluntariado, Polarización política.
+- Vacíos declarados: Sentido de pertenencia nacional, Voluntariado, Polarización política, Participación cívica.
 - Series descartadas: Voz y rendición de cuentas.
 
 ### Experimentación: solidez 0.37, evidencia débil
@@ -122,16 +122,19 @@ Las condiciones describen lo que un país tiene para trabajar: infraestructura, 
 
 ## ¿Qué falta medir?
 
-18 indicadores previstos en el modelo no tienen una serie comparable, y cada uno baja la solidez. Un vacío se convierte en indicador con puntuación cuando una serie comparable cubre al menos dos países.
+22 indicadores previstos en el modelo no tienen una serie comparable, y cada uno baja la solidez. Un vacío se convierte en indicador con puntuación cuando una serie comparable cubre al menos dos países.
 
 | Dimensión | Indicador ausente | Qué mediría |
 | --- | --- | --- |
 | Anticipación | Capacidad gubernamental de prospectiva | Existencia, mandato y continuidad de una función nacional de prospectiva estratégica. |
 | Anticipación | Compromisos de investigación de largo plazo | Proyectos de investigación nuevos con financiamiento público concursable y una duración de cinco años o más, como proporción de todos los proyectos con financiamiento público concursable adjudicados en el año. |
 | Iniciativa | Adultos que realizan tareas digitales | Proporción de adultos que realizaron una tarea digital determinada en los últimos tres meses, como enviar un mensaje con un archivo adjunto, mover un archivo entre dispositivos o usar una fórmula en una hoja de cálculo, contada tarea por tarea y nunca como nivel de habilidad. |
+| Iniciativa | Control percibido sobre la propia vida | Libertad de elección y control sobre el rumbo de la propia vida, según declaran las personas. |
 | Coordinación | Colaboración universidad-empresa | Intensidad de la colaboración en investigación entre universidades y empresas. |
 | Coordinación | Colaboración público-privada | Frecuencia y escala con que el gobierno y las empresas ejecutan juntos objetivos nacionales. |
+| Confianza | Confianza interpersonal generalizada | Proporción que está de acuerdo en que se puede confiar en la mayoría de las personas. |
 | Confianza | Confianza en las instituciones públicas | Confianza en el gobierno nacional, los tribunales y el servicio público. |
+| Confianza | Cooperación más allá del propio grupo | Proporción de adultos que confía completamente o algo en las personas que conoce por primera vez. |
 | Confianza | Tasa de resolución de casos judiciales | Casos civiles y comerciales resueltos en un año como proporción de los casos presentados en ese mismo año. |
 | Aprendizaje | Participación de adultos en aprendizaje | Proporción de adultos en educación o capacitación, formal o no, en los últimos 12 meses. |
 | Experimentación | Operaciones de capital de riesgo | Primeras rondas de capital de riesgo cerradas en el año por empresas con sede en el país, por millón de personas, contadas por operación y nunca por monto. |
@@ -144,6 +147,7 @@ Las condiciones describen lo que un país tiene para trabajar: infraestructura, 
 | Propósito compartido | Sentido de pertenencia nacional | Identificación y apego a la comunidad nacional, según declaran las personas, distintos del orgullo nacional. |
 | Propósito compartido | Voluntariado | Proporción de adultos que dedicaron tiempo voluntario a una organización en el último mes. |
 | Propósito compartido | Polarización política | Grado en que las diferencias políticas se alinean en una sola división hostil. |
+| Propósito compartido | Participación cívica | Proporción de adultos que declaran pertenecer a una organización humanitaria o de caridad. |
 
 ## Lo que los indicadores no ven de la República Dominicana
 

@@ -1,7 +1,8 @@
 # Joint EVS/WVS Trust source note
 
-Status: promoted as the first source-backed social Trust measure in dataset
-4.4.0
+Status: removed by D187 in dataset 10.1.0, and the rows are declared gaps. The results table states no licence,
+so it fails D154 (a). This note is the record of what the adapter did. It was
+promoted as the first source-backed social Trust measure in dataset 4.4.0.
 
 Track: source-backed measurement
 

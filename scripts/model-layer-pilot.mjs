@@ -46,7 +46,10 @@ function registryRow(id) {
 /** Latest hard value per country, with year, for the three measured rows. */
 function hardValues() {
   const wb = readJson('data/observations/worldbank.json').observations
-  const evs = readJson('data/observations/joint-evs-wvs.json').observations
+  /* D187 removed this file. calibration.json was scored while it existed; a
+   * rerun finds no hard interpersonal_trust values and scores nothing there. */
+  const evsPath = 'data/observations/joint-evs-wvs.json'
+  const evs = existsSync(join(ROOT, evsPath)) ? readJson(evsPath).observations : []
   const hard = {}
   for (const id of INDICATORS) hard[id] = new Map()
   for (const o of [...wb, ...evs]) {

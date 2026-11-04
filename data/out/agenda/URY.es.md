@@ -1,6 +1,6 @@
 # Agenda de capacidades: Uruguay
 
-*Generado el 2026-11-03*
+*Generado el 2026-11-04*
 
 La comparación incluye 135 países. Cada dimensión recibe una puntuación de 0 a 100, sin clasificación general, y cada puntuación muestra a su lado la solidez de la evidencia. Antes de citar una puntuación, lea [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md).
 
@@ -9,14 +9,14 @@ La comparación incluye 135 países. Cada dimensión recibe una puntuación de 0
 | Dimensión | Puntuación | Solidez | Tendencia |
 | --- | --- | --- | --- |
 | Anticipación | 43.3 | 0.46 (utilizable) | +14.5 en 10 años, con 2 indicadores |
-| Iniciativa | 51.6 | 0.63 (utilizable) | sin base de tendencia |
+| Iniciativa | 35.4 | 0.49 (utilizable) | sin base de tendencia |
 | Coordinación | 79.3 | 0.44 (débil) | +7.2 en 10 años, con 2 indicadores |
-| Confianza | 53.6 | 0.55 (utilizable) | sin base de tendencia |
+| Confianza | 76.4 | 0.34 (débil) | +1.6 en 20 años, con 2 indicadores |
 | Aprendizaje | 42 | 0.55 (utilizable) | +8.3 en 20 años, con 2 indicadores |
 | Experimentación | 32.2 | 0.62 (utilizable) | sin base de tendencia |
 | Adaptación | 47.8 | 0.46 (utilizable) | -6.8 en 10 años, con 3 indicadores |
 | Ejecución | 29.3 | 0.63 (utilizable) | -1.6 en 10 años, con 3 indicadores |
-| Propósito compartido | 56 | 0.43 (débil) | -6 en 10 años, con 2 indicadores |
+| Propósito compartido | 51.2 | 0.32 (débil) | -6 en 10 años, con 2 indicadores |
 
 ## Puntuaciones bajas con evidencia utilizable
 
@@ -41,6 +41,16 @@ Estas son las puntuaciones más bajas con evidencia utilizable. Las dimensiones 
 - Casos documentados en otros países: The FCA regulatory sandbox (Reino Unido); Yozma, the venture capital catalyst (Israel); Korean regulatory-sandbox system across eight sectors (Corea del Sur); MAS FinTech Regulatory Sandbox variants (Singapur); British Patient Capital, a public venture-capital catalyst (Reino Unido); ICURe, from university research to spinouts (Reino Unido); Portugal Ventures, a public venture-capital bridge (Portugal); Rede Nacional de Test Beds for company experimentation (Portugal); Zonas Livres Tecnológicas, regulator-supervised experimentation zones (Portugal); Banco Central regulatory sandbox, first cycle (Brasil); Reserve Bank of India regulatory sandbox (India); Capital Markets Authority regulatory sandbox (Kenia); SEC Nigeria Regulatory Incubation Program (Nigeria); ADGM RegLab, the first fintech sandbox in the region (Emiratos Árabes Unidos); OJK regulatory sandbox for financial-sector technological innovation (Indonesia); Bank Negara Malaysia Fintech Regulatory Sandbox (Malasia); Bank of Thailand regulatory sandbox (Tailandia); Sandbox financiero (Ley 7/2020), and the fall in applications (España); IFWG Regulatory Sandbox (Sudáfrica); Project-based regulatory sandbox (new technology demonstration scheme) (Japón); CFPB Compliance Assistance Sandbox, rescinded in 2022 and withdrawn again in 2025 (Estados Unidos); CSA Regulatory Sandbox, succeeded by the Financial Innovation Hub (Canadá); ASIC enhanced regulatory sandbox (Australia); SINTEG-Verordnung, the energy-transition experimentation clause (Alemania); Experimenten Elektriciteitswet 2015-2018, and its erosion (Países Bajos); Bac à sable réglementaire in the energy sector (Francia); Italy's FinTech regulatory sandbox, and its contraction (Italia); Bank of Ghana Regulatory Sandbox (Ghana); AFSA FinTech Lab at the Astana International Financial Centre (Kazajistán); Banque Centrale de Tunisie regulatory sandbox, first cohort (Túnez); Sandbox Regulatório do Banco de Moçambique (Mozambique); Regulatory Sandbox Licence of the Economic Development Board (Mauricio); Bank of Uganda regulatory sandbox (Uganda); Regulatory Sandbox Framework for Capital Markets, first cohort (Zambia); Securities and Exchange Commission of Zimbabwe regulatory sandbox (Zimbabue); FMA Regulatory Sandbox (Austria); Regulatorisk sandkasse for AI (Datatilsynet and Digitaliseringsstyrelsen) (Dinamarca); Datatilsynet's regulatory sandbox for privacy-friendly innovation (Noruega); Bank of Lithuania regulatory sandbox, with one test in seven years (Lituania); Narodna banka Slovenska regulatory sandbox (Eslovaquia); Sandbox for AI and blockchain products, Ministry of Digital Transformation and Ukrainian Startup Fund (Ucrania); Bank of Russia regulatory sandbox (regulativnaya pesochnitsa) (Rusia); JoRegBox, the Central Bank of Jordan regulatory sandbox (Jordania); Special regulatory regimes (spetsialnye regulyativnye rezhimy) of the National Bank of the Kyrgyz Republic (Kirguistán); SECP Regulatory Sandbox, four cohorts and an open window (Pakistán); Bank of Jamaica FinTech Regulatory Sandbox (Jamaica); Financial Regulatory Commission sandbox regulatory environment (Mongolia); NAMFISA Regulatory Sandbox, microlending cohort (Namibia); Central Bank of Azerbaijan regulatory sandbox (Azerbaiyán); FRA Sandbox of the Financial Regulatory Authority (Egipto); Mohit-e azmoon-e tanzimgari (regulatory sandbox) of the Central Bank of the Islamic Republic of Iran (Irán); Regulatory sandbox (special legal regime) in the capital market of the National Agency of Perspective Projects (Uzbekistán); BRUGEL derogation framework for innovative energy projects (projets innovants) (Bélgica); FMA regulatory sandbox pilot (Nueva Zelanda); Regulatory Laboratory (regulatory sandbox) of the National Bank of Georgia (Georgia); Energy Sandbox (spatii de testare inovativa in domeniul energiei) (Moldavia).
 - Vacíos declarados: Operaciones de capital de riesgo, Empresas en espacios controlados de prueba, Empresas surgidas de universidades.
 - Series descartadas: I+D ejecutada por empresas.
+
+### Iniciativa: 35.4, evidencia utilizable
+
+¿En qué medida son capaces las personas y las organizaciones de convertir una intención en acción?
+
+- Basada en 3 indicadores observados.
+- Puntuaciones más altas en esta dimensión, entre las que tienen evidencia utilizable: Nueva Zelanda 97.6, Reino Unido 94.7, Estonia 93.9.
+- Casos documentados en otros países: Singapore's national ICT-skills measurement and baseline (Singapur); e.escola, a national laptop-and-broadband push (Portugal); Pradhan Mantri Gramin Digital Saksharta Abhiyan (India); Puntos México Conectado, centros nacionales de aprendizaje digital (México).
+- Vacíos declarados: Adultos que realizan tareas digitales, Control percibido sobre la propia vida.
+- Series descartadas: Tiempo para abrir una empresa.
 
 ### Aprendizaje: 42, evidencia utilizable
 
@@ -73,13 +83,21 @@ Estas son las puntuaciones más bajas con evidencia utilizable. Las dimensiones 
 
 La solidez de la evidencia está por debajo de la franja utilizable, así que la puntuación se apoya en poca evidencia.
 
-### Propósito compartido: solidez 0.43, evidencia débil
+### Propósito compartido: solidez 0.32, evidencia débil
 
 ¿Hasta qué punto las personas logran verse como parte de un proyecto común?
 
-- Basada en 3 indicadores observados.
-- Vacíos declarados: Sentido de pertenencia nacional, Voluntariado, Polarización política.
+- Basada en 2 indicadores observados.
+- Vacíos declarados: Sentido de pertenencia nacional, Voluntariado, Polarización política, Participación cívica.
 - Series descartadas: Voz y rendición de cuentas.
+
+### Confianza: solidez 0.34, evidencia débil
+
+¿Cuánta cooperación es posible más allá de las redes personales inmediatas?
+
+- Basada en 3 indicadores observados.
+- Vacíos declarados: Confianza interpersonal generalizada, Confianza en las instituciones públicas, Cooperación más allá del propio grupo, Tasa de resolución de casos judiciales.
+- Series descartadas: Estado de derecho, Control de la corrupción, Tiempo para hacer cumplir un contrato, Tasa de homicidios intencionales.
 
 ### Coordinación: solidez 0.44, evidencia débil
 
@@ -88,13 +106,6 @@ La solidez de la evidencia está por debajo de la franja utilizable, así que la
 - Basada en 3 indicadores observados.
 - Vacíos declarados: Colaboración universidad-empresa, Colaboración público-privada.
 - Series descartadas: Efectividad del gobierno, Calidad regulatoria, Desempeño logístico, Tiempo de exportación en frontera.
-
-## Puntuaciones altas con evidencia utilizable
-
-Estas dimensiones tienen una puntuación de al menos 50, con evidencia utilizable.
-
-- Confianza: 53.6, evidencia utilizable
-- Iniciativa: 51.6, evidencia utilizable
 
 ## ¿Con qué cuenta Uruguay?
 
@@ -119,16 +130,19 @@ Las condiciones describen lo que un país tiene para trabajar: infraestructura, 
 
 ## ¿Qué falta medir?
 
-18 indicadores previstos en el modelo no tienen una serie comparable, y cada uno baja la solidez. Un vacío se convierte en indicador con puntuación cuando una serie comparable cubre al menos dos países.
+22 indicadores previstos en el modelo no tienen una serie comparable, y cada uno baja la solidez. Un vacío se convierte en indicador con puntuación cuando una serie comparable cubre al menos dos países.
 
 | Dimensión | Indicador ausente | Qué mediría |
 | --- | --- | --- |
 | Anticipación | Capacidad gubernamental de prospectiva | Existencia, mandato y continuidad de una función nacional de prospectiva estratégica. |
 | Anticipación | Compromisos de investigación de largo plazo | Proyectos de investigación nuevos con financiamiento público concursable y una duración de cinco años o más, como proporción de todos los proyectos con financiamiento público concursable adjudicados en el año. |
 | Iniciativa | Adultos que realizan tareas digitales | Proporción de adultos que realizaron una tarea digital determinada en los últimos tres meses, como enviar un mensaje con un archivo adjunto, mover un archivo entre dispositivos o usar una fórmula en una hoja de cálculo, contada tarea por tarea y nunca como nivel de habilidad. |
+| Iniciativa | Control percibido sobre la propia vida | Libertad de elección y control sobre el rumbo de la propia vida, según declaran las personas. |
 | Coordinación | Colaboración universidad-empresa | Intensidad de la colaboración en investigación entre universidades y empresas. |
 | Coordinación | Colaboración público-privada | Frecuencia y escala con que el gobierno y las empresas ejecutan juntos objetivos nacionales. |
+| Confianza | Confianza interpersonal generalizada | Proporción que está de acuerdo en que se puede confiar en la mayoría de las personas. |
 | Confianza | Confianza en las instituciones públicas | Confianza en el gobierno nacional, los tribunales y el servicio público. |
+| Confianza | Cooperación más allá del propio grupo | Proporción de adultos que confía completamente o algo en las personas que conoce por primera vez. |
 | Confianza | Tasa de resolución de casos judiciales | Casos civiles y comerciales resueltos en un año como proporción de los casos presentados en ese mismo año. |
 | Aprendizaje | Participación de adultos en aprendizaje | Proporción de adultos en educación o capacitación, formal o no, en los últimos 12 meses. |
 | Experimentación | Operaciones de capital de riesgo | Primeras rondas de capital de riesgo cerradas en el año por empresas con sede en el país, por millón de personas, contadas por operación y nunca por monto. |
@@ -141,6 +155,7 @@ Las condiciones describen lo que un país tiene para trabajar: infraestructura, 
 | Propósito compartido | Sentido de pertenencia nacional | Identificación y apego a la comunidad nacional, según declaran las personas, distintos del orgullo nacional. |
 | Propósito compartido | Voluntariado | Proporción de adultos que dedicaron tiempo voluntario a una organización en el último mes. |
 | Propósito compartido | Polarización política | Grado en que las diferencias políticas se alinean en una sola división hostil. |
+| Propósito compartido | Participación cívica | Proporción de adultos que declaran pertenecer a una organización humanitaria o de caridad. |
 
 ## Lo que Uruguay construyó y ningún indicador cuenta
 

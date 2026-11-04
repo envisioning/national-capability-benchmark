@@ -22,8 +22,8 @@ pnpm dev
 
 pnpm bench all fetches World Bank observations from 1990, scores the countries,
 runs diagnostics, writes the report, and regenerates the capability agendas. To
-refresh the source-backed Trust and Coordination adapter rows as well, run
-`pnpm bench evs fetch` and `pnpm bench vdem fetch` before the scoring step.
+refresh the source-backed Coordination adapter rows as well, run
+`pnpm bench vdem fetch` before the scoring step.
 
 The viewer runs at https://ncb.localhost through portless on port 3888. To run
 without the proxy, use either:
@@ -64,7 +64,6 @@ The CLI lives in packages/core and is available through pnpm bench.
 | Command | Purpose |
 | --- | --- |
 | pnpm bench ingest [--from 1990] [--snapshot] | Fetch World Bank history into data/observations and record restatements in revisions.json. |
-| pnpm bench evs fetch | Fetch and parse the pinned Joint EVS/WVS results tables (A165 trust, A173 perceived control, A080_01 charitable membership, and the E069_17 court confidence check) into the shared observation store. `trust fetch` is an alias. |
 | pnpm bench vdem fetch | Fetch and parse the pinned V-Dem v15 civil-society series into the shared observation store. |
 | pnpm bench score | Normalize and score the current observations, writing the published output. |
 | pnpm bench diagnose | Run correlations, redundancy checks and the GDP-sensitivity test. |
@@ -168,10 +167,9 @@ must still open and verify the source, write the limits paragraph and pass
 **Source-backed measurement.** The registry defines each indicator and its
 source, units, transform and direction. World Bank data and reproducible source
 adapters both emit the same observation shape, then enter the shared scoring
-pipeline alongside the small set of manually authored observations. The first
-adapter imports the official Joint EVS/WVS A165 generalized interpersonal-trust
-table; it carries publisher-weighted values into `data/observations` and does
-not ask an AI model to invent or score them. Other named sources remain
+pipeline alongside the small set of manually authored observations. An adapter
+carries the publisher's values into `data/observations` and does not ask an AI
+model to invent or score them. Other named sources remain
 explicit gaps until their adapters and coverage are ready. The pipeline turns
 all accepted observations into the canonical `score`, `confidence` and
 indicator rows. Documented deliveries in
