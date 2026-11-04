@@ -1,6 +1,6 @@
 # National Capability Benchmark, prototype v0
 
-*Generated 2026-11-04T10:01:00.942Z*
+*Generated 2026-11-04T10:05:10.815Z*
 
 This run covers 135 countries and nine dimensions. Indicators carry equal weight within each dimension, and the benchmark has no headline ranking.
 
@@ -1014,7 +1014,7 @@ Four tests on the wealth residual (D68), over the 119 countries with all nine re
 | --- | --- | --- |
 | (a) Residuals move together | first-factor share 30.5%, chance 16% (95th 17.5%), n 119 | structure |
 | (b) Same income, different shape | peer distance 1.378 against 1.438 without regard to income (5th 1.396); shape share 22.7% against random 95th 19%, n 119 | alike |
-| (c) Order holds between releases | lowest rank r 0.718 on Trust (n 36), 38 release pairs | mixed |
+| (c) Order holds between releases | lowest rank r 0.718 on Trust (n 36), 39 release pairs | mixed |
 | (c) Order holds without one country | largest own-residual shift 0.101 residual SD | robust |
 | (d) Share of a profile that is income | mean 27.3%, median 37.4%, n 119 | part |
 
@@ -1150,7 +1150,7 @@ Weakest: Building (36.5), Shared Purpose (33.4), Experimentation (32).
 
 **Shared Purpose**
 
-- Sense of national belonging: A declared gap again since 2026-10-02 (D151, which supersedes the retirement in D143). The project still wants to know whether people count themselves members of the community whose common project this capability asks about, so the row stays even though no series can fill it. The only cross-national item aimed at it, national pride (G006) in the Joint EVS/WVS, is not wired: pride is not belonging, and it fails the regime test of artefact A13, with electoral autocracies at 75 percent very proud against 47 in liberal democracies. ISSP 2023 asks about closeness to the country in 16 countries. Wireable on an item that reads the same in every regime class, or on a behaviour of belonging, for half the frame or more. High national pride must never be read as the capacity for collective action.
+- Sense of national belonging: A declared gap again since 2026-10-02 (D151, which supersedes the retirement in D143). The project still wants to know whether people count themselves members of the community whose common project this capability asks about, so the row stays even though no series can fill it. Two items were inspected in the Joint EVS/WVS and neither is wired. National pride (G006) fails the regime test of artefact A13: pride is not belonging. Closeness to the country (G257) reads the definition and, as the share answering very close or close, reads alike in every regime class, but the release fails the open-data test (D187). ISSP 2023 asks about closeness to the country in 16 countries. Wireable on an open item that reads the same in every regime class, or on a behaviour of belonging, for half the frame or more. High national pride must never be read as the capacity for collective action.
 - Volunteering: CAF publishes country figures but the underlying Gallup microdata is proprietary, so it fails the inspectability rule.
 - Political polarisation: V-Dem political polarization (v2cacamps) is published beside this dimension as a behavioral check and is not scored, because a regime with no organized opposition reads as calm (D121, A13). The gap stays open for a measure that can tell calm between competing camps from calm where no camp may compete. Pluralism is the target, so only hostile polarization should count against a country.
 - Civic participation: A declared gap since D187. The project wants the share of adults who belong to an organisation that acts for strangers, as a reported behaviour. Religious membership would read religiosity, and a count of any membership reads something else. The Joint EVS/WVS results table that once filled this row fails the open-data test: WVS allows its data for non-profit purposes only and GESIS states no licence for the table, so the values cannot be republished under CC BY 4.0. See D187. Wireable on an open source that asks this of half the frame or more.
@@ -1192,19 +1192,11 @@ These rows remain in the registry and lower confidence like gaps. The project re
 
 ## A panel scored the same cells
 
-Run 2026-11-03T08-47-43-063Z-in_session, provenance `in_session`, 2 round(s), panel: Institutionalist (claude-opus-5-5), Bottom-up analyst (claude-opus-5-5), Wealth sceptic (claude-sonnet-5-5).
+Run 2026-11-04T10-10-00-000Z-in_session, provenance `in_session`, 2 round(s), panel: Institutionalist (claude-opus-5-5), Bottom-up analyst (claude-opus-5-5), Wealth sceptic (claude-sonnet-5-5).
 
-> In-session one-vendor panel under D154(b) as amended by D155, on dataset 10.0.2 (D182). It is the 2026-11-02 run (2026-11-02T19-36-46-976Z-in_session, dataset 10.0.0) with its Anticipation and Experimentation cells and indicator audits replaced by a rerun made on 2026-11-03, because D182 changed the per-head denominators in both dimensions, which changed every brief there and dropped 260 of the 1215 cells under D160. The other seven dimensions are the 2026-11-02 run's cells as recorded, and their brief hashes match dataset 10.0.2. The rerun (2026-11-03T08-47-29-180Z-in_session, kept beside this file) used the same three panelists: institutionalist on claude-opus-5-5, bottom_up on claude-opus-5-5, wealth_sceptic on claude-sonnet-5-5, all Anthropic, through Claude Code subagents run by a Claude Code orchestrating session (Claude Opus 5.5). It covered both dimensions for all 135 countries, 270 cells, with prompts built by pnpm bench delphi --in-session --dimensions anticipation,experimentation at the current prompt version, byte-identical to a gateway run's for those two dimensions. Each panelist answered in batches of 27 countries, one fresh context per batch and per round, and the audit in one context per stance, so no context held two stances and none saw another panelist's text except the anonymised round-1 summary the round-2 prompt carries. Quality control by the orchestrator: every batch was counted for repeated rationales and for missingEvidence lists with no country-specific item, and none was found. Two round-2 batches returned 26 of 27 countries (wealth_sceptic without Haiti, institutionalist without Sri Lanka); each missing country was answered in its own fresh context on the same stance and model. Several wealth_sceptic batches skimmed the NO DATA and NOT SCORED paragraphs that repeat word for word across countries, and two wrote their answers through a script holding hand-written per-country entries. Panelists drew on their own knowledge where the system rules allow it, and those claims are unverified. No call failed. One vendor means the spread measures stance, not vendor, and shared model-family blind spots are hidden by a narrow IQR, which is a floor on real uncertainty (D155). A multi-vendor or gateway run supersedes this one. This is an interpretation layer: its estimates reach only delphiScore and delphiIqr, and blendedScore only where a dimension has no observed indicator; they never enter score.
+> In-session one-vendor panel under D154(b) as amended by D155, on dataset 10.1.1 (D187, D188). Six dimensions keep their cells as recorded: Coordination, Learning, Adaptability and Building from the 2026-11-02 run (2026-11-02T19-36-46-976Z-in_session), Anticipation and Experimentation from the 2026-11-03 rerun (2026-11-03T08-47-29-180Z-in_session), and their brief hashes match dataset 10.1.1. Trust, Agency and Shared purpose were rerun on 2026-11-04 (2026-11-04T10-03-33-919Z-in_session, kept beside this file), because D187 removed the four Joint EVS/WVS rows, which changed every brief there and dropped 405 of the 1215 cells under D160. The rerun used the same three panelists: institutionalist on claude-opus-5-5, bottom_up on claude-opus-5-5, wealth_sceptic on claude-sonnet-5-5, all Anthropic, through Claude Code subagents run by a Claude Code orchestrating session (Claude Opus 5.5). It covered the three dimensions for all 135 countries, 405 cells, with prompts built by pnpm bench delphi --in-session --dimensions at the current prompt version, byte-identical to a gateway run's for those dimensions. Each panelist answered in batches of 27 countries, one fresh context per batch and per round, and the audit in one context per stance. Quality control by the orchestrator: every batch was counted for repeated rationales, repeated missingEvidence items and missing countries. No rationale repeated, and the highest repeat share of missingEvidence items in a batch was 2 percent. Round 1 wealth_sceptic deviated from the brief in four of five batches. One (COL to HUN) filtered its prompts with grep and filled hidden rows from the derived score; it was discarded and rerun in a fresh context. Two (AGO to COG, IDN to MLI) filtered out the NO DATA and missing lines that repeat across countries, and one (SGP to ZWE) read nine prompts through sed for the indicator lines; these were kept, as in earlier runs. In round 2 every batch was told to read each prompt whole and reported doing so; one batch ran a structure check of its own file. Panelists drew on their own knowledge where the system rules allow it, and those claims are unverified. Panelists may recall survey figures from the retired release from their own knowledge; the prompts carry none. No call failed. One vendor means the spread measures stance, not vendor, and shared model-family blind spots are hidden by a narrow IQR, which is a floor on real uncertainty (D155). A multi-vendor or gateway run supersedes this one. This is an interpretation layer: its estimates reach only delphiScore and delphiIqr, and blendedScore only where a dimension has no observed indicator; they never enter score.
 
-Carried from dataset 10.0.2 onto 10.1.0: 810 of 1215 cells kept because the evidence brief each was made on is unchanged; 405 dropped. 99 of 198 indicator judgements kept. See D160.
-
-| Dimension | Dropped | No stored hash | Countries |
-| --- | --- | --- | --- |
-| Agency | 135 | 0 | AGO ALB ARE ARG ARM AUS AUT AZE BDI BEL BFA BGD BGR BIH BLR BOL BRA BWA CAF CAN CHE CHL CHN CIV CMR COD COG COL CRI CUB CYP CZE DEU DNK DOM ECU EGY ESP EST ETH FIN FRA GBR GEO GHA GIN GMB GNB GRC GTM HND HRV HTI HUN IDN IND IRL IRN IRQ ISR ITA JAM JOR JPN KAZ KEN KGZ KOR LAO LBN LBR LKA LSO LTU LVA MAR MDA MDG MEX MKD MLI MMR MNG MOZ MRT MUS MWI MYS NAM NGA NIC NLD NOR NPL NZL PAK PAN PER PHL PNG POL PRT PRY ROU RUS RWA SDN SEN SGP SLE SLV SRB SVK SVN SWE SWZ TCD TGO THA TJK TLS TTO TUN TUR TZA UGA UKR URY USA UZB VEN VNM ZAF ZMB ZWE |
-| Trust | 135 | 0 | AGO ALB ARE ARG ARM AUS AUT AZE BDI BEL BFA BGD BGR BIH BLR BOL BRA BWA CAF CAN CHE CHL CHN CIV CMR COD COG COL CRI CUB CYP CZE DEU DNK DOM ECU EGY ESP EST ETH FIN FRA GBR GEO GHA GIN GMB GNB GRC GTM HND HRV HTI HUN IDN IND IRL IRN IRQ ISR ITA JAM JOR JPN KAZ KEN KGZ KOR LAO LBN LBR LKA LSO LTU LVA MAR MDA MDG MEX MKD MLI MMR MNG MOZ MRT MUS MWI MYS NAM NGA NIC NLD NOR NPL NZL PAK PAN PER PHL PNG POL PRT PRY ROU RUS RWA SDN SEN SGP SLE SLV SRB SVK SVN SWE SWZ TCD TGO THA TJK TLS TTO TUN TUR TZA UGA UKR URY USA UZB VEN VNM ZAF ZMB ZWE |
-| Shared Purpose | 135 | 0 | AGO ALB ARE ARG ARM AUS AUT AZE BDI BEL BFA BGD BGR BIH BLR BOL BRA BWA CAF CAN CHE CHL CHN CIV CMR COD COG COL CRI CUB CYP CZE DEU DNK DOM ECU EGY ESP EST ETH FIN FRA GBR GEO GHA GIN GMB GNB GRC GTM HND HRV HTI HUN IDN IND IRL IRN IRQ ISR ITA JAM JOR JPN KAZ KEN KGZ KOR LAO LBN LBR LKA LSO LTU LVA MAR MDA MDG MEX MKD MLI MMR MNG MOZ MRT MUS MWI MYS NAM NGA NIC NLD NOR NPL NZL PAK PAN PER PHL PNG POL PRT PRY ROU RUS RWA SDN SEN SGP SLE SLV SRB SVK SVN SWE SWZ TCD TGO THA TJK TLS TTO TUN TUR TZA UGA UKR URY USA UZB VEN VNM ZAF ZMB ZWE |
-
-Convergence: 651 of 810 cells narrowed between rounds.
+Convergence: 943 of 1215 cells narrowed between rounds.
 
 ### Panel disagreement remains visible
 
@@ -1214,30 +1206,30 @@ No cell has an interquartile range above 25 points.
 
 | Country | Dimension | Indicator score | Panel median | Difference |
 | --- | --- | --- | --- | --- |
+| Guatemala | Trust | 89.4 | 34 | -55.4 |
 | Liberia | Coordination | 94.1 | 43 | -51.1 |
+| Honduras | Trust | 81.8 | 34 | -47.8 |
 | Myanmar | Adaptability | 82.1 | 36 | -46.1 |
 | Lebanon | Coordination | 85.7 | 40 | -45.7 |
 | Malawi | Coordination | 89.9 | 45 | -44.9 |
 | Mozambique | Coordination | 84.7 | 40 | -44.7 |
 | Honduras | Coordination | 87.4 | 43 | -44.4 |
 | Papua New Guinea | Learning | 66.2 | 25 | -41.2 |
+| Bosnia and Herzegovina | Shared Purpose | 68 | 27 | -41 |
 | Democratic Republic of the Congo | Coordination | 67.8 | 28 | -39.8 |
+| Tanzania | Trust | 87.7 | 48 | -39.7 |
+| Georgia | Trust | 90.6 | 52 | -38.6 |
 | Bosnia and Herzegovina | Coordination | 77.9 | 40 | -37.9 |
 | Uganda | Coordination | 83.6 | 46 | -37.6 |
 | Haiti | Coordination | 50.3 | 13 | -37.3 |
 | Ethiopia | Coordination | 80 | 43 | -37 |
+| Mali | Trust | 61 | 24 | -37 |
+| Nicaragua | Trust | 43.6 | 8 | -35.6 |
 | Zambia | Coordination | 85 | 50 | -35 |
-| Republic of the Congo | Coordination | 66.1 | 33 | -33.1 |
-| China | Experimentation | 98 | 65 | -33 |
-| Laos | Adaptability | 75 | 42 | -33 |
-| Iraq | Coordination | 61.7 | 30 | -31.7 |
-| United Arab Emirates | Building | 22.5 | 54 | 31.5 |
-| Cuba | Adaptability | 55.8 | 25 | -30.8 |
-| Myanmar | Coordination | 50.7 | 20 | -30.7 |
 
 ### The panel takes the same income test
 
-A panel is not independent evidence: it reads the same published record as the indicators. An unmeasured dimension can return a panel number that restates income per head. Here the panel column is correlated with log GDP per capita, with the same-country indicator score beside it. Every dimension of the panel column except Agency, Trust and Shared Purpose reaches 0.7 or above.
+A panel is not independent evidence: it reads the same published record as the indicators. An unmeasured dimension can return a panel number that restates income per head. Here the panel column is correlated with log GDP per capita, with the same-country indicator score beside it. Every dimension of the panel column except Shared Purpose reaches 0.7 or above.
 
 | Dimension | Panel r vs log GDP pc | Spearman | Indicator r, same countries | Difference | Panel n | Indicator n |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -1246,10 +1238,10 @@ A panel is not independent evidence: it reads the same published record as the i
 | Experimentation | 0.8 | 0.848 | 0.739 | 0.061 | 133 | 133 |
 | Building | 0.775 | 0.815 | 0.629 | 0.146 | 133 | 133 |
 | Adaptability | 0.774 | 0.788 | 0.536 | 0.238 | 133 | 133 |
+| Agency | 0.769 | 0.78 | 0.493 | 0.276 | 133 | 128 |
 | Coordination | 0.738 | 0.753 | 0.439 | 0.299 | 133 | 130 |
-| Agency | no data | no data | no data | no data | 0 | 0 |
-| Trust | no data | no data | no data | no data | 0 | 0 |
-| Shared Purpose | no data | no data | no data | no data | 0 | 0 |
+| Trust | 0.724 | 0.739 | 0.628 | 0.096 | 133 | 130 |
+| Shared Purpose | 0.655 | 0.663 | 0.477 | 0.178 | 133 | 125 |
 
 ### Indicators the panel rates weakest
 
@@ -1257,24 +1249,24 @@ A panel is not independent evidence: it reads the same published record as the i
 | --- | --- | --- | --- | --- | --- |
 | Unemployment rate | O | O | 0.23 | 0.33 | 0.25 |
 | Business share of R&D | I | I | 0.23 | 0.58 | 0.7 |
+| Intentional homicide rate | O | O | 0.23 | 0.72 | 0.35 |
+| Logistics performance | P | P | 0.28 | 0.77 | 0.5 |
 | High-technology exports | O | O | 0.28 | 0.47 | 0.4 |
 | Scientific articles | O | O | 0.28 | 0.78 | 0.4 |
+| Voice and accountability | P | P | 0.28 | 0.68 | 0.35 |
+| Income inequality | O | O | 0.28 | 0.35 | 0.2 |
+| Regulatory quality | P | P | 0.3 | 0.9 | 0.6 |
 | Export diversification | C | O (reclassified) | 0.3 | 0.5 | 0.3 |
 | Manufacturing value added | O | O | 0.3 | 0.35 | 0.2 |
+| Trust in public institutions | P | P | 0.3 | 0.33 | 0.2 |
 | Logistics infrastructure quality | P | P | 0.32 | 0.8 | 0.5 |
+| Tax revenue | O | O | 0.33 | 0.65 | 0.3 |
+| University-industry collaboration | C | P (reclassified) | 0.35 | 0.7 | 0.4 |
 | Resident industrial design applications | O | O | 0.35 | 0.58 | 0.3 |
+| Procedures to start a business | C | I (reclassified) | 0.35 | 0.33 | 0.15 |
 | Resident patent applications | O | O | 0.37 | 0.73 | 0.45 |
-| Economic fitness | O | O | 0.4 | 0.67 | 0.45 |
-| Tolerance of entrepreneurial failure | P | P | 0.4 | 0.33 | 0.1 |
-| University spinouts | C | O (reclassified) | 0.4 | 0.67 | 0.35 |
-| Long-term unemployment share | O | O | 0.42 | 0.38 | 0.2 |
-| Research citation impact | O | O | 0.43 | 0.6 | 0.6 |
-| Human Capital Index | C | O (reclassified) | 0.45 | 0.87 | 0.5 |
-| Firm scale-up rate | C | O (reclassified) | 0.45 | 0.52 | 0.4 |
-| Resident trademark applications | O | O | 0.45 | 0.53 | 0.3 |
-| Electricity connection speed | C | O (reclassified) | 0.47 | 0.5 | 0.25 |
-| Venture deals | C | O (reclassified) | 0.48 | 0.67 | 0.6 |
-| Utility connection efficiency | C | O (reclassified) | 0.5 | 0.58 | 0.25 |
+| Control of corruption | P | P | 0.38 | 0.85 | 0.55 |
+| Government effectiveness | P | P | 0.4 | 0.9 | 0.6 |
 
 ### Evidence the panel requested
 

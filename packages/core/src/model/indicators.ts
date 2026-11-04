@@ -1284,10 +1284,10 @@ const RAW: Raw[] = [
     unit: '% expressing belonging',
     measurementClass: 'P',
     direction: 'higher_better',
-    source: { publisher: JOINT_EVS_WVS_PUBLISHER, series: 'G006', url: JOINT_EVS_WVS_RESULTS_URL, tier: 'academic_survey', inspectable: true },
+    source: { publisher: JOINT_EVS_WVS_PUBLISHER, series: 'G257', url: JOINT_EVS_WVS_RESULTS_URL, tier: 'academic_survey', inspectable: true },
     ingest: 'gap',
     notes:
-      'A declared gap again since 2026-10-02 (D151, which supersedes the retirement in D143). The project still wants to know whether people count themselves members of the community whose common project this capability asks about, so the row stays even though no series can fill it. The only cross-national item aimed at it, national pride (G006) in the Joint EVS/WVS, is not wired: pride is not belonging, and it fails the regime test of artefact A13, with electoral autocracies at 75 percent very proud against 47 in liberal democracies. ISSP 2023 asks about closeness to the country in 16 countries. Wireable on an item that reads the same in every regime class, or on a behaviour of belonging, for half the frame or more. High national pride must never be read as the capacity for collective action.',
+      'A declared gap again since 2026-10-02 (D151, which supersedes the retirement in D143). The project still wants to know whether people count themselves members of the community whose common project this capability asks about, so the row stays even though no series can fill it. Two items were inspected in the Joint EVS/WVS and neither is wired. National pride (G006) fails the regime test of artefact A13: pride is not belonging. Closeness to the country (G257) reads the definition and, as the share answering very close or close, reads alike in every regime class, but the release fails the open-data test (D187). ISSP 2023 asks about closeness to the country in 16 countries. Wireable on an open item that reads the same in every regime class, or on a behaviour of belonging, for half the frame or more. High national pride must never be read as the capacity for collective action.',
     wealthProxyPrior: 0.05,
   },
   {

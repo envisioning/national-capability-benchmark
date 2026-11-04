@@ -7,8 +7,9 @@ needs to know them before quoting a score.
 
 Evidence for each is a diagnostic in `data/out/diagnostics.json` or a figure
 from the published output. The run `data/delphi/latest.json` points at is an
-in-session panel on dataset 10.0.0: three Claude panelists, one vendor, two
-rounds over all 1,215 cells (D155). Its estimates are `delphiScore` and never
+in-session panel on dataset 10.1.1: three Claude panelists, one vendor, two
+rounds over all 1,215 cells (D155), with Agency, Trust and Shared purpose rerun
+after D187 (D188). Its estimates are `delphiScore` and never
 `score`. Under D155 its spread measures stance and not vendor, so a narrow IQR
 is a floor on the real uncertainty. A panel figure quoted below is a second
 opinion beside the indicators, and the panel median tracks income more closely
@@ -31,7 +32,7 @@ country-year file for the 125 of D153, and A10's democracy share is counted
 on the same 125; neither covers the ten countries D176 added. A10's counts
 of the economies outside the frame come from the frame expansion memo of
 2026-11, which counted them on the 9.6.0 registry. Panel figures come from
-the 10.0.0 run named above (D139, D160). Where a figure predates the current frame, the scale it
+the run named above (D139, D160); its cells outside those three dimensions are unchanged since 10.0.0 and 10.0.2. Where a figure predates the current frame, the scale it
 was measured on is not the scale in use.
 
 ---
@@ -246,12 +247,12 @@ EVS/WVS civic participation to a gap. Tax revenue takes OECD
 Global Revenue Statistics values for 14 countries the World Bank does not
 serve (D172). Its correlation with log GDP per capita is 0.477 (n 125), up from 0.262
 on three rows. Singapore has one row and publishes no score. Volunteering, national belonging and
-polarization are gaps. National belonging has no usable series: its only
-cross-national item, national pride, is not belonging and fails the regime
-test A13 describes, so it is not wired, and the gap counts against confidence
-(D151). The panel puts Singapore 18th of 135 on Shared purpose, at 58 with an
-IQR of 4, and Shared purpose is where panel and indicator ranks agree least,
-at 0.65.
+polarization are gaps. National belonging has no usable series. National pride is not belonging and
+fails the regime test A13 describes. Closeness to the country (G257) reads the
+definition and passes that test, but its release fails the open-data rule
+(D187). The gap counts against confidence (D151). The panel puts Singapore 12th
+of 135 on Shared purpose, at 68 with an IQR of 3, and Shared purpose is where
+panel and indicator ranks agree least, at 0.63.
 
 V-Dem's polarization item brings the Singapore question back from the other
 side: a regime with no organised opposition can read as calm, as the United

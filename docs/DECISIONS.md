@@ -10504,3 +10504,49 @@ from anything changing in the countries.
 **Overturned by.** A publisher's published term that allows republishing derived
 values under CC BY 4.0, or an open source for the same items at frame coverage.
 Either one fills the gap in a new entry.
+
+---
+
+## D188 — The panel rereads Agency, Trust and Shared purpose after D187
+
+*Recorded 2026-11-04. Follows D187, under D160 and D182's procedure. Records
+the G257 inspection in the row note, closing #119. Dataset 10.1.1, App 1.38.3.
+No score or confidence changes.*
+
+**Decision.** Panel run 2026-11-04T10-10-00-000Z-in_session replaces the active
+run. It holds new cells and audits for Agency, Trust and Shared purpose, for all
+135 countries, with the same three panelists, stances and prompt version. The
+other six dimensions keep their cells as recorded. All 1,215 cells apply. Read
+against the stored brief hashes, before the version was stamped, 1,215 of 1,215
+carried and none dropped.
+
+`national_belonging` now names closeness to the country (G257) as an inspected
+item. The cut is very close plus close, and it reads alike in every regime class,
+which is D151's test. The release fails D154 (a), so G257 is not wired and the
+row stays a gap. #119 closes on this.
+
+**Why.** D187 removed the four rows behind these briefs, so D160 dropped 405
+cells. Without a rerun, those dimensions show no panel reading in the release
+where their indicator evidence is thinnest.
+
+**What it reads.** Round-2 median IQR: Agency 3.5, Trust 2.0, Shared purpose
+2.5. Agency's largest is 13.5, Trust's and Shared purpose's 6.5. Panel medians
+moved by 5.2 points on average against the previous run, 26 at most (Chile on
+Trust, 42 to 68). The panel stays well under the new Trust indicator scores for
+some countries: Brazil reads 90.0 on the indicators and 56 on the panel, 42nd of
+135, and Japan 93.5 and 80. The r with log GDP of the panel median is Agency
+0.769, Trust 0.724 and Shared purpose 0.655, each above the indicator score's.
+
+**Cost.** Panel estimates now come from three sessions, and the run's note says
+which. Panelists can recall figures from the retired survey from their own
+knowledge. The prompts carry none, and nothing checks what they recalled. Sonnet
+batches deviated in round 1: one filtered its prompts and filled hidden rows from
+the derived score, and it was rerun; three others skipped lines and were kept,
+as the note records.
+
+**Version.** Patch, 10.1.1, as D182 was: no row, field or score changes. A row
+note changes, which is why this entry and the panel land together. The note is
+in the Shared purpose brief.
+
+**Overturned by.** A multi-vendor or gateway run, which supersedes the panel; or
+an open source for any of the four rows, which changes the briefs again.

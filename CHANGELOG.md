@@ -9,6 +9,23 @@ The entries before App 1.0.0 are retrospective, high-level summaries
 reconstructed from the repository history. They document explicit version bumps
 and may skip versions that were never committed.
 
+## App 1.38.3 — 2026-11-04
+
+- **Panel estimates are back on Agency, Trust and Shared purpose.** Country
+  pages show a panel reading for these three dimensions again, on the evidence
+  Dataset 10.1.0 left.
+
+## Dataset 10.1.1 — 2026-11-04
+
+- **The panel reread three dimensions.** Three Claude panelists scored Agency,
+  Trust and Shared purpose again for all 135 countries, because Dataset 10.1.0
+  changed their evidence. All 1,215 panel cells now apply. Panel estimates sit
+  beside the scores and never enter them.
+- **The panel disagrees with the new Trust scores in places.** Brazil's Trust
+  score is 90 on two rows; the panel reads 56. Read Trust through its
+  confidence.
+- **Scores and confidence do not move.** Decision D188.
+
 ## App 1.38.2 — 2026-11-04
 
 - **The sources page no longer lists the Joint EVS/WVS file.** The file was
