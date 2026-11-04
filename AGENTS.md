@@ -789,8 +789,7 @@ single-digit dollars, so cost is not the constraint — see D13.
 `data/delphi/latest.json` points at a one-vendor in-session panel on dataset
 10.1.1 (D154, D155), three Claude panelists over all 1,215 cells: the
 2026-11-02 run with Anticipation and Experimentation rerun on 2026-11-03
-(D182) and Agency, Trust and Shared purpose on 2026-11-04 (D188). D187 dropped its 405 Agency, Trust and Shared Purpose cells on dataset
-10.1.0, and those cells publish no estimate until a rerun replaces them. A multi-vendor or gateway run on the same dataset supersedes it. When
+(D182) and Agency, Trust and Shared purpose on 2026-11-04 (D188). A multi-vendor or gateway run on the same dataset supersedes it. When
 a release changes the briefs of some dimensions only, rerun those with
 `bench delphi --in-session <dir> --dimensions a,b` and merge the cells into
 the active run for those dimensions alone. The older files

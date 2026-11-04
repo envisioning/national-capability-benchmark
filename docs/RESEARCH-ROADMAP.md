@@ -68,24 +68,26 @@ it to 0.445 on its own and the OECD tax fill (D172) to 0.464 on its own; and to
 fall is rich countries outside the round losing coverage, not poorer countries
 gaining it (`docs/research/B-READY-PILLAR-MAP.md`). D176 widened the frame to
 135 and set a new baseline: 0.455 at 10.0.0 (n 133), because the ten added
-countries are thin where the world's measurement is thin. Watch for drift
-from 0.455 inside the 135, and read the next source's effect on it first. A source that only covers rich countries raises
+countries are thin where the world's measurement is thin. D187 took it to 0.323
+(n 133) at 10.1.0. That fall is survey evidence leaving, not poorer countries
+gaining any, so it is no improvement to claim. Watch for drift from 0.323 inside
+the 135, and read the next source's effect on it first. A source that only covers rich countries raises
 O1 and breaks this.
 
 ### Where the objectives stand
 
-Dataset 10.0.0, 135 countries (D153, D176). Recompute from `data/out/diagnostics.json` and
+Dataset 10.1.1, 135 countries (D153, D176). Recompute from `data/out/diagnostics.json` and
 `data/out/index.json` after any rescore; never carry these figures forward by
 hand.
 
 | Dimension | Mean confidence | Observed rows (mean) | r with log GDP | Reading |
 | --- | ---: | ---: | ---: | --- |
-| Trust | 0.39 | 3.6 | 0.43 | misses O1 at 0.386; survey rows reach about 72 countries, B-READY 82 |
-| Experimentation | 0.39 | 4.4 | 0.74 | misses O1 at 0.394 since the D176 rebase; 0.409 on the 125 (D173); tracks income; GEM covers 16 (D125) |
-| Shared purpose | 0.32 | 2.5 | 0.26 | misses O1; OECD fill for tax revenue (D172) |
+| Shared purpose | 0.26 | 1.9 | 0.48 | misses O1; two rows in every scored country; 125 of 135 publish (D187) |
+| Trust | 0.28 | 2.6 | 0.63 | misses O1; no social row since D187; B-READY reaches 82 |
 | Coordination | 0.36 | 2.5 | 0.44 | misses O1; B-READY reaches 82 (D167) |
+| Agency | 0.39 | 2.5 | 0.49 | misses O1 at 0.393 since D187; two of three rows read registration rules (A14) |
+| Experimentation | 0.39 | 4.4 | 0.74 | misses O1 at 0.394 since the D176 rebase; tracks income; GEM covers 16 (D125) |
 | Learning | 0.52 | 2.9 | 0.71 | tracks income |
-| Agency | 0.47 | 3.1 | 0.49 | |
 | Anticipation | 0.45 | 2.0 | 0.87 | tracks income |
 | Building | 0.55 | 3.5 | 0.63 | utility connection on B-READY (D171), 82 countries |
 | Adaptability | 0.58 | 3.9 | 0.54 | countries without a long-term share (A16) |

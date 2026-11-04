@@ -20,8 +20,8 @@ own.
 Every entry below is on dataset 10.0.0, the 135-country frame of D176,
 except where it names another run. A figure that came from a counterfactual
 rescore or a count the published files do not carry keeps the run it comes
-from: the scored-row counterfactual in A13 and the question-format split in
-A15, which were made on the 53 countries of the 8.x frame. The World Bank's
+from: the scored-row counterfactual in A13, which was made on the 53 countries of
+the 8.x frame. The World Bank's
 list of frame countries for the B-READY 2026 round in A6 and the B-READY
 public services correlation in A12 were taken against the 125 of D153 on
 2026-10-17, and the CPIA count in A12 on 2026-10-16. A3 also quotes the
@@ -135,7 +135,7 @@ indicators, reported separately.
 
 ---
 
-## A3 — Trust's low income correlation comes from which countries the survey reaches
+## A3 — Trust and Coordination track income, and an older Trust figure hid it
 
 **Severity: high. Since D187 Trust reads only institutional rows and correlates
 with log GDP per capita at 0.628 (n 130). The 0.426 this entry used to report
@@ -562,9 +562,8 @@ delivery records, institutional trust, and behavioural measures of corruption
 experience. The V-Dem row is a partial Coordination repair, not a replacement
 for delivery records. The generative panel can
 interpret the dimensions while those data are missing, but its values stay
-beside the indicator score and never become observations. The ten countries
-D64 holds have no open route to a survey value: pooling their rows needs the
-registered microdata download, which D154 excludes.
+beside the indicator score and never become observations. An open survey source would
+reopen the social family; none is known for this frame (D187).
 
 **What the World Bank can and cannot supply.** `GF.XPD.BUDG.ZS`, primary
 government expenditure as a proportion of the original approved budget, covers
@@ -625,8 +624,8 @@ This artefact remains open while the dimensions rely on narrow proxies. For
 Trust, D57 sets the stricter condition: one harmonised social measure and one
 comparable institutional-performance measure, because two indicators from the
 same family would clear the floor without answering the dimension. The current
-release meets that structure with two social and three institutional rows,
-but court throughput, a behavioural social row and the wealth and redundancy
+release does not meet that structure: since D187 it has three institutional rows
+and no social row. A social row, court throughput and the wealth and redundancy
 review remain open.
 The budget series opens the Coordination door; it does not close its measurement
 problem.
@@ -678,7 +677,7 @@ capability, and low measured hostility under repression is not shared purpose.
 
 The numeric gates do not catch it. On dataset 10.0.0 the value passes the
 wealth screen at 0.221 against log GDP per capita and the redundancy screen
-at 0.457 at most (interpersonal trust, n = 72). On the 8.1.0 frame, adding it
+at 0.457 at most, against a survey row D187 removed (n = 72). On the 8.1.0 frame, adding it
 would have raised Shared Purpose's own correlation with income from 0.202
 (n = 50) to 0.406 (n = 51, with Haiti). The decision stands on construct and
 not on correlation.
@@ -687,13 +686,14 @@ not on correlation.
 Purpose as a check, not scored, with this reason attached, and the capability
 page lists it. `behaviouralChecks` in `diagnostics.json` reports its
 correlation on the published value as -0.221 against log GDP per capita
-across the 135 and -0.082 against the Shared Purpose score (n = 131). No
+across the 135 and -0.122 against the Shared Purpose score (n = 125). No
 Shared Purpose score, confidence or coverage count moves.
 
 **What remains.** A reader can still take a low value for a closed regime as a
 finding; the attached reason is the only mitigation. The fix that would let it
 score is a reading conditioned on competition existing at all, or a behavioural
-row (civic participation, volunteering, voter turnout) that agrees with the
+row (volunteering, voter turnout, or civic participation if an open source
+appears) that agrees with the
 item outside the closed regimes. Neither is wired, and the gap stays open.
 
 ---
@@ -714,8 +714,8 @@ and the third counts registered firms.
 
 Where new business density is missing, Agency rests on those two rules alone. The
 United States scores 71.3 on business entry efficiency and procedures, at
-confidence 0.301. Sudan, Haiti, Malawi, Venezuela, Nicaragua and Lebanon have
-one row and publish no Agency score.
+confidence 0.301. Sudan, Haiti, Malawi, Venezuela, Nicaragua, Lebanon and Cuba
+fall under the floor and publish no Agency score.
 
 The procedure count is inside D159's 15 years until the 2035 release, so the
 rule does not touch it yet. For Liberia and Mauritania, which B-READY has not
@@ -728,37 +728,23 @@ people acting, which the O1 triage sweep did not find with frame coverage.
 
 ## A15 — Two survey rows read regime and question format
 
-**Closed by D187: both rows are declared gaps, because the results table states no
-licence. This entry records what they read while they were scored (D127, D128).**
+**Severity: closed. Both rows are declared gaps since D187, because the results
+table states no licence. This entry keeps what to check before either returns.
+The figures left with the rows.**
 
-The figures in this entry are from dataset 10.0.0 unless they name another
-run. None of the ten countries D176 added is in the survey release, so both
-rows still cover the same 72.
+`perceived_control` (Agency, A173) is a perception. Closed and electoral
+autocracies read high on it, and response style on a 10-point scale moved the
+ordering as well. It did not correlate with income, so what it added to Agency
+was partly a reading of regime and response style. See D127.
 
-`perceived_control` (Agency, A173) is a perception, and a closed or electoral
-autocracy can read high on it. Vietnam reads 8.1 out of 10, third of 72 with
-Colombia, and Nicaragua 8.0, fifth, surveyed in 2019-20 after the 2018
-crackdown; Venezuela reads 7.7, ninth. Response style on a 10-point scale
-moves the ordering too: Mexico, Uruguay and Colombia sit at 8.1 to 8.2 and
-Japan, on a mail survey, at 6.0, tied 70th with Greece. The row correlates
-with log GDP per capita at -0.006 (n 71), so what it adds to Agency is
-unrelated to income and partly a reading of regime and response style.
-
-`civic_participation` (Shared purpose, A080_01) harmonises two questions. EVS
+`civic_participation` (Shared purpose, A080_01) harmonised two questions. EVS
 shows a list and asks which organisations the respondent belongs to; WVS reads
-each type aloud and counts active and inactive members. The published values
-do not name the programme behind a single-row country, so the format split is
-quoted from dataset 8.0.0, where the eight EVS countries in the frame averaged
-9.9% and the 29 WVS countries 19.4%, and the row tracked income at 0.83 inside
-the EVS group. Among the ten countries the release surveyed under both
-programmes, WVS reads higher in eight, by a median 1.9 points; all ten are
-in the frame, and D64 holds their survey values out of the score. On 10.0.0
-Azerbaijan (0.5%) and Estonia (1.5%,
-EVS) are the floor and Kenya (38.4%) and Indonesia (37.9%, both WVS) the top,
-and across the 72 the row runs against income at -0.271 (n 71).
+each type aloud and counts active and inactive members. WVS read higher where a
+country had both samples, so part of the spread was question format. See D128.
 
 **What remains.** Nothing is published from either row. A return needs an open
-source for the same item (D187), and this entry is what to read first.
+source for the same item (D187). A return on these items must test both faults
+first.
 
 ---
 
