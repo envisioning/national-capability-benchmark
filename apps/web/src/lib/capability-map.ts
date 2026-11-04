@@ -1,4 +1,4 @@
-import { buildCapabilityMap, mapIndicatorIds } from '@ncb/core'
+import { MAP_DIMENSIONS, buildCapabilityMap, mapIndicatorIds } from '@ncb/core'
 import type { CapabilityMap, CountryResult, Dimension } from '@ncb/core'
 import { loadCountry, loadDiagnostics, loadIndex, loadIndicatorAcrossCountries } from '@/lib/data'
 
@@ -45,4 +45,33 @@ export async function loadCapabilityMap(
   const loaded = await loadCapabilityMaps(iso3, [dimension])
   const map = loaded?.maps[0]
   return loaded && map ? { map, subject: loaded.subject, version: loaded.version } : null
+}
+
+/**
+ * The income-peer median of every capability one country has. The indicator
+ * files are left out: they feed a map's rows, and the score median reads the
+ * index alone. See D189.
+ */
+export async function loadPeerScoreMedians(
+  subject: CountryResult,
+  countries: readonly CountryResult[],
+): Promise<{ medians: Partial<Record<Dimension, number>>; count: number } | null> {
+  const diagnostics = await loadDiagnostics()
+  if (!diagnostics) return null
+  const medians: Partial<Record<Dimension, number>> = {}
+  let count = 0
+  for (const dimension of MAP_DIMENSIONS) {
+    if (!subject.dimensions[dimension]) continue
+    const map = buildCapabilityMap({
+      iso3: subject.iso3,
+      dimension,
+      countries,
+      subject,
+      indicatorFiles: [],
+      diagnostics,
+    })
+    count = map.peers.length
+    if (map.peerScoreMedian !== null) medians[dimension] = map.peerScoreMedian
+  }
+  return { medians, count }
 }

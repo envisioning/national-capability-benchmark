@@ -207,6 +207,7 @@ export function Score({
   size = 'md',
   nullLabel = 'no data',
   locale,
+  thin = false,
 }: {
   value: number | null
   /**
@@ -219,6 +220,12 @@ export function Score({
   nullLabel?: string
   /** The number format of a language page: its lexicon's `numberLocale`. */
   locale?: string | undefined
+  /**
+   * The evidence under this score is thin. The number is unchanged and the chip
+   * gives up the band fill, as a radar point goes hollow, so the loudest mark on
+   * a page is never its weakest evidence. See D189.
+   */
+  thin?: boolean
 }) {
   if (value === null || Number.isNaN(value)) {
     return <span className="text-[var(--muted)]">{nullLabel}</span>
@@ -232,11 +239,17 @@ export function Score({
         : 'min-w-11 px-2 py-1 font-medium'
   return (
     <span
-      className={`inline-block rounded-md text-center tabular-nums ${sizing}`}
-      style={{
-        background: `var(--score-${band.id})`,
-        color: `var(--score-${band.id}-ink)`,
-      }}
+      className={`inline-block rounded-md text-center tabular-nums ${sizing} ${
+        thin ? 'ring-1 ring-inset ring-[var(--rule)]' : ''
+      }`}
+      style={
+        thin
+          ? undefined
+          : {
+              background: `var(--score-${band.id})`,
+              color: `var(--score-${band.id}-ink)`,
+            }
+      }
     >
       {fixedIn(value, 1, locale)}
     </span>
@@ -257,6 +270,7 @@ export function DimensionScore({
   size = 'md',
   notMeasured,
   locale,
+  thin = false,
 }: {
   dim: { score: number | null; belowCoverageFloor?: boolean; observedIndicators?: number } | null
   size?: 'lg' | 'md' | 'sm'
@@ -264,6 +278,8 @@ export function DimensionScore({
   notMeasured?: string
   /** The number format of a page written in another language. */
   locale?: string | undefined
+  /** See `Score`. */
+  thin?: boolean
 }) {
   if (dim?.belowCoverageFloor) {
     if (notMeasured) return <span className="text-xs text-[var(--muted)]">{notMeasured}</span>
@@ -283,6 +299,7 @@ export function DimensionScore({
       value={dim?.score ?? null}
       size={size}
       locale={locale}
+      thin={thin}
       {...(notMeasured ? { nullLabel: notMeasured } : {})}
     />
   )
@@ -365,6 +382,22 @@ export function Confidence({
       }}
     >
       {fixedIn(value, 2, locale)}
+    </span>
+  )
+}
+
+/**
+ * Confidence as a number and its band word, without a chip. Beside a score chip
+ * it reads as a second kind of number, where two chips read as one kind.
+ */
+export function ConfidenceText({ value }: { value: number | null }) {
+  if (value === null || Number.isNaN(value)) {
+    return <span className="text-[var(--muted)]">no data</span>
+  }
+  return (
+    <span className="whitespace-nowrap text-xs tabular-nums">
+      {value.toFixed(2)}{' '}
+      <span className="text-[var(--muted)]">{EN.bands[confidenceBand(value).id]}</span>
     </span>
   )
 }

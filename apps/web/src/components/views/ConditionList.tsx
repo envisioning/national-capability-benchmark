@@ -1,7 +1,7 @@
 import { Icon } from '@/components/Icon'
 import { EN, MAX_SCORED_VALUE_AGE, fill, indicatorDefinition, indicatorName, unitName } from '@ncb/core'
 import type { ConditionResult, Lexicon } from '@ncb/core'
-import { CONDITION_WORDS_EN } from '@/lib/words'
+import { CONDITION_WORDS_EN, withoutDecisionRefs } from '@/lib/words'
 
 /** A published value at the precision a reader can use: whole numbers from 100 up. */
 export function conditionValue(value: number, locale = 'en-US'): string {
@@ -99,7 +99,7 @@ export function ConditionList({
                 </p>
               ) : null}
               {english ? (
-                <p className="mt-1 max-w-3xl text-xs leading-relaxed text-[var(--muted)]">{c.note}</p>
+                <p className="mt-1 max-w-3xl text-xs leading-relaxed text-[var(--muted)]">{withoutDecisionRefs(c.note)}</p>
               ) : null}
               {aside ? aside(c) : null}
             </li>

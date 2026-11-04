@@ -7,6 +7,7 @@ import {
   isDeclaredGap,
   isScored,
   rowFactsFor,
+  valueInUnit,
 } from '../model/index.js'
 import type {
   CountryResult,
@@ -77,7 +78,7 @@ export type MapRow = {
   measurementClass: MeasurementClass
   unit: string
   direction: Direction
-  /** The value as the publisher wrote it. */
+  /** The value in the row's `unit`. See `valueInUnit` and D189. */
   raw: number | null
   /** Position on the dimension's 0 to 100 frame, higher always better. */
   normalized: number | null
@@ -256,7 +257,7 @@ export function buildCapabilityMap(input: {
         measurementClass: def.measurementClass,
         unit: def.unit,
         direction: def.direction,
-        raw: own?.raw ?? null,
+        raw: own ? valueInUnit(def, own) : null,
         normalized,
         year: own?.year ?? null,
         staleYear: own?.staleExcluded?.year ?? null,

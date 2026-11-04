@@ -355,7 +355,7 @@ export const EN: Lexicon = {
     rowPeers: '{n} peers with a value',
     indexLink: 'See every capability on the map',
     index: {
-      navLabel: 'Map',
+      navLabel: 'Peers',
       title: 'Where does {countryTopic} stand on each capability?',
       metaTitle: 'Capability map, {country}, NCB',
       metaDescription:

@@ -1,6 +1,7 @@
 import { Icon } from '@/components/Icon'
 import { MAX_SCORED_VALUE_AGE } from '@ncb/core'
 import type { CheckResult } from '@ncb/core'
+import { withoutDecisionRefs } from '@/lib/words'
 
 /**
  * Series published beside a dimension and excluded from every number above.
@@ -44,7 +45,7 @@ export function CheckList({ checks }: { checks: CheckResult[] }) {
                 The value is from {c.year}, more than {MAX_SCORED_VALUE_AGE} years old.
               </p>
             ) : null}
-            <p className="mt-1 max-w-3xl text-xs leading-relaxed text-[var(--muted)]">{c.note}</p>
+            <p className="mt-1 max-w-3xl text-xs leading-relaxed text-[var(--muted)]">{withoutDecisionRefs(c.note)}</p>
           </li>
         ))}
       </ul>

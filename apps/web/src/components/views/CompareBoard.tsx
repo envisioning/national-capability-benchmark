@@ -5,6 +5,7 @@ import {
   DIMENSION_QUESTIONS,
   INDICATORS_BY_ID,
   primaryMomentum,
+  valueInUnit,
 } from '@ncb/core'
 import type { CountryResult, Dimension, IndicatorResult } from '@ncb/core'
 import { DIMENSION_ICON, Icon } from '@/components/Icon'
@@ -365,9 +366,7 @@ export function CompareBoard({ countries }: { countries: CountryResult[] }) {
                                 <>
                                   <Score value={cell.normalized} size="sm" />
                                   <span className="block text-xs tabular-nums text-[var(--muted)]">
-                                    {cell.raw === null
-                                      ? ''
-                                      : cell.raw.toLocaleString('en-US')}
+                                    {valueInUnit(def, cell)?.toLocaleString('en-US') ?? ''}
                                     {cell.year === null ? '' : ` (${cell.year})`}
                                   </span>
                                 </>

@@ -10,26 +10,35 @@ import type { RadarProfile } from '@/lib/profile'
 import { DimensionDialog } from '@/components/views/DimensionPeek'
 import { compareHref } from '@/lib/links'
 
+/** The selector's value for the peer median, which no country code can equal. */
+const PEERS = 'peers'
+
 /**
- * One country's shape, with a second country available behind a selector.
+ * One country's shape, drawn over the median shape of its income peers, with
+ * a second country available behind a selector.
  *
  * The focal country keeps the filled shape and the comparator draws as an
- * outline. Reading two countries at once is a question about what the focal
- * country could learn, so the comparator is a deliberate choice by the reader
- * and never the default.
+ * outline. The peer median names no country and is the page's reference. Reading
+ * two countries at once is a question about what the focal country could learn,
+ * so a named comparator is a deliberate choice by the reader and never the
+ * default. See D189.
  */
 export function CompareRadar({
   focus,
   others,
+  peers,
   contestedCounts = {},
 }: {
   focus: RadarProfile
   others: RadarProfile[]
+  /** The income-peer median per axis, in dimension order, when income is published. */
+  peers?: { label: string; values: Array<number | null> } | null
   contestedCounts?: Record<string, number>
 }) {
-  const [iso3, setIso3] = useState('')
+  const [iso3, setIso3] = useState(peers ? PEERS : '')
   const [peek, setPeek] = useState<Dimension | null>(null)
   const comparator = others.find((o) => o.iso3 === iso3) ?? null
+  const showPeers = iso3 === PEERS && peers ? peers : null
 
   /* One flat list. Countries added after the frame was fixed are displayed like
    * every other country, because they are measured the same way. See D19. */
@@ -54,6 +63,16 @@ export function CompareRadar({
                   iso3: comparator.iso3,
                   values: comparator.values,
                   confidences: comparator.confidences,
+                  color: 'var(--muted)',
+                  outline: true,
+                },
+              ]
+            : []),
+          ...(showPeers
+            ? [
+                {
+                  label: showPeers.label,
+                  values: showPeers.values,
                   color: 'var(--muted)',
                   outline: true,
                 },
@@ -84,6 +103,15 @@ export function CompareRadar({
             </span>
           </span>
         ) : null}
+        {showPeers ? (
+          <span className="inline-flex items-center gap-2">
+            <span
+              className="inline-block h-3 w-3 rounded-sm border"
+              style={{ borderColor: 'var(--muted)' }}
+            />
+            <span className="font-medium">{showPeers.label}</span>
+          </span>
+        ) : null}
 
         <label className="ml-auto inline-flex items-center gap-2 text-[var(--muted)]">
           <span>Compare with</span>
@@ -92,6 +120,7 @@ export function CompareRadar({
             onChange={(e) => setIso3(e.target.value)}
             className={controlClass()}
           >
+            {peers ? <option value={PEERS}>{peers.label}</option> : null}
             <option value="">nobody</option>
             {options.map((o) => (
               <option key={o.iso3} value={o.iso3}>

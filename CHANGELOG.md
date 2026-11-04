@@ -9,6 +9,23 @@ The entries before App 1.0.0 are retrospective, high-level summaries
 reconstructed from the repository history. They document explicit version bumps
 and may skip versions that were never committed.
 
+## App 1.39.0 — 2026-11-04
+
+- **Per-head rows printed the wrong number.** Scientific articles, resident
+  patents, trademarks, industrial designs and new software repositories showed
+  the national total against a per-million unit. Brazil read 58,292 articles per
+  million people, and the right figure is 276. The fix covers the country page,
+  the compare board and the capability map. Scores never used the wrong number.
+  Decision D189.
+- **A country page opens with a summary.** All nine capabilities sit on one 0 to
+  100 axis, grouped as the agenda groups them, with a tick at the median of the
+  10 countries nearest in income. A score with thin evidence loses its colour
+  fill, so the weakest evidence no longer draws the most attention.
+- **The record behind each score folds away.** Each capability is closed until
+  you open it, and a rail beside the list moves between them on wide screens.
+  Indicators read as one table. A row with no dataset is a name in one line, and
+  its note is on the indicators page.
+- **The Map tab is now Peers.** The address does not change.
 ## App 1.38.3 — 2026-11-04
 
 - **Panel estimates are back on Agency, Trust and Shared purpose.** Country
