@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { useCallback, useEffect, useId, useRef, useState } from 'react'
+import { Fragment, useCallback, useEffect, useId, useRef, useState } from 'react'
 import { DIMENSION_ICON, Icon } from '@/components/Icon'
 import { Flag } from '@/components/ui'
 import { ChallengeDialog } from '@/components/ChallengeDialog'
@@ -454,8 +454,15 @@ function SectionMenu({
             }}
             className={`${MENU_PANEL} ${MENU_WIDTH}`}
           >
-            {entries.map((entry) => (
-              <MenuItem key={entry.href} node={entry} current={nodeOwns(entry, pathname)} />
+            {entries.map((entry, i) => (
+              <Fragment key={entry.href}>
+                {entry.group && entry.group !== entries[i - 1]?.group ? (
+                  <p className="px-3 pb-1 pt-2 text-right text-[10px] uppercase tracking-[0.05em] text-[var(--muted)]">
+                    {navLabel({ ...entry, label: entry.group }, lang)}
+                  </p>
+                ) : null}
+                <MenuItem node={entry} current={nodeOwns(entry, pathname)} />
+              </Fragment>
             ))}
           </div>
         </div>
@@ -534,13 +541,15 @@ function MobileSections({ sections }: { sections: NavRow }) {
                 aria-label={navLabel(node, lang)}
                 className="mb-1 ml-3 flex flex-col border-l border-[var(--rule)] pl-2"
               >
-                {entries.map((entry) => (
-                  <MenuItem
-                    key={entry.href}
-                    node={entry}
-                    current={nodeOwns(entry, pathname)}
-                    mobile
-                  />
+                {entries.map((entry, i) => (
+                  <Fragment key={entry.href}>
+                    {entry.group && entry.group !== entries[i - 1]?.group ? (
+                      <p className="px-3 pb-1 pt-2 text-[10px] uppercase tracking-[0.05em] text-[var(--muted)]">
+                        {navLabel({ ...entry, label: entry.group }, lang)}
+                      </p>
+                    ) : null}
+                    <MenuItem node={entry} current={nodeOwns(entry, pathname)} mobile />
+                  </Fragment>
                 ))}
               </div>
             ) : null}

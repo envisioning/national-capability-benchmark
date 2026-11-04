@@ -1,5 +1,6 @@
 'use client'
 
+import { dimensionLabel } from '@/lib/labels'
 import { DIMENSION_LABELS, DIMENSIONS } from '@ncb/core'
 import type { Dimension, VelocityCell, VelocityFile } from '@ncb/core'
 import { DataTable } from '@/components/DataTable'
@@ -65,8 +66,8 @@ export function VelocityView({ velocity }: { velocity: VelocityFile }) {
             {
               key: 'dimension',
               label: 'Dimension',
-              sort: (row) => DIMENSION_LABELS[row.dimension],
-              render: (row) => DIMENSION_LABELS[row.dimension],
+              sort: (row) => dimensionLabel(row.dimension),
+              render: (row) => dimensionLabel(row.dimension),
             },
             {
               key: 'annual',

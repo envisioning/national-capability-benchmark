@@ -9,7 +9,7 @@ import { evidenceOpenness, isThinConfidence } from '@/lib/evidence'
 import { Confidence, Score, fixedIn } from '@/components/ui'
 import { radarAngle, radarPoint, snap } from '@/components/radarGeometry'
 import { ContestedBadge } from '@/components/ChallengeDialog'
-import { sentenceLabel } from '@/lib/labels'
+import { dimensionLabel, sentenceLabel } from '@/lib/labels'
 
 export type RadarSeries = {
   label: string
@@ -202,7 +202,7 @@ export function Radar({
     ? { ...g, padX: GEOMETRY.full.padX, padRight: GEOMETRY.full.padRight }
     : g
   const at = (i: number, value: number) => radarPoint(i, value, { size: SIZE, radius: g.radius })
-  const nameOf = (d: Dimension) => sentenceLabel(lex.dimensions[d] ?? DIMENSION_LABELS[d])
+  const nameOf = (d: Dimension) => sentenceLabel(lex.dimensions[d] ?? dimensionLabel(d))
   const noDataLabel = lex.agenda.noScore
   /* A language page prints its own decimals; English keeps toFixed. */
   const locale = lex.lang === 'en' ? undefined : lex.numberLocale

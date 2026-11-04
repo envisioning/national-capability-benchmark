@@ -12,14 +12,14 @@ import { DotField } from '@/components/DotField'
 import { FlagHistogram } from '@/components/FlagHistogram'
 import { DIMENSION_ICON } from '@/components/Icon'
 import { LaneField } from '@/components/LaneField'
-import { MatrixPicture } from '@/components/MatrixPicture'
+import { CountryJump } from '@/components/views/CountryJump'
 import {
+  Card,
   Empty,
   FactStrip,
   FrameNote,
   Headline,
   HeroTitle,
-  Score,
   Section,
   type Fact,
 } from '@/components/ui'
@@ -33,11 +33,9 @@ import {
 import {
   aboutHref,
   agendasHref,
-  capabilitiesHref,
   objectionsHref,
   changelogReleaseHref,
   compareBaseHref,
-  contactHref,
   countriesHref,
   countryProfileHref,
   decisionsHref,
@@ -47,6 +45,7 @@ import {
   institutionGraphDatasetHref,
   limitsHref,
   methodHref,
+  supportHref,
   thesisHref,
 } from '@/lib/links'
 import { toHistogramProfile, widestSpread } from '@/lib/profile'
@@ -90,10 +89,10 @@ function datasetJsonLd(data: { generatedAt: string; version?: string }): string 
  * no second copy of itself, so there is nothing to switch to. A country layer
  * is reached from that country's pages. See D69.
  *
- * Every section under the chart stands for one part of the site, and each one
- * carries a sentence, a live number and one link out. No section reprints a
- * list that has a page of its own, which is what kept the nine capabilities on
- * this page three times over. See D75.
+ * The order follows what a reader came for: the question and its current
+ * answer, their country, the chart, the income test, then a sentence, a live
+ * number and a link for the rest of the site. No section reprints a list that
+ * has a page of its own. See D75 and D190.
  */
 export default async function Page() {
   /* Brazil is the one country with an institution map, so its wiring is the
@@ -143,68 +142,61 @@ export default async function Page() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: datasetJsonLd(data) }} />
       {/* The site's one dark band above the footer. It spans the window and
           supplies its own container, the way envisioning.com draws a section, so
-          the band reads as the page opening rather than as a card sitting on
-          it. It carries no lime: the band is the opening, and a marker inside a
-          sentence this size reads as a correction to it.
-
-          The band states the claim under test and nothing else. What the
-          benchmark is made of is the sections below it and the about page, and
-          the count of dimensions is one of those: a reader who has not yet been
-          told why capability is worth separating from income has no use for how
-          many parts it has. See D75 and D86. */}
+          the band reads as the page opening rather than as a card. It asks the
+          question under test, states the current answer from the diagnostics,
+          and hands the reader the one thing most arrive for: their country. See
+          D75, D86 and D190. */}
       <div className="hero-band full-bleed -mt-12 mb-12 sm:-mt-16">
         <DotField id="hero-dots" />
-        <div className="relative m-auto max-w-6xl px-6 py-12 sm:px-12 sm:py-20">
-          <HeroTitle>Wealth is not capability</HeroTitle>
+        <div className="relative m-auto max-w-6xl px-6 py-12 sm:px-12 sm:py-16">
+          <HeroTitle>Is wealth the same as capability?</HeroTitle>
           <Headline>
-            Most international indices measure income and stop there. NCB tests whether a
-            country&apos;s ability to anticipate change, coordinate around it and build what it
-            decides is something separate, and whether public data can see it.
+            NCB tests whether a country&apos;s ability to anticipate change, coordinate around it and
+            build what it decides is separate from its income, and whether public data can see it.
           </Headline>
+          {factor?.solution.income ? (
+            <p className="-mt-4 mb-8 max-w-3xl text-lg leading-relaxed">
+              So far the data says mostly no. One shared factor carries {factor.sharePct} of the
+              variation across {factor.solution.countries} countries and correlates{' '}
+              {Math.abs(factor.solution.income.r).toFixed(2)} with income.{' '}
+              <Link href={thesisHref} className="underline underline-offset-4">
+                Read the result
+              </Link>
+            </p>
+          ) : null}
+          <div className="flex max-w-xl flex-wrap items-center gap-x-6 gap-y-3">
+            <div className="min-w-64 grow">
+              <CountryJump
+                countries={profiles.map((p) => ({ code: p.iso3, name: p.country }))}
+              />
+            </div>
+            <Link href={countriesHref} className="text-xs underline underline-offset-4">
+              All {COUNTRIES.length} countries
+            </Link>
+            <Link href={compareBaseHref} className="text-xs underline underline-offset-4">
+              Compare
+            </Link>
+          </div>
         </div>
       </div>
 
       <Section
         title="One capability at a time"
-        hint="Switch capability and watch the countries move. A country that sits high on one of these can sit at the floor of the next, which is why there is no overall ranking here."
+        hint="Switch capability and watch the countries move. A country high on one can sit at the floor of the next, so there is no overall ranking."
       >
         <FlagHistogram profiles={profiles} />
         <FrameNote />
-      </Section>
-
-      <Section
-        title="Nine scores, read together"
-        hint="A profile draws all nine at once, so a strength and a weakness show up in the same glance."
-      >
-        <p className="max-w-3xl text-lg leading-relaxed">
-          {spread ? (
-            <>
-              The widest case today is{' '}
-              <Link
-                href={countryProfileHref(spread.iso3)}
-                className="underline underline-offset-4"
-              >
-                {spread.country}
-              </Link>
-              , at <Score value={spread.high.value} size="sm" /> on{' '}
-              {spread.high.label.toLowerCase()} and <Score value={spread.low.value} size="sm" /> on{' '}
-              {spread.low.label.toLowerCase()}, a gap of {spread.range.toFixed(0)} points inside one
-              country. An average of the nine would erase it.{' '}
-            </>
-          ) : null}
-          <Link href={countriesHref} className="underline underline-offset-4">
-            All {COUNTRIES.length} countries
-          </Link>{' '}
-          are drawn as shapes, and{' '}
-          <Link href={compareBaseHref} className="underline underline-offset-4">
-            compare
-          </Link>{' '}
-          puts one country beside up to three others. The{' '}
-          <Link href={capabilitiesHref} className="underline underline-offset-4">
-            capabilities directory
-          </Link>{' '}
-          reads the same data the other way, one capability across every country.
-        </p>
+        {spread ? (
+          <p className="mt-4 max-w-3xl text-xs leading-relaxed text-[var(--muted)]">
+            The widest case today is{' '}
+            <Link href={countryProfileHref(spread.iso3)} className="underline underline-offset-4">
+              {spread.country}
+            </Link>
+            , at {spread.high.value.toFixed(1)} on {spread.high.label.toLowerCase()} and{' '}
+            {spread.low.value.toFixed(1)} on {spread.low.label.toLowerCase()}. An average of the nine
+            would erase that gap of {spread.range.toFixed(0)} points.
+          </p>
+        ) : null}
       </Section>
 
       {wealth ? (
@@ -218,17 +210,9 @@ export default async function Page() {
             {wealth.strongest?.strength?.toFixed(2)} on {wealth.strongest?.label.toLowerCase()}.{' '}
             {capitalize(countWord(wealth.separate.length))} of the nine come through the test and{' '}
             {countWord(wealth.tracking.length)} do not, which the project publishes as a known
-            failure.{' '}
-            {factor?.solution.income
-              ? `Taken together, one shared factor carries ${factor.sharePct} of the variation across ${factor.solution.countries} countries and correlates ${Math.abs(factor.solution.income.r).toFixed(2)} with income. `
-              : null}
-            {residual?.shortSentence ?? null}
-            <Link href={thesisHref} className="underline underline-offset-4">
-              The thesis
-            </Link>{' '}
-            makes the argument and draws the result, and the{' '}
+            failure. {residual?.shortSentence ?? null}{' '}
             <Link href={diagnosticsHref} className="underline underline-offset-4">
-              diagnostics
+              The diagnostics
             </Link>{' '}
             hold the full test.
           </p>
@@ -249,85 +233,65 @@ export default async function Page() {
         </Section>
       ) : null}
 
-      {wiring && brazil.network ? (
-        <Section
-          title="How Brazil's institutions connect"
-          hint="Every system of the Brazilian state against every other, with each cell shaded by the number of relations between the two. The map helps explain a score but is not an input to any score."
-        >
-          <Link
-            href={institutionGraphDatasetHref('BRA')}
-            aria-label={`${brazil.network.nodes.length} institutions and ${brazil.network.edges.length} relations, drawn as a network`}
-            className="inline-block rounded-xl transition-opacity hover:opacity-90"
-          >
-            <MatrixPicture
-              matrix={wiring}
-              cell={22}
-              label={`${wiring.filled} of ${wiring.cells.length} system pairs hold a relation. ${wiring.total} relations in all.`}
-            />
-          </Link>
-        </Section>
-      ) : null}
-
-      <Section
-        title="What each country should work on"
-        hint="The scores turn into three lists: what to raise, what to measure first and what to hold."
-      >
-        <p className="max-w-3xl text-lg leading-relaxed">
-          <Link href={agendasHref()} className="underline underline-offset-4">
+      <div className="mb-16 grid gap-6 md:grid-cols-3">
+        <Card>
+          <h2 className="text-xl font-light leading-tight">What each country should work on</h2>
+          <p className="mt-3 text-xs leading-relaxed text-[var(--muted)]">
+            The scores turn into three lists: raise, measure first, and keep watching. Beside them
+            sit {evidence.length} documented deliveries, which never move a score.
+          </p>
+          <Link href={agendasHref()} className="mt-4 inline-block text-xs underline underline-offset-4">
             {COUNTRIES.length} agendas
-          </Link>{' '}
-          are computed from the same data, one per country. Beside them sit{' '}
-          {countWord(evidence.length)} documented deliveries, filed against indicators that have no
-          dataset behind them. None of those records moves a score. They are what a country has already
-          built where the benchmark can only record a gap.
-        </p>
-      </Section>
-
-      <Section
-        title="Check the numbers"
-        hint="The method, the limits and the reasoning behind each choice are published beside the data."
-      >
-        <FactStrip facts={facts} />
-        <p className="mt-6 max-w-3xl text-lg leading-relaxed">
-          The{' '}
-          <Link href={methodHref} className="underline underline-offset-4">
-            method
-          </Link>{' '}
-          explains how a statistic becomes a score, the{' '}
-          <Link href={limitsHref} className="underline underline-offset-4">
-            limits
-          </Link>{' '}
-          record where the data is wrong about the world, the{' '}
-          <Link href={decisionsHref} className="underline underline-offset-4">
-            decision log
-          </Link>{' '}
-          says what would overturn each choice, and the{' '}
-          <Link href={objectionsHref} className="underline underline-offset-4">
-            challenge page
-          </Link>{' '}
-          is where you file an objection.
-        </p>
-      </Section>
-
-      <Section
-        title="Who built this"
-        hint="A research prototype from Envisioning. It is early, the gaps are declared, and it needs institutions to improve it."
-      >
-        <p className="max-w-3xl text-lg leading-relaxed">
-          <a href="https://envisioning.com" className="underline underline-offset-4" rel="noopener">
-            Envisioning
-          </a>{' '}
-          researches how societies anticipate and act on change. The benchmark scores each
-          country&apos;s capabilities from public data and states how confident each score is.
-          The{' '}
-          <Link href={aboutHref} className="underline underline-offset-4">
-            about page
-          </Link>{' '}
-          records where the method fails. To send a correction, use the{' '}
-          <Link href={contactHref} className="underline underline-offset-4">
-            contact page
           </Link>
-          .
+        </Card>
+        {wiring && brazil.network ? (
+          <Card>
+            <h2 className="text-xl font-light leading-tight">How Brazil&apos;s institutions connect</h2>
+            <p className="mt-3 text-xs leading-relaxed text-[var(--muted)]">
+              {wiring.filled} of {wiring.cells.length} system pairs hold a relation, across{' '}
+              {brazil.network.nodes.length} institutions. The map explains a score and is no input
+              to one.
+            </p>
+            <Link
+              href={institutionGraphDatasetHref('BRA')}
+              className="mt-4 inline-block text-xs underline underline-offset-4"
+            >
+              Open the network
+            </Link>
+          </Card>
+        ) : null}
+        <Card>
+          <h2 className="text-xl font-light leading-tight">Help improve it</h2>
+          <p className="mt-3 text-xs leading-relaxed text-[var(--muted)]">
+            {gaps} indicators have no dataset yet. A research prototype from Envisioning, early, with
+            its gaps declared.
+          </p>
+          <p className="mt-4 flex flex-wrap gap-x-4 gap-y-1 text-xs">
+            <Link href={supportHref} className="underline underline-offset-4">
+              Ways to help
+            </Link>
+            <Link href={objectionsHref} className="underline underline-offset-4">
+              Challenge a score
+            </Link>
+            <Link href={aboutHref} className="underline underline-offset-4">
+              About
+            </Link>
+          </p>
+        </Card>
+      </div>
+
+      <Section title="Check the numbers">
+        <FactStrip facts={facts} />
+        <p className="mt-4 flex flex-wrap gap-x-5 gap-y-1 text-xs">
+          <Link href={methodHref} className="underline underline-offset-4">
+            How a statistic becomes a score
+          </Link>
+          <Link href={limitsHref} className="underline underline-offset-4">
+            Where the data is wrong
+          </Link>
+          <Link href={decisionsHref} className="underline underline-offset-4">
+            Every decision and what would overturn it
+          </Link>
         </p>
       </Section>
     </>

@@ -1,5 +1,6 @@
 'use client'
 
+import { dimensionLabel } from '@/lib/labels'
 import { useMemo, useState } from 'react'
 import Link from 'next/link'
 import {
@@ -34,8 +35,8 @@ function shapeOf(profile: HistogramProfile) {
     const value = profile.values[i]
     if (value === null || value === undefined) return
     scored += 1
-    if (highest === null || value > highest.value) highest = { label: DIMENSION_LABELS[d], value }
-    if (lowest === null || value < lowest.value) lowest = { label: DIMENSION_LABELS[d], value }
+    if (highest === null || value > highest.value) highest = { label: dimensionLabel(d), value }
+    if (lowest === null || value < lowest.value) lowest = { label: dimensionLabel(d), value }
   })
   return {
     highest: highest as { label: string; value: number } | null,
@@ -83,7 +84,7 @@ export function FlagHistogram({
   const tallest = Math.max(...DIMENSIONS.map((d) => fields[d].layout.stack))
   const field = fields[dimension]
   const endpoints = DIMENSION_ENDPOINTS[dimension]
-  const label = DIMENSION_LABELS[dimension]
+  const label = dimensionLabel(dimension)
   const missing = field.points.length - field.layout.placed.length
 
   return (
@@ -104,7 +105,7 @@ export function FlagHistogram({
               }`}
             >
               <Icon name={DIMENSION_ICON[d]} size={14} />
-              {DIMENSION_LABELS[d]}
+              {dimensionLabel(d)}
             </button>
           )
         })}

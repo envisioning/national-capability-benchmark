@@ -1,3 +1,4 @@
+import { dimensionLabel } from '@/lib/labels'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
@@ -213,7 +214,7 @@ export default async function CountryLocalPage({
                   <span className="text-[var(--muted)]">{CHALLENGE_STATUS_LABELS[dispute.status]}</span>
                 </div>
                 <p className="mt-2 text-xs text-[var(--muted)]">
-                  {DIMENSION_LABELS[dispute.target.dimension]}
+                  {dimensionLabel(dispute.target.dimension)}
                 </p>
                 <p className="mt-2 whitespace-pre-wrap text-lg leading-relaxed">{dispute.argument}</p>
               </li>
@@ -255,7 +256,7 @@ function peerSentence(profile: ReturnType<typeof toProfile>): string {
   )
   const dimension = leading ? DIMENSIONS[leading.index] : null
   return dimension
-    ? `${profile.country} is a useful peer reference, with its strongest current signal in ${DIMENSION_LABELS[dimension].toLowerCase()}.`
+    ? `${profile.country} is a useful peer reference, with its strongest current signal in ${dimensionLabel(dimension).toLowerCase()}.`
     : `${profile.country} is a peer reference with a comparable national frame.`
 }
 

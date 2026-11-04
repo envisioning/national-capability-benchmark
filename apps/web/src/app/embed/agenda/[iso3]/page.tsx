@@ -1,3 +1,4 @@
+import { dimensionLabel } from '@/lib/labels'
 import { notFound } from 'next/navigation'
 import { DIMENSION_LABELS, splitAgenda } from '@ncb/core'
 import { EmbedShell, embedTheme } from '@/components/EmbedShell'
@@ -12,7 +13,7 @@ function itemText(items: ReturnType<typeof splitAgenda>['raise']): string {
   return items
     .map((item) => {
       const score = item.score === null ? 'not measured' : item.score.toFixed(1)
-      return `${DIMENSION_LABELS[item.dimension]} (${score})`
+      return `${dimensionLabel(item.dimension)} (${score})`
     })
     .join('; ')
 }

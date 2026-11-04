@@ -1,3 +1,4 @@
+import { dimensionLabel } from '@/lib/labels'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { DIMENSIONS, DIMENSION_LABELS, confidenceBand, primaryMomentum } from '@ncb/core'
@@ -345,7 +346,7 @@ export default async function ChartsPage() {
         <div className="mt-4">
           <Specimen
             name="FlagField"
-            encodes={`Every country on one 0 to 100 axis. Drawn here for ${DIMENSION_LABELS[SPECIMEN_DIMENSION]}.`}
+            encodes={`Every country on one 0 to 100 axis. Drawn here for ${dimensionLabel(SPECIMEN_DIMENSION)}.`}
             decision="D67"
           >
             {points.length > 0 ? (

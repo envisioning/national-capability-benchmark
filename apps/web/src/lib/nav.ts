@@ -1,3 +1,4 @@
+import { dimensionLabel } from '@/lib/labels'
 import { COUNTRY_NAMES, DIMENSIONS, DIMENSION_LABELS, EN } from '@ncb/core'
 import { countryLayer, hasInstitutionMap, layerBySlug } from '@/lib/layers'
 import {
@@ -54,6 +55,8 @@ import { mapCounterparts } from '@/lib/map-reading'
 export type NavNode = {
   href: string
   label: string
+  /** The heading this node sits under in a menu. See D190. */
+  group?: string
   /** Draw this country's flag before the label. */
   iso3?: string
   /** The language this node is written in, when it is not the site's English. */
@@ -83,18 +86,18 @@ export function nodeOwns(node: NavNode, pathname: string): boolean {
   return path.startsWith(`${href}/`)
 }
 
-/** How the benchmark is built and audited, in reading order. */
+/** How the benchmark is built and audited: the data, the checks on it, the terms. */
 export const METHOD_PAGES: NavNode[] = [
   { href: '/method', label: 'Overview', exact: true },
-  { href: '/indicators', label: 'Indicators' },
-  { href: exploreHref(), label: 'Explore' },
-  { href: '/sources', label: 'Sources' },
-  { href: '/diagnostics', label: 'Diagnostics' },
-  { href: '/delphi', label: 'Delphi panel' },
-  { href: '/patterns', label: 'Patterns' },
-  { href: '/limits', label: 'Limits' },
-  { href: '/decisions', label: 'Decisions' },
-  { href: '/glossary', label: 'Glossary' },
+  { href: '/indicators', label: 'Indicators', group: 'Data' },
+  { href: '/sources', label: 'Sources', group: 'Data' },
+  { href: exploreHref(), label: 'Indicator map', group: 'Data' },
+  { href: '/patterns', label: 'Examples', group: 'Data' },
+  { href: '/diagnostics', label: 'Diagnostics', group: 'Checks' },
+  { href: '/delphi', label: 'Panel', group: 'Checks' },
+  { href: '/limits', label: 'Limits', group: 'Checks' },
+  { href: '/decisions', label: 'Decisions', group: 'Checks' },
+  { href: '/glossary', label: 'Glossary', group: 'Reference' },
 ]
 
 /**
@@ -270,7 +273,7 @@ export const NAV_TREE: NavNode[] = [
     label: 'Capabilities',
     children: DIMENSIONS.map((dimension) => ({
       href: capabilityHref(dimension),
-      label: DIMENSION_LABELS[dimension],
+      label: dimensionLabel(dimension),
     })),
   },
   { href: '/method', label: 'Method', claims: isMethodSection, children: METHOD_PAGES },

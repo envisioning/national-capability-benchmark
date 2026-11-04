@@ -1,3 +1,4 @@
+import { dimensionLabel } from '@/lib/labels'
 import { ImageResponse } from 'next/og'
 import { COUNTRIES, COUNTRY_NAMES, DIMENSION_LABELS, splitAgenda } from '@ncb/core'
 import { OgAgendaBullet, OgCountryMark, OgFrame, OG_SIZE, loadOgFonts } from '@/components/Og'
@@ -29,7 +30,7 @@ export default async function Image({ params }: { params: Promise<{ iso3: string
           <OgAgendaBullet
             key={item.dimension}
             kind={item.kind}
-            dimension={DIMENSION_LABELS[item.dimension]}
+            dimension={dimensionLabel(item.dimension)}
             score={item.score}
           />
         ))}

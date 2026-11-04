@@ -289,3 +289,46 @@ export function Markdown({ source }: { source: string }) {
 
   return <div className="space-y-4">{blocks}</div>
 }
+
+/** A heading's text as the viewer prints it, without links to other entries. */
+export function MarkdownHeading({ text }: { text: string }) {
+  return <>{inline(text, 0, false)}</>
+}
+
+export type MarkdownSection = { id: string; text: string; body: string }
+
+/**
+ * A document cut at its second-level headings, for a page that lists its entries.
+ * Each section keeps the address its heading would have had, so a citation still
+ * resolves. The first-level title is dropped, as `Markdown` drops it. See D190.
+ */
+export function splitMarkdown(source: string): { preamble: string; sections: MarkdownSection[] } {
+  const preamble: string[] = []
+  const sections: Array<{ id: string; text: string; lines: string[] }> = []
+  for (const line of source.split('\n')) {
+    const heading = line.match(/^##\s+(.*)$/)
+    if (heading) {
+      const text = (heading[1] as string).replace(/\s+[\u2014\u2013]\s+/g, ': ')
+      sections.push({ id: headingId(text), text, lines: [] })
+    } else if (sections.length > 0) {
+      sections[sections.length - 1]!.lines.push(line)
+    } else if (!/^#\s/.test(line)) {
+      preamble.push(line)
+    }
+  }
+  return {
+    preamble: preamble.join('\n').trim(),
+    sections: sections.map(({ id, text, lines }) => ({ id, text, body: lines.join('\n').trim() })),
+  }
+}
+
+/** The sections as the entries `DocEntries` lists. */
+export function docEntries(sections: MarkdownSection[]) {
+  return sections.map((s) => ({
+    id: s.id,
+    text: s.text,
+    title: <MarkdownHeading text={s.text} />,
+    body: <Markdown source={s.body} />,
+  }))
+}
+

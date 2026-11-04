@@ -1,3 +1,4 @@
+import { PageContents } from '@/components/PageContents'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { DECISIONS_DOC, FACTOR_INCOME_BANDS, WHY_DOC, docHref } from '@ncb/core'
@@ -73,6 +74,7 @@ export default async function ThesisPage() {
         direction, coordinate people and build what the technology makes possible. That ability is
         what this benchmark tries to measure.
       </Headline>
+      <PageContents />
 
       <Section
         title="What changed"

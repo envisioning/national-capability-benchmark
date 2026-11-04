@@ -1,3 +1,4 @@
+import { dimensionLabel } from '@/lib/labels'
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { COUNTRIES, DIMENSION_LABELS } from '@ncb/core'
@@ -46,10 +47,10 @@ export default async function DigestPage({ params }: { params: Promise<{ date: s
       </PageTitle>
       <p className="mt-3 text-xs uppercase tracking-[0.05em] text-[var(--muted)]">Week of {value}</p>
 
-      <Section title={`${DIMENSION_LABELS[striking.dimension]} is this country's largest difference`}>
+      <Section title={`${dimensionLabel(striking.dimension)} is this country's largest difference`}>
         <p className="max-w-3xl text-lg leading-relaxed">
           {country.country} scores <Score value={striking.score} size="sm" /> on{' '}
-          {DIMENSION_LABELS[striking.dimension]}. The frame average is{' '}
+          {dimensionLabel(striking.dimension)}. The frame average is{' '}
           <Score value={striking.average} size="sm" />. That is a{' '}
           <Delta value={striking.delta} /> point difference.
         </p>
@@ -74,7 +75,7 @@ export default async function DigestPage({ params }: { params: Promise<{ date: s
           <tbody>
             {dimensions.map((dimension) => (
               <tr key={dimension.dimension}>
-                <Td>{DIMENSION_LABELS[dimension.dimension]}</Td>
+                <Td>{dimensionLabel(dimension.dimension)}</Td>
                 <Td align="right"><Score value={dimension.score} size="sm" /></Td>
                 <Td align="right"><Score value={dimension.average} size="sm" /></Td>
                 <Td align="right"><Delta value={dimension.delta} /></Td>

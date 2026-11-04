@@ -5,6 +5,8 @@ import { useMemo, useState } from 'react'
 export type Column<T> = {
   key: string
   label: string
+  /** Replaces the label in the header, where a matrix needs a narrower column. */
+  head?: React.ReactNode
   align?: 'left' | 'right'
   /**
    * Value to sort on. Omit to make the column unsortable, which is right for
@@ -19,6 +21,8 @@ export type Column<T> = {
    */
   render: (row: T) => React.ReactNode
 }
+
+const PINNED = 'sticky left-0 z-10 bg-[var(--background)]'
 
 export type SortDirection = 'asc' | 'desc'
 
@@ -45,11 +49,14 @@ export function DataTable<T>({
   columns,
   initialSort,
   caption,
+  stickyFirst = false,
 }: {
   rows: T[]
   columns: Array<Column<T>>
   initialSort?: { key: string; dir?: SortDirection }
   caption?: string
+  /** Keeps the first column in view when a wide matrix scrolls sideways. */
+  stickyFirst?: boolean
 }) {
   const [sort, setSort] = useState<{ key: string; dir: SortDirection } | null>(
     initialSort ? { key: initialSort.key, dir: initialSort.dir ?? 'asc' } : null,
@@ -74,7 +81,9 @@ export function DataTable<T>({
   }
 
   return (
-    <div className="overflow-x-auto">
+    /* `relative` holds a cell's absolutely placed screen-reader text inside the
+       scroller. Without it that text widens the whole page on a phone. */
+    <div className="relative overflow-x-auto">
       <table className="w-full min-w-[640px] border-collapse text-xs">
         {caption ? <caption className="sr-only">{caption}</caption> : null}
         <thead>
@@ -82,12 +91,13 @@ export function DataTable<T>({
             {columns.map((col) => {
               const active = sort?.key === col.key
               const ariaSort = active ? (sort.dir === 'asc' ? 'ascending' : 'descending') : 'none'
+              const pin = stickyFirst && col === columns[0] ? PINNED : ''
               return (
                 <th
                   key={col.key}
                   scope="col"
                   aria-sort={col.sort ? ariaSort : undefined}
-                  className={`border-b border-[var(--rule)] px-3 py-3 text-xs font-medium text-[var(--muted)] ${
+                  className={`border-b border-[var(--rule)] px-3 py-3 text-xs font-medium text-[var(--muted)] ${pin} ${
                     col.align === 'right' ? 'text-right' : 'text-left'
                   }`}
                 >
@@ -99,13 +109,13 @@ export function DataTable<T>({
                         active ? 'text-[var(--foreground)]' : ''
                       }`}
                     >
-                      <span>{col.label}</span>
+                      <span>{col.head ?? col.label}</span>
                       <span aria-hidden="true" className="w-2 text-[0.85em] leading-none">
                         {active ? (sort.dir === 'asc' ? '↑' : '↓') : '·'}
                       </span>
                     </button>
                   ) : (
-                    col.label
+                    (col.head ?? col.label)
                   )}
                 </th>
               )
@@ -119,6 +129,8 @@ export function DataTable<T>({
                 <td
                   key={col.key}
                   className={`border-b border-[var(--rule-soft)] px-3 py-2.5 ${
+                    stickyFirst && col === columns[0] ? PINNED : ''
+                  } ${
                     col.align === 'right' ? 'text-right tabular-nums' : ''
                   }`}
                 >

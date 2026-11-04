@@ -1,3 +1,4 @@
+import { dimensionLabel } from '@/lib/labels'
 import { ImageResponse } from 'next/og'
 import { COUNTRIES, DIMENSIONS, DIMENSION_LABELS, type Dimension } from '@ncb/core'
 import { OgDistribution, OgFrame, OG_SIZE, loadOgFonts } from '@/components/Og'
@@ -31,7 +32,7 @@ export default async function Image({ params }: { params: Promise<{ dimension: s
   const focal = values.find((value) => value.country === COUNTRIES.find((c) => c.iso3 === 'BRA')?.name) ?? null
 
   return new ImageResponse(
-    <OgFrame eyebrow="Capability distribution" title={DIMENSION_LABELS[dimension]}>
+    <OgFrame eyebrow="Capability distribution" title={dimensionLabel(dimension)}>
       <div style={{ color: '#b8bdd9', display: 'flex', fontSize: 20, marginTop: 16 }}>
         {values.length} countries with a score, with Brazil pinned for reference
       </div>

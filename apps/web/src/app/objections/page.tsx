@@ -1,3 +1,4 @@
+import { PageContents } from '@/components/PageContents'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
@@ -76,6 +77,7 @@ export default async function ObjectionsPage() {
         Every decision names the evidence that would overturn it, and known failures sit beside
         the scores they affect. Bring a series, a case or an objection.
       </Headline>
+      <PageContents />
 
       <Section
         title="Open disputes"

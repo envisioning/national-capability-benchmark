@@ -1,72 +1,10 @@
 'use client'
 
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useState } from 'react'
 import type { Dimension } from '@ncb/core'
 import { DIMENSION_ICON, Icon } from '@/components/Icon'
 
-const SECTION_SELECTOR = 'details[data-country-section]'
-
-/**
- * One capability's section on a country page, closed until a reader asks.
- *
- * The content stays in the document, so a search finds it, the browser opens it
- * on a find and a print carries it. A link to the section's own address opens
- * it from any page, and from this page when the address is already current,
- * where the browser fires no hash change. See D189.
- */
-export function CountrySection({
-  id,
-  summary,
-  children,
-}: {
-  id: string
-  summary: React.ReactNode
-  children: React.ReactNode
-}) {
-  const ref = useRef<HTMLDetailsElement>(null)
-
-  useEffect(() => {
-    const el = ref.current
-    if (!el) return
-    const open = () => {
-      el.open = true
-    }
-    const openIfNamed = () => {
-      if (window.location.hash === `#${id}`) {
-        open()
-        return true
-      }
-      return false
-    }
-    const onClick = (event: MouseEvent) => {
-      const target = event.target
-      if (target instanceof Element && target.closest(`a[href="#${id}"]`)) open()
-    }
-    if (openIfNamed()) el.scrollIntoView()
-    window.addEventListener('hashchange', openIfNamed)
-    window.addEventListener('beforeprint', open)
-    document.addEventListener('click', onClick)
-    return () => {
-      window.removeEventListener('hashchange', openIfNamed)
-      window.removeEventListener('beforeprint', open)
-      document.removeEventListener('click', onClick)
-    }
-  }, [id])
-
-  return (
-    <details ref={ref} id={id} data-country-section className="group scroll-mt-24 border-b border-[var(--rule)]">
-      <summary className="flex cursor-pointer list-none items-center gap-3 py-4 [&::-webkit-details-marker]:hidden">
-        <Icon
-          name="chevron-down"
-          size={16}
-          className="shrink-0 -rotate-90 text-[var(--muted)] transition-transform duration-200 group-open:rotate-0"
-        />
-        <div className="min-w-0 grow">{summary}</div>
-      </summary>
-      <div className="pb-12 pt-2">{children}</div>
-    </details>
-  )
-}
+const SECTION_SELECTOR = 'details[data-fold-section]'
 
 /** Opens or closes every section, for a reader who wants the whole record. */
 export function CountrySectionsToggle() {

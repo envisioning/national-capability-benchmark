@@ -1,3 +1,4 @@
+import { dimensionLabel } from '@/lib/labels'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
@@ -68,7 +69,7 @@ export default async function PatternPage({ params }: { params: Promise<{ id: st
           <>
             {', '}
             <CapabilityLink dimension={dimension}>
-              {DIMENSION_LABELS[dimension].toLowerCase()}
+              {dimensionLabel(dimension).toLowerCase()}
             </CapabilityLink>
           </>
         ) : null}
@@ -123,7 +124,7 @@ export default async function PatternPage({ params }: { params: Promise<{ id: st
                 href={patternsHref({ ...NO_PATTERN_FILTERS, dimension })}
                 className="underline underline-offset-4"
               >
-                Every delivery under {DIMENSION_LABELS[dimension].toLowerCase()}
+                Every delivery under {dimensionLabel(dimension).toLowerCase()}
               </Link>
             </p>
           ) : null}

@@ -1,3 +1,4 @@
+import { dimensionLabel } from '@/lib/labels'
 import { notFound } from 'next/navigation'
 import { confidenceBand, DIMENSIONS, DIMENSION_LABELS } from '@ncb/core'
 import type { Dimension } from '@ncb/core'
@@ -48,7 +49,7 @@ export default async function CompareEmbedPage({
     <EmbedShell theme={embedTheme(query)}>
       <div className="embed-card">
         <p className="embed-kicker">National Capability Benchmark</p>
-        <PageTitle>{DIMENSION_LABELS[dimension]}</PageTitle>
+        <PageTitle>{dimensionLabel(dimension)}</PageTitle>
         <p className="embed-lede">
           <CountryLabel iso3={focal.iso3} name={focal.country} /> compared with the countries in
           the frame
@@ -57,7 +58,7 @@ export default async function CompareEmbedPage({
         <FrameNote />
         <p className="embed-source">
           <a href={absoluteHref(capabilityHref(dimension))}>
-            Open the full {DIMENSION_LABELS[dimension]} comparison
+            Open the full {dimensionLabel(dimension)} comparison
           </a>
           <span aria-hidden="true"> · </span>
           <a href={absoluteHref(countryProfileHref(focal.iso3))}>Open the country profile</a>

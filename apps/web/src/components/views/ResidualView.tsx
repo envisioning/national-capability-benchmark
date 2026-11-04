@@ -1,5 +1,6 @@
 'use client'
 
+import { dimensionLabel } from '@/lib/labels'
 import Link from 'next/link'
 import { COUNTRY_NAMES, DIMENSION_LABELS, DIMENSIONS } from '@ncb/core'
 import type { Dimension, ResidualCell, ResidualFile, ResidualFit } from '@ncb/core'
@@ -73,8 +74,8 @@ export function ResidualView({ residual }: { residual: ResidualFile }) {
             {
               key: 'dimension',
               label: 'Dimension',
-              sort: (fit) => DIMENSION_LABELS[fit.dimension],
-              render: (fit) => DIMENSION_LABELS[fit.dimension],
+              sort: (fit) => dimensionLabel(fit.dimension),
+              render: (fit) => dimensionLabel(fit.dimension),
             },
             {
               key: 'slope',
@@ -119,7 +120,7 @@ export function ResidualView({ residual }: { residual: ResidualFile }) {
         {weak.length > 0 ? (
           <p className="mt-6 max-w-3xl text-lg leading-relaxed text-[var(--muted)]">
             Income explains under a quarter of{' '}
-            {weak.map((fit) => DIMENSION_LABELS[fit.dimension]).join(' and ')}. Countries move
+            {weak.map((fit) => dimensionLabel(fit.dimension)).join(' and ')}. Countries move
             fewest places on those two when the line comes out, so read a weak fit as the score
             with an income caveat beside it.
           </p>
@@ -145,7 +146,7 @@ export function ResidualView({ residual }: { residual: ResidualFile }) {
               const fit = fits.get(dimension) ?? null
               return {
                 key: dimension,
-                label: DIMENSION_LABELS[dimension],
+                label: dimensionLabel(dimension),
                 align: 'right' as const,
                 sort: (row: ResidualRow) => row.cells[dimension]?.residual ?? null,
                 render: (row: ResidualRow) => <Gap cell={row.cells[dimension]} fit={fit} />,

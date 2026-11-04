@@ -19,16 +19,13 @@ import {
 } from '@ncb/core'
 import { DIMENSION_ICON, Icon } from '@/components/Icon'
 import { CoverageMark } from '@/components/CoverageMark'
+import { Fold } from '@/components/Fold'
 import { CompareRadar } from '@/components/views/CompareRadar'
 import { CheckList } from '@/components/views/CheckList'
 import { ConditionList } from '@/components/views/ConditionList'
 import { CountryHistoryChart } from '@/components/views/CountryHistoryChart'
 import { CountryIndicatorList } from '@/components/views/CountryIndicatorList'
-import {
-  CountrySection,
-  CountrySectionRail,
-  CountrySectionsToggle,
-} from '@/components/views/CountrySections'
+import { CountrySectionRail, CountrySectionsToggle } from '@/components/views/CountrySections'
 import { CountrySummary } from '@/components/views/CountrySummary'
 import { EvidenceList } from '@/components/views/EvidenceList'
 import Link from 'next/link'
@@ -66,7 +63,7 @@ import {
   loadIndex,
 } from '@/lib/data'
 import { toProfile } from '@/lib/profile'
-import { sentenceLabel } from '@/lib/labels'
+import { dimensionLabel, sentenceLabel } from '@/lib/labels'
 import { HISTORY_WORDS_EN } from '@/lib/words'
 
 export const dynamic = 'force-dynamic'
@@ -213,7 +210,7 @@ export default async function CountryPage({ params }: { params: Promise<{ iso3: 
                 ? [
                     {
                       dimension: d,
-                      label: sentenceLabel(DIMENSION_LABELS[d]),
+                      label: dimensionLabel(d),
                       score: dim.score === null || dim.belowCoverageFloor ? 'none' : dim.score.toFixed(1),
                     },
                   ]
@@ -230,15 +227,16 @@ export default async function CountryPage({ params }: { params: Promise<{ iso3: 
             )
             const finalRound = estimates.length ? Math.max(...estimates.map((e) => e.round)) : 0
             const finals = estimates.filter((e) => e.round === finalRound)
-            const label = sentenceLabel(DIMENSION_LABELS[d])
+            const label = dimensionLabel(d)
             const trend = primaryMomentum(dim.momentum)
             const hasHistory = Boolean(history?.dimensions[d])
             const spans = hasHistory && trend ? [trend] : dim.momentum
 
             return (
-              <CountrySection
+              <Fold
                 key={d}
                 id={d}
+                section
                 summary={
                   <div className="grid gap-x-6 gap-y-2 sm:grid-cols-[minmax(0,1fr)_auto] sm:items-center">
                     <div className="min-w-0">
@@ -276,7 +274,7 @@ export default async function CountryPage({ params }: { params: Promise<{ iso3: 
                   <CountryHistoryChart
                     history={history.dimensions[d]}
                     dimension={d}
-                    label={DIMENSION_LABELS[d]}
+                    label={dimensionLabel(d)}
                     country={country.country}
                     cohorts={historyCohorts}
                     words={HISTORY_WORDS_EN}
@@ -346,7 +344,7 @@ export default async function CountryPage({ params }: { params: Promise<{ iso3: 
                     </ul>
                   </details>
                 ) : null}
-              </CountrySection>
+              </Fold>
             )
           })}
         </div>
