@@ -131,7 +131,7 @@ export default async function CountryPage({ params }: { params: Promise<{ iso3: 
         <CountryLabel iso3={country.iso3} name={country.country} />
       </PageTitle>
 
-      <div className="mb-8 mt-6 grid gap-10 xl:grid-cols-[minmax(0,1fr)_22rem]">
+      <div className="mb-8 mt-6 grid grid-cols-[minmax(0,1fr)] gap-10 xl:grid-cols-[minmax(0,1fr)_22rem]">
         <CountrySummary
           country={country}
           agenda={agenda}
