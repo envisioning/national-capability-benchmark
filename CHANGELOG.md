@@ -9,6 +9,11 @@ The entries before App 1.0.0 are retrospective, high-level summaries
 reconstructed from the repository history. They document explicit version bumps
 and may skip versions that were never committed.
 
+## App 1.39.1 — 2026-11-04
+
+- **The country summary keeps its margin on a phone.** It ran 31 pixels past the
+  right gutter at 375 wide, because a column grew to fit its widest control.
+
 ## App 1.39.0 — 2026-11-04
 
 - **Per-head rows printed the wrong number.** Scientific articles, resident
