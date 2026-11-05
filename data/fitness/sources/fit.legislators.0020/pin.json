@@ -1,0 +1,32 @@
+{
+  "itemId": "fit.legislators.0020",
+  "itemVersion": 1,
+  "sources": [
+    {
+      "n": 1,
+      "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/204536",
+      "method": "fetched",
+      "retrieved": "2026-10-31",
+      "finalUrl": "https://dadosabertos.camara.leg.br/api/v2/deputados/204536",
+      "status": 200,
+      "contentType": "application/json",
+      "rawSha256": "2b6097c6ea3dae553e72e3934ad9f532617704fb56ca9dd9028acfcb88b7828d",
+      "textSha256": "795fad6a8f0eafb82ecda7172aa3613e9e75208b7edc6d40153cebb09fc413a5",
+      "chars": 911,
+      "extractor": "fitness-extract-2/json"
+    },
+    {
+      "n": 2,
+      "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/204536/historico",
+      "method": "fetched",
+      "retrieved": "2026-10-31",
+      "finalUrl": "https://dadosabertos.camara.leg.br/api/v2/deputados/204536/historico",
+      "status": 200,
+      "contentType": "application/json",
+      "rawSha256": "a48e161348a2949149b82960706d8973f1796acdb3e41a8429c2061e0e9ce4fe",
+      "textSha256": "6f5c4661f42b1e8d9628692147cfa298c195d9466e2af4e5091a8299a2873063",
+      "chars": 2760,
+      "extractor": "fitness-extract-2/json"
+    }
+  ]
+}

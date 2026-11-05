@@ -1,0 +1,539 @@
+{
+  "topic": "legislators",
+  "items": [
+    {
+      "id": "fit.legislators.0001",
+      "version": 1,
+      "topic": "legislators",
+      "kind": "fact",
+      "question": "Na votação em primeiro turno da PEC 45/2019 (reforma tributária) no Plenário da Câmara dos Deputados, em 6 de julho de 2023, que aprovou o substitutivo do relator da Comissão Especial, ressalvados os destaques, quantos deputados votaram \"sim\" e quantos votaram \"não\"?",
+      "snapshot": "2026-10-31",
+      "reference": {
+        "answer": "O substitutivo foi aprovado em primeiro turno com 382 votos \"sim\", 118 votos \"não\" e 3 abstenções, num total de 503 votos.",
+        "values": [
+          {
+            "field": "votos_sim",
+            "value": 382
+          },
+          {
+            "field": "votos_nao",
+            "value": 118
+          }
+        ]
+      },
+      "sources": [
+        {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2196833-326",
+          "publisher": "Câmara dos Deputados, Dados Abertos",
+          "retrieved": "2026-10-31"
+        }
+      ],
+      "grading": "script"
+    },
+    {
+      "id": "fit.legislators.0002",
+      "version": 1,
+      "topic": "legislators",
+      "kind": "fact",
+      "question": "Como votou o deputado Nikolas Ferreira (PL-MG) na votação em primeiro turno da PEC 45/2019 (reforma tributária) no Plenário da Câmara, em 6 de julho de 2023, que aprovou o substitutivo do relator da Comissão Especial?",
+      "snapshot": "2026-10-31",
+      "reference": {
+        "answer": "Nikolas Ferreira votou \"não\" na votação em primeiro turno do substitutivo à PEC 45/2019.",
+        "values": [
+          {
+            "field": "voto",
+            "value": "Não"
+          }
+        ]
+      },
+      "sources": [
+        {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2196833-326/votos",
+          "publisher": "Câmara dos Deputados, Dados Abertos",
+          "retrieved": "2026-10-31"
+        }
+      ],
+      "grading": "judge"
+    },
+    {
+      "id": "fit.legislators.0003",
+      "version": 1,
+      "topic": "legislators",
+      "kind": "fact",
+      "question": "Qual foi a orientação de voto do PL na votação do substitutivo ao PLP 93/2023 (arcabouço fiscal, o regime fiscal sustentável) no Plenário da Câmara, em 23 de maio de 2023?",
+      "snapshot": "2026-10-31",
+      "reference": {
+        "answer": "O PL liberou a bancada: a orientação registrada foi \"Liberado\". O substitutivo foi aprovado.",
+        "values": [
+          {
+            "field": "orientacao",
+            "value": "Liberado"
+          }
+        ]
+      },
+      "sources": [
+        {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2357053-47/orientacoes",
+          "publisher": "Câmara dos Deputados, Dados Abertos",
+          "retrieved": "2026-10-31"
+        }
+      ],
+      "grading": "judge"
+    },
+    {
+      "id": "fit.legislators.0004",
+      "version": 1,
+      "topic": "legislators",
+      "kind": "fact",
+      "question": "Como votou a deputada Célia Xakriabá (PSOL-MG) na votação do texto-base do PL 490/2007 (marco temporal das terras indígenas), a subemenda substitutiva global aprovada no Plenário da Câmara em 30 de maio de 2023?",
+      "snapshot": "2026-10-31",
+      "reference": {
+        "answer": "Célia Xakriabá votou \"não\" na subemenda substitutiva global ao PL 490/2007.",
+        "values": [
+          {
+            "field": "voto",
+            "value": "Não"
+          }
+        ]
+      },
+      "sources": [
+        {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/345311-270/votos",
+          "publisher": "Câmara dos Deputados, Dados Abertos",
+          "retrieved": "2026-10-31"
+        }
+      ],
+      "grading": "judge"
+    },
+    {
+      "id": "fit.legislators.0005",
+      "version": 1,
+      "topic": "legislators",
+      "kind": "fact",
+      "question": "Na votação do texto-base do PLP 68/2024 (regulamentação da reforma tributária: IBS, CBS e Imposto Seletivo) no Plenário da Câmara, em 10 de julho de 2024, quantos deputados votaram \"sim\" e quantos votaram \"não\" na subemenda substitutiva global do relator?",
+      "snapshot": "2026-10-31",
+      "reference": {
+        "answer": "A subemenda substitutiva global foi aprovada, ressalvados os destaques, com 336 votos \"sim\", 142 votos \"não\" e 2 abstenções, num total de 480 votos.",
+        "values": [
+          {
+            "field": "votos_sim",
+            "value": 336
+          },
+          {
+            "field": "votos_nao",
+            "value": 142
+          }
+        ]
+      },
+      "sources": [
+        {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2430143-72",
+          "publisher": "Câmara dos Deputados, Dados Abertos",
+          "retrieved": "2026-10-31"
+        }
+      ],
+      "grading": "script"
+    },
+    {
+      "id": "fit.legislators.0006",
+      "version": 1,
+      "topic": "legislators",
+      "kind": "fact",
+      "question": "Como votou o senador Jaques Wagner (PT-BA) na votação nominal do PL 2159/2021 (lei geral do licenciamento ambiental) no Plenário do Senado Federal, em 21 de maio de 2025?",
+      "snapshot": "2026-10-31",
+      "reference": {
+        "answer": "Jaques Wagner votou \"não\". O projeto foi aprovado no Senado por 54 votos a 13.",
+        "values": [
+          {
+            "field": "voto",
+            "value": "Não"
+          }
+        ]
+      },
+      "sources": [
+        {
+          "url": "https://legis.senado.leg.br/dadosabertos/votacao.json?codigoMateria=148785",
+          "publisher": "Senado Federal, Dados Abertos",
+          "retrieved": "2026-10-31"
+        }
+      ],
+      "grading": "judge"
+    },
+    {
+      "id": "fit.legislators.0007",
+      "version": 1,
+      "topic": "legislators",
+      "kind": "fact",
+      "question": "Na votação do PL 1087/2025 (isenção do imposto de renda para quem ganha até R$ 5 mil por mês e tributação mínima das altas rendas) no Plenário da Câmara, em 1º de outubro de 2025, quantos deputados votaram \"sim\" e quantos votaram \"não\" na subemenda substitutiva global do relator?",
+      "snapshot": "2026-10-31",
+      "reference": {
+        "answer": "A subemenda substitutiva global foi aprovada por unanimidade: 493 votos \"sim\" e nenhum voto \"não\", num total de 493 votos.",
+        "values": [
+          {
+            "field": "votos_sim",
+            "value": 493
+          }
+        ]
+      },
+      "sources": [
+        {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2487436-169",
+          "publisher": "Câmara dos Deputados, Dados Abertos",
+          "retrieved": "2026-10-31"
+        }
+      ],
+      "grading": "script"
+    },
+    {
+      "id": "fit.legislators.0008",
+      "version": 1,
+      "topic": "legislators",
+      "kind": "fact",
+      "question": "Quem é o autor do PL 1087/2025, que trata da isenção do imposto de renda para quem ganha até R$ 5 mil por mês, e qual é a situação atual da proposição?",
+      "snapshot": "2026-10-31",
+      "reference": {
+        "answer": "O autor é o Poder Executivo. O projeto foi transformado em norma jurídica: virou a Lei nº 15.270/2025, publicada no Diário Oficial da União de 27 de novembro de 2025.",
+        "values": []
+      },
+      "sources": [
+        {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2487436",
+          "publisher": "Câmara dos Deputados, Dados Abertos",
+          "retrieved": "2026-10-31"
+        },
+        {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2487436/autores",
+          "publisher": "Câmara dos Deputados, Dados Abertos",
+          "retrieved": "2026-10-31"
+        },
+        {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2487436/tramitacoes?dataInicio=2025-11-01",
+          "publisher": "Câmara dos Deputados, Dados Abertos",
+          "retrieved": "2026-10-31"
+        }
+      ],
+      "grading": "judge"
+    },
+    {
+      "id": "fit.legislators.0009",
+      "version": 1,
+      "topic": "legislators",
+      "kind": "fact",
+      "question": "Na votação em primeiro turno da PEC 3/2021 (a PEC das prerrogativas parlamentares, chamada de \"PEC da blindagem\") no Plenário da Câmara, em 16 de setembro de 2025, quantos deputados votaram \"sim\" e quantos votaram \"não\" no substitutivo reformulado do relator?",
+      "snapshot": "2026-10-31",
+      "reference": {
+        "answer": "O substitutivo reformulado foi aprovado em primeiro turno com 353 votos \"sim\", 134 votos \"não\" e 1 abstenção, num total de 488 votos.",
+        "values": [
+          {
+            "field": "votos_sim",
+            "value": 353
+          },
+          {
+            "field": "votos_nao",
+            "value": 134
+          }
+        ]
+      },
+      "sources": [
+        {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2270800-135",
+          "publisher": "Câmara dos Deputados, Dados Abertos",
+          "retrieved": "2026-10-31"
+        }
+      ],
+      "grading": "script"
+    },
+    {
+      "id": "fit.legislators.0010",
+      "version": 1,
+      "topic": "legislators",
+      "kind": "fact",
+      "question": "Como votou a deputada Tabata Amaral (PSB-SP) na votação em primeiro turno do substitutivo à PEC 3/2021 (\"PEC da blindagem\") no Plenário da Câmara, em 16 de setembro de 2025?",
+      "snapshot": "2026-10-31",
+      "reference": {
+        "answer": "Tabata Amaral votou \"não\" no substitutivo reformulado à PEC 3/2021 em primeiro turno.",
+        "values": [
+          {
+            "field": "voto",
+            "value": "Não"
+          }
+        ]
+      },
+      "sources": [
+        {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2270800-135/votos",
+          "publisher": "Câmara dos Deputados, Dados Abertos",
+          "retrieved": "2026-10-31"
+        }
+      ],
+      "grading": "judge"
+    },
+    {
+      "id": "fit.legislators.0011",
+      "version": 1,
+      "topic": "legislators",
+      "kind": "fact",
+      "question": "Qual foi a orientação da Federação PT-PCdoB-PV na votação do substitutivo ao PL 2162/2023 (o projeto da dosimetria das penas dos atos de 8 de janeiro) no Plenário da Câmara, em 9 de dezembro de 2025?",
+      "snapshot": "2026-10-31",
+      "reference": {
+        "answer": "A Federação PT-PCdoB-PV orientou o voto \"não\". O substitutivo foi aprovado, ressalvados os destaques, por 291 votos a 148.",
+        "values": [
+          {
+            "field": "orientacao",
+            "value": "Não"
+          }
+        ]
+      },
+      "sources": [
+        {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2358548-89/orientacoes",
+          "publisher": "Câmara dos Deputados, Dados Abertos",
+          "retrieved": "2026-10-31"
+        }
+      ],
+      "grading": "judge"
+    },
+    {
+      "id": "fit.legislators.0012",
+      "version": 1,
+      "topic": "legislators",
+      "kind": "fact",
+      "question": "Como votou o deputado Lindbergh Farias (PT-RJ) na votação do substitutivo ao PL 5582/2025 (o projeto antifacção, de combate ao crime organizado) no Plenário da Câmara, em 18 de novembro de 2025?",
+      "snapshot": "2026-10-31",
+      "reference": {
+        "answer": "Lindbergh Farias votou \"não\" no substitutivo ao PL 5582/2025, que foi aprovado, ressalvados os destaques, por 370 votos a 110.",
+        "values": [
+          {
+            "field": "voto",
+            "value": "Não"
+          }
+        ]
+      },
+      "sources": [
+        {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2579832-62/votos",
+          "publisher": "Câmara dos Deputados, Dados Abertos",
+          "retrieved": "2026-10-31"
+        }
+      ],
+      "grading": "judge"
+    },
+    {
+      "id": "fit.legislators.0013",
+      "version": 1,
+      "topic": "legislators",
+      "kind": "fact",
+      "question": "Na votação em primeiro turno da PEC 221/2019 (redução da jornada de trabalho para 36 horas semanais) no Plenário da Câmara, em 27 de maio de 2026, quantos deputados votaram \"sim\" e quantos votaram \"não\"?",
+      "snapshot": "2026-10-31",
+      "reference": {
+        "answer": "A PEC foi aprovada em primeiro turno, na votação da Emenda Aglutinativa nº 1, com 472 votos \"sim\" e 22 votos \"não\", num total de 494 votos.",
+        "values": [
+          {
+            "field": "votos_sim",
+            "value": 472
+          },
+          {
+            "field": "votos_nao",
+            "value": 22
+          }
+        ]
+      },
+      "sources": [
+        {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2233802-424",
+          "publisher": "Câmara dos Deputados, Dados Abertos",
+          "retrieved": "2026-10-31"
+        }
+      ],
+      "grading": "script"
+    },
+    {
+      "id": "fit.legislators.0014",
+      "version": 1,
+      "topic": "legislators",
+      "kind": "fact",
+      "question": "Quem é o autor da PEC 221/2019, que reduz a jornada de trabalho para 36 horas semanais, e qual é a situação atual da proposição?",
+      "snapshot": "2026-10-31",
+      "reference": {
+        "answer": "O autor é o deputado Reginaldo Lopes, único signatário. A PEC foi transformada em norma jurídica: virou a Emenda Constitucional 141/2026, publicada no Diário Oficial da União de 16 de outubro de 2026.",
+        "values": []
+      },
+      "sources": [
+        {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2233802",
+          "publisher": "Câmara dos Deputados, Dados Abertos",
+          "retrieved": "2026-10-31"
+        },
+        {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2233802/autores",
+          "publisher": "Câmara dos Deputados, Dados Abertos",
+          "retrieved": "2026-10-31"
+        }
+      ],
+      "grading": "judge"
+    },
+    {
+      "id": "fit.legislators.0015",
+      "version": 1,
+      "topic": "legislators",
+      "kind": "fact",
+      "question": "Qual foi a orientação da Federação PSOL-REDE na votação em segundo turno da PEC 18/2025 (a PEC da Segurança Pública) no Plenário da Câmara, em 4 de março de 2026?",
+      "snapshot": "2026-10-31",
+      "reference": {
+        "answer": "A Federação PSOL-REDE orientou o voto \"não\". A PEC foi aprovada em segundo turno por 461 votos a 14.",
+        "values": [
+          {
+            "field": "orientacao",
+            "value": "Não"
+          }
+        ]
+      },
+      "sources": [
+        {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2500080-330/orientacoes",
+          "publisher": "Câmara dos Deputados, Dados Abertos",
+          "retrieved": "2026-10-31"
+        }
+      ],
+      "grading": "judge"
+    },
+    {
+      "id": "fit.legislators.0016",
+      "version": 1,
+      "topic": "legislators",
+      "kind": "fact",
+      "question": "Quem é o primeiro autor do PL 1904/2024, que altera os artigos 124, 125, 126 e 128 do Código Penal (os dispositivos sobre aborto) e ficou conhecido como \"PL do aborto\", e em que situação a proposição se encontra na Câmara?",
+      "snapshot": "2026-10-31",
+      "reference": {
+        "answer": "O primeiro signatário é o deputado Sóstenes Cavalcante (PL-RJ), com mais 53 coautores. A proposição está \"Aguardando Despacho do Presidente da Câmara dos Deputados (Chancela)\"; tramita em regime de urgência, cujo requerimento o Plenário aprovou em 12 de junho de 2024, mas o mérito não foi votado em Plenário. A última movimentação registrada é de 14 de agosto de 2024, na Comissão de Previdência, Assistência Social, Infância, Adolescência e Família (CPASF).",
+        "values": []
+      },
+      "sources": [
+        {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2434493",
+          "publisher": "Câmara dos Deputados, Dados Abertos",
+          "retrieved": "2026-10-31"
+        },
+        {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2434493/autores",
+          "publisher": "Câmara dos Deputados, Dados Abertos",
+          "retrieved": "2026-10-31"
+        },
+        {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2434493/votacoes",
+          "publisher": "Câmara dos Deputados, Dados Abertos",
+          "retrieved": "2026-10-31"
+        }
+      ],
+      "grading": "judge"
+    },
+    {
+      "id": "fit.legislators.0017",
+      "version": 1,
+      "topic": "legislators",
+      "kind": "fact",
+      "question": "Quem preside a Câmara dos Deputados em 31 de outubro de 2026, e desde quando?",
+      "snapshot": "2026-10-31",
+      "reference": {
+        "answer": "O presidente da Câmara dos Deputados é o deputado Hugo Motta (Republicanos-PB), no cargo desde 1º de fevereiro de 2025.",
+        "values": []
+      },
+      "sources": [
+        {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/orgaos/4/membros?dataInicio=2026-10-31&dataFim=2026-10-31",
+          "publisher": "Câmara dos Deputados, Dados Abertos",
+          "retrieved": "2026-10-31"
+        }
+      ],
+      "grading": "judge"
+    },
+    {
+      "id": "fit.legislators.0018",
+      "version": 1,
+      "topic": "legislators",
+      "kind": "fact",
+      "question": "Quem preside o Senado Federal em 31 de outubro de 2026?",
+      "snapshot": "2026-10-31",
+      "reference": {
+        "answer": "O presidente do Senado Federal é o senador Davi Alcolumbre (União Brasil-AP).",
+        "values": []
+      },
+      "sources": [
+        {
+          "url": "https://legis.senado.leg.br/dadosabertos/dados/MesaSenado.json",
+          "publisher": "Senado Federal, Dados Abertos",
+          "retrieved": "2026-10-31"
+        }
+      ],
+      "grading": "judge"
+    },
+    {
+      "id": "fit.legislators.0019",
+      "version": 1,
+      "topic": "legislators",
+      "kind": "fact",
+      "question": "Em 31 de outubro de 2026, a que partido está filiado o senador Sergio Moro, e que estado ele representa?",
+      "snapshot": "2026-10-31",
+      "reference": {
+        "answer": "Sergio Moro é senador pelo Paraná e está filiado ao PL (Partido Liberal) desde 24 de março de 2026; antes, era do União Brasil.",
+        "values": [
+          {
+            "field": "partido",
+            "value": "PL"
+          },
+          {
+            "field": "uf",
+            "value": "PR"
+          }
+        ]
+      },
+      "sources": [
+        {
+          "url": "https://legis.senado.leg.br/dadosabertos/senador/6331.json",
+          "publisher": "Senado Federal, Dados Abertos",
+          "retrieved": "2026-10-31"
+        },
+        {
+          "url": "https://legis.senado.leg.br/dadosabertos/senador/6331/filiacoes.json",
+          "publisher": "Senado Federal, Dados Abertos",
+          "retrieved": "2026-10-31"
+        }
+      ],
+      "grading": "judge"
+    },
+    {
+      "id": "fit.legislators.0020",
+      "version": 1,
+      "topic": "legislators",
+      "kind": "fact",
+      "question": "Em 31 de outubro de 2026, a que partido pertence o deputado federal Kim Kataguiri, e por qual estado ele foi eleito?",
+      "snapshot": "2026-10-31",
+      "reference": {
+        "answer": "Kim Kataguiri é deputado federal por São Paulo e pertence ao Missão, para o qual mudou em 9 de março de 2026; antes, era do União Brasil.",
+        "values": [
+          {
+            "field": "partido",
+            "value": "MISSÃO"
+          },
+          {
+            "field": "uf",
+            "value": "SP"
+          }
+        ]
+      },
+      "sources": [
+        {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/204536",
+          "publisher": "Câmara dos Deputados, Dados Abertos",
+          "retrieved": "2026-10-31"
+        },
+        {
+          "url": "https://dadosabertos.camara.leg.br/api/v2/deputados/204536/historico",
+          "publisher": "Câmara dos Deputados, Dados Abertos",
+          "retrieved": "2026-10-31"
+        }
+      ],
+      "grading": "judge"
+    }
+  ]
+}

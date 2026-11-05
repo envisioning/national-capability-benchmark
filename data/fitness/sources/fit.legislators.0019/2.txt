@@ -1,0 +1,36 @@
+{
+  "FiliacaoParlamentar": {
+    "noNamespaceSchemaLocation": "https://legis.senado.leg.br/dadosabertos/dados/FiliacaoParlamentarv5.xsd",
+    "Metadados": {
+      "Versao": "31/10/2026 07:37:15",
+      "VersaoServico": "5",
+      "DataVersaoServico": "2021-09-09",
+      "DescricaoDataSet": "Retorna a relação de Filiações Partidárias do Senador informado no parâmetro."
+    },
+    "Parlamentar": {
+      "Codigo": "6331",
+      "Nome": "Sergio Moro",
+      "Filiacoes": {
+        "Filiacao": [
+          {
+            "Partido": {
+              "CodigoPartido": "523",
+              "SiglaPartido": "PL",
+              "NomePartido": "Partido Liberal"
+            },
+            "DataFiliacao": "2026-03-24"
+          },
+          {
+            "Partido": {
+              "CodigoPartido": "582",
+              "SiglaPartido": "UNIÃO",
+              "NomePartido": "União Brasil"
+            },
+            "DataFiliacao": "2022-10-02",
+            "DataDesfiliacao": "2026-03-23"
+          }
+        ]
+      }
+    }
+  }
+}
