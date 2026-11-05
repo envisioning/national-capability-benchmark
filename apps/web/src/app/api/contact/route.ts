@@ -1,6 +1,6 @@
 import { NextResponse, type NextRequest } from 'next/server'
 import { CONTACT_TOPIC_LABELS, ContactSubmission } from '@ncb/core'
-import { LEADS_API_URL, LEADS_PATH, SUBSCRIBE_PATH, coreConfigured, postToCore } from '@/lib/core-api'
+import { LEADS_API_URL, LEADS_PATH, SUBSCRIBE_PATH, coreConfigured, leadFields, postToCore } from '@/lib/core-api'
 import { verifyTurnstile } from '@/lib/turnstile'
 
 export const runtime = 'nodejs'
@@ -71,6 +71,7 @@ export async function POST(request: NextRequest): Promise<Response> {
       /* "Information only" in Core. A benchmark enquiry is not a request for
          an offer, and this keeps it out of the pipeline's offer flow. */
       requestOffer: false,
+      ...leadFields(),
     },
     { fallbackError: 'Could not send the message', origin: LEADS_API_URL },
   )
