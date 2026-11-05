@@ -257,6 +257,16 @@ Parked, with the reason:
 - **SUBNATIONAL-1**: waits on a construct decision (plan fidelity,
   reallocation or execution), not on research.
 
+
+**Wealth distribution (2026-11-05): preflight, nothing wired.** Memo:
+`docs/research/wealth-distribution/PREFLIGHT.md`. WID's top wealth shares and the
+income Gini read weakly adverse to capability. No dimension clears a Bonferroni
+bar once GDP and region are held, and the wealth shares add little to the Gini.
+WID states no reuse term, so it fails D154 (a). Most of its country values are
+imputed from income inequality, so a licence alone would not earn it a row.
+Shared purpose's -0.74 against the Gini is mechanical: the Gini is one of its two
+rows.
+
 ## Read before starting
 
 An agent taking a research task reads these files in this order:
