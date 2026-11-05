@@ -32,6 +32,10 @@ export const SUBSCRIBE_PATH = '/api/public/newsletter-subscribe'
  */
 export const LEADS_API_URL = process.env.LEADS_API_ORIGIN?.trim() || CORE_API_URL
 
+/** On the Worker every site's enquiry is a lead (MZ, 2026-11-05). On Core this one stays a contact. */
+export const leadFields = (): { createLead?: true } =>
+  process.env.LEADS_API_ORIGIN?.trim() ? { createLead: true } : {}
+
 export type CoreResult = { ok: true } | { ok: false; status: number; error: string }
 
 function signInternalRequest(rawBody: string): Record<string, string> {
