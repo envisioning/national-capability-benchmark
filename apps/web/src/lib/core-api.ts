@@ -24,6 +24,14 @@ export const CORE_API_URL = process.env.CORE_API_URL ?? 'https://core.envisionin
 export const LEADS_PATH = '/api/public/leads'
 export const SUBSCRIBE_PATH = '/api/public/newsletter-subscribe'
 
+/**
+ * Where the contact form files its lead. Unset, that is Core, as it always was.
+ * Set it to the Worker's origin to move the form. The Worker checks the same
+ * signature against its PUBLIC_LEAD_SECRET, which must hold this app's
+ * INTERNAL_REQUEST_SECRET. The newsletter stays on Core.
+ */
+export const LEADS_API_URL = process.env.LEADS_API_ORIGIN?.trim() || CORE_API_URL
+
 export type CoreResult = { ok: true } | { ok: false; status: number; error: string }
 
 function signInternalRequest(rawBody: string): Record<string, string> {
@@ -46,14 +54,14 @@ export const coreConfigured = (): boolean =>
 export async function postToCore(
   path: string,
   payload: unknown,
-  options: { fallbackError?: string; timeoutMs?: number } = {},
+  options: { fallbackError?: string; timeoutMs?: number; origin?: string } = {},
 ): Promise<CoreResult> {
-  const { fallbackError = 'Request failed', timeoutMs = 10_000 } = options
+  const { fallbackError = 'Request failed', timeoutMs = 10_000, origin = CORE_API_URL } = options
   const rawBody = JSON.stringify(payload)
 
   let response: Response
   try {
-    response = await fetch(`${CORE_API_URL}${path}`, {
+    response = await fetch(`${origin}${path}`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', ...signInternalRequest(rawBody) },
       body: rawBody,
