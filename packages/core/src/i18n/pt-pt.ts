@@ -98,11 +98,13 @@ export const PT_PT = withOverride(PT_BR, {
     large_project_delivery: 'Execução de grandes projetos',
     tax_revenue_gdp: 'Receita fiscal',
     income_inequality: 'Desigualdade de rendimento',
+    wealth_share_top10: 'Património dos 10% mais ricos',
     national_belonging: 'Sentimento de pertença nacional',
   },
   units: {
     'per 1,000 aged 15-64': 'por mil pessoas dos 15 aos 64 anos',
     '% of labour force': '% da população ativa',
+    '% of household net wealth': '% do património líquido das famílias',
     'percentage points from approved budget': 'pontos percentuais de desvio face ao orçamento aprovado',
     'ratio to world average': 'rácio face à média mundial',
     '% aged 18-64': '% das pessoas dos 18 aos 64 anos',
@@ -224,6 +226,8 @@ export const PT_PT = withOverride(PT_BR, {
       'Estimativa dos Indicadores Mundiais de Governação para a capacidade dos cidadãos de participar na escolha do governo.',
     tax_revenue_gdp: 'Receita fiscal da administração central, em proporção do PIB.',
     income_inequality: 'Índice de Gini do rendimento disponível.',
+    wealth_share_top10:
+      'Parte do património líquido das famílias detida pelos 10% de famílias mais ricas, sem contar direitos de pensão. Quanto menor, melhor.',
     national_belonging:
       'Identificação e ligação à comunidade nacional, declaradas pelos inquiridos, distintas do orgulho na nação.',
     volunteering_rate:

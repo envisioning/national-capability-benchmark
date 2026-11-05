@@ -1,6 +1,6 @@
 # Agenda de capacidades: Estados Unidos
 
-*Gerada em 2026-11-04*
+*Gerada em 2026-11-05*
 
 A escala reúne 135 países. Cada dimensão recebe uma pontuação de 0 a 100, sem classificação geral, e cada pontuação traz ao lado a solidez da evidência. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma pontuação.
 
@@ -83,6 +83,7 @@ As condições descrevem com o que um país conta: infraestrutura, acesso, dinhe
 | Adaptação | Assinaturas de banda larga fixa | 38,9 por 100 pessoas | 2024 | 18º de 135 |
 | Adaptação | Perdas na transmissão de eletricidade | 5,3 % da produção | 2025 | 21º de 122 |
 | Construção | Produto por pessoa ocupada | 156.983,2 dólares PPC constantes de 2021 | 2025 | 5º de 133 |
+| Propósito compartilhado | Patrimônio dos 10% mais ricos | 75,1 % do patrimônio líquido das famílias | 2022 | 29º de 29 |
 
 ## Agenda de medição
 

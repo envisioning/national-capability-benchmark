@@ -1,6 +1,6 @@
 # Agenda de capacidades: Moldávia
 
-*Gerada em 2026-11-04*
+*Gerada em 2026-11-05*
 
 A escala reúne 135 países. Cada dimensão recebe uma pontuação de 0 a 100, sem classificação geral, e cada pontuação traz ao lado a solidez da evidência. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma pontuação.
 

@@ -1,6 +1,6 @@
 # Agenda de capacidades: França
 
-*Gerada em 2026-11-04*
+*Gerada em 2026-11-05*
 
 A escala reúne 135 países. Cada dimensão recebe uma pontuação de 0 a 100, sem classificação geral, e cada pontuação traz ao lado a solidez da evidência. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma pontuação.
 
@@ -91,6 +91,7 @@ As condições descrevem com o que um país conta: infraestrutura, acesso, dinhe
 | Adaptação | Perdas na transmissão de eletricidade | 6,4 % da produção | 2025 | 33º de 122 |
 | Adaptação | Emprego informal | 3,4 % do emprego | 2025 | 13º de 111 |
 | Construção | Produto por pessoa ocupada | 128.587,1 dólares PPC constantes de 2021 | 2025 | 12º de 133 |
+| Propósito compartilhado | Patrimônio dos 10% mais ricos | 49,9 % do patrimônio líquido das famílias | 2020 | 15º de 29 |
 
 ## Agenda de medição
 

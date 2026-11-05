@@ -80,6 +80,30 @@ export const OECD_GRS_LICENCE =
   'OECD Terms and Conditions, Data: reuse for any purpose with credit (https://www.oecd.org/en/about/terms-conditions.html)'
 
 /**
+ * OECD Wealth Distribution Database, top 10% share of household net wealth,
+ * read through the OECD SDMX API. Published beside Shared Purpose as a
+ * condition, never scored. The dataflow carries `NonProductionDataflow: true`,
+ * so the version is pinned in the URL and the pin is the SHA-256 of the CSV: a
+ * publisher refresh fails the fetch until the new file is reviewed and
+ * re-pinned here. See D191.
+ */
+export const OECD_WDD_PUBLISHER = 'OECD'
+export const OECD_WDD_DATAFLOW = 'DSD_WEALTH@DF_WEALTH'
+export const OECD_WDD_DATASET = 'Wealth Distribution Database (DSD_WEALTH@DF_WEALTH 1.0)'
+export const OECD_WDD_PAGE_URL =
+  'https://data-explorer.oecd.org/vis?df[ds]=dsDisseminateFinalDMZ&df[id]=DSD_WEALTH%40DF_WEALTH&df[ag]=OECD.WISE.INE'
+export const OECD_WDD_URL =
+  'https://sdmx.oecd.org/public/rest/data/OECD.WISE.INE,DSD_WEALTH@DF_WEALTH,1.0/.A.SH_TOP10...?format=csvfilewithlabels'
+/** The retrieval date of the pinned response. */
+export const OECD_WDD_RELEASE = '2026-11-05'
+export const OECD_WDD_CSV_SHA256 =
+  '95958a618b4eb254da729b2a6873727bfbedf0e0a437ba7d607c91f8e59a2637'
+export const OECD_WDD_LICENCE =
+  'OECD Terms and Conditions, Data: reuse for any purpose with credit (https://www.oecd.org/en/about/terms-conditions.html)'
+/** Stable id of the adapter that reads the top 10% wealth share. */
+export const OECD_WDD_ADAPTER_ID = 'oecd-wdd-top10-wealth-share-v1'
+
+/**
  * ILOSTAT unemployment by sex, age and duration (thousands), read through the
  * ILO SDMX API. The long-term share is derived from it, see D120. ILOSTAT is a
  * live database rather than a versioned release, so the dataflow version and

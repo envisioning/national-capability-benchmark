@@ -51,6 +51,10 @@ stay in a public memo is a reading of D154 by the agent, for the owner to overru
 republishing derived values under CC BY 4.0. The measurement problem of section 3
 would still stand.
 
+**What the benchmark publishes instead (D191).** The OECD Wealth Distribution
+Database passes D154 (a) and reaches the country pages as a condition beside Shared
+purpose, for 29 countries.
+
 ## 3. Measurement: most values derive from income inequality
 
 Technical Note 2021/16 (Bajard, Chancel, Moshrif, Piketty) states the method. A

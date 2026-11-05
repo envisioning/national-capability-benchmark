@@ -315,6 +315,7 @@ export const ES: Lexicon = {
     voice_and_accountability: 'Voz y rendición de cuentas',
     tax_revenue_gdp: 'Recaudación tributaria',
     income_inequality: 'Desigualdad de ingresos',
+    wealth_share_top10: 'Patrimonio en manos del 10% más rico',
     national_belonging: 'Sentido de pertenencia nacional',
     volunteering_rate: 'Voluntariado',
     political_polarization: 'Polarización política',
@@ -332,6 +333,7 @@ export const ES: Lexicon = {
     '% of unemployed': '% de los desempleados',
     '% of products not exported competitively at the start': '% de los productos que no se exportaban de forma competitiva al inicio',
     '% of employment': '% del empleo',
+    '% of household net wealth': '% del patrimonio neto de los hogares',
     '% of output': '% de la producción',
     'index 0-1, lower = more diversified': 'índice de 0 a 1, menor = más diversificado',
     'articles per million people': 'artículos por millón de personas',
@@ -499,6 +501,8 @@ export const ES: Lexicon = {
       'Desempeño en costo y plazo de los grandes proyectos públicos de infraestructura.',
     firm_scale_up_rate:
       'Proporción de empresas jóvenes que alcanzan niveles relevantes de empleo o facturación.',
+    wealth_share_top10:
+      'Parte del patrimonio neto de los hogares en manos del 10% de hogares más ricos, sin contar derechos de pensión.',
     national_belonging:
       'Identificación y apego a la comunidad nacional, según declaran las personas, distintos del orgullo nacional.',
     volunteering_rate:

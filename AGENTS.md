@@ -12,6 +12,7 @@ pnpm bench ingest      fetch World Bank series from 1990 into data/observations/
 pnpm bench vdem fetch  import the pinned V-Dem civil-society and court-compliance series (every country-year from 1990, D180) and the polarization and turnout checks into data/observations/vdem-cy-core.json
 pnpm bench unctad fetch import the pinned UNCTADstat export concentration index, every year from 1995 (D183), into data/observations/unctad-concentration.json (needs bsdtar)
 pnpm bench grs fetch   fill tax revenue from the pinned OECD Global Revenue Statistics into data/observations/oecd-grs-tax-fill.json, only where the World Bank has no value inside the D159 window; run it after `bench ingest`, because it reads worldbank.json (D172)
+pnpm bench wdd fetch   read the pinned OECD top 10% wealth share, a condition beside Shared purpose (D191), into data/observations/oecd-wdd-top10.json
 pnpm bench ilostat fetch derive and gate the ILOSTAT long-term unemployment share into data/observations/ilostat-ltu.json, every year from 2010 the gate keeps (D186), and read the informal employment rate (a condition) into data/observations/ilostat-informality.json; --only ltu|informality runs one
 pnpm bench atlas fetch  count new export products from the pinned Growth Lab HS92 4-digit file (about 450 MB, checksum-checked), for every end year from 2010 (D183), into data/observations/atlas-new-export-products.json, with the pin and every count under `atlas`
 pnpm bench openalex fetch count the OpenAlex top 10% cited share and pin requests and counts into data/observations/openalex-citation-impact.json (set OPENALEX_MAILTO; OPENALEX_API_KEY optional); a refetch keeps the stored history
@@ -103,7 +104,8 @@ port 3888. That entry starts Next directly and does not use the proxy.
   impact and, under `openalex`, the pin: every request, the retrieval date
   and the counts the values derive from, because the API has no versions
   (D124).
-  `ilostat-informality.json` holds ILOSTAT's informal employment rate, a
+  `oecd-wdd-top10.json` holds the OECD top 10% wealth share, a condition beside
+  Shared purpose (D191). `ilostat-informality.json` holds ILOSTAT's informal employment rate, a
   condition beside Adaptability (D150). `atlas-new-export-products.json`
   holds the new export products rate and, under `atlas`, the pin: the
   Dataverse version, file id and checksums, the rule, and every country's

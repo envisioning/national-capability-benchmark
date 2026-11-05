@@ -9,6 +9,14 @@ The entries before App 1.0.0 are retrospective, high-level summaries
 reconstructed from the repository history. They document explicit version bumps
 and may skip versions that were never committed.
 
+## Dataset 10.2.0 — 2026-11-05
+
+- **Country pages can now show how wealth is divided.** A new row beside Shared
+  purpose gives the share of household net wealth held by the wealthiest 10% of
+  households, from the OECD Wealth Distribution Database. It covers 29 countries.
+- **The row is context and carries no score.** Slovakia reads 32.6% and the United
+  States 75.1%. Scores and confidence do not move. Decision D191.
+
 ## App 1.40.0 — 2026-11-04
 
 - **The front page asks the question and gives the current answer.** It now reads

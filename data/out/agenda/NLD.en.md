@@ -1,6 +1,6 @@
 # Capability agenda: Netherlands
 
-*Generated 2026-11-04*
+*Generated 2026-11-05*
 
 The frame includes 135 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
@@ -91,6 +91,7 @@ Conditions describe what a country has to work with: infrastructure, access, mon
 | Adaptability | Electricity transmission losses | 3.5 % of output | 2025 | 5 of 122 |
 | Adaptability | Informal employment | 5.1 % of employment | 2025 | 21 of 111 |
 | Building | Output per worker | 129,804.6 constant 2021 PPP $ | 2025 | 10 of 133 |
+| Shared Purpose | Wealth held by the top 10% | 56.7 % of household net wealth | 2023 | 26 of 29 |
 
 ## Missing data
 

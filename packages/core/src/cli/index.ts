@@ -15,6 +15,7 @@ import { ingestWorldBank, recordRevisions } from '../pipeline/ingest.js'
 import { fetchVdem } from '../pipeline/adapters/vdem.js'
 import { fetchUnctadExportConcentration } from '../pipeline/adapters/unctad.js'
 import { fetchOecdGrsFill } from '../pipeline/adapters/oecd-grs.js'
+import { fetchOecdWealthTop10 } from '../pipeline/adapters/oecd-wdd.js'
 import { fetchIlostatInformalEmployment, fetchIlostatLongTermUnemployment } from '../pipeline/adapters/ilostat.js'
 import { fetchAtlasNewExportProducts } from '../pipeline/adapters/atlas.js'
 import type { Observation } from '../model/index.js'
@@ -614,6 +615,18 @@ async function writeAdapterFile(
   )
 }
 
+async function wdd(args: Args): Promise<void> {
+  const action = args._[1] ?? 'fetch'
+  if (action !== 'fetch') {
+    throw new Error(`Unknown WDD action "${action}". Use pnpm bench wdd fetch.`)
+  }
+  const retrievedAt = new Date().toISOString()
+  const result = await fetchOecdWealthTop10({ retrievedAt })
+  console.log(`OECD WDD ${result.release}: ${result.emittedCountries.length}/${COUNTRY_ISO3.length} benchmark countries emitted`)
+  if (result.unmappedLabels.length > 0) console.log(`  not in the registry: ${result.unmappedLabels.join(' ')}`)
+  await writeAdapterFile(FILES.oecdWdd, 'OECD WDD', result.observations, retrievedAt)
+}
+
 async function ilostatInformal(): Promise<void> {
   const retrievedAt = new Date().toISOString()
   const result = await fetchIlostatInformalEmployment({ retrievedAt })
@@ -1137,6 +1150,9 @@ async function main() {
       break
     case 'grs':
       await grs(args)
+      break
+    case 'wdd':
+      await wdd(args)
       break
     case 'ilostat':
       await ilostat(args)
@@ -1679,6 +1695,7 @@ Start with file 1.
   pnpm bench vdem     fetch                fetch and parse V-Dem v16 civil society, court compliance and the polarization and turnout checks
   pnpm bench unctad   fetch                fetch and parse the pinned UNCTADstat export concentration index
   pnpm bench grs      fetch                fill tax revenue from the pinned OECD Global Revenue Statistics where the World Bank has no value (run after ingest)
+  pnpm bench wdd      fetch                read the pinned OECD top 10% wealth share, a condition beside Shared purpose (D191)
   pnpm bench ilostat  fetch [--only ltu|informality]  ILOSTAT: long-term unemployment share behind its gate, and the informal employment rate (a condition)
   pnpm bench atlas    fetch                new export products rate from the pinned Growth Lab HS92 4-digit file (about 450 MB)
   pnpm bench openalex fetch [--mailto a@b] count the OpenAlex top 10% cited share, pin counts and requests

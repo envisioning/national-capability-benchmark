@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-04T10:04:43.908Z",
-  "version": "10.1.1",
+  "generatedAt": "2026-11-05T11:52:10.760Z",
+  "version": "10.2.0",
   "country": {
     "country": "Czechia",
     "iso3": "CZE",
@@ -5727,7 +5727,23 @@
             "note": "Turnout is the one act in which a whole population takes part in a common decision, so it is the closest behavioral reading of shared purpose the benchmark has. It is not scored for three reasons the number cannot separate. It reads the democratic channel, which is why voice and accountability was retired from this capability (A5): a country with no competitive elections cannot score well for reasons unrelated to whether its people see themselves in a common project. Compulsory voting turns it into a reading of the law: Brazil enforces it, and the eight countries that enforce sanctions average 83 percent against 65 where voting is voluntary. And closed and electoral autocracies manage it: Vietnam reads 95.6, Rwanda 98.2 and Singapore 92.8, which is mobilization, not participation (A13). The year shown is the latest national election, because elections are coded only in the year they happen."
           }
         ],
-        "conditions": []
+        "conditions": [
+          {
+            "indicatorId": "wealth_share_top10",
+            "name": "Wealth held by the top 10%",
+            "definition": "Share of household net wealth held by the wealthiest 10% of households, excluding pension entitlements.",
+            "unit": "% of household net wealth",
+            "direction": "lower_better",
+            "value": 39.1,
+            "year": 2021,
+            "source": "OECD (DSD_WEALTH@DF_WEALTH)",
+            "sourceTier": "international_organization",
+            "rank": 2,
+            "n": 29,
+            "stale": false,
+            "note": "A condition, not scored: how household wealth is divided describes the society a country works with and does not measure a capability (D191). The rank orders values and is not a verdict. The OECD has this share for 29 benchmark countries, nearly all OECD members, so the row says nothing about the other 106. Net wealth here excludes pension entitlements, and the unit is the household. Surveys reach the richest households to different degrees, so a small gap between two countries means little. Denmark, the Netherlands and Norway use tax and administrative records; the rest use surveys. United Kingdom values cover Great Britain only. The latest year is 2016 for Poland and 2023 for Canada and the Netherlands."
+          }
+        ]
       }
     }
   }

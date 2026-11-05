@@ -1,6 +1,6 @@
 # Capability agenda: Hungary
 
-*Generated 2026-11-04*
+*Generated 2026-11-05*
 
 The frame includes 135 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
@@ -100,6 +100,7 @@ Conditions describe what a country has to work with: infrastructure, access, mon
 | Adaptability | Electricity transmission losses | 7.1 % of output | 2025 | 41 of 122 |
 | Adaptability | Informal employment | 0.9 % of employment | 2020 | 1 of 111 |
 | Building | Output per worker | 83,089.6 constant 2021 PPP $ | 2025 | 35 of 133 |
+| Shared Purpose | Wealth held by the top 10% | 46.3 % of household net wealth | 2020 | 7 of 29 |
 
 ## Missing data
 

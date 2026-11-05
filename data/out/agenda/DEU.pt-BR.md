@@ -1,6 +1,6 @@
 # Agenda de capacidades: Alemanha
 
-*Gerada em 2026-11-04*
+*Gerada em 2026-11-05*
 
 A escala reúne 135 países. Cada dimensão recebe uma pontuação de 0 a 100, sem classificação geral, e cada pontuação traz ao lado a solidez da evidência. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma pontuação.
 
@@ -91,6 +91,7 @@ As condições descrevem com o que um país conta: infraestrutura, acesso, dinhe
 | Adaptação | Perdas na transmissão de eletricidade | 5,3 % da produção | 2025 | 20º de 122 |
 | Adaptação | Emprego informal | 3,9 % do emprego | 2022 | 17º de 111 |
 | Construção | Produto por pessoa ocupada | 125.086,3 dólares PPC constantes de 2021 | 2025 | 13º de 133 |
+| Propósito compartilhado | Patrimônio dos 10% mais ricos | 55,5 % do patrimônio líquido das famílias | 2021 | 25º de 29 |
 
 ## Agenda de medição
 

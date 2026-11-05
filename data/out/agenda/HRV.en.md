@@ -1,6 +1,6 @@
 # Capability agenda: Croatia
 
-*Generated 2026-11-04*
+*Generated 2026-11-05*
 
 The frame includes 135 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
@@ -100,6 +100,7 @@ Conditions describe what a country has to work with: infrastructure, access, mon
 | Adaptability | Electricity transmission losses | 12 % of output | 2024 | 77 of 122 |
 | Adaptability | Informal employment | 14.8 % of employment | 2025 | 30 of 111 |
 | Building | Output per worker | 103,332.5 constant 2021 PPP $ | 2025 | 21 of 133 |
+| Shared Purpose | Wealth held by the top 10% | 47.1 % of household net wealth | 2020 | 9 of 29 |
 
 ## Missing data
 

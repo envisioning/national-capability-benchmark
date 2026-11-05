@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-04T10:05:10.815Z",
+  "generatedAt": "2026-11-05T11:53:12.914Z",
   "gdpSeries": "NY.GDP.PCAP.PP.KD",
   "income": [
     {
@@ -1284,9 +1284,10 @@
           "10.0.4",
           "10.0.5",
           "10.1.0",
-          "10.1.1"
+          "10.1.1",
+          "10.2.0"
         ],
-        "pairs": 39,
+        "pairs": 40,
         "perDimension": [
           {
             "dimension": "anticipation",
@@ -2001,14 +2002,14 @@
     ]
   },
   "delphiApplication": {
-    "datasetVersion": "10.1.1",
+    "datasetVersion": "10.2.0",
     "sourceDatasetVersion": "10.1.1",
-    "mode": "exact",
+    "mode": "carried",
     "cells": 1215,
     "carried": 1215,
     "dropped": [],
-    "judgementsCarried": 198,
-    "judgementsDropped": 0
+    "judgementsCarried": 171,
+    "judgementsDropped": 27
   },
   "redundantIndicatorPairs": [],
   "measurability": [
@@ -2376,6 +2377,18 @@
       "n": 133,
       "dimensionR": 0.627,
       "dimensionN": 133
+    },
+    {
+      "indicatorId": "wealth_share_top10",
+      "dimension": "shared_purpose",
+      "name": "Wealth held by the top 10%",
+      "measurementClass": "O",
+      "countries": 29,
+      "latestYear": 2023,
+      "r": -0.35,
+      "n": 29,
+      "dimensionR": 0.254,
+      "dimensionN": 28
     }
   ],
   "discriminationTrend": {

@@ -10662,3 +10662,59 @@ shown, or a citation that no longer opens its entry. Diagnostics that stop track
 income would change the sentence on the front page without a new decision, because
 it is computed, but "mostly no" is written by hand and would need rewriting.
 
+
+## D191 — The top 10% wealth share is published beside Shared purpose as a condition
+
+*Recorded 2026-11-05. Owner ruling of 2026-11-05: wealth data reaches the country
+pages through a source that passes D154. Extends D122 and D150. Applies D154 and
+D172. Memo: `docs/research/wealth-distribution/PREFLIGHT.md`. Dataset 10.2.0.*
+
+**Decision.** `wealth_share_top10` joins the registry with `role: 'condition'`
+beside Shared purpose: the share of household net wealth held by the wealthiest
+10% of households, OECD Wealth Distribution Database
+(`DSD_WEALTH@DF_WEALTH` 1.0, measure `SH_TOP10`). `pnpm bench wdd fetch` reads it
+into `data/observations/oecd-wdd-top10.json`. The dataflow carries
+`NonProductionDataflow: true`, so the adapter pins the version and the SHA-256 of
+the response, as D172 does. Direction is `lower_better`, which orders the rank and
+claims nothing about Shared purpose.
+
+**Why a condition.** How wealth is divided describes the society a country works
+with. Its link to a capability is a question this project tests, and the preflight
+found it weak. It also fails the indicator test on coverage for a scored row: 29 of
+135 countries. It changes no score or confidence, and it is outside the panel
+brief.
+
+**Licence.** D154 (a) passes on the reading D172 applied. The OECD terms, read on
+the live page on 2026-11-05, allow reuse of Data "for any purpose, even for
+commercial use" with credit, unless additional restrictions apply. The dataflow
+metadata names no restriction and no third-party owner. The OECD's source table
+names the national statistics office or central bank that runs each survey. The
+main concepts note says the OECD computes the estimates for 20 countries from a
+public use file of the Eurosystem Household Finance and Consumption Survey. This
+reading treats those published shares as OECD values. It is the agent's reading,
+and the terms make the user responsible for third-party rights.
+
+**Why not WID.** The preflight stands. WID states no reuse term, and most of its
+country values derive from income inequality. The WDD values come from surveys and
+records of each country's own households, so nothing is imputed from income.
+
+**Result.** 29 countries, 100 values, latest years 2016 to 2023. Slovakia reads
+lowest at 32.6% and the United States highest at 75.1%. Luxembourg is in the
+database and out of the registry. Korea is in the database with no top share.
+`diagnostics.conditions` gives r -0.35 with log GDP per capita (n 29) and r 0.25
+with the Shared purpose score (n 28), both in the ranked direction. The second
+figure carries the mechanical link the preflight names, because the Gini is a
+scored row of that dimension.
+
+**Cost.** Coverage is 29 of 135, nearly all OECD members, so the row says nothing
+about most of the benchmark. The top is undercounted by different amounts: survey
+oversampling of rich households differs by country. Pension entitlements are out,
+which matters where they are the main store of wealth. Three latest values carry an
+OECD time series break flag: Denmark, Italy and Japan. The version bump moves panel
+application from exact to carried under D160: all 1,215 cells carry, and 27
+indicator judgements on Coordination drop because that dimension's audit text
+changed after they were made. No page reads those judgements.
+
+**Overturned by.** A published restriction or third-party claim on these values,
+which removes the row under D154. A wealth source that passes D154 and covers far
+more of the 135 with measured values, which replaces it.

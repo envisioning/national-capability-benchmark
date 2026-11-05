@@ -1,6 +1,6 @@
 # National Capability Benchmark, prototype v0
 
-*Generated 2026-11-04T10:05:10.815Z*
+*Generated 2026-11-05T11:53:12.914Z*
 
 This run covers 135 countries and nine dimensions. Indicators carry equal weight within each dimension, and the benchmark has no headline ranking.
 
@@ -967,6 +967,7 @@ A condition records what a country has to work with: a stock of infrastructure, 
 | Electricity transmission losses | Adaptability | 122 | 2025 | 0.518 (n 120) | 0.538 (n 122) |
 | Informal employment | Adaptability | 111 | 2025 | 0.900 (n 110) | 0.456 (n 111) |
 | Output per worker | Building | 133 | 2025 | 0.879 (n 133) | 0.627 (n 133) |
+| Wealth held by the top 10% | Shared Purpose | 29 | 2023 | -0.350 (n 29) | 0.254 (n 28) |
 
 Both correlations read the value after the registry transform, so secure servers are read logged.
 
@@ -1014,7 +1015,7 @@ Four tests on the wealth residual (D68), over the 119 countries with all nine re
 | --- | --- | --- |
 | (a) Residuals move together | first-factor share 30.5%, chance 16% (95th 17.5%), n 119 | structure |
 | (b) Same income, different shape | peer distance 1.378 against 1.438 without regard to income (5th 1.396); shape share 22.7% against random 95th 19%, n 119 | alike |
-| (c) Order holds between releases | lowest rank r 0.718 on Trust (n 36), 39 release pairs | mixed |
+| (c) Order holds between releases | lowest rank r 0.718 on Trust (n 36), 40 release pairs | mixed |
 | (c) Order holds without one country | largest own-residual shift 0.101 residual SD | robust |
 | (d) Share of a profile that is income | mean 27.3%, median 37.4%, n 119 | part |
 
@@ -1196,6 +1197,8 @@ Run 2026-11-04T10-10-00-000Z-in_session, provenance `in_session`, 2 round(s), pa
 
 > In-session one-vendor panel under D154(b) as amended by D155, on dataset 10.1.1 (D187, D188). Six dimensions keep their cells as recorded: Coordination, Learning, Adaptability and Building from the 2026-11-02 run (2026-11-02T19-36-46-976Z-in_session), Anticipation and Experimentation from the 2026-11-03 rerun (2026-11-03T08-47-29-180Z-in_session), and their brief hashes match dataset 10.1.1. Trust, Agency and Shared purpose were rerun on 2026-11-04 (2026-11-04T10-03-33-919Z-in_session, kept beside this file), because D187 removed the four Joint EVS/WVS rows, which changed every brief there and dropped 405 of the 1215 cells under D160. The rerun used the same three panelists: institutionalist on claude-opus-5-5, bottom_up on claude-opus-5-5, wealth_sceptic on claude-sonnet-5-5, all Anthropic, through Claude Code subagents run by a Claude Code orchestrating session (Claude Opus 5.5). It covered the three dimensions for all 135 countries, 405 cells, with prompts built by pnpm bench delphi --in-session --dimensions at the current prompt version, byte-identical to a gateway run's for those dimensions. Each panelist answered in batches of 27 countries, one fresh context per batch and per round, and the audit in one context per stance. Quality control by the orchestrator: every batch was counted for repeated rationales, repeated missingEvidence items and missing countries. No rationale repeated, and the highest repeat share of missingEvidence items in a batch was 2 percent. Round 1 wealth_sceptic deviated from the brief in four of five batches. One (COL to HUN) filtered its prompts with grep and filled hidden rows from the derived score; it was discarded and rerun in a fresh context. Two (AGO to COG, IDN to MLI) filtered out the NO DATA and missing lines that repeat across countries, and one (SGP to ZWE) read nine prompts through sed for the indicator lines; these were kept, as in earlier runs. In round 2 every batch was told to read each prompt whole and reported doing so; one batch ran a structure check of its own file. Panelists drew on their own knowledge where the system rules allow it, and those claims are unverified. Panelists may recall survey figures from the retired release from their own knowledge; the prompts carry none. No call failed. One vendor means the spread measures stance, not vendor, and shared model-family blind spots are hidden by a narrow IQR, which is a floor on real uncertainty (D155). A multi-vendor or gateway run supersedes this one. This is an interpretation layer: its estimates reach only delphiScore and delphiIqr, and blendedScore only where a dimension has no observed indicator; they never enter score.
 
+Carried from dataset 10.1.1 onto 10.2.0: 1215 of 1215 cells kept because the evidence brief each was made on is unchanged; 0 dropped. 171 of 198 indicator judgements kept. See D160.
+
 Convergence: 943 of 1215 cells narrowed between rounds.
 
 ### Panel disagreement remains visible
@@ -1250,23 +1253,23 @@ A panel is not independent evidence: it reads the same published record as the i
 | Unemployment rate | O | O | 0.23 | 0.33 | 0.25 |
 | Business share of R&D | I | I | 0.23 | 0.58 | 0.7 |
 | Intentional homicide rate | O | O | 0.23 | 0.72 | 0.35 |
-| Logistics performance | P | P | 0.28 | 0.77 | 0.5 |
 | High-technology exports | O | O | 0.28 | 0.47 | 0.4 |
 | Scientific articles | O | O | 0.28 | 0.78 | 0.4 |
 | Voice and accountability | P | P | 0.28 | 0.68 | 0.35 |
 | Income inequality | O | O | 0.28 | 0.35 | 0.2 |
-| Regulatory quality | P | P | 0.3 | 0.9 | 0.6 |
 | Export diversification | C | O (reclassified) | 0.3 | 0.5 | 0.3 |
 | Manufacturing value added | O | O | 0.3 | 0.35 | 0.2 |
 | Trust in public institutions | P | P | 0.3 | 0.33 | 0.2 |
 | Logistics infrastructure quality | P | P | 0.32 | 0.8 | 0.5 |
 | Tax revenue | O | O | 0.33 | 0.65 | 0.3 |
-| University-industry collaboration | C | P (reclassified) | 0.35 | 0.7 | 0.4 |
 | Resident industrial design applications | O | O | 0.35 | 0.58 | 0.3 |
 | Procedures to start a business | C | I (reclassified) | 0.35 | 0.33 | 0.15 |
 | Resident patent applications | O | O | 0.37 | 0.73 | 0.45 |
 | Control of corruption | P | P | 0.38 | 0.85 | 0.55 |
-| Government effectiveness | P | P | 0.4 | 0.9 | 0.6 |
+| Economic fitness | O | O | 0.4 | 0.67 | 0.45 |
+| Tolerance of entrepreneurial failure | P | P | 0.4 | 0.33 | 0.1 |
+| University spinouts | C | O (reclassified) | 0.4 | 0.67 | 0.35 |
+| Long-term unemployment share | O | O | 0.42 | 0.38 | 0.2 |
 
 ### Evidence the panel requested
 

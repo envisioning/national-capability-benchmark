@@ -1,6 +1,6 @@
 # Agenda de capacidades: Chile
 
-*Generado el 2026-11-04*
+*Generado el 2026-11-05*
 
 La comparación incluye 135 países. Cada dimensión recibe una puntuación de 0 a 100, sin clasificación general, y cada puntuación muestra a su lado la solidez de la evidencia. Antes de citar una puntuación, lea [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md).
 
@@ -106,6 +106,7 @@ Las condiciones describen lo que un país tiene para trabajar: infraestructura, 
 | Adaptación | Pérdidas en la transmisión de electricidad | 6.2 % de la producción | 2025 | 31.º de 122 |
 | Adaptación | Empleo informal | 26.4 % del empleo | 2025 | 35.º de 111 |
 | Ejecución | Producto por trabajador | 65,210.8 US$ PPA constantes de 2021 | 2025 | 46.º de 133 |
+| Propósito compartido | Patrimonio en manos del 10% más rico | 53.4 % del patrimonio neto de los hogares | 2021 | 22.º de 29 |
 
 ## ¿Qué falta medir?
 

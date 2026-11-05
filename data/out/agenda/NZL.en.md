@@ -1,6 +1,6 @@
 # Capability agenda: New Zealand
 
-*Generated 2026-11-04*
+*Generated 2026-11-05*
 
 The frame includes 135 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
@@ -98,6 +98,7 @@ Conditions describe what a country has to work with: infrastructure, access, mon
 | Adaptability | Fixed broadband subscriptions | 38 per 100 people | 2024 | 20 of 135 |
 | Adaptability | Electricity transmission losses | 6.8 % of output | 2025 | 37 of 122 |
 | Building | Output per worker | 87,948.1 constant 2021 PPP $ | 2025 | 31 of 133 |
+| Shared Purpose | Wealth held by the top 10% | 52.9 % of household net wealth | 2018 | 20 of 29 |
 
 ## Missing data
 

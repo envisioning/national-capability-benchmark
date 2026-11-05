@@ -1,6 +1,6 @@
 # Agenda de capacidades: España
 
-*Generado el 2026-11-04*
+*Generado el 2026-11-05*
 
 La comparación incluye 135 países. Cada dimensión recibe una puntuación de 0 a 100, sin clasificación general, y cada puntuación muestra a su lado la solidez de la evidencia. Antes de citar una puntuación, lea [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md).
 
@@ -83,6 +83,7 @@ Las condiciones describen lo que un país tiene para trabajar: infraestructura, 
 | Adaptación | Pérdidas en la transmisión de electricidad | 7,8 % de la producción | 2025 | 47.º de 122 |
 | Adaptación | Empleo informal | 3,8 % del empleo | 2025 | 16.º de 111 |
 | Ejecución | Producto por trabajador | 109.693,1 US$ PPA constantes de 2021 | 2025 | 18.º de 133 |
+| Propósito compartido | Patrimonio en manos del 10% más rico | 53,2 % del patrimonio neto de los hogares | 2021 | 21.º de 29 |
 
 ## ¿Qué falta medir?
 

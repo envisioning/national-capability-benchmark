@@ -1,6 +1,6 @@
 # Agenda de capacidades: Croácia
 
-*Gerada em 2026-11-04*
+*Gerada em 2026-11-05*
 
 A escala reúne 135 países. Cada dimensão recebe uma pontuação de 0 a 100, sem classificação geral, e cada pontuação traz ao lado a solidez da evidência. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma pontuação.
 
@@ -100,6 +100,7 @@ As condições descrevem com o que um país conta: infraestrutura, acesso, dinhe
 | Adaptação | Perdas na transmissão de eletricidade | 12 % da produção | 2024 | 77º de 122 |
 | Adaptação | Emprego informal | 14,8 % do emprego | 2025 | 30º de 111 |
 | Construção | Produto por pessoa ocupada | 103.332,5 dólares PPC constantes de 2021 | 2025 | 21º de 133 |
+| Propósito compartilhado | Patrimônio dos 10% mais ricos | 47,1 % do patrimônio líquido das famílias | 2020 | 9º de 29 |
 
 ## Agenda de medição
 

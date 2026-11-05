@@ -1,6 +1,6 @@
 # Capability agenda: Japan
 
-*Generated 2026-11-04*
+*Generated 2026-11-05*
 
 The frame includes 135 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
@@ -90,6 +90,7 @@ Conditions describe what a country has to work with: infrastructure, access, mon
 | Adaptability | Fixed broadband subscriptions | 38.6 per 100 people | 2023 | 19 of 135 |
 | Adaptability | Electricity transmission losses | 4.6 % of output | 2025 | 15 of 122 |
 | Building | Output per worker | 87,888.3 constant 2021 PPP $ | 2025 | 32 of 133 |
+| Shared Purpose | Wealth held by the top 10% | 47.3 % of household net wealth | 2019 | 11 of 29 |
 
 ## Missing data
 

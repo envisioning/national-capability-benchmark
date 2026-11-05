@@ -1,6 +1,6 @@
 # Agenda de capacidades: Eslováquia
 
-*Gerada em 2026-11-04*
+*Gerada em 2026-11-05*
 
 A escala reúne 135 países. Cada dimensão recebe uma pontuação de 0 a 100, sem classificação geral, e cada pontuação traz ao lado a solidez da evidência. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma pontuação.
 
@@ -92,6 +92,7 @@ As condições descrevem com o que um país conta: infraestrutura, acesso, dinhe
 | Adaptação | Perdas na transmissão de eletricidade | 5,1 % da produção | 2025 | 16º de 122 |
 | Adaptação | Emprego informal | 6,2 % do emprego | 2025 | 24º de 111 |
 | Construção | Produto por pessoa ocupada | 84.278,1 dólares PPC constantes de 2021 | 2025 | 34º de 133 |
+| Propósito compartilhado | Patrimônio dos 10% mais ricos | 32,6 % do patrimônio líquido das famílias | 2021 | 1º de 29 |
 
 ## Agenda de medição
 

@@ -258,7 +258,7 @@ Parked, with the reason:
   reallocation or execution), not on research.
 
 
-**Wealth distribution (2026-11-05): preflight, nothing wired.** Memo:
+**Wealth distribution (2026-11-05): WID not wired, OECD published as a condition for 29 countries (D191).** Memo:
 `docs/research/wealth-distribution/PREFLIGHT.md`. WID's top wealth shares and the
 income Gini read weakly adverse to capability. No dimension clears a Bonferroni
 bar once GDP and region are held, and the wealth shares add little to the Gini.

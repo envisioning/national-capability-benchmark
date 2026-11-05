@@ -1,6 +1,6 @@
 # Capability agenda: Latvia
 
-*Generated 2026-11-04*
+*Generated 2026-11-05*
 
 The frame includes 135 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
@@ -92,6 +92,7 @@ Conditions describe what a country has to work with: infrastructure, access, mon
 | Adaptability | Electricity transmission losses | 5.4 % of output | 2025 | 22 of 122 |
 | Adaptability | Informal employment | 8.9 % of employment | 2025 | 26 of 111 |
 | Building | Output per worker | 80,906.3 constant 2021 PPP $ | 2025 | 39 of 133 |
+| Shared Purpose | Wealth held by the top 10% | 55.1 % of household net wealth | 2020 | 24 of 29 |
 
 ## Missing data
 

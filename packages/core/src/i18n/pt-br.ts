@@ -380,6 +380,7 @@ export const PT_BR: Lexicon = {
     voice_and_accountability: 'Voz e prestação de contas',
     tax_revenue_gdp: 'Receita tributária',
     income_inequality: 'Desigualdade de renda',
+    wealth_share_top10: 'Patrimônio dos 10% mais ricos',
     national_belonging: 'Sentimento de pertencimento nacional',
     volunteering_rate: 'Voluntariado',
     political_polarization: 'Polarização política',
@@ -397,6 +398,7 @@ export const PT_BR: Lexicon = {
     '% of unemployed': '% dos desempregados',
     '% of products not exported competitively at the start': '% dos produtos não exportados de forma competitiva no início',
     '% of employment': '% do emprego',
+    '% of household net wealth': '% do patrimônio líquido das famílias',
     '% of output': '% da produção',
     'index 0-1, lower = more diversified': 'índice de 0 a 1, menor = mais diversificado',
     'articles per million people': 'artigos por milhão de pessoas',
@@ -570,6 +572,8 @@ export const PT_BR: Lexicon = {
       'Estimativa dos Indicadores Mundiais de Governança para a capacidade dos cidadãos de participar da escolha do governo.',
     tax_revenue_gdp: 'Receita tributária do governo central, como parcela do PIB.',
     income_inequality: 'Índice de Gini da renda disponível.',
+    wealth_share_top10:
+      'Parcela do patrimônio líquido das famílias detida pelos 10% de famílias mais ricas, sem contar direitos de aposentadoria. Quanto menor, melhor.',
     national_belonging:
       'Identificação e vínculo com a comunidade nacional, declarados pelos entrevistados, distintos do orgulho pela nação.',
     volunteering_rate:

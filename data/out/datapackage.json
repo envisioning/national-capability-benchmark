@@ -3,8 +3,8 @@
   "name": "national-capability-benchmark",
   "title": "NCB, the National Capability Benchmark",
   "description": "A prototype that measures what a country can do, separately from how rich it is. Nine capability dimensions scored from public data, each with a separate confidence number.",
-  "version": "10.1.1",
-  "created": "2026-11-04T10:04:43.908Z",
+  "version": "10.2.0",
+  "created": "2026-11-05T11:52:10.760Z",
   "homepage": "https://github.com/envisioning/national-capability-benchmark",
   "licenses": [
     {
@@ -37,6 +37,10 @@
     {
       "title": "Harvard Growth Lab",
       "path": "https://atlas.hks.harvard.edu"
+    },
+    {
+      "title": "OECD",
+      "path": "https://data-explorer.oecd.org/vis?df[ds]=dsDisseminateFinalDMZ&df[id]=DSD_WEALTH%40DF_WEALTH&df[ag]=OECD.WISE.INE"
     },
     {
       "title": "OpenAlex",
@@ -254,7 +258,8 @@
         "indicators/broadband_subscriptions.json",
         "indicators/electricity_transmission_losses.json",
         "indicators/informal_employment_share.json",
-        "indicators/labour_productivity.json"
+        "indicators/labour_productivity.json",
+        "indicators/wealth_share_top10.json"
       ],
       "title": "One indicator or condition across every country, ranked best first",
       "format": "json",
