@@ -109,7 +109,9 @@ What the table supports:
 - **Wealth adds little to income.** With GDP and the Gini held, the top 10% share
   clears no interval on any of the 8. Top 10% against the Gini is r 0.64, top 1%
   r 0.61, and the bottom 50% r -0.27.
-- **The top 1% share reads the same.** Bottom 50%: no link, apart from Adaptability
+- **The top 1% share reads close to the same.** With GDP and the Gini held, its
+  only interval that excludes zero is Learning, -0.19 [-0.35, -0.01], which does not
+  clear the Bonferroni bar. Bottom 50%: no link, apart from Adaptability
   at +0.21 [+0.04, +0.37] with GDP held, which does not clear the Bonferroni bar.
 - **No link inside income bands on the top 10% share.** Against the mean of 8 by
   income quartile: +0.05, -0.16, +0.09, -0.31 (n 32 to 33). The top quartile reads
