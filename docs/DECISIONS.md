@@ -10894,3 +10894,41 @@ section (D80).
 data, which would show the number rule is not enough. Readers who take a
 gap as a verdict on a country.
 
+
+## D196 — A post a day, and a rule picks its subject
+
+*Recorded 2026-11-18. Reach roadmap. Builds on D195.*
+
+**Why.** The owner wants a daily post. With one kind, `income-gaps`, a daily
+run would repeat itself until the data changes. An agent that picks its own
+subject each day picks what it finds interesting, which is a selection the
+reader cannot see.
+
+**Decision.**
+
+1. **Two more kinds.** `country`: one country's widest gaps against its
+   `MAP_PEER_COUNT` income peers, up to three on each side. `capability`:
+   the widest three on each side for one capability, one country each, with
+   its correlation with income from `dimensionVsGdp`. Both use the D195 gap,
+   its `explainGap` drivers and the same exclusions (thin evidence, fewer
+   than `MIN_GAP_PEERS` scored peers, a known artefact naming the country on
+   the capability). A gap narrower than `GAP_FLOOR`, 10 points, is not a case.
+   A post of either kind stores what it is about in `subject`.
+2. **A rule picks the subject.** `nextPost` in `pipeline/post-plan.ts`:
+   Monday is a capability in registry order, every other day a country, with
+   countries queued by their widest usable gap. Each queue takes the first
+   subject without a post of its kind and then restarts from the oldest.
+   `bench post next --date` prints the kind, the subject and the facts.
+3. **The run.** `docs/POSTS.md` holds the steps: facts, post, validate,
+   typecheck, pull request, merge, check the deploy. A day whose subject has
+   no case is skipped, never replaced.
+
+**Cost.** Countries with the widest gaps come first, so the first months
+over-represent exceptions; a reader of the series sees more surprises than
+the data holds. Most Anticipation gaps rest on two rows, so a capability post
+can turn on one indicator. A country already in the `income-gaps` post (Vietnam)
+gets a second post that repeats one of its cases.
+
+**Overturned by.** A queue that runs out of countries with a usable gap
+before the next release, or readers who read the order of the country posts
+as a ranking.

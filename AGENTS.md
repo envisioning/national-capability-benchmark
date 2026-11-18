@@ -306,8 +306,9 @@ port 3888. That entry starts Next directly and does not use the proxy.
   `pipeline/income-gaps.ts` splits a gap into the rows that carry it, and
   `bench validate` fails a post whose prose prints a number it does not store
   (`unbackedNumbers` in `pipeline/post-check.ts`). A post is a closed edition:
-  never edit one after it ships, publish a correction. The playbook is
-  `docs/POSTS.md`. See D195.
+  never edit one after it ships, publish a correction. The daily subject is
+  `nextPost` in `pipeline/post-plan.ts` (`bench post next`), never the
+  agent's pick. The playbook is `docs/POSTS.md`. See D195 and D196.
 - The wealth residual is never summed across dimensions. `ResidualFile` has no
   country-level field, `buildResidual` in
   `packages/core/src/pipeline/residual.ts` computes one fit per dimension, and

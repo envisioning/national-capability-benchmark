@@ -1,0 +1,310 @@
+{
+  "slug": "vietnam-against-its-income-peers",
+  "date": "2026-11-18",
+  "kind": "country",
+  "subject": "VNM",
+  "question": "Is Vietnam more capable than its income suggests?",
+  "title": "Vietnam builds far beyond its income",
+  "dek": "On five of the seven capabilities with usable evidence, Vietnam scores at least 10 points above the countries nearest to it in income. Building leads by far, and it comes from what Vietnam makes and exports.",
+  "datasetVersion": "10.2.0",
+  "dataGeneratedAt": "2026-11-05T11:52:10.760Z",
+  "figures": {
+    "capabilitiesAbove": 5,
+    "capabilitiesUsable": 7,
+    "gapFloor": 10,
+    "coordinationGap": 12.1,
+    "learningGap": 11.8,
+    "experimentationGap": 3.2
+  },
+  "tags": {
+    "countries": [
+      "VNM"
+    ],
+    "dimensions": [
+      "building",
+      "adaptability",
+      "agency",
+      "anticipation"
+    ],
+    "indicators": [
+      "economic_complexity",
+      "high_tech_exports_share",
+      "new_export_products_rate",
+      "unemployment_rate",
+      "business_entry_efficiency",
+      "new_business_density",
+      "statistical_performance",
+      "sci_articles_per_million"
+    ]
+  },
+  "blocks": [
+    {
+      "type": "text",
+      "text": "This post compares Vietnam with the 10 countries nearest to it in income per person: Indonesia, Peru, Ukraine, Sri Lanka, Ecuador, Iran, Moldova, Paraguay, Egypt and South Africa. Seven of its nine capabilities have usable evidence. Trust and Shared purpose do not, so they are left out."
+    },
+    {
+      "type": "heading",
+      "text": "Where Vietnam is ahead of its peers"
+    },
+    {
+      "type": "gap",
+      "gap": {
+        "iso3": "VNM",
+        "country": "Vietnam",
+        "dimension": "building",
+        "score": 77.6,
+        "confidence": 0.62,
+        "peerMedian": 23.8,
+        "peersScored": 10,
+        "gap": 53.8,
+        "peers": [
+          "IDN",
+          "PER",
+          "UKR",
+          "LKA",
+          "ECU",
+          "IRN",
+          "MDA",
+          "PRY",
+          "EGY",
+          "ZAF"
+        ],
+        "drivers": [
+          {
+            "indicatorId": "economic_complexity",
+            "unit": "index",
+            "value": 2.334,
+            "year": 2024,
+            "position": 78.9,
+            "peerPosition": 9.2,
+            "contribution": 17.4
+          },
+          {
+            "indicatorId": "high_tech_exports_share",
+            "unit": "% of manufactured exports",
+            "value": 44.257,
+            "year": 2023,
+            "position": 73.2,
+            "peerPosition": 8.9,
+            "contribution": 16.1
+          },
+          {
+            "indicatorId": "manufacturing_value_added",
+            "unit": "% of GDP",
+            "value": 24.528,
+            "year": 2025,
+            "position": 71.1,
+            "peerPosition": 38.3,
+            "contribution": 8.2
+          },
+          {
+            "indicatorId": "utility_connection_efficiency",
+            "unit": "score 0-100",
+            "value": 88.784,
+            "year": 2025,
+            "position": 87.2,
+            "peerPosition": 60.6,
+            "contribution": 6.7
+          }
+        ],
+        "rowsCounted": 4,
+        "countryArtefacts": [],
+        "dimensionArtefacts": [
+          "A6",
+          "A11"
+        ]
+      },
+      "why": "Vietnam makes and exports goods its income peers do not. Economic fitness adds 17 points to the gap, and the high-technology share of its manufactured exports, at 44%, adds 16. Manufacturing is 25% of its GDP and adds another 8."
+    },
+    {
+      "type": "gap",
+      "gap": {
+        "iso3": "VNM",
+        "country": "Vietnam",
+        "dimension": "adaptability",
+        "score": 87,
+        "confidence": 0.617,
+        "peerMedian": 67.7,
+        "peersScored": 10,
+        "gap": 19.3,
+        "peers": [
+          "IDN",
+          "PER",
+          "UKR",
+          "LKA",
+          "ECU",
+          "IRN",
+          "MDA",
+          "PRY",
+          "EGY",
+          "ZAF"
+        ],
+        "drivers": [
+          {
+            "indicatorId": "new_export_products_rate",
+            "unit": "% of products not exported competitively at the start",
+            "value": 7.26,
+            "year": 2024,
+            "position": 81,
+            "peerPosition": 37.5,
+            "contribution": 10.9
+          },
+          {
+            "indicatorId": "unemployment_rate",
+            "unit": "% of labour force",
+            "value": 1.523,
+            "year": 2025,
+            "position": 96.2,
+            "peerPosition": 78.8,
+            "contribution": 4.4
+          },
+          {
+            "indicatorId": "long_term_unemployment_share",
+            "unit": "% of unemployed",
+            "value": 19.4,
+            "year": 2024,
+            "position": 84.3,
+            "peerPosition": 78.2,
+            "contribution": 1.5
+          },
+          {
+            "indicatorId": "export_diversification",
+            "unit": "index 0-1, lower = more diversified",
+            "value": 0.164,
+            "year": 2025,
+            "position": 86.4,
+            "peerPosition": 84.8,
+            "contribution": 0.4
+          }
+        ],
+        "rowsCounted": 4,
+        "countryArtefacts": [],
+        "dimensionArtefacts": []
+      },
+      "why": "Vietnam keeps adding products to what it exports. Products it did not export competitively at the start of the period now make up 7.3% of the basket, and that row carries 11 of the 19 points. Unemployment is 1.5%."
+    },
+    {
+      "type": "gap",
+      "gap": {
+        "iso3": "VNM",
+        "country": "Vietnam",
+        "dimension": "agency",
+        "score": 53,
+        "confidence": 0.491,
+        "peerMedian": 38.9,
+        "peersScored": 10,
+        "gap": 14.1,
+        "peers": [
+          "IDN",
+          "PER",
+          "UKR",
+          "LKA",
+          "ECU",
+          "IRN",
+          "MDA",
+          "PRY",
+          "EGY",
+          "ZAF"
+        ],
+        "drivers": [
+          {
+            "indicatorId": "business_entry_efficiency",
+            "unit": "score 0-100",
+            "value": 87.92,
+            "year": 2025,
+            "position": 84.2,
+            "peerPosition": 51.7,
+            "contribution": 10.8
+          },
+          {
+            "indicatorId": "new_business_density",
+            "unit": "per 1,000 aged 15-64",
+            "value": 1.999,
+            "year": 2024,
+            "position": 11.7,
+            "peerPosition": 9.4,
+            "contribution": 0.8
+          },
+          {
+            "indicatorId": "business_start_procedures",
+            "unit": "count",
+            "value": 8,
+            "year": 2019,
+            "position": 63.2,
+            "peerPosition": 68.4,
+            "contribution": -1.7
+          }
+        ],
+        "rowsCounted": 3,
+        "countryArtefacts": [],
+        "dimensionArtefacts": [
+          "A6",
+          "A14",
+          "A15"
+        ]
+      },
+      "why": "One row carries this gap. Starting a business in Vietnam scores 88 on the World Bank business entry measure, which adds 11 of the 14 points. New business density sits close to the peer median."
+    },
+    {
+      "type": "heading",
+      "text": "Where it is behind"
+    },
+    {
+      "type": "gap",
+      "gap": {
+        "iso3": "VNM",
+        "country": "Vietnam",
+        "dimension": "anticipation",
+        "score": 27.7,
+        "confidence": 0.455,
+        "peerMedian": 41.1,
+        "peersScored": 10,
+        "gap": -13.4,
+        "peers": [
+          "IDN",
+          "PER",
+          "UKR",
+          "LKA",
+          "ECU",
+          "IRN",
+          "MDA",
+          "PRY",
+          "EGY",
+          "ZAF"
+        ],
+        "drivers": [
+          {
+            "indicatorId": "statistical_performance",
+            "unit": "index 0-100",
+            "value": 67.238,
+            "year": 2024,
+            "position": 51.4,
+            "peerPosition": 72.7,
+            "contribution": -10.7
+          },
+          {
+            "indicatorId": "sci_articles_per_million",
+            "unit": "articles per million people",
+            "value": 106.071,
+            "year": 2023,
+            "position": 4,
+            "peerPosition": 6.7,
+            "contribution": -1.3
+          }
+        ],
+        "rowsCounted": 2,
+        "countryArtefacts": [],
+        "dimensionArtefacts": []
+      },
+      "why": "Vietnam's statistical system scores 67 on the World Bank statistical performance index, and that row carries 11 of the 13 points. Scientific articles per person sit close to the peer median."
+    },
+    {
+      "type": "heading",
+      "text": "The rest of the profile"
+    },
+    {
+      "type": "text",
+      "text": "Coordination and Learning are also above the peers, by 12 points each, and Experimentation is level, 3.2 points above. The widest gaps all sit in rows about producing and exporting. The one capability behind is about measuring and forecasting."
+    }
+  ]
+}

@@ -37,7 +37,7 @@ export const GapExplanationSchema = z.object({
 })
 
 /** The kinds of post. A new kind needs a `bench post` generator and a decision entry. */
-export const POST_KINDS = ['income-gaps'] as const
+export const POST_KINDS = ['income-gaps', 'country', 'capability'] as const
 export const PostKindEnum = z.enum(POST_KINDS)
 
 export const PostBlock = z.discriminatedUnion('type', [
@@ -52,6 +52,8 @@ export const PostFile = z.object({
   slug: z.string().regex(/^[a-z0-9-]+$/),
   date: z.string().regex(/^\d{4}-\d{2}-\d{2}$/),
   kind: PostKindEnum,
+  /** The country (ISO3) or capability a `country` or `capability` post is about. The daily queue reads it (D196). */
+  subject: z.string().optional(),
   /** The question the post answers, in the reader's words. */
   question: z.string(),
   title: z.string(),
