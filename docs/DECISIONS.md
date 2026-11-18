@@ -10718,3 +10718,54 @@ changed after they were made. No page reads those judgements.
 **Overturned by.** A published restriction or third-party claim on these values,
 which removes the row under D154. A wealth source that passes D154 and covers far
 more of the 135 with measured values, which replaces it.
+
+## D192 — A story is a computed reading of one country, and a thin score is never its headline
+
+*Recorded 2026-11-18. Extends D130 (describe, never prescribe) and D134
+(computed layers) to a new surface. Reach roadmap, issue #129.*
+
+**Why.** The benchmark reaches readers through tables, maps and a method. A
+reader who will share one finding needs one page that says one thing with a
+number in it. HubPolítico, a Brazilian election data site, publishes that way:
+one headline, one chart, the source and the date, a card for social feeds. NCB
+had no page of that kind, so a finding had to be read out of a table.
+
+**Decision.** Five rules.
+
+1. **A story is a function of the published files.** `buildStories` in
+   `packages/core/src/pipeline/stories.ts` reads `index.json` and
+   `diagnostics.income` and returns numbers only. `storyText` in
+   `story-text.ts` is the only place a story becomes words, from
+   `Lexicon.stories`. The page and the share card both call it. No sentence
+   about a country is written by hand.
+2. **Three stories to start.** `shape_mirror`: the countries whose shape is
+   nearest, among the countries with all nine scores. `peer_contrast`: among
+   the `MAP_PEER_COUNT` income peers with all nine scores, the farthest shape.
+   `peer_standing`: each dimension against the income-peer median. The shape
+   is the profile minus its own mean, and the distance is the root mean square
+   difference of two shapes, in score points. The peers are `incomePeers`,
+   the same rule as the capability map.
+3. **A score in a story carries its confidence.** Every table prints solidez
+   beside the score. A subject with thin evidence on any dimension gets a
+   caveat that counts those dimensions.
+4. **A thin score is never a headline.** `peer_standing` takes its headline
+   and its "most below" line only from dimensions whose confidence is not thin
+   under `isThinEvidence`. Dimensions below the median with thin evidence are
+   listed as such. For Brazil on Dataset 10.2.0 this means the headline is
+   Experimentation (+14.5) and not Trust or Coordination, whose evidence is
+   very thin and thin.
+5. **A story is a dated edition.** It prints the dataset version and the
+   generation date, and it changes only when the release does. Brazil's layer
+   publishes them at `/brasil/achados`, each with its own 1200 by 630 card.
+
+**Cost.** The shape stories use all nine scores, including thin ones, so a
+match can rest on weak evidence. The caveat says how many, and it does not
+remove them. A story picks one country out of many, which reads as a ranking
+of closeness. That is a ranking of shapes and never of capability, and no
+story ranks the subject among its peers.
+
+**Overturned by.** A shape measure that leaves out thin-evidence dimensions
+and changes the nearest match for most countries, which would show that thin
+scores drive the matches. A reader study showing that readers take a story's
+headline as a verdict on the country.
+

@@ -9,6 +9,17 @@ The entries before App 1.0.0 are retrospective, high-level summaries
 reconstructed from the repository history. They document explicit version bumps
 and may skip versions that were never committed.
 
+## App 1.42.0 — 2026-11-18
+
+- **Brazil's layer has stories.** `/brasil/achados` holds three short pages,
+  each with one finding and a number in its headline. Which country has
+  Brazil's shape? Costa Rica. Among the 10 countries with the nearest income,
+  which has the most different shape? Armenia. Where does Brazil stand out
+  among them? Experimentation, 14.5 points above their median.
+- **Every story carries its evidence.** Each score prints with its confidence,
+  and a score with thin evidence never makes the headline. Each story has its
+  own card for social feeds and a link to copy. Decision D192.
+
 ## App 1.41.0 — 2026-11-18
 
 - **AI assistants can read the benchmark directly.** Claude and other assistants
