@@ -9,6 +9,8 @@ import type { ShapeMatch, Story, StoryCell } from './stories.js'
  * template themselves, so the two cannot say different things. See D192.
  */
 export type StoryText = {
+  /** The story as a reader would ask it: the entry point on a front page. */
+  question: string
   title: string
   headline: string
   /** The paragraphs under the headline, in order. */
@@ -77,6 +79,7 @@ export function storyText(lex: Lexicon, story: Story): StoryText | null {
       if (!match) return null
       const values = { ...base, match: countryName(lex, match.iso3), ofMatch: ofCountry(lex, s, match.iso3) }
       return {
+        question: fillLex(lex, s.shapeMirror.question, values),
         title: fillLex(lex, s.shapeMirror.title, values),
         headline: fillLex(lex, s.shapeMirror.headline, values),
         dek: [
@@ -93,6 +96,7 @@ export function storyText(lex: Lexicon, story: Story): StoryText | null {
       if (!match || !nearest) return null
       const values = { ...base, match: countryName(lex, match.iso3), peerCount: story.peerCount }
       return {
+        question: fillLex(lex, s.peerContrast.question, values),
         title: fillLex(lex, s.peerContrast.title, values),
         headline: fillLex(lex, s.peerContrast.headline, values),
         dek: [
@@ -133,6 +137,7 @@ export function storyText(lex: Lexicon, story: Story): StoryText | null {
         dek.push(fillLex(lex, s.peerStanding.thinBelow, { list: dimensionList(story.thinBelow) }))
       }
       return {
+        question: fillLex(lex, s.peerStanding.question, base),
         title: fillLex(lex, s.peerStanding.title, base),
         headline: above
           ? fillLex(lex, s.peerStanding.headline, {

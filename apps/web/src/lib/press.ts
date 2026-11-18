@@ -1,6 +1,6 @@
-import { COUNTRIES, DIMENSIONS, FOR_AGENTS_DOC, docHref, incomePeers } from '@ncb/core'
+import { COUNTRIES, DIMENSIONS, FOR_AGENTS_DOC, docHref } from '@ncb/core'
 import type { CountryResult, IncomeRow } from '@ncb/core'
-import { countryForDigest } from '@/lib/digest'
+import { weekCountry } from '@/lib/entry'
 import { countryLayer, layerSection, type LayerSectionId } from '@/lib/layers'
 import {
   capabilityHref,
@@ -76,11 +76,11 @@ export function groundPressEntries(
   income: readonly IncomeRow[],
   now: Date = new Date(),
 ): PressEntry[] {
-  const country = countryForDigest(now, countries)
-  if (!country) return []
-  const iso3 = country.iso3
-  const peer = incomePeers(income, iso3, 1).peers[0]?.iso3
-  const name = country.country
+  const week = weekCountry(countries, income, now)
+  if (!week) return []
+  const iso3 = week.country.iso3
+  const peer = week.peer?.iso3
+  const name = week.country.country
   const firstDimension = DIMENSIONS[0]
   return [
     { label: `${name}: nine scores`, note: 'Each score with its confidence and the indicators it rests on.', href: countryProfileHref(iso3) },

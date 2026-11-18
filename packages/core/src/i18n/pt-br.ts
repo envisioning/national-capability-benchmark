@@ -974,6 +974,7 @@ export const PT_BR: Lexicon = {
     methodLink: 'Veja o método completo',
     cardFooter: 'Nove capacidades medidas com dados públicos, cada uma com a solidez da evidência',
     shapeMirror: {
+      question: 'Que país tem o formato mais parecido com o {ofCountry}?',
       title: 'Que país tem o formato {ofCountry}?',
       headline: '{match} é o país com o formato mais parecido com {countryTopic}',
       dek: 'Entre os {candidates} países com pontuação nas nove capacidades, nenhum tem pontos fortes e fracos tão parecidos com os {ofCountry}.',
@@ -988,6 +989,7 @@ export const PT_BR: Lexicon = {
       how: 'O formato é o perfil sem o nível: cada pontuação menos a média das nove do próprio país. Dois países podem ter o mesmo formato em níveis diferentes. A distância é a raiz da média dos quadrados das diferenças entre os dois formatos, em pontos da escala de 0 a 100. Entram só os países com pontuação nas nove capacidades.',
     },
     peerContrast: {
+      question: 'Entre os países de renda parecida, qual tem o formato mais diferente?',
       title: 'Mesma renda, outro formato',
       headline: 'Entre os {peerCount} países com renda mais próxima {ofCountry}, {match} tem o formato mais diferente',
       dek: 'A distância de formato é de {distance} pontos. O par com o formato mais parecido é {nearest}, a {nearestDistance} pontos.',
@@ -1001,6 +1003,7 @@ export const PT_BR: Lexicon = {
       how: 'Os pares são os {peerCount} países mais próximos em PIB por pessoa, na escala logarítmica, a mesma regra do mapa de capacidades. Entre eles, entram os que têm pontuação nas nove capacidades. O formato e a distância seguem a mesma conta do achado sobre o país de formato mais parecido.',
     },
     peerStanding: {
+      question: 'Em que capacidade {countryTopic} se destaca entre países de renda parecida?',
       title: 'Onde {countryTopic} se destaca entre países de renda parecida',
       headline: '{countryTopic} fica {gap} pontos acima da mediana dos pares em {dimension}',
       headlineNone: 'Nenhuma capacidade {ofCountry} com evidência sólida fica acima da mediana dos pares',

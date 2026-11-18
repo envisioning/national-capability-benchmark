@@ -10802,3 +10802,43 @@ English name, and its compare entry uses the single nearest income peer.
 or evidence that the box pushes content a reader needs below the fold on a
 phone.
 
+## D194 — The front pages open on questions and audiences, every one computed
+
+*Recorded 2026-11-18. Reach roadmap, issues #130, #131 and #132. Extends D190
+(every page answers first).*
+
+**Why.** The front page offered a country search and nothing else to a reader
+who did not yet know what to ask. HubPolítico opens on a search box with three
+example questions in the reader's words, and on a "who it is for" block that
+names one job per audience. NCB had neither, and its feature descriptions
+named no real country.
+
+**Decision.**
+
+1. **Three example questions under the search.** On `/` they are built around
+   the country of the week (`countryForDigest`) and its nearest income peer
+   (`incomePeers`): a compare, the country's map, and the capability with the
+   weakest tie to income from `readWealthTracking`. On `/brasil` they are the
+   three stories of D192, asked as a reader would ask them, from a `question`
+   string per story in `Lexicon.stories`.
+2. **One card per audience.** Governments, development banks and agencies,
+   researchers, and journalists, in English on `/` and in Portuguese on
+   `/brasil`. Each card names one job, one link and one preview line.
+3. **Every preview is computed from the current release.** The agenda count
+   comes from `splitAgenda`, the peer gap from the `peer_standing` story, the
+   factor share from `readFactorTest`, and the Brazil headlines from
+   `storyText`. No country, score or count is written into the copy.
+   `apps/web/src/lib/entry.ts` holds all of it, and `weekCountry` there is the
+   one place the week's country and its peer are chosen; the press page
+   (D193) reads it too.
+
+**Cost.** The English example country changes every week, so a reader who
+returns may see a country they do not care about. A preview can pair a low
+score with a positive peer gap on the same dimension (Brazil's
+Experimentation reads 32 and 14.5 above its peers), which is true and can
+read as a contradiction.
+
+**Overturned by.** Evidence that readers skip the questions and the cards, for
+example no visits from them to the pages they open, or a request from the
+audiences named here for a different first step.
+
