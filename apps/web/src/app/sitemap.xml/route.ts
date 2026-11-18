@@ -1,4 +1,4 @@
-import { COUNTRIES, DIMENSIONS, MAP_DIMENSIONS } from '@ncb/core'
+import { COUNTRIES, DIMENSIONS, LEXICONS, MAP_DIMENSIONS, STORY_IDS } from '@ncb/core'
 import { loadIndex } from '@/lib/data'
 import { COUNTRY_LAYERS, INSTITUTION_MAPS } from '@/lib/layers'
 import { METHOD_PAGES } from '@/lib/nav'
@@ -25,6 +25,7 @@ import {
   countryProfileHref,
   digestHref,
   layerSectionHref,
+  storyHref,
   supportHref,
   thesisHref,
 } from '@/lib/links'
@@ -71,6 +72,14 @@ export async function GET(): Promise<Response> {
     for (const dimension of MAP_DIMENSIONS) {
       const href = capabilityMapHref(layer.iso3, dimension)
       if (href) add(href)
+    }
+    /* The story pages, one per story, where the layer's lexicon names them. See D192. */
+    const slugs = LEXICONS[layer.lang]?.stories?.slugs
+    if (slugs) {
+      for (const id of STORY_IDS) {
+        const href = storyHref(layer.iso3, slugs[id])
+        if (href) add(href)
+      }
     }
   }
   add(aboutHref)

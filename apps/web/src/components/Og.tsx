@@ -66,10 +66,16 @@ export function OgFrame({
   eyebrow,
   title,
   children,
+  footer = 'Nine capabilities from public data, each with the confidence behind it',
+  titleSize = 54,
 }: {
   eyebrow: string
   title: string
   children: ReactNode
+  /** The line under the rule, in the card's language. */
+  footer?: string
+  /** A sentence headline needs a smaller size than a country name. */
+  titleSize?: number
 }) {
   return (
     <div
@@ -108,14 +114,14 @@ export function OgFrame({
         <div style={{ color: COLORS.accent, display: 'flex', fontSize: 18, letterSpacing: 1.2, textTransform: 'uppercase' }}>
           {eyebrow}
         </div>
-        <div style={{ display: 'flex', fontSize: 54, fontWeight: 400, lineHeight: 1.05, marginTop: 14 }}>
+        <div style={{ display: 'flex', fontSize: titleSize, fontWeight: 400, lineHeight: 1.1, marginTop: 14 }}>
           {title}
         </div>
         {children}
       </div>
 
       <div style={{ borderTop: `1px solid ${COLORS.rule}`, color: COLORS.muted, display: 'flex', flexShrink: 0, fontSize: 16, paddingTop: 16 }}>
-        Nine capabilities from public data, each with the confidence behind it
+        {footer}
       </div>
     </div>
   )
@@ -148,13 +154,17 @@ export function OgCountryMark({ iso3 }: { iso3: string }) {
 export function OgRadar({
   values,
   confidences,
+  compare,
 }: {
   values: readonly (number | null)[]
   confidences?: readonly (number | null)[]
+  /** A second shape drawn as an outline under the first, for a pair or a median. */
+  compare?: readonly (number | null)[]
 }) {
   const center = OG_RADAR.size / 2
   const rings = [25, 50, 75, 100]
   const path = radarToSvgPath(values, confidences, OG_RADAR)
+  const comparePath = compare ? radarToSvgPath(compare, undefined, OG_RADAR) : null
 
   return (
     <svg width={OG_RADAR.size} height={OG_RADAR.size} viewBox={`0 0 ${OG_RADAR.size} ${OG_RADAR.size}`}>
@@ -171,6 +181,7 @@ export function OgRadar({
         const [x, y] = radarPoint(index, 100, OG_RADAR)
         return <line key={index} x1={center} y1={center} x2={x} y2={y} stroke={COLORS.rule} strokeWidth={1} />
       })}
+      {comparePath ? <path d={comparePath} fill="none" stroke={COLORS.muted} strokeWidth={3} /> : null}
       {path ? <path d={path} fill={COLORS.accent} fillOpacity={0.34} stroke={COLORS.accent} strokeWidth={4} /> : null}
       {measuredRadarPoints(values, OG_RADAR).map(([x, y], index) => (
         <circle key={index} cx={x} cy={y} r={6} fill={COLORS.accent} />

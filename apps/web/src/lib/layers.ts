@@ -38,6 +38,7 @@ export type LayerSectionId =
   | 'support'
   | 'brief'
   | 'history'
+  | 'stories'
   | MapSectionId
 
 export type LayerSection = {
@@ -119,6 +120,8 @@ export const COUNTRY_LAYERS: readonly CountryLayer[] = [
     lang: 'pt-BR',
     overviewLabel: 'Visão geral',
     sections: [
+      /* The computed stories, first because they are the way in. See D192. */
+      { id: 'stories', label: PT_BR.stories?.navLabel ?? 'Achados', slug: 'achados' },
       { id: 'agenda', label: 'Agenda', slug: 'agenda' },
       { id: 'map', label: PT_BR.capabilityMap.index.navLabel, slug: 'mapa' },
       /* The reconstructed history in Portuguese. See D181. */

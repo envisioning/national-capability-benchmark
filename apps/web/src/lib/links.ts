@@ -91,8 +91,26 @@ export function layerSectionHref(layer: CountryLayer, section: LayerSection): st
     brief: briefHref,
     /* The country page carries the reconstructed history chart. See D181. */
     history: countryProfileHref(layer.iso3),
+    /* Stories have no ground-layer page; a layer without its own points at the country. */
+    stories: countryProfileHref(layer.iso3),
   }
   return ground[section.id]
+}
+
+/**
+ * One country's stories index inside its layer, or null where the layer
+ * publishes none. See D192.
+ */
+export function storiesIndexHref(iso3: string): string | null {
+  const layer = countryLayer(iso3)
+  const section = layer ? layerSection(layer, 'stories') : null
+  return layer && section?.slug ? layerSectionHref(layer, section) : null
+}
+
+/** One story inside a layer: the index address plus the story's slug from the layer's lexicon. */
+export function storyHref(iso3: string, slug: string): string | null {
+  const index = storiesIndexHref(iso3)
+  return index ? `${index}/${slug}` : null
 }
 
 /**

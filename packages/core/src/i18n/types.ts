@@ -196,11 +196,115 @@ export type Lexicon = {
   institutions: InstitutionStrings
   capabilityMap: CapabilityMapStrings
   /**
+   * The words of the computed stories. Only a layer that publishes stories
+   * carries them; the pages read the layer's lexicon and render nothing
+   * without them. See D192.
+   */
+  stories?: StoryStrings
+  /**
    * Evidence records in this language, by record id: the title and the claim.
    * The record itself stays English in `data/evidence`; a missing id falls
    * back to it. A layer lexicon carries the records about its own country.
    */
   evidence?: Record<string, { title: string; claim: string }>
+}
+
+/**
+ * The words of the computed stories, one block per story. Placeholders name
+ * countries, dimensions and numbers the story computed. `{ofCountry}` and
+ * `{ofMatch}` are the country with the genitive the language needs, built
+ * through `of`. Descriptive by contract: no string says what a country
+ * should do. See D192.
+ */
+export type StoryStrings = {
+  /**
+   * Counts zero to nine as words, in the gender the story templates need.
+   * From 10 a count prints as a numeral. Data, not a function, because a
+   * lexicon crosses into client components.
+   */
+  countWords: readonly string[]
+  /** Each story's path segment under the layer's stories section. A rename moves an address. */
+  slugs: { shape_mirror: string; peer_contrast: string; peer_standing: string }
+  navLabel: string
+  indexTitle: string
+  /** {version} */
+  indexIntro: string
+  /** {version} {date} */
+  edition: string
+  /** The genitive form for each article in `countryArticles`, '' for none: "do" for "o". */
+  of: Record<string, string>
+  thin: string
+  colDimension: string
+  colScore: string
+  colConfidence: string
+  colPeerMedian: string
+  colGap: string
+  /** {score} {confidence} */
+  cell: string
+  howHeading: string
+  shareHeading: string
+  copyLink: string
+  copied: string
+  methodLink: string
+  /** The line under the rule on a story's share card. */
+  cardFooter: string
+  shapeMirror: {
+    /** {countryTopic} {ofCountry} */
+    title: string
+    /** {match} {countryTopic} */
+    headline: string
+    /** {candidates} {match} {ofCountry} */
+    dek: string
+    /** {match} {pct} */
+    incomeMore: string
+    incomeLess: string
+    incomeLevel: string
+    /** {match} {distance} {income}: one line of the nearest-shapes list */
+    matchLine: string
+    nextHeading: string
+    tableHeading: string
+    /** {thin} {ofCountry} */
+    thinCaveat: string
+    how: string
+  }
+  peerContrast: {
+    title: string
+    /** {peerCount} {ofCountry} {match} */
+    headline: string
+    /** {distance} {nearest} {nearestDistance} */
+    dek: string
+    /** {list}: the dimensions with the widest gaps */
+    widest: string
+    /** {dimension} {country} {a} {match} {b} */
+    widestItem: string
+    peersHeading: string
+    /** {match} {distance} */
+    peerLine: string
+    tableHeading: string
+    /** {thin} {ofCountry} */
+    thinCaveat: string
+    how: string
+  }
+  peerStanding: {
+    /** {countryTopic} {ofCountry} */
+    title: string
+    /** {countryTopic} {gap} {dimension} {peerCount} */
+    headline: string
+    /** No dimension with sound evidence sits above the median. {countryTopic} */
+    headlineNone: string
+    /** {dimension} {score} {median} */
+    dek: string
+    /** {dimension} {gap} */
+    below: string
+    /** {list} */
+    belowNone: string
+    /** {list} */
+    thinBelow: string
+    tableHeading: string
+    /** {list} */
+    peersLine: string
+    how: string
+  }
 }
 
 /**
