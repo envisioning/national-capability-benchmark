@@ -47,6 +47,24 @@ will not read a table. Every number in a post comes from the data. See D195.
 5. Commit with the post's title in the message. The post goes live on the next
    deploy of `main`.
 
+## Blocks
+
+A post is drawn from a fixed set of blocks, each answering one question a
+reader asks. `/posts/blocks` draws every one from a published post and is the
+reference: a block that is not on that page is not part of the set (D197).
+
+| Block | Answers | Drawn by |
+| --- | --- | --- |
+| Heading | Which side of the story am I reading? | `PostArticle` |
+| Text | What is the question, and what holds it together? | `PostArticle` |
+| Field strip | Where does this country sit among countries as rich as it? | `PeerField` (the shared `FlagField`) |
+| Waterfall | Why is the gap there? | `GapWaterfall` |
+| Case | What is the gap, and what does it come from? | `GapBlock`: why, field strip, waterfall, table behind a toggle |
+
+The writer adds no block by hand: a `gap` block draws its field strip and
+waterfall from the stored `peerScores` and `drivers`. A new block is a new
+block type in `PostBlock`, a specimen on `/posts/blocks` and a decision entry.
+
 ## Kinds
 
 | Kind | Question | Command |

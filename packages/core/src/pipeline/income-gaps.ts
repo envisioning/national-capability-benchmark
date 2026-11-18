@@ -34,6 +34,8 @@ export type GapCell = {
   gap: number
   /** The income peers, nearest first. */
   peers: string[]
+  /** The peers that have a score on the capability, nearest first. */
+  peerScores: Array<{ iso3: string; score: number; confidence: number }>
 }
 
 /** Every gap with usable evidence and enough scored peers, for every country. */
@@ -46,9 +48,11 @@ export function incomeGaps(countries: readonly CountryResult[], income: readonly
     for (const dimension of DIMENSIONS) {
       const result = country.dimensions[dimension]
       if (!result || result.score === null || isThinEvidence(result.confidence)) continue
-      const scores = peers
-        .map((iso3) => byIso.get(iso3)?.dimensions[dimension]?.score)
-        .filter((s): s is number => s != null)
+      const peerScores = peers.flatMap((iso3) => {
+        const r = byIso.get(iso3)?.dimensions[dimension]
+        return r && r.score !== null ? [{ iso3, score: r.score, confidence: r.confidence }] : []
+      })
+      const scores = peerScores.map((p) => p.score)
       if (scores.length < MIN_GAP_PEERS) continue
       const peerMedian = round(median(scores), 1)
       cells.push({
@@ -61,6 +65,7 @@ export function incomeGaps(countries: readonly CountryResult[], income: readonly
         peersScored: scores.length,
         gap: round(result.score - peerMedian, 1),
         peers,
+        peerScores,
       })
     }
   }

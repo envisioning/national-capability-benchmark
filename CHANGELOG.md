@@ -9,6 +9,17 @@ The entries before App 1.0.0 are retrospective, high-level summaries
 reconstructed from the repository history. They document explicit version bumps
 and may skip versions that were never committed.
 
+## App 1.47.0 — 2026-11-18
+
+- **Posts draw their cases.** Under each case, the country and its 10 income
+  peers sit on the field chart, with the peers' median drawn as a line. A
+  waterfall below walks from that median to the country's score, one bar per
+  row of the score, so the reason for a gap reads at a glance. The table moved
+  behind a toggle.
+- **How a post is drawn.** `/posts/blocks` shows every block a post can hold,
+  drawn from a published post, with the question each one answers and when it
+  appears. Decision D197.
+
 ## App 1.46.0 — 2026-11-18
 
 - **Two more kinds of post.** A country post compares one country with the 10

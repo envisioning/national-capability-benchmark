@@ -3,8 +3,10 @@ import { COUNTRY_NAMES, EN, indicatorName, unitName } from '@ncb/core'
 import type { Dimension, GapExplanation, PostFile } from '@ncb/core'
 import { CountryLabel, Eyebrow, Headline, PageTitle, Score, Confidence, Scroller, Table, Td, Th } from '@/components/ui'
 import { conditionValue } from '@/components/views/ConditionList'
+import { GapWaterfall } from '@/components/posts/GapWaterfall'
+import { PeerField } from '@/components/posts/PeerField'
 import { dimensionLabel } from '@/lib/labels'
-import { artefactHref, countryMapDimensionHref, decisionHref, postHref, postsTagHref } from '@/lib/links'
+import { artefactHref, countryMapDimensionHref, decisionHref, postBlocksHref, postHref, postsTagHref } from '@/lib/links'
 
 /**
  * The posts: dated explainers that open the data. Every number on these pages
@@ -120,7 +122,7 @@ export function PostList({ posts, filter }: { posts: PostFile[]; filter: PostFil
 
 const signed = (n: number): string => `${n > 0 ? '+' : ''}${n.toFixed(1)}`
 
-function GapBlock({ gap, why }: { gap: GapExplanation; why: string }) {
+export function GapBlock({ gap, why, legend = false }: { gap: GapExplanation; why: string; legend?: boolean }) {
   const limits = [...gap.countryArtefacts, ...gap.dimensionArtefacts]
   return (
     <section className="mb-14 border-t border-[var(--rule)] pt-6">
@@ -137,7 +139,17 @@ function GapBlock({ gap, why }: { gap: GapExplanation; why: string }) {
         </span>
       </p>
       <p className="mt-4 max-w-3xl text-lg leading-relaxed">{why}</p>
-      <div className="mt-6">
+      {gap.peerScores ? (
+        <div className="mt-6">
+          <PeerField gap={gap} legend={legend} />
+        </div>
+      ) : null}
+      <div className="mt-8">
+        <GapWaterfall gap={gap} countryName={countryName(gap.iso3)} />
+      </div>
+      <details className="mt-6">
+        <summary className="cursor-pointer text-xs font-medium underline underline-offset-2">Show the rows as a table</summary>
+        <div className="mt-4">
         <Scroller>
           <Table>
             <thead>
@@ -165,7 +177,8 @@ function GapBlock({ gap, why }: { gap: GapExplanation; why: string }) {
             </tbody>
           </Table>
         </Scroller>
-      </div>
+        </div>
+      </details>
       <p className="mt-3 flex flex-wrap gap-x-5 gap-y-1 text-xs">
         <Link href={countryMapDimensionHref(gap.iso3, gap.dimension)} className="underline underline-offset-2">
           {countryName(gap.iso3)} on {dimensionLabel(gap.dimension).toLowerCase()}, against its peers
@@ -198,6 +211,7 @@ export function PostArticle({ post }: { post: PostFile }) {
       <Dateline post={post} />
       <Headline>{post.dek}</Headline>
       {post.blocks.map((block, i) => {
+        const firstGap = post.blocks.findIndex((b) => b.type === 'gap') === i
         switch (block.type) {
           case 'text':
             return (
@@ -212,7 +226,7 @@ export function PostArticle({ post }: { post: PostFile }) {
               </h2>
             )
           case 'gap':
-            return <GapBlock key={i} gap={block.gap} why={block.why} />
+            return <GapBlock key={i} gap={block.gap} why={block.why} legend={firstGap} />
         }
       })}
       <section className="mt-16 border-t border-[var(--rule)] pt-6">
@@ -221,8 +235,11 @@ export function PostArticle({ post }: { post: PostFile }) {
           A country&apos;s income peers are the 10 countries nearest to it in GDP per head, on a log
           scale. The gap is its score minus their median score. A score is the mean of its rows, so
           each row adds its distance from the peers&apos; median on that row, divided by the number of
-          rows. That share is the last column of each table, and it is why the
-          explanation can name the rows that carry the gap.
+          rows. Each bar under a gap is that share, and it is why the explanation can name the rows
+          that carry the gap.{' '}
+          <Link href={postBlocksHref} className="underline underline-offset-2">
+            How a post is drawn
+          </Link>
         </p>
         <div className="mt-6">
           <Tags post={post} />
