@@ -30,6 +30,8 @@ export const GapExplanationSchema = z.object({
   peersScored: z.number(),
   gap: z.number(),
   peers: z.array(z.string()),
+  /** Each peer's score and confidence on the capability, for the field strip (D197). Absent in posts before it. */
+  peerScores: z.array(z.object({ iso3: z.string(), score: z.number(), confidence: z.number() })).optional(),
   drivers: z.array(GapDriverSchema),
   rowsCounted: z.number(),
   countryArtefacts: z.array(z.string()),

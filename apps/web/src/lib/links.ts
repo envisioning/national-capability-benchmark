@@ -247,6 +247,9 @@ export const briefHref = '/brief'
 /** The posts: dated explainers, newest first. See D195. */
 export const postsHref = '/posts'
 
+/** Every block a post is drawn from, shown with real data. See D197. */
+export const postBlocksHref = `${postsHref}/blocks`
+
 /** One post. */
 export const postHref = (slug: string): string => `${postsHref}/${slug}`
 

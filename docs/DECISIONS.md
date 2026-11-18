@@ -10932,3 +10932,46 @@ gets a second post that repeats one of its cases.
 **Overturned by.** A queue that runs out of countries with a usable gap
 before the next release, or readers who read the order of the country posts
 as a ranking.
+
+## D197 — Posts are drawn from a set of blocks, and every block is on one page
+
+*Recorded 2026-11-18. Reach roadmap. Builds on D195, D196, D67 and D103.*
+
+**Why.** The owner found the first posts austere: every case was a score, a
+paragraph and a table, so nothing showed where the point was. The site needs
+a vocabulary of post components, each answering one reader question, that a
+writing agent composes and that stays tied to the stored numbers.
+
+**Decision.**
+
+1. **Blocks, one question each.** Heading, text, field strip, waterfall and
+   case. A case (`gap` block) draws the why sentence, the field strip, the
+   waterfall and the table behind a toggle.
+2. **The field strip is the shared field chart.** `PeerField` draws the case
+   country and its income peers with `FlagField`, never a second
+   distribution chart (D67). The band and the median line come from the peers
+   alone, so the line is the median the gap is measured from. The first case
+   in a post carries the legend.
+3. **The waterfall is the decomposition.** `GapWaterfall` starts at the
+   peers' median score and moves by each row's stored contribution. The peers'
+   median score is not the mean of their row medians, so what the rows leave
+   is its own dashed bar, "Not split by row", never folded into a row. A
+   filled bar adds and an open bar takes away. No lime: the score chip
+   already carries it.
+4. **Posts store their peers' scores.** `GapExplanation.peerScores` holds each
+   peer's score and confidence, so the field strip draws from the post and
+   never from the current data. The three posts published before this
+   decision were filled from the same dataset, 10.2.0, after a check that
+   each stored gap and peer median matched exactly. This is the one edit to a
+   shipped post, and it adds data without changing a word or a number in it.
+5. **One reference page.** `/posts/blocks` draws every block from a published
+   post with what it answers, what it reads and when it appears. A block that
+   is not there is not part of the set.
+
+**Cost.** A case takes about three times the height it took. The field strip
+shows 11 flags, so a reader cannot place the country in the whole field from
+it. The "Not split by row" bar can be several points wide (Vietnam on
+Building, 5.4), which invites a question the post does not answer.
+
+**Overturned by.** Readers who skip the pictures and still read the table, or
+who read the field strip's peers as the whole field.

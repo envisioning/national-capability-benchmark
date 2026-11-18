@@ -35,6 +35,14 @@ export const FIELD_WORDS_EN: FlagFieldWords = {
   brokenRing: 'Broken ring: thin evidence, opening further as confidence falls',
 }
 
+/** The field chart's words in a post, where it draws one country and its income peers (D197). */
+export const POST_FIELD_WORDS_EN: FlagFieldWords = {
+  ...FIELD_WORDS_EN,
+  aria: '{n} countries on a 0 to 100 scale: one country and its income peers. Peer median {median}.',
+  legendNote:
+    'The shaded band is the middle half of the income peers and the line inside it is their median. The ringed flag is the country the gap belongs to.',
+}
+
 /** The conditions panel's words in English. */
 export const CONDITION_WORDS_EN: ConditionListWords = {
   label: 'Conditions, not scored',
