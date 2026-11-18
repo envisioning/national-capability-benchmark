@@ -79,6 +79,13 @@ questions, so you do not have to pull a file to answer them:
   score, confidence, trend delta, basket size and span.
 - `GET /api/indicator/{id}` — one indicator across every country.
 
+An agent that speaks MCP can skip the files. The read-only server at
+`https://ncb.envisioning.com/mcp` (no account, Streamable HTTP) returns every
+score with the fields section 3 requires, plus its confidence band and the
+known limits that apply to it. It has no tool that ranks countries or averages
+the dimensions. Tools: `list_dimensions`, `get_country`, `compare_countries`,
+`search_indicators`, `get_decision`, `get_limit`. Prompt: `read_country`.
+
 ---
 
 ## 3. The fields that must travel with a score

@@ -6,6 +6,8 @@
  * breaks the web build, and it breaks it at bundle time rather than at
  * typecheck, so the compiler will not warn you.
  */
+/* The validator the model's schemas use, so the web app's MCP server shares one zod. */
+export { z } from 'zod'
 export * from './model/index.js'
 export * from './pipeline/stats.js'
 export * from './pipeline/confidence.js'

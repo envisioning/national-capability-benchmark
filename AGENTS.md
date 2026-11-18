@@ -671,6 +671,31 @@ Other traps found the hard way:
 - Verify a new series against every country before adding it to the
   registry. A code that resolves for Brazil can be empty for Singapore.
 
+## MCP server
+
+`apps/web/src/app/mcp/route.ts` is a public read-only MCP server at
+`https://ncb.envisioning.com/mcp`, over the same files the viewer reads. Its
+tools carry the quoting contract (`docs/FOR-AGENTS.md`): every score leaves with
+its confidence, band, indicator count, coverage flag and the limits that apply,
+and no tool ranks countries or averages the dimensions. Keep it that way when
+you add a tool.
+
+- `apps/web/src/lib/mcp-server.ts` is the transport, copied from envisioning/www
+  `lib/mcp-server.ts`. Keep the copies in step. It takes `z` from `@ncb/core`,
+  which re-exports it, because the web app cannot add packages while the
+  GitHub Packages install returns 401.
+- POST is limited to 60 requests a minute per IP, per server instance
+  (`apps/web/src/lib/rate-limit.ts`).
+- `apps/web/src/lib/mcp-card.ts` holds the name, version and description once.
+  It is served at `/.well-known/mcp.json` and
+  `/.well-known/mcp/server-card.json`, and it is the server.json in the official
+  MCP registry as `com.envisioning/ncb`. Ownership is proved by the DNS TXT
+  record on envisioning.com; the private key is in the login keychain as
+  `mcp-registry-envisioning`. After a change to the tools, raise the version,
+  deploy, then publish: save the live `/.well-known/mcp.json` as `server.json`,
+  run `mcp-publisher login dns --domain envisioning.com --private-key <key>` and
+  `mcp-publisher publish`.
+
 ## Deployment
 
 The viewer deploys to Vercel under the `ev-io` scope, project

@@ -9,6 +9,18 @@ The entries before App 1.0.0 are retrospective, high-level summaries
 reconstructed from the repository history. They document explicit version bumps
 and may skip versions that were never committed.
 
+## App 1.41.0 — 2026-11-18
+
+- **AI assistants can read the benchmark directly.** Claude and other assistants
+  that support MCP can connect to https://ncb.envisioning.com/mcp. No account is
+  needed. They can read a country, compare up to four countries, search the
+  indicators and read any decision or known limit.
+- **The rules for quoting travel with every answer.** Each score comes back with
+  its confidence, how many indicators it rests on and the known limits that
+  apply. No tool ranks countries or averages the dimensions.
+- **Assistants can find the server on their own.** The site now publishes a
+  short description of it at /.well-known/mcp.json, and llms.txt lists it.
+
 ## Dataset 10.2.0 — 2026-11-05
 
 - **Country pages can now show how wealth is divided.** A new row beside Shared

@@ -16,6 +16,7 @@ import {
 } from '@ncb/core'
 import { loadIndex } from '@/lib/data'
 import { METHOD_PAGES, PARTICIPATE_PAGES, READING_PAGES } from '@/lib/nav'
+import { MCP_URL } from '@/lib/mcp-card'
 import {
   aboutHref,
   agendasIndexHref,
@@ -133,6 +134,7 @@ export async function GET(request: Request): Promise<Response> {
     `- [The quoting contract for automated readers](${rawHref(FOR_AGENTS_DOC)}): what a score means, which fields must travel with it, and the six things not to do with it. Read this first.`,
     `- [Known limits](${rawHref(LIMITS_DOC)}): where the model currently produces a number that is wrong about the world. Rendered at ${abs(origin, limitsHref)}.`,
     `- [Decision record](${rawHref(DECISIONS_DOC)}): every methodological choice, what it costs, and what evidence would overturn it. Rendered at ${abs(origin, decisionsHref)}.`,
+    `- [MCP server](${MCP_URL}): read-only, no account, Streamable HTTP. Tools list_dimensions, get_country, compare_countries, search_indicators, get_decision and get_limit, and a read_country prompt. Every score comes back with its confidence, band, indicator count and coverage flag, and no tool ranks countries. Server card at ${abs(origin, '/.well-known/mcp.json')}.`,
     '',
     '## Project history',
     `- [Changelog](${abs(origin, changelogHref)}): human-readable release notes for app releases and dataset versions. The source is [${CHANGELOG_DOC}](${rawHref(CHANGELOG_DOC)}).`,
