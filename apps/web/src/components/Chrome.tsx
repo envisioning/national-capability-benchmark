@@ -2,10 +2,12 @@
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { LEXICONS, REPO_URL } from '@ncb/core'
+import { useState } from 'react'
+import { LEXICONS, REPO_URL, fill } from '@ncb/core'
 import type { Lang } from '@ncb/core'
 import { chromeWords, pathLang, type ChromeWords } from '@/lib/chrome'
-import { changelogHref } from '@/lib/links'
+import { absoluteHref, changelogHref } from '@/lib/links'
+import { Button } from '@/components/ui'
 
 /**
  * The parts of the root layout that speak, in the language of the page they
@@ -106,5 +108,42 @@ export function FooterMeta({
         </ul>
       </nav>
     </>
+  )
+}
+
+/**
+ * The citation box at the foot of every page: the dataset version, the page's
+ * own address and the day it was read, in the page's language, with a copy
+ * button. The address is the site origin plus the path, so a preview host is
+ * never what a reader cites. See D193.
+ */
+export function CiteLine({ datasetVersion }: { datasetVersion: string }) {
+  const { lang, words } = useChrome()
+  const pathname = usePathname()
+  const [copied, setCopied] = useState(false)
+  const c = words.cite
+  const date = new Date().toLocaleDateString(LEXICONS[lang].numberLocale, {
+    day: 'numeric',
+    month: 'long',
+    year: 'numeric',
+  })
+  const text = fill(c.template, { version: datasetVersion, url: absoluteHref(pathname ?? '/'), date })
+  return (
+    <aside aria-label={c.heading} className="mt-16 max-w-3xl rounded-lg border border-[var(--rule)] px-4 py-4">
+      <p className="text-xs uppercase tracking-[0.05em] text-[var(--muted)]">{c.heading}</p>
+      <p className="mt-2 text-xs text-[var(--muted)]">{c.lead}</p>
+      <p className="mt-1 break-words text-xs" suppressHydrationWarning>
+        {text}
+      </p>
+      <Button
+        size="sm"
+        className="mt-3"
+        onClick={() => {
+          void navigator.clipboard?.writeText(text).then(() => setCopied(true))
+        }}
+      >
+        {copied ? c.copied : c.copy}
+      </Button>
+    </aside>
   )
 }

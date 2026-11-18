@@ -2,7 +2,7 @@ import type { Metadata, Viewport } from 'next'
 import localFont from 'next/font/local'
 import Script from 'next/script'
 import { APP_VERSION, DATASET_VERSION, LICENSE_DOC, docHref } from '@ncb/core'
-import { FooterLead, FooterMeta, HomeLink, LangHtml, SkipLink } from '@/components/Chrome'
+import { CiteLine, FooterLead, FooterMeta, HomeLink, LangHtml, SkipLink } from '@/components/Chrome'
 import { EnvisioningMark } from '@/components/EnvisioningMark'
 import { FooterNav, HeaderNav, ScrollAwareHeader, SectionTabs, SiteChrome } from '@/components/SiteNav'
 import { siteOrigin } from '@/lib/links'
@@ -109,6 +109,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
         <main id="main" className="m-auto max-w-6xl px-6 py-12 sm:px-12 sm:py-16">
           {children}
+          <SiteChrome>
+            <CiteLine datasetVersion={DATASET_VERSION} />
+          </SiteChrome>
         </main>
 
         <SiteChrome>

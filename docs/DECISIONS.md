@@ -10769,3 +10769,36 @@ and changes the nearest match for most countries, which would show that thin
 scores drive the matches. A reader study showing that readers take a story's
 headline as a verdict on the country.
 
+## D193 — Every page carries a citation, and the press page lists real pages
+
+*Recorded 2026-11-18. Reach roadmap, issues #127 and #128.*
+
+**Why.** A journalist or a researcher who quotes NCB needs three things the
+viewer did not give in one place: the dataset version, the address and the
+date. The quoting contract (`docs/FOR-AGENTS.md`) says a score never travels
+alone, but only programs read that file. No page told a person where each kind
+of number lives.
+
+**Decision.**
+
+1. **One citation box on every page.** `CiteLine` in
+   `apps/web/src/components/Chrome.tsx` renders below the page content from
+   the root layout, inside `SiteChrome`, so an embed draws none. It prints
+   "Envisioning, National Capability Benchmark (NCB), dataset {version}.
+   {url}. Accessed {date}." in the page's language through `chromeWords`. The
+   address is `absoluteHref` of the path, so a preview host is never cited.
+   The date is the day of reading, which is how a web citation dates a page.
+2. **One press page per reading.** `/press` in the About section and
+   `/brasil/imprensa` in Brazil's layer render `PressView` from
+   `apps/web/src/lib/press.ts`. Each entry opens a real page. The ground
+   page's example country is `countryForDigest`, the country of the week, so
+   no country is chosen by hand and the example changes weekly.
+
+**Cost.** The box adds height to every page, including pages a reader would
+not cite. The press page names the example country through the registry
+English name, and its compare entry uses the single nearest income peer.
+
+**Overturned by.** A citation format the readers we reach ask for instead,
+or evidence that the box pushes content a reader needs below the fold on a
+phone.
+
