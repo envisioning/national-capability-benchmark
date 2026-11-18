@@ -93,6 +93,7 @@ export function layerSectionHref(layer: CountryLayer, section: LayerSection): st
     history: countryProfileHref(layer.iso3),
     /* Stories have no ground-layer page; a layer without its own points at the country. */
     stories: countryProfileHref(layer.iso3),
+    press: pressHref,
   }
   return ground[section.id]
 }
@@ -242,6 +243,9 @@ export const thesisHref = '/thesis'
 
 /** The two-page brief, computed from the release files and set to print. See D163. */
 export const briefHref = '/brief'
+
+/** Where each number lives, how to cite it and who to ask. See D193. */
+export const pressHref = '/press'
 
 /** Full DOM id for a score cell, useful when several country cells are present. */
 export const scoreAnchorId = (iso3: string, dimension: Dimension): string =>

@@ -39,6 +39,7 @@ export type LayerSectionId =
   | 'brief'
   | 'history'
   | 'stories'
+  | 'press'
   | MapSectionId
 
 export type LayerSection = {
@@ -135,6 +136,8 @@ export const COUNTRY_LAYERS: readonly CountryLayer[] = [
       { id: 'support', label: 'Participe', slug: 'apoie' },
       /* The two-page brief in Portuguese, computed by the bench. See D163. */
       { id: 'brief', label: 'Resumo', slug: 'resumo' },
+      /* Where each number lives and how to cite it. See D193. */
+      { id: 'press', label: 'Imprensa', slug: 'imprensa' },
     ],
   },
   ...SPANISH_LAYERS.map(

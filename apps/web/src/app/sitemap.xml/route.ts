@@ -25,6 +25,7 @@ import {
   countryProfileHref,
   digestHref,
   layerSectionHref,
+  pressHref,
   storyHref,
   supportHref,
   thesisHref,
@@ -83,6 +84,7 @@ export async function GET(): Promise<Response> {
     }
   }
   add(aboutHref)
+  add(pressHref)
   add(changelogHref)
   add(supportHref)
   add(gapsHref)

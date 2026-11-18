@@ -9,6 +9,17 @@ The entries before App 1.0.0 are retrospective, high-level summaries
 reconstructed from the repository history. They document explicit version bumps
 and may skip versions that were never committed.
 
+## App 1.43.0 — 2026-11-18
+
+- **Every page says how to cite it.** A box at the foot of each page gives the
+  dataset version, the page address and the date you read it, with a button
+  that copies the citation. Brazil's pages say it in Portuguese and the Spanish
+  layers in Spanish.
+- **A press page.** `/press` lists where each kind of number lives, with one
+  real example each, how to cite it and how to reach the project. The example
+  country is the country of the week. Brazil's layer has its own page at
+  `/brasil/imprensa`, pointing at the Portuguese pages. Decision D193.
+
 ## App 1.42.0 — 2026-11-18
 
 - **Brazil's layer has stories.** `/brasil/achados` holds three short pages,

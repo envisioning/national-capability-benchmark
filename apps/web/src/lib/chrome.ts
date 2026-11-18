@@ -84,6 +84,15 @@ export type ChromeWords = {
     changelog: string
     license: string
   }
+  /** The citation box at the foot of every page. See D193. */
+  cite: {
+    heading: string
+    lead: string
+    /** {version} {url} {date} */
+    template: string
+    copy: string
+    copied: string
+  }
 }
 
 export const CHROME_WORDS_EN: ChromeWords = {
@@ -147,6 +156,13 @@ export const CHROME_WORDS_EN: ChromeWords = {
     changelog: 'Changelog',
     license: 'License',
   },
+  cite: {
+    heading: 'Where it comes from',
+    lead: 'To cite this page:',
+    template: 'Envisioning, National Capability Benchmark (NCB), dataset {version}. {url}. Accessed {date}.',
+    copy: 'Copy citation',
+    copied: 'Citation copied',
+  },
 }
 
 /**
@@ -194,6 +210,7 @@ const CHROME_WORDS_PT_BR: ChromeWords = {
     Contact: 'Contato',
     Thesis: 'Tese',
     Brief: 'Resumo',
+    Press: 'Imprensa',
     Changelog: 'Histórico de versões',
     Profile: 'Perfil',
     Agenda: 'Agenda',
@@ -249,6 +266,13 @@ const CHROME_WORDS_PT_BR: ChromeWords = {
     dataset: 'Dados',
     changelog: 'Histórico de versões',
     license: 'Licença',
+  },
+  cite: {
+    heading: 'De onde vem',
+    lead: 'Para citar esta página:',
+    template: 'Envisioning, National Capability Benchmark (NCB), dados {version}. {url}. Acesso em {date}.',
+    copy: 'Copiar citação',
+    copied: 'Citação copiada',
   },
 }
 
@@ -330,6 +354,7 @@ const CHROME_WORDS_ES: ChromeWords = {
     Contact: 'Contacto',
     Thesis: 'Tesis',
     Brief: 'Resumen',
+    Press: 'Prensa',
     Changelog: 'Historial de versiones',
     Profile: 'Perfil',
     Agenda: 'Agenda',
@@ -385,6 +410,13 @@ const CHROME_WORDS_ES: ChromeWords = {
     dataset: 'Datos',
     changelog: 'Historial de versiones',
     license: 'Licencia',
+  },
+  cite: {
+    heading: 'De dónde viene',
+    lead: 'Para citar esta página:',
+    template: 'Envisioning, National Capability Benchmark (NCB), datos {version}. {url}. Consultado el {date}.',
+    copy: 'Copiar cita',
+    copied: 'Cita copiada',
   },
 }
 
