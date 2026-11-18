@@ -1060,6 +1060,22 @@ export async function checkEvidenceUrls(
  * Every post in `data/posts`: the schema, the file name, the tags, and the
  * rule that every number in the prose is one the post stores. See D195.
  */
+/** Every post that parses, for the daily queue. A post that fails the schema is left to `validatePosts`. */
+export async function loadPostFiles(dir = POSTS_DIR): Promise<PostFile[]> {
+  let names: string[]
+  try {
+    names = (await readdir(dir)).filter((n) => n.endsWith('.json'))
+  } catch {
+    return []
+  }
+  const posts: PostFile[] = []
+  for (const name of names) {
+    const parsed = PostFile.safeParse(JSON.parse(await readFile(resolve(dir, name), 'utf8')))
+    if (parsed.success) posts.push(parsed.data)
+  }
+  return posts
+}
+
 export async function validatePosts(dir = POSTS_DIR): Promise<Problem[]> {
   let names: string[]
   try {
@@ -1083,6 +1099,9 @@ export async function validatePosts(dir = POSTS_DIR): Promise<Problem[]> {
     const post = parsed.data
     if (name !== `${post.date}-${post.slug}.json`) {
       problems.push({ file: name, severity: 'error', problem: `file name must be ${post.date}-${post.slug}.json` })
+    }
+    if ((post.kind === 'country' || post.kind === 'capability') && !post.subject) {
+      problems.push({ file: name, severity: 'error', problem: `a ${post.kind} post needs a subject` })
     }
     for (const tag of unknownTags(post)) problems.push({ file: name, severity: 'error', problem: `unknown ${tag}` })
     for (const p of unbackedNumbers(post)) problems.push({ file: name, severity: 'error', problem: p })

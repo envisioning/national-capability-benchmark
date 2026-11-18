@@ -52,6 +52,39 @@ will not read a table. Every number in a post comes from the data. See D195.
 | Kind | Question | Command |
 | --- | --- | --- |
 | `income-gaps` | Where does capability not follow income? | `bench post income-gaps --count 5` |
+| `country` | Is this country more or less capable than its income suggests? | `bench post country <ISO3>` |
+| `capability` | What does this capability follow, and who breaks the pattern? | `bench post capability <dimension>` |
+
+A `country` post holds one country's widest gaps against its income peers,
+up to three on each side, each at least `GAP_FLOOR` (10) points wide. A
+`capability` post holds the widest three on each side for one capability,
+one country each, with the capability's correlation with income. Both store
+the country or capability in `subject`. The facts also print counts the
+prose may want (`scored`, `level`): copy any you quote into `figures`.
 
 A new kind needs a generator in `packages/core/src/pipeline`, an entry in
 `POST_KINDS` and a decision entry.
+
+## The daily run
+
+One post a day. The subject is a rule, `nextPost` in
+`packages/core/src/pipeline/post-plan.ts`, so the run never chooses:
+
+- Monday is a `capability` post, in registry order.
+- Every other day is a `country` post. Countries queue by their widest usable
+  gap, widest first.
+- Each queue takes the first subject no post of its kind has had, and starts
+  again from the oldest when it is spent.
+
+The run, in a fresh checkout of `main`:
+
+1. `pnpm bench post next --date <today> > /tmp/facts.json`. It prints the
+   kind, the subject and the facts.
+2. Write the post as above, dated today, with `subject` set.
+3. `pnpm bench validate` and `pnpm typecheck`. Both must pass. If the
+   facts hold no case (a country with no gap of at least 10 points), skip
+   the day and say so; never pick another subject.
+4. Commit to a branch, open a pull request titled with the post's title,
+   squash-merge it, and check the Vercel status on the merge commit. The
+   post is live when `/posts/<slug>` answers 200.
+

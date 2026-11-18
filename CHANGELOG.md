@@ -9,6 +9,15 @@ The entries before App 1.0.0 are retrospective, high-level summaries
 reconstructed from the repository history. They document explicit version bumps
 and may skip versions that were never committed.
 
+## App 1.46.0 — 2026-11-18
+
+- **Two more kinds of post.** A country post compares one country with the 10
+  countries nearest in income and explains each wide gap. A capability post
+  shows how closely one capability follows income and who breaks the pattern.
+  The first two are on Vietnam and on Anticipation.
+- **A post a day.** The subject of each day's post comes from a fixed order:
+  a capability on Mondays, a country on other days. Decision D196.
+
 ## App 1.45.0 — 2026-11-18
 
 - **Posts.** `/posts` holds dated explainers. Each one answers a question with

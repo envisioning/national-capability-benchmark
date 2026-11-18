@@ -1,5 +1,7 @@
 import {
   COUNTRY_ISO3,
+  COUNTRY_NAMES,
+  DIMENSION_LABELS,
   GITHUB_IG_COMMIT,
   DATASET_VERSION,
   DIMENSIONS,
@@ -12,6 +14,9 @@ import {
 import type { CountryResult, DelphiRunFile, Dimension, IndicatorAcrossCountries, ResidualStructure } from '../model/index.js'
 import { buildCapabilityMap, mapIndicatorIds } from '../pipeline/capability-map.js'
 import { explainGap, incomeGaps, widestGaps } from '../pipeline/income-gaps.js'
+import { GAP_FLOOR, capabilityCases, countryCases, nextPost } from '../pipeline/post-plan.js'
+import { readWealthTracking } from '../pipeline/wealth-reading.js'
+import { round } from '../pipeline/stats.js'
 import type { GapCell } from '../pipeline/income-gaps.js'
 import { readFactorTest } from '../pipeline/factor-reading.js'
 import type { AppliedDelphi } from '../delphi/apply.js'
@@ -109,6 +114,7 @@ import {
   validateNoCaseNotes,
   validateResearchRuns,
   validateSubnational,
+  loadPostFiles,
   validatePosts,
 } from '../pipeline/validate.js'
 import {
@@ -253,15 +259,24 @@ async function score(args: Args): Promise<CountryResult[]> {
  * post copies these into `data/posts` and adds the prose. See D195.
  */
 async function postFacts(args: Args): Promise<void> {
-  const kind = args._[1]
-  if (kind !== 'income-gaps') throw new Error('Usage: bench post income-gaps [--count 5]')
-  const count = num(args, 'count', 5)
+  const usage =
+    'Usage: bench post income-gaps [--count 5] | country <ISO3> | capability <dimension> | next [--date YYYY-MM-DD]'
+  let kind = args._[1]
+  let subject = args._[2]
   const read = async <T>(path: string): Promise<T> => JSON.parse(await readFile(path, 'utf8')) as T
   const index = await read<{ version: string; generatedAt: string; countries: CountryResult[] }>(resolve(OUT_DIR, 'index.json'))
   const diag = await read<Diagnostics>(FILES.diagnostics)
   const cells = incomeGaps(index.countries, diag.income ?? [])
+  let date: string | undefined
+  if (kind === 'next') {
+    date = str(args, 'date', new Date().toISOString().slice(0, 10))
+    const posts = await loadPostFiles()
+    const next = nextPost(date, posts, cells)
+    kind = next.kind
+    subject = next.subject
+  }
   const explain = async (cell: GapCell) => {
-    const subject = (await read<{ country: CountryResult }>(resolve(COUNTRY_OUT_DIR, `${cell.iso3}.json`))).country
+    const subjectFile = (await read<{ country: CountryResult }>(resolve(COUNTRY_OUT_DIR, `${cell.iso3}.json`))).country
     const files = await Promise.all(
       mapIndicatorIds(cell.dimension).map(async (id) => {
         try {
@@ -275,25 +290,83 @@ async function postFacts(args: Args): Promise<void> {
       iso3: cell.iso3,
       dimension: cell.dimension,
       countries: index.countries,
-      subject,
+      subject: subjectFile,
       indicatorFiles: files.filter((f): f is IndicatorAcrossCountries => f !== null),
       diagnostics: diag,
     })
     return explainGap(cell, map)
   }
-  const factor = readFactorTest(diag)
-  const facts = {
-    kind,
-    datasetVersion: index.version,
-    dataGeneratedAt: index.generatedAt,
-    cellsConsidered: cells.length,
-    factor: factor
-      ? { share: factor.sharePct, countries: factor.solution.countries, incomeR: factor.solution.income?.r ?? null }
-      : null,
-    above: await Promise.all(widestGaps(cells, 'above', count).map(explain)),
-    below: await Promise.all(widestGaps(cells, 'below', count).map(explain)),
+  const base = { kind, subject: subject ?? null, date: date ?? null, datasetVersion: index.version, dataGeneratedAt: index.generatedAt }
+  if (kind === 'income-gaps') {
+    const count = num(args, 'count', 5)
+    const factor = readFactorTest(diag)
+    console.log(
+      JSON.stringify(
+        {
+          ...base,
+          cellsConsidered: cells.length,
+          factor: factor
+            ? { share: factor.sharePct, countries: factor.solution.countries, incomeR: factor.solution.income?.r ?? null }
+            : null,
+          above: await Promise.all(widestGaps(cells, 'above', count).map(explain)),
+          below: await Promise.all(widestGaps(cells, 'below', count).map(explain)),
+        },
+        null,
+        2,
+      ),
+    )
+    return
   }
-  console.log(JSON.stringify(facts, null, 2))
+  if (kind === 'country') {
+    const iso3 = subject?.toUpperCase()
+    if (!iso3 || !COUNTRY_ISO3.includes(iso3)) throw new Error(usage)
+    const cases = countryCases(cells, iso3)
+    const peers = cells.find((c) => c.iso3 === iso3)?.peers ?? []
+    console.log(
+      JSON.stringify(
+        {
+          ...base,
+          subject: iso3,
+          country: COUNTRY_NAMES[iso3] ?? iso3,
+          peers,
+          gapFloor: GAP_FLOOR,
+          scored: cases.scored,
+          level: cases.level,
+          above: await Promise.all(cases.above.map(explain)),
+          below: await Promise.all(cases.below.map(explain)),
+        },
+        null,
+        2,
+      ),
+    )
+    return
+  }
+  if (kind === 'capability') {
+    const dimension = DIMENSIONS.find((d) => d === subject)
+    if (!dimension) throw new Error(`${usage}\nDimensions: ${DIMENSIONS.join(', ')}`)
+    const cases = capabilityCases(cells, dimension)
+    const wealth = readWealthTracking(diag).rows.find((r) => r.dimension === dimension) ?? null
+    console.log(
+      JSON.stringify(
+        {
+          ...base,
+          subject: dimension,
+          label: DIMENSION_LABELS[dimension],
+          gapFloor: GAP_FLOOR,
+          scored: cases.scored,
+          level: cases.level,
+          incomeR: wealth?.strength === null || !wealth ? null : round(wealth.strength, 2),
+          incomeN: wealth?.n ?? null,
+          above: await Promise.all(cases.above.map(explain)),
+          below: await Promise.all(cases.below.map(explain)),
+        },
+        null,
+        2,
+      ),
+    )
+    return
+  }
+  throw new Error(usage)
 }
 
 async function diagnose(args: Args) {
