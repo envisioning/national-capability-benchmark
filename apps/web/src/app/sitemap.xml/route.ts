@@ -1,5 +1,5 @@
 import { COUNTRIES, DIMENSIONS, LEXICONS, MAP_DIMENSIONS, STORY_IDS } from '@ncb/core'
-import { loadIndex } from '@/lib/data'
+import { loadIndex, loadPosts } from '@/lib/data'
 import { COUNTRY_LAYERS, INSTITUTION_MAPS } from '@/lib/layers'
 import { METHOD_PAGES } from '@/lib/nav'
 import {
@@ -26,6 +26,8 @@ import {
   digestHref,
   layerSectionHref,
   pressHref,
+  postHref,
+  postsHref,
   storyHref,
   supportHref,
   thesisHref,
@@ -85,6 +87,8 @@ export async function GET(): Promise<Response> {
   }
   add(aboutHref)
   add(pressHref)
+  add(postsHref)
+  for (const post of await loadPosts()) add(postHref(post.slug))
   add(changelogHref)
   add(supportHref)
   add(gapsHref)

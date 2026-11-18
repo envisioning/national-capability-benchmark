@@ -30,11 +30,13 @@ import {
   loadEvidence,
   loadIndex,
   loadInstitutionNetwork,
+  loadPosts,
 } from '@/lib/data'
 import {
   aboutHref,
   agendasHref,
   objectionsHref,
+  postHref,
   changelogReleaseHref,
   compareBaseHref,
   countriesHref,
@@ -101,12 +103,14 @@ export default async function Page() {
   /* Brazil is the one country with an institution map, so its wiring is the
    * one such picture the front page can draw. A second map makes this a list
    * and a choice. See D113. */
-  const [data, diag, evidence, brazil] = await Promise.all([
+  const [data, diag, evidence, brazil, posts] = await Promise.all([
     loadIndex(),
     loadDiagnostics(),
     loadEvidence(),
     loadInstitutionNetwork('BRA'),
+    loadPosts(),
   ])
+  const latestPost = posts[0] ?? null
   if (!data || data.countries.length === 0) return <Empty hint={MISSING_DATA_HINT} />
 
   const profiles = [...data.countries]
@@ -185,6 +189,14 @@ export default async function Page() {
             </Link>
           </div>
           <ExampleQuestions label="Questions to start from" questions={questions} />
+          {latestPost ? (
+            <p className="mt-6 max-w-3xl text-lg leading-relaxed">
+              <span className="text-xs uppercase tracking-[0.05em] text-[var(--muted)]">Latest post</span>{' '}
+              <Link href={postHref(latestPost.slug)} className="underline underline-offset-4">
+                {latestPost.title}
+              </Link>
+            </p>
+          ) : null}
         </div>
       </div>
 

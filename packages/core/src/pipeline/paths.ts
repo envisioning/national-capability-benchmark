@@ -11,6 +11,7 @@ export const DELPHI_DIR = resolve(DATA_DIR, 'delphi')
 export const RESEARCH_DIR = resolve(DATA_DIR, 'research')
 export const RESEARCH_RUNS_DIR = resolve(RESEARCH_DIR, 'runs')
 export const EVIDENCE_DIR = resolve(DATA_DIR, 'evidence')
+export const POSTS_DIR = resolve(DATA_DIR, 'posts')
 export const INSTITUTIONS_DIR = resolve(DATA_DIR, 'institutions')
 /** Public AI fitness, a separate instrument from the benchmark (D168). */
 export const FITNESS_DIR = resolve(DATA_DIR, 'fitness')

@@ -26,6 +26,7 @@ import {
   thesisHref,
   briefHref,
   pressHref,
+  postsHref,
 } from '@/lib/links'
 import { mapCounterparts } from '@/lib/map-reading'
 
@@ -129,6 +130,7 @@ export const ABOUT_PAGES: NavNode[] = [
   { href: aboutHref, label: 'Overview', exact: true },
   { href: thesisHref, label: 'Thesis' },
   { href: briefHref, label: 'Brief' },
+  { href: postsHref, label: 'Posts' },
   { href: pressHref, label: 'Press' },
   { href: changelogHref, label: 'Changelog', exact: true },
 ]

@@ -10842,3 +10842,55 @@ read as a contradiction.
 example no visits from them to the pages they open, or a request from the
 audiences named here for a different first step.
 
+## D195 — Posts explain the data, and every number in a post is one the post stores
+
+*Recorded 2026-11-18. Reach roadmap. Builds on D130 (peer comparison), D192
+(computed stories) and D65 (per-country residuals stay offline).*
+
+**Why.** The owner wants a daily explainer series as the way into the data:
+a question a reader would ask, an answer, and why it happens, without dense
+tables. A friend's question set the first one: where does capability not
+just mirror wealth? Prose written by an agent can drift from the data in a
+way computed pages cannot, so the format has to make that drift fail a check.
+
+**Decision.**
+
+1. **A post is a file.** `data/posts/<date>-<slug>.json`, schema `PostFile`
+   in `packages/core/src/model/posts.ts`: question, title, dek, dataset
+   version, tags (countries, capabilities, indicators), named figures and
+   blocks (text, heading, gap). It is a closed edition. `/posts` lists them
+   newest first, narrowed by `?country=`, `?dimension=` or `?indicator=`;
+   `/posts/<slug>` renders one with its own share card. The feed and the
+   sitemap carry every post, and the front page links the latest.
+2. **The facts come from `bench post <kind>`.** The first kind is
+   `income-gaps`: each score with usable evidence minus the median score of
+   the country's `MAP_PEER_COUNT` income peers (the D130 comparison, never a
+   regression residual, so D65 still holds), the widest five each way, one
+   per country, at most two per capability, none where a known artefact names
+   the country on that capability.
+3. **Why is the rows.** `explainGap` splits a gap into each row's distance
+   from the peers' median over the rows counted, the decomposition the mean
+   score allows. A post's `why` sentence names those rows and their values
+   and guesses no cause the data does not hold.
+4. **Every number in the prose is a number the post stores.**
+   `unbackedNumbers` in `pipeline/post-check.ts` reads every number in the
+   title, dek, text and why sentences and fails `bench validate` when none
+   of the post's stored numbers rounds to it. `docs/POSTS.md` is the
+   playbook an agent follows.
+5. **Distance rows print the distance.** The budget row's unit names a
+   distance from the approved budget while the map's value is spending as a
+   share of it (Angola 73.5, a distance of 26.5). Posts print the distance.
+   The map pages keep the registry's label until the owner decides on the
+   unit text, which is a registry change.
+
+**Cost.** The sum of a gap's two largest drivers is a stored number, so
+"these two rows carry 36 of the 40 points" passes; a sum of three does not.
+The check sees numbers, not claims: a wrong word beside a right number
+passes. A row's contribution is exact only for a plain mean of the observed
+rows. Posts sit in About until the owner decides whether they earn a sixth
+section (D80).
+
+**Overturned by.** A post that passes the check and still misstates the
+data, which would show the number rule is not enough. Readers who take a
+gap as a verdict on a country.
+

@@ -244,6 +244,22 @@ export const thesisHref = '/thesis'
 /** The two-page brief, computed from the release files and set to print. See D163. */
 export const briefHref = '/brief'
 
+/** The posts: dated explainers, newest first. See D195. */
+export const postsHref = '/posts'
+
+/** One post. */
+export const postHref = (slug: string): string => `${postsHref}/${slug}`
+
+/** The posts narrowed to one tag: a country code, a capability or an indicator id. */
+export function postsTagHref(tag: { country?: string | undefined; dimension?: string | undefined; indicator?: string | undefined }): string {
+  const params = new URLSearchParams()
+  if (tag.country) params.set('country', tag.country)
+  if (tag.dimension) params.set('dimension', tag.dimension)
+  if (tag.indicator) params.set('indicator', tag.indicator)
+  const query = params.toString()
+  return query ? `${postsHref}?${query}` : postsHref
+}
+
 /** Where each number lives, how to cite it and who to ask. See D193. */
 export const pressHref = '/press'
 
