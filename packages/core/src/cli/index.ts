@@ -9,7 +9,11 @@ import {
   ObservationFile,
   rawHref,
 } from '../model/index.js'
-import type { CountryResult, DelphiRunFile, Dimension, ResidualStructure } from '../model/index.js'
+import type { CountryResult, DelphiRunFile, Dimension, IndicatorAcrossCountries, ResidualStructure } from '../model/index.js'
+import { buildCapabilityMap, mapIndicatorIds } from '../pipeline/capability-map.js'
+import { explainGap, incomeGaps, widestGaps } from '../pipeline/income-gaps.js'
+import type { GapCell } from '../pipeline/income-gaps.js'
+import { readFactorTest } from '../pipeline/factor-reading.js'
 import type { AppliedDelphi } from '../delphi/apply.js'
 import { ingestWorldBank, recordRevisions } from '../pipeline/ingest.js'
 import { fetchVdem } from '../pipeline/adapters/vdem.js'
@@ -39,6 +43,7 @@ import {
   DELPHI_DIR,
   FILES,
   INDICATOR_OUT_DIR,
+  OUT_DIR,
   FITNESS_OUT_DIR,
   ROOT,
   SCHEMA_OUT_DIR,
@@ -104,6 +109,7 @@ import {
   validateNoCaseNotes,
   validateResearchRuns,
   validateSubnational,
+  validatePosts,
 } from '../pipeline/validate.js'
 import {
   buildEvidenceGrid,
@@ -239,6 +245,55 @@ async function score(args: Args): Promise<CountryResult[]> {
   console.log(`flat table-> ${FILES.flatTable}`)
   console.log(`schemas   -> ${SCHEMA_OUT_DIR} (${Object.keys(jsonSchemas()).length} files) and ${FILES.datapackage}`)
   return countries
+}
+
+/**
+ * The facts one kind of post is written from, as JSON on stdout: every number
+ * the post may print, read from the committed output. The agent writing the
+ * post copies these into `data/posts` and adds the prose. See D195.
+ */
+async function postFacts(args: Args): Promise<void> {
+  const kind = args._[1]
+  if (kind !== 'income-gaps') throw new Error('Usage: bench post income-gaps [--count 5]')
+  const count = num(args, 'count', 5)
+  const read = async <T>(path: string): Promise<T> => JSON.parse(await readFile(path, 'utf8')) as T
+  const index = await read<{ version: string; generatedAt: string; countries: CountryResult[] }>(resolve(OUT_DIR, 'index.json'))
+  const diag = await read<Diagnostics>(FILES.diagnostics)
+  const cells = incomeGaps(index.countries, diag.income ?? [])
+  const explain = async (cell: GapCell) => {
+    const subject = (await read<{ country: CountryResult }>(resolve(COUNTRY_OUT_DIR, `${cell.iso3}.json`))).country
+    const files = await Promise.all(
+      mapIndicatorIds(cell.dimension).map(async (id) => {
+        try {
+          return await read<IndicatorAcrossCountries>(resolve(INDICATOR_OUT_DIR, `${id}.json`))
+        } catch {
+          return null
+        }
+      }),
+    )
+    const map = buildCapabilityMap({
+      iso3: cell.iso3,
+      dimension: cell.dimension,
+      countries: index.countries,
+      subject,
+      indicatorFiles: files.filter((f): f is IndicatorAcrossCountries => f !== null),
+      diagnostics: diag,
+    })
+    return explainGap(cell, map)
+  }
+  const factor = readFactorTest(diag)
+  const facts = {
+    kind,
+    datasetVersion: index.version,
+    dataGeneratedAt: index.generatedAt,
+    cellsConsidered: cells.length,
+    factor: factor
+      ? { share: factor.sharePct, countries: factor.solution.countries, incomeR: factor.solution.income?.r ?? null }
+      : null,
+    above: await Promise.all(widestGaps(cells, 'above', count).map(explain)),
+    below: await Promise.all(widestGaps(cells, 'below', count).map(explain)),
+  }
+  console.log(JSON.stringify(facts, null, 2))
 }
 
 async function diagnose(args: Args) {
@@ -1633,6 +1688,11 @@ Start with file 1.
       break
     }
 
+    case 'post': {
+      await postFacts(args)
+      break
+    }
+
     case 'validate': {
       const problems = [
         ...(await validateDelphiRuns()),
@@ -1642,6 +1702,7 @@ Start with file 1.
         ...(await validateGlobalInstitutions()),
         ...(await validateInstitutionNetwork()),
         ...(await validateSubnational()),
+        ...(await validatePosts()),
       ]
       printEvidenceGrid(buildEvidenceGrid(await loadEvidence(), await loadNoCaseNotes()))
       if (args.flags.get('fetch')) {

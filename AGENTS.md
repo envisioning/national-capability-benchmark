@@ -300,6 +300,14 @@ port 3888. That entry starts Next directly and does not use the proxy.
   registry carries an origin from `ORIGIN` in `indicators.ts`; a new scored
   row needs one, or `bench movers` stops. A rule change is a new decision
   made before its result is read.
+- **A post prints only numbers it stores.** Posts live in `data/posts`,
+  one file each, schema `PostFile` in `packages/core/src/model/posts.ts`.
+  `bench post <kind>` prints the facts, `explainGap` in
+  `pipeline/income-gaps.ts` splits a gap into the rows that carry it, and
+  `bench validate` fails a post whose prose prints a number it does not store
+  (`unbackedNumbers` in `pipeline/post-check.ts`). A post is a closed edition:
+  never edit one after it ships, publish a correction. The playbook is
+  `docs/POSTS.md`. See D195.
 - The wealth residual is never summed across dimensions. `ResidualFile` has no
   country-level field, `buildResidual` in
   `packages/core/src/pipeline/residual.ts` computes one fit per dimension, and

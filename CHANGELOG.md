@@ -9,6 +9,17 @@ The entries before App 1.0.0 are retrospective, high-level summaries
 reconstructed from the repository history. They document explicit version bumps
 and may skip versions that were never committed.
 
+## App 1.45.0 — 2026-11-18
+
+- **Posts.** `/posts` holds dated explainers. Each one answers a question with
+  the data and says which numbers make the answer. You can narrow the list by
+  country, capability or indicator, and each post has its own card for social
+  feeds. The front page links the latest, and the feed carries every one.
+- **The first post asks whether capability just mirrors wealth.** Mostly it
+  does. The post shows the 10 widest exceptions against the countries nearest
+  in income, from Vietnam's industry to Botswana's concentrated exports, and for
+  each one the rows of the score that carry the gap. Decision D195.
+
 ## App 1.44.0 — 2026-11-18
 
 - **The front pages suggest where to start.** Under the country search, three

@@ -1,6 +1,6 @@
 import { APP_VERSION, DATASET_VERSION } from '@ncb/core'
 import type { Lang } from '@ncb/core'
-import { loadIndex } from '@/lib/data'
+import { loadIndex, loadPosts } from '@/lib/data'
 import { loadAgendaFeedEntries, loadChangelogFeedEntries } from '@/lib/distribution'
 import {
   absoluteHref,
@@ -8,6 +8,7 @@ import {
   changelogReleaseHref,
   feedHref,
   digestHref,
+  postHref,
 } from '@/lib/links'
 
 export const dynamic = 'force-static'
@@ -33,10 +34,16 @@ function entryUrl(iso3: string, lang: Lang): string | null {
 export async function GET(): Promise<Response> {
   const index = await loadIndex()
   const date = index?.generatedAt?.slice(0, 10) ?? new Date().toISOString().slice(0, 10)
-  const [agendas, releases] = await Promise.all([
+  const [agendas, releases, posts] = await Promise.all([
     loadAgendaFeedEntries(),
     loadChangelogFeedEntries(date),
+    loadPosts(),
   ])
+  /* Posts are the explainers, so the feed carries each one in full summary. See D195. */
+  const postEntries = posts.map((post) => {
+    const url = absoluteHref(postHref(post.slug))
+    return { id: url, link: url, title: post.title, summary: post.dek, updated: `${post.date}T00:00:00.000Z` }
+  })
 
   const agendaEntries = agendas.flatMap((entry) => {
     const url = entryUrl(entry.iso3, entry.lang)
@@ -53,6 +60,7 @@ export async function GET(): Promise<Response> {
   }))
   const digestUrl = absoluteHref(digestHref(date))
   const entries = [
+    ...postEntries,
     ...agendaEntries,
     ...releaseEntries,
     {

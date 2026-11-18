@@ -18,6 +18,7 @@ import {
   HistoryCountryFile as HistoryCountryFileSchema,
   HistoryIndexFile as HistoryIndexFileSchema,
   VelocityFile as VelocityFileSchema,
+  PostFile as PostFileSchema,
 } from '@ncb/core'
 import { DATA_DIR } from '@ncb/core/node'
 import type {
@@ -35,6 +36,7 @@ import type {
   LeverageFile,
   ResidualFile,
   VelocityFile,
+  PostFile,
 } from '@ncb/core'
 
 /**
@@ -78,6 +80,7 @@ const PATHS = {
   factorHistory: resolve(DATA_ROOT, 'out/factor-history.json'),
   historyIndex: resolve(DATA_ROOT, 'out/history/index.json'),
   history: (iso3: string) => resolve(DATA_ROOT, 'out/history', `${iso3.toUpperCase()}.json`),
+  posts: resolve(DATA_ROOT, 'posts'),
 }
 
 async function readJson<T>(path: string): Promise<T | null> {
@@ -441,3 +444,30 @@ export async function loadDoc(name: string): Promise<string | null> {
 
 export const MISSING_DATA_HINT =
   'No scored output yet. Run `pnpm bench all` in the repo root, then reload.'
+
+/**
+ * Every post, newest first. A file that fails the schema is left out, so one
+ * bad post never takes the list down; `bench validate` reports it. See D195.
+ */
+export async function loadPosts(): Promise<PostFile[]> {
+  let names: string[]
+  try {
+    names = (await readdir(PATHS.posts)).filter((n) => n.endsWith('.json'))
+  } catch {
+    return []
+  }
+  const posts = await Promise.all(
+    names.map(async (name) => {
+      const parsed = PostFileSchema.safeParse(await readJson(resolve(PATHS.posts, name)))
+      return parsed.success ? parsed.data : null
+    }),
+  )
+  return posts
+    .filter((p): p is PostFile => p !== null)
+    .sort((a, b) => b.date.localeCompare(a.date) || a.slug.localeCompare(b.slug))
+}
+
+/** One post by its slug, or null. */
+export async function loadPost(slug: string): Promise<PostFile | null> {
+  return (await loadPosts()).find((p) => p.slug === slug) ?? null
+}

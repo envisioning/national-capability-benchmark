@@ -1,0 +1,709 @@
+{
+  "slug": "where-capability-does-not-follow-income",
+  "date": "2026-11-18",
+  "kind": "income-gaps",
+  "question": "Does capability just mirror wealth?",
+  "title": "Where capability does not follow income",
+  "dek": "Mostly it does. The exceptions are single capabilities in single countries, and each one has a reason you can read in the data.",
+  "datasetVersion": "10.2.0",
+  "dataGeneratedAt": "2026-11-05T11:52:10.760Z",
+  "figures": {
+    "factorShare": 54.5,
+    "factorCountries": 119,
+    "factorIncomeR": 0.848
+  },
+  "tags": {
+    "countries": [
+      "VNM",
+      "PNG",
+      "CHN",
+      "NZL",
+      "GBR",
+      "BWA",
+      "AGO",
+      "IRQ",
+      "PAN",
+      "ARE"
+    ],
+    "dimensions": [
+      "building",
+      "learning",
+      "agency",
+      "adaptability",
+      "coordination"
+    ],
+    "indicators": [
+      "economic_complexity",
+      "high_tech_exports_share",
+      "firm_training_incidence",
+      "research_citation_impact",
+      "manufacturing_value_added",
+      "new_business_density",
+      "business_start_procedures",
+      "business_entry_efficiency",
+      "export_diversification",
+      "unemployment_rate",
+      "trade_compliance_efficiency",
+      "budget_execution_fidelity"
+    ]
+  },
+  "blocks": [
+    {
+      "type": "text",
+      "text": "Across the 119 countries with a score on all nine capabilities, one shared factor carries 54.5% of the variation, and that factor correlates 0.85 with income. A country's income predicts much of its profile, but not all of it."
+    },
+    {
+      "type": "text",
+      "text": "Below are the 10 widest gaps between a country's score and the median score of the 10 countries nearest to it in income: five above, five below. Each counts only a score with usable evidence. Each country appears once, each capability at most twice, and a case is left out where a known artefact names that country on that capability. Under each gap, the table shows which rows of the score carry it."
+    },
+    {
+      "type": "heading",
+      "text": "Further ahead than income predicts"
+    },
+    {
+      "type": "gap",
+      "gap": {
+        "iso3": "VNM",
+        "country": "Vietnam",
+        "dimension": "building",
+        "score": 77.6,
+        "confidence": 0.62,
+        "peerMedian": 23.8,
+        "peersScored": 10,
+        "gap": 53.8,
+        "peers": [
+          "IDN",
+          "PER",
+          "UKR",
+          "LKA",
+          "ECU",
+          "IRN",
+          "MDA",
+          "PRY",
+          "EGY",
+          "ZAF"
+        ],
+        "drivers": [
+          {
+            "indicatorId": "economic_complexity",
+            "unit": "index",
+            "value": 2.334,
+            "year": 2024,
+            "position": 78.9,
+            "peerPosition": 9.2,
+            "contribution": 17.4
+          },
+          {
+            "indicatorId": "high_tech_exports_share",
+            "unit": "% of manufactured exports",
+            "value": 44.257,
+            "year": 2023,
+            "position": 73.2,
+            "peerPosition": 8.9,
+            "contribution": 16.1
+          },
+          {
+            "indicatorId": "manufacturing_value_added",
+            "unit": "% of GDP",
+            "value": 24.528,
+            "year": 2025,
+            "position": 71.1,
+            "peerPosition": 38.3,
+            "contribution": 8.2
+          },
+          {
+            "indicatorId": "utility_connection_efficiency",
+            "unit": "score 0-100",
+            "value": 88.784,
+            "year": 2025,
+            "position": 87.2,
+            "peerPosition": 60.6,
+            "contribution": 6.7
+          }
+        ],
+        "rowsCounted": 4,
+        "countryArtefacts": [],
+        "dimensionArtefacts": [
+          "A6",
+          "A11"
+        ]
+      },
+      "why": "Vietnam makes and exports goods that its income peers do not. Economic fitness and the high-technology share of its manufactured exports (44%) add 17 and 16 points to the gap. Manufacturing is 25% of its GDP."
+    },
+    {
+      "type": "gap",
+      "gap": {
+        "iso3": "PNG",
+        "country": "Papua New Guinea",
+        "dimension": "learning",
+        "score": 66.2,
+        "confidence": 0.554,
+        "peerMedian": 24.9,
+        "peersScored": 10,
+        "gap": 41.3,
+        "peers": [
+          "SEN",
+          "GIN",
+          "TLS",
+          "CMR",
+          "TJK",
+          "MMR",
+          "TZA",
+          "NPL",
+          "ZMB",
+          "ZWE"
+        ],
+        "drivers": [
+          {
+            "indicatorId": "firm_training_incidence",
+            "unit": "% of firms",
+            "value": 75.094,
+            "year": 2024,
+            "position": 94.7,
+            "peerPosition": 23,
+            "contribution": 23.9
+          },
+          {
+            "indicatorId": "research_citation_impact",
+            "unit": "ratio to world average",
+            "value": 1.678,
+            "year": 2021,
+            "position": 80.5,
+            "peerPosition": 32.9,
+            "contribution": 15.9
+          },
+          {
+            "indicatorId": "human_capital_index",
+            "unit": "index 0-1",
+            "value": 0.429,
+            "year": 2020,
+            "position": 23.4,
+            "peerPosition": 24.8,
+            "contribution": -0.5
+          }
+        ],
+        "rowsCounted": 3,
+        "countryArtefacts": [],
+        "dimensionArtefacts": [
+          "A7"
+        ]
+      },
+      "why": "Three in four firms in Papua New Guinea offer formal training (75%), and its research is cited 1.68 times the world average. Those two rows carry nearly the whole gap. On the human capital index (0.43) it sits level with its peers."
+    },
+    {
+      "type": "gap",
+      "gap": {
+        "iso3": "CHN",
+        "country": "China",
+        "dimension": "building",
+        "score": 71.7,
+        "confidence": 0.475,
+        "peerMedian": 30.5,
+        "peersScored": 10,
+        "gap": 41.2,
+        "peers": [
+          "MKD",
+          "GEO",
+          "DOM",
+          "SRB",
+          "ALB",
+          "ARG",
+          "THA",
+          "AZE",
+          "CRI",
+          "MEX"
+        ],
+        "drivers": [
+          {
+            "indicatorId": "economic_complexity",
+            "unit": "index",
+            "value": 37.727,
+            "year": 2024,
+            "position": 100,
+            "peerPosition": 3.4,
+            "contribution": 32.2
+          },
+          {
+            "indicatorId": "manufacturing_value_added",
+            "unit": "% of GDP",
+            "value": 24.734,
+            "year": 2025,
+            "position": 71.7,
+            "peerPosition": 36,
+            "contribution": 11.9
+          },
+          {
+            "indicatorId": "high_tech_exports_share",
+            "unit": "% of manufactured exports",
+            "value": 26.278,
+            "year": 2024,
+            "position": 43.4,
+            "peerPosition": 10.4,
+            "contribution": 11
+          }
+        ],
+        "rowsCounted": 3,
+        "countryArtefacts": [],
+        "dimensionArtefacts": [
+          "A6",
+          "A11"
+        ]
+      },
+      "why": "China's economic fitness is at the top of the scale, against a peer median of 3.4. That one row carries 32 of the 41 points. Manufacturing is 25% of its GDP, which puts it at 72 on that row against a peer median of 36."
+    },
+    {
+      "type": "gap",
+      "gap": {
+        "iso3": "NZL",
+        "country": "New Zealand",
+        "dimension": "agency",
+        "score": 97.6,
+        "confidence": 0.491,
+        "peerMedian": 56.5,
+        "peersScored": 10,
+        "gap": 41.1,
+        "peers": [
+          "ISR",
+          "JPN",
+          "LTU",
+          "SVN",
+          "CZE",
+          "ESP",
+          "POL",
+          "HRV",
+          "ITA",
+          "GBR"
+        ],
+        "drivers": [
+          {
+            "indicatorId": "new_business_density",
+            "unit": "per 1,000 aged 15-64",
+            "value": 16.048,
+            "year": 2024,
+            "position": 96,
+            "peerPosition": 17.7,
+            "contribution": 26.1
+          },
+          {
+            "indicatorId": "business_start_procedures",
+            "unit": "count",
+            "value": 1,
+            "year": 2019,
+            "position": 100,
+            "peerPosition": 73.7,
+            "contribution": 8.8
+          },
+          {
+            "indicatorId": "business_entry_efficiency",
+            "unit": "score 0-100",
+            "value": 97.439,
+            "year": 2025,
+            "position": 96.6,
+            "peerPosition": 83.3,
+            "contribution": 4.4
+          }
+        ],
+        "rowsCounted": 3,
+        "countryArtefacts": [],
+        "dimensionArtefacts": [
+          "A6",
+          "A14",
+          "A15"
+        ]
+      },
+      "why": "New Zealand registers 16 new firms a year per 1,000 people of working age, and starting one takes a single procedure. New business density alone carries 26 of the 41 points."
+    },
+    {
+      "type": "gap",
+      "gap": {
+        "iso3": "GBR",
+        "country": "United Kingdom",
+        "dimension": "agency",
+        "score": 94.7,
+        "confidence": 0.491,
+        "peerMedian": 57.7,
+        "peersScored": 10,
+        "gap": 37,
+        "peers": [
+          "CYP",
+          "ITA",
+          "FRA",
+          "KOR",
+          "FIN",
+          "CAN",
+          "ESP",
+          "CZE",
+          "SVN",
+          "LTU"
+        ],
+        "drivers": [
+          {
+            "indicatorId": "new_business_density",
+            "unit": "per 1,000 aged 15-64",
+            "value": 19.191,
+            "year": 2024,
+            "position": 100,
+            "peerPosition": 21.3,
+            "contribution": 26.2
+          },
+          {
+            "indicatorId": "business_entry_efficiency",
+            "unit": "score 0-100",
+            "value": 100,
+            "year": 2025,
+            "position": 100,
+            "peerPosition": 82.8,
+            "contribution": 5.7
+          },
+          {
+            "indicatorId": "business_start_procedures",
+            "unit": "count",
+            "value": 4,
+            "year": 2019,
+            "position": 84.2,
+            "peerPosition": 81.6,
+            "contribution": 0.9
+          }
+        ],
+        "rowsCounted": 3,
+        "countryArtefacts": [],
+        "dimensionArtefacts": [
+          "A6",
+          "A14",
+          "A15"
+        ]
+      },
+      "why": "The United Kingdom registers 19 new firms a year per 1,000 people of working age, the top of the scale. That row carries 26 of the 37 points. The other two rows sit close to its peers."
+    },
+    {
+      "type": "heading",
+      "text": "Further behind than income predicts"
+    },
+    {
+      "type": "gap",
+      "gap": {
+        "iso3": "BWA",
+        "country": "Botswana",
+        "dimension": "adaptability",
+        "score": 14.2,
+        "confidence": 0.617,
+        "peerMedian": 65.9,
+        "peersScored": 10,
+        "gap": -51.7,
+        "peers": [
+          "MNG",
+          "EGY",
+          "PRY",
+          "MDA",
+          "IRN",
+          "COL",
+          "UKR",
+          "PER",
+          "BRA",
+          "VNM"
+        ],
+        "drivers": [
+          {
+            "indicatorId": "export_diversification",
+            "unit": "index 0-1, lower = more diversified",
+            "value": 0.8,
+            "year": 2025,
+            "position": 4.6,
+            "peerPosition": 83.5,
+            "contribution": -19.7
+          },
+          {
+            "indicatorId": "unemployment_rate",
+            "unit": "% of labour force",
+            "value": 24.477,
+            "year": 2025,
+            "position": 0,
+            "peerPosition": 75.6,
+            "contribution": -18.9
+          },
+          {
+            "indicatorId": "long_term_unemployment_share",
+            "unit": "% of unemployed",
+            "value": 57.6,
+            "year": 2024,
+            "position": 43.3,
+            "peerPosition": 80.1,
+            "contribution": -9.2
+          },
+          {
+            "indicatorId": "new_export_products_rate",
+            "unit": "% of products not exported competitively at the start",
+            "value": 0.81,
+            "year": 2024,
+            "position": 9,
+            "peerPosition": 25.7,
+            "contribution": -4.2
+          }
+        ],
+        "rowsCounted": 4,
+        "countryArtefacts": [],
+        "dimensionArtefacts": []
+      },
+      "why": "Botswana's exports are among the most concentrated in the benchmark (0.80 on an index where lower is more diversified), and 24.5% of its labour force is unemployed. Those two rows carry 39 of the 52 points."
+    },
+    {
+      "type": "gap",
+      "gap": {
+        "iso3": "AGO",
+        "country": "Angola",
+        "dimension": "coordination",
+        "score": 28.1,
+        "confidence": 0.467,
+        "peerMedian": 67.9,
+        "peersScored": 10,
+        "gap": -39.8,
+        "peers": [
+          "BGD",
+          "LAO",
+          "NGA",
+          "MAR",
+          "NIC",
+          "KGZ",
+          "IND",
+          "NAM",
+          "GHA",
+          "LBN"
+        ],
+        "drivers": [
+          {
+            "indicatorId": "trade_compliance_efficiency",
+            "unit": "score 0-100",
+            "value": 2.848,
+            "year": 2025,
+            "position": 0,
+            "peerPosition": 62.9,
+            "contribution": -21
+          },
+          {
+            "indicatorId": "budget_execution_fidelity",
+            "unit": "percentage points from approved budget",
+            "value": 26.5,
+            "year": 2023,
+            "position": 44.9,
+            "peerPosition": 89.4,
+            "contribution": -14.8
+          },
+          {
+            "indicatorId": "civil_society_strength",
+            "unit": "index 0-1",
+            "value": 0.433,
+            "year": 2025,
+            "position": 39.3,
+            "peerPosition": 66.8,
+            "contribution": -9.2
+          }
+        ],
+        "rowsCounted": 3,
+        "countryArtefacts": [],
+        "dimensionArtefacts": [
+          "A3",
+          "A6",
+          "A12"
+        ]
+      },
+      "why": "Firms rate Angola's border compliance 2.8 out of 100, the bottom of the scale, and government spending ended 26.5 percentage points away from the approved budget. Those two rows carry 36 of the 40 points."
+    },
+    {
+      "type": "gap",
+      "gap": {
+        "iso3": "IRQ",
+        "country": "Iraq",
+        "dimension": "adaptability",
+        "score": 25.9,
+        "confidence": 0.579,
+        "peerMedian": 58.7,
+        "peersScored": 10,
+        "gap": -32.8,
+        "peers": [
+          "SLV",
+          "UZB",
+          "GTM",
+          "TUN",
+          "JAM",
+          "BOL",
+          "ZAF",
+          "JOR",
+          "PHL",
+          "SWZ"
+        ],
+        "drivers": [
+          {
+            "indicatorId": "export_diversification",
+            "unit": "index 0-1, lower = more diversified",
+            "value": 0.821,
+            "year": 2025,
+            "position": 2,
+            "peerPosition": 77.6,
+            "contribution": -18.9
+          },
+          {
+            "indicatorId": "unemployment_rate",
+            "unit": "% of labour force",
+            "value": 15.485,
+            "year": 2025,
+            "position": 25.5,
+            "peerPosition": 83.9,
+            "contribution": -14.6
+          },
+          {
+            "indicatorId": "new_export_products_rate",
+            "unit": "% of products not exported competitively at the start",
+            "value": 0.4,
+            "year": 2024,
+            "position": 4.5,
+            "peerPosition": 32,
+            "contribution": -6.9
+          },
+          {
+            "indicatorId": "long_term_unemployment_share",
+            "unit": "% of unemployed",
+            "value": 31.3,
+            "year": 2021,
+            "position": 71.5,
+            "peerPosition": 55.4,
+            "contribution": 4
+          }
+        ],
+        "rowsCounted": 4,
+        "countryArtefacts": [],
+        "dimensionArtefacts": []
+      },
+      "why": "Iraq's exports are as concentrated as Botswana's (0.82), and 15.5% of its labour force is unemployed. Those two rows carry more than the whole gap. A lower long-term unemployment share than its peers wins 4 points back."
+    },
+    {
+      "type": "gap",
+      "gap": {
+        "iso3": "PAN",
+        "country": "Panama",
+        "dimension": "building",
+        "score": 5.4,
+        "confidence": 0.475,
+        "peerMedian": 37.3,
+        "peersScored": 10,
+        "gap": -31.9,
+        "peers": [
+          "TUR",
+          "KAZ",
+          "GRC",
+          "LVA",
+          "MYS",
+          "BGR",
+          "SVK",
+          "ROU",
+          "HUN",
+          "EST"
+        ],
+        "drivers": [
+          {
+            "indicatorId": "manufacturing_value_added",
+            "unit": "% of GDP",
+            "value": 4.796,
+            "year": 2025,
+            "position": 10.4,
+            "peerPosition": 34.7,
+            "contribution": -8.1
+          },
+          {
+            "indicatorId": "high_tech_exports_share",
+            "unit": "% of manufactured exports",
+            "value": 1.767,
+            "year": 2024,
+            "position": 2.8,
+            "peerPosition": 26.8,
+            "contribution": -8
+          },
+          {
+            "indicatorId": "economic_complexity",
+            "unit": "index",
+            "value": 0.089,
+            "year": 2024,
+            "position": 3,
+            "peerPosition": 14.6,
+            "contribution": -3.9
+          }
+        ],
+        "rowsCounted": 3,
+        "countryArtefacts": [],
+        "dimensionArtefacts": [
+          "A6",
+          "A11"
+        ]
+      },
+      "why": "Manufacturing is 4.8% of Panama's GDP and high technology is 1.8% of its manufactured exports, both near the bottom of the scale. Building reads industrial output, so an economy that earns its income elsewhere scores low here. Known limit A11 says so."
+    },
+    {
+      "type": "gap",
+      "gap": {
+        "iso3": "ARE",
+        "country": "United Arab Emirates",
+        "dimension": "building",
+        "score": 22.5,
+        "confidence": 0.462,
+        "peerMedian": 54,
+        "peersScored": 10,
+        "gap": -31.5,
+        "peers": [
+          "NLD",
+          "DNK",
+          "AUT",
+          "BEL",
+          "SWE",
+          "USA",
+          "DEU",
+          "AUS",
+          "CAN",
+          "CHE"
+        ],
+        "drivers": [
+          {
+            "indicatorId": "economic_complexity",
+            "unit": "index",
+            "value": 0.839,
+            "year": 2024,
+            "position": 28.4,
+            "peerPosition": 98.1,
+            "contribution": -23.2
+          },
+          {
+            "indicatorId": "high_tech_exports_share",
+            "unit": "% of manufactured exports",
+            "value": 8.96,
+            "year": 2023,
+            "position": 14.7,
+            "peerPosition": 31.6,
+            "contribution": -5.6
+          },
+          {
+            "indicatorId": "manufacturing_value_added",
+            "unit": "% of GDP",
+            "value": 9.374,
+            "year": 2024,
+            "position": 24.5,
+            "peerPosition": 32,
+            "contribution": -2.5
+          }
+        ],
+        "rowsCounted": 3,
+        "countryArtefacts": [],
+        "dimensionArtefacts": [
+          "A6",
+          "A11"
+        ]
+      },
+      "why": "The United Arab Emirates sits at 28 on economic fitness, where its income peers, from the Netherlands to Switzerland, have a median of 98. That row carries 23 of the 32 points. Its manufacturing share (9.4% of GDP) is closer to theirs."
+    },
+    {
+      "type": "heading",
+      "text": "What the ten have in common"
+    },
+    {
+      "type": "text",
+      "text": "In six of the ten, the row that carries most of the gap describes what a country makes or exports: economic fitness, high-technology exports or export concentration. Vietnam and China have an export base far ahead of their income. Botswana, Iraq and the United Arab Emirates have income far ahead of their export base. The other four gaps come from firms: how many start, how many train their staff, and how fast they clear a border."
+    }
+  ]
+}

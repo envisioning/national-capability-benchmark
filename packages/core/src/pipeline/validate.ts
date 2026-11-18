@@ -25,7 +25,9 @@ import {
   ResearchRunFile,
   ResearchScoutRunFile,
 } from '../model/research.js'
-import { DELPHI_DIR, FILES, RESEARCH_RUNS_DIR, subnationalFile } from './paths.js'
+import { DELPHI_DIR, FILES, POSTS_DIR, RESEARCH_RUNS_DIR, subnationalFile } from './paths.js'
+import { PostFile } from '../model/posts.js'
+import { unbackedNumbers, unknownTags } from './post-check.js'
 import { recomposeSubnational } from './br-subnational.js'
 
 export type Problem = { file: string; severity: 'error' | 'warning'; problem: string }
@@ -1051,5 +1053,39 @@ export async function checkEvidenceUrls(
     }
   })
   await Promise.all(workers)
+  return problems
+}
+
+/**
+ * Every post in `data/posts`: the schema, the file name, the tags, and the
+ * rule that every number in the prose is one the post stores. See D195.
+ */
+export async function validatePosts(dir = POSTS_DIR): Promise<Problem[]> {
+  let names: string[]
+  try {
+    names = (await readdir(dir)).filter((n) => n.endsWith('.json'))
+  } catch {
+    return []
+  }
+  const problems: Problem[] = []
+  for (const name of names) {
+    const parsed = PostFile.safeParse(JSON.parse(await readFile(resolve(dir, name), 'utf8')))
+    if (!parsed.success) {
+      problems.push(
+        ...parsed.error.issues.slice(0, 8).map((issue) => ({
+          file: name,
+          severity: 'error' as const,
+          problem: `${issue.path.join('.') || '(root)'}: ${issue.message}`,
+        })),
+      )
+      continue
+    }
+    const post = parsed.data
+    if (name !== `${post.date}-${post.slug}.json`) {
+      problems.push({ file: name, severity: 'error', problem: `file name must be ${post.date}-${post.slug}.json` })
+    }
+    for (const tag of unknownTags(post)) problems.push({ file: name, severity: 'error', problem: `unknown ${tag}` })
+    for (const p of unbackedNumbers(post)) problems.push({ file: name, severity: 'error', problem: p })
+  }
   return problems
 }
