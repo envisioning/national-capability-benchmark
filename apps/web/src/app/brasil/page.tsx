@@ -18,6 +18,9 @@ import {
 } from '@ncb/core'
 import { DIMENSION_ICON, Icon } from '@/components/Icon'
 import { Radar } from '@/components/Radar'
+import { AudienceCards, ExampleQuestions } from '@/components/EntryPoints'
+import { brazilAudiences, brazilQuestions } from '@/lib/entry'
+import { loadStorySet } from '@/lib/stories'
 import {
   Confidence,
   ConfidenceLegend,
@@ -91,6 +94,7 @@ export default async function BrazilLayerPage() {
   const scoredCount = INDICATORS.filter(isScored).length
   const diag = await loadDiagnostics()
   const verdict = diag ? readVerdictPtBr(diag) : null
+  const stories = await loadStorySet('BRA')
 
   const agendaSection = layerSection(layer, 'agenda')
   const institutionsSection = layerSection(layer, 'institutions')
@@ -123,6 +127,9 @@ export default async function BrazilLayerPage() {
         Nove capacidades medidas com dados públicos. Cada pontuação vem com os indicadores em que
         se apoia e com a solidez da evidência ao lado, e não há classificação geral.
       </Headline>
+      <div className="-mt-4 mb-10">
+        <ExampleQuestions label="Perguntas para começar" questions={brazilQuestions(stories)} />
+      </div>
       {verdict?.opening ? (
         <p className="mb-10 max-w-3xl text-lg leading-relaxed text-[var(--muted)]">
           {verdict.opening}{' '}
@@ -165,6 +172,8 @@ export default async function BrazilLayerPage() {
           </div>
         ))}
       </div>
+
+      <AudienceCards title="Para quem é?" audiences={brazilAudiences(stories, agenda, scoredCount)} />
 
       <Section
         title="O Brasil é o primeiro caso de campo"

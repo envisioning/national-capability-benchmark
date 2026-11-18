@@ -13,6 +13,7 @@ import { FlagHistogram } from '@/components/FlagHistogram'
 import { DIMENSION_ICON } from '@/components/Icon'
 import { LaneField } from '@/components/LaneField'
 import { CountryJump } from '@/components/views/CountryJump'
+import { AudienceCards, ExampleQuestions } from '@/components/EntryPoints'
 import {
   Card,
   Empty,
@@ -53,6 +54,8 @@ import { readWealthTracking } from '@/lib/wealth'
 import { readFactorTest } from '@/lib/factor'
 import { readResidualStructure } from '@/lib/residual'
 import { capitalize, countWord } from '@/lib/words'
+import { loadAgenda } from '@/lib/agenda'
+import { groundAudiences, groundQuestions, weekCountry } from '@/lib/entry'
 
 export const dynamic = 'force-dynamic'
 
@@ -117,6 +120,10 @@ export default async function Page() {
   const wiring = brazil.network
     ? buildInstitutionMatrix(brazil.network.nodes, brazil.network.edges)
     : null
+  const week = weekCountry(data.countries, diag?.income ?? [])
+  const weekAgenda = week ? await loadAgenda(week.country.iso3) : null
+  const questions = groundQuestions(data.countries, diag)
+  const audiences = groundAudiences(data.countries, diag, data.version ?? DATASET_VERSION, weekAgenda)
   const spread = widestSpread(profiles)
   const wired = INDICATORS.filter(isScored).length
   const gaps = INDICATORS.filter(isDeclaredGap).length
@@ -177,8 +184,11 @@ export default async function Page() {
               Compare
             </Link>
           </div>
+          <ExampleQuestions label="Questions to start from" questions={questions} />
         </div>
       </div>
+
+      <AudienceCards title="Who is this for?" audiences={audiences} />
 
       <Section
         title="One capability at a time"

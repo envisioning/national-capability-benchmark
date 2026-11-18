@@ -249,6 +249,8 @@ export type StoryStrings = {
   /** The line under the rule on a story's share card. */
   cardFooter: string
   shapeMirror: {
+    /** The story as a reader would ask it. {countryTopic} {ofCountry} */
+    question: string
     /** {countryTopic} {ofCountry} */
     title: string
     /** {match} {countryTopic} */
@@ -268,6 +270,8 @@ export type StoryStrings = {
     how: string
   }
   peerContrast: {
+    /** {countryTopic} {ofCountry} */
+    question: string
     title: string
     /** {peerCount} {ofCountry} {match} */
     headline: string
@@ -286,6 +290,8 @@ export type StoryStrings = {
     how: string
   }
   peerStanding: {
+    /** {countryTopic} {ofCountry} */
+    question: string
     /** {countryTopic} {ofCountry} */
     title: string
     /** {countryTopic} {gap} {dimension} {peerCount} */

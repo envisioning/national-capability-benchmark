@@ -9,6 +9,16 @@ The entries before App 1.0.0 are retrospective, high-level summaries
 reconstructed from the repository history. They document explicit version bumps
 and may skip versions that were never committed.
 
+## App 1.44.0 — 2026-11-18
+
+- **The front pages suggest where to start.** Under the country search, three
+  questions open the page that answers each one. The English questions follow
+  the country of the week. Brazil's ask the three questions its stories answer.
+- **Each audience gets one card.** Governments, development banks and
+  agencies, researchers and journalists each see one job, one link and one
+  line read from the current data, in English on the front page and in
+  Portuguese on `/brasil`. Decision D194.
+
 ## App 1.43.0 — 2026-11-18
 
 - **Every page says how to cite it.** A box at the foot of each page gives the
