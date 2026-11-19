@@ -5,7 +5,7 @@ import type { GapExplanation } from '@ncb/core'
 import { Card, Eyebrow, Headline, PageTitle } from '@/components/ui'
 import { GapWaterfall } from '@/components/posts/GapWaterfall'
 import { PeerField } from '@/components/posts/PeerField'
-import { GapBlock, LeadFigure } from '@/components/posts/PostViews'
+import { GapBlock, LeadFigure, PostCard } from '@/components/posts/PostViews'
 import { loadPosts } from '@/lib/data'
 import { decisionHref, postHref } from '@/lib/links'
 
@@ -55,6 +55,12 @@ const SPECS = {
     answers: "Why is the gap there?",
     reads: "The peers' median score, each row's share of the gap, and the country's score.",
     rule: "Under every case, after the field strip. One bar per row, in the order of the gap. What the rows do not account for is its own bar.",
+  },
+  card: {
+    name: "Post card",
+    answers: "Which post do I want to read?",
+    reads: "The post's question, title, lead and its three widest gaps, each as the peers' median and the country's score.",
+    rule: "Only in the list at /posts, one per post. The bars use the waterfall's marks: filled when above the peers, open when below.",
   },
   gap: {
     name: "Case",
@@ -123,6 +129,10 @@ export default async function PostBlocksPage() {
         <Link href={decisionHref('D198')} className="underline underline-offset-4">
           D198
         </Link>
+        ,{' '}
+        <Link href={decisionHref('D199')} className="underline underline-offset-4">
+          D199
+        </Link>
         .
       </Headline>
       {!source || !block ? (
@@ -154,6 +164,11 @@ export default async function PostBlocksPage() {
           </Specimen>
           <Specimen spec={SPECS.gap}>
             <GapBlock gap={block.gap} why={block.why} />
+          </Specimen>
+          <Specimen spec={SPECS.card}>
+            <div className="max-w-xl">
+              <PostCard post={source} />
+            </div>
           </Specimen>
         </>
       )}

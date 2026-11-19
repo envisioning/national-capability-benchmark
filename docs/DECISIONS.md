@@ -11011,3 +11011,33 @@ peers on one capability and below on another.
 
 **Overturned by.** Readers who take the lead number for the country's
 headline score, or posts whose answer is not one number.
+
+## D199 — The posts list shows each post as a card with its widest gaps
+
+*Recorded 2026-11-19. Reach roadmap. Builds on D197, D198 and D67.*
+
+**Why.** The list at `/posts` was a column of titles and paragraphs, so every
+post looked the same until it was read. A reader should be able to tell posts
+apart, and see the size of their answer, before reading a word.
+
+**Decision.**
+
+1. **A card per post.** `PostCard` holds the question, the title, the lead
+   number with its caption (the dek when a post has no lead), the tags and
+   the dateline. Two columns from tablet width, one on a phone.
+2. **The picture is the post's widest gaps.** `GapGlyph` draws the three
+   widest gaps in the post, each on the 0 to 100 scale: a tick at the peers'
+   median and a bar from it to the country's score, filled above and open
+   below, the waterfall's marks. Each row names the flag and the capability
+   and prints the gap. It reads only the stored gap blocks.
+3. **Not a second field chart.** A row shows two numbers, not a
+   distribution, so D67 holds.
+4. **No dark band and no lime in the list.** The lead number is in the page
+   ink; the dark band stays the top of a post.
+
+**Cost.** The cards repeat the dateline link on every post. A capability post
+shows gaps from different countries in one picture, so its rows compare
+countries and a country post's rows compare capabilities.
+
+**Overturned by.** Readers who take a card's bars for the whole post, or a
+list long enough that the cards need a denser form.
