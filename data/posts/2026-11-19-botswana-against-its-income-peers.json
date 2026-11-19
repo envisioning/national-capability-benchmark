@@ -1,0 +1,389 @@
+{
+  "slug": "botswana-against-its-income-peers",
+  "date": "2026-11-19",
+  "kind": "country",
+  "subject": "BWA",
+  "question": "Is Botswana more capable than its income suggests?",
+  "title": "Botswana adapts far less than its income peers",
+  "dek": "On Adaptability, Botswana scores 52 points below the countries nearest to it in income, the widest gap in its profile. A narrow export basket and high unemployment carry most of it. Agency is the one capability where it leads.",
+  "datasetVersion": "10.2.0",
+  "dataGeneratedAt": "2026-11-05T11:52:10.760Z",
+  "figures": {
+    "capabilitiesUsable": 7,
+    "gapFloor": 10
+  },
+  "tags": {
+    "countries": [
+      "BWA"
+    ],
+    "dimensions": [
+      "agency",
+      "adaptability",
+      "anticipation"
+    ],
+    "indicators": [
+      "new_business_density",
+      "business_entry_efficiency",
+      "export_diversification",
+      "unemployment_rate",
+      "statistical_performance",
+      "sci_articles_per_million"
+    ]
+  },
+  "blocks": [
+    {
+      "type": "text",
+      "text": "This post compares Botswana with the 10 countries nearest to it in income per person: Mongolia, Egypt, Paraguay, Moldova, Iran, Colombia, Ukraine, Peru, Brazil and Vietnam. Seven of its nine capabilities have usable evidence. Trust and Shared purpose do not, so they are left out."
+    },
+    {
+      "type": "heading",
+      "text": "Where Botswana is ahead of its peers"
+    },
+    {
+      "type": "gap",
+      "gap": {
+        "iso3": "BWA",
+        "country": "Botswana",
+        "dimension": "agency",
+        "score": 66.7,
+        "confidence": 0.491,
+        "peerMedian": 46.2,
+        "peersScored": 10,
+        "gap": 20.5,
+        "peers": [
+          "MNG",
+          "EGY",
+          "PRY",
+          "MDA",
+          "IRN",
+          "COL",
+          "UKR",
+          "PER",
+          "BRA",
+          "VNM"
+        ],
+        "peerScores": [
+          {
+            "iso3": "MNG",
+            "score": 56.2,
+            "confidence": 0.301
+          },
+          {
+            "iso3": "EGY",
+            "score": 40.1,
+            "confidence": 0.269
+          },
+          {
+            "iso3": "PRY",
+            "score": 35.1,
+            "confidence": 0.491
+          },
+          {
+            "iso3": "MDA",
+            "score": 71,
+            "confidence": 0.491
+          },
+          {
+            "iso3": "IRN",
+            "score": 28,
+            "confidence": 0.238
+          },
+          {
+            "iso3": "COL",
+            "score": 55.3,
+            "confidence": 0.491
+          },
+          {
+            "iso3": "UKR",
+            "score": 41.6,
+            "confidence": 0.19
+          },
+          {
+            "iso3": "PER",
+            "score": 47.8,
+            "confidence": 0.491
+          },
+          {
+            "iso3": "BRA",
+            "score": 44.6,
+            "confidence": 0.301
+          },
+          {
+            "iso3": "VNM",
+            "score": 53,
+            "confidence": 0.491
+          }
+        ],
+        "drivers": [
+          {
+            "indicatorId": "new_business_density",
+            "unit": "per 1,000 aged 15-64",
+            "value": 13.332,
+            "year": 2024,
+            "position": 79.7,
+            "peerPosition": 12.4,
+            "contribution": 22.4
+          },
+          {
+            "indicatorId": "business_start_procedures",
+            "unit": "count",
+            "value": 9,
+            "year": 2019,
+            "position": 57.9,
+            "peerPosition": 65.8,
+            "contribution": -2.6
+          },
+          {
+            "indicatorId": "business_entry_efficiency",
+            "unit": "score 0-100",
+            "value": 71.445,
+            "year": 2025,
+            "position": 62.6,
+            "peerPosition": 84.2,
+            "contribution": -7.2
+          }
+        ],
+        "rowsCounted": 3,
+        "countryArtefacts": [],
+        "dimensionArtefacts": [
+          "A6",
+          "A14",
+          "A15"
+        ]
+      },
+      "why": "One row carries this gap. Botswana registers 13 new businesses for every thousand people of working age, and that row adds 22 points, more than the whole gap of 20.5. Business entry efficiency scores 71 and takes seven points back."
+    },
+    {
+      "type": "heading",
+      "text": "Where it is behind"
+    },
+    {
+      "type": "gap",
+      "gap": {
+        "iso3": "BWA",
+        "country": "Botswana",
+        "dimension": "adaptability",
+        "score": 14.2,
+        "confidence": 0.617,
+        "peerMedian": 65.9,
+        "peersScored": 10,
+        "gap": -51.7,
+        "peers": [
+          "MNG",
+          "EGY",
+          "PRY",
+          "MDA",
+          "IRN",
+          "COL",
+          "UKR",
+          "PER",
+          "BRA",
+          "VNM"
+        ],
+        "peerScores": [
+          {
+            "iso3": "MNG",
+            "score": 54,
+            "confidence": 0.617
+          },
+          {
+            "iso3": "EGY",
+            "score": 77.5,
+            "confidence": 0.617
+          },
+          {
+            "iso3": "PRY",
+            "score": 64.8,
+            "confidence": 0.617
+          },
+          {
+            "iso3": "MDA",
+            "score": 73.9,
+            "confidence": 0.617
+          },
+          {
+            "iso3": "IRN",
+            "score": 71.8,
+            "confidence": 0.527
+          },
+          {
+            "iso3": "COL",
+            "score": 57.7,
+            "confidence": 0.617
+          },
+          {
+            "iso3": "UKR",
+            "score": 67.1,
+            "confidence": 0.54
+          },
+          {
+            "iso3": "PER",
+            "score": 53.3,
+            "confidence": 0.459
+          },
+          {
+            "iso3": "BRA",
+            "score": 64.1,
+            "confidence": 0.617
+          },
+          {
+            "iso3": "VNM",
+            "score": 87,
+            "confidence": 0.617
+          }
+        ],
+        "drivers": [
+          {
+            "indicatorId": "export_diversification",
+            "unit": "index 0-1, lower = more diversified",
+            "value": 0.8,
+            "year": 2025,
+            "position": 4.6,
+            "peerPosition": 83.5,
+            "contribution": -19.7
+          },
+          {
+            "indicatorId": "unemployment_rate",
+            "unit": "% of labour force",
+            "value": 24.477,
+            "year": 2025,
+            "position": 0,
+            "peerPosition": 75.6,
+            "contribution": -18.9
+          },
+          {
+            "indicatorId": "long_term_unemployment_share",
+            "unit": "% of unemployed",
+            "value": 57.6,
+            "year": 2024,
+            "position": 43.3,
+            "peerPosition": 80.1,
+            "contribution": -9.2
+          },
+          {
+            "indicatorId": "new_export_products_rate",
+            "unit": "% of products not exported competitively at the start",
+            "value": 0.81,
+            "year": 2024,
+            "position": 9,
+            "peerPosition": 25.7,
+            "contribution": -4.2
+          }
+        ],
+        "rowsCounted": 4,
+        "countryArtefacts": [],
+        "dimensionArtefacts": []
+      },
+      "why": "Botswana exports a narrow set of products: its concentration index is 0.8, where lower means more diverse, and that row takes 20 points off the score. Unemployment is 24% of the labor force and takes another 19, so these two rows carry 39 of the 52 points. Long-term unemployment, at 58% of the unemployed, takes nine more."
+    },
+    {
+      "type": "gap",
+      "gap": {
+        "iso3": "BWA",
+        "country": "Botswana",
+        "dimension": "anticipation",
+        "score": 25.9,
+        "confidence": 0.455,
+        "peerMedian": 41.7,
+        "peersScored": 10,
+        "gap": -15.8,
+        "peers": [
+          "MNG",
+          "EGY",
+          "PRY",
+          "MDA",
+          "IRN",
+          "COL",
+          "UKR",
+          "PER",
+          "BRA",
+          "VNM"
+        ],
+        "peerScores": [
+          {
+            "iso3": "MNG",
+            "score": 42.1,
+            "confidence": 0.455
+          },
+          {
+            "iso3": "EGY",
+            "score": 39.3,
+            "confidence": 0.455
+          },
+          {
+            "iso3": "PRY",
+            "score": 32.7,
+            "confidence": 0.455
+          },
+          {
+            "iso3": "MDA",
+            "score": 44.9,
+            "confidence": 0.455
+          },
+          {
+            "iso3": "IRN",
+            "score": 33.9,
+            "confidence": 0.455
+          },
+          {
+            "iso3": "COL",
+            "score": 43.7,
+            "confidence": 0.455
+          },
+          {
+            "iso3": "UKR",
+            "score": 41.4,
+            "confidence": 0.455
+          },
+          {
+            "iso3": "PER",
+            "score": 42,
+            "confidence": 0.455
+          },
+          {
+            "iso3": "BRA",
+            "score": 44.6,
+            "confidence": 0.455
+          },
+          {
+            "iso3": "VNM",
+            "score": 27.7,
+            "confidence": 0.455
+          }
+        ],
+        "drivers": [
+          {
+            "indicatorId": "statistical_performance",
+            "unit": "index 0-100",
+            "value": 64.211,
+            "year": 2024,
+            "position": 46,
+            "peerPosition": 74.6,
+            "contribution": -14.3
+          },
+          {
+            "indicatorId": "sci_articles_per_million",
+            "unit": "articles per million people",
+            "value": 154.759,
+            "year": 2023,
+            "position": 5.8,
+            "peerPosition": 6.3,
+            "contribution": -0.2
+          }
+        ],
+        "rowsCounted": 2,
+        "countryArtefacts": [],
+        "dimensionArtefacts": []
+      },
+      "why": "Botswana's statistical system scores 64 on the World Bank statistical performance index, and that row carries 14 of the 16 points. Scientific articles per person sit close to the peer median."
+    },
+    {
+      "type": "heading",
+      "text": "The rest of the profile"
+    },
+    {
+      "type": "text",
+      "text": "Coordination, Learning, Experimentation and Building sit within 10 points of the peers. The widest gap comes from rows about trade and jobs, and the one lead comes from how many new firms register."
+    }
+  ]
+}
