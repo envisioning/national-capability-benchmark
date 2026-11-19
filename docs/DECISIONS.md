@@ -10975,3 +10975,39 @@ Building, 5.4), which invites a question the post does not answer.
 
 **Overturned by.** Readers who skip the pictures and still read the table, or
 who read the field strip's peers as the whole field.
+
+## D198 — A post opens on one number, in the page's one dark band
+
+*Recorded 2026-11-19. Reach roadmap. Builds on D195, D197 and D75.*
+
+**Why.** After D197 the cases were drawn, but a post still opened as a title
+and a paragraph. A reader who stops at the top should leave with the answer,
+and the answer to every post so far is one number: a gap, a correlation, a
+share.
+
+**Decision.**
+
+1. **A lead number.** `PostFile.lead` holds the figure as printed (`+53.8`,
+   `0.87`, `54.5%`) and a caption that says what it counts. The number rule
+   checks both like prose, so the figure must be a number the post stores.
+   The writer sets it; a post without one keeps the band and drops the
+   figure.
+2. **The dark band.** `PostTop` puts the question, the title, the dateline,
+   the lead number and the dek in the `hero-band` surface, full width. A post
+   page has no other dark band above the footer, so the one-band rule holds.
+   The front page keeps the Octa title and the dot field; a post uses the
+   page title face, so the front page stays the one display moment.
+3. **No lime.** The figure is white. Lime stays with the score chip and the
+   charts below.
+4. **The three posts published before this decision got a lead.** Each
+   figure was already in the post (Vietnam's Building gap, the Anticipation
+   correlation, the factor's share), and each caption repeats what the dek or
+   the prose already says. Like D197's backfill, it adds to the posts without
+   changing a word or a number in them.
+
+**Cost.** The band pushes the first case below the fold on a laptop. One
+figure flattens a post that has two answers, such as a country above its
+peers on one capability and below on another.
+
+**Overturned by.** Readers who take the lead number for the country's
+headline score, or posts whose answer is not one number.

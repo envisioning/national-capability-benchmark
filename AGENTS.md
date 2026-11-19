@@ -309,8 +309,9 @@ port 3888. That entry starts Next directly and does not use the proxy.
   never edit one after it ships, publish a correction. The daily subject is
   `nextPost` in `pipeline/post-plan.ts` (`bench post next`), never the
   agent's pick. A post is drawn from the blocks on `/posts/blocks` and nowhere else: a new
-  block needs a specimen there and a decision. The playbook is
-  `docs/POSTS.md`. See D195, D196 and D197.
+  block needs a specimen there and a decision. Every post sets `lead`, the
+  one figure it turns on, drawn in the page's one dark band. The playbook is
+  `docs/POSTS.md`. See D195, D196, D197 and D198.
 - The wealth residual is never summed across dimensions. `ResidualFile` has no
   country-level field, `buildResidual` in
   `packages/core/src/pipeline/residual.ts` computes one fit per dimension, and

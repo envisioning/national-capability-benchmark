@@ -201,15 +201,50 @@ export function GapBlock({ gap, why, legend = false }: { gap: GapExplanation; wh
   )
 }
 
+/** The lead number and what it counts. It sits on the dark band, so it reads the band's tokens. */
+export function LeadFigure({ lead }: { lead: NonNullable<PostFile['lead']> }) {
+  return (
+    <div className="grid max-w-4xl gap-x-8 gap-y-3 sm:grid-cols-[auto_1fr] sm:items-end">
+      <p className="text-6xl font-light leading-none tabular-nums sm:text-8xl">{lead.figure}</p>
+      <p className="max-w-md pb-1 text-lg leading-snug text-[var(--muted)] sm:pb-2">{lead.caption}</p>
+    </div>
+  )
+}
+
+/**
+ * The top of a post: the page's one dark band (DESIGN.md allows one above the
+ * footer, and a post page has no other). It holds the question, the title and
+ * the lead number, the one figure the post turns on, so a reader who stops here
+ * still leaves with the answer. The figure stays white: lime belongs to the
+ * charts below. A post without a lead keeps the band and drops the figure. See
+ * D198.
+ */
+export function PostTop({ post }: { post: PostFile }) {
+  return (
+    <header className="hero-band full-bleed -mt-12 mb-12 sm:-mt-16">
+      <div className="m-auto max-w-6xl px-6 py-12 sm:px-12 sm:py-16">
+        <Eyebrow>{post.question}</Eyebrow>
+        <div className="mt-3 max-w-4xl">
+          <PageTitle>{post.title}</PageTitle>
+        </div>
+        <Dateline post={post} />
+        {post.lead ? (
+          <div className="mt-10 border-t border-[var(--rule)] pt-8">
+            <LeadFigure lead={post.lead} />
+          </div>
+        ) : null}
+        <div className="mb-0 max-w-3xl [&>p]:mb-0">
+          <Headline>{post.dek}</Headline>
+        </div>
+      </div>
+    </header>
+  )
+}
+
 export function PostArticle({ post }: { post: PostFile }) {
   return (
     <article>
-      <Eyebrow>{post.question}</Eyebrow>
-      <div className="mt-3">
-        <PageTitle>{post.title}</PageTitle>
-      </div>
-      <Dateline post={post} />
-      <Headline>{post.dek}</Headline>
+      <PostTop post={post} />
       {post.blocks.map((block, i) => {
         const firstGap = post.blocks.findIndex((b) => b.type === 'gap') === i
         switch (block.type) {

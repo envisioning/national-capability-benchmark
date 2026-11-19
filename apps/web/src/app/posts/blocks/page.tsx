@@ -5,7 +5,7 @@ import type { GapExplanation } from '@ncb/core'
 import { Card, Eyebrow, Headline, PageTitle } from '@/components/ui'
 import { GapWaterfall } from '@/components/posts/GapWaterfall'
 import { PeerField } from '@/components/posts/PeerField'
-import { GapBlock } from '@/components/posts/PostViews'
+import { GapBlock, LeadFigure } from '@/components/posts/PostViews'
 import { loadPosts } from '@/lib/data'
 import { decisionHref, postHref } from '@/lib/links'
 
@@ -26,6 +26,12 @@ export const metadata: Metadata = {
 type Spec = { name: string; answers: string; reads: string; rule: string }
 
 const SPECS = {
+  lead: {
+    name: "Lead number",
+    answers: "What is the answer, in one figure?",
+    reads: "The post's lead: the figure as printed and the words that say what it counts. Both pass the number rule.",
+    rule: "Once, at the top, in the page's one dark band with the question and the title. The figure is the number the dek turns on. It stays white.",
+  },
   heading: {
     name: "Heading",
     answers: "Which side of the story am I reading?",
@@ -86,6 +92,7 @@ function Specimen({ spec, children }: { spec: Spec; children: React.ReactNode })
 export default async function PostBlocksPage() {
   const posts = await loadPosts()
   const source = posts.find((p) => p.blocks.some((b) => b.type === 'gap' && b.gap.peerScores))
+  const leadSource = posts.find((p) => p.lead)
   const block = source?.blocks.find(
     (b): b is { type: 'gap'; gap: GapExplanation; why: string } => b.type === 'gap' && Boolean(b.gap.peerScores),
   )
@@ -111,6 +118,10 @@ export default async function PostBlocksPage() {
         . The rules are{' '}
         <Link href={decisionHref('D197')} className="underline underline-offset-4">
           D197
+        </Link>{' '}
+        and{' '}
+        <Link href={decisionHref('D198')} className="underline underline-offset-4">
+          D198
         </Link>
         .
       </Headline>
@@ -118,6 +129,13 @@ export default async function PostBlocksPage() {
         <p className="text-lg text-[var(--muted)]">No post holds a case with peer scores yet.</p>
       ) : (
         <>
+          {leadSource?.lead ? (
+            <Specimen spec={SPECS.lead}>
+              <div className="hero-band px-6 py-10 sm:px-10">
+                <LeadFigure lead={leadSource.lead} />
+              </div>
+            </Specimen>
+          ) : null}
           {heading && heading.type === 'heading' ? (
             <Specimen spec={SPECS.heading}>
               <h2 className="text-2xl font-light leading-tight sm:text-3xl">{heading.text}</h2>
