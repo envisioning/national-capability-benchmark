@@ -44,6 +44,7 @@ export function unbackedNumbers(post: PostFile): string[] {
   const prose: Array<[string, string]> = [
     ['dek', post.dek],
     ['title', post.title],
+    ...(post.lead ? ([['lead.figure', post.lead.figure], ['lead.caption', post.lead.caption]] as Array<[string, string]>) : []),
     ...post.blocks.flatMap((b, i): Array<[string, string]> =>
       b.type === 'gap' ? [[`blocks.${i}.why`, b.why]] : [[`blocks.${i}`, b.text]],
     ),

@@ -9,6 +9,13 @@ The entries before App 1.0.0 are retrospective, high-level summaries
 reconstructed from the repository history. They document explicit version bumps
 and may skip versions that were never committed.
 
+## App 1.48.0 — 2026-11-19
+
+- **Posts open on their answer.** The top of each post is a dark band with
+  the question, the title and one large figure, the number the post turns on,
+  with a line that says what it counts. Vietnam's post opens on +53.8 points
+  on Building. `/posts/blocks` shows the new block. Decision D198.
+
 ## App 1.47.0 — 2026-11-18
 
 - **Posts draw their cases.** Under each case, the country and its 10 income

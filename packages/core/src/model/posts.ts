@@ -61,6 +61,12 @@ export const PostFile = z.object({
   title: z.string(),
   /** One or two sentences under the title: the answer. */
   dek: z.string(),
+  /**
+   * The one number the post turns on, printed large in the dark band at the top,
+   * with the words that say what it counts. The figure is text as printed, such
+   * as "+53.8" or "54.5%", and the number rule checks it like prose (D198).
+   */
+  lead: z.object({ figure: z.string(), caption: z.string() }).optional(),
   datasetVersion: z.string(),
   /** When the data the post read was generated. */
   dataGeneratedAt: z.string(),

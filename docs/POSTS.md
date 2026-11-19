@@ -40,7 +40,10 @@ will not read a table. Every number in a post comes from the data. See D195.
 2. Write `data/posts/<date>-<slug>.json` against `PostFile` in
    `packages/core/src/model/posts.ts`: copy each case into a `gap` block
    unchanged, add one `why` per case, add `text` and `heading` blocks around
-   them, and put any other quoted number in `figures` with a name.
+   them, and put any other quoted number in `figures` with a name. Set
+   `lead`: the one figure the dek turns on, as printed (`+53.8`, `0.87`,
+   `54.5%`), and a caption that says what it counts. The number rule checks
+   both (D198).
 3. Tags: every country, capability and the two leading driver rows of each
    case. The tags make `/posts?country=VNM` and the other filters work.
 4. `pnpm bench validate`, then `pnpm typecheck`.
@@ -55,6 +58,7 @@ reference: a block that is not on that page is not part of the set (D197).
 
 | Block | Answers | Drawn by |
 | --- | --- | --- |
+| Lead number | What is the answer, in one figure? | `PostTop` and `LeadFigure`, in the page's one dark band |
 | Heading | Which side of the story am I reading? | `PostArticle` |
 | Text | What is the question, and what holds it together? | `PostArticle` |
 | Field strip | Where does this country sit among countries as rich as it? | `PeerField` (the shared `FlagField`) |
