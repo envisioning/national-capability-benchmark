@@ -1,8 +1,9 @@
 import Link from 'next/link'
 import { COUNTRY_NAMES, EN, indicatorName, unitName } from '@ncb/core'
 import type { Dimension, GapExplanation, PostFile } from '@ncb/core'
-import { CountryLabel, Eyebrow, Headline, PageTitle, Score, Confidence, Scroller, Table, Td, Th } from '@/components/ui'
+import { Card, CountryLabel, Eyebrow, Headline, PageTitle, Score, Confidence, Scroller, Table, Td, Th } from '@/components/ui'
 import { conditionValue } from '@/components/views/ConditionList'
+import { GapGlyph } from '@/components/posts/GapGlyph'
 import { GapWaterfall } from '@/components/posts/GapWaterfall'
 import { PeerField } from '@/components/posts/PeerField'
 import { dimensionLabel } from '@/lib/labels'
@@ -78,6 +79,40 @@ const filterLabel = (filter: PostFilter): string | null =>
         ? indicatorName(EN, filter.indicator)
         : null
 
+/**
+ * One post in the list: the question, the title, the lead number and the
+ * post's widest gaps drawn small, so a reader can tell posts apart before
+ * reading a word of them. The figure sits in the page's ink: the list has no
+ * dark band, and lime stays with the charts. See D199.
+ */
+export function PostCard({ post }: { post: PostFile }) {
+  return (
+    <Card tone="plain" padding="lg" className="flex h-full flex-col">
+      <Eyebrow>{post.question}</Eyebrow>
+      <h2 className="mt-2 text-2xl font-light leading-tight">
+        <Link href={postHref(post.slug)} className="hover:underline">
+          {post.title}
+        </Link>
+      </h2>
+      {post.lead ? (
+        <p className="mt-5 flex items-baseline gap-3">
+          <span className="text-4xl font-light leading-none tabular-nums">{post.lead.figure}</span>
+          <span className="text-xs leading-snug text-[var(--muted)]">{post.lead.caption}</span>
+        </p>
+      ) : (
+        <p className="mt-4 text-lg leading-relaxed">{post.dek}</p>
+      )}
+      <div className="mt-5">
+        <GapGlyph post={post} />
+      </div>
+      <div className="mt-auto pt-5">
+        <Tags post={post} />
+        <Dateline post={post} />
+      </div>
+    </Card>
+  )
+}
+
 export function PostList({ posts, filter }: { posts: PostFile[]; filter: PostFilter }) {
   const label = filterLabel(filter)
   const shown = filterPosts(posts, filter)
@@ -98,20 +133,10 @@ export function PostList({ posts, filter }: { posts: PostFile[]; filter: PostFil
       {shown.length === 0 ? (
         <p className="text-lg text-[var(--muted)]">No post carries this tag yet.</p>
       ) : (
-        <ul className="space-y-10">
+        <ul className="grid gap-6 md:grid-cols-2">
           {shown.map((post) => (
-            <li key={post.slug} className="border-t border-[var(--rule)] pt-6">
-              <Eyebrow>{post.question}</Eyebrow>
-              <h2 className="mt-2 text-2xl font-light leading-tight sm:text-3xl">
-                <Link href={postHref(post.slug)} className="hover:underline">
-                  {post.title}
-                </Link>
-              </h2>
-              <Dateline post={post} />
-              <p className="mt-4 max-w-3xl text-lg leading-relaxed">{post.dek}</p>
-              <div className="mt-4">
-                <Tags post={post} />
-              </div>
+            <li key={post.slug}>
+              <PostCard post={post} />
             </li>
           ))}
         </ul>

@@ -9,6 +9,12 @@ The entries before App 1.0.0 are retrospective, high-level summaries
 reconstructed from the repository history. They document explicit version bumps
 and may skip versions that were never committed.
 
+## App 1.49.0 — 2026-11-19
+
+- **The posts list shows each post as a card.** A card has the question, the
+  title, the lead number and the post's three widest gaps drawn small, each
+  as a bar from the peers' median to the country's score. Decision D199.
+
 ## App 1.48.0 — 2026-11-19
 
 - **Posts open on their answer.** The top of each post is a dark band with

@@ -63,6 +63,7 @@ reference: a block that is not on that page is not part of the set (D197).
 | Text | What is the question, and what holds it together? | `PostArticle` |
 | Field strip | Where does this country sit among countries as rich as it? | `PeerField` (the shared `FlagField`) |
 | Waterfall | Why is the gap there? | `GapWaterfall` |
+| Post card | Which post do I want to read? | `PostCard` and `GapGlyph`, in the `/posts` list only |
 | Case | What is the gap, and what does it come from? | `GapBlock`: why, field strip, waterfall, table behind a toggle |
 
 The writer adds no block by hand: a `gap` block draws its field strip and
