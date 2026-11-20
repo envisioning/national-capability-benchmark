@@ -9,7 +9,7 @@
  */
 
 export const MCP_SERVER_NAME = 'ncb'
-export const MCP_SERVER_VERSION = '1.0.0'
+export const MCP_SERVER_VERSION = '1.1.0'
 export const MCP_URL = 'https://ncb.envisioning.com/mcp'
 
 export const MCP_SERVER_CARD = {

@@ -9,6 +9,15 @@ The entries before App 1.0.0 are retrospective, high-level summaries
 reconstructed from the repository history. They document explicit version bumps
 and may skip versions that were never committed.
 
+## App 1.50.0 — 2026-11-20
+
+- **AI assistants can read the computed stories directly.** The public MCP
+  server at `https://ncb.envisioning.com/mcp` adds `get_stories`, returning the
+  three D192 stories (`shape_mirror`, `peer_contrast` and `peer_standing`) for
+  any country in Dataset 10.2.0. Every score travels with its confidence, band,
+  indicator count, coverage flag and known limits, and Brazil's stories include
+  their computed Portuguese text and links to `/brasil/achados`.
+
 ## App 1.49.0 — 2026-11-19
 
 - **The posts list shows each post as a card.** A card has the question, the

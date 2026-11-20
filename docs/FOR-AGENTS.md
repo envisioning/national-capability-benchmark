@@ -84,7 +84,7 @@ An agent that speaks MCP can skip the files. The read-only server at
 score with the fields section 3 requires, plus its confidence band and the
 known limits that apply to it. It has no tool that ranks countries or averages
 the dimensions. Tools: `list_dimensions`, `get_country`, `compare_countries`,
-`search_indicators`, `get_decision`, `get_limit`. Prompt: `read_country`.
+`get_stories`, `search_indicators`, `get_decision`, `get_limit`. Prompt: `read_country`.
 
 ---
 

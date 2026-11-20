@@ -6,16 +6,35 @@ import {
   DIMENSION_LABELS,
   DIMENSION_QUESTIONS,
   INDICATORS,
+  LEXICONS,
+  STORY_IDS,
   artefactsFor,
+  buildStories,
   confidenceBand,
   primaryMomentum,
+  storyText,
   z,
 } from '@ncb/core'
-import type { Dimension, IndicatorDef } from '@ncb/core'
-import { loadCountry, loadDoc, loadIndex } from '@/lib/data'
+import type {
+  CountryResult,
+  Dimension,
+  IndicatorDef,
+  ShapeMatch,
+  StandingRow,
+  Story,
+  StoryCell,
+} from '@ncb/core'
+import { loadCountry, loadDiagnostics, loadDoc, loadIndex } from '@/lib/data'
+import { countryLayer } from '@/lib/layers'
 import { defineTool, mcpEndpoint, type Prompt } from '@/lib/mcp-server'
 import { MCP_SERVER_NAME, MCP_SERVER_VERSION } from '@/lib/mcp-card'
-import { COMPARE_MAX, compareHref, countryProfileHref } from '@/lib/links'
+import {
+  COMPARE_MAX,
+  compareHref,
+  countryProfileHref,
+  storiesIndexHref,
+  storyHref,
+} from '@/lib/links'
 
 /**
  * The public MCP server: https://ncb.envisioning.com/mcp
@@ -199,6 +218,159 @@ const compareCountries = defineTool({
   },
 })
 
+/** One score cell inside a story, with every field the quoting contract requires. */
+function storyCellView(
+  iso3: string,
+  dimension: Dimension,
+  cell: StoryCell,
+  countriesByIso: Map<string, CountryResult>,
+) {
+  const dim = countriesByIso.get(iso3)?.dimensions[dimension]
+  const band = confidenceBand(cell.confidence)
+  const limits = artefactsFor(dimension, iso3)
+  return {
+    score: cell.score,
+    confidence: cell.confidence,
+    confidenceBand: band.label,
+    confidenceMeaning: band.meaning,
+    thin: cell.thin,
+    observedIndicators: dim?.observedIndicators ?? null,
+    belowCoverageFloor: dim?.belowCoverageFloor ?? false,
+    limits: [...limits.specific, ...limits.structural].map((id) => `${SITE}/limits#${id}`),
+  }
+}
+
+function shapeMatchView(
+  subjectIso: string,
+  match: ShapeMatch,
+  countriesByIso: Map<string, CountryResult>,
+) {
+  return {
+    iso3: match.iso3,
+    country: match.country,
+    distance: match.distance,
+    gdpPerCapita: match.gdpPerCapita,
+    incomeRatio: match.incomeRatio,
+    url: `${SITE}${countryProfileHref(match.iso3)}`,
+    compareUrl: `${SITE}${compareHref([subjectIso, match.iso3])}`,
+    rows: match.rows.map((row) => ({
+      dimension: row.dimension,
+      label: DIMENSION_LABELS[row.dimension],
+      subject: storyCellView(subjectIso, row.dimension, row.subject, countriesByIso),
+      other: storyCellView(match.iso3, row.dimension, row.other, countriesByIso),
+    })),
+  }
+}
+
+function standingRowView(
+  subjectIso: string,
+  row: StandingRow,
+  countriesByIso: Map<string, CountryResult>,
+) {
+  return {
+    dimension: row.dimension,
+    label: DIMENSION_LABELS[row.dimension],
+    subject: storyCellView(subjectIso, row.dimension, row.subject, countriesByIso),
+    peerMedian: row.peerMedian,
+    peersScored: row.peersScored,
+    gap: row.gap,
+  }
+}
+
+function storyView(story: Story, countriesByIso: Map<string, CountryResult>) {
+  const layer = countryLayer(story.iso3)
+  const lex = layer ? LEXICONS[layer.lang] : null
+  const slug = lex?.stories?.slugs[story.id]
+  const path = slug ? storyHref(story.iso3, slug) : null
+  const rendered = lex ? storyText(lex, story) : null
+  const common = {
+    id: story.id,
+    url: path ? `${SITE}${path}` : null,
+    text: layer && rendered ? { lang: layer.lang, ...rendered } : null,
+  }
+
+  switch (story.id) {
+    case 'shape_mirror':
+      return {
+        ...common,
+        candidates: story.candidates,
+        subjectThin: story.subjectThin,
+        matches: story.matches.map((match) => shapeMatchView(story.iso3, match, countriesByIso)),
+      }
+    case 'peer_contrast':
+      return {
+        ...common,
+        peerCount: story.peerCount,
+        subjectThin: story.subjectThin,
+        peers: story.peers.map((match) => shapeMatchView(story.iso3, match, countriesByIso)),
+      }
+    case 'peer_standing':
+      return {
+        ...common,
+        peerCount: story.peerCount,
+        peers: story.peers.map((code) => ({ iso3: code, country: COUNTRY_NAMES[code] ?? code })),
+        above: story.above ? standingRowView(story.iso3, story.above, countriesByIso) : null,
+        below: story.below ? standingRowView(story.iso3, story.below, countriesByIso) : null,
+        thinBelow: story.thinBelow.map((row) => standingRowView(story.iso3, row, countriesByIso)),
+        rows: story.rows.map((row) => standingRowView(story.iso3, row, countriesByIso)),
+      }
+  }
+}
+
+const getStories = defineTool({
+  name: 'get_stories',
+  title: 'Read computed stories for one country',
+  description:
+    'Computed descriptive stories for any country in the frame (D192): shape_mirror (nearest capability profiles across the frame), peer_contrast (farthest shape among the 10 nearest income peers) and peer_standing (each dimension against the income-peer median, keeping thin-evidence dimensions out of headlines). Every score carries its confidence, band, indicator count, coverage flag and known limits.',
+  input: z.object({
+    country: z.string().min(2).max(80).describe('ISO3 code (BRA) or English name (Brazil)'),
+    story: z
+      .enum(STORY_IDS)
+      .optional()
+      .describe('One story id (shape_mirror, peer_contrast, peer_standing); omit for all available stories'),
+  }),
+  run: async ({ country, story }) => {
+    const iso3 = resolveCountry(country)
+    if (!iso3) throw new Error(unknownCountry(country))
+    const [index, diagnostics] = await Promise.all([loadIndex(), loadDiagnostics()])
+    if (!index || !diagnostics) throw new Error('Published benchmark data is not available.')
+    const row = index.countries.find((c) => c.iso3 === iso3)
+    if (!row) throw new Error(`${COUNTRY_NAMES[iso3]} is not in the published frame.`)
+
+    const version = index.version ?? DATASET_VERSION
+    const set = buildStories({
+      iso3,
+      version,
+      generatedAt: index.generatedAt,
+      countries: index.countries,
+      income: diagnostics.income ?? [],
+    })
+    const countriesByIso = new Map(index.countries.map((c) => [c.iso3, c]))
+    const selected = story ? set.stories.filter((item) => item.id === story) : set.stories
+    if (story && selected.length === 0) {
+      const available = set.stories.map((item) => item.id).join(', ') || 'none'
+      throw new Error(
+        `Story "${story}" is not available for ${row.country} in dataset ${version}. Available stories: ${available}.`,
+      )
+    }
+
+    const views = selected.map((item) => storyView(item, countriesByIso))
+    const fallbackUrl = `${SITE}${storiesIndexHref(iso3) ?? countryProfileHref(iso3)}`
+    const url = story && views[0]?.url ? views[0].url : fallbackUrl
+    const title = story ? `${row.country}: ${story}` : `Stories: ${row.country}`
+    return {
+      iso3,
+      country: row.country,
+      datasetVersion: version,
+      generatedAt: set.generatedAt,
+      stories: views,
+      contract: CONTRACT,
+      url,
+      citation: cite(title, url, version),
+    }
+  },
+})
+
 type IndicatorStatus = 'scored' | 'gap' | 'rejected' | 'condition'
 
 const statusOf = (i: IndicatorDef): IndicatorStatus =>
@@ -325,11 +497,11 @@ const handlers = mcpEndpoint({
   version: MCP_SERVER_VERSION,
   instructions: [
     'The National Capability Benchmark (NCB) measures whether a country can anticipate change, coordinate around it and build what it decides to build: 135 countries, nine dimensions scored 0 to 100 from public data inside this frame, each with a separate confidence number. A prototype by Envisioning.',
-    'Start with list_dimensions, then get_country or compare_countries. search_indicators explains what a dimension rests on; get_decision explains why; get_limit says where a number is wrong about the world.',
+    'Start with list_dimensions, then get_country, compare_countries or get_stories. search_indicators explains what a dimension rests on; get_decision explains why; get_limit says where a number is wrong about the world.',
     CONTRACT,
     'Cite the ncb.envisioning.com link and the dataset version of everything you use; each result gives a citation line. The full contract: https://raw.githubusercontent.com/envisioning/national-capability-benchmark/main/docs/FOR-AGENTS.md',
   ].join(' '),
-  tools: [listDimensions, getCountry, compareCountries, searchIndicators, getDecision, getLimit],
+  tools: [listDimensions, getCountry, compareCountries, getStories, searchIndicators, getDecision, getLimit],
   prompts: [readCountry],
   ratePerMinute: 60,
 })
