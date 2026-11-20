@@ -1,0 +1,20 @@
+{
+  "itemId": "fit.public_money.0016",
+  "itemVersion": 1,
+  "sources": [
+    {
+      "n": 1,
+      "url": "https://www.tesourotransparente.gov.br/ckan/dataset/0998f610-bc25-4ce3-b32c-a873447500c2/resource/0402cb77-5e4c-4414-966f-0e87d802a29a/download/estoque-da-divida-publica-federal.xlsx",
+      "method": "hand",
+      "retrieved": "2026-10-31",
+      "finalUrl": null,
+      "status": null,
+      "contentType": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      "rawSha256": "5e68e2e061fb936408370e27473fd0ba03cae0f887f1189fe6fd6d94b11281d0",
+      "textSha256": "06a95a6c65e9958ec4ff81100780669e5b1132107d6cb93d67aa8cbab7cc0cec",
+      "chars": 6168,
+      "extractor": "hand: openpyxl sheet to text",
+      "note": "Sheet \"2.1\" (Anexo 2.1) of the XLSX converted to text by openpyxl, keeping the label column and December 2024 to September 2026; numbers in Brazilian format as the sheet shows them. rawSha256 is the XLSX."
+    }
+  ]
+}

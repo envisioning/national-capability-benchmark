@@ -1,0 +1,32 @@
+{
+  "itemId": "fit.legislators.0014",
+  "itemVersion": 1,
+  "sources": [
+    {
+      "n": 1,
+      "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2233802",
+      "method": "fetched",
+      "retrieved": "2026-10-31",
+      "finalUrl": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2233802",
+      "status": 200,
+      "contentType": "application/json",
+      "rawSha256": "5957d71bd1e8108c7bd0ac53450061690c9715454e3dd225bcc6f4861f068bf3",
+      "textSha256": "f052840f1e0bbd0151da1d9d8883e6f495423901726e5e26e399a7e91bac226a",
+      "chars": 1065,
+      "extractor": "fitness-extract-2/json"
+    },
+    {
+      "n": 2,
+      "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2233802/autores",
+      "method": "fetched",
+      "retrieved": "2026-10-31",
+      "finalUrl": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2233802/autores",
+      "status": 200,
+      "contentType": "application/json",
+      "rawSha256": "287c91b8d7a59f1a933d88c118227e40516c179ba06b9a111d77ed27da4c873e",
+      "textSha256": "57c14f251c4591258fb314afccfaa9c4cfc60bd9aac8c85fb239f7095b89a5f5",
+      "chars": 210,
+      "extractor": "fitness-extract-1/json"
+    }
+  ]
+}
