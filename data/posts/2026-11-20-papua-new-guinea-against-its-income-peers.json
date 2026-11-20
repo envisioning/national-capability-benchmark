@@ -1,0 +1,269 @@
+{
+  "slug": "papua-new-guinea-against-its-income-peers",
+  "date": "2026-11-20",
+  "kind": "country",
+  "subject": "PNG",
+  "question": "Is Papua New Guinea more capable than its income suggests?",
+  "title": "Papua New Guinea learns far beyond its income",
+  "dek": "On Learning, Papua New Guinea scores 41 points above the countries nearest to it in income, the widest gap in its profile. Most of it comes from how many firms train their staff. Anticipation is the one capability where it trails.",
+  "lead": {
+    "figure": "+41.3",
+    "caption": "points above the median of its 10 income peers on Learning, the widest gap Papua New Guinea has"
+  },
+  "datasetVersion": "10.2.0",
+  "dataGeneratedAt": "2026-11-05T11:52:10.760Z",
+  "figures": {
+    "capabilitiesUsable": 4,
+    "gapFloor": 10
+  },
+  "tags": {
+    "countries": [
+      "PNG"
+    ],
+    "dimensions": [
+      "learning",
+      "anticipation"
+    ],
+    "indicators": [
+      "firm_training_incidence",
+      "research_citation_impact",
+      "statistical_performance",
+      "sci_articles_per_million"
+    ]
+  },
+  "blocks": [
+    {
+      "type": "text",
+      "text": "This post compares Papua New Guinea with the 10 countries nearest to it in income per person: Senegal, Guinea, Timor-Leste, Cameroon, Tajikistan, Myanmar, Tanzania, Nepal, Zambia and Zimbabwe. Only four of its nine capabilities have usable evidence. Agency, Coordination, Trust, Experimentation and Shared purpose do not, so they are left out."
+    },
+    {
+      "type": "heading",
+      "text": "Where Papua New Guinea is ahead of its peers"
+    },
+    {
+      "type": "gap",
+      "gap": {
+        "iso3": "PNG",
+        "country": "Papua New Guinea",
+        "dimension": "learning",
+        "score": 66.2,
+        "confidence": 0.554,
+        "peerMedian": 24.9,
+        "peersScored": 10,
+        "gap": 41.3,
+        "peers": [
+          "SEN",
+          "GIN",
+          "TLS",
+          "CMR",
+          "TJK",
+          "MMR",
+          "TZA",
+          "NPL",
+          "ZMB",
+          "ZWE"
+        ],
+        "peerScores": [
+          {
+            "iso3": "SEN",
+            "score": 24.9,
+            "confidence": 0.554
+          },
+          {
+            "iso3": "GIN",
+            "score": 18.9,
+            "confidence": 0.554
+          },
+          {
+            "iso3": "TLS",
+            "score": 23.5,
+            "confidence": 0.497
+          },
+          {
+            "iso3": "CMR",
+            "score": 24.9,
+            "confidence": 0.554
+          },
+          {
+            "iso3": "TJK",
+            "score": 22.2,
+            "confidence": 0.554
+          },
+          {
+            "iso3": "MMR",
+            "score": 24.5,
+            "confidence": 0.401
+          },
+          {
+            "iso3": "TZA",
+            "score": 34.1,
+            "confidence": 0.535
+          },
+          {
+            "iso3": "NPL",
+            "score": 26.8,
+            "confidence": 0.535
+          },
+          {
+            "iso3": "ZMB",
+            "score": 34.6,
+            "confidence": 0.554
+          },
+          {
+            "iso3": "ZWE",
+            "score": 38.9,
+            "confidence": 0.554
+          }
+        ],
+        "drivers": [
+          {
+            "indicatorId": "firm_training_incidence",
+            "unit": "% of firms",
+            "value": 75.094,
+            "year": 2024,
+            "position": 94.7,
+            "peerPosition": 23,
+            "contribution": 23.9
+          },
+          {
+            "indicatorId": "research_citation_impact",
+            "unit": "ratio to world average",
+            "value": 1.678,
+            "year": 2021,
+            "position": 80.5,
+            "peerPosition": 32.9,
+            "contribution": 15.9
+          },
+          {
+            "indicatorId": "human_capital_index",
+            "unit": "index 0-1",
+            "value": 0.429,
+            "year": 2020,
+            "position": 23.4,
+            "peerPosition": 24.8,
+            "contribution": -0.5
+          }
+        ],
+        "rowsCounted": 3,
+        "countryArtefacts": [],
+        "dimensionArtefacts": [
+          "A7"
+        ]
+      },
+      "why": "In Papua New Guinea, 75% of firms offer formal training, and that row adds 24 of the 41 points. Its research is also cited more than the world average, at a ratio of 1.7, which adds another 16. The Human Capital Index, at 0.43, sits close to the peer median."
+    },
+    {
+      "type": "heading",
+      "text": "Where it is behind"
+    },
+    {
+      "type": "gap",
+      "gap": {
+        "iso3": "PNG",
+        "country": "Papua New Guinea",
+        "dimension": "anticipation",
+        "score": 4.5,
+        "confidence": 0.455,
+        "peerMedian": 23.3,
+        "peersScored": 10,
+        "gap": -18.8,
+        "peers": [
+          "SEN",
+          "GIN",
+          "TLS",
+          "CMR",
+          "TJK",
+          "MMR",
+          "TZA",
+          "NPL",
+          "ZMB",
+          "ZWE"
+        ],
+        "peerScores": [
+          {
+            "iso3": "SEN",
+            "score": 39,
+            "confidence": 0.455
+          },
+          {
+            "iso3": "GIN",
+            "score": 10.1,
+            "confidence": 0.455
+          },
+          {
+            "iso3": "TLS",
+            "score": 19.9,
+            "confidence": 0.455
+          },
+          {
+            "iso3": "CMR",
+            "score": 25.7,
+            "confidence": 0.455
+          },
+          {
+            "iso3": "TJK",
+            "score": 22.9,
+            "confidence": 0.455
+          },
+          {
+            "iso3": "MMR",
+            "score": 23.3,
+            "confidence": 0.455
+          },
+          {
+            "iso3": "TZA",
+            "score": 27,
+            "confidence": 0.455
+          },
+          {
+            "iso3": "NPL",
+            "score": 20.5,
+            "confidence": 0.455
+          },
+          {
+            "iso3": "ZMB",
+            "score": 23.3,
+            "confidence": 0.455
+          },
+          {
+            "iso3": "ZWE",
+            "score": 25.9,
+            "confidence": 0.455
+          }
+        ],
+        "drivers": [
+          {
+            "indicatorId": "statistical_performance",
+            "unit": "index 0-100",
+            "value": 43.628,
+            "year": 2024,
+            "position": 8.8,
+            "peerPosition": 46.2,
+            "contribution": -18.7
+          },
+          {
+            "indicatorId": "sci_articles_per_million",
+            "unit": "articles per million people",
+            "value": 6.714,
+            "year": 2023,
+            "position": 0.2,
+            "peerPosition": 0.7,
+            "contribution": -0.2
+          }
+        ],
+        "rowsCounted": 2,
+        "countryArtefacts": [],
+        "dimensionArtefacts": []
+      },
+      "why": "One row carries this gap. Papua New Guinea's statistical system scores 44 on the World Bank statistical performance index, and that row takes 19 points off the score. Scientific articles per person, at 6.7 per million, sit close to the peer median."
+    },
+    {
+      "type": "heading",
+      "text": "The rest of the profile"
+    },
+    {
+      "type": "text",
+      "text": "Adaptability and Building sit within 10 points of the peers. The lead on Learning rests on two rows: how many firms train their staff and how often the country's research is cited."
+    }
+  ]
+}
