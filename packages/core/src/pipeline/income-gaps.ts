@@ -117,7 +117,7 @@ export function widestGaps(
  * is the publisher's value (spending as a share of the budget), so the post
  * prints the distance the unit describes.
  */
-function valueAsUnit(id: string, raw: number | null): number | null {
+export function valueAsUnit(id: string, raw: number | null): number | null {
   if (raw === null) return null
   return INDICATORS_BY_ID[id]?.transform === 'distance_from_100' ? round(Math.abs(raw - 100), 1) : raw
 }

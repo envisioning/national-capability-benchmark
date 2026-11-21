@@ -11041,3 +11041,48 @@ countries and a country post's rows compare capabilities.
 
 **Overturned by.** Readers who take a card's bars for the whole post, or a
 list long enough that the cards need a denser form.
+
+## D200 — A country post sets its subject beside a twin, and every post shows its rows' echoes
+
+*Recorded 2026-11-21. Reach roadmap. Builds on D195, D196, D197 and D130.*
+
+**Why.** The posts read as a template: one country against the median of its
+peers, then each row's share of the gap, one post after another with nothing
+linking them. A median is an abstraction a reader cannot picture, and a row
+that explains gaps in five countries looked like five separate facts. The
+owner asked for what makes the posts interesting.
+
+**Decision.**
+
+1. **A twin.** `pickTwin` takes the subject's widest usable case and picks
+   the income peer, with usable evidence, whose score is furthest from the
+   subject's; ties go to the peer nearer in income. `buildPair` reads both
+   countries' capability maps and stores both scores, both incomes and every
+   row both have, widest difference first. `bench post country` prints it as
+   `pair`, and the writer copies it into a `pair` block with one `why`. The
+   facts command picks the twin, never the writer.
+2. **The twin is drawn as one row per part of the score.** `PairRows` puts
+   both countries on the 0 to 100 scale, the subject filled and the twin
+   open, the waterfall's marks. No lime.
+3. **The number rule covers the pair.** Every numeric field, the score
+   difference and each row's difference are stored numbers.
+4. **Echoes.** `rowEchoes` lists the rows that carry a case here and a
+   different case in another post. A row carries a case when it is one of the
+   case's two largest drivers and moves the gap its way by at least
+   `ECHO_FLOOR`, 5 points. A case is one country on one capability: one held
+   by two posts counts once, and one this post holds never counts. The
+   section reads published posts only. It is the page's navigation, not part
+   of the post, so it grows as posts are added while the post stays as
+   published.
+5. **No backfill.** The posts already published keep no twin. The next
+   country post is the first to hold one.
+
+**Cost.** A twin chosen by the widest score difference can be a country with
+its own story (Ukraine is Vietnam's twin on Building), which the post does
+not explain. The echoes favour capabilities with few rows: Anticipation has
+two, so its statistics row echoes in almost every post.
+
+**Overturned by.** Readers who take the twin for a model the subject should
+copy, or echoes that turn out to be the same artefact of the data repeating
+rather than a pattern.
+

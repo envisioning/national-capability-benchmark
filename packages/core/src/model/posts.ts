@@ -38,6 +38,37 @@ export const GapExplanationSchema = z.object({
   dimensionArtefacts: z.array(z.string()),
 })
 
+/** One country in a pair: its score on the capability and its income. */
+export const PairSideSchema = z.object({
+  iso3: z.string(),
+  score: z.number(),
+  confidence: z.number(),
+  /** GDP per head in current US dollars, and its year, or null where none is published. */
+  gdpPerCapita: z.number().nullable(),
+  incomeYear: z.number().nullable(),
+})
+
+/** One row of the capability, read for both countries of a pair. */
+export const PairRowSchema = z.object({
+  indicatorId: z.string(),
+  unit: z.string(),
+  a: z.object({ value: z.number().nullable(), year: z.number().nullable(), position: z.number() }),
+  b: z.object({ value: z.number().nullable(), year: z.number().nullable(), position: z.number() }),
+})
+
+/**
+ * Two countries with about the same income and far apart on one capability:
+ * the post's subject (`a`) and its twin (`b`), the income peer whose score is
+ * furthest from the subject's. Rows are the ones both countries have, widest
+ * difference first. See D200.
+ */
+export const PairSchema = z.object({
+  dimension: DimensionEnum,
+  a: PairSideSchema,
+  b: PairSideSchema,
+  rows: z.array(PairRowSchema),
+})
+
 /** The kinds of post. A new kind needs a `bench post` generator and a decision entry. */
 export const POST_KINDS = ['income-gaps', 'country', 'capability'] as const
 export const PostKindEnum = z.enum(POST_KINDS)
@@ -48,6 +79,8 @@ export const PostBlock = z.discriminatedUnion('type', [
   z.object({ type: z.literal('heading'), text: z.string() }),
   /** One gap with its drivers, and the sentence that says why. */
   z.object({ type: z.literal('gap'), gap: GapExplanationSchema, why: z.string() }),
+  /** The subject beside its twin on one capability, and the sentence that says what separates them (D200). */
+  z.object({ type: z.literal('pair'), pair: PairSchema, why: z.string() }),
 ])
 
 export const PostFile = z.object({
@@ -81,6 +114,9 @@ export const PostFile = z.object({
 })
 
 export type GapDriver = z.infer<typeof GapDriverSchema>
+export type PairSide = z.infer<typeof PairSideSchema>
+export type PairRow = z.infer<typeof PairRowSchema>
+export type Pair = z.infer<typeof PairSchema>
 export type GapExplanation = z.infer<typeof GapExplanationSchema>
 export type PostKind = z.infer<typeof PostKindEnum>
 export type PostBlock = z.infer<typeof PostBlock>

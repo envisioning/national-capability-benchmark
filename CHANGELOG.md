@@ -9,6 +9,17 @@ The entries before App 1.0.0 are retrospective, high-level summaries
 reconstructed from the repository history. They document explicit version bumps
 and may skip versions that were never committed.
 
+## App 1.51.0 — 2026-11-21
+
+- **A twin in every country post.** From the next country post on, each one
+  sets its subject beside the country with about the same income that landed
+  furthest away on the widest gap, row by row. Botswana and Vietnam earn
+  about the same; on Adaptability one scores 14 and the other 87.
+- **The same rows in other posts.** The foot of each post lists the rows that
+  carry a gap there and carry one for other countries in other posts. The
+  statistics row, for one, pulls Anticipation down for six countries across
+  the posts so far. Decision D200.
+
 ## App 1.50.0 — 2026-11-20
 
 - **AI assistants can read the computed stories directly.** The public MCP
