@@ -1,11 +1,12 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { COUNTRY_NAMES } from '@ncb/core'
+import { COUNTRY_NAMES, rowEchoes } from '@ncb/core'
 import type { GapExplanation } from '@ncb/core'
 import { Card, Eyebrow, Headline, PageTitle } from '@/components/ui'
 import { GapWaterfall } from '@/components/posts/GapWaterfall'
 import { PeerField } from '@/components/posts/PeerField'
-import { GapBlock, LeadFigure, PostCard } from '@/components/posts/PostViews'
+import { GapBlock, LeadFigure, PairBlock, PostCard } from '@/components/posts/PostViews'
+import { RowEchoes } from '@/components/posts/RowEchoes'
 import { loadPosts } from '@/lib/data'
 import { decisionHref, postHref } from '@/lib/links'
 
@@ -56,6 +57,18 @@ const SPECS = {
     reads: "The peers' median score, each row's share of the gap, and the country's score.",
     rule: "Under every case, after the field strip. One bar per row, in the order of the gap. What the rows do not account for is its own bar.",
   },
+  pair: {
+    name: "Twin",
+    answers: "If not income, then what?",
+    reads: "The subject and its twin: the income peer furthest from it on the widest case, with both scores, both incomes and every row they share.",
+    rule: "Once in a country post, after the cases. The facts command picks the twin, never the writer. Filled is the subject, open is the twin, rows widest apart first.",
+  },
+  echoes: {
+    name: "Same rows elsewhere",
+    answers: "Is this one country's story, or a pattern?",
+    reads: "Every published post: the rows that are one of a case's two largest drivers here and in another post.",
+    rule: "At the foot of every post, drawn by the page, not written. It grows as posts are added, while the post itself stays as published.",
+  },
   card: {
     name: "Post card",
     answers: "Which post do I want to read?",
@@ -99,6 +112,8 @@ export default async function PostBlocksPage() {
   const posts = await loadPosts()
   const source = posts.find((p) => p.blocks.some((b) => b.type === 'gap' && b.gap.peerScores))
   const leadSource = posts.find((p) => p.lead)
+  const pairBlock = posts.flatMap((p) => p.blocks).find((b) => b.type === 'pair')
+  const echoSource = posts.find((p) => rowEchoes(p, posts).length > 0)
   const block = source?.blocks.find(
     (b): b is { type: 'gap'; gap: GapExplanation; why: string } => b.type === 'gap' && Boolean(b.gap.peerScores),
   )
@@ -133,6 +148,10 @@ export default async function PostBlocksPage() {
         <Link href={decisionHref('D199')} className="underline underline-offset-4">
           D199
         </Link>
+        ,{' '}
+        <Link href={decisionHref('D200')} className="underline underline-offset-4">
+          D200
+        </Link>
         .
       </Headline>
       {!source || !block ? (
@@ -165,6 +184,18 @@ export default async function PostBlocksPage() {
           <Specimen spec={SPECS.gap}>
             <GapBlock gap={block.gap} why={block.why} />
           </Specimen>
+          <Specimen spec={SPECS.pair}>
+            {pairBlock && pairBlock.type === 'pair' ? (
+              <PairBlock pair={pairBlock.pair} why={pairBlock.why} />
+            ) : (
+              <p className="text-lg text-[var(--muted)]">No published post holds a twin yet. The next country post will.</p>
+            )}
+          </Specimen>
+          {echoSource ? (
+            <Specimen spec={SPECS.echoes}>
+              <RowEchoes post={echoSource} posts={posts} />
+            </Specimen>
+          ) : null}
           <Specimen spec={SPECS.card}>
             <div className="max-w-xl">
               <PostCard post={source} />

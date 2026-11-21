@@ -1,10 +1,12 @@
 import Link from 'next/link'
 import { COUNTRY_NAMES, EN, indicatorName, unitName } from '@ncb/core'
-import type { Dimension, GapExplanation, PostFile } from '@ncb/core'
+import type { Dimension, GapExplanation, Pair, PostFile } from '@ncb/core'
 import { Card, CountryLabel, Eyebrow, Headline, PageTitle, Score, Confidence, Scroller, Table, Td, Th } from '@/components/ui'
 import { conditionValue } from '@/components/views/ConditionList'
 import { GapGlyph } from '@/components/posts/GapGlyph'
 import { GapWaterfall } from '@/components/posts/GapWaterfall'
+import { PairRows } from '@/components/posts/PairRows'
+import { RowEchoes } from '@/components/posts/RowEchoes'
 import { PeerField } from '@/components/posts/PeerField'
 import { dimensionLabel } from '@/lib/labels'
 import { artefactHref, countryMapDimensionHref, decisionHref, postBlocksHref, postHref, postsTagHref } from '@/lib/links'
@@ -147,6 +149,22 @@ export function PostList({ posts, filter }: { posts: PostFile[]; filter: PostFil
 
 const signed = (n: number): string => `${n > 0 ? '+' : ''}${n.toFixed(1)}`
 
+/** The twin: the subject beside the income peer furthest from it on one capability, and why (D200). */
+export function PairBlock({ pair, why }: { pair: Pair; why: string }) {
+  return (
+    <section className="mb-14 border-t border-[var(--rule)] pt-6">
+      <h3 className="text-xl font-medium tracking-tight">
+        {countryName(pair.a.iso3)} and {countryName(pair.b.iso3)}: about the same income, far apart on{' '}
+        {dimensionLabel(pair.dimension).toLowerCase()}
+      </h3>
+      <p className="mt-4 max-w-3xl text-lg leading-relaxed">{why}</p>
+      <div className="mt-8">
+        <PairRows pair={pair} />
+      </div>
+    </section>
+  )
+}
+
 export function GapBlock({ gap, why, legend = false }: { gap: GapExplanation; why: string; legend?: boolean }) {
   const limits = [...gap.countryArtefacts, ...gap.dimensionArtefacts]
   return (
@@ -266,7 +284,7 @@ export function PostTop({ post }: { post: PostFile }) {
   )
 }
 
-export function PostArticle({ post }: { post: PostFile }) {
+export function PostArticle({ post, posts = [] }: { post: PostFile; posts?: PostFile[] }) {
   return (
     <article>
       <PostTop post={post} />
@@ -287,8 +305,11 @@ export function PostArticle({ post }: { post: PostFile }) {
             )
           case 'gap':
             return <GapBlock key={i} gap={block.gap} why={block.why} legend={firstGap} />
+          case 'pair':
+            return <PairBlock key={i} pair={block.pair} why={block.why} />
         }
       })}
+      <RowEchoes post={post} posts={posts} />
       <section className="mt-16 border-t border-[var(--rule)] pt-6">
         <h2 className="text-xl font-medium tracking-tight">How the gaps are read</h2>
         <p className="mt-3 max-w-3xl text-lg leading-relaxed">

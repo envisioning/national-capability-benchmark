@@ -6,7 +6,8 @@ import type { PostFile } from '../model/index.js'
  * must be a number the post stores, at the precision the prose prints it.
  * Stored numbers are every numeric field in the blocks, the post's named
  * figures, the sum of each gap's two largest drivers (prose says "these two
- * rows carry 36 of the 40 points"), the count of each list, the numbers inside
+ * rows carry 36 of the 40 points"), each pair's score difference and row
+ * differences, the count of each list, the numbers inside
  * unit names, and the ends of the 0 to 100 scale. See D195.
  */
 
@@ -25,6 +26,13 @@ function numericLeaves(value: unknown, out: number[]): void {
 export function storedNumbers(post: PostFile): number[] {
   const out: number[] = [0, 100, ...Object.values(post.figures)]
   for (const block of post.blocks) {
+    if (block.type === 'pair') {
+      const { a, b, rows } = block.pair
+      numericLeaves(block.pair, out)
+      out.push(Math.abs(a.score - b.score))
+      for (const r of rows) out.push(Math.abs(r.a.position - r.b.position))
+      continue
+    }
     if (block.type !== 'gap') continue
     numericLeaves(block.gap, out)
     const drivers = block.gap.drivers
@@ -46,7 +54,7 @@ export function unbackedNumbers(post: PostFile): string[] {
     ['title', post.title],
     ...(post.lead ? ([['lead.figure', post.lead.figure], ['lead.caption', post.lead.caption]] as Array<[string, string]>) : []),
     ...post.blocks.flatMap((b, i): Array<[string, string]> =>
-      b.type === 'gap' ? [[`blocks.${i}.why`, b.why]] : [[`blocks.${i}`, b.text]],
+      b.type === 'gap' || b.type === 'pair' ? [[`blocks.${i}.why`, b.why]] : [[`blocks.${i}`, b.text]],
     ),
   ]
   const problems: string[] = []

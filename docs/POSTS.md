@@ -44,6 +44,12 @@ will not read a table. Every number in a post comes from the data. See D195.
    `lead`: the one figure the dek turns on, as printed (`+53.8`, `0.87`,
    `54.5%`), and a caption that says what it counts. The number rule checks
    both (D198).
+   A country post's facts carry a `pair`: the subject and its twin, the
+   income peer furthest from it on the widest case. Copy it unchanged into a
+   `pair` block after the cases and write one `why`: the two incomes, the two
+   scores and the two or three rows they sit furthest apart on, with both
+   values. Say what separates them; never say what the subject should do
+   (D200).
 3. Tags: every country, capability and the two leading driver rows of each
    case. The tags make `/posts?country=VNM` and the other filters work.
 4. `pnpm bench validate`, then `pnpm typecheck`.
@@ -63,6 +69,8 @@ reference: a block that is not on that page is not part of the set (D197).
 | Text | What is the question, and what holds it together? | `PostArticle` |
 | Field strip | Where does this country sit among countries as rich as it? | `PeerField` (the shared `FlagField`) |
 | Waterfall | Why is the gap there? | `GapWaterfall` |
+| Twin | If not income, then what? | `PairBlock` and `PairRows`, once in a country post |
+| Same rows elsewhere | Is this one country's story, or a pattern? | `RowEchoes`, at the foot of every post, drawn from published posts |
 | Post card | Which post do I want to read? | `PostCard` and `GapGlyph`, in the `/posts` list only |
 | Case | What is the gap, and what does it come from? | `GapBlock`: why, field strip, waterfall, table behind a toggle |
 

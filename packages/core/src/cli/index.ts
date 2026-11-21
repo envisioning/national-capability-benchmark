@@ -15,6 +15,7 @@ import type { CountryResult, DelphiRunFile, Dimension, IndicatorAcrossCountries,
 import { buildCapabilityMap, mapIndicatorIds } from '../pipeline/capability-map.js'
 import { explainGap, incomeGaps, widestGaps } from '../pipeline/income-gaps.js'
 import { GAP_FLOOR, capabilityCases, countryCases, nextPost } from '../pipeline/post-plan.js'
+import { buildPair, pickTwin } from '../pipeline/post-pair.js'
 import { readWealthTracking } from '../pipeline/wealth-reading.js'
 import { round } from '../pipeline/stats.js'
 import type { GapCell } from '../pipeline/income-gaps.js'
@@ -275,10 +276,10 @@ async function postFacts(args: Args): Promise<void> {
     kind = next.kind
     subject = next.subject
   }
-  const explain = async (cell: GapCell) => {
-    const subjectFile = (await read<{ country: CountryResult }>(resolve(COUNTRY_OUT_DIR, `${cell.iso3}.json`))).country
+  const mapFor = async (iso3: string, dimension: Dimension) => {
+    const subjectFile = (await read<{ country: CountryResult }>(resolve(COUNTRY_OUT_DIR, `${iso3}.json`))).country
     const files = await Promise.all(
-      mapIndicatorIds(cell.dimension).map(async (id) => {
+      mapIndicatorIds(dimension).map(async (id) => {
         try {
           return await read<IndicatorAcrossCountries>(resolve(INDICATOR_OUT_DIR, `${id}.json`))
         } catch {
@@ -286,15 +287,22 @@ async function postFacts(args: Args): Promise<void> {
         }
       }),
     )
-    const map = buildCapabilityMap({
-      iso3: cell.iso3,
-      dimension: cell.dimension,
+    return buildCapabilityMap({
+      iso3,
+      dimension,
       countries: index.countries,
       subject: subjectFile,
       indicatorFiles: files.filter((f): f is IndicatorAcrossCountries => f !== null),
       diagnostics: diag,
     })
-    return explainGap(cell, map)
+  }
+  const explain = async (cell: GapCell) => explainGap(cell, await mapFor(cell.iso3, cell.dimension))
+  /* The twin on the widest case, either side (D200). */
+  const twinPair = async (cases: GapCell[]) => {
+    const widest = [...cases].sort((a, b) => Math.abs(b.gap) - Math.abs(a.gap))[0]
+    const twin = widest ? pickTwin(widest) : null
+    if (!widest || !twin) return null
+    return buildPair(await mapFor(widest.iso3, widest.dimension), await mapFor(twin.iso3, widest.dimension), diag.income ?? [])
   }
   const base = { kind, subject: subject ?? null, date: date ?? null, datasetVersion: index.version, dataGeneratedAt: index.generatedAt }
   if (kind === 'income-gaps') {
@@ -334,6 +342,7 @@ async function postFacts(args: Args): Promise<void> {
           level: cases.level,
           above: await Promise.all(cases.above.map(explain)),
           below: await Promise.all(cases.below.map(explain)),
+          pair: await twinPair([...cases.above, ...cases.below]),
         },
         null,
         2,

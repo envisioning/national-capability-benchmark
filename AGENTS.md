@@ -310,8 +310,10 @@ port 3888. That entry starts Next directly and does not use the proxy.
   `nextPost` in `pipeline/post-plan.ts` (`bench post next`), never the
   agent's pick. A post is drawn from the blocks on `/posts/blocks` and nowhere else: a new
   block needs a specimen there and a decision. Every post sets `lead`, the
-  one figure it turns on, drawn in the page's one dark band. The playbook is
-  `docs/POSTS.md`. See D195, D196, D197 and D198.
+  one figure it turns on, drawn in the page's one dark band. A country post
+  holds a `pair` (the twin, picked by `pickTwin`, never the writer), and every
+  post page draws `rowEchoes` from published posts. The playbook is
+  `docs/POSTS.md`. See D195 to D200.
 - The wealth residual is never summed across dimensions. `ResidualFile` has no
   country-level field, `buildResidual` in
   `packages/core/src/pipeline/residual.ts` computes one fit per dimension, and
