@@ -1,0 +1,385 @@
+{
+  "slug": "china-against-its-income-peers",
+  "date": "2026-11-21",
+  "kind": "country",
+  "subject": "CHN",
+  "question": "Is China more capable than its income suggests?",
+  "title": "China builds far beyond its income",
+  "dek": "On Building, China scores 41 points above the countries nearest to it in income, the widest gap in its profile. One row, economic complexity, carries most of it. Learning is also well ahead, and Anticipation is the one capability where it trails.",
+  "lead": {
+    "figure": "+41.2",
+    "caption": "points above the median of its 10 income peers on Building, the widest gap China has"
+  },
+  "datasetVersion": "10.2.0",
+  "dataGeneratedAt": "2026-11-05T11:52:10.760Z",
+  "figures": {
+    "capabilitiesUsable": 4,
+    "gapFloor": 10
+  },
+  "tags": {
+    "countries": [
+      "CHN"
+    ],
+    "dimensions": [
+      "building",
+      "learning",
+      "anticipation"
+    ],
+    "indicators": [
+      "economic_complexity",
+      "manufacturing_value_added",
+      "firm_training_incidence",
+      "research_citation_impact",
+      "statistical_performance",
+      "sci_articles_per_million"
+    ]
+  },
+  "blocks": [
+    {
+      "type": "text",
+      "text": "This post compares China with the 10 countries nearest to it in income per person: North Macedonia, Georgia, the Dominican Republic, Serbia, Albania, Argentina, Thailand, Azerbaijan, Costa Rica and Mexico. Four of its nine capabilities have usable evidence. Agency, Coordination, Trust, Experimentation and Shared purpose do not, so they are left out."
+    },
+    {
+      "type": "heading",
+      "text": "Where China is ahead of its peers"
+    },
+    {
+      "type": "gap",
+      "gap": {
+        "iso3": "CHN",
+        "country": "China",
+        "dimension": "building",
+        "score": 71.7,
+        "confidence": 0.475,
+        "peerMedian": 30.5,
+        "peersScored": 10,
+        "gap": 41.2,
+        "peers": [
+          "MKD",
+          "GEO",
+          "DOM",
+          "SRB",
+          "ALB",
+          "ARG",
+          "THA",
+          "AZE",
+          "CRI",
+          "MEX"
+        ],
+        "peerScores": [
+          {
+            "iso3": "MKD",
+            "score": 34.6,
+            "confidence": 0.634
+          },
+          {
+            "iso3": "GEO",
+            "score": 18.3,
+            "confidence": 0.634
+          },
+          {
+            "iso3": "DOM",
+            "score": 16.2,
+            "confidence": 0.475
+          },
+          {
+            "iso3": "SRB",
+            "score": 36.3,
+            "confidence": 0.475
+          },
+          {
+            "iso3": "ALB",
+            "score": 5.9,
+            "confidence": 0.475
+          },
+          {
+            "iso3": "ARG",
+            "score": 19.7,
+            "confidence": 0.475
+          },
+          {
+            "iso3": "THA",
+            "score": 58.3,
+            "confidence": 0.475
+          },
+          {
+            "iso3": "AZE",
+            "score": 26.4,
+            "confidence": 0.634
+          },
+          {
+            "iso3": "CRI",
+            "score": 36.5,
+            "confidence": 0.634
+          },
+          {
+            "iso3": "MEX",
+            "score": 64.6,
+            "confidence": 0.634
+          }
+        ],
+        "drivers": [
+          {
+            "indicatorId": "economic_complexity",
+            "unit": "index",
+            "value": 37.727,
+            "year": 2024,
+            "position": 100,
+            "peerPosition": 3.4,
+            "contribution": 32.2
+          },
+          {
+            "indicatorId": "manufacturing_value_added",
+            "unit": "% of GDP",
+            "value": 24.734,
+            "year": 2025,
+            "position": 71.7,
+            "peerPosition": 36,
+            "contribution": 11.9
+          },
+          {
+            "indicatorId": "high_tech_exports_share",
+            "unit": "% of manufactured exports",
+            "value": 26.278,
+            "year": 2024,
+            "position": 43.4,
+            "peerPosition": 10.4,
+            "contribution": 11
+          }
+        ],
+        "rowsCounted": 3,
+        "countryArtefacts": [],
+        "dimensionArtefacts": [
+          "A6",
+          "A11"
+        ]
+      },
+      "why": "China sits at 100 on the economic complexity row, the top of the scale, and that row alone adds 32 of the 41 points. Manufacturing is 25% of GDP and adds 12 more, and high technology goods make up 26% of manufactured exports, which adds another 11."
+    },
+    {
+      "type": "gap",
+      "gap": {
+        "iso3": "CHN",
+        "country": "China",
+        "dimension": "learning",
+        "score": 76.3,
+        "confidence": 0.554,
+        "peerMedian": 41.9,
+        "peersScored": 10,
+        "gap": 34.4,
+        "peers": [
+          "MKD",
+          "GEO",
+          "DOM",
+          "SRB",
+          "ALB",
+          "ARG",
+          "THA",
+          "AZE",
+          "CRI",
+          "MEX"
+        ],
+        "peerScores": [
+          {
+            "iso3": "MKD",
+            "score": 44.3,
+            "confidence": 0.535
+          },
+          {
+            "iso3": "GEO",
+            "score": 43.6,
+            "confidence": 0.535
+          },
+          {
+            "iso3": "DOM",
+            "score": 38.3,
+            "confidence": 0.554
+          },
+          {
+            "iso3": "SRB",
+            "score": 40.8,
+            "confidence": 0.554
+          },
+          {
+            "iso3": "ALB",
+            "score": 34.6,
+            "confidence": 0.554
+          },
+          {
+            "iso3": "ARG",
+            "score": 43.4,
+            "confidence": 0.42
+          },
+          {
+            "iso3": "THA",
+            "score": 36.7,
+            "confidence": 0.554
+          },
+          {
+            "iso3": "AZE",
+            "score": 36.3,
+            "confidence": 0.554
+          },
+          {
+            "iso3": "CRI",
+            "score": 43.6,
+            "confidence": 0.535
+          },
+          {
+            "iso3": "MEX",
+            "score": 43,
+            "confidence": 0.535
+          }
+        ],
+        "drivers": [
+          {
+            "indicatorId": "firm_training_incidence",
+            "unit": "% of firms",
+            "value": 79.119,
+            "year": 2024,
+            "position": 100,
+            "peerPosition": 42.7,
+            "contribution": 19.1
+          },
+          {
+            "indicatorId": "research_citation_impact",
+            "unit": "ratio to world average",
+            "value": 1.43,
+            "year": 2021,
+            "position": 67.3,
+            "peerPosition": 29.1,
+            "contribution": 12.7
+          },
+          {
+            "indicatorId": "human_capital_index",
+            "unit": "index 0-1",
+            "value": 0.653,
+            "year": 2020,
+            "position": 61.5,
+            "peerPosition": 53.5,
+            "contribution": 2.7
+          }
+        ],
+        "rowsCounted": 3,
+        "countryArtefacts": [],
+        "dimensionArtefacts": [
+          "A7"
+        ]
+      },
+      "why": "In China, 79% of firms offer formal training, and that row adds 19 of the 34 points. Its research is cited more than the world average, at a ratio of 1.4, which adds 13. The Human Capital Index, at 0.65, sits close to the peer median."
+    },
+    {
+      "type": "heading",
+      "text": "Where it is behind"
+    },
+    {
+      "type": "gap",
+      "gap": {
+        "iso3": "CHN",
+        "country": "China",
+        "dimension": "anticipation",
+        "score": 29.9,
+        "confidence": 0.455,
+        "peerMedian": 46.9,
+        "peersScored": 10,
+        "gap": -17,
+        "peers": [
+          "MKD",
+          "GEO",
+          "DOM",
+          "SRB",
+          "ALB",
+          "ARG",
+          "THA",
+          "AZE",
+          "CRI",
+          "MEX"
+        ],
+        "peerScores": [
+          {
+            "iso3": "MKD",
+            "score": 48.9,
+            "confidence": 0.455
+          },
+          {
+            "iso3": "GEO",
+            "score": 47.5,
+            "confidence": 0.455
+          },
+          {
+            "iso3": "DOM",
+            "score": 33.1,
+            "confidence": 0.455
+          },
+          {
+            "iso3": "SRB",
+            "score": 52.5,
+            "confidence": 0.455
+          },
+          {
+            "iso3": "ALB",
+            "score": 43,
+            "confidence": 0.455
+          },
+          {
+            "iso3": "ARG",
+            "score": 41.2,
+            "confidence": 0.455
+          },
+          {
+            "iso3": "THA",
+            "score": 46.2,
+            "confidence": 0.455
+          },
+          {
+            "iso3": "AZE",
+            "score": 30.6,
+            "confidence": 0.455
+          },
+          {
+            "iso3": "CRI",
+            "score": 49.6,
+            "confidence": 0.455
+          },
+          {
+            "iso3": "MEX",
+            "score": 49.9,
+            "confidence": 0.455
+          }
+        ],
+        "drivers": [
+          {
+            "indicatorId": "statistical_performance",
+            "unit": "index 0-100",
+            "value": 57.927,
+            "year": 2024,
+            "position": 34.6,
+            "peerPosition": 82.4,
+            "contribution": -23.9
+          },
+          {
+            "indicatorId": "sci_articles_per_million",
+            "unit": "articles per million people",
+            "value": 661.165,
+            "year": 2023,
+            "position": 25.2,
+            "peerPosition": 6.2,
+            "contribution": 9.5
+          }
+        ],
+        "rowsCounted": 2,
+        "countryArtefacts": [],
+        "dimensionArtefacts": []
+      },
+      "why": "China's statistical system scores 58 on the World Bank statistical performance index, and that row takes 24 points off the score, more than the whole gap of 17. Scientific output pulls the other way: China publishes 661 articles per million people, which gives back 9.5."
+    },
+    {
+      "type": "heading",
+      "text": "The rest of the profile"
+    },
+    {
+      "type": "text",
+      "text": "Adaptability has usable evidence but is left out, because China has no long-term unemployment share to check its unemployment rate, a known limit of the data. Both leads rest on rows about what China makes and sells abroad and how many of its firms train their staff."
+    }
+  ]
+}
