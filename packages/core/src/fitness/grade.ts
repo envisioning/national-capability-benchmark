@@ -63,14 +63,21 @@ const fold = (s: string) =>
     .replace(/\s+/g, ' ')
     .trim()
 
-/** Whether the answer states one reference value: a number within tolerance, or a string verbatim up to case and accents. */
+/**
+ * Whether the answer states one reference value: a number within tolerance,
+ * or a string verbatim up to case and accents, as whole words, so that "PL"
+ * is not read inside "PLP". A short string can still occur for another
+ * reason ("não" in "não sei"), which is why `loadFitnessItems` warns on one
+ * under script grading.
+ */
 export function statesValue(answer: string, ref: ReferenceValue): boolean {
   if (typeof ref.value === 'number') {
     const tolerance = ref.tolerance ?? 0
     const target = ref.value
     return numbersIn(answer).some((n) => Math.abs(n - target) <= tolerance)
   }
-  return fold(answer).includes(fold(ref.value))
+  const needle = fold(ref.value).replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
+  return new RegExp(`(?<![\\p{L}\\p{N}])${needle}(?![\\p{L}\\p{N}])`, 'u').test(fold(answer))
 }
 
 /**

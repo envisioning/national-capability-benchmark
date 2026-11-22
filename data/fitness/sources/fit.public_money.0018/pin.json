@@ -1,0 +1,19 @@
+{
+  "itemId": "fit.public_money.0018",
+  "itemVersion": 1,
+  "sources": [
+    {
+      "n": 1,
+      "url": "https://apiapex.tesouro.gov.br/aria/v1/transferencias_constitucionais/custom/por_estados?p_sn_detalhar=N&p_estado=5&p_ano=2025&p_transferencia=7",
+      "method": "fetched",
+      "retrieved": "2026-10-31",
+      "finalUrl": "https://apiapex.tesouro.gov.br/aria/v1/transferencias_constitucionais/custom/por_estados?p_sn_detalhar=N&p_estado=5&p_ano=2025&p_transferencia=7",
+      "status": 200,
+      "contentType": "application/json",
+      "rawSha256": "7cc3ec1510e5f97dd026a9ebeb7003cd82d7377c6001311544bf267e0fbff090",
+      "textSha256": "6d110cd8f82e1a6521e949dd5b1f8f01c774c704b4ffd2160f790a521da42132",
+      "chars": 1933,
+      "extractor": "fitness-extract-2/json"
+    }
+  ]
+}

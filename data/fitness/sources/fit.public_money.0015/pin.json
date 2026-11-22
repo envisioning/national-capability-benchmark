@@ -1,0 +1,33 @@
+{
+  "itemId": "fit.public_money.0015",
+  "itemVersion": 1,
+  "sources": [
+    {
+      "n": 1,
+      "url": "https://www.tesourotransparente.gov.br/ckan/dataset/ab56485b-9c40-4efb-8563-9ce3e1973c4b/resource/527ccdb1-3059-42f3-bf23-b5e3ab4c6dc6/download/seriehistoricajul26.xlsx",
+      "method": "hand",
+      "retrieved": "2026-10-31",
+      "finalUrl": null,
+      "status": null,
+      "contentType": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      "rawSha256": "35899d771fc487db1ca17a6a1fb3fc0cc293230b8c5ad98287b69db2a7d0843c",
+      "textSha256": "0f4317487815071d94c268c582d750b15af98efaab21bfb8e0f7daab08d06cec",
+      "chars": 20733,
+      "extractor": "hand: openpyxl sheet to text",
+      "note": "Sheet \"2.2\" of the RTN XLSX converted to text by openpyxl, keeping the label column and 2020 to 2025; numbers in Brazilian format, R$ milhões. rawSha256 is the XLSX."
+    },
+    {
+      "n": 2,
+      "url": "https://apiapex.tesouro.gov.br/aria/v1/series-temporais/custom/resultado-fiscal?data_inicio=01-2025&data_fim=12-2025&tema=10&codigo_da_serie=10.03.1.3.10&correcao_ipca=N",
+      "method": "fetched",
+      "retrieved": "2026-10-31",
+      "finalUrl": "https://apiapex.tesouro.gov.br/aria/v1/series-temporais/custom/resultado-fiscal?data_inicio=01-2025&data_fim=12-2025&tema=10&codigo_da_serie=10.03.1.3.10&correcao_ipca=N",
+      "status": 200,
+      "contentType": "application/json",
+      "rawSha256": "37692aa91f7d7137fd0f13e0728caa8c970cf5856f6b5d1a41a8e0d5445230a6",
+      "textSha256": "56601165063350de3a43b0f8c180f189e57b902ec63b4b7c5004177a5a5c6910",
+      "chars": 4275,
+      "extractor": "fitness-extract-2/json"
+    }
+  ]
+}
