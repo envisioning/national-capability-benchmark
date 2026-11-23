@@ -1,0 +1,747 @@
+{
+  "slug": "agency-follows-income-loosely",
+  "date": "2026-11-23",
+  "kind": "capability",
+  "subject": "agency",
+  "question": "Does it take a rich country to make starting something easy?",
+  "title": "Agency follows income only loosely",
+  "dek": "Across 128 countries, Agency correlates 0.49 with income per person. The countries that break the pattern do so on how many new businesses they register and how hard it is to register one.",
+  "lead": {
+    "figure": "0.49",
+    "caption": "the correlation between Agency and income per person across 128 countries"
+  },
+  "datasetVersion": "10.2.0",
+  "dataGeneratedAt": "2026-11-05T11:52:10.760Z",
+  "figures": {
+    "incomeR": 0.49,
+    "incomeN": 128,
+    "scored": 73,
+    "level": 34,
+    "gapFloor": 10,
+    "anticipationR": 0.87,
+    "doingBusinessYear": 2019
+  },
+  "tags": {
+    "countries": [
+      "NZL",
+      "GBR",
+      "MUS",
+      "PHL",
+      "BIH",
+      "URY"
+    ],
+    "dimensions": [
+      "agency"
+    ],
+    "indicators": [
+      "new_business_density",
+      "business_start_procedures",
+      "business_entry_efficiency"
+    ]
+  },
+  "blocks": [
+    {
+      "type": "text",
+      "text": "Agency asks how easily a person or a firm can turn an intention into action. Today its score reads three rows: new businesses registered for every 1,000 people of working age, the World Bank's business entry efficiency score, and the number of procedures it takes to start a business."
+    },
+    {
+      "type": "text",
+      "text": "Across 128 countries, Agency correlates 0.49 with income per person, so income explains much less of it than it does of Anticipation. Of the 73 countries compared with the 10 nearest to them in income, 34 sit within 10 points of their peers' median. The cases below are the widest gaps on each side."
+    },
+    {
+      "type": "heading",
+      "text": "Ahead of their income peers"
+    },
+    {
+      "type": "gap",
+      "gap": {
+        "iso3": "NZL",
+        "country": "New Zealand",
+        "dimension": "agency",
+        "score": 97.6,
+        "confidence": 0.491,
+        "peerMedian": 56.5,
+        "peersScored": 10,
+        "gap": 41.1,
+        "peers": [
+          "ISR",
+          "JPN",
+          "LTU",
+          "SVN",
+          "CZE",
+          "ESP",
+          "POL",
+          "HRV",
+          "ITA",
+          "GBR"
+        ],
+        "peerScores": [
+          {
+            "iso3": "ISR",
+            "score": 66.2,
+            "confidence": 0.491
+          },
+          {
+            "iso3": "JPN",
+            "score": 33.2,
+            "confidence": 0.301
+          },
+          {
+            "iso3": "LTU",
+            "score": 48.4,
+            "confidence": 0.301
+          },
+          {
+            "iso3": "SVN",
+            "score": 57.3,
+            "confidence": 0.491
+          },
+          {
+            "iso3": "CZE",
+            "score": 55.6,
+            "confidence": 0.491
+          },
+          {
+            "iso3": "ESP",
+            "score": 53.8,
+            "confidence": 0.491
+          },
+          {
+            "iso3": "POL",
+            "score": 58.7,
+            "confidence": 0.491
+          },
+          {
+            "iso3": "HRV",
+            "score": 81.1,
+            "confidence": 0.491
+          },
+          {
+            "iso3": "ITA",
+            "score": 53.7,
+            "confidence": 0.491
+          },
+          {
+            "iso3": "GBR",
+            "score": 94.7,
+            "confidence": 0.491
+          }
+        ],
+        "drivers": [
+          {
+            "indicatorId": "new_business_density",
+            "unit": "per 1,000 aged 15-64",
+            "value": 16.048,
+            "year": 2024,
+            "position": 96,
+            "peerPosition": 17.7,
+            "contribution": 26.1
+          },
+          {
+            "indicatorId": "business_start_procedures",
+            "unit": "count",
+            "value": 1,
+            "year": 2019,
+            "position": 100,
+            "peerPosition": 73.7,
+            "contribution": 8.8
+          },
+          {
+            "indicatorId": "business_entry_efficiency",
+            "unit": "score 0-100",
+            "value": 97.439,
+            "year": 2025,
+            "position": 96.6,
+            "peerPosition": 83.3,
+            "contribution": 4.4
+          }
+        ],
+        "rowsCounted": 3,
+        "countryArtefacts": [],
+        "dimensionArtefacts": [
+          "A6",
+          "A14",
+          "A15"
+        ]
+      },
+      "why": "New Zealand registers 16 new businesses a year for every 1,000 people of working age, and that row adds 26 of the 41 points. Starting a business there takes one procedure, which adds nine more. Business entry efficiency, at 97, adds four."
+    },
+    {
+      "type": "gap",
+      "gap": {
+        "iso3": "GBR",
+        "country": "United Kingdom",
+        "dimension": "agency",
+        "score": 94.7,
+        "confidence": 0.491,
+        "peerMedian": 57.7,
+        "peersScored": 10,
+        "gap": 37,
+        "peers": [
+          "CYP",
+          "ITA",
+          "FRA",
+          "KOR",
+          "FIN",
+          "CAN",
+          "ESP",
+          "CZE",
+          "SVN",
+          "LTU"
+        ],
+        "peerScores": [
+          {
+            "iso3": "CYP",
+            "score": 58,
+            "confidence": 0.491
+          },
+          {
+            "iso3": "ITA",
+            "score": 53.7,
+            "confidence": 0.491
+          },
+          {
+            "iso3": "FRA",
+            "score": 59.8,
+            "confidence": 0.301
+          },
+          {
+            "iso3": "KOR",
+            "score": 69.3,
+            "confidence": 0.475
+          },
+          {
+            "iso3": "FIN",
+            "score": 62.5,
+            "confidence": 0.301
+          },
+          {
+            "iso3": "CAN",
+            "score": 70.6,
+            "confidence": 0.459
+          },
+          {
+            "iso3": "ESP",
+            "score": 53.8,
+            "confidence": 0.491
+          },
+          {
+            "iso3": "CZE",
+            "score": 55.6,
+            "confidence": 0.491
+          },
+          {
+            "iso3": "SVN",
+            "score": 57.3,
+            "confidence": 0.491
+          },
+          {
+            "iso3": "LTU",
+            "score": 48.4,
+            "confidence": 0.301
+          }
+        ],
+        "drivers": [
+          {
+            "indicatorId": "new_business_density",
+            "unit": "per 1,000 aged 15-64",
+            "value": 19.191,
+            "year": 2024,
+            "position": 100,
+            "peerPosition": 21.3,
+            "contribution": 26.2
+          },
+          {
+            "indicatorId": "business_entry_efficiency",
+            "unit": "score 0-100",
+            "value": 100,
+            "year": 2025,
+            "position": 100,
+            "peerPosition": 82.8,
+            "contribution": 5.7
+          },
+          {
+            "indicatorId": "business_start_procedures",
+            "unit": "count",
+            "value": 4,
+            "year": 2019,
+            "position": 84.2,
+            "peerPosition": 81.6,
+            "contribution": 0.9
+          }
+        ],
+        "rowsCounted": 3,
+        "countryArtefacts": [],
+        "dimensionArtefacts": [
+          "A6",
+          "A14",
+          "A15"
+        ]
+      },
+      "why": "The United Kingdom registers 19 new businesses a year for every 1,000 people of working age, which puts it at the top of the scale and adds 26 of the 37 points. Business entry efficiency, at 100, adds six more."
+    },
+    {
+      "type": "gap",
+      "gap": {
+        "iso3": "MUS",
+        "country": "Mauritius",
+        "dimension": "agency",
+        "score": 87,
+        "confidence": 0.491,
+        "peerMedian": 52.5,
+        "peersScored": 10,
+        "gap": 34.5,
+        "peers": [
+          "CRI",
+          "BLR",
+          "ARG",
+          "SRB",
+          "CHL",
+          "TTO",
+          "URY",
+          "GEO",
+          "MKD",
+          "CHN"
+        ],
+        "peerScores": [
+          {
+            "iso3": "CRI",
+            "score": 45.7,
+            "confidence": 0.491
+          },
+          {
+            "iso3": "BLR",
+            "score": 45.8,
+            "confidence": 0.269
+          },
+          {
+            "iso3": "ARG",
+            "score": 22.5,
+            "confidence": 0.301
+          },
+          {
+            "iso3": "SRB",
+            "score": 59.2,
+            "confidence": 0.491
+          },
+          {
+            "iso3": "CHL",
+            "score": 64,
+            "confidence": 0.285
+          },
+          {
+            "iso3": "TTO",
+            "score": 44.2,
+            "confidence": 0.427
+          },
+          {
+            "iso3": "URY",
+            "score": 35.4,
+            "confidence": 0.491
+          },
+          {
+            "iso3": "GEO",
+            "score": 81.7,
+            "confidence": 0.491
+          },
+          {
+            "iso3": "MKD",
+            "score": 65.2,
+            "confidence": 0.491
+          },
+          {
+            "iso3": "CHN",
+            "score": 87.3,
+            "confidence": 0.301
+          }
+        ],
+        "drivers": [
+          {
+            "indicatorId": "new_business_density",
+            "unit": "per 1,000 aged 15-64",
+            "value": 13.975,
+            "year": 2024,
+            "position": 83.6,
+            "peerPosition": 28.7,
+            "contribution": 18.3
+          },
+          {
+            "indicatorId": "business_entry_efficiency",
+            "unit": "score 0-100",
+            "value": 94.888,
+            "year": 2025,
+            "position": 93.3,
+            "peerPosition": 69,
+            "contribution": 8.1
+          },
+          {
+            "indicatorId": "business_start_procedures",
+            "unit": "count",
+            "value": 4,
+            "year": 2019,
+            "position": 84.2,
+            "peerPosition": 73.7,
+            "contribution": 3.5
+          }
+        ],
+        "rowsCounted": 3,
+        "countryArtefacts": [],
+        "dimensionArtefacts": [
+          "A6",
+          "A14",
+          "A15"
+        ]
+      },
+      "why": "Mauritius registers 14 new businesses a year for every 1,000 people of working age, and that row adds 18 of the 34.5 points. Business entry efficiency, at 95, adds eight, and its four procedures to start a business add 3.5."
+    },
+    {
+      "type": "heading",
+      "text": "Behind their income peers"
+    },
+    {
+      "type": "gap",
+      "gap": {
+        "iso3": "PHL",
+        "country": "Philippines",
+        "dimension": "agency",
+        "score": 13.2,
+        "confidence": 0.491,
+        "peerMedian": 42.5,
+        "peersScored": 9,
+        "gap": -29.3,
+        "peers": [
+          "SWZ",
+          "JOR",
+          "BOL",
+          "LBN",
+          "NAM",
+          "JAM",
+          "IND",
+          "UZB",
+          "SLV",
+          "MAR"
+        ],
+        "peerScores": [
+          {
+            "iso3": "SWZ",
+            "score": 52,
+            "confidence": 0.491
+          },
+          {
+            "iso3": "JOR",
+            "score": 38,
+            "confidence": 0.491
+          },
+          {
+            "iso3": "BOL",
+            "score": 22.3,
+            "confidence": 0.285
+          },
+          {
+            "iso3": "NAM",
+            "score": 42.5,
+            "confidence": 0.491
+          },
+          {
+            "iso3": "JAM",
+            "score": 65.4,
+            "confidence": 0.491
+          },
+          {
+            "iso3": "IND",
+            "score": 26.7,
+            "confidence": 0.301
+          },
+          {
+            "iso3": "UZB",
+            "score": 66.7,
+            "confidence": 0.491
+          },
+          {
+            "iso3": "SLV",
+            "score": 30.4,
+            "confidence": 0.491
+          },
+          {
+            "iso3": "MAR",
+            "score": 55.4,
+            "confidence": 0.491
+          }
+        ],
+        "drivers": [
+          {
+            "indicatorId": "business_entry_efficiency",
+            "unit": "score 0-100",
+            "value": 23.687,
+            "year": 2025,
+            "position": 0,
+            "peerPosition": 66.3,
+            "contribution": -22.1
+          },
+          {
+            "indicatorId": "business_start_procedures",
+            "unit": "count",
+            "value": 13,
+            "year": 2019,
+            "position": 36.8,
+            "peerPosition": 60.6,
+            "contribution": -7.9
+          },
+          {
+            "indicatorId": "new_business_density",
+            "unit": "per 1,000 aged 15-64",
+            "value": 0.507,
+            "year": 2024,
+            "position": 2.7,
+            "peerPosition": 15.3,
+            "contribution": -4.2
+          }
+        ],
+        "rowsCounted": 3,
+        "countryArtefacts": [],
+        "dimensionArtefacts": [
+          "A6",
+          "A14",
+          "A15"
+        ]
+      },
+      "why": "The Philippines scores 24 on business entry efficiency, the bottom of the scale, and that row costs 22 of the 29 points. Starting a business took 13 procedures in 2019, which costs another eight, and it registers 0.5 new businesses a year for every 1,000 people of working age."
+    },
+    {
+      "type": "gap",
+      "gap": {
+        "iso3": "BIH",
+        "country": "Bosnia and Herzegovina",
+        "dimension": "agency",
+        "score": 27,
+        "confidence": 0.491,
+        "peerMedian": 50.8,
+        "peersScored": 10,
+        "gap": -23.8,
+        "peers": [
+          "ARM",
+          "MEX",
+          "AZE",
+          "BRA",
+          "THA",
+          "ALB",
+          "COL",
+          "DOM",
+          "CHN",
+          "MKD"
+        ],
+        "peerScores": [
+          {
+            "iso3": "ARM",
+            "score": 70.3,
+            "confidence": 0.491
+          },
+          {
+            "iso3": "MEX",
+            "score": 41.8,
+            "confidence": 0.491
+          },
+          {
+            "iso3": "AZE",
+            "score": 65.6,
+            "confidence": 0.491
+          },
+          {
+            "iso3": "BRA",
+            "score": 44.6,
+            "confidence": 0.301
+          },
+          {
+            "iso3": "THA",
+            "score": 44.6,
+            "confidence": 0.301
+          },
+          {
+            "iso3": "ALB",
+            "score": 46.2,
+            "confidence": 0.301
+          },
+          {
+            "iso3": "COL",
+            "score": 55.3,
+            "confidence": 0.491
+          },
+          {
+            "iso3": "DOM",
+            "score": 38.4,
+            "confidence": 0.206
+          },
+          {
+            "iso3": "CHN",
+            "score": 87.3,
+            "confidence": 0.301
+          },
+          {
+            "iso3": "MKD",
+            "score": 65.2,
+            "confidence": 0.491
+          }
+        ],
+        "drivers": [
+          {
+            "indicatorId": "business_entry_efficiency",
+            "unit": "score 0-100",
+            "value": 50,
+            "year": 2025,
+            "position": 34.5,
+            "peerPosition": 91.2,
+            "contribution": -18.9
+          },
+          {
+            "indicatorId": "business_start_procedures",
+            "unit": "count",
+            "value": 13,
+            "year": 2019,
+            "position": 36.8,
+            "peerPosition": 76.3,
+            "contribution": -13.2
+          },
+          {
+            "indicatorId": "new_business_density",
+            "unit": "per 1,000 aged 15-64",
+            "value": 1.645,
+            "year": 2024,
+            "position": 9.6,
+            "peerPosition": 13.3,
+            "contribution": -1.2
+          }
+        ],
+        "rowsCounted": 3,
+        "countryArtefacts": [],
+        "dimensionArtefacts": [
+          "A6",
+          "A14",
+          "A15"
+        ]
+      },
+      "why": "Bosnia and Herzegovina scores 50 on business entry efficiency while its income peers sit near the top of the scale, and that row costs 19 points. Starting a business took 13 procedures in 2019, which costs another 13."
+    },
+    {
+      "type": "gap",
+      "gap": {
+        "iso3": "URY",
+        "country": "Uruguay",
+        "dimension": "agency",
+        "score": 35.4,
+        "confidence": 0.491,
+        "peerMedian": 55.3,
+        "peersScored": 10,
+        "gap": -19.9,
+        "peers": [
+          "TTO",
+          "CHL",
+          "BGR",
+          "MYS",
+          "BLR",
+          "MUS",
+          "TUR",
+          "PAN",
+          "CRI",
+          "KAZ"
+        ],
+        "peerScores": [
+          {
+            "iso3": "TTO",
+            "score": 44.2,
+            "confidence": 0.427
+          },
+          {
+            "iso3": "CHL",
+            "score": 64,
+            "confidence": 0.285
+          },
+          {
+            "iso3": "BGR",
+            "score": 68.3,
+            "confidence": 0.491
+          },
+          {
+            "iso3": "MYS",
+            "score": 56,
+            "confidence": 0.491
+          },
+          {
+            "iso3": "BLR",
+            "score": 45.8,
+            "confidence": 0.269
+          },
+          {
+            "iso3": "MUS",
+            "score": 87,
+            "confidence": 0.491
+          },
+          {
+            "iso3": "TUR",
+            "score": 54.5,
+            "confidence": 0.491
+          },
+          {
+            "iso3": "PAN",
+            "score": 52.9,
+            "confidence": 0.269
+          },
+          {
+            "iso3": "CRI",
+            "score": 45.7,
+            "confidence": 0.491
+          },
+          {
+            "iso3": "KAZ",
+            "score": 66.6,
+            "confidence": 0.491
+          }
+        ],
+        "drivers": [
+          {
+            "indicatorId": "business_entry_efficiency",
+            "unit": "score 0-100",
+            "value": 30.022,
+            "year": 2025,
+            "position": 8.3,
+            "peerPosition": 83.5,
+            "contribution": -25.1
+          },
+          {
+            "indicatorId": "new_business_density",
+            "unit": "per 1,000 aged 15-64",
+            "value": 3.232,
+            "year": 2024,
+            "position": 19.1,
+            "peerPosition": 26.7,
+            "contribution": -2.5
+          },
+          {
+            "indicatorId": "business_start_procedures",
+            "unit": "count",
+            "value": 5,
+            "year": 2019,
+            "position": 78.9,
+            "peerPosition": 71.1,
+            "contribution": 2.6
+          }
+        ],
+        "rowsCounted": 3,
+        "countryArtefacts": [],
+        "dimensionArtefacts": [
+          "A6",
+          "A14",
+          "A15"
+        ]
+      },
+      "why": "Uruguay scores 30 on business entry efficiency, and that row alone costs 25 points, more than the whole gap of 19.9. Its five procedures to start a business win back 2.6."
+    },
+    {
+      "type": "heading",
+      "text": "What the six have in common"
+    },
+    {
+      "type": "text",
+      "text": "The countries ahead all register far more new businesses than their income peers, and that one row carries most of each gap. The countries behind score low on business entry efficiency, and two of them also needed 13 procedures to start a business. The procedures row stops in 2019, the last Doing Business round, so it reads an older year than the other two."
+    }
+  ]
+}
