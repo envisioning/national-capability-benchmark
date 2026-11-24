@@ -1,0 +1,576 @@
+{
+  "slug": "angola-against-its-income-peers",
+  "date": "2026-11-24",
+  "kind": "country",
+  "subject": "AGO",
+  "question": "Is Angola more capable than its income suggests?",
+  "title": "Angola coordinates far less than its income peers",
+  "dek": "On Coordination, Angola scores 40 points below the countries nearest to it in income, the widest gap in its profile. Border compliance and budget execution carry most of it. Adaptability and Learning also trail, and Agency is the one capability where it leads.",
+  "lead": {
+    "figure": "-39.8",
+    "caption": "points below the median of its 10 income peers on Coordination, the widest gap Angola has"
+  },
+  "datasetVersion": "10.2.0",
+  "dataGeneratedAt": "2026-11-05T11:52:10.760Z",
+  "figures": {
+    "capabilitiesUsable": 6,
+    "gapFloor": 10
+  },
+  "tags": {
+    "countries": [
+      "AGO"
+    ],
+    "dimensions": [
+      "agency",
+      "coordination",
+      "adaptability",
+      "learning"
+    ],
+    "indicators": [
+      "business_entry_efficiency",
+      "new_business_density",
+      "trade_compliance_efficiency",
+      "budget_execution_fidelity",
+      "export_diversification",
+      "unemployment_rate",
+      "research_citation_impact",
+      "human_capital_index"
+    ]
+  },
+  "blocks": [
+    {
+      "type": "text",
+      "text": "This post compares Angola with the 10 countries nearest to it in income per person: Bangladesh, Laos, Nigeria, Morocco, Nicaragua, Kyrgyzstan, India, Namibia, Ghana and Lebanon. Six of its nine capabilities have usable evidence. Trust, Experimentation and Shared purpose do not, so they are left out."
+    },
+    {
+      "type": "heading",
+      "text": "Where Angola is ahead of its peers"
+    },
+    {
+      "type": "gap",
+      "gap": {
+        "iso3": "AGO",
+        "country": "Angola",
+        "dimension": "agency",
+        "score": 52.5,
+        "confidence": 0.491,
+        "peerMedian": 38.3,
+        "peersScored": 8,
+        "gap": 14.2,
+        "peers": [
+          "BGD",
+          "LAO",
+          "NGA",
+          "MAR",
+          "NIC",
+          "KGZ",
+          "IND",
+          "NAM",
+          "GHA",
+          "LBN"
+        ],
+        "peerScores": [
+          {
+            "iso3": "BGD",
+            "score": 36.7,
+            "confidence": 0.491
+          },
+          {
+            "iso3": "LAO",
+            "score": 35.4,
+            "confidence": 0.491
+          },
+          {
+            "iso3": "NGA",
+            "score": 37.4,
+            "confidence": 0.269
+          },
+          {
+            "iso3": "MAR",
+            "score": 55.4,
+            "confidence": 0.491
+          },
+          {
+            "iso3": "KGZ",
+            "score": 64.1,
+            "confidence": 0.491
+          },
+          {
+            "iso3": "IND",
+            "score": 26.7,
+            "confidence": 0.301
+          },
+          {
+            "iso3": "NAM",
+            "score": 42.5,
+            "confidence": 0.491
+          },
+          {
+            "iso3": "GHA",
+            "score": 39.1,
+            "confidence": 0.491
+          }
+        ],
+        "drivers": [
+          {
+            "indicatorId": "business_entry_efficiency",
+            "unit": "score 0-100",
+            "value": 88.903,
+            "year": 2025,
+            "position": 85.5,
+            "peerPosition": 49.2,
+            "contribution": 12.1
+          },
+          {
+            "indicatorId": "new_business_density",
+            "unit": "per 1,000 aged 15-64",
+            "value": 1.548,
+            "year": 2024,
+            "position": 9,
+            "peerPosition": 8.5,
+            "contribution": 0.2
+          },
+          {
+            "indicatorId": "business_start_procedures",
+            "unit": "count",
+            "value": 8,
+            "year": 2019,
+            "position": 63.2,
+            "peerPosition": 63.2,
+            "contribution": 0
+          }
+        ],
+        "rowsCounted": 3,
+        "countryArtefacts": [],
+        "dimensionArtefacts": [
+          "A6",
+          "A14",
+          "A15"
+        ]
+      },
+      "why": "One row carries this gap. Starting a business in Angola scores 89 on the World Bank business entry measure, and that row adds 12 of the 14 points. New business density, at 1.5 a year for every 1,000 people of working age, sits close to the peer median."
+    },
+    {
+      "type": "heading",
+      "text": "Where it is behind"
+    },
+    {
+      "type": "gap",
+      "gap": {
+        "iso3": "AGO",
+        "country": "Angola",
+        "dimension": "coordination",
+        "score": 28.1,
+        "confidence": 0.467,
+        "peerMedian": 67.9,
+        "peersScored": 10,
+        "gap": -39.8,
+        "peers": [
+          "BGD",
+          "LAO",
+          "NGA",
+          "MAR",
+          "NIC",
+          "KGZ",
+          "IND",
+          "NAM",
+          "GHA",
+          "LBN"
+        ],
+        "peerScores": [
+          {
+            "iso3": "BGD",
+            "score": 68.5,
+            "confidence": 0.467
+          },
+          {
+            "iso3": "LAO",
+            "score": 57.3,
+            "confidence": 0.387
+          },
+          {
+            "iso3": "NGA",
+            "score": 39.3,
+            "confidence": 0.29
+          },
+          {
+            "iso3": "MAR",
+            "score": 82.1,
+            "confidence": 0.48
+          },
+          {
+            "iso3": "NIC",
+            "score": 16,
+            "confidence": 0.254
+          },
+          {
+            "iso3": "KGZ",
+            "score": 67.3,
+            "confidence": 0.467
+          },
+          {
+            "iso3": "IND",
+            "score": 82.8,
+            "confidence": 0.29
+          },
+          {
+            "iso3": "NAM",
+            "score": 64.9,
+            "confidence": 0.467
+          },
+          {
+            "iso3": "GHA",
+            "score": 72.9,
+            "confidence": 0.453
+          },
+          {
+            "iso3": "LBN",
+            "score": 85.7,
+            "confidence": 0.242
+          }
+        ],
+        "drivers": [
+          {
+            "indicatorId": "trade_compliance_efficiency",
+            "unit": "score 0-100",
+            "value": 2.848,
+            "year": 2025,
+            "position": 0,
+            "peerPosition": 62.9,
+            "contribution": -21
+          },
+          {
+            "indicatorId": "budget_execution_fidelity",
+            "unit": "percentage points from approved budget",
+            "value": 26.5,
+            "year": 2023,
+            "position": 44.9,
+            "peerPosition": 89.4,
+            "contribution": -14.8
+          },
+          {
+            "indicatorId": "civil_society_strength",
+            "unit": "index 0-1",
+            "value": 0.433,
+            "year": 2025,
+            "position": 39.3,
+            "peerPosition": 66.8,
+            "contribution": -9.2
+          }
+        ],
+        "rowsCounted": 3,
+        "countryArtefacts": [],
+        "dimensionArtefacts": [
+          "A3",
+          "A6",
+          "A12"
+        ]
+      },
+      "why": "Firms rate Angola's border compliance 2.8 out of 100, the bottom of the scale, and that row takes 21 of the 40 points off the score. Government spending ended 26.5 percentage points away from the approved budget, which takes 14.8 more. Civil society scores 0.43 on an index from zero to one and takes another 9.2."
+    },
+    {
+      "type": "gap",
+      "gap": {
+        "iso3": "AGO",
+        "country": "Angola",
+        "dimension": "adaptability",
+        "score": 18.3,
+        "confidence": 0.617,
+        "peerMedian": 56.9,
+        "peersScored": 10,
+        "gap": -38.6,
+        "peers": [
+          "BGD",
+          "LAO",
+          "NGA",
+          "MAR",
+          "NIC",
+          "KGZ",
+          "IND",
+          "NAM",
+          "GHA",
+          "LBN"
+        ],
+        "peerScores": [
+          {
+            "iso3": "BGD",
+            "score": 60.1,
+            "confidence": 0.617
+          },
+          {
+            "iso3": "LAO",
+            "score": 75,
+            "confidence": 0.591
+          },
+          {
+            "iso3": "NGA",
+            "score": 46.4,
+            "confidence": 0.617
+          },
+          {
+            "iso3": "MAR",
+            "score": 49.4,
+            "confidence": 0.591
+          },
+          {
+            "iso3": "NIC",
+            "score": 67.1,
+            "confidence": 0.478
+          },
+          {
+            "iso3": "KGZ",
+            "score": 71.7,
+            "confidence": 0.604
+          },
+          {
+            "iso3": "IND",
+            "score": 82.9,
+            "confidence": 0.459
+          },
+          {
+            "iso3": "NAM",
+            "score": 36,
+            "confidence": 0.54
+          },
+          {
+            "iso3": "GHA",
+            "score": 52.4,
+            "confidence": 0.617
+          },
+          {
+            "iso3": "LBN",
+            "score": 53.6,
+            "confidence": 0.54
+          }
+        ],
+        "drivers": [
+          {
+            "indicatorId": "export_diversification",
+            "unit": "index 0-1, lower = more diversified",
+            "value": 0.753,
+            "year": 2025,
+            "position": 10.7,
+            "peerPosition": 73.2,
+            "contribution": -15.6
+          },
+          {
+            "indicatorId": "unemployment_rate",
+            "unit": "% of labour force",
+            "value": 14.108,
+            "year": 2025,
+            "position": 32.5,
+            "peerPosition": 83.7,
+            "contribution": -12.8
+          },
+          {
+            "indicatorId": "long_term_unemployment_share",
+            "unit": "% of unemployed",
+            "value": 78.5,
+            "year": 2025,
+            "position": 20.8,
+            "peerPosition": 48.8,
+            "contribution": -7
+          },
+          {
+            "indicatorId": "new_export_products_rate",
+            "unit": "% of products not exported competitively at the start",
+            "value": 0.81,
+            "year": 2024,
+            "position": 9,
+            "peerPosition": 31.8,
+            "contribution": -5.7
+          }
+        ],
+        "rowsCounted": 4,
+        "countryArtefacts": [],
+        "dimensionArtefacts": []
+      },
+      "why": "Angola's exports are highly concentrated, at 0.75 on an index where lower is more diversified, and 14.1% of its labour force is unemployed. Those two rows carry 28 of the 39 points. Of the unemployed, 78.5% have been out of work for a year or more, which takes seven more, and new products make up 0.81% of its exports, which takes 5.7."
+    },
+    {
+      "type": "gap",
+      "gap": {
+        "iso3": "AGO",
+        "country": "Angola",
+        "dimension": "learning",
+        "score": 21.9,
+        "confidence": 0.554,
+        "peerMedian": 35.2,
+        "peersScored": 10,
+        "gap": -13.3,
+        "peers": [
+          "BGD",
+          "LAO",
+          "NGA",
+          "MAR",
+          "NIC",
+          "KGZ",
+          "IND",
+          "NAM",
+          "GHA",
+          "LBN"
+        ],
+        "peerScores": [
+          {
+            "iso3": "BGD",
+            "score": 29.9,
+            "confidence": 0.516
+          },
+          {
+            "iso3": "LAO",
+            "score": 38.5,
+            "confidence": 0.554
+          },
+          {
+            "iso3": "NGA",
+            "score": 26.2,
+            "confidence": 0.554
+          },
+          {
+            "iso3": "MAR",
+            "score": 24.8,
+            "confidence": 0.535
+          },
+          {
+            "iso3": "NIC",
+            "score": 42,
+            "confidence": 0.401
+          },
+          {
+            "iso3": "KGZ",
+            "score": 31.9,
+            "confidence": 0.535
+          },
+          {
+            "iso3": "IND",
+            "score": 22,
+            "confidence": 0.554
+          },
+          {
+            "iso3": "NAM",
+            "score": 52.8,
+            "confidence": 0.554
+          },
+          {
+            "iso3": "GHA",
+            "score": 52.9,
+            "confidence": 0.535
+          },
+          {
+            "iso3": "LBN",
+            "score": 40.7,
+            "confidence": 0.459
+          }
+        ],
+        "drivers": [
+          {
+            "indicatorId": "research_citation_impact",
+            "unit": "ratio to world average",
+            "value": 0.504,
+            "year": 2021,
+            "position": 17.9,
+            "peerPosition": 39.1,
+            "contribution": -7.1
+          },
+          {
+            "indicatorId": "human_capital_index",
+            "unit": "index 0-1",
+            "value": 0.362,
+            "year": 2020,
+            "position": 12,
+            "peerPosition": 31.9,
+            "contribution": -6.6
+          },
+          {
+            "indicatorId": "firm_training_incidence",
+            "unit": "% of firms",
+            "value": 30.202,
+            "year": 2024,
+            "position": 35.8,
+            "peerPosition": 34.4,
+            "contribution": 0.5
+          }
+        ],
+        "rowsCounted": 3,
+        "countryArtefacts": [],
+        "dimensionArtefacts": [
+          "A7"
+        ]
+      },
+      "why": "Angola's research is cited at a ratio of 0.50 to the world average, and that row takes 7.1 of the 13 points off the score. The Human Capital Index, at 0.36, takes 6.6 more. In Angola, 30% of firms offer formal training, close to the peer median."
+    },
+    {
+      "type": "pair",
+      "pair": {
+        "dimension": "coordination",
+        "a": {
+          "iso3": "AGO",
+          "score": 28.1,
+          "confidence": 0.467,
+          "gdpPerCapita": 8760,
+          "incomeYear": 2025
+        },
+        "b": {
+          "iso3": "MAR",
+          "score": 82.1,
+          "confidence": 0.48,
+          "gdpPerCapita": 9495,
+          "incomeYear": 2025
+        },
+        "rows": [
+          {
+            "indicatorId": "trade_compliance_efficiency",
+            "unit": "score 0-100",
+            "a": {
+              "value": 2.848,
+              "year": 2025,
+              "position": 0
+            },
+            "b": {
+              "value": 78.726,
+              "year": 2025,
+              "position": 83.7
+            }
+          },
+          {
+            "indicatorId": "budget_execution_fidelity",
+            "unit": "percentage points from approved budget",
+            "a": {
+              "value": 26.5,
+              "year": 2023,
+              "position": 44.9
+            },
+            "b": {
+              "value": 0.5,
+              "year": 2024,
+              "position": 98.9
+            }
+          },
+          {
+            "indicatorId": "civil_society_strength",
+            "unit": "index 0-1",
+            "a": {
+              "value": 0.433,
+              "year": 2025,
+              "position": 39.3
+            },
+            "b": {
+              "value": 0.651,
+              "year": 2025,
+              "position": 63.6
+            }
+          }
+        ]
+      },
+      "why": "Morocco has the higher income, $9,495 a person against $8,760 for Angola, and scores 82.1 on Coordination to Angola's 28.1. Firms rate Morocco's border compliance 79 out of 100 and Angola's 2.8. Morocco's spending ended 0.5 percentage points from its approved budget, where Angola's ended 26.5 away. On civil society, Morocco scores 0.65 and Angola 0.43."
+    },
+    {
+      "type": "heading",
+      "text": "The rest of the profile"
+    },
+    {
+      "type": "text",
+      "text": "Anticipation and Building sit within 10 points of the peer median, so neither is a case here. The one lead rests on a single row about how easily a business starts. The shortfalls rest on border compliance, the distance between the approved budget and what was spent, a narrow export basket and unemployment."
+    }
+  ]
+}
