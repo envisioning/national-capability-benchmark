@@ -1,0 +1,358 @@
+{
+  "slug": "malaysia-against-its-income-peers",
+  "date": "2026-11-25",
+  "kind": "country",
+  "subject": "MYS",
+  "question": "Is Malaysia more capable than its income suggests?",
+  "title": "Malaysia scores more than double its income peers on Building",
+  "dek": "On Building, Malaysia scores 38 points above the countries nearest to it in income, the widest gap in its profile. High technology exports carry about half of it. Adaptability is also ahead, and no capability with usable evidence trails by 10 points or more.",
+  "lead": {
+    "figure": "+38.4",
+    "caption": "points above the median of its 10 income peers on Building, the widest gap Malaysia has"
+  },
+  "datasetVersion": "10.2.0",
+  "dataGeneratedAt": "2026-11-05T11:52:10.760Z",
+  "figures": {
+    "capabilitiesUsable": 7,
+    "gapFloor": 10
+  },
+  "tags": {
+    "countries": [
+      "MYS"
+    ],
+    "dimensions": [
+      "building",
+      "adaptability"
+    ],
+    "indicators": [
+      "high_tech_exports_share",
+      "economic_complexity",
+      "long_term_unemployment_share",
+      "unemployment_rate"
+    ]
+  },
+  "blocks": [
+    {
+      "type": "text",
+      "text": "This post compares Malaysia with the 10 countries nearest to it in income per person: Bulgaria, Turkey, Panama, Kazakhstan, Greece, Uruguay, Latvia, Trinidad and Tobago, Slovakia and Chile. Seven of its nine capabilities have usable evidence. Trust and Shared purpose do not, so they are left out."
+    },
+    {
+      "type": "heading",
+      "text": "Where Malaysia is ahead of its peers"
+    },
+    {
+      "type": "gap",
+      "gap": {
+        "iso3": "MYS",
+        "country": "Malaysia",
+        "dimension": "building",
+        "score": 72.2,
+        "confidence": 0.634,
+        "peerMedian": 33.8,
+        "peersScored": 10,
+        "gap": 38.4,
+        "peers": [
+          "BGR",
+          "TUR",
+          "PAN",
+          "KAZ",
+          "GRC",
+          "URY",
+          "LVA",
+          "TTO",
+          "SVK",
+          "CHL"
+        ],
+        "peerScores": [
+          {
+            "iso3": "BGR",
+            "score": 36.7,
+            "confidence": 0.475
+          },
+          {
+            "iso3": "TUR",
+            "score": 54.5,
+            "confidence": 0.634
+          },
+          {
+            "iso3": "PAN",
+            "score": 5.4,
+            "confidence": 0.475
+          },
+          {
+            "iso3": "KAZ",
+            "score": 48.7,
+            "confidence": 0.634
+          },
+          {
+            "iso3": "GRC",
+            "score": 32.7,
+            "confidence": 0.634
+          },
+          {
+            "iso3": "URY",
+            "score": 29.3,
+            "confidence": 0.634
+          },
+          {
+            "iso3": "LVA",
+            "score": 34.9,
+            "confidence": 0.634
+          },
+          {
+            "iso3": "TTO",
+            "score": 25.6,
+            "confidence": 0.634
+          },
+          {
+            "iso3": "SVK",
+            "score": 39.3,
+            "confidence": 0.634
+          },
+          {
+            "iso3": "CHL",
+            "score": 15.9,
+            "confidence": 0.475
+          }
+        ],
+        "drivers": [
+          {
+            "indicatorId": "high_tech_exports_share",
+            "unit": "% of manufactured exports",
+            "value": 58.628,
+            "year": 2024,
+            "position": 97.1,
+            "peerPosition": 16.8,
+            "contribution": 20.1
+          },
+          {
+            "indicatorId": "economic_complexity",
+            "unit": "index",
+            "value": 1.4,
+            "year": 2024,
+            "position": 47.3,
+            "peerPosition": 7.9,
+            "contribution": 9.9
+          },
+          {
+            "indicatorId": "manufacturing_value_added",
+            "unit": "% of GDP",
+            "value": 22.096,
+            "year": 2025,
+            "position": 63.6,
+            "peerPosition": 26.3,
+            "contribution": 9.3
+          },
+          {
+            "indicatorId": "utility_connection_efficiency",
+            "unit": "score 0-100",
+            "value": 84.152,
+            "year": 2025,
+            "position": 80.7,
+            "peerPosition": 76.6,
+            "contribution": 1
+          }
+        ],
+        "rowsCounted": 4,
+        "countryArtefacts": [],
+        "dimensionArtefacts": [
+          "A6",
+          "A11"
+        ]
+      },
+      "why": "High technology goods make up 58.6% of Malaysia's manufactured exports, and that row adds 20 of the 38 points. Its export basket scores 1.4 on the economic fitness index, which adds 9.9, and manufacturing is 22% of GDP, which adds 9.3. Utility connections, at 84 out of 100, sit close to the peer median."
+    },
+    {
+      "type": "gap",
+      "gap": {
+        "iso3": "MYS",
+        "country": "Malaysia",
+        "dimension": "adaptability",
+        "score": 77.3,
+        "confidence": 0.591,
+        "peerMedian": 61.5,
+        "peersScored": 10,
+        "gap": 15.8,
+        "peers": [
+          "BGR",
+          "TUR",
+          "PAN",
+          "KAZ",
+          "GRC",
+          "URY",
+          "LVA",
+          "TTO",
+          "SVK",
+          "CHL"
+        ],
+        "peerScores": [
+          {
+            "iso3": "BGR",
+            "score": 80.3,
+            "confidence": 0.617
+          },
+          {
+            "iso3": "TUR",
+            "score": 79.9,
+            "confidence": 0.617
+          },
+          {
+            "iso3": "PAN",
+            "score": 70.9,
+            "confidence": 0.617
+          },
+          {
+            "iso3": "KAZ",
+            "score": 64.3,
+            "confidence": 0.591
+          },
+          {
+            "iso3": "GRC",
+            "score": 58.7,
+            "confidence": 0.617
+          },
+          {
+            "iso3": "URY",
+            "score": 47.8,
+            "confidence": 0.459
+          },
+          {
+            "iso3": "LVA",
+            "score": 77.9,
+            "confidence": 0.617
+          },
+          {
+            "iso3": "TTO",
+            "score": 56.5,
+            "confidence": 0.459
+          },
+          {
+            "iso3": "SVK",
+            "score": 57.7,
+            "confidence": 0.617
+          },
+          {
+            "iso3": "CHL",
+            "score": 53.5,
+            "confidence": 0.617
+          }
+        ],
+        "drivers": [
+          {
+            "indicatorId": "long_term_unemployment_share",
+            "unit": "% of unemployed",
+            "value": 8.3,
+            "year": 2022,
+            "position": 96.2,
+            "peerPosition": 72.9,
+            "contribution": 5.8
+          },
+          {
+            "indicatorId": "unemployment_rate",
+            "unit": "% of labour force",
+            "value": 3.764,
+            "year": 2025,
+            "position": 84.9,
+            "peerPosition": 68.3,
+            "contribution": 4.2
+          },
+          {
+            "indicatorId": "new_export_products_rate",
+            "unit": "% of products not exported competitively at the start",
+            "value": 5.13,
+            "year": 2024,
+            "position": 57.3,
+            "peerPosition": 44.7,
+            "contribution": 3.1
+          },
+          {
+            "indicatorId": "export_diversification",
+            "unit": "index 0-1, lower = more diversified",
+            "value": 0.285,
+            "year": 2025,
+            "position": 70.9,
+            "peerPosition": 78.8,
+            "contribution": -2
+          }
+        ],
+        "rowsCounted": 4,
+        "countryArtefacts": [],
+        "dimensionArtefacts": []
+      },
+      "why": "Of the unemployed in Malaysia, 8.3% have been out of work for a year or more, and that row adds 5.8 of the 16 points. Unemployment is 3.8% of the labor force and adds 4.2. Of the products Malaysia did not export competitively at the start of the period, it now exports 5.1% competitively, which adds three more. Its exports are more concentrated than its peers', at 0.285 on an index where lower is more diversified, and that takes two points back."
+    },
+    {
+      "type": "pair",
+      "pair": {
+        "dimension": "building",
+        "a": {
+          "iso3": "MYS",
+          "score": 72.2,
+          "confidence": 0.634,
+          "gdpPerCapita": 35461,
+          "incomeYear": 2025
+        },
+        "b": {
+          "iso3": "PAN",
+          "score": 5.4,
+          "confidence": 0.475,
+          "gdpPerCapita": 37516,
+          "incomeYear": 2025
+        },
+        "rows": [
+          {
+            "indicatorId": "high_tech_exports_share",
+            "unit": "% of manufactured exports",
+            "a": {
+              "value": 58.628,
+              "year": 2024,
+              "position": 97.1
+            },
+            "b": {
+              "value": 1.767,
+              "year": 2024,
+              "position": 2.8
+            }
+          },
+          {
+            "indicatorId": "manufacturing_value_added",
+            "unit": "% of GDP",
+            "a": {
+              "value": 22.096,
+              "year": 2025,
+              "position": 63.6
+            },
+            "b": {
+              "value": 4.796,
+              "year": 2025,
+              "position": 10.4
+            }
+          },
+          {
+            "indicatorId": "economic_complexity",
+            "unit": "index",
+            "a": {
+              "value": 1.4,
+              "year": 2024,
+              "position": 47.3
+            },
+            "b": {
+              "value": 0.089,
+              "year": 2024,
+              "position": 3
+            }
+          }
+        ]
+      },
+      "why": "Panama has the higher income, $37,516 a person against $35,461 for Malaysia, and scores 5.4 on Building to Malaysia's 72.2. High technology goods are 1.8% of Panama's manufactured exports and 58.6% of Malaysia's. Manufacturing is 4.8% of GDP in Panama and 22% in Malaysia. On the economic fitness index, Panama scores 0.09 and Malaysia 1.4."
+    },
+    {
+      "type": "heading",
+      "text": "The rest of the profile"
+    },
+    {
+      "type": "text",
+      "text": "Anticipation, Agency, Coordination, Learning and Experimentation sit within 10 points of the peer median, so none of them is a case here. The lead on Building rests on what Malaysia makes and sells abroad. The smaller lead on Adaptability rests mostly on low unemployment and on the small share of the unemployed who have been out of work for a year or more."
+    }
+  ]
+}
