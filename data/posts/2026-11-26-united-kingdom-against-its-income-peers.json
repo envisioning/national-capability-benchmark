@@ -1,0 +1,361 @@
+{
+  "slug": "united-kingdom-against-its-income-peers",
+  "date": "2026-11-26",
+  "kind": "country",
+  "subject": "GBR",
+  "question": "Is the United Kingdom more capable than its income suggests?",
+  "title": "The United Kingdom starts firms far beyond its income",
+  "dek": "On Agency, the United Kingdom scores 37 points above the countries nearest to it in income, the widest gap in its profile. Most of it comes from how many new firms it registers. Experimentation is also ahead, and no capability trails the peers by 10 points or more.",
+  "lead": {
+    "figure": "+37",
+    "caption": "points above the median of its 10 income peers on Agency, the widest gap the United Kingdom has"
+  },
+  "datasetVersion": "10.2.0",
+  "dataGeneratedAt": "2026-11-05T11:52:10.760Z",
+  "figures": {
+    "capabilitiesUsable": 6,
+    "gapFloor": 10
+  },
+  "tags": {
+    "countries": [
+      "GBR"
+    ],
+    "dimensions": [
+      "agency",
+      "experimentation"
+    ],
+    "indicators": [
+      "new_business_density",
+      "business_entry_efficiency",
+      "resident_industrial_designs_per_million",
+      "resident_patents_per_million"
+    ]
+  },
+  "blocks": [
+    {
+      "type": "text",
+      "text": "This post compares the United Kingdom with the 10 countries nearest to it in income per person: Cyprus, Italy, France, South Korea, Finland, Canada, Spain, Czechia, Slovenia and Lithuania. Six of its nine capabilities have usable evidence. Coordination, Trust and Shared purpose do not, so they are left out."
+    },
+    {
+      "type": "heading",
+      "text": "Where the United Kingdom is ahead of its peers"
+    },
+    {
+      "type": "gap",
+      "gap": {
+        "iso3": "GBR",
+        "country": "United Kingdom",
+        "dimension": "agency",
+        "score": 94.7,
+        "confidence": 0.491,
+        "peerMedian": 57.7,
+        "peersScored": 10,
+        "gap": 37,
+        "peers": [
+          "CYP",
+          "ITA",
+          "FRA",
+          "KOR",
+          "FIN",
+          "CAN",
+          "ESP",
+          "CZE",
+          "SVN",
+          "LTU"
+        ],
+        "peerScores": [
+          {
+            "iso3": "CYP",
+            "score": 58,
+            "confidence": 0.491
+          },
+          {
+            "iso3": "ITA",
+            "score": 53.7,
+            "confidence": 0.491
+          },
+          {
+            "iso3": "FRA",
+            "score": 59.8,
+            "confidence": 0.301
+          },
+          {
+            "iso3": "KOR",
+            "score": 69.3,
+            "confidence": 0.475
+          },
+          {
+            "iso3": "FIN",
+            "score": 62.5,
+            "confidence": 0.301
+          },
+          {
+            "iso3": "CAN",
+            "score": 70.6,
+            "confidence": 0.459
+          },
+          {
+            "iso3": "ESP",
+            "score": 53.8,
+            "confidence": 0.491
+          },
+          {
+            "iso3": "CZE",
+            "score": 55.6,
+            "confidence": 0.491
+          },
+          {
+            "iso3": "SVN",
+            "score": 57.3,
+            "confidence": 0.491
+          },
+          {
+            "iso3": "LTU",
+            "score": 48.4,
+            "confidence": 0.301
+          }
+        ],
+        "drivers": [
+          {
+            "indicatorId": "new_business_density",
+            "unit": "per 1,000 aged 15-64",
+            "value": 19.191,
+            "year": 2024,
+            "position": 100,
+            "peerPosition": 21.3,
+            "contribution": 26.2
+          },
+          {
+            "indicatorId": "business_entry_efficiency",
+            "unit": "score 0-100",
+            "value": 100,
+            "year": 2025,
+            "position": 100,
+            "peerPosition": 82.8,
+            "contribution": 5.7
+          },
+          {
+            "indicatorId": "business_start_procedures",
+            "unit": "count",
+            "value": 4,
+            "year": 2019,
+            "position": 84.2,
+            "peerPosition": 81.6,
+            "contribution": 0.9
+          }
+        ],
+        "rowsCounted": 3,
+        "countryArtefacts": [],
+        "dimensionArtefacts": [
+          "A6",
+          "A14",
+          "A15"
+        ]
+      },
+      "why": "The United Kingdom registers 19 new businesses a year for every 1,000 people of working age, and that row adds 26 of the 37 points. Business entry efficiency, at the top score of 100, adds 5.7. Starting a business takes four procedures, close to the peer median."
+    },
+    {
+      "type": "gap",
+      "gap": {
+        "iso3": "GBR",
+        "country": "United Kingdom",
+        "dimension": "experimentation",
+        "score": 70.1,
+        "confidence": 0.465,
+        "peerMedian": 47.6,
+        "peersScored": 10,
+        "gap": 22.5,
+        "peers": [
+          "CYP",
+          "ITA",
+          "FRA",
+          "KOR",
+          "FIN",
+          "CAN",
+          "ESP",
+          "CZE",
+          "SVN",
+          "LTU"
+        ],
+        "peerScores": [
+          {
+            "iso3": "CYP",
+            "score": 23.8,
+            "confidence": 0.465
+          },
+          {
+            "iso3": "ITA",
+            "score": 55.5,
+            "confidence": 0.465
+          },
+          {
+            "iso3": "FRA",
+            "score": 74.1,
+            "confidence": 0.37
+          },
+          {
+            "iso3": "KOR",
+            "score": 75.1,
+            "confidence": 0.635
+          },
+          {
+            "iso3": "FIN",
+            "score": 51,
+            "confidence": 0.37
+          },
+          {
+            "iso3": "CAN",
+            "score": 48.2,
+            "confidence": 0.465
+          },
+          {
+            "iso3": "ESP",
+            "score": 47,
+            "confidence": 0.465
+          },
+          {
+            "iso3": "CZE",
+            "score": 36.4,
+            "confidence": 0.465
+          },
+          {
+            "iso3": "SVN",
+            "score": 35,
+            "confidence": 0.465
+          },
+          {
+            "iso3": "LTU",
+            "score": 32.4,
+            "confidence": 0.37
+          }
+        ],
+        "drivers": [
+          {
+            "indicatorId": "resident_industrial_designs_per_million",
+            "unit": "per million people",
+            "value": 196.69,
+            "year": 2024,
+            "position": 100,
+            "peerPosition": 19.1,
+            "contribution": 16.2
+          },
+          {
+            "indicatorId": "resident_patents_per_million",
+            "unit": "per million people",
+            "value": 160.289,
+            "year": 2024,
+            "position": 95.1,
+            "peerPosition": 52.4,
+            "contribution": 8.5
+          },
+          {
+            "indicatorId": "resident_trademarks_per_million",
+            "unit": "per million people",
+            "value": 2891.168,
+            "year": 2024,
+            "position": 56.3,
+            "peerPosition": 30.7,
+            "contribution": 5.1
+          },
+          {
+            "indicatorId": "insolvency_efficiency",
+            "unit": "score 0-100",
+            "value": 66.165,
+            "year": 2025,
+            "position": 67.1,
+            "peerPosition": 70,
+            "contribution": -0.6
+          },
+          {
+            "indicatorId": "new_repositories_per_million",
+            "unit": "per million people",
+            "value": 18139.163,
+            "year": 2026,
+            "position": 32,
+            "peerPosition": 38.4,
+            "contribution": -1.3
+          }
+        ],
+        "rowsCounted": 5,
+        "countryArtefacts": [],
+        "dimensionArtefacts": [
+          "A1"
+        ]
+      },
+      "why": "Residents of the United Kingdom file 197 industrial designs a year per million people, and that row adds 16 of the 22.5 points. Resident patents, at 160 per million, add 8.5, and trademarks, at 2,891 per million, add 5.1. New code repositories, 18,139 per million, sit below the peers and take 1.3 back."
+    },
+    {
+      "type": "pair",
+      "pair": {
+        "dimension": "agency",
+        "a": {
+          "iso3": "GBR",
+          "score": 94.7,
+          "confidence": 0.491,
+          "gdpPerCapita": 53993,
+          "incomeYear": 2025
+        },
+        "b": {
+          "iso3": "ITA",
+          "score": 53.7,
+          "confidence": 0.491,
+          "gdpPerCapita": 53606,
+          "incomeYear": 2025
+        },
+        "rows": [
+          {
+            "indicatorId": "new_business_density",
+            "unit": "per 1,000 aged 15-64",
+            "a": {
+              "value": 19.191,
+              "year": 2024,
+              "position": 100
+            },
+            "b": {
+              "value": 3.089,
+              "year": 2024,
+              "position": 18.2
+            }
+          },
+          {
+            "indicatorId": "business_entry_efficiency",
+            "unit": "score 0-100",
+            "a": {
+              "value": 100,
+              "year": 2025,
+              "position": 100
+            },
+            "b": {
+              "value": 80.611,
+              "year": 2025,
+              "position": 74.6
+            }
+          },
+          {
+            "indicatorId": "business_start_procedures",
+            "unit": "count",
+            "a": {
+              "value": 4,
+              "year": 2019,
+              "position": 84.2
+            },
+            "b": {
+              "value": 7,
+              "year": 2019,
+              "position": 68.4
+            }
+          }
+        ]
+      },
+      "why": "Italy earns almost the same, $53,606 a person against $53,993 for the United Kingdom, yet scores 53.7 on Agency to the United Kingdom's 94.7. Italy registers 3.1 new businesses a year for every 1,000 people of working age, where the United Kingdom registers 19. On business entry efficiency, Italy scores 81 and the United Kingdom 100. Starting a business takes seven procedures in Italy and four in the United Kingdom."
+    },
+    {
+      "type": "heading",
+      "text": "The rest of the profile"
+    },
+    {
+      "type": "text",
+      "text": "Anticipation, Learning, Adaptability and Building sit within 10 points of the peer median, so none of them is a case here, and no capability trails the peers by 10 points or more. Both leads rest on rows about firms: how many start each year, and how many designs, patents and trademarks residents file."
+    }
+  ]
+}
