@@ -1,0 +1,357 @@
+{
+  "slug": "mexico-against-its-income-peers",
+  "date": "2026-11-27",
+  "kind": "country",
+  "subject": "MEX",
+  "question": "Is Mexico more capable than its income suggests?",
+  "title": "Mexico's exports are far more complex than its income suggests",
+  "dek": "On Building, Mexico scores 36 points above the countries nearest to it in income, the widest gap in its profile. More than half of it comes from the economic fitness of its export basket. Agency trails the peers by 14 points, mostly on how easily a business starts.",
+  "lead": {
+    "figure": "+36.3",
+    "caption": "points above the median of its 10 income peers on Building, the widest gap Mexico has"
+  },
+  "datasetVersion": "10.2.0",
+  "dataGeneratedAt": "2026-11-05T11:52:10.760Z",
+  "figures": {
+    "capabilitiesUsable": 6,
+    "gapFloor": 10
+  },
+  "tags": {
+    "countries": [
+      "MEX"
+    ],
+    "dimensions": [
+      "building",
+      "agency"
+    ],
+    "indicators": [
+      "economic_complexity",
+      "manufacturing_value_added",
+      "business_entry_efficiency",
+      "business_start_procedures"
+    ]
+  },
+  "blocks": [
+    {
+      "type": "text",
+      "text": "This post compares Mexico with the 10 countries nearest to it in income per person: Azerbaijan, Thailand, Bosnia and Herzegovina, Armenia, Albania, Brazil, the Dominican Republic, China, North Macedonia and Georgia. Six of its nine capabilities have usable evidence. Coordination, Trust and Shared purpose do not, so they are left out."
+    },
+    {
+      "type": "heading",
+      "text": "Where Mexico is ahead of its peers"
+    },
+    {
+      "type": "gap",
+      "gap": {
+        "iso3": "MEX",
+        "country": "Mexico",
+        "dimension": "building",
+        "score": 64.6,
+        "confidence": 0.634,
+        "peerMedian": 28.3,
+        "peersScored": 10,
+        "gap": 36.3,
+        "peers": [
+          "AZE",
+          "THA",
+          "BIH",
+          "ARM",
+          "ALB",
+          "BRA",
+          "DOM",
+          "CHN",
+          "MKD",
+          "GEO"
+        ],
+        "peerScores": [
+          {
+            "iso3": "AZE",
+            "score": 26.4,
+            "confidence": 0.634
+          },
+          {
+            "iso3": "THA",
+            "score": 58.3,
+            "confidence": 0.475
+          },
+          {
+            "iso3": "BIH",
+            "score": 27.3,
+            "confidence": 0.634
+          },
+          {
+            "iso3": "ARM",
+            "score": 29.2,
+            "confidence": 0.634
+          },
+          {
+            "iso3": "ALB",
+            "score": 5.9,
+            "confidence": 0.475
+          },
+          {
+            "iso3": "BRA",
+            "score": 36.5,
+            "confidence": 0.475
+          },
+          {
+            "iso3": "DOM",
+            "score": 16.2,
+            "confidence": 0.475
+          },
+          {
+            "iso3": "CHN",
+            "score": 71.7,
+            "confidence": 0.475
+          },
+          {
+            "iso3": "MKD",
+            "score": 34.6,
+            "confidence": 0.634
+          },
+          {
+            "iso3": "GEO",
+            "score": 18.3,
+            "confidence": 0.634
+          }
+        ],
+        "drivers": [
+          {
+            "indicatorId": "economic_complexity",
+            "unit": "index",
+            "value": 2.4,
+            "year": 2024,
+            "position": 81.2,
+            "peerPosition": 2.2,
+            "contribution": 19.8
+          },
+          {
+            "indicatorId": "manufacturing_value_added",
+            "unit": "% of GDP",
+            "value": 19.976,
+            "year": 2025,
+            "position": 57.1,
+            "peerPosition": 32.2,
+            "contribution": 6.2
+          },
+          {
+            "indicatorId": "utility_connection_efficiency",
+            "unit": "score 0-100",
+            "value": 89.623,
+            "year": 2025,
+            "position": 88.4,
+            "peerPosition": 63.6,
+            "contribution": 6.2
+          },
+          {
+            "indicatorId": "high_tech_exports_share",
+            "unit": "% of manufactured exports",
+            "value": 19.304,
+            "year": 2024,
+            "position": 31.9,
+            "peerPosition": 11.5,
+            "contribution": 5.1
+          }
+        ],
+        "rowsCounted": 4,
+        "countryArtefacts": [],
+        "dimensionArtefacts": [
+          "A6",
+          "A11"
+        ]
+      },
+      "why": "Mexico's export basket scores 2.4 on the economic fitness index, and that row adds 19.8 of the 36.3 points. Manufacturing is 20% of GDP and adds 6.2. Utility connections score 90 out of 100 and add 6.2 more, and high technology goods, at 19.3% of manufactured exports, add 5.1."
+    },
+    {
+      "type": "heading",
+      "text": "Where it is behind"
+    },
+    {
+      "type": "gap",
+      "gap": {
+        "iso3": "MEX",
+        "country": "Mexico",
+        "dimension": "agency",
+        "score": 41.8,
+        "confidence": 0.491,
+        "peerMedian": 55.7,
+        "peersScored": 10,
+        "gap": -13.9,
+        "peers": [
+          "AZE",
+          "THA",
+          "BIH",
+          "ARM",
+          "ALB",
+          "BRA",
+          "DOM",
+          "CHN",
+          "MKD",
+          "GEO"
+        ],
+        "peerScores": [
+          {
+            "iso3": "AZE",
+            "score": 65.6,
+            "confidence": 0.491
+          },
+          {
+            "iso3": "THA",
+            "score": 44.6,
+            "confidence": 0.301
+          },
+          {
+            "iso3": "BIH",
+            "score": 27,
+            "confidence": 0.491
+          },
+          {
+            "iso3": "ARM",
+            "score": 70.3,
+            "confidence": 0.491
+          },
+          {
+            "iso3": "ALB",
+            "score": 46.2,
+            "confidence": 0.301
+          },
+          {
+            "iso3": "BRA",
+            "score": 44.6,
+            "confidence": 0.301
+          },
+          {
+            "iso3": "DOM",
+            "score": 38.4,
+            "confidence": 0.206
+          },
+          {
+            "iso3": "CHN",
+            "score": 87.3,
+            "confidence": 0.301
+          },
+          {
+            "iso3": "MKD",
+            "score": 65.2,
+            "confidence": 0.491
+          },
+          {
+            "iso3": "GEO",
+            "score": 81.7,
+            "confidence": 0.491
+          }
+        ],
+        "drivers": [
+          {
+            "indicatorId": "business_entry_efficiency",
+            "unit": "score 0-100",
+            "value": 66.382,
+            "year": 2025,
+            "position": 55.9,
+            "peerPosition": 95.6,
+            "contribution": -13.2
+          },
+          {
+            "indicatorId": "business_start_procedures",
+            "unit": "count",
+            "value": 7.83,
+            "year": 2019,
+            "position": 64.1,
+            "peerPosition": 78.9,
+            "contribution": -4.9
+          },
+          {
+            "indicatorId": "new_business_density",
+            "unit": "per 1,000 aged 15-64",
+            "value": 0.954,
+            "year": 2024,
+            "position": 5.4,
+            "peerPosition": 19,
+            "contribution": -4.5
+          }
+        ],
+        "rowsCounted": 3,
+        "countryArtefacts": [],
+        "dimensionArtefacts": [
+          "A6",
+          "A14",
+          "A15"
+        ]
+      },
+      "why": "Starting a business in Mexico scores 66 on the World Bank business entry measure, and that row takes 13.2 points off the score. A founder goes through about eight procedures, which takes 4.9 more, and Mexico registers 0.95 new businesses a year for every 1,000 people of working age, which takes another 4.5."
+    },
+    {
+      "type": "pair",
+      "pair": {
+        "dimension": "building",
+        "a": {
+          "iso3": "MEX",
+          "score": 64.6,
+          "confidence": 0.634,
+          "gdpPerCapita": 21912,
+          "incomeYear": 2025
+        },
+        "b": {
+          "iso3": "ALB",
+          "score": 5.9,
+          "confidence": 0.475,
+          "gdpPerCapita": 22724,
+          "incomeYear": 2025
+        },
+        "rows": [
+          {
+            "indicatorId": "economic_complexity",
+            "unit": "index",
+            "a": {
+              "value": 2.4,
+              "year": 2024,
+              "position": 81.2
+            },
+            "b": {
+              "value": 0.03,
+              "year": 2024,
+              "position": 1
+            }
+          },
+          {
+            "indicatorId": "manufacturing_value_added",
+            "unit": "% of GDP",
+            "a": {
+              "value": 19.976,
+              "year": 2025,
+              "position": 57.1
+            },
+            "b": {
+              "value": 6.034,
+              "year": 2025,
+              "position": 14.2
+            }
+          },
+          {
+            "indicatorId": "high_tech_exports_share",
+            "unit": "% of manufactured exports",
+            "a": {
+              "value": 19.304,
+              "year": 2024,
+              "position": 31.9
+            },
+            "b": {
+              "value": 1.529,
+              "year": 2024,
+              "position": 2.4
+            }
+          }
+        ]
+      },
+      "why": "Albania has the higher income, $22,724 a person against $21,912 for Mexico, and scores 5.9 on Building to Mexico's 64.6. On the economic fitness index, Albania scores 0.03 and Mexico 2.4. Manufacturing is 6% of GDP in Albania and 20% in Mexico. High technology goods are 1.5% of Albania's manufactured exports and 19.3% of Mexico's."
+    },
+    {
+      "type": "heading",
+      "text": "The rest of the profile"
+    },
+    {
+      "type": "text",
+      "text": "Anticipation, Learning, Experimentation and Adaptability sit within 10 points of the peer median, so none of them is a case here. The lead on Building comes from a complex export basket and a large manufacturing sector, while the gap on Agency comes from rows about how easily firms start and how many start each year."
+    }
+  ]
+}
