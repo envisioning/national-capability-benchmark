@@ -1,0 +1,460 @@
+{
+  "slug": "mauritius-against-its-income-peers",
+  "date": "2026-11-28",
+  "kind": "country",
+  "subject": "MUS",
+  "question": "Is Mauritius more capable than its income suggests?",
+  "title": "Mauritius starts businesses far more readily than its income suggests",
+  "dek": "On Agency, Mauritius scores 34.5 points above the countries nearest to it in income, the widest gap in its profile. More than half of it comes from how many new firms it registers. Learning and Coordination are also ahead, and no capability trails the peers by 10 points or more.",
+  "lead": {
+    "figure": "+34.5",
+    "caption": "points above the median of its 10 income peers on Agency, the widest gap Mauritius has"
+  },
+  "datasetVersion": "10.2.0",
+  "dataGeneratedAt": "2026-11-05T11:52:10.760Z",
+  "figures": {
+    "capabilitiesUsable": 7,
+    "gapFloor": 10
+  },
+  "tags": {
+    "countries": [
+      "MUS"
+    ],
+    "dimensions": [
+      "agency",
+      "learning",
+      "coordination"
+    ],
+    "indicators": [
+      "new_business_density",
+      "business_entry_efficiency",
+      "research_citation_impact",
+      "firm_training_incidence",
+      "civil_society_strength",
+      "trade_compliance_efficiency"
+    ]
+  },
+  "blocks": [
+    {
+      "type": "text",
+      "text": "This post compares Mauritius with the 10 countries nearest to it in income per person: Costa Rica, Belarus, Argentina, Serbia, Chile, Trinidad and Tobago, Uruguay, Georgia, North Macedonia and China. Seven of its nine capabilities have usable evidence. Trust and Shared purpose do not, so they are left out."
+    },
+    {
+      "type": "heading",
+      "text": "Where Mauritius is ahead of its peers"
+    },
+    {
+      "type": "gap",
+      "gap": {
+        "iso3": "MUS",
+        "country": "Mauritius",
+        "dimension": "agency",
+        "score": 87,
+        "confidence": 0.491,
+        "peerMedian": 52.5,
+        "peersScored": 10,
+        "gap": 34.5,
+        "peers": [
+          "CRI",
+          "BLR",
+          "ARG",
+          "SRB",
+          "CHL",
+          "TTO",
+          "URY",
+          "GEO",
+          "MKD",
+          "CHN"
+        ],
+        "peerScores": [
+          {
+            "iso3": "CRI",
+            "score": 45.7,
+            "confidence": 0.491
+          },
+          {
+            "iso3": "BLR",
+            "score": 45.8,
+            "confidence": 0.269
+          },
+          {
+            "iso3": "ARG",
+            "score": 22.5,
+            "confidence": 0.301
+          },
+          {
+            "iso3": "SRB",
+            "score": 59.2,
+            "confidence": 0.491
+          },
+          {
+            "iso3": "CHL",
+            "score": 64,
+            "confidence": 0.285
+          },
+          {
+            "iso3": "TTO",
+            "score": 44.2,
+            "confidence": 0.427
+          },
+          {
+            "iso3": "URY",
+            "score": 35.4,
+            "confidence": 0.491
+          },
+          {
+            "iso3": "GEO",
+            "score": 81.7,
+            "confidence": 0.491
+          },
+          {
+            "iso3": "MKD",
+            "score": 65.2,
+            "confidence": 0.491
+          },
+          {
+            "iso3": "CHN",
+            "score": 87.3,
+            "confidence": 0.301
+          }
+        ],
+        "drivers": [
+          {
+            "indicatorId": "new_business_density",
+            "unit": "per 1,000 aged 15-64",
+            "value": 13.975,
+            "year": 2024,
+            "position": 83.6,
+            "peerPosition": 28.7,
+            "contribution": 18.3
+          },
+          {
+            "indicatorId": "business_entry_efficiency",
+            "unit": "score 0-100",
+            "value": 94.888,
+            "year": 2025,
+            "position": 93.3,
+            "peerPosition": 69,
+            "contribution": 8.1
+          },
+          {
+            "indicatorId": "business_start_procedures",
+            "unit": "count",
+            "value": 4,
+            "year": 2019,
+            "position": 84.2,
+            "peerPosition": 73.7,
+            "contribution": 3.5
+          }
+        ],
+        "rowsCounted": 3,
+        "countryArtefacts": [],
+        "dimensionArtefacts": [
+          "A6",
+          "A14",
+          "A15"
+        ]
+      },
+      "why": "Mauritius registers 14 new businesses a year for every 1,000 people of working age, and that row adds 18.3 of the 34.5 points. Business entry efficiency, at 95 out of 100, adds 8.1. Starting a business takes four procedures, a little under the peers, which adds 3.5."
+    },
+    {
+      "type": "gap",
+      "gap": {
+        "iso3": "MUS",
+        "country": "Mauritius",
+        "dimension": "learning",
+        "score": 62.8,
+        "confidence": 0.535,
+        "peerMedian": 43.6,
+        "peersScored": 10,
+        "gap": 19.2,
+        "peers": [
+          "CRI",
+          "BLR",
+          "ARG",
+          "SRB",
+          "CHL",
+          "TTO",
+          "URY",
+          "GEO",
+          "MKD",
+          "CHN"
+        ],
+        "peerScores": [
+          {
+            "iso3": "CRI",
+            "score": 43.6,
+            "confidence": 0.535
+          },
+          {
+            "iso3": "BLR",
+            "score": 37.7,
+            "confidence": 0.439
+          },
+          {
+            "iso3": "ARG",
+            "score": 43.4,
+            "confidence": 0.42
+          },
+          {
+            "iso3": "SRB",
+            "score": 40.8,
+            "confidence": 0.554
+          },
+          {
+            "iso3": "CHL",
+            "score": 51.6,
+            "confidence": 0.554
+          },
+          {
+            "iso3": "TTO",
+            "score": 45.3,
+            "confidence": 0.554
+          },
+          {
+            "iso3": "URY",
+            "score": 42,
+            "confidence": 0.554
+          },
+          {
+            "iso3": "GEO",
+            "score": 43.6,
+            "confidence": 0.535
+          },
+          {
+            "iso3": "MKD",
+            "score": 44.3,
+            "confidence": 0.535
+          },
+          {
+            "iso3": "CHN",
+            "score": 76.3,
+            "confidence": 0.554
+          }
+        ],
+        "drivers": [
+          {
+            "indicatorId": "research_citation_impact",
+            "unit": "ratio to world average",
+            "value": 1.561,
+            "year": 2021,
+            "position": 74.2,
+            "peerPosition": 37.9,
+            "contribution": 12.1
+          },
+          {
+            "indicatorId": "firm_training_incidence",
+            "unit": "% of firms",
+            "value": 47.015,
+            "year": 2023,
+            "position": 57.9,
+            "peerPosition": 38.3,
+            "contribution": 6.5
+          },
+          {
+            "indicatorId": "human_capital_index",
+            "unit": "index 0-1",
+            "value": 0.622,
+            "year": 2020,
+            "position": 56.2,
+            "peerPosition": 55.3,
+            "contribution": 0.3
+          }
+        ],
+        "rowsCounted": 3,
+        "countryArtefacts": [],
+        "dimensionArtefacts": [
+          "A7"
+        ]
+      },
+      "why": "Research from Mauritius is cited 1.56 times as often as the world average, and that row adds 12.1 of the 19.2 points. In 47% of firms, staff get formal training, which adds 6.5. The human capital index, at 0.62, sits close to the peer median and adds almost nothing."
+    },
+    {
+      "type": "gap",
+      "gap": {
+        "iso3": "MUS",
+        "country": "Mauritius",
+        "dimension": "coordination",
+        "score": 87.4,
+        "confidence": 0.48,
+        "peerMedian": 74.3,
+        "peersScored": 10,
+        "gap": 13.1,
+        "peers": [
+          "CRI",
+          "BLR",
+          "ARG",
+          "SRB",
+          "CHL",
+          "TTO",
+          "URY",
+          "GEO",
+          "MKD",
+          "CHN"
+        ],
+        "peerScores": [
+          {
+            "iso3": "CRI",
+            "score": 75,
+            "confidence": 0.44
+          },
+          {
+            "iso3": "BLR",
+            "score": 45.2,
+            "confidence": 0.266
+          },
+          {
+            "iso3": "ARG",
+            "score": 55.6,
+            "confidence": 0.254
+          },
+          {
+            "iso3": "SRB",
+            "score": 73.6,
+            "confidence": 0.467
+          },
+          {
+            "iso3": "CHL",
+            "score": 88.1,
+            "confidence": 0.266
+          },
+          {
+            "iso3": "TTO",
+            "score": 57.6,
+            "confidence": 0.29
+          },
+          {
+            "iso3": "URY",
+            "score": 79.3,
+            "confidence": 0.44
+          },
+          {
+            "iso3": "GEO",
+            "score": 77.4,
+            "confidence": 0.467
+          },
+          {
+            "iso3": "MKD",
+            "score": 75.1,
+            "confidence": 0.48
+          },
+          {
+            "iso3": "CHN",
+            "score": 55.8,
+            "confidence": 0.29
+          }
+        ],
+        "drivers": [
+          {
+            "indicatorId": "civil_society_strength",
+            "unit": "index 0-1",
+            "value": 0.854,
+            "year": 2025,
+            "position": 86.1,
+            "peerPosition": 61.2,
+            "contribution": 8.3
+          },
+          {
+            "indicatorId": "trade_compliance_efficiency",
+            "unit": "score 0-100",
+            "value": 73.646,
+            "year": 2025,
+            "position": 78.1,
+            "peerPosition": 66,
+            "contribution": 4
+          },
+          {
+            "indicatorId": "budget_execution_fidelity",
+            "unit": "percentage points from approved budget",
+            "value": 1,
+            "year": 2024,
+            "position": 97.9,
+            "peerPosition": 95.4,
+            "contribution": 0.8
+          }
+        ],
+        "rowsCounted": 3,
+        "countryArtefacts": [],
+        "dimensionArtefacts": [
+          "A3",
+          "A6",
+          "A12"
+        ]
+      },
+      "why": "Civil society in Mauritius scores 0.85 on the civil society index, and that row adds 8.3 of the 13.1 points. Trade compliance scores 74 out of 100 and adds four. Spending lands within one percentage point of the approved budget, as it does in most peer countries, and adds 0.8."
+    },
+    {
+      "type": "pair",
+      "pair": {
+        "dimension": "agency",
+        "a": {
+          "iso3": "MUS",
+          "score": 87,
+          "confidence": 0.491,
+          "gdpPerCapita": 28770,
+          "incomeYear": 2025
+        },
+        "b": {
+          "iso3": "URY",
+          "score": 35.4,
+          "confidence": 0.491,
+          "gdpPerCapita": 32742,
+          "incomeYear": 2025
+        },
+        "rows": [
+          {
+            "indicatorId": "business_entry_efficiency",
+            "unit": "score 0-100",
+            "a": {
+              "value": 94.888,
+              "year": 2025,
+              "position": 93.3
+            },
+            "b": {
+              "value": 30.022,
+              "year": 2025,
+              "position": 8.3
+            }
+          },
+          {
+            "indicatorId": "new_business_density",
+            "unit": "per 1,000 aged 15-64",
+            "a": {
+              "value": 13.975,
+              "year": 2024,
+              "position": 83.6
+            },
+            "b": {
+              "value": 3.232,
+              "year": 2024,
+              "position": 19.1
+            }
+          },
+          {
+            "indicatorId": "business_start_procedures",
+            "unit": "count",
+            "a": {
+              "value": 4,
+              "year": 2019,
+              "position": 84.2
+            },
+            "b": {
+              "value": 5,
+              "year": 2019,
+              "position": 78.9
+            }
+          }
+        ]
+      },
+      "why": "Uruguay has the higher income, $32,742 a person against $28,770 for Mauritius, and scores 35.4 on Agency to Mauritius's 87. On business entry efficiency, Uruguay scores 30 and Mauritius 95. Uruguay registers 3.2 new businesses a year for every 1,000 people of working age, where Mauritius registers 14. Starting a business takes five procedures in Uruguay and four in Mauritius."
+    },
+    {
+      "type": "heading",
+      "text": "The rest of the profile"
+    },
+    {
+      "type": "text",
+      "text": "Anticipation, Experimentation, Adaptability and Building sit within 10 points of the peer median, so none of them is a case here, and no capability trails the peers by 10 points or more. The lead on Agency comes from rows about firms: how many start each year and how easily they register. Learning leans on how often the country's research is cited, and Coordination on the strength of its civil society."
+    }
+  ]
+}
